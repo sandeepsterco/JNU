@@ -1,0 +1,38 @@
+.why_choose{ padding-block: 18rem 0;}
+.why_choose .head_title{ text-align: center;}
+
+.why_jnu ul{ display: flex; justify-content: space-between; list-style: none; gap: 5rem; padding: 7.5rem 0rem 0;}
+.why_jnu ul li{ position: relative; padding:1rem 0 0 8rem;}
+.why_jnu ul li::before{ background-image: url('/images/logo_border.webp'); content: ""; position: absolute; left: 2rem; top: 0; bottom: 0; width: 3.3rem; background-size: cover; background-repeat: no-repeat; height: 11.8rem;}
+.why_jnu ul li h4{ color: var(--color-cf); margin-bottom: 1.6rem; font: var(--font-18); font-weight: 500;}
+.why_jnu p{ max-width: 24rem; font-weight: 200;}
+
+.load_more{position: relative; overflow: hidden; border: 1px solid #B1B1B1; margin: 8rem auto 0; padding: 0.8rem 2.8rem; font: var(--font-16); color: var(--color-cf); display: flex; align-items: center; width: fit-content; gap: 1rem; z-index: 1;}
+.load_more img{ max-width: 1rem;}
+.load_more::before { content: ""; position: absolute; inset: 0; background: var(--color-cf); transform: translateX(-101%); transition: transform .4s ease; z-index: -1; }
+.load_more:hover { color: var(--color-white); border-color: var(--color-cf);}
+.load_more:hover::before { transform: translateX(0); }
+.load_more:hover img{  filter: brightness(0) invert(1);}
+.why_background{ position: relative;}
+.why_background::after{ background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+opacity: 0.86; position: absolute; bottom: 0; left: 0; right: 0; height: 26.4rem; content: "";}
+.why_background>figure>img{ mix-blend-mode: darken; margin-top: -5rem;}
+.why_background_footer{ position: absolute; bottom: 3.8rem; left: 0; right: 0; z-index: 1;}
+.why_grid{ display: flex; align-items: center; justify-content: space-between;}
+.why_grid ul{ display: flex; align-items: center; list-style: none; padding: 0; gap: 13.6rem;}
+.why_grid ul li a{ color: var(--color-white); font: var(--font-21); font-weight: 200; position: relative;}
+.why_grid ul li a:hover{ color: var(--color-fa);}
+.why_grid ul li a::after{ width: 0.8rem; height: 0.8rem; background-color: var(--color-fa); position: absolute; left: -7rem; top: 1.3rem; content: ""; border-radius: 1rem;}
+.why_grid ul li:first-child a::after{ display: none;}
+.why_btn { display: flex; gap: 1rem; margin-left: 8rem; }
+
+.virtual_tour { position: relative; overflow: hidden; display: flex; gap: 1rem; color: var(--color-white); border: 1px solid var(--color-white); padding: 0.6rem 2.5rem; align-items: center; z-index: 1; font: var(--font-18); line-height: 1; }
+.virtual_tour::before { content: ""; position: absolute; inset: 0; background: var(--color-white); transform: translateX(-101%); transition: transform .4s ease; z-index: -1; }
+.virtual_tour:hover { color: var(--color-black); }
+.virtual_tour:hover::before { transform: translateX(0); }
+.virtual_tour:hover img{  filter: brightness(0) invert(0);}
+.int_collabration_grid{ display: grid; grid-template-columns: auto 125rem; padding-block: 3rem; align-items: center; position: relative;}
+.int_collabration_grid::before { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 49%, var(--color-06) 49%, var(--color-06) 100%); }
+.int_logo_slider figure{ text-align: center;}
+.int_logo_slider figure img{ max-width: 15.2rem; margin: 0 auto;}
+.int_collabration_grid h3{ font-weight: 300; line-height: 1.6;}
