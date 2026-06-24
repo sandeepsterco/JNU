@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
-import { Stack_Sans_Text } from 'next/font/google'
+import { Stack_Sans_Text, Poppins } from 'next/font/google'
 import Header from "@/components/header/Header";
 import AosProvider from "@/components/common/AosProvider";
 
 import '../styles/globals.css'
 import RevealImages from "@/components/common/RevealImages";
-// import '../styles/custom.css'
+import Footer from "@/components/footer/Footer";
 
 const stackSansText = Stack_Sans_Text({
   subsets:['latin'],
   display:'swap',
   variable:'--stack',
+});
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable:'--poppins',
 });
 
 export const metadata: Metadata = {
@@ -31,13 +38,14 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${stackSansText.variable} h-full antialiased`}
+      className={`${stackSansText.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <AosProvider>
           <Header />
           {children}
-          {/* <RevealImages /> */}
+          <Footer />
+          <RevealImages />
         </AosProvider>
       </body>
     </html>

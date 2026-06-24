@@ -1,0 +1,76 @@
+.happening_section{ padding-block:10.8rem 16rem; background-color: var(--color-3a); padding-inline: 10rem;}
+.happening_section h5{ color: var(--color-white); letter-spacing: 2.7px; font-family: var(--poppins); font-weight: 600;}
+.happening_header{ display: flex; justify-content: space-between;}
+.happening_header a{ width: 3rem; height: 3rem; border: 1px solid var(--color-f9); text-align: center; display: block; padding: 0.7rem 1rem;}
+/* .happening_header a img{ filter: invert(171%) sepia(175%) saturate(600%) hue-rotate(
+23deg) brightness(176%) contrast(102%) } */
+.happening_header a img{ filter:invert(82%) sepia(97%) saturate(1900%) hue-rotate(0deg) brightness(126%) contrast(115%)}
+.happening_header a:hover{ background-color: var(--color-f9);}
+.happening_header a:hover img{ filter: invert(1) brightness(0);}
+
+.happening_grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.1rem; padding-top: 5rem;}
+.happ_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.1rem; margin-bottom: 0.1rem;}
+.happening_Bx:first-child .happ_Bx{ background-color: var(--color-06);}
+.happening_Bx:last-child .happ_Bx{ background-color: var(--color-cf);}
+.happening_video{ position: relative; overflow: hidden;}
+.happening_video::after{ background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.66; bottom: 0; left: 0; right: 0; height: 28.7rem; content: ""; position: absolute; }
+.happening_video *{ color: var(--color-white);}
+.happening_Bx .happening_video_cnt date span,
+.happening_Bx .happening_video_cnt .date span{ border-left: 1px solid var(--color-white);}
+.happening_video figure{ padding-bottom: 1px;}
+.happening_img figure{ height: 100%;}
+.happ_sch{ background-color: var(--color-fd); display: grid; grid-template-columns: 60% auto; padding-block: 3.5rem; padding-inline: 3rem; gap: 5rem; position: relative; margin-bottom: 0.1rem;}
+.happ_sch>figure>img{ max-width: 17.4rem;}
+.happ_sch_Bx{ display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid #ccc; padding-right: 8rem;}
+.happening_Bx date,
+.happening_Bx .date{ display: flex; align-items: center;}
+.happening_Bx date span,
+.happening_Bx .date span{ font: var(--font-14); line-height: 1; border-left: 1px solid #333; padding-left: 0.7rem; margin-left: 0.7rem;}
+.happening_Bx date,
+.happening_Bx .date{ font: var(--font-33); line-height: 1.2; font-weight: 700;}
+.happ_sch_Bx p{ font: var(--font-21); line-height: 2.6rem;}
+.happ_next{ width:2rem; position: absolute; top:3.8rem; right: 3.4rem;}
+
+.happ_Bx{ padding: 3rem; display: flex; flex-direction: column; justify-content: space-between; position: relative;}
+.happ_Bx *{ color: var(--color-white);}
+.happ_Bx date span,
+.happ_Bx .date span{ border-color: var(--color-white);}
+.happ_Bx .happ_next { filter: brightness(0) invert(1); }
+.happ_Bx p{ font: var(--font-18); line-height: 1.3; font-weight: 400;}
+.happening_video_cnt{padding: 3rem; display: flex; flex-direction: column; justify-content: space-between; position: absolute; top: 0; left: 0; right:0; bottom: 0; z-index: 2;}
+.happening_Bx p{ font-weight: 300; line-height: 1.4;}
+.happening_img_cnt{padding: 3rem; display: flex; flex-direction: column; justify-content: space-between; position: absolute; top: 0; left: 0; right:0; bottom: 0; z-index: 2;}
+.happening_img_cnt date span,
+.happening_img_cnt .date span{ border-left: 1px solid var(--color-white);}
+
+.happ_left .happ_Bx{ background-color: var(--color-f8);}
+.happ_left .happ_Bx *{ color: var(--color-black);}
+.happ_left .happ_Bx date span,
+.happ_left .happ_Bx .date span{ border-color: var(--color-black);}
+.happ_left .happ_Bx date,
+.happ_left .happ_Bx .date{ padding-bottom: 15.2rem;}
+.happ_grid figure>img{ height: 100%; object-fit: cover;}
+.happ_left .happ_Bx .happ_next { filter: brightness(1) invert(0); }
+.happening_video_cnt .happ_next{filter: brightness(0) invert(1);}
+.happening_img { position: relative; overflow: hidden; }
+.happening_img::after{ background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.66; bottom: 0; left: 0; right: 0; height: 28.7rem; content: ""; position: absolute; }
+.happening_img *{ color: var(--color-white);}
+
+@media (min-width:2200px){
+    .happ_left .happ_Bx date,
+    .happ_left .happ_Bx .date { padding-bottom: 15.6rem;}
+    .happ_sch{padding-block: 3.5rem 3.5rem;}
+}
+
+
+@media (min-width:2400px){
+    .happ_sch { padding-block: 3.6rem 3.7rem; }
+    .happ_left .happ_Bx date,
+    .happ_left .happ_Bx .date { padding-bottom:15.6rem;}
+}
+
+.happ_video_wrap { position: relative; }
+.happ_video { position: absolute; inset: 0; display: none; }
+.happ_video video { width: 100%; height: 100%; object-fit: cover; }
+.video_btn { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: none; border: 0; cursor: pointer; z-index: 9; }
+

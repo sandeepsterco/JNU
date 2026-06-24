@@ -195,3 +195,6 @@ h6{font:var(--font-18);color: var(--color-black);}
   }
 }
 
+.custom_slider_btn{
+  padding: 0.7rem 1rem;
+}

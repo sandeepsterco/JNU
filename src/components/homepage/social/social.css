@@ -1,0 +1,6 @@
+.jnu_social_wall{ padding-block: 20rem 22rem; text-align: center;}
+ul.social_media_link { display: flex; justify-content: center; gap: 2rem; padding: 0; list-style: none; margin-top: 2rem;}
+ul.social_media_link li{ max-width: 3.9rem;}
+ul.social_media_link li a{ transition: transform 0.5s ease; display: block;}
+ul.social_media_link li a:hover{ transform: rotate(360deg);}
+.social_wall_grid{ list-style:none; margin-top: 8rem; display:grid; grid-template-columns: repeat(4, 1fr); gap: 0.2rem;}

@@ -14,8 +14,8 @@ export default function Collaborations() {
                             modules={[Autoplay, Navigation]}
                             loop={true}
                             autoplay={{
-                                delay:3000,
-                                disableOnInteraction:false
+                                delay: 3000,
+                                disableOnInteraction: false
                             }}
                             speed={2000}
                             slidesPerView={1}
@@ -27,7 +27,30 @@ export default function Collaborations() {
                             }}
                             grabCursor={true}
                             keyboard={{
-                                
+                                enabled: true,
+                            }}
+                            scrollbar={{
+                                el: ".home-scrollbar",
+                                draggable: true,
+                                snapOnRelease: true
+                            }}
+                            breakpoints={{
+                                320: {
+                                    slidesPerView: 2,
+                                    spaceBetween: 10
+                                },
+                                768: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 20
+                                },
+                                992: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 30
+                                },
+                                1200: {
+                                    slidesPerView: 5,
+                                    spaceBetween: 40
+                                }
                             }}
                         >
                             <SwiperSlide>

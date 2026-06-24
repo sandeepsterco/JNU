@@ -1,0 +1,42 @@
+.experience_university{padding-block: 20rem 0;}
+.experience_header .head_title{ padding-bottom: 6.3rem; position: relative;}
+.experience_header .head_title::before { content: ""; position: absolute; bottom: 0; left:0rem; right: 0; z-index: 9; width: 100%; height: 4px; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 31%, var(--color-06) 31%, var(--color-06) 100%); }
+.experience_header .head_title p{ font: var(--font-18); font-weight: 200; margin-block: 2.3rem;}
+.experience_header a { width: 3rem; height: 3rem; border: 1px solid var(--color-cf); text-align: center; display: block; padding: 0.7rem 1rem; }
+.experience_header a:hover { background-color: var(--color-cf); }
+.experience_header a:hover img { filter: brightness(0) invert(1); }
+.experience_header{ display: grid; grid-template-columns:51% auto;}
+.experience_header_right ul{ display: flex; justify-content: space-between; padding: 0; list-style: none; gap: 10rem; margin-right: -14rem; margin-left: 21.7rem;}
+.experience_header_right ul li h5{ font: var(--font-56); color: var(--color-cf); font-weight: 400; margin-block:5rem 2rem;}
+.experience_header_right ul li h5 sup{ font: var(--font-30); top: -2.8rem;}
+.experience_header_right ul li p{ font-weight: 300;}
+.video_tab{ position: relative;}
+.video_tab ul.tabs { display: flex; list-style: none; gap: 23rem;}
+.video_tab ul.tabs li { font: var(--font-24); font-weight: 300; color: var(--color-white);  padding-block: 2.5rem; padding-inline: 3rem; margin-top: -0.1rem; cursor: pointer;}
+.video_tab ul.tabs li:hover { color: var(--color-fa);}
+.video_tab ul.tabs li.active { color: var(--color-fa); border-top: 1px solid var(--color-fa);}
+/* .home_tab_content { display: none; } */
+.tab_drawer_heading { display: none; }
+.tab_buttons{ position: absolute; bottom: 0; left: 0; right: 0; border-top: 1px solid #999;}
+.video_section video { width: 100%; height: 90rem; object-fit: cover; }
+.video_section{position: relative; }
+.video_section::after{background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.9; bottom: 0; left: 0; right: 0; height: 40rem; content: ""; position: absolute;}
+.video_content{ position: absolute; max-width: 61.3rem; top: 25%; z-index: 9; left: 59%;}
+.video_content *{ color: var(--color-white);}
+.video_content a { width: 3rem; height: 3rem; border: 1px solid var(--color-white); text-align: center; display: block; padding: 0.7rem 1rem; }
+.video_content a img{filter: brightness(0) invert(1);}
+.video_content a:hover{ background-color: var(--color-cf); border-color: var(--color-cf);}
+.video_content h3{ font: var(--font-30); font-weight: 200; margin-bottom: 2.5rem;}
+.video_content p{ font: var(--font-14); font-weight: 300;}
+.video_content ul { display: flex; justify-content: space-between; padding: 0; list-style: none; gap: 5rem; margin-block:5rem 4rem;}
+.video_content ul li{ border-right: 1px solid rgba(255, 255, 255, 0.3); padding-right: 5rem;}
+.video_content ul li:last-child{ border-right: 0;}
+.video_content ul li h5 { font: var(--font-56); color: var(--color-f9); font-weight: 400; margin-block:0rem;}
+.video_content ul li h5 sup { font: var(--font-30); top: -2.8rem; color: var(--color-f9); }
+.video_content ul li p { font: var(--font-18); font-weight: 300; }
+
+@media screen and (max-width: 991px) {
+	.tabs { display: none; }
+	.tab_drawer_heading { background-color: #ccc; color: #fff; border-top: 1px solid #333; margin: 0; padding: 5px 20px; display: block; cursor: pointer; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+	.d_active { background-color: #666; color: #fff; }
+}

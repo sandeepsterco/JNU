@@ -1,0 +1,16 @@
+footer{ padding-block: 5.5rem 0; background-color: var(--color-white);}
+.footer_left{ padding-right: 3rem;}
+.footer_grid{ display: grid; grid-template-columns: 72% auto; border-bottom: 1px solid #DCDCDC;;}
+.footer_left .footer_link{ display: flex; list-style: none; padding: 0; gap: 6rem;}
+.footer_left .footer_link li a{ font: var(--font-18); font-weight: 500; color: var(--color-cf);}
+.footer_left .footer_link li a:hover{ color: var(--color-black);}
+.footer_left .quick_link{ display: flex; list-style: none; padding: 0; gap:4.4rem; margin-top: 2.5rem;}
+.footer_left .quick_link ul{ display: flex; list-style: none; padding: 0; column-gap:3.4rem; flex-wrap: wrap; row-gap: 1rem;}
+.footer_left .quick_link h4{ color: var(--color-cf); font-weight: 500; white-space: nowrap;}
+.footer_left .quick_link li a{ font: var(--font-14); font-weight: 300; color: var(--color-black); }
+.footer_left .quick_link li a:hover{color: var(--color-cf);}
+.footer_right{ padding:0 0 4rem 6.1rem; border-left: 1px solid #DCDCDC;}
+.footer_right .social_media_link{ margin-top: 3rem;}
+.footer_bottom{ padding-block: 2.5rem 4.6rem; display: flex; justify-content: space-between;}
+.footer_bottom p{ font: var(--font-14); font-weight: 300;}
+.footer_bottom a:hover{ color: var(--color-cf);}

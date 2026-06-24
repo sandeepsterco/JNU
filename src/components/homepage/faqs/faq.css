@@ -1,0 +1,29 @@
+.faq_section { background-color: var(--color-38); padding-block: 10rem 14rem;}
+.faq_section h4{ font-weight: 300; color: var(--color-white); letter-spacing: -1.26px;}
+.faq_tab ul{ display: flex; list-style-type: none; gap: 5.4rem; padding: 0; margin-block:5rem;}
+.faq_tab ul li{ font: var(--font-21); font-weight: 500; color: var(--color-white); cursor: pointer; position: relative;}
+.faq_tab ul li.active{ color: var(--color-fa);}
+.faq_tab ul li::after { width: 0.6rem; height: 0.6rem; background-color: var(--color-fa); position: absolute; left: -3rem; top: 0.8rem; content: ""; border-radius: 1rem; }
+.faq_tab ul li:first-child:after{ display: none;}
+.faq_accordion .tab:last-child{ border: 0;}
+.tab-heading { padding:3rem 4rem; border-radius: 0; cursor: pointer; }
+.faq_accordion .tab{ border-bottom: 1px dashed rgba(255, 255, 255, 0.49);}
+.faq_accordion .tab.active{ border-bottom: 0px dashed rgba(255, 255, 255, 0.49);}
+.faq_accordion .tab:has(+ .tab.active) { border-bottom: none; }
+
+.faq_accordion h5 { pointer-events: none; color: var(--color-white); font: var(--font-18); position: relative; }
+.tab-content { overflow-y: hidden; height: 0; transition: 0.5s ease;}
+.tab-content p { margin:0 12rem 3rem 4rem; color: var(--color-white); font: var(--font-14); font-weight: 300; line-height: 1.7; }
+.faq_accordion .tab.active{background-color: rgba(255, 255, 255, 0.1); border-radius: 1rem;}
+.faq_accordion .tab.active .tab-heading{ border: 0;}
+.tab-heading h5::before { content: "+"; position: absolute; left: -3rem; top: 50%; transform: translateY(-50%); font:var(--font-24); line-height: 1; font-weight: 200; }
+.tab.active .tab-heading h5::before { content: "−"; }
+
+
+
+
+@media (max-width:1536px){
+    .why_grid ul{gap: 13rem;}
+    .happ_sch{padding-block: 3.6rem;}
+    .happ_left .happ_Bx date { padding-bottom: 15.5rem; }
+}
