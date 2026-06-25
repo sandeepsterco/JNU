@@ -11,7 +11,7 @@ import Image from 'next/image';
 
 const slideTiming = 5000;
 
-export default function HomeBanner({data}) {
+export default function HomeBanner({data}:any) {
     const swiperRef = useRef<SwiperType | null>(null);
 
     const startProgressAnimation = useCallback(()=>{
