@@ -1,12 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  experimental:{
+    
+  },
   images: {
     remotePatterns: [
       { protocol: "https", hostname: "**" },
       { protocol: "http", hostname: "**" },
     ],
-    unoptimized: true,
+    // unoptimized: true,
     // domains is deprecated, remotePatterns above covers it
   },
 
