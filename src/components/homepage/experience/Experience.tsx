@@ -1,87 +1,97 @@
+import Link from 'next/link';
 import './experience.css'
 import ExperienceTabs from './ExperienceTabs';
+import { BASE_URL } from '@/config/config';
 
-export default function Experience() {
+interface FactsInterface{
+    figure:string;
+    facts:string;
+}
+
+interface ExperiencePropsInterface{
+    data:{
+        title:string;
+        subtitle:string;
+        description:string;
+        link?:string;
+        factsfigure:FactsInterface[];
+    }
+}
+
+export default function Experience({data}:ExperiencePropsInterface) {
     return (
         <>
             <section className="experience_university">
                 <div className="container">
                     <div className="experience_header">
                         <div className="head_title">
-                            <h3
-                                className="font18"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                                data-aos-delay="200"
-                            >
-                                EXPERIENCE THE UNIVERSITY
-                            </h3>
-
-                            <blockquote
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                                data-aos-delay="400"
-                            >
-                                Beyond Classrooms, Into Community
-                            </blockquote>
-
-                            <p
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                                data-aos-delay="600"
-                            >
-                                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                            </p>
-
-                            <a
-                                href="#"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                                data-aos-delay="800"
-                            >
-                                <img
-                                    src="/images/icons/nav-arrow-next.svg"
-                                    className="img-fluid"
-                                    alt="arrow"
-                                />
-                            </a>
-                        </div>
-
-                        <div className="experience_header_right">
-                            <ul>
-                                <li
+                            {data?.title && (
+                                <h3
+                                    className="font18"
                                     data-aos="fade-up"
                                     data-aos-duration="1000"
                                     data-aos-delay="200"
-                                >
-                                    <h5>
-                                        150<sup>+</sup>
-                                    </h5>
-                                    <p>Acres Green Campus</p>
-                                </li>
-
-                                <li
+                                    dangerouslySetInnerHTML={{__html:data.title}}
+                                />
+                            )}
+                            
+                            {data?.subtitle && (
+                                <blockquote
+                                    data-aos="fade-up"
+                                    data-aos-duration="1000"
+                                    data-aos-delay="400"
+                                    dangerouslySetInnerHTML={{__html:data.subtitle}}
+                                />
+                            )}
+                            
+                            {data?.description && (
+                                <p
                                     data-aos="fade-up"
                                     data-aos-duration="1000"
                                     data-aos-delay="600"
-                                >
-                                    <h5>
-                                        300<sup>+</sup>
-                                    </h5>
-                                    <p>State-of-the-Art Labs</p>
-                                </li>
+                                    dangerouslySetInnerHTML={{__html:data.description}}
+                                />
+                            )}
 
-                                <li
+                            {data?.link && (
+                                <Link
+                                    href={`${BASE_URL}${data.link}`}
                                     data-aos="fade-up"
                                     data-aos-duration="1000"
-                                    data-aos-delay="1000"
+                                    data-aos-delay="800"
                                 >
-                                    <h5>
-                                        250<sup>+</sup>
-                                    </h5>
-                                    <p>Smart Classrooms</p>
-                                </li>
-                            </ul>
+                                    <img
+                                        src="/images/icons/nav-arrow-next.svg"
+                                        className="img-fluid"
+                                        alt="arrow"
+                                    />
+                                </Link>
+                            )}
+
+                            
+                        </div>
+
+                        <div className="experience_header_right">
+                            {data?.factsfigure && data.factsfigure?.length > 0 && (
+                                <ul>
+                                    {data.factsfigure?.map((item, idx)=>(
+                                        <li
+                                            key={idx}
+                                            data-aos="fade-up"
+                                            data-aos-duration="1000"
+                                            data-aos-delay="200"
+                                        >
+                                            <h5 dangerouslySetInnerHTML={{__html:item.figure}} />
+                                            {item?.facts && (
+                                                <p>{item.facts}</p>
+                                            )}
+                                        </li>
+                                    ))}
+                                    
+
+                                </ul>
+                            )}
+                            
                         </div>
                     </div>
                 </div>

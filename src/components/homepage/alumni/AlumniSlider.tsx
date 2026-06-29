@@ -5,15 +5,13 @@ import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 interface alumniTypes {
-    type: string;
-    image?: string;
+    thumbnail: string;
     logo: string;
-    quote?: string;
-    name: string;
-    program?: string;
-    batch?: string;
-    poster?: string;
     video?: string;
+    message?: string;
+    name: string;
+    batch: string;
+    course: string;
 }
 
 interface AlumniSliderProps {
@@ -92,11 +90,11 @@ export default function AlumniSlider({ alumniData, prevRef, nextRef }: AlumniSli
                 {alumniData.map((item, index) => (
                     <SwiperSlide key={index}>
                         <div className="alumni_slider_bx">
-                            {item.type === "quote" ? (
+                            {!item.video ? (
                                 <>
                                     <figure className="alumni_img">
                                         <img
-                                            src={item.image}
+                                            src={item.thumbnail}
                                             alt={item.name}
                                             className="img-fluid"
                                         />
@@ -119,16 +117,16 @@ export default function AlumniSlider({ alumniData, prevRef, nextRef }: AlumniSli
                                             />
                                         </figure>
 
-                                        <h4>{item.quote}</h4>
+                                        <h4>{item.message}</h4>
 
                                         <h5>{item.name}</h5>
 
                                         <p>
-                                            {item.program} <span>{item.batch}</span>
+                                            {item.course} <span>{item.batch}</span>
                                         </p>
                                     </div>
 
-                                    <a href="#" className="overlap_btn" />
+                                    {/* <a href="#" className="overlap_btn" /> */}
                                 </>
                             ) : (
                                 <div className="alumni_img">
@@ -146,7 +144,7 @@ export default function AlumniSlider({ alumniData, prevRef, nextRef }: AlumniSli
                                         </video>
 
                                         <img
-                                            src={item.poster}
+                                            src={item.thumbnail}
                                             alt={item.name}
                                             className="alumni_poster img-fluid"
                                         />
@@ -172,7 +170,7 @@ export default function AlumniSlider({ alumniData, prevRef, nextRef }: AlumniSli
                                         <h5>{item.name}</h5>
 
                                         <p>
-                                            {item.program} <span>{item.batch}</span>
+                                            {item.course} <span>{item.batch}</span>
                                         </p>
                                     </div>
                                 </div>

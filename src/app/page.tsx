@@ -25,23 +25,22 @@ export default async function Home() {
     </div>
   }
 
-  const {hero} = data?.data;
-
-  console.log('home data', data);
+  const {banner, rank_section, program, why_choose_us, collaboration, placements, research, experience_the_university, alumni, happenings, social_wall, f_a_q} = data?.data;
+  const {placements:modularPlacements, research:modularResearch, ['news-events']:modularNewsEvents, ['social-wall']:modularSocialWall, faqs:modularFAQ, programs:modularPrograms} = data?.modular;
 
   return (
     <main className="site_main">
-      <HomeBanner data={hero} />
-      <HomeStats />
-      <StudyJNU />
-      <WhyChoose />
-      <HomePlacement />
-      <HomeResearch />
-      <Experience />
-      <HomeAlumni />
-      <Happenings />
-      <HomeSocial />
-      <FAQs />
+      <HomeBanner data={banner} />
+      <HomeStats data={rank_section} />
+      <StudyJNU data={program} modular={modularPrograms} />
+      <WhyChoose data={why_choose_us} collaboration={collaboration} />
+      <HomePlacement data={placements} modular={modularPlacements} />
+      <HomeResearch data={research} modular={modularResearch} />
+      <Experience data={experience_the_university} />
+      <HomeAlumni data={alumni} />
+      <Happenings data={happenings} modular={modularNewsEvents} />
+      <HomeSocial data={social_wall} modular={modularSocialWall} />
+      <FAQs data={f_a_q} modular={modularFAQ} />
     </main>
   );
 }

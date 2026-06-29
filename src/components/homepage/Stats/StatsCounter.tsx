@@ -1,6 +1,15 @@
 "use client"
 import { useEffect, useRef } from "react";
 
+interface CountInterface{
+    figure:string;
+    figurecaption:string;
+}
+
+interface CounterPropsInterface{
+    data:CountInterface[],
+}
+
 function easeInOutQuad(t: number) {
     return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
 }
@@ -21,7 +30,7 @@ function animateCount(el: HTMLElement, target: number, suffix: string, supHTML: 
     requestAnimationFrame(step);
 }
 
-export default function StatsCounter() {
+export default function StatsCounter({data}:CounterPropsInterface) {
     const counterRef = useRef<HTMLDivElement | null>(null);
     const counted = useRef(false);
 
@@ -61,22 +70,13 @@ export default function StatsCounter() {
     return (
         <div className="counter_stats" ref={counterRef}>
             <ul>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <figcaption>80K<sup>+</sup></figcaption>
-                    Student Community
-                </li>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <figcaption>16<sup>+</sup></figcaption>
-                    Distinguished School
-                </li>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
-                    <figcaption>750<sup>+</sup></figcaption>
-                    Expert Faculties
-                </li>
-                <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">
-                    <figcaption>100<sup>+</sup></figcaption>
-                    Programs
-                </li>
+                {data?.map((item, idx)=>(
+                    <li key={idx} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                        <figcaption dangerouslySetInnerHTML={{__html:item.figure}} />
+                        {item.figurecaption}
+                    </li>
+                ))}
+                
             </ul>
         </div>
     )

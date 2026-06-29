@@ -4,6 +4,24 @@ import AlumniSlider from "./AlumniSlider";
 import { useRef } from "react";
 import './alumni.css'
 
+interface AlumniInterface{
+  thumbnail:string;
+  logo:string;
+  video?:string;
+  message:string;
+  name:string;
+  batch:string;
+  course:string;
+}
+
+interface AlumniPropsInterface{
+  data:{
+    title:string;
+    subtitle:string;
+    alumnigroup:AlumniInterface[];
+  }
+}
+
 const alumniData = [
     {
       type: "quote",
@@ -54,7 +72,7 @@ const alumniData = [
       },
   ];
 
-export default function HomeAlumni() {
+export default function HomeAlumni({data}:AlumniPropsInterface) {
     const prevRef = useRef<HTMLDivElement>(null);
      const nextRef = useRef<HTMLDivElement>(null);
 
@@ -63,22 +81,25 @@ export default function HomeAlumni() {
         <div className="container">
           <div className="alumni_header">
             <div className="head_title">
-              <h3
-                className="font18"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="200"
-              >
-                OUR ALUMNI
-              </h3>
-  
-              <blockquote
-                data-aos="fade-up"
-                data-aos-duration="1000"
-                data-aos-delay="400"
-              >
-                Shaping Career Creating Impact
-              </blockquote>
+              {data?.title && (
+                <h3
+                  className="font18"
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="200"
+                  dangerouslySetInnerHTML={{__html:data.title}}
+                />
+              )}
+              
+              {data?.subtitle && (
+                <blockquote
+                  data-aos="fade-up"
+                  data-aos-duration="1000"
+                  data-aos-delay="400"
+                  dangerouslySetInnerHTML={{__html:data.subtitle}}
+                />
+              )}
+              
             </div>
   
             <div
@@ -96,12 +117,16 @@ export default function HomeAlumni() {
             </div>
           </div>
         </div>
-  
-        <div className="full-width">
-          <div className="max-content-lg pe-lg-0 me-lg-0">
-            <AlumniSlider alumniData={alumniData} prevRef={prevRef} nextRef={nextRef} />
+
+        {data.alumnigroup && data.alumnigroup.length > 0 && (
+          <div className="full-width">
+            <div className="max-content-lg pe-lg-0 me-lg-0">
+              <AlumniSlider alumniData={data.alumnigroup} prevRef={prevRef} nextRef={nextRef} />
+            </div>
           </div>
-        </div>
+        )}
+  
+        
       </section>
     );
   }

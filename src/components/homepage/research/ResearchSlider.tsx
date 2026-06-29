@@ -5,8 +5,21 @@ import { Navigation, Autoplay } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
+import Image from "next/image";
+import Link from "next/link";
+import { BASE_URL } from "@/config/config";
 
-export default function ResearchSlider() {
+interface ResearchSlider{
+    name:string;
+    image:string;
+    slug:string;
+}
+
+interface ResearchSliderInterface{
+    data:ResearchSlider[]
+}
+
+export default function ResearchSlider({data}:ResearchSliderInterface) {
     return (
         <div className="research_slider_section">
             <Swiper
@@ -45,69 +58,30 @@ export default function ResearchSlider() {
                     },
                 }}
             >
-                <SwiperSlide>
-                    <div className="research_slider_bx image">
-                        <figure>
-                            <img
-                                src="/images/placeholders/reaserch-placeholder.webp"
-                                alt="reaserch"
-                                className="img-fluid"
-                            />
-                        </figure>
-                        <div className="research_bx_bottom">
-                            <p>Nerves in skin can slow melanoma growth</p>
+                {data?.map((item, idx)=>(
+                    <SwiperSlide key={idx}>
+                        <div className="research_slider_bx image">
+                            <figure>
+                                <Image
+                                    width={636}
+                                    height={610}
+                                    loading="lazy"
+                                    src={item.image}
+                                    alt={item.name}
+                                    className="img-fluid"
+                                />
+                            </figure>
+                            {item?.name && (
+                                <div className="research_bx_bottom">
+                                    <p dangerouslySetInnerHTML={{__html:item.name}} />
+                                </div>
+                            )}
+                            
+                            <Link href={`${BASE_URL}research/${item.slug}`} className="overlap_btn"></Link>
                         </div>
-                        <a href="#" className="overlap_btn"></a>
-                    </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <div className="research_slider_bx image">
-                        <figure>
-                            <img
-                                src="/images/placeholders/reaserch-placeholder.webp"
-                                alt="reaserch"
-                                className="img-fluid"
-                            />
-                        </figure>
-                        <div className="research_bx_bottom">
-                            <p>Shaping the energy transition, Diversity, and Discovery</p>
-                        </div>
-                        <a href="#" className="overlap_btn"></a>
-                    </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <div className="research_slider_bx image">
-                        <figure>
-                            <img
-                                src="/images/placeholders/reaserch-placeholder.webp"
-                                alt="reaserch"
-                                className="img-fluid"
-                            />
-                        </figure>
-                        <div className="research_bx_bottom">
-                            <p>Research & development partnerships</p>
-                        </div>
-                        <a href="#" className="overlap_btn"></a>
-                    </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <div className="research_slider_bx image">
-                        <figure>
-                            <img
-                                src="/images/placeholders/reaserch-placeholder.webp"
-                                alt="reaserch"
-                                className="img-fluid"
-                            />
-                        </figure>
-                        <div className="research_bx_bottom">
-                            <p>Nerves in skin can slow melanoma growth</p>
-                        </div>
-                        <a href="#" className="overlap_btn"></a>
-                    </div>
-                </SwiperSlide>
+                    </SwiperSlide>
+                ))}
+                
             </Swiper>
 
         </div>
