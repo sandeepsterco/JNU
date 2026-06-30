@@ -1,0 +1,16 @@
+.course_dropdown{
+    position:absolute; 
+    left:0;
+    width:100%;
+    background:#fff;
+    max-height: 30rem;
+    overflow-y: auto;
+    z-index: 9;
+    top:100%;
+    box-shadow: 0 3px 50px rgba(0 0 0 / 10%);
+  }
+  
+  .course_dropdown .course_list{
+    padding:2rem 0;
+    display:block;
+  }

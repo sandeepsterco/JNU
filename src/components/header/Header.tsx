@@ -1,9 +1,30 @@
-import Link from 'next/link'
-import { BASE_URL } from '@/config/config'
-import './header.css'
-import Image from 'next/image'
 
-export default function Header() {
+import Link from 'next/link'
+import { API_URL, BASE_URL } from '@/config/config'
+import Image from 'next/image'
+import apiFetch from '@/lib/api'
+import './header.css'
+
+interface ChildItemInterface{
+    title:string;
+    slug:string;
+}
+
+interface HeaderMenuItem{
+    title:string;
+    slug:string;
+    children:ChildItemInterface[]
+}
+
+interface HeaderResponse{
+    header:HeaderMenuItem[];
+}
+
+export default async function Header() {
+    const {data, error} = await apiFetch(`header`);
+    
+    const headerData = (data as HeaderResponse)?.header ?? [];
+
     return (
         <header className="main_header">
             <div className="container-fluid">
@@ -12,21 +33,21 @@ export default function Header() {
                     <Image src="/images/naacgrade-a-logo.webp" width={188} height={61} className="img-fluid" alt="JNU" loading='eager' fetchPriority='high' />
                 </Link>
                 <ul className="site_nav">
-                    <li><a href="#">Academics</a></li>
-                    <li><a href="#">Programs</a></li>
-                    <li><a href="#">Research</a></li>
-                    <li><a href="#">Campus Life</a></li>
-                    <li><a href="#">Placements</a></li>
-                    <li className="site_dropdown"><a href="#">Admission</a>
-                        <ul className="site_dropdown_menu">
-                            <li><a href="#">Dropdown 1</a></li>
-                            <li><a href="#">Dropdown 2</a></li>
-                            <li><a href="#">Dropdown 3</a></li>
-                            <li><a href="#">Dropdown 4</a></li>
-                            <li><a href="#">Dropdown 5</a></li>
-                            <li><a href="#">Dropdown 6</a></li>
-                        </ul>
-                    </li>
+                    {headerData && headerData?.length > 0 && headerData.map((item, idx)=>(
+                        <li key={idx} className={item?.children?.length > 0 ? 'site_dropdown' : ''}>
+                            <Link href={`${BASE_URL}${item.slug}`}>{item.title}</Link>
+                            {item?.children?.length > 0 && (
+                                <ul className="site_dropdown_menu">
+                                    {item?.children.map((innerItem, innerIdx)=>(
+                                        <li key={innerIdx}>
+                                            <Link href={`${BASE_URL}${innerItem.slug}`}>{innerItem.title}</Link>
+                                        </li>
+                                    ))}
+                                    
+                                </ul>
+                            )}
+                        </li>
+                    ))}
                 </ul>
                 <div className="nav_right">
                     <button className="search_btn" type="button">

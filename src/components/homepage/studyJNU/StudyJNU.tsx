@@ -1,6 +1,8 @@
 import Link from 'next/link';
-import './studyjnu.css'
 import { APPLY_NOW, BASE_URL } from '@/config/config';
+import Search from './Search';
+import { Suspense } from 'react';
+import './studyjnu.css'
 
 interface ModularProgramInterface{
     name:string;
@@ -35,14 +37,7 @@ export default function StudyJNU({data, modular}:ProgramPropsInterface) {
                         )}
                     </div>
 
-                    <div className="jnu_search" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                        <div className="input-group">
-                            <input type="text" className="form-control" placeholder="Search Programs." aria-label="Search Programs."
-                                aria-describedby="button-addon2" />
-                            <button className="btn btn-outline-secondary" type="button" id="button-addon2"><img
-                                src="/images/icons/search-icon.svg" alt="search" className="img-fluid" /></button>
-                        </div>
-                    </div>
+                    <Search />
 
                     {modular && modular?.length > 0 && (
                         <div className="container">

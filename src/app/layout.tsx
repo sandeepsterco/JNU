@@ -8,6 +8,7 @@ import Footer from "@/components/footer/Footer";
 import { NonceProvider } from "@/lib/NonceProvider";
 import '../styles/globals.css'
 import { headers } from "next/headers";
+import Providers from "@/lib/Providers";
 
 const stackSansText = Stack_Sans_Text({
   subsets: ['latin'],
@@ -47,12 +48,14 @@ export default async function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <NonceProvider nonce={nonce}>
-          <AosProvider>
-            <Header />
-            {children}
-            <Footer />
-            <RevealImages />
-          </AosProvider>
+          <Providers>
+            <AosProvider>
+              <Header />
+              {children}
+              <Footer />
+              <RevealImages />
+            </AosProvider>
+          </Providers>
         </NonceProvider>
       </body>
     </html>

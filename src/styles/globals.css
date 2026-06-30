@@ -111,6 +111,8 @@ h3{font:var(--font-30);color: var(--color-black);}
 h4{font:var(--font-24);color: var(--color-black);}
 h5{font:var(--font-21);color: var(--color-black);}
 h6{font:var(--font-18);color: var(--color-black);}
+/* absolute top-full left-0 w-full bg-white  rounded shadow mt-2 max-h-[30rem] overflow-y-auto z-50 */
+
 
 @media(min-width:2200px){
   .max-content-lg{ width:100%; max-width:2150px; padding-right:0; margin-inline:auto 0; }

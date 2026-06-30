@@ -1,6 +1,23 @@
+import apiFetch from '@/lib/api';
 import './footer.css'
 
-export default function Footer() {
+async function fetchFooterData(){
+    const [headerRes, infoRes] = await Promise.all([
+        apiFetch(`footer`),
+        apiFetch(`info`)
+    ])
+
+    return {
+        headerRes,
+        infoRes
+    }
+}
+
+export default async function Footer() {
+    const {headerRes, infoRes} = await fetchFooterData()
+
+    const infoData = infoRes?.data?.data ?? [];
+
     return (
         <footer data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
             <div className="container">
