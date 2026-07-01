@@ -6,9 +6,9 @@ import AosProvider from "@/components/common/AosProvider";
 import RevealImages from "@/components/common/RevealImages";
 import Footer from "@/components/footer/Footer";
 import { NonceProvider } from "@/lib/NonceProvider";
-import '../styles/globals.css'
 import { headers } from "next/headers";
 import Providers from "@/lib/Providers";
+import '../styles/globals.css'
 
 const stackSansText = Stack_Sans_Text({
   subsets: ['latin'],

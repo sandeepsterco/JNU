@@ -4,6 +4,7 @@ import { API_URL, BASE_URL } from '@/config/config'
 import Image from 'next/image'
 import apiFetch from '@/lib/api'
 import './header.css'
+import { headers } from 'next/headers'
 
 interface ChildItemInterface{
     title:string;
@@ -21,12 +22,16 @@ interface HeaderResponse{
 }
 
 export default async function Header() {
+    const headerList = await headers();
+    const pathname = headerList.get('x-pathname') ?? '';
     const {data, error} = await apiFetch(`header`);
     
     const headerData = (data as HeaderResponse)?.header ?? [];
 
+    const isHomePage = pathname === '/';
+
     return (
-        <header className="main_header">
+        <header className={`main_header ${isHomePage ? 'home_header' : 'inner_header'}`}>
             <div className="container-fluid">
                 <Link href={BASE_URL ?? '/'} className="site_navbar">
                     <Image src="/images/logo.webp" width={344} height={63} className="img-fluid" alt="JNU" loading='eager' fetchPriority='high' />

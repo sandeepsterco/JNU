@@ -1,5 +1,6 @@
 import apiFetch from '@/lib/api';
 import './footer.css'
+import '@/components/homepage/social/social.css'
 
 async function fetchFooterData(){
     const [headerRes, infoRes] = await Promise.all([

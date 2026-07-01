@@ -114,6 +114,20 @@ h6{font:var(--font-18);color: var(--color-black);}
 /* absolute top-full left-0 w-full bg-white  rounded shadow mt-2 max-h-[30rem] overflow-y-auto z-50 */
 
 
+
+/* custom css */
+
+.load_more_btn{ display: flex; justify-content: center; padding-top: 7.2rem;}
+.load_more_btn .btn { display: flex; font: var(--font-16); color: var(--color-cf); gap: 1.5rem; align-items: center; }
+.load_more_btn .btn span { width: 3rem; height: 3rem; border: 1px solid var(--color-cf); text-align: center; display: block; padding: 0.7rem 1rem; }
+.load_more_btn .btn span img{ transform: rotate(90deg);}
+.load_more_btn .btn:hover{ color: var(--color-black);}
+.load_more_btn .btn:hover span{ background-color: var(--color-black); border-color: var(--color-black);}
+.load_more_btn .btn:hover span img{ filter: brightness(0) invert(1);}
+
+/* start responsive css */
+
+
 @media(min-width:2200px){
   .max-content-lg{ width:100%; max-width:2150px; padding-right:0; margin-inline:auto 0; }
 }
