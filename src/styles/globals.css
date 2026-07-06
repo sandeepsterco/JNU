@@ -64,7 +64,7 @@
 }
 
 
-* {margin: 0;padding: 0;outline: 0;box-sizing: border-box;font-family:var(--stack);}
+* {box-sizing: border-box;font-family:var(--stack);}
 ::after,::before{box-sizing:border-box;}
 audio,canvas,embed,iframe,img,object,svg,video{display:block;max-width:100%;width:100%;}
 
@@ -80,6 +80,12 @@ a:not([href=""]):not([href]):not([href="#"]){cursor:pointer;}
 figure{margin-bottom:0;}
 button{cursor: pointer; border: none; background-color: transparent;}
 h1, h2, h3, h4, h5, h6 { margin-top: 0;margin-bottom: 0;}
+
+.title30 { font: var(--font-30);  position:relative; }
+.title42 { font: var(--font-42);  position:relative; }
+.title48 { font: var(--font-48);  position:relative; }
+.title72 { font: var(--font-72);  position:relative; }
+.title85 { font: var(--font-85);  position:relative; }
 
 
 

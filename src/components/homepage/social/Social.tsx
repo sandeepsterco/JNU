@@ -15,7 +15,6 @@ interface SocialPropsInterface{
 }
 
 export default function HomeSocial({data, modular}:SocialPropsInterface) {
-    console.log('homepage',modular);
     return (
         <section className="jnu_social_wall">
             <div className="container">

@@ -8,6 +8,17 @@ interface FactsInterface{
     facts:string;
 }
 
+interface CounterInterface{
+    count:string;
+    title:string;
+}
+
+interface TabsInterface{
+    tab:string;
+    video?:string;
+    id?:string;
+}
+
 interface ExperiencePropsInterface{
     data:{
         title:string;
@@ -15,10 +26,16 @@ interface ExperiencePropsInterface{
         description:string;
         link?:string;
         factsfigure:FactsInterface[];
+        overlayheading:string;
+        overlaydescription:string;
+        overlaycounter:CounterInterface[];
+        overlayslug?:string;
+        videotabs:TabsInterface[];
     }
 }
 
 export default function Experience({data}:ExperiencePropsInterface) {
+
     return (
         <>
             <section className="experience_university">
@@ -96,7 +113,7 @@ export default function Experience({data}:ExperiencePropsInterface) {
                     </div>
                 </div>
             </section>
-            <ExperienceTabs />
+            <ExperienceTabs data={data} />
         </>
     );
 }

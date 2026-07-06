@@ -1,6 +1,8 @@
 import apiFetch from '@/lib/api';
 import './footer.css'
 import '@/components/homepage/social/social.css'
+import Link from 'next/link';
+import { BASE_URL } from '@/config/config';
 
 async function fetchFooterData(){
     const [headerRes, infoRes] = await Promise.all([
@@ -24,14 +26,16 @@ export default async function Footer() {
             <div className="container">
                 <div className="footer_grid">
                     <div className="footer_left">
-                        <ul className="footer_link">
-                            <li><a href="#">About JNU</a></li>
-                            <li><a href="#">Academics</a></li>
-                            <li><a href="#">Research & Innovation</a></li>
-                            <li><a href="#">Campus Life</a></li>
-                            <li><a href="#">Admissions</a></li>
-                            <li><a href="#">Placements</a></li>
-                        </ul>
+                        {headerRes?.data?.footer && (
+                            <ul className="footer_link">
+                                {headerRes?.data?.footer.map((item:any, idx:number)=>(
+                                    <li key={idx}>
+                                        <Link href={`${BASE_URL}${item.slug}`}>{item.title}</Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        )}
+                        
                         <div className="quick_link">
                             <h4 className="font18">Quick Links</h4>
                             <ul>

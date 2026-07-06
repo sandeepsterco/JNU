@@ -1,10 +1,13 @@
 import InnerHead from "@/components/header/InnerHead/InnerHead";
 import apiFetch from "@/lib/api";
-import { getSlug } from "@/lib/getSlug";
 import NotFound from "../not-found";
+import ComingSoon from "@/components/common/comingSoon/ComingSoon";
 
-export default async function InnerPageLayout({ children }: { children: React.ReactNode }) {
-    const slug = await getSlug();
+import '@/styles/inner.css'
+
+export default async function InnerPageLayout({ children, params }:Readonly< { children: React.ReactNode, params:any }>) {
+    const {slug} = await params;
+
     const {data, error} = await apiFetch(`cms/${slug}`);
 
     if(error){
@@ -16,7 +19,7 @@ export default async function InnerPageLayout({ children }: { children: React.Re
     return (
         <main className="site_main">
             <InnerHead headData={headData} />
-            {children}
+            {data.data.sections.length == 0 ? <ComingSoon /> : children}
         </main>
     )
 }

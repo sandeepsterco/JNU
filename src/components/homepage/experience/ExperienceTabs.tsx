@@ -1,28 +1,31 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
-const tabs = [
-  {
-    id: "tab1",
-    title: "Global Educational Experience",
-  },
-  {
-    id: "tab2",
-    title: "Student Life",
-  },
-  {
-    id: "tab3",
-    title: "Facilities",
-  },
-  {
-    id: "tab4",
-    title: "Clubs & Societies",
-  },
-];
+interface CounterInterface{
+  count:string;
+  title:string;
+}
 
-export default function VideoTabs() {
-  const [activeTab, setActiveTab] = useState("tab1");
+interface TabsInterface{
+  tab:string;
+  video?:string | null;
+  id?:string;
+}
+
+interface VideoTabsInterface{
+  data:{
+    overlayheading:string;
+    overlaydescription:string;
+    overlaycounter:CounterInterface[];
+    overlayslug?:string;
+    videotabs:TabsInterface[];
+  }
+}
+
+export default function VideoTabs({data}:VideoTabsInterface) {
+  const [activeTab, setActiveTab] = useState(data?.videotabs[0]?.id);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -58,7 +61,7 @@ export default function VideoTabs() {
       data-aos-delay="200"
     >
       <div className="tab_container">
-        {tabs.map((tab) => (
+        {data.videotabs.map((tab) => (
           <div key={tab.id}>
             {/* Mobile Drawer Heading */}
             <h3
@@ -67,7 +70,7 @@ export default function VideoTabs() {
               }`}
               onClick={() => setActiveTab(tab.id)}
             >
-              {tab.title}
+              {tab.tab}
             </h3>
 
             {/* Tab Content */}
@@ -90,43 +93,33 @@ export default function VideoTabs() {
                   </div>
 
                   <div className="video_content">
-                    <h3>A Hub for Global Exchange of Ideas</h3>
+                    {data?.overlayheading && (
+                      <h3 dangerouslySetInnerHTML={{__html:data.overlayheading}} />
+                    )}
 
-                    <p>
-                      Sed ut perspiciatis unde omnis iste natus error sit
-                      voluptatem
-                    </p>
+                    <div dangerouslySetInnerHTML={{__html:data.overlaydescription}} />
 
-                    <ul>
-                      <li>
-                        <h5>
-                          140<sup>+</sup>
-                        </h5>
-                        <p>International Students</p>
-                      </li>
+                    {data?.overlaycounter && (
+                      <ul>
+                        {data.overlaycounter.map((item, idx)=>(
+                          <li key={idx}>
+                            <h5 dangerouslySetInnerHTML={{__html:item?.count}} />
+                            <p dangerouslySetInnerHTML={{__html:item.title}} />
+                          </li>
+                        ))} 
+                      </ul>
+                    )}
 
-                      <li>
-                        <h5>
-                          20<sup>+</sup>
-                        </h5>
-                        <p>Prestigious Universities</p>
-                      </li>
-
-                      <li>
-                        <h5>
-                          50<sup>+</sup>
-                        </h5>
-                        <p>International Students</p>
-                      </li>
-                    </ul>
-
-                    <a href="#">
-                      <img
-                        src="/images/icons/nav-arrow-next.svg"
-                        className="img-fluid"
-                        alt="arrow"
-                      />
-                    </a>
+                    {data?.overlayslug && (
+                      <Link href={data.overlayslug}>
+                        <img
+                          src="/images/icons/nav-arrow-next.svg"
+                          className="img-fluid"
+                          alt="arrow"
+                        />
+                      </Link>
+                    )}
+                    
                   </div>
                 </div>
               </div>
@@ -139,13 +132,13 @@ export default function VideoTabs() {
       <div className="tab_buttons">
         <div className="max-container-lg">
           <ul className="tabs">
-            {tabs.map((tab) => (
+            {data.videotabs.map((tab) => (
               <li
                 key={tab.id}
                 className={activeTab === tab.id ? "active" : ""}
                 onClick={() => setActiveTab(tab.id)}
               >
-                {tab.title}
+                {tab.tab}
               </li>
             ))}
           </ul>
