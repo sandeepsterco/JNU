@@ -1,5 +1,5 @@
 import parse, {attributesToProps, HTMLReactParserOptions, Element} from 'html-react-parser'
-import DOMPurify from 'isomorphic-dompurify'
+// import DOMPurify from 'isomorphic-dompurify'
 import Image from 'next/image';
 import CmsEnhancer from '../CmsEnhancer';
 
@@ -69,7 +69,8 @@ function hashString(str: string): string {
   }
 
 export default function ReactParser({html}:{html:string}){
-    const sanitizedHtml = DOMPurify.sanitize(html);
+    // const sanitizedHtml = DOMPurify.sanitize(html);
+    const sanitizedHtml = html;
     const containerId = `cms-block-${hashString(sanitizedHtml)}`;
     
 
