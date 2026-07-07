@@ -1,6 +1,7 @@
 // CmsEnhancer.tsx — still "use client", but scoped, no doc-wide querySelectorAll
 "use client";
 
+import { InitTabs } from "@/lib/cms/initTabs";
 import { useEffect } from "react";
 import type Swiper from "swiper";
 
@@ -9,9 +10,18 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
     let cancelled = false;
     let instances: Swiper[] = [];
 
+    const cleanupFns: (() => void)[] = [];
+
     async function init() {
       const root = document.getElementById(containerId);
       if (!root) return;
+
+      // Initialize tabs
+      if (root.querySelector(".tabbed-content")) {
+        InitTabs(root);
+      }
+
+      // Initialize Swiper only if sliders exist
 
       const sliders = root.querySelectorAll<HTMLElement>(
         ".adfSwiper:not([data-swiper-init])"
@@ -62,6 +72,9 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
       cancelled = true;
       instances.forEach((s) => s.destroy(true, true));
       instances = [];
+      
+      cleanupFns.forEach((cleanup) => cleanup());
+
     };
   }, [containerId]);
 

@@ -6,6 +6,7 @@ import { BASE_URL } from '@/config/config';
 import { useEffect, useState, useTransition } from 'react';
 import { Skeleton } from '../ui/Skeleton';
 import FacultyFilter from './Filter/FacultyFilter';
+import NoData from '../ui/NoData';
 
 interface Faculty {
     id: number;
@@ -48,23 +49,25 @@ export default function FacultyGrid({ data, loadFacultyAction }: FacultyPropsInt
     const [currentPage, setCurrentPage] = useState(1);
     const [lastPage, setLastPage] = useState(data?.last_page ?? 1);
     const [searchValue, setSearchValue] = useState('');
+    const [schoolValue, setSchoolValue] = useState('');
+    const [departmentValue, setDepartmentValue] = useState('');
     const [isPending, startTransition] = useTransition();
 
     const hasMore = currentPage < lastPage;
 
     useEffect(()=>{
         startTransition(async()=>{
-            const newData = await loadFacultyAction({page:1, search:searchValue});
+            const newData = await loadFacultyAction({page:1, search:searchValue, school:schoolValue, department:departmentValue});
             setFacultyList(newData?.data ?? []);
             setCurrentPage(newData?.current_page ?? 1);
             setLastPage(newData?.last_page ?? 1);
         });
-    }, [searchValue])
+    }, [searchValue, schoolValue, departmentValue])
 
     const handleLoadMore = async () => {
         startTransition(async () => {
             const nextPage = currentPage + 1;
-            const newData = await loadFacultyAction({page: nextPage, search:searchValue});
+            const newData = await loadFacultyAction({page: nextPage, search:searchValue, school:schoolValue, department:departmentValue});
             setFacultyList((prev) => [...prev, ...(newData?.data ?? [])]);
             setCurrentPage(newData?.current_page ?? nextPage);
             setLastPage(newData?.last_page ?? lastPage);
@@ -74,7 +77,11 @@ export default function FacultyGrid({ data, loadFacultyAction }: FacultyPropsInt
     return (
         <section className="faculty_section">
             <div className="container">
-                <FacultyFilter onSearchChange={setSearchValue} />
+                <FacultyFilter onSearchChange={setSearchValue} onSchoolChange={setSchoolValue} onDepartmentChange={setDepartmentValue} schoolValue={schoolValue} departmentValue={departmentValue} />
+
+                {facultyList.length == 0 && (
+                    <NoData />
+                )}
 
                 {facultyList && facultyList.length > 0 && (
                     <div className="faculty_grid">

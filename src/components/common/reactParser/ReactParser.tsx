@@ -6,6 +6,28 @@ import CmsEnhancer from '../CmsEnhancer';
 const options:HTMLReactParserOptions = {
     replace(domNode){
         if(domNode instanceof Element && domNode.attribs){
+
+            if(domNode.name === 'a'){
+                const href = (domNode.attribs?.href || '').trim();
+
+                const isInvalid = !href || href === '#' || href.startsWith("{") || href.startsWith("javascript:");
+
+                if(isInvalid) return <></>;
+            }
+
+            if(domNode.name === 'li'){
+                const hasContent = domNode.children.some((child)=>{
+                    if(child instanceof Element) return true;
+                    if(child.type === 'text'){
+                        return child.data.trim().length > 0;
+                    }
+                    return false;
+                });
+
+                if(!hasContent) return <></>;
+
+            }
+
             if(domNode.name === 'img'){
                 const props = attributesToProps(domNode.attribs) as any;
                 const resolvedSrc = (()=>{
