@@ -2,6 +2,7 @@ import parse, {attributesToProps, HTMLReactParserOptions, Element} from 'html-re
 // import DOMPurify from 'isomorphic-dompurify'
 import Image from 'next/image';
 import CmsEnhancer from '../CmsEnhancer';
+import ProgramsOffered from '@/components/parser/programs-offered/ProgramsOffered';
 
 const options:HTMLReactParserOptions = {
     replace(domNode){
@@ -78,6 +79,9 @@ const options:HTMLReactParserOptions = {
                     />
                 );
             }
+
+            if (domNode.attribs.id === "programOffered") return <ProgramsOffered />;
+
         }
     }
 }
