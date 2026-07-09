@@ -1,3 +1,5 @@
+
+/* ================= Program Page==============  */
 .program_section{ padding-block: 10rem; position: relative;}
 .program_section::before{background-image: url(/images/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 61.4rem; width: 100%; content: ""; z-index: -1; }
 .program_section .prg_grid{ display: grid; grid-template-columns: repeat(4, 1fr); gap: 2.5rem;}
@@ -7,7 +9,7 @@
 .program_Bx figure{ max-width: 6rem; margin: 3rem auto 0;}
 .prg_search{ margin-top: 10rem;}
 .prg_search .input-group { position: relative; }
-.prg_search input { width: 100%; height: 5.2rem; border: 1px solid #CF1E6266; font: var(--font-14); font-weight: 300; padding-inline: 3rem; background:var(--color-white); outline:none;}
+.prg_search input { width: 100%; height: 5.2rem; border: 1px solid #CF1E6266; font: var(--font-14); font-weight: 300; padding-inline: 3rem; }
 .prg_search .btn_search { position: absolute; right: 2rem; top: 1.5rem; }
 .prg_search input::placeholder{ color: var(--color-black);}
 .prg_search .btn_search img{ max-height: 2rem;}
@@ -22,13 +24,15 @@
 .reset_filter:hover{ background-color: var(--color-fa); color: var(--color-black);}
 .program_listing_grid{ display: grid; grid-template-columns: 35rem auto; gap: 2.5rem; margin-top: 2.5rem;}
 .progrem_left .accordion .accordion_heading h5{ position: relative;}
-.progrem_left .accordion .tab .accordion_heading h5::after { content: ''; position: absolute; top: 1rem; right: 0rem; width: 1.5rem; height: 1rem; background: url(/images/nav-arrow-down.svg) no-repeat center center; background-size: contain; pointer-events: none; transform: translateZ(0); -webkit-transform: translateZ(0); backface-visibility: hidden; -webkit-backface-visibility: hidden; will-change: transform; transition: 0.5s; }
+.progrem_left .accordion .tab .accordion_heading h5::after { content: ''; position: absolute; top: 0.8rem; right: 0rem; width: 1.2rem; height: 1rem; background: url(/images/nav-arrow-down.svg) no-repeat center center; background-size: contain; pointer-events: none; transform: translateZ(0); -webkit-transform: translateZ(0); backface-visibility: hidden; -webkit-backface-visibility: hidden; will-change: transform; transition: 0.5s; }
 .progrem_left .accordion .tab.active .accordion_heading h5::after{ transform: rotate(180deg);}
-.progrem_left .tab-content ul{ padding:0 3.4rem 2rem; list-style: none;}
-.progrem_left .tab-content ul li{ font: var(--font-16); font-weight: 300; padding-block: 0.7rem;}
-.progrem_left .tab-content ul li .form-check{ display: flex; align-items: center; gap: 1rem;}
-.progrem_left .tab-content ul li input{ accent-color: var(--color-cf); width: 1.2rem; height: 1.2rem;}
+.progrem_left .accordion_content ul{ padding:0 3.4rem 2rem; list-style: none;}
+.progrem_left .accordion_content ul li{ font: var(--font-16); font-weight: 300; padding-block: 0.7rem;}
+.progrem_left .accordion_content ul li .form-check{ display: flex; align-items: center; gap: 1rem;}
+.progrem_left .accordion_content ul li input{ accent-color: var(--color-cf); width: 1.2rem; height: 1.2rem;}
 .progrem_left .tab{border-bottom: 1px solid #E3E3E3;}
+.accordion_content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding-top: 0; padding-bottom: 0; }
+.tab.active .accordion_content { padding-top:0rem; padding-bottom: 1rem; }
 .program_grid{ display: flex; flex-wrap: wrap; gap: 2rem;}
 .program_list_grid{ display: flex; flex-wrap: wrap; gap: 2rem;}
 .program_grid_bx{ background-color: var(--color-white); padding: 3.2rem 4rem; border: 1px solid #E3E3E3; display: grid; grid-template-columns: 82% auto; width: 100%;}
