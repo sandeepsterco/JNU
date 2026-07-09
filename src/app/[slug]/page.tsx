@@ -3,7 +3,8 @@ import apiFetch from "@/lib/api";
 
 interface SearchParams{
     search?:string;
-
+    duration?:string;
+    school?:string;
 }
 
 export default async function DynamicInnerPage({params, searchParams}:{params:Promise<{slug:string}>, searchParams:Promise<SearchParams>}){

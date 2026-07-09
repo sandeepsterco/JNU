@@ -2,7 +2,8 @@ import ReactParser from "./ReactParser";
 
 interface SearchParams{
     search?:string;
-
+    duration?:string;
+    school?:string;
 }
 
 export default function ReactParserDynamic({html, searchParams}:{html:string, searchParams:SearchParams}){

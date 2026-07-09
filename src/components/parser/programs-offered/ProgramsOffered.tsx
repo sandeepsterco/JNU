@@ -26,16 +26,19 @@ interface ProgramsDataInterface{
 
 interface ProgramsOfferedProps {
     searchParams: { 
-        search?: string 
+        search?: string;
+        school?:string;
+        duration?:string;
     };
 }
 
 export default async function ProgramsOffered({searchParams}:ProgramsOfferedProps) {
-    const {search} = searchParams;
+    const {search, school} = searchParams;
     const currentSlug = await getSlug(0);
     const params = new URLSearchParams();
 
-    if(search) params.set('search', search)
+    if(search) params.set('search', search);
+    if(school) params.set('school', school);
     const {data, error} = await apiFetch(`programs?${params.toString()}`);
 
     const programsData:ProgramsDataInterface[] = data.data ?? [];

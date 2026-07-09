@@ -18,9 +18,9 @@
 .progrem_left .accordion{ background-color: var(--color-white); border: 1px solid #E3E3E3;}
 .progrem_left .accordion .accordion_heading{ padding: 2rem 3.4rem; cursor: pointer; }
 .progrem_left .accordion .accordion_heading h5{ font: var(--font-18);}
-.apply_filter{ font: var(--font-16); background-color: var(--color-cf); height: 4rem; color: var(--color-white); text-align: center; line-height: 4rem; display: block; margin-block: 1.6rem;}
+.apply_filter{ font: var(--font-16); background-color: var(--color-cf); height: 4rem; color: var(--color-white); text-align: center; line-height: 4rem; display: block; margin-block: 1.6rem; width: 100%;}
 .apply_filter:hover{ background-color: var(--color-06);}
-.reset_filter{ font: var(--font-16); background-color: transparent; border: 1px solid #E3E3E3; height: 4rem; color: var(--color-black); text-align: center; line-height: 4rem; display: block; margin-block: 1.6rem;}
+.reset_filter{ font: var(--font-16); background-color: transparent; border: 1px solid #E3E3E3; height: 4rem; color: var(--color-black); text-align: center; line-height: 4rem; display: block; margin-block: 1.6rem; width: 100%;}
 .reset_filter:hover{ background-color: var(--color-fa); color: var(--color-black);}
 .program_listing_grid{ display: grid; grid-template-columns: 35rem auto; gap: 2.5rem; margin-top: 2.5rem;}
 .progrem_left .accordion .accordion_heading h5{ position: relative;}

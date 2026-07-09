@@ -5,21 +5,24 @@ import Link from 'next/link';
 import { BASE_URL } from '@/config/config';
 
 async function fetchFooterData(){
-    const [headerRes, infoRes] = await Promise.all([
+    const [headerRes, infoRes, quickLinks] = await Promise.all([
         apiFetch(`footer`),
-        apiFetch(`info`)
+        apiFetch(`info`),
+        apiFetch(`quick-links`)
     ])
 
     return {
         headerRes,
-        infoRes
+        infoRes,
+        quickLinks
     }
 }
 
 export default async function Footer() {
-    const {headerRes, infoRes} = await fetchFooterData()
+    const {headerRes, infoRes, quickLinks} = await fetchFooterData()
 
     const infoData = infoRes?.data?.data ?? [];
+    const quickLinksData = quickLinks?.data?.quickLinks ?? [];
 
     return (
         <footer data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
@@ -39,16 +42,11 @@ export default async function Footer() {
                         <div className="quick_link">
                             <h4 className="font18">Quick Links</h4>
                             <ul>
-                                <li><a href="#">Study @ JNU</a></li>
-                                <li><a href="#">Contact</a></li>
-                                <li><a href="#">ERP Login</a></li>
-                                <li><a href="#">Public - Self Disclosure</a></li>
-                                <li><a href="#">Policies</a></li>
-                                <li><a href="#">UGC e-Samadhaan Portal</a></li>
-                                <li><a href="#">Holidays Calendar</a></li>
-                                <li><a href="#">Downloads</a></li>
-                                <li><a href="#">Mandatory Discloures</a></li>
-                                <li><a href="#">FAQ</a></li>
+                                {quickLinksData.map((item:any, idx:number)=>(
+                                    <li key={idx}>
+                                        <Link href={`${BASE_URL}${item.slug}`}>{item.title}</Link>
+                                    </li>
+                                ))}
                             </ul>
                         </div>
 
@@ -57,11 +55,15 @@ export default async function Footer() {
                         <div className="footer_logo">
                             <figure><img src="/images/footer-logo.webp" className="img-fluid" alt="logo" /></figure>
                             <ul className="social_media_link">
-                                <li><a href="#"><img src="/images/icons/social/facebook.svg" className="img-fluid" alt="facebook" /></a></li>
-                                <li><a href="#"><img src="/images/icons/social/twitter.svg" className="img-fluid" alt="twitter" /></a></li>
-                                <li><a href="#"><img src="/images/icons/social/youtube.svg" className="img-fluid" alt="youtube" /></a></li>
-                                <li><a href="#"><img src="/images/icons/social/instagram.svg" className="img-fluid" alt="instagram" /></a></li>
-                                <li><a href="#"><img src="/images/icons/social/linkedin.svg" className="img-fluid" alt="linkedin" /></a></li>
+                                {infoData
+                                    .filter((item:any)=>(item.key == 'facebook' || item.key == 'twitter' || item.key == 'youtube' || item.key == 'instagram' || item.key == 'linkedin'))
+                                    .map((item:any)=>(
+                                        <li key={item.key}>
+                                            <Link href={item.value ?? ''}>
+                                                <img src={item.image} className="img-fluid" alt={item.key} />
+                                            </Link>
+                                        </li>
+                                    ))}
                             </ul>
                         </div>
                     </div>

@@ -1,5 +1,7 @@
 import Image from 'next/image';
 import './social.css'
+import apiFetch from '@/lib/api';
+import Link from 'next/link';
 
 interface SocialInterface{
     name:string;
@@ -14,7 +16,9 @@ interface SocialPropsInterface{
     modular:SocialInterface[]
 }
 
-export default function HomeSocial({data, modular}:SocialPropsInterface) {
+export default async function HomeSocial({data, modular}:SocialPropsInterface) {
+    const {data:apiData, error} = await apiFetch(`info`);
+
     return (
         <section className="jnu_social_wall">
             <div className="container">
@@ -25,11 +29,15 @@ export default function HomeSocial({data, modular}:SocialPropsInterface) {
                 )}
                 
                 <ul className="social_media_link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <li><a href="#"><img src="/images/icons/social/facebook.svg" className="img-fluid" alt="facebook" /></a></li>
-                    <li><a href="#"><img src="/images/icons/social/twitter.svg" className="img-fluid" alt="twitter" /></a></li>
-                    <li><a href="#"><img src="/images/icons/social/youtube.svg" className="img-fluid" alt="youtube" /></a></li>
-                    <li><a href="#"><img src="/images/icons/social/instagram.svg" className="img-fluid" alt="instagram" /></a></li>
-                    <li><a href="#"><img src="/images/icons/social/linkedin.svg" className="img-fluid" alt="linkedin" /></a></li>
+                    {apiData.data
+                        .filter((item:any)=>(item.key == 'facebook' || item.key == 'twitter' || item.key == 'youtube' || item.key == 'instagram' || item.key == 'linkedin'))
+                        .map((item:any)=>(
+                            <li key={item.key}>
+                                <Link href={item.value ?? ''}>
+                                    <img src={item.image} className="img-fluid" alt={item.key} />
+                                </Link>
+                            </li>
+                        ))}
                 </ul>
 
                 {modular && modular?.length > 0 && (

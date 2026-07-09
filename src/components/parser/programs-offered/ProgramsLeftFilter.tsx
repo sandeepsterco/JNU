@@ -2,6 +2,7 @@
 
 import apiFetch from "@/lib/api";
 import { useQuery } from "@tanstack/react-query";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useLayoutEffect, useMemo, useRef, useState } from "react";
 
 type AccordionOption = {
@@ -13,6 +14,7 @@ type AccordionOption = {
 type AccordionItem = {
   title: string;
   options: AccordionOption[];
+  key:string;
 };
 
 const getSchoolList = async () => {
@@ -65,8 +67,13 @@ const durationListData = [
 ];
 
 export default function ProgramsLeftFilter() {
+    const searchParams = useSearchParams();
+    const router = useRouter();
+    const pathname = usePathname();
   const [activeIndex, setActiveIndex] = useState(0);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  console.log('searchParams',searchParams);
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["program-filters"],
@@ -85,14 +92,42 @@ export default function ProgramsLeftFilter() {
     const durationOptions = normalizeOptions(durationListData, "duration");
 
     const dynamicAccordionData: AccordionItem[] = [
-      { title: "School", options: schoolOptions },
-      { title: "Duration", options: durationOptions },
+      { title: "School", key:'school', options: schoolOptions },
+      { title: "Duration", key:'duration', options: durationOptions },
     ];
 
     return dynamicAccordionData.filter((item) => item.options.length > 0);
   }, [data]);
 
+  const [selected, setSelected] = useState(()=>{
+    const initial:any = {};
+    searchParams.forEach((value, key)=>{
+        initial[key] = value;
+    });
+    return initial;
+  })
+
+  const handleSelect = (filterKey:string, optionId:string | number)=>{
+    setSelected((prev:any)=>({...prev, [filterKey]:String(optionId)}))
+  }
+
+  const applyFilters = ()=>{
+    const params = new URLSearchParams();
+    
+    Object.entries(selected).forEach(([key, value]:any)=>{
+        if(value) params.set(key, value)
+    })
+
+    router.push(`${pathname}?${params.toString()}`)
+  }
+
+  const resetFilters = ()=>{
+    setSelected({});
+    router.push(pathname)
+  }
+
   contentRefs.current = contentRefs.current.slice(0, accordionData.length);
+
 
   useLayoutEffect(() => {
     const syncHeight = () => {
@@ -140,16 +175,18 @@ export default function ProgramsLeftFilter() {
               >
                 <ul>
                   {item.options.map((option) => {
-                    const inputId = `${item.title}-${option.id}`;
+                    const inputId = `${item.key}-${option.id}`;
                     return (
                       <li key={option.id}>
                         <div className="form-check">
                           <input
                             className="form-check-input"
                             type="radio"
-                            name={item.title}
+                            name={item.key}
                             id={inputId}
                             value={option.slug ?? String(option.id)}
+                            checked={selected[item.key] == String(option.id)}
+                            onChange={()=>handleSelect(item.key, option.id)}
                           />
 
                           <label className="form-check-label" htmlFor={inputId}>
@@ -166,13 +203,13 @@ export default function ProgramsLeftFilter() {
         })}
       </div>
 
-      <a href="#" className="apply_filter">
+      <button className="apply_filter" onClick={applyFilters}>
         Apply Filter
-      </a>
+      </button>
 
-      <a href="#" className="reset_filter">
+      <button className="reset_filter" onClick={resetFilters}>
         Reset
-      </a>
+      </button>
     </>
   );
 }

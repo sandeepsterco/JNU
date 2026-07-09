@@ -10,6 +10,7 @@ interface ProgramsSearchParams {
     duration?: string;
     specialization?: string;
     type?: string;
+    school?:string;
 }
 
 interface ContentRendererProps {
