@@ -10,7 +10,7 @@
 .faq_accordion .tab{ border-bottom: 1px dashed rgba(255, 255, 255, 0.49);}
 .faq_accordion .tab.active{ border-bottom: 0px dashed rgba(255, 255, 255, 0.49);}
 .faq_accordion .tab:has(+ .tab.active) { border-bottom: none; }
-
+.tab_drawer_heading { display: none; }
 .faq_accordion h5 { pointer-events: none; color: var(--color-white); font: var(--font-18); position: relative; }
 .tab-content { overflow-y: hidden; height: 0; transition: 0.5s ease;}
 .tab-content p { margin:0 12rem 3rem 4rem; color: var(--color-white); font: var(--font-14); font-weight: 300; line-height: 1.7; }

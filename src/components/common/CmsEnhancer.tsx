@@ -1,6 +1,7 @@
 // CmsEnhancer.tsx — still "use client", but scoped, no doc-wide querySelectorAll
 "use client";
 
+import { InitProgramNav } from "@/lib/cms/initProgramNav";
 import { InitTabs } from "@/lib/cms/initTabs";
 import { useEffect } from "react";
 import type Swiper from "swiper";
@@ -19,6 +20,12 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
       // Initialize tabs
       if (root.querySelector(".tabbed-content")) {
         InitTabs(root);
+      }
+
+      // Initialize program nav (scroll-spy) — synchronous, no lazy import needed
+      if (root.querySelector(".program_nav")) {
+        const cleanup = InitProgramNav(root);
+        cleanupFns.push(cleanup);
       }
 
       // Initialize Swiper only if sliders exist
