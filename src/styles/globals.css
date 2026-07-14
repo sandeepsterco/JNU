@@ -6,7 +6,7 @@
   --w-full: 100%;
   --H-full: 100%;
   --Radius-full: 100%;
-  --stack: sans-serif;
+  --stack: "Stack Sans Text", sans-serif;
   --poppins: "Poppins", sans-serif;
   --dm-sans: "DM Sans", sans-serif;
   --color-black: #000000;
@@ -368,3 +368,5 @@ ul.social_media_link li a:hover { transform: rotate(360deg); }
 .custom_slider_btn{
   padding: 0.7rem 1rem;
 }
+
+.field_error{color:red; font:var(--font-12)}

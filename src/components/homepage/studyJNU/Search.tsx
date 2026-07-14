@@ -17,11 +17,11 @@ export default function Search() {
         queryFn: async () => {
             if (!debouncedQuery) return [];
 
-            const response = await fetch(`${API_URL}course/search?query=${debouncedQuery}`);
+            const response = await fetch(`${API_URL}programs/search?query=${debouncedQuery}`);
             if (!response.ok) throw new Error("Failed to fetch");
 
             const data = await response.json();
-            return data.courses;
+            return data.programs;
         },
         enabled: !!debouncedQuery,
     })

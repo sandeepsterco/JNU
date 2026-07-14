@@ -26,7 +26,7 @@ export default async function Home() {
   }
 
   const {banner, rank_section, program, why_choose_us, collaboration, placements, research, experience_the_university, alumni, happenings, social_wall, f_a_q} = data?.data;
-  const {placements:modularPlacements, research:modularResearch, ['news-events']:modularNewsEvents, ['social-wall']:modularSocialWall, faqs:modularFAQ, programs:modularPrograms} = data?.modular;
+  const {placements:modularPlacements, research:modularResearch, ['news-events']:modularNewsEvents, ['social-wall']:modularSocialWall, faqs:modularFAQ, degree:modularPrograms} = data?.modular;
 
   return (
     <main className="site_main">

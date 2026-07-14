@@ -3,6 +3,7 @@ import parse, { attributesToProps, HTMLReactParserOptions, Element } from 'html-
 import Image from 'next/image';
 import CmsEnhancer from '../CmsEnhancer';
 import ProgramsOffered from '@/components/parser/programs-offered/ProgramsOffered';
+import ContactInfo from '@/components/parser/contact-us/ContactInfo';
 
 interface ProgramsSearchParams {
     search?: string;
@@ -108,6 +109,7 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
                 }
 
                 if (domNode.attribs.id === "programOffered") return <ProgramsOffered searchParams={searchParams}  />;
+                if (domNode.attribs.id === "contact_info") return <ContactInfo  />;
 
             }
         }

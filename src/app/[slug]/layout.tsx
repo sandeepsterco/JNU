@@ -2,7 +2,6 @@ import InnerHead from "@/components/header/InnerHead/InnerHead";
 import apiFetch from "@/lib/api";
 import NotFound from "../not-found";
 import ComingSoon from "@/components/common/comingSoon/ComingSoon";
-
 import '@/styles/inner.css'
 
 export default async function InnerPageLayout({ children, params }:Readonly< { children: React.ReactNode, params:any }>) {
@@ -10,7 +9,7 @@ export default async function InnerPageLayout({ children, params }:Readonly< { c
 
     const {data, error} = await apiFetch(`cms/${slug}`);
 
-    if(error){
+    if(error || !data.status){
         return <NotFound />;
     }
 

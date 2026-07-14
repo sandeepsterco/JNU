@@ -23,7 +23,7 @@ export default async function InnerHead({ headData }: HeadInterface) {
     return (
         <section className="inner_head">
             <div className="container">
-                {headData?.tab_title || headData?.page_title || headData?.name && (
+                {(headData?.tab_title || headData?.page_title || headData?.name) && (
                     <h1 dangerouslySetInnerHTML={{ __html: headData.name || headData.tab_title || headData.page_title || "" }} />
                 )}
 
