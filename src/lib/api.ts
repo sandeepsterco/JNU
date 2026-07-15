@@ -21,9 +21,9 @@ export default async function apiFetch(endpoint:string, options?:ApiFetchOptions
             ...(cache === 'no-store' ? {cache:'no-store' as const} : isServer ? {next:{revalidate}} : {})
         });
 
-        // if(!response.ok){
-        //     return {data:null, error:`Request failed with status ${response.status}`};
-        // }
+        if(!response.ok){
+            return {data:null, error:`Request failed with status ${response.status}`};
+        }
 
         const data = await response.json();
         return {data, error:null}

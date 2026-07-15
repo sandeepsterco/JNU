@@ -370,3 +370,28 @@ ul.social_media_link li a:hover { transform: rotate(360deg); }
 }
 
 .field_error{color:red; font:var(--font-12)}
+
+/* error page css */
+.error_page{
+  padding:10rem 0;
+  height:calc(100vh - 38.3rem);
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.error_page .error_state{
+  text-align: center;
+}
+
+.error_page .heading{
+  font:var(--font-30);
+  color:var(--color-cf);
+}
+
+.error_page .btn{
+  background:var(--color-fa);
+  color:var(--color-black);
+  padding:1.2rem 2.5rem;
+  margin-top:3rem;
+}

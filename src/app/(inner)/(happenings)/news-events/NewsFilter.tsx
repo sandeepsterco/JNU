@@ -41,7 +41,7 @@ export default function NewsFilter({schools = [], departments=[]}:NewsFilterProp
                 <div className="filter_Bx">
                     <div className="custom_select">
                         <select className="form-select" aria-label="Default select example" value={searchParams.get('school') ?? ''} onChange={(e)=>updateParams('school', e.target.value)}>
-                            <option selected value="">Filter by School</option>
+                            <option value="">Filter by School</option>
                             {schools?.map((item)=>(
                                 <option key={item.id} value={item.id}>{item.name}</option>
                             ))}
@@ -54,7 +54,7 @@ export default function NewsFilter({schools = [], departments=[]}:NewsFilterProp
                 <div className="filter_Bx">
                     <div className="custom_select">
                         <select className="form-select" aria-label="Default select example" value={searchParams.get('department') ?? ''} onChange={(e)=>updateParams('department', e.target.value)}>
-                            <option selected value="">Filter by Department</option>
+                            <option value="">Filter by Department</option>
                             {departments?.map((item)=>(
                                 <option key={item.id} value={item.id}>{item.name}</option>
                             ))}
@@ -67,7 +67,7 @@ export default function NewsFilter({schools = [], departments=[]}:NewsFilterProp
             <div className="filter_Bx">
                 <div className="custom_select">
                     <select className="form-select" aria-label="Default select example" value={searchParams.get('date') ?? ''} onChange={(e)=>updateParams('date', e.target.value)}>
-                        <option selected value="">Filter by Year</option>
+                        <option value="">Filter by Year</option>
                         {years.map((y) => (
                             <option key={y} value={y}>{y}</option>
                         ))}
