@@ -2,16 +2,20 @@
 
 export default function PageError({
     error,
-    reset,
 }: {
     error: Error & { digest?: string }
-    reset: () => void
 }) {
+    const handleRetry = () => {
+        window.location.reload()
+    }
+
     return (
-        <div className="container">
-            <div className="error_state">
-                <p>Something went wrong while loading this page.</p>
-                <button onClick={() => reset()}>Try again</button>
+        <div className="error_page">
+            <div className="container">
+                <div className="error_state">
+                    <h4 className="heading">{error.message}</h4>
+                    <button className="btn" onClick={handleRetry}>Try again</button>
+                </div>
             </div>
         </div>
     )

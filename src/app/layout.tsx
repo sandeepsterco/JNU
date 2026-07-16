@@ -8,7 +8,7 @@ import Footer from "@/components/footer/Footer";
 import { NonceProvider } from "@/lib/NonceProvider";
 import { headers } from "next/headers";
 import Providers from "@/lib/Providers";
-import '../styles/globals.css'
+import '@/styles/globals.css'
 
 const stackSansText = Stack_Sans_Text({
   subsets: ['latin'],

@@ -1,10 +1,14 @@
 // CmsEnhancer.tsx — still "use client", but scoped, no doc-wide querySelectorAll
 "use client";
 
+import type Swiper from "swiper";
 import { InitProgramNav } from "@/lib/cms/initProgramNav";
 import { InitTabs } from "@/lib/cms/initTabs";
+import { InitAdfSwiper } from "@/lib/cms/initAdfSwiper";
 import { useEffect } from "react";
-import type Swiper from "swiper";
+import { InitPlacementSwiper } from "@/lib/cms/initPlacementSwiper";
+import { InitResearchSwiper } from "@/lib/cms/initResearchSwiper";
+import { InitMaxContent } from "@/lib/cms/initMaxContent";
 
 export default function CmsEnhancer({ containerId }: { containerId: string }) {
   useEffect(() => {
@@ -22,55 +26,44 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
         InitTabs(root);
       }
 
-      // Initialize program nav (scroll-spy) — synchronous, no lazy import needed
       if (root.querySelector(".program_nav")) {
         const cleanup = InitProgramNav(root);
         cleanupFns.push(cleanup);
       }
 
-      // Initialize Swiper only if sliders exist
+      if (root.querySelector(".adfSwiper:not([data-swiper-init])")) {
+        const cleanup = await InitAdfSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
 
-      const sliders = root.querySelectorAll<HTMLElement>(
-        ".adfSwiper:not([data-swiper-init])"
-      );
-      if (!sliders.length) return;
+      if (root.querySelector(".placement_logo_swiper:not([data-swiper-init])")) {
+        const cleanup = await InitPlacementSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
 
-      const [{ default: SwiperCore }, { Pagination, Autoplay, Navigation }] = await Promise.all([
-        import("swiper"),
-        import("swiper/modules"),
-      ]);
-      await Promise.all([import("swiper/css"), import("swiper/css/pagination")]);
+      if (root.querySelector(".container")) {
+        cleanupFns.push(InitMaxContent(root));
+      }
 
-      if (cancelled) return;
+      if (root.querySelector(".research_swiper:not([data-swiper-init])")) {
+        const cleanup = await InitResearchSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
 
-      sliders.forEach((slider) => {
-        if (slider.dataset.swiperInit) return;
-        slider.dataset.swiperInit = "true";
       
-        const pagination = slider.querySelector<HTMLElement>(".swiper-pagination");
-        const nextEl = slider.querySelector<HTMLElement>(".swiper-button-next");
-        const prevEl = slider.querySelector<HTMLElement>(".swiper-button-prev");
-      
-        const loop = slider.dataset.swiperLoop === "true";
-        const autoplayDelay = slider.dataset.swiperAutoplay
-          ? parseInt(slider.dataset.swiperAutoplay, 10)
-          : undefined;
-        const slidesPerView = slider.dataset.swiperSlidesPerView
-          ? parseFloat(slider.dataset.swiperSlidesPerView)
-          : 1;
-      
-        instances.push(
-          new SwiperCore(slider, {
-            modules: [Pagination, Autoplay, Navigation],
-            loop,
-            speed: 1000,
-            slidesPerView,
-            autoplay: autoplayDelay ? { delay: autoplayDelay, disableOnInteraction: false } : false,
-            pagination: pagination ? { el: pagination, clickable: true } : false,
-            navigation: nextEl && prevEl ? { nextEl, prevEl } : false,
-          })
-        );
-      });
+
     }
 
     init();

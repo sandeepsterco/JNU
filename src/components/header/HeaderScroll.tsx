@@ -21,7 +21,6 @@ export default function HeaderScroll({
         const onScroll = () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop
 
-            // toggle the "fixed/scrolled" background class
             header.classList.toggle('header_fix', scrollTop > 0)
 
             // hide/show on scroll direction, and force-hide inside certain sections
@@ -52,7 +51,7 @@ export default function HeaderScroll({
             lastScrollTop.current = scrollTop
         }
 
-        onScroll() // run once on mount for correct initial state
+        onScroll() 
         window.addEventListener('scroll', onScroll, { passive: true })
         return () => window.removeEventListener('scroll', onScroll)
     }, [])

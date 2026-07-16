@@ -5,6 +5,9 @@ import CmsEnhancer from '../CmsEnhancer';
 import ProgramsOffered from '@/components/parser/programs-offered/ProgramsOffered';
 import ContactInfo from '@/components/parser/contact-us/ContactInfo';
 import RelatedNews from '@/components/parser/RelatedNews';
+import SchoolPlacements from '@/components/parser/schoolPlacement/SchoolPlacements';
+import SchoolResearch from '@/components/parser/schoolResearch/SchoolResearch';
+import SchoolAlumni from '@/components/parser/schoolAlumni/SchoolAlumni';
 
 interface ProgramsSearchParams {
     search?: string;
@@ -103,7 +106,6 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
                             alt={props.alt || ""}
                             width={parsedWidth}
                             height={parsedHeight}
-                            loading="lazy"
                             style={{ ...(props.style || {}) }}
                         />
                     );
@@ -112,7 +114,11 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
                 if (domNode.attribs.id === "programOffered") return <ProgramsOffered searchParams={searchParams}  />;
                 if (domNode.attribs.id === "contact_info") return <ContactInfo  />;
                 if (domNode.attribs.id === "sidebar_related_news") return <RelatedNews  />;
-
+                if (domNode.attribs.id === "school_placements") return <SchoolPlacements  />;
+                if (domNode.attribs.id === "school_research") return <SchoolResearch  />;
+                if (domNode.attribs.id === "school_home_alumni") return <SchoolAlumni  />;
+                // if (domNode.attribs.id === "happenings_grid") return <SchoolAlumni  />;
+                
             }
         }
     }

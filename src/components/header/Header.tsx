@@ -30,10 +30,11 @@ export default async function Header() {
     const headerData = (data as HeaderResponse)?.header ?? []
 
     const isHomePage = pathname === '/'
-    const isSchoolPage = pathname.includes('program')
+    const isProgramPage = pathname.includes('program');
+    const isSchoolPage = pathname.includes('school');
 
     const baseClass = `main_header ${
-        isHomePage ? 'home_header' : !isSchoolPage ? 'inner_header' : ''
+        isHomePage ? 'home_header' : isProgramPage ? 'inner_header' : isSchoolPage ? 'school_header' : ''
     }`
 
     return (
