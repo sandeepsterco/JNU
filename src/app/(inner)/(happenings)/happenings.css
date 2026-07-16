@@ -65,7 +65,7 @@
 .related_news_sec { padding-left: 7.25rem; }
 .related_news_sec h2 { font: var(--font-21); font-weight: 500; color: var(--color-cf); padding-bottom: 2rem; }
 .related_news_box p { font: var(--font-14); line-height: 2.1rem; font-weight: 300; padding-top: 1.3rem; }
-.related_news_box { margin-bottom: 5.4rem; }
+.related_news_box { margin-bottom: 5.4rem; position:relative;}
 .related_news_box:last-child { margin-bottom: 0; }
 .related_image { position: relative; }
 .related_date { position: absolute; bottom: 0; background-color: var(--color-36); padding-inline: 0.6rem; padding-block:0.5rem ; }

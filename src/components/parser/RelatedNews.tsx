@@ -1,6 +1,8 @@
+import { BASE_URL } from "@/config/config";
 import apiFetch from "@/lib/api";
 import { getSlug } from "@/lib/getSlug"
 import Image from "next/image";
+import Link from "next/link";
 
 interface NewsDataInterface{
     name:string;
@@ -50,6 +52,9 @@ export default async function RelatedNews() {
                         
                     </div>
                     <p dangerouslySetInnerHTML={{__html:item.name}} />
+                    <Link
+                        className="overlap_btn" 
+                        href={`${BASE_URL}${parentSlug}/${item.slug}`}>test</Link>
                 </div>
             ))}
             
