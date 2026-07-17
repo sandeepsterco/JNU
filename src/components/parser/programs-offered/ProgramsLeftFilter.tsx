@@ -37,6 +37,16 @@ const getDepartmentList = async () => {
   }
 };
 
+const getSpecialisation = async () => {
+  try {
+    const { data, error } = await apiFetch(`specialization`);
+    if (error || !data.status) throw new Error(`Error while fetching specialization data`);
+    return data.data;
+  } catch (error) {
+    throw new Error(`Error while fetching department data`);
+  }
+};
+
 // Normalize API items into a consistent { id, name, slug } shape.
 const normalizeOptions = (list: unknown, fallbackPrefix = "opt"): AccordionOption[] => {
   if (!Array.isArray(list)) return [];
@@ -62,8 +72,10 @@ const normalizeOptions = (list: unknown, fallbackPrefix = "opt"): AccordionOptio
 };
 
 const durationListData = [
-  { id: 1, name: "3 Years", slug: "3-years" },
-  { id: 2, name: "4 Years", slug: "4-years" },
+  { id: 1, name: "1 Years", slug: "1-years" },
+  { id: 2, name: "2 Years", slug: "2-years" },
+  { id: 3, name: "3 Years", slug: "3-years" },
+  { id: 4, name: "4 Years", slug: "4-years" },
 ];
 
 export default function ProgramsLeftFilter() {
@@ -78,22 +90,25 @@ export default function ProgramsLeftFilter() {
   const { data, isLoading, isError } = useQuery({
     queryKey: ["program-filters"],
     queryFn: async () => {
-      const [schoolsListData, departmentsListData] = await Promise.all([
+      const [schoolsListData, departmentsListData, specialisationData] = await Promise.all([
         getSchoolList(),
         getDepartmentList(),
+        getSpecialisation()
       ]);
 
-      return { schoolsListData, departmentsListData };
+      return { schoolsListData, departmentsListData, specialisationData };
     },
   });
 
   const accordionData = useMemo<AccordionItem[]>(() => {
     const schoolOptions = normalizeOptions(data?.schoolsListData, "school");
     const durationOptions = normalizeOptions(durationListData, "duration");
+    const specializationOptions = normalizeOptions(data?.specialisationData, "specialization");
 
     const dynamicAccordionData: AccordionItem[] = [
       { title: "School", key:'school', options: schoolOptions },
       { title: "Duration", key:'duration', options: durationOptions },
+      { title: "Specialisation", key:'specialisation', options: specializationOptions },
     ];
 
     return dynamicAccordionData.filter((item) => item.options.length > 0);

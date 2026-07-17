@@ -33,12 +33,13 @@ interface ProgramsOfferedProps {
 }
 
 export default async function ProgramsOffered({searchParams}:ProgramsOfferedProps) {
-    const {search, school} = searchParams;
+    const {search, school, duration} = searchParams;
     const currentSlug = await getSlug(0);
     const params = new URLSearchParams();
 
     if(search) params.set('search', search);
     if(school) params.set('school', school);
+    if(duration) params.set('duration', duration);
     const {data, error} = await apiFetch(`programs?${params.toString()}`);
 
     const programsData:ProgramsDataInterface[] = data.data ?? [];
