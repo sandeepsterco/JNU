@@ -1,8 +1,8 @@
 import InnerHead from "@/components/header/InnerHead/InnerHead";
 import apiFetch from "@/lib/api";
 import { getSlug } from "@/lib/getSlug";
-import '@/styles/inner.css'
 import NotFound from "../not-found";
+import '@/styles/inner.css'
 
 export default async function InnerPageLayout({ children }: { children: React.ReactNode }) {
     // Use first path segment so nested routes (e.g. /faculty/[slug]) still load section CMS head data

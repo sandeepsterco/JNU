@@ -8,6 +8,11 @@ import RelatedNews from '@/components/parser/RelatedNews';
 import SchoolPlacements from '@/components/parser/schoolPlacement/SchoolPlacements';
 import SchoolResearch from '@/components/parser/schoolResearch/SchoolResearch';
 import SchoolAlumni from '@/components/parser/schoolAlumni/SchoolAlumni';
+import SchoolNews from '@/components/parser/happenings/SchoolNews';
+import SocialIconsGrid from '@/components/homepage/social/SocialIconsGrid';
+import SocialGrids from '@/components/parser/SocialGrids';
+import SchoolFaqTabs from '@/components/parser/SchoolFaqTabs';
+import SchoolFilter from '@/components/parser/schoolFilter/SchoolFilter';
 
 interface ProgramsSearchParams {
     search?: string;
@@ -117,7 +122,12 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
                 if (domNode.attribs.id === "school_placements") return <SchoolPlacements  />;
                 if (domNode.attribs.id === "school_research") return <SchoolResearch  />;
                 if (domNode.attribs.id === "school_home_alumni") return <SchoolAlumni  />;
-                // if (domNode.attribs.id === "happenings_grid") return <SchoolAlumni  />;
+                if (domNode.attribs.id === "happenings_grid") return <SchoolNews  />;
+                if (domNode.attribs.id === "school_social_links") return <SocialIconsGrid  />;
+                if (domNode.attribs.id === "school_social_grids") return <SocialGrids  />;
+                if (domNode.attribs.id === "school_faq_tabs") return <SchoolFaqTabs  />;
+                if (domNode.attribs.id === "school_dropdown") return <SchoolFilter  />;
+                
                 
             }
         }

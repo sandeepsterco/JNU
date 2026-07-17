@@ -32,11 +32,13 @@ opacity: 0.4; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-i
     filter: brightness(0) invert(1);
 }
 .sch_dropdown>.dropdown_toggle.show::after { transform: translateY(-50%) rotate(180deg); -webkit-transform: translateY(-50%) rotate(180deg); -moz-transform: translateY(-50%) rotate(180deg); -ms-transform: translateY(-50%) rotate(180deg); -o-transform: translateY(-50%) rotate(180deg); }
-.sch_dropdown>ul { position: absolute; display: none; margin: 0; right: 0; top: 100%; width: 108%; background-color: var(--color-white); padding: 2rem 2rem; box-shadow: 0px 5px 8px rgb(0 0 0 / 8%); }
-.sch_dropdown>ul>li { list-style: none; }
-.sch_dropdown>ul>li:not(:last-child) { padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 0.1rem solid rgb(30 80 150 / 10%); }
-.sch_dropdown>ul>li>a { font: var(--font-18); font-weight: 400; color: var(--color-black); letter-spacing: 0.04rem; display: block;}
-.sch_dropdown>ul>li>a:hover { color: var(--color-cf); }
+.sch_dropdown>.dropdown { position: absolute; margin: 0; right: 0; top: 100%; width: 108%; background-color: var(--color-white); box-shadow: 0px 5px 8px rgb(0 0 0 / 8%); max-height: 0; overflow: hidden; transition: max-height 0.8s ease;}
+.sch_dropdown .dropdown ul{ padding: 2rem 2rem;}
+.sch_dropdown .dropdown.show{max-height: 400px; }
+.sch_dropdown .dropdown li { list-style: none; }
+.sch_dropdown .dropdown li:not(:last-child) { padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 0.1rem solid rgb(30 80 150 / 10%); }
+.sch_dropdown .dropdown li a { font: var(--font-18); font-weight: 400; color: var(--color-black); letter-spacing: 0.04rem; display: block; line-height: 2.4rem;}
+.sch_dropdown .dropdown li a:hover { color: var(--color-cf); }
 .school_filter{ max-width: 43.2rem; }
 .school_banner_tx{ max-width: 55rem; padding-inline: 5rem 0; position: relative; z-index: 9;}
 .school_banner_tx h1{ font: var(--font-72); color: var(--color-white); letter-spacing: -2.16px; font-weight: 600; line-height: 1;}

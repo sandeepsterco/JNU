@@ -1,28 +1,77 @@
 "use client";
 
+import "aos/dist/aos.css";
 import { useEffect } from "react";
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import { usePathname } from "next/navigation";
+import {
+  initAOS,
+  refreshAOS,
+  scheduleDebouncedRefreshAOS,
+  scheduleRefreshAOSSequence,
+} from './aos'
 
-export default function AosProvider({children}:{children:React.ReactNode}){
-    useEffect(()=>{
-        AOS.init({
-            easing: "ease-out-back",
-            disable: "mobile",
-            duration: 2000,
-            once: true
-        })
+function mutationAddsAosNodes(mutations: MutationRecord[]) {
+  return mutations.some((mutation) => {
+    if (
+      mutation.type === "attributes" &&
+      mutation.attributeName?.startsWith("data-aos")
+    ) {
+      return true;
+    }
 
-        window.addEventListener('load', ()=>AOS.refresh());
+    if (mutation.type !== "childList") return false;
 
-        return()=>{
-            window.removeEventListener('load', ()=>AOS.refresh());
-        }
-    }, [])
+    for (const node of mutation.addedNodes) {
+      if (!(node instanceof Element)) continue;
+      if (node.hasAttribute("data-aos") || node.querySelector("[data-aos]")) {
+        return true;
+      }
+    }
 
-    return(
-        <>
-            {children}
-        </>
-    )
+    return false;
+  });
+}
+
+export default function AOSProvider({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    initAOS();
+  }, []);
+
+  useEffect(() => {
+    const cleanup = scheduleRefreshAOSSequence();
+    return cleanup;
+  }, [pathname]);
+
+  useEffect(() => {
+    const onPageShow = (event: PageTransitionEvent) => {
+      if (event.persisted) refreshAOS();
+    };
+
+    window.addEventListener("pageshow", onPageShow);
+    return () => window.removeEventListener("pageshow", onPageShow);
+  }, []);
+
+  useEffect(() => {
+    const container = document.querySelector(".main-container");
+    if (!container) return;
+
+    const observer = new MutationObserver((mutations) => {
+      if (mutationAddsAosNodes(mutations)) {
+        scheduleDebouncedRefreshAOS();
+      }
+    });
+
+    observer.observe(container, {
+      childList: true,
+      subtree: true,
+      attributes: true,
+      attributeFilter: ["data-aos", "data-aos-delay", "class"],
+    });
+
+    return () => observer.disconnect();
+  }, [pathname]);
+
+  return children;
 }

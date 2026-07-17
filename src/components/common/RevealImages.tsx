@@ -1,7 +1,9 @@
 "use client"
 import { useEffect } from "react"
+import { usePathname } from "next/navigation"
 
 export default function RevealImages(){
+    const pathname = usePathname();
 
     useEffect(()=>{
         if (window.innerWidth < 992) return;
@@ -19,19 +21,24 @@ export default function RevealImages(){
                 entries.forEach((entry)=>{
                     if(entry.isIntersecting){
                         entry.target.classList.add(className);
-                        observer.unobserve(entry.target);  
+                        observer.unobserve(entry.target);
                     }
                 });
             }, {
                 rootMargin:"0px 0px -100px 0px"
             });
 
-            document.querySelectorAll(selector).forEach((el)=>observer.observe(el));
+            document.querySelectorAll(selector).forEach((el)=>{
+                // skip elements that already have the class (avoids re-adding on same page)
+                if (!el.classList.contains(className)) {
+                    observer.observe(el);
+                }
+            });
             observers.push(observer);
         })
 
         return () => observers.forEach((o) => o.disconnect());
-    }, [])
+    }, [pathname])
 
     return null;
 }

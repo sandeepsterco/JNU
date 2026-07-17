@@ -372,8 +372,8 @@
 .school_slider_logo { display: flex; gap: 3rem; align-items: center; padding-block: 2rem 5rem; }
 .school_slider_logo figure { max-width: 6.6rem; }
 .school_slider_logo p { font: var(--font-10); color: var(--color-white); font-weight: 300; max-width: 31rem; padding-block: 1rem; border-left: 1px solid #ccc; padding-left: 3rem; }
-.school_stats_wrapper { background-color: var(--color-white); padding-block: 3rem; padding-inline: 7rem; position: relative; margin-bottom: 12.9rem; box-shadow: 0px 36px 99px #CF1E621C; }
-.school_stats_wrapper ul { display: grid; grid-template-columns: repeat(4, 1fr); list-style-type: none; padding: 0; }
+/* .school_stats_wrapper { background-color: var(--color-white); padding-block: 3rem; padding-inline: 7rem; position: relative; margin-bottom: 12.9rem; box-shadow: 0px 36px 99px #CF1E621C; }
+.school_stats_wrapper ul { display: grid; grid-template-columns: repeat(4, 1fr); list-style-type: none; padding: 0; } */
 @media (max-width:767px) {
  .faculty_bottom_tab .tabbed-content .item .accordion-title { opacity: 1; visibility: visible; height: auto; }
  }

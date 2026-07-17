@@ -38,7 +38,7 @@ export default async function Header() {
     }`
 
     return (
-        <HeaderScroll baseClass={baseClass}>
+        <HeaderScroll>
             <div className="container-fluid">
                 <Link href={BASE_URL ?? '/'} className="site_navbar">
                     <Image src="/images/logo.webp" width={344} height={63} className="img-fluid" alt="JNU" loading="eager" fetchPriority="high" />

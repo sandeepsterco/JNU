@@ -1,18 +1,26 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
+import { usePathname } from 'next/navigation'
 
 const HIDE_SECTIONS = ['.testim_sec']
 
 export default function HeaderScroll({
-    baseClass,
     children,
 }: {
-    baseClass: string
     children: React.ReactNode
 }) {
     const headerRef = useRef<HTMLElement>(null)
     const lastScrollTop = useRef(0)
+    const pathname = usePathname()
+
+    const isHomePage = pathname === '/'
+    const isProgramPage = pathname.includes('program')
+    const isSchoolPage = pathname.includes('school')
+
+    const baseClass = `main_header ${
+        isHomePage ? 'home_header' : isProgramPage ? 'inner_header' : isSchoolPage ? 'school_header' : ''
+    }`
 
     useEffect(() => {
         const header = headerRef.current

@@ -8,6 +8,7 @@ import Footer from "@/components/footer/Footer";
 import { NonceProvider } from "@/lib/NonceProvider";
 import { headers } from "next/headers";
 import Providers from "@/lib/Providers";
+import ScrollToTop from "@/components/common/ScrollToTop";
 import '@/styles/globals.css'
 
 const stackSansText = Stack_Sans_Text({
@@ -50,6 +51,7 @@ export default async function RootLayout({
         <NonceProvider nonce={nonce}>
           <Providers>
             <AosProvider>
+              <ScrollToTop />
               <Header />
               {children}
               <Footer />

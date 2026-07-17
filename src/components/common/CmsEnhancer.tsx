@@ -1,4 +1,3 @@
-// CmsEnhancer.tsx — still "use client", but scoped, no doc-wide querySelectorAll
 "use client";
 
 import type Swiper from "swiper";
@@ -9,8 +8,11 @@ import { useEffect } from "react";
 import { InitPlacementSwiper } from "@/lib/cms/initPlacementSwiper";
 import { InitResearchSwiper } from "@/lib/cms/initResearchSwiper";
 import { InitMaxContent } from "@/lib/cms/initMaxContent";
+import { usePathname } from "next/navigation";
 
 export default function CmsEnhancer({ containerId }: { containerId: string }) {
+  const pathname = usePathname();
+  
   useEffect(() => {
     let cancelled = false;
     let instances: Swiper[] = [];
@@ -40,7 +42,7 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
         cleanupFns.push(cleanup);
       }
 
-      if (root.querySelector(".placement_logo_swiper:not([data-swiper-init])")) {
+      if (root.querySelector(".school_placement_logo_swiper:not([data-swiper-init])")) {
         const cleanup = await InitPlacementSwiper(root);
         if (cancelled) {
           cleanup();
@@ -76,7 +78,7 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
       cleanupFns.forEach((cleanup) => cleanup());
 
     };
-  }, [containerId]);
+  }, [containerId, pathname]);
 
   return null;
 }
