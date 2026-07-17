@@ -10,7 +10,7 @@ export interface AlumniDataInterface {
     thumbnail: string;
     logo: string;
     video?: string | null;
-    slug?:string;
+    slug?: string;
 }
 
 interface PageDataInterface {
@@ -34,10 +34,9 @@ export default async function SchoolAlumni() {
     if (pageData && pageData?.length === 0) return;
 
     return (
-        <div className="full-width">
-            <div className="max-content-lg pe-lg-0 me-lg-0">
-                <AlumniSlider data={pageData} />
-            </div>
-        </div>
+
+
+        <AlumniSlider data={pageData} />
+
     )
 }

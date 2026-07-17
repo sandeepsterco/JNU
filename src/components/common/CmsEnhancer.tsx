@@ -10,6 +10,12 @@ import { InitResearchSwiper } from "@/lib/cms/initResearchSwiper";
 import { InitMaxContent } from "@/lib/cms/initMaxContent";
 import { usePathname } from "next/navigation";
 
+function waitForLayout() {
+  return new Promise<void>((resolve) => {
+    requestAnimationFrame(() => requestAnimationFrame(() => resolve()));
+  });
+}
+
 export default function CmsEnhancer({ containerId }: { containerId: string }) {
   const pathname = usePathname();
   
@@ -20,6 +26,12 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
     const cleanupFns: (() => void)[] = [];
 
     async function init() {
+
+      await waitForLayout();
+      if (cancelled) return;
+
+
+
       const root = document.getElementById(containerId);
       if (!root) return;
 
@@ -42,7 +54,7 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
         cleanupFns.push(cleanup);
       }
 
-      if (root.querySelector(".school_placement_logo_swiper:not([data-swiper-init])")) {
+      if (root.querySelector(".school_placement_logo_swiper")) {
         const cleanup = await InitPlacementSwiper(root);
         if (cancelled) {
           cleanup();
@@ -76,7 +88,6 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
       instances = [];
       
       cleanupFns.forEach((cleanup) => cleanup());
-
     };
   }, [containerId, pathname]);
 

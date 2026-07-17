@@ -15,8 +15,6 @@ export default async function ProgramInnerPageLayout({ children, params }: { chi
 
     const headData = data?.data?.data;
 
-    console.log('headData',headData);
-
     return (
         <main className="site_main">
             <InnerHead headData={headData} />

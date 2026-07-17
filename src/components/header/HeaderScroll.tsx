@@ -19,7 +19,7 @@ export default function HeaderScroll({
     const isSchoolPage = pathname.includes('school')
 
     const baseClass = `main_header ${
-        isHomePage ? 'home_header' : isProgramPage ? 'inner_header' : isSchoolPage ? 'school_header' : ''
+        isHomePage ? 'home_header' : isProgramPage ? 'inner_header': ''
     }`
 
     useEffect(() => {
@@ -30,6 +30,10 @@ export default function HeaderScroll({
             const scrollTop = window.scrollY || document.documentElement.scrollTop
 
             header.classList.toggle('header_fix', scrollTop > 0)
+
+            if(isSchoolPage){
+                header.classList.toggle('school_header', scrollTop > 0)
+            }
 
             // hide/show on scroll direction, and force-hide inside certain sections
             let insideAnySection = false
@@ -54,6 +58,14 @@ export default function HeaderScroll({
 
             if (scrollTop <= 0) {
                 header.style.transform = 'translateY(0)'
+
+                if(isSchoolPage){
+                    header.classList.add('school_header')
+                }
+            }
+            
+            if(scrollTop > 0){
+                header.classList.remove('school_header')
             }
 
             lastScrollTop.current = scrollTop

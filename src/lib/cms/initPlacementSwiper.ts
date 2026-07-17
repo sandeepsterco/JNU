@@ -1,7 +1,7 @@
 
 import type Swiper from "swiper";
 
-const SELECTOR = ".school_placement_logo_swiper:not([data-swiper-init])";
+const SELECTOR = ".school_placement_logo_swiper";
 
 export async function InitPlacementSwiper(root: HTMLElement): Promise<() => void> {
   const sliders = root.querySelectorAll<HTMLElement>(SELECTOR);
