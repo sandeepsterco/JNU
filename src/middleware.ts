@@ -38,7 +38,7 @@ function buildCsp(nonce: string, isDev: boolean): string {
       https://maps.google.com
       https://www.google.com/maps/
       https://maps.googleapis.com
-      https://www.googletagmanager.com;
+      https://www.googletagmanager.com; 
     frame-ancestors 'self';
     object-src 'none';
     base-uri 'self';
