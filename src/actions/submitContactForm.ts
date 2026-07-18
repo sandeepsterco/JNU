@@ -1,3 +1,4 @@
+"use server"
 import apiFetch from "@/lib/api"
 import { redirect } from "next/navigation"
 
