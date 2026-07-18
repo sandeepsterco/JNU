@@ -43,7 +43,17 @@ const getSpecialisation = async () => {
     if (error || !data.status) throw new Error(`Error while fetching specialization data`);
     return data.data;
   } catch (error) {
-    throw new Error(`Error while fetching department data`);
+    throw new Error(`Error while fetching specialization data`);
+  }
+};
+
+const getProgramType = async () => {
+  try {
+    const { data, error } = await apiFetch(`degree`);
+    if (error || !data.status) throw new Error(`Error while fetching Program Type`);
+    return data.data;
+  } catch (error) {
+    throw new Error(`Error while fetching Program Type`);
   }
 };
 
@@ -90,13 +100,14 @@ export default function ProgramsLeftFilter() {
   const { data, isLoading, isError } = useQuery({
     queryKey: ["program-filters"],
     queryFn: async () => {
-      const [schoolsListData, departmentsListData, specialisationData] = await Promise.all([
+      const [schoolsListData, departmentsListData, specialisationData, programTypeData] = await Promise.all([
         getSchoolList(),
         getDepartmentList(),
-        getSpecialisation()
+        getSpecialisation(),
+        getProgramType()
       ]);
 
-      return { schoolsListData, departmentsListData, specialisationData };
+      return { schoolsListData, departmentsListData, specialisationData, programTypeData };
     },
   });
 
@@ -104,11 +115,13 @@ export default function ProgramsLeftFilter() {
     const schoolOptions = normalizeOptions(data?.schoolsListData, "school");
     const durationOptions = normalizeOptions(durationListData, "duration");
     const specializationOptions = normalizeOptions(data?.specialisationData, "specialization");
+    const programTypeOptions = normalizeOptions(data?.programTypeData, "degree");
 
     const dynamicAccordionData: AccordionItem[] = [
       { title: "School", key:'school', options: schoolOptions },
       { title: "Duration", key:'duration', options: durationOptions },
       { title: "Specialisation", key:'specialisation', options: specializationOptions },
+      { title: "Program Type", key:'degree', options: programTypeOptions },
     ];
 
     return dynamicAccordionData.filter((item) => item.options.length > 0);

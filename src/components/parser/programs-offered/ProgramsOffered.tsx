@@ -29,17 +29,19 @@ interface ProgramsOfferedProps {
         search?: string;
         school?:string;
         duration?:string;
+        degree?:string;
     };
 }
 
 export default async function ProgramsOffered({searchParams}:ProgramsOfferedProps) {
-    const {search, school, duration} = searchParams;
+    const {search, school, duration, degree} = searchParams;
     const currentSlug = await getSlug(0);
     const params = new URLSearchParams();
 
     if(search) params.set('search', search);
     if(school) params.set('school', school);
     if(duration) params.set('duration', duration);
+    if(degree) params.set('degree', degree);
     const {data, error} = await apiFetch(`programs?${params.toString()}`);
 
     const programsData:ProgramsDataInterface[] = data.data ?? [];
@@ -55,11 +57,12 @@ export default async function ProgramsOffered({searchParams}:ProgramsOfferedProp
                 </div>
 
                 <div className="progrem_right">
-                    <div className="program_list_grid">
+                    
 
-                        {programsData?.length == 0 && (
+                {programsData?.length == 0 && (
                             <NoData />
                         )}
+                    <div className="program_list_grid">
 
                         {programsData?.length > 0 && programsData.map((item)=>(
                             <div key={item.id} className="program_grid_bx">

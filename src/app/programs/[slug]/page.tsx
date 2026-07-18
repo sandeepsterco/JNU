@@ -16,11 +16,13 @@ export default async function ProgramDetailPage({params, searchParams}:{params:P
     const mainSlug = await getSlug(0);
     const {data, error} = await apiFetch(`${mainSlug}/${slug}`);
 
+    if(error || !data.status) throw new Error(`Failed to fetch program detail`);
+
     const pageData = data?.data;
 
     const combinedHtml = Object.values(pageData?.cms ?? {}).join('');
 
-    const {faqs:modularFAQ} = pageData?.data ?? {};
+    const {faqs:modularFAQ} = pageData?.modular ?? {};
 
     return(
         <>

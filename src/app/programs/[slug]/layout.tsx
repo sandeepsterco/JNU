@@ -13,7 +13,7 @@ export default async function ProgramInnerPageLayout({ children, params }: { chi
         return <NotFound />;
     }
 
-    const headData = data?.data?.data;
+    const headData = data?.data?.detail;
 
     return (
         <main className="site_main">
