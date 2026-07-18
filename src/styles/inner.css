@@ -399,6 +399,7 @@
 .contact_info_box { margin-bottom: 4.6rem; border-bottom: 2px solid rgba(35, 31, 32, 0.1); padding-bottom: 4rem; }
 .contact_center .contact_info_box:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 .contact_form_wrap form { background:var(--color-cf); padding:3rem; border-bottom: 0.3rem solid var(--color-f9); }
+.contact_form_wrap .recaptcha_wrapper{transform: scale(0.80); transform-origin: 0 0;}
 .contact_form_wrap h3 { color:#fff; font: var(--font-24); margin-bottom:1.5rem; font-weight:300; }
 .contact_form_wrap input::placeholder { color: #fff; font-weight: 300; }
 .contact_form_wrap textarea::placeholder { color: #fff; }

@@ -54,17 +54,19 @@ export default function ContactForm() {
             </div>
 
             <div className="form-group">
-                <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-                    onChange={(token) => {
-                        setCaptchaToken(token);
-                        if (token) setCaptchaClientError("");
-                    }}
-                    onExpired={() => setCaptchaToken(null)}
-                />
+                <div className="recaptcha_wrapper">
+                    <ReCAPTCHA
+                        ref={recaptchaRef}
+                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                        onChange={(token) => {
+                            setCaptchaToken(token);
+                            if (token) setCaptchaClientError("");
+                        }}
+                        onExpired={() => setCaptchaToken(null)}
+                    />
+                </div>
                 <input type="hidden" name="captchaToken" value={captchaToken ?? ""} />
-                {(captchaClientError || state.errors?.captcha) && (
+                {(captchaClientError || (!captchaToken && state.errors?.captcha)) && (
                     <span className="field_error">
                         {captchaClientError || state.errors?.captcha?.[0]}
                     </span>
