@@ -69,6 +69,7 @@
 .program_nav a{ text-decoration:none;  transition:.3s; font: var(--font-18); }
 .program_nav a.active{ color:var(--color-cf); }
 .program_section_bx{ scroll-margin-top:12rem; margin-bottom:8rem;}
+.program_section_bx .Hide{display: none;}
 .program_nav{ position:relative; padding-left:3.5rem; }
 .program_nav::before{ content:""; position:absolute; left:1rem; top:0; bottom:0; width:2px; background:#f3b4c9; }
 .program_nav li{ position:relative; margin-bottom:5rem; }

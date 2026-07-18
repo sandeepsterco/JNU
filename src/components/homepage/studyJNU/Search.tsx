@@ -75,7 +75,7 @@ export default function Search() {
                                 key={idx}
                                 className="courses_lists hover:bg-gray-100 cursor-pointer last:border-none"
                             >
-                                <Link href={`${BASE_URL}program/${course.slug}`} className="course_list">
+                                <Link href={`${BASE_URL}programs/${course.slug}`} className="course_list">
                                     {course.name}
                                 </Link>
                             </div>

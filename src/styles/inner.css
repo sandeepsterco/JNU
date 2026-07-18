@@ -192,9 +192,10 @@
 #peo { padding-top: 4rem; }
 #peo>ul { display: flex; flex-wrap: wrap; list-style: none; padding: 0; gap: 1.3rem; margin-top: 4.1rem; }
 #peo>ul li { display: grid; grid-template-columns: 11rem auto; background-color: var(--color-white); padding: 3.5rem; align-items: center; }
-#peo>ul li figcaption { font: var(--font-30); color: var(--color-06); font-weight: 200; border-right: 1px solid #E8E8E8; }
+#peo>ul li figcaption,
+#peo>ul li .count { font: var(--font-30); color: var(--color-06); font-weight: 200; border-right: 1px solid #E8E8E8; }
 #peo>ul li p { padding-left: 2rem; font: var(--font-16); font-weight: 300; }
-#peo>.apply_now { margin-top: 3.2rem; }
+#peo .apply_now { margin-top: 3.2rem; }
 .apply_admission_grid { display: grid; grid-template-columns:30% 45% auto; margin-top: 10rem; background-color: var(--color-cf); align-items: center; position: relative; }
 .apply_admission_grid::before { background-image: url(/images/apply_pattern.svg); position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 100%; width:20%; content: ""; z-index: 0; opacity: 0.47; }
 .apply_admission_grid>figure { max-width: 27rem; position: relative; z-index: 2; margin-left: 2rem; }
@@ -233,7 +234,8 @@
  }
 .item-content tbody>tr>td:last-child { text-align: center; }
 .download_carriculum { display: flex; align-items: center; font: var(--font-16); font-weight: 500; gap:1rem; border: 1px solid var(--color-cf); padding: 1rem 2rem; width: max-content; margin-top: 4rem; }
-.download_carriculum figure { max-width: 1.5rem; }
+.download_carriculum figure,
+.download_carriculum img { max-width: 1.5rem; }
 .download_carriculum:hover { background-color: var(--color-cf); color: var(--color-white); }
 #fees { padding-top: 4rem; }
 #fees .fee_structure_grid { background-color: var(--color-white); padding: 4rem; position: relative; }

@@ -83,10 +83,14 @@ function initSingleNav(nav: HTMLElement, root: HTMLElement) {
 
         const href = target.getAttribute("href");
         if (href) {
-            scope.querySelector(href)?.scrollIntoView({
+            const el = scope.querySelector(href) ?? document.querySelector(href);
+
+            el?.scrollIntoView({
                 behavior: "smooth",
                 block: "start",
             });
+
+            history.pushState(null, "", href);
         }
     }
 

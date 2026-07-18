@@ -25,16 +25,12 @@ export default function HeaderScroll({
     useEffect(() => {
         const header = headerRef.current
         if (!header) return
-
+    
         const onScroll = () => {
             const scrollTop = window.scrollY || document.documentElement.scrollTop
-
+    
             header.classList.toggle('header_fix', scrollTop > 0)
-
-            if(isSchoolPage){
-                header.classList.toggle('school_header', scrollTop > 0)
-            }
-
+    
             // hide/show on scroll direction, and force-hide inside certain sections
             let insideAnySection = false
             for (const selector of HIDE_SECTIONS) {
@@ -47,7 +43,7 @@ export default function HeaderScroll({
                     break
                 }
             }
-
+    
             if (insideAnySection) {
                 header.style.transform = 'translateY(-100%)'
             } else if (scrollTop > lastScrollTop.current && scrollTop > 100) {
@@ -55,26 +51,25 @@ export default function HeaderScroll({
             } else if (scrollTop < lastScrollTop.current) {
                 header.style.transform = 'translateY(0)'
             }
-
+    
             if (scrollTop <= 0) {
                 header.style.transform = 'translateY(0)'
-
-                if(isSchoolPage){
-                    header.classList.add('school_header')
-                }
             }
-            
-            if(scrollTop > 0){
+    
+            // school_header should only be present on school pages, and only at the top
+            if (isSchoolPage) {
+                header.classList.toggle('school_header', scrollTop <= 0)
+            } else {
                 header.classList.remove('school_header')
             }
-
+    
             lastScrollTop.current = scrollTop
         }
-
-        onScroll() 
+    
+        onScroll()
         window.addEventListener('scroll', onScroll, { passive: true })
         return () => window.removeEventListener('scroll', onScroll)
-    }, [])
+    }, [pathname, isSchoolPage])
 
     return (
         <header ref={headerRef} className={baseClass} style={{ transition: 'transform 0.3s ease' }}>
