@@ -407,7 +407,7 @@
 .contact_form_wrap input,
 .contact_form_wrap textarea { width:100%; background:transparent; border:none; border-bottom:1px solid rgba(255,255,255,.18); color:#fff; padding-bottom:1.4rem; }
 .contact_form_wrap textarea { resize: none; border: 1px solid rgba(255,255,255,.18); padding-left: 1.5rem; padding-top: 1rem; margin-bottom: 0.7rem; }
-.contact_form_wrap button { margin-top: 4.5rem; width: 12.2rem; height: 4.3rem; font: var(--font-18); border: 1px solid var(--color-ff); cursor: pointer; background: linear-gradient(to right, var(--color-cf) 50%, var(--color-ff) 50%); background-size: 200% 100%; background-position: right bottom; transition: .35s; color:#000; }
+.contact_form_wrap button { margin-top: 1rem; width: 12.2rem; height: 4.3rem; font: var(--font-18); border: 1px solid var(--color-ff); cursor: pointer; background: linear-gradient(to right, var(--color-cf) 50%, var(--color-ff) 50%); background-size: 200% 100%; background-position: right bottom; transition: .35s; color:#000; }
 .contact_form_wrap button:hover { background-position: left bottom; color:#fff; border: 1px solid #fff; }
 .not_robo img { width: auto; }
 .contact_form_wrap .field_error{color:white}

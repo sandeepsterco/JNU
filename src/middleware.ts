@@ -26,6 +26,7 @@ function buildCsp(nonce: string, isDev: boolean): string {
       https://www.google-analytics.com
       https://analytics.google.com
       https://stats.g.doubleclick.net
+      https://www.google.com
       https://www.gstatic.com
       https://www.recaptcha.net;
     frame-src 'self'
