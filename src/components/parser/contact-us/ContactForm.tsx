@@ -1,19 +1,33 @@
 "use client"
 
 import { submitContactForm } from "@/actions/submitContactForm";
-import { useActionState } from "react"
+import { useActionState, useRef, useState } from "react"
+import ReCAPTCHA from "react-google-recaptcha";
 
 const initialState = {success:false, message:"", errors:{
     name:'',
     email:'',
     phone:'',
+    captcha:'',
 } };
 
 export default function ContactForm() {
     const [state, formAction, isPending] = useActionState(submitContactForm, initialState);
+    const recaptchaRef = useRef<ReCAPTCHA>(null);
+    const [captchaToken, setCaptchaToken] = useState<string | null>(null);
+    const [captchaClientError, setCaptchaClientError] = useState("");
+
+    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+        if (!captchaToken) {
+            e.preventDefault();
+            setCaptchaClientError("Please complete the captcha");
+        } else {
+            setCaptchaClientError("");
+        }
+    }
 
     return (
-        <form action={formAction}>
+        <form action={formAction} onSubmit={handleSubmit}>
             <h3>Submit Your Request</h3>
 
             <div className="form-group">
@@ -37,6 +51,24 @@ export default function ContactForm() {
             
             <div className="form-group">
                 <textarea name="query" rows={3} placeholder="How can we help?" />
+            </div>
+
+            <div className="form-group">
+                <ReCAPTCHA
+                    ref={recaptchaRef}
+                    sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
+                    onChange={(token) => {
+                        setCaptchaToken(token);
+                        if (token) setCaptchaClientError("");
+                    }}
+                    onExpired={() => setCaptchaToken(null)}
+                />
+                <input type="hidden" name="captchaToken" value={captchaToken ?? ""} />
+                {(captchaClientError || state.errors?.captcha) && (
+                    <span className="field_error">
+                        {captchaClientError || state.errors?.captcha?.[0]}
+                    </span>
+                )}
             </div>
             
             <button type="submit" disabled={isPending}>
