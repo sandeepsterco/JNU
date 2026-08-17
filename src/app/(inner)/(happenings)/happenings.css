@@ -70,3 +70,6 @@
 .related_image { position: relative; }
 .related_date { position: absolute; bottom: 0; background-color: var(--color-36); padding-inline: 0.6rem; padding-block:0.5rem ; }
 .related_date p { color: var(--color-white); margin-bottom: 0; padding-top: 0; }
+
+/* event deatil gallery */
+.event_de_gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:0.6rem;padding-top:6rem}
