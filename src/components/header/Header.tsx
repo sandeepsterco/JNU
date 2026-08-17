@@ -6,6 +6,7 @@ import './header.css'
 import { headers } from 'next/headers'
 import { getSlug } from '@/lib/getSlug'
 import HeaderScroll from './HeaderScroll'
+import Hamburger from './hamburger/Hamburger'
 
 interface ChildItemInterface {
     title: string
@@ -61,17 +62,7 @@ export default async function Header() {
                             </li>
                         ))}
                 </ul>
-                <div className="nav_right">
-                    <button className="search_btn" type="button">
-                        <img src="/images/icons/search-icon.svg" alt="search" className="img-fluid" />
-                    </button>
-                    <button className="phone_icon" type="button">
-                        <img src="/images/icons/phone-icon.svg" alt="phone" className="img-fluid" />
-                    </button>
-                    <button className="hamb_btn" type="button">
-                        <img src="/images/icons/hemburgure-icon.svg" alt="hemburgure" className="img-fluid" />
-                    </button>
-                </div>
+                <Hamburger />
             </div>
         </HeaderScroll>
     )
