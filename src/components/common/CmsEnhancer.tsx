@@ -9,6 +9,7 @@ import { InitPlacementSwiper } from "@/lib/cms/initPlacementSwiper";
 import { InitResearchSwiper } from "@/lib/cms/initResearchSwiper";
 import { InitMaxContent } from "@/lib/cms/initMaxContent";
 import { usePathname } from "next/navigation";
+import { InitGalleryPopup } from "@/lib/cms/initGalleryPopup";
 
 function waitForLayout() {
   return new Promise<void>((resolve) => {
@@ -69,6 +70,15 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
 
       if (root.querySelector(".research_swiper:not([data-swiper-init])")) {
         const cleanup = await InitResearchSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
+
+      if(root.querySelector('.custom_cms_lightbox')){
+        const cleanup = await InitGalleryPopup(root);
         if (cancelled) {
           cleanup();
           return;
