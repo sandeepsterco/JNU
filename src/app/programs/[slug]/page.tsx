@@ -29,7 +29,9 @@ export default async function ProgramDetailPage({params, searchParams}:{params:P
             {pageData.cms.length == 0 ? <ComingSoon /> : (
                 <>
                     <ReactParserDynamic html={combinedHtml} searchParams={resolvedSearchParams} />
+                    {modularFAQ && modularFAQ?.length > 0 && (
                     <FAQs data={{title:'Frequently Asked Questions'}} modular={modularFAQ} />
+                    )}
                 </>
             )}
         </>

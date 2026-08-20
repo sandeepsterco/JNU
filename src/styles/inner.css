@@ -189,13 +189,13 @@
 #teaching ul li p { font: var(--font-16); font-weight: 300; color: var(--color-black); margin-bottom: 4rem; padding-right: 3rem; }
 #teaching ul li { position: relative; margin-bottom: 6rem; }
 #teaching ul li::before { content: ""; position: absolute; bottom: 0; left:0rem; max-width:100%; z-index: 9; width: 100%; height: 0.4rem; background: linear-gradient(to right, var(--color-cf) 0%, var(--color-cf) 55%, var(--color-fa) 55%, var(--color-fa) 100%); }
-#peo { padding-top: 4rem; }
-#peo>ul { display: flex; flex-wrap: wrap; list-style: none; padding: 0; gap: 1.3rem; margin-top: 4.1rem; }
-#peo>ul li { display: grid; grid-template-columns: 11rem auto; background-color: var(--color-white); padding: 3.5rem; align-items: center; }
-#peo>ul li figcaption,
-#peo>ul li .count { font: var(--font-30); color: var(--color-06); font-weight: 200; border-right: 1px solid #E8E8E8; }
-#peo>ul li p { padding-left: 2rem; font: var(--font-16); font-weight: 300; }
-#peo .apply_now { margin-top: 3.2rem; }
+#peo , #po, #pso{ padding-top: 4rem; }
+#peo>ul, #po>ul, #pso>ul { display: flex; flex-wrap: wrap; list-style: none; padding: 0; gap: 1.3rem; margin-top: 4.1rem; }
+#peo>ul li, #po>ul li, #pso>ul li { display: grid; grid-template-columns: 11rem auto; background-color: var(--color-white); padding: 3.5rem; align-items: center; width: 100%; }
+#peo>ul li figcaption,  #po>ul li figcaption, #pso>ul li figcaption,
+#peo>ul li .count, #po>ul li .count ,#pso>ul li .count { font: var(--font-30); color: var(--color-06); font-weight: 200; border-right: 1px solid #E8E8E8; }
+#peo>ul li p , #po>ul li p, #pso>ul li p { padding-left: 2rem; font: var(--font-16); font-weight: 300; }
+#peo .apply_now  , #po .apply_now, #pso .apply_now{ margin-top: 3.2rem; }
 .apply_admission_grid { display: grid; grid-template-columns:30% 45% auto; margin-top: 10rem; background-color: var(--color-cf); align-items: center; position: relative; }
 .apply_admission_grid::before { background-image: url(/images/apply_pattern.svg); position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 100%; width:20%; content: ""; z-index: 0; opacity: 0.47; }
 .apply_admission_grid>figure { max-width: 27rem; position: relative; z-index: 2; margin-left: 2rem; }

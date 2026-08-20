@@ -319,12 +319,20 @@ thead>tr>th:nth-child(n+3) {
     background-color: rgba(0, 63, 138, 0.16);
     
 }
-.item-content thead>tr:nth-child(1) th{
+/* .item-content thead>tr:nth-child(1) th{
 font: var(--font-16);
     color: var(--color-06);
-}
+}*/
 tbody>tr:not(:last-child) {
 	border-bottom: 0.1rem solid #E8E8E8;
+} 
+.item-content thead>tr  {
+    background-color: rgba(0, 63, 138, 0.16);
+    
+}
+.item-content thead>tr  th{
+font: var(--font-16);
+    color: var(--color-06);
 }
 
 tbody>tr>td {
