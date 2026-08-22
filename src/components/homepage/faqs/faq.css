@@ -18,7 +18,8 @@
 .faq_accordion .tab.active .tab-heading{ border: 0;}
 .tab-heading h5::before { content: "+"; position: absolute; left: -3rem; top: 50%; transform: translateY(-50%); font:var(--font-24); line-height: 1; font-weight: 200; }
 .tab.active .tab-heading h5::before { content: "−"; }
-
+.tab-content ul{margin-top: 2rem;}
+.tab-content ul li{color: var(--color-white);font: var(--font-14); font-weight: 300; line-height: 1.7;margin-bottom: 1rem; }
 
 
 

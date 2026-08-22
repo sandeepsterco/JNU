@@ -206,7 +206,7 @@
 .apply_admission_grid .apply_cnt ul li a { color: var(--color-f9); font: var(--font-14); font-weight: 300; border-bottom: 1px dashed var(--color-f9); padding-bottom: 0.5rem; }
 .apply_admission_grid .apply_cnt ul li a:hover { color: var(--color-white); border-color: var(--color-white); }
 .apply_contact ul { list-style: none; padding: 0; }
-.apply_contact ul li a { display: flex; gap: 1rem; color: var(--color-white); font: var(--font-16); font-weight: 300; align-items: center; border-bottom: 1px dashed var(--color-f9); width: max-content; padding-block:0 1.2rem; margin-bottom: 1.5rem; }
+.apply_contact ul li  { display: flex; gap: 1rem; color: var(--color-white); font: var(--font-16); font-weight: 300; align-items: center; border-bottom: 1px dashed var(--color-f9); width: max-content; padding-block:0 1.2rem; margin-bottom: 1.5rem; }
 .apply_contact ul li a:hover { color: var(--color-f9); }
 .apply_contact ul li:last-child a { border-bottom: 0; }
 .apply_contact ul li img { max-width: 1.8rem; }

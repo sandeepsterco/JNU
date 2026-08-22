@@ -30,7 +30,7 @@ function Accordion({ faqs }: { faqs: ModularFAQInterface[] }) {
                             className="tab-content"
                             style={{ height: isActive ? 'auto' : 0, overflow: 'hidden' }}
                         >
-                            <p>{faq.answer}</p>
+                            <p dangerouslySetInnerHTML={{__html:faq.answer}} />
                         </div>
                     </div>
                 )
