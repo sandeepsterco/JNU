@@ -1,13 +1,9 @@
 import apiFetch from "@/lib/api";
-import Link from "next/link";
-import { BASE_URL } from "@/config/config";
 import { getSlug } from "@/lib/getSlug";
 import ProgramSearch from "./ProgramSearch";
-import NoData from "@/components/ui/NoData";
 import ProgramsLeftFilter from "./ProgramsLeftFilter";
 import "./programsOffered.css";
 import ProgramsListing from "./ProgramsListing";
-import { loadMorePrograms } from "@/actions/loadMorePrograms";
 
 interface SpecialInterface {
   name: string;
@@ -31,13 +27,14 @@ interface ProgramsOfferedProps {
     school?: string;
     duration?: string;
     degree?: string;
+    specialization?: string;
   };
 }
 
 export default async function ProgramsOffered({
   searchParams,
 }: ProgramsOfferedProps) {
-  const { search, school, duration, degree } = searchParams;
+  const { search, school, duration, degree, specialization } = searchParams;
   const currentSlug = await getSlug(0);
   const params = new URLSearchParams();
 
@@ -45,6 +42,7 @@ export default async function ProgramsOffered({
   if (school) params.set("school", school);
   if (duration) params.set("duration", duration);
   if (degree) params.set("degree", degree);
+  if (specialization) params.set("specialization", specialization);
 
   const { data, error } = await apiFetch(`programs?${params.toString()}`);
 
@@ -60,7 +58,13 @@ export default async function ProgramsOffered({
           <ProgramsLeftFilter />
         </div>
 
-        <ProgramsListing programsData={programsData} currentSlug={currentSlug} filters={{ search, school, duration, degree }} hasMoreInitially={Boolean(data?.next_page_url)} />
+        <ProgramsListing
+          key={`${search ?? ""}-${school ?? ""}-${duration ?? ""}-${degree ?? ""}-${specialization ?? ""}`}
+          programsData={programsData}
+          currentSlug={currentSlug}
+          filters={{ search, school, duration, degree, specialization }}
+          hasMoreInitially={Boolean(data?.next_page_url)}
+        />
       </div>
     </>
   );

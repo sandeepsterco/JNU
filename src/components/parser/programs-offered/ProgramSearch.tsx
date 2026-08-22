@@ -1,13 +1,21 @@
 "use client"
 
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useState, useTransition } from "react"
 
 export default function ProgramSearch() {
     const router = useRouter()
-    const [searchQuery, setSearchQuery] = useState('');
-    const [debouncedQuery, setDebouncedQuery] = useState("");
+    const pathname = usePathname()
+    const searchParams = useSearchParams()
+    const urlSearch = searchParams.get("search") ?? "";
+    const [searchQuery, setSearchQuery] = useState(urlSearch);
+    const [debouncedQuery, setDebouncedQuery] = useState(urlSearch);
     const [isPending, startTransition] = useTransition();
+
+    useEffect(() => {
+        setSearchQuery(urlSearch);
+        setDebouncedQuery(urlSearch);
+    }, [urlSearch]);
 
     useEffect(()=>{
         const timer = setTimeout(()=>{
@@ -18,14 +26,20 @@ export default function ProgramSearch() {
     }, [searchQuery]);
 
     useEffect(()=>{
-        const params = new URLSearchParams();
+        if (debouncedQuery === urlSearch) return;
+
+        const params = new URLSearchParams(searchParams.toString());
         if(debouncedQuery){
             params.set('search', debouncedQuery)
+        } else {
+            params.delete('search')
         }
+
+        const query = params.toString();
         startTransition(()=>{
-            router.push(`?${params.toString()}`);
+            router.push(query ? `${pathname}?${query}` : pathname);
         })
-    }, [debouncedQuery])
+    }, [debouncedQuery, pathname, router, searchParams, urlSearch])
 
     return (
         <div className="input-group mb-3">
@@ -41,7 +55,7 @@ export default function ProgramSearch() {
                 }} 
             />
 
-            <button className="btn btn_search" type="button" id="button-addon2">
+            <button className="btn btn_search" type="button" id="button-addon2" disabled={isPending}>
                 <img src="/images/icons/search-icon.svg" alt="search" className="img-fluid" />
             </button>
         </div>

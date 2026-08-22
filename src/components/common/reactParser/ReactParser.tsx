@@ -21,7 +21,8 @@ interface ProgramsSearchParams {
     duration?: string;
     specialization?: string;
     type?: string;
-    school?:string;
+    school?: string;
+    degree?: string;
 }
 
 interface ContentRendererProps {
