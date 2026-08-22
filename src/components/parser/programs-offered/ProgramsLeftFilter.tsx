@@ -14,13 +14,14 @@ type AccordionOption = {
 type AccordionItem = {
   title: string;
   options: AccordionOption[];
-  key:string;
+  key: string;
 };
 
 const getSchoolList = async () => {
   try {
     const { data, error } = await apiFetch(`schools`);
-    if (error || !data.status) throw new Error(`Error while fetching school data`);
+    if (error || !data.status)
+      throw new Error(`Error while fetching school data`);
     return data.data;
   } catch (error) {
     throw new Error(`Error while fetching school data`);
@@ -30,7 +31,8 @@ const getSchoolList = async () => {
 const getDepartmentList = async () => {
   try {
     const { data, error } = await apiFetch(`departments`);
-    if (error || !data.status) throw new Error(`Error while fetching department data`);
+    if (error || !data.status)
+      throw new Error(`Error while fetching department data`);
     return data.data;
   } catch (error) {
     throw new Error(`Error while fetching department data`);
@@ -40,7 +42,8 @@ const getDepartmentList = async () => {
 const getSpecialisation = async () => {
   try {
     const { data, error } = await apiFetch(`specialization`);
-    if (error || !data.status) throw new Error(`Error while fetching specialization data`);
+    if (error || !data.status)
+      throw new Error(`Error while fetching specialization data`);
     return data.data;
   } catch (error) {
     throw new Error(`Error while fetching specialization data`);
@@ -50,7 +53,8 @@ const getSpecialisation = async () => {
 const getProgramType = async () => {
   try {
     const { data, error } = await apiFetch(`degree`);
-    if (error || !data.status) throw new Error(`Error while fetching Program Type`);
+    if (error || !data.status)
+      throw new Error(`Error while fetching Program Type`);
     return data.data;
   } catch (error) {
     throw new Error(`Error while fetching Program Type`);
@@ -58,7 +62,10 @@ const getProgramType = async () => {
 };
 
 // Normalize API items into a consistent { id, name, slug } shape.
-const normalizeOptions = (list: unknown, fallbackPrefix = "opt"): AccordionOption[] => {
+const normalizeOptions = (
+  list: unknown,
+  fallbackPrefix = "opt",
+): AccordionOption[] => {
   if (!Array.isArray(list)) return [];
 
   return list
@@ -89,73 +96,92 @@ const durationListData = [
 ];
 
 export default function ProgramsLeftFilter() {
-    const searchParams = useSearchParams();
-    const router = useRouter();
-    const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
   const [activeIndex, setActiveIndex] = useState(0);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  console.log('searchParams',searchParams);
+  console.log("searchParams", searchParams);
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["program-filters"],
     queryFn: async () => {
-      const [schoolsListData, departmentsListData, specialisationData, programTypeData] = await Promise.all([
+      const [
+        schoolsListData,
+        departmentsListData,
+        specialisationData,
+        programTypeData,
+      ] = await Promise.all([
         getSchoolList(),
         getDepartmentList(),
         getSpecialisation(),
-        getProgramType()
+        getProgramType(),
       ]);
 
-      return { schoolsListData, departmentsListData, specialisationData, programTypeData };
+      return {
+        schoolsListData,
+        departmentsListData,
+        specialisationData,
+        programTypeData,
+      };
     },
   });
 
   const accordionData = useMemo<AccordionItem[]>(() => {
     const schoolOptions = normalizeOptions(data?.schoolsListData, "school");
     const durationOptions = normalizeOptions(durationListData, "duration");
-    const specializationOptions = normalizeOptions(data?.specialisationData, "specialization");
-    const programTypeOptions = normalizeOptions(data?.programTypeData, "degree");
+    const specializationOptions = normalizeOptions(
+      data?.specialisationData,
+      "specialization",
+    );
+    const programTypeOptions = normalizeOptions(
+      data?.programTypeData,
+      "degree",
+    );
 
     const dynamicAccordionData: AccordionItem[] = [
-      { title: "School", key:'school', options: schoolOptions },
-      { title: "Duration", key:'duration', options: durationOptions },
-      { title: "Specialisation", key:'specialisation', options: specializationOptions },
-      { title: "Program Type", key:'degree', options: programTypeOptions },
+      { title: "School", key: "school", options: schoolOptions },
+      { title: "Duration", key: "duration", options: durationOptions },
+      {
+        title: "Specialisation",
+        key: "specialisation",
+        options: specializationOptions,
+      },
+      { title: "Program Type", key: "degree", options: programTypeOptions },
     ];
 
     return dynamicAccordionData.filter((item) => item.options.length > 0);
   }, [data]);
 
-  const [selected, setSelected] = useState(()=>{
-    const initial:any = {};
-    searchParams.forEach((value, key)=>{
-        initial[key] = value;
+  const [selected, setSelected] = useState(() => {
+    const initial: any = {};
+    searchParams.forEach((value, key) => {
+      initial[key] = value;
     });
     return initial;
-  })
+  });
 
-  const handleSelect = (filterKey:string, optionId:string | number)=>{
-    setSelected((prev:any)=>({...prev, [filterKey]:String(optionId)}))
-  }
+  const handleSelect = (filterKey: string, optionId: string | number) => {
+    setSelected((prev: any) => ({ ...prev, [filterKey]: String(optionId) }));
+  };
 
-  const applyFilters = ()=>{
+  const applyFilters = () => {
     const params = new URLSearchParams();
-    
-    Object.entries(selected).forEach(([key, value]:any)=>{
-        if(value) params.set(key, value)
-    })
 
-    router.push(`${pathname}?${params.toString()}`)
-  }
+    Object.entries(selected).forEach(([key, value]: any) => {
+      if (value) params.set(key, value);
+    });
 
-  const resetFilters = ()=>{
+    router.push(`${pathname}?${params.toString()}`);
+  };
+
+  const resetFilters = () => {
     setSelected({});
-    router.push(pathname)
-  }
+    router.push(pathname);
+  };
 
   contentRefs.current = contentRefs.current.slice(0, accordionData.length);
-
 
   useLayoutEffect(() => {
     const syncHeight = () => {
@@ -214,7 +240,7 @@ export default function ProgramsLeftFilter() {
                             id={inputId}
                             value={option.slug ?? String(option.id)}
                             checked={selected[item.key] == String(option.id)}
-                            onChange={()=>handleSelect(item.key, option.id)}
+                            onChange={() => handleSelect(item.key, option.id)}
                           />
 
                           <label className="form-check-label" htmlFor={inputId}>
