@@ -5,14 +5,14 @@ import type { ProgramsDataInterface } from "./ProgramsOffered";
 import Link from "next/link";
 import { BASE_URL } from "@/config/config";
 import { loadMorePrograms } from "@/actions/loadMorePrograms";
-import { useState, useTransition } from "react";
+import { useEffect, useState, useTransition } from "react";
 
 interface Filters {
     search?: string;
     school?: string;
     duration?: string;
     degree?: string;
-    specialisation?: string;
+    specialization?: string;
   }
 
 export default function ProgramsListing({
@@ -24,17 +24,18 @@ export default function ProgramsListing({
   programsData: ProgramsDataInterface[];
   currentSlug: string;
   filters: Filters;
-  hasMoreInitially: Boolean;
+  hasMoreInitially: boolean;
 }) {
   const [items, setItems] = useState<ProgramsDataInterface[]>(programsData);
   const [hasMore, setHasMore] = useState(hasMoreInitially);
   const [page, setPage] = useState(1);
   const [isPending, startTransition] = useTransition();
 
-  // const school = params.get('school');
-  // const duration = params.get('duration');
-  // const specialisation = params.get('specialisation');
-  // const degree = params.get('degree');
+  useEffect(() => {
+    setItems(programsData);
+    setHasMore(hasMoreInitially);
+    setPage(1);
+  }, [programsData, hasMoreInitially]);
 
   const handleLoadMore = () => {
     startTransition(async () => {

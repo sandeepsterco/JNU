@@ -5,11 +5,11 @@ interface Filters {
     school?: string;
     duration?: string;
     degree?: string;
-    specialisation?: string;
+    specialization?: string;
   }
 
 export async function loadMorePrograms(page:number, filters: Filters = {}){
-    const { search, school, duration, degree, specialisation } = filters;
+    const { search, school, duration, degree, specialization } = filters;
 
     const query = new URLSearchParams();
     query.set('page', String(page));
@@ -17,7 +17,7 @@ export async function loadMorePrograms(page:number, filters: Filters = {}){
     if (search) query.set("search", search);
     if (school) query.set("school", school);
     if (duration) query.set("duration", duration);
-    if (specialisation) query.set("specialisation", specialisation);
+    if (specialization) query.set("specialization", specialization);
     if (degree) query.set("degree", degree);
 
     const { data, error } = await apiFetch(`programs?${query.toString()}`);

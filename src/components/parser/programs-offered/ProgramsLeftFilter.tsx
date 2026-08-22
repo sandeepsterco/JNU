@@ -39,7 +39,7 @@ const getDepartmentList = async () => {
   }
 };
 
-const getSpecialisation = async () => {
+const getSpecialization = async () => {
   try {
     const { data, error } = await apiFetch(`specialization`);
     if (error || !data.status)
@@ -102,27 +102,25 @@ export default function ProgramsLeftFilter() {
   const [activeIndex, setActiveIndex] = useState(0);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  console.log("searchParams", searchParams);
-
   const { data, isLoading, isError } = useQuery({
     queryKey: ["program-filters"],
     queryFn: async () => {
       const [
         schoolsListData,
         departmentsListData,
-        specialisationData,
+        specializationData,
         programTypeData,
       ] = await Promise.all([
         getSchoolList(),
         getDepartmentList(),
-        getSpecialisation(),
+        getSpecialization(),
         getProgramType(),
       ]);
 
       return {
         schoolsListData,
         departmentsListData,
-        specialisationData,
+        specializationData,
         programTypeData,
       };
     },
@@ -132,7 +130,7 @@ export default function ProgramsLeftFilter() {
     const schoolOptions = normalizeOptions(data?.schoolsListData, "school");
     const durationOptions = normalizeOptions(durationListData, "duration");
     const specializationOptions = normalizeOptions(
-      data?.specialisationData,
+      data?.specializationData,
       "specialization",
     );
     const programTypeOptions = normalizeOptions(
@@ -144,8 +142,8 @@ export default function ProgramsLeftFilter() {
       { title: "School", key: "school", options: schoolOptions },
       { title: "Duration", key: "duration", options: durationOptions },
       {
-        title: "Specialisation",
-        key: "specialisation",
+        title: "Specialization",
+        key: "specialization",
         options: specializationOptions,
       },
       { title: "Program Type", key: "degree", options: programTypeOptions },
@@ -157,7 +155,7 @@ export default function ProgramsLeftFilter() {
   const [selected, setSelected] = useState(() => {
     const initial: any = {};
     searchParams.forEach((value, key) => {
-      initial[key] = value;
+      if (key !== "search") initial[key] = value;
     });
     return initial;
   });
@@ -168,12 +166,15 @@ export default function ProgramsLeftFilter() {
 
   const applyFilters = () => {
     const params = new URLSearchParams();
+    const search = searchParams.get("search");
+    if (search) params.set("search", search);
 
     Object.entries(selected).forEach(([key, value]: any) => {
-      if (value) params.set(key, value);
+      if (value && key !== "search") params.set(key, String(value));
     });
 
-    router.push(`${pathname}?${params.toString()}`);
+    const query = params.toString();
+    router.push(query ? `${pathname}?${query}` : pathname);
   };
 
   const resetFilters = () => {

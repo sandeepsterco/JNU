@@ -5,6 +5,8 @@ interface SearchParams{
     search?:string;
     duration?:string;
     school?:string;
+    degree?:string;
+    specialization?:string;
 }
 
 export default async function DynamicInnerPage({params, searchParams}:{params:Promise<{slug:string}>, searchParams:Promise<SearchParams>}){
