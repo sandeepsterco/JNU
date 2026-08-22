@@ -1,45 +1,37 @@
 "use client"
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState, useTransition } from "react"
+import { useEffect, useState } from "react"
 
 export default function ProgramSearch() {
     const router = useRouter()
     const pathname = usePathname()
     const searchParams = useSearchParams()
-    const urlSearch = searchParams.get("search") ?? "";
-    const [searchQuery, setSearchQuery] = useState(urlSearch);
-    const [debouncedQuery, setDebouncedQuery] = useState(urlSearch);
-    const [isPending, startTransition] = useTransition();
+    const [searchQuery, setSearchQuery] = useState(searchParams.get("search") ?? "");
+    const [debouncedQuery, setDebouncedQuery] = useState(searchQuery);
 
     useEffect(() => {
-        setSearchQuery(urlSearch);
-        setDebouncedQuery(urlSearch);
-    }, [urlSearch]);
-
-    useEffect(()=>{
-        const timer = setTimeout(()=>{
+        const timer = setTimeout(() => {
             setDebouncedQuery(searchQuery)
         }, 500)
 
-        return ()=>clearTimeout(timer);
+        return () => clearTimeout(timer);
     }, [searchQuery]);
 
-    useEffect(()=>{
-        if (debouncedQuery === urlSearch) return;
-
+    useEffect(() => {
         const params = new URLSearchParams(searchParams.toString());
-        if(debouncedQuery){
-            params.set('search', debouncedQuery)
+        const current = params.get("search") ?? "";
+        if (debouncedQuery === current) return;
+
+        if (debouncedQuery) {
+            params.set("search", debouncedQuery)
         } else {
-            params.delete('search')
+            params.delete("search")
         }
 
         const query = params.toString();
-        startTransition(()=>{
-            router.push(query ? `${pathname}?${query}` : pathname);
-        })
-    }, [debouncedQuery, pathname, router, searchParams, urlSearch])
+        router.push(query ? `${pathname}?${query}` : pathname, { scroll: false });
+    }, [debouncedQuery]);
 
     return (
         <div className="input-group mb-3">
@@ -50,12 +42,12 @@ export default function ProgramSearch() {
                 aria-label="Recipient’s username /"
                 aria-describedby="button-addon2"
                 value={searchQuery}
-                onChange={(e)=>{
+                onChange={(e) => {
                     setSearchQuery(e.target.value);
-                }} 
+                }}
             />
 
-            <button className="btn btn_search" type="button" id="button-addon2" disabled={isPending}>
+            <button className="btn btn_search" type="button" id="button-addon2">
                 <img src="/images/icons/search-icon.svg" alt="search" className="img-fluid" />
             </button>
         </div>
