@@ -3,28 +3,31 @@
 import NoData from "@/components/ui/NoData";
 import type { ProgramsDataInterface } from "./ProgramsOffered";
 import Link from "next/link";
-import { BASE_URL } from "@/config/config";
+import { APPLY_NOW, BASE_URL } from "@/config/config";
 import { loadMorePrograms } from "@/actions/loadMorePrograms";
 import { useEffect, useState, useTransition } from "react";
+import Loading from "@/app/loading";
 
 interface Filters {
-    search?: string;
-    school?: string;
-    duration?: string;
-    degree?: string;
-    specialization?: string;
-  }
+  search?: string;
+  school?: string;
+  duration?: string;
+  degree?: string;
+  specialization?: string;
+}
 
 export default function ProgramsListing({
   programsData,
   currentSlug,
   filters,
   hasMoreInitially,
+  loading
 }: {
   programsData: ProgramsDataInterface[];
   currentSlug: string;
   filters: Filters;
   hasMoreInitially: boolean;
+  loading:Boolean
 }) {
   const [items, setItems] = useState<ProgramsDataInterface[]>(programsData);
   const [hasMore, setHasMore] = useState(hasMoreInitially);
@@ -48,9 +51,17 @@ export default function ProgramsListing({
     });
   };
 
+  if(loading) {
+    return <Loading />
+  }
+
   return (
     <div className="progrem_right">
+
+
       {items?.length == 0 && <NoData />}
+
+
       <div className="program_list_grid">
         {items?.length > 0 &&
           items.map((item, idx) => (
@@ -83,9 +94,9 @@ export default function ProgramsListing({
               <div className="program_bx_right">
                 <h4>Eligibility</h4>
                 <h5>Fee Structure</h5>
-                <a href="#" className="apply_now">
+                <Link href={APPLY_NOW} className="apply_now">
                   Apply Now
-                </a>
+                </Link>
               </div>
             </div>
           ))}

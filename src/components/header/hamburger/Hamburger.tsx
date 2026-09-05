@@ -1,13 +1,41 @@
 "use client";
 
+import { BASE_URL } from "@/config/config";
+import apiFetch from "@/lib/api";
+import { useQuery } from "@tanstack/react-query";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+
+const getHamburgerData = async()=>{
+  try{
+    const {data, error} = await apiFetch(`sidebar`);
+
+    if(error){
+      throw new Error(error);
+    }
+    return data.sidebar;
+  }catch(error){
+    throw error instanceof Error ? error : new Error('Failed to fetch hamburger data')
+  }
+}
 
 export default function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
 
+  const {data, isLoading, isError} = useQuery({
+    queryKey:['hamburger'],
+    queryFn:getHamburgerData
+  })
+
+  // const { data, error } = await apiFetch(`sidebar`)
+
+  // const hamburgerData = data?.sidebar ?? []
+
   // useEffect(() => {
   //   document.body.classList.toggle("hamburger-overlay", isOpen);
   // }, [isOpen]);
+
+  console.log('hamburger data',data);
 
   return (
     <>
@@ -51,7 +79,29 @@ export default function Hamburger() {
                 className="img-fluid"
               />
             </div>
-            <div className="hamp_topgrid">
+
+            {data?.length > 0 && (
+              <div className="hamp_topgrid">
+                {data.map((item:any, idx:number)=>(
+                  <div key={idx} className="menu_col">
+                    <div className="hamburger_item">
+                      <h3>{item.title}</h3>
+                      {item?.children.length > 0 && (
+                        <ul>
+                          {item.children.map((childItem:any, childIdx:number)=>(
+                            <li key={childIdx}>
+                              <a href={`${BASE_URL}${childItem.slug}`}>{childItem.title}</a>
+                            </li>    
+                          ))}
+                        </ul>  
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {/* <div className="hamp_topgrid">
               <div className="menu_col">
                 <div className="hamburger_item">
                   <h3>About Us</h3>
@@ -220,47 +270,47 @@ export default function Hamburger() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
           </div>
         <div className="hambur_btmsec">
           <ul className="hamber_btmmenu">
             <li>
-              <a href="#">Careers</a>
+              <Link href={`${BASE_URL}careers`}>Careers</Link>
             </li>
             <li>
-              <a href="#">Study @ JNU</a>
-            </li>
-
-            <li>
-              <a href="#">Contact</a>
+            <Link href={`${BASE_URL}study-jnu`}>Study @ JNU</Link>
             </li>
 
             <li>
-              <a href="#">ERP Login</a>
+              <Link href={`${BASE_URL}contact`}>Contact</Link>
             </li>
 
             <li>
-              <a href="#">Public - Self Disclosure</a>
+              <Link href={`${BASE_URL}erp-login`}>ERP Login</Link>
             </li>
 
             <li>
-              <a href="#">Policies</a>
+              <Link href={`${BASE_URL}disclosure`}>Public - Self Disclosure</Link>
             </li>
 
             <li>
-              <a href="#">UGC e-Samadhaan Portal</a>
+              <Link href={`${BASE_URL}policies`}>Policies</Link>
             </li>
 
             <li>
-              <a href="#">Holidays Calendar</a>
+              <Link href={`${BASE_URL}ugc-portal`}>UGC e-Samadhaan Portal</Link>
             </li>
 
             <li>
-              <a href="#">Downloads</a>
+              <Link href={`${BASE_URL}holidays-calendar`}>Holidays Calendar</Link>
             </li>
 
             <li>
-              <a href="#">Mandatory Disclosures</a>
+              <Link href={`${BASE_URL}downloads`}>Downloads</Link>
+            </li>
+
+            <li>
+              <Link href={`${BASE_URL}mandatory-disclosures`}>Mandatory Disclosures</Link>
             </li>
           </ul>
         </div>

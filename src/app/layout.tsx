@@ -10,6 +10,7 @@ import { headers } from "next/headers";
 import Providers from "@/lib/Providers";
 import ScrollToTop from "@/components/common/ScrollToTop";
 import '@/styles/globals.css'
+import RouteProgress from "@/components/loader/RouteProgress";
 
 const stackSansText = Stack_Sans_Text({
   subsets: ['latin'],
@@ -48,6 +49,7 @@ export default async function RootLayout({
       className={`${stackSansText.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
+        <RouteProgress />
         <NonceProvider nonce={nonce}>
           <Providers>
             <AosProvider>

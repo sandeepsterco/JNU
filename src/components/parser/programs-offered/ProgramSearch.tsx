@@ -1,14 +1,15 @@
 "use client"
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react"
+import { useEffect, useState, useTransition } from "react"
 
-export default function ProgramSearch() {
+export default function ProgramSearch({isDataLoading}:{isDataLoading:(val:boolean)=>void}) {
     const router = useRouter()
     const pathname = usePathname()
     const searchParams = useSearchParams()
     const [searchQuery, setSearchQuery] = useState(searchParams.get("search") ?? "");
     const [debouncedQuery, setDebouncedQuery] = useState(searchQuery);
+    const [isPending, startTransition] = useTransition();
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -30,8 +31,14 @@ export default function ProgramSearch() {
         }
 
         const query = params.toString();
-        router.push(query ? `${pathname}?${query}` : pathname, { scroll: false });
+        startTransition(()=>{
+            router.push(query ? `${pathname}?${query}` : pathname, { scroll: false });
+        })
     }, [debouncedQuery]);
+
+    useEffect(() => {
+        isDataLoading(isPending);
+      }, [isPending, isDataLoading]);
 
     return (
         <div className="input-group mb-3">

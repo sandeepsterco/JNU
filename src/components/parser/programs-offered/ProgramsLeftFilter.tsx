@@ -3,7 +3,7 @@
 import apiFetch from "@/lib/api";
 import { useQuery } from "@tanstack/react-query";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, useTransition } from "react";
 
 type AccordionOption = {
   id: string | number; // widened: string for fallback items, number for API items
@@ -95,12 +95,13 @@ const durationListData = [
   { id: 4, name: "4 Years", slug: "4-years" },
 ];
 
-export default function ProgramsLeftFilter() {
+export default function ProgramsLeftFilter({isDataLoading}:{isDataLoading:(val:boolean)=>void}) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
   const [activeIndex, setActiveIndex] = useState(0);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const [isPending, startTransition] = useTransition();
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ["program-filters"],
@@ -174,13 +175,23 @@ export default function ProgramsLeftFilter() {
     });
 
     const query = params.toString();
-    router.push(query ? `${pathname}?${query}` : pathname);
+
+    startTransition(() => {
+      router.push(query ? `${pathname}?${query}` : pathname);
+    })
   };
 
   const resetFilters = () => {
     setSelected({});
-    router.push(pathname);
+    startTransition(() => {
+      router.push(pathname);
+    });
   };
+
+  useEffect(() => {
+    isDataLoading(isPending);
+  }, [isPending, isDataLoading]);
+
 
   contentRefs.current = contentRefs.current.slice(0, accordionData.length);
 
@@ -200,7 +211,15 @@ export default function ProgramsLeftFilter() {
 
   if (isLoading) return null;
   if (isError) return null;
+
+  // if(!accordionData){
+
+  //   isDataLoading(true);
+  // }
+
   if (accordionData.length === 0) return null;
+
+
 
   return (
     <>
