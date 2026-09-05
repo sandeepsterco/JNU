@@ -27,15 +27,18 @@ export default function Hamburger() {
     queryFn:getHamburgerData
   })
 
-  // const { data, error } = await apiFetch(`sidebar`)
+  const closeMenu = () => setIsOpen(false); 
 
-  // const hamburgerData = data?.sidebar ?? []
+  useEffect(() => {
+    document.body.classList.toggle("hamburger-overlay", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
 
-  // useEffect(() => {
-  //   document.body.classList.toggle("hamburger-overlay", isOpen);
-  // }, [isOpen]);
+    return () => {
+      document.body.classList.remove("hamburger-overlay");
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
-  console.log('hamburger data',data);
 
   return (
     <>
@@ -72,7 +75,7 @@ export default function Hamburger() {
       <div className={`hamburger_menu ${isOpen ? "is-open" : ""}`}>
         <div className="hamburger_menu_header">
           <div className="ham_menutop">
-            <div className="hambur_close" onClick={() => setIsOpen(false)}>
+            <div className="hambur_close" onClick={closeMenu}>
               <img
                 src="/images/icons/ham_close.svg"
                 alt="hamburger"
@@ -90,7 +93,7 @@ export default function Hamburger() {
                         <ul>
                           {item.children.map((childItem:any, childIdx:number)=>(
                             <li key={childIdx}>
-                              <a href={`${BASE_URL}${childItem.slug}`}>{childItem.title}</a>
+                              <Link href={`${BASE_URL}${childItem.slug}`} onClick={closeMenu}>{childItem.title}</Link>
                             </li>    
                           ))}
                         </ul>  
@@ -101,176 +104,6 @@ export default function Hamburger() {
               </div>
             )}
 
-            {/* <div className="hamp_topgrid">
-              <div className="menu_col">
-                <div className="hamburger_item">
-                  <h3>About Us</h3>
-                  <ul>
-                    <li>
-                      <a href="#">University at Glance</a>
-                    </li>
-                    <li>
-                      <a href="#">JNU at UAE</a>
-                    </li>
-                    <li>
-                      <a href="#">JNU Hospital</a>
-                    </li>
-                    <li>
-                      <a href="#">Leadership</a>
-                    </li>
-                    <li>
-                      <a href="#">Social Responsibility</a>
-                    </li>
-                    <li>
-                      <a href="#">Accreditations &amp; Recognitions</a>
-                    </li>
-                    <li>
-                      <a href="#">Committees</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="menu_col">
-                <div className="hamburger_item">
-                  <h3>Academics</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Schools and List</a>
-                    </li>
-                    <li>
-                      <a href="#">Programs</a>
-                    </li>
-                    <li>
-                      <a href="#">Faculties</a>
-                    </li>
-                    <li>
-                      <a href="#">Collaborations &amp; Partnerships</a>
-                    </li>
-                    <li>
-                      <a href="#">Library</a>
-                    </li>
-                    <li>
-                      <a href="#">Examinations &amp; Results</a>
-                    </li>
-                    <li>
-                      <a href="#">Learning Facilities</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="menu_col">
-                <div className="hamburger_item">
-                  <h3>Research &amp; Innovation</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Research Highlights</a>
-                    </li>
-                    <li>
-                      <a href="#">Dr. Ambedkar Chair</a>
-                    </li>
-                    <li>
-                      <a href="#">Publications &amp; Patents</a>
-                    </li>
-                    <li>
-                      <a href="#">Innovation and Incubation Cell</a>
-                    </li>
-                    <li>
-                      <a href="#">Centers of Excellence</a>
-                    </li>
-                    <li>
-                      <a href="#">Funded projects</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="hamp_topgrid">
-              <div className="menu_col">
-                <div className="hamburger_item">
-                  <h3>Placements</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Student's Corner</a>
-                    </li>
-                    <li>
-                      <a href="#">Recruiter's Corner</a>
-                    </li>
-                    <li>
-                      <a href="#">Alumni Network</a>
-                    </li>
-                    <li>
-                      <a href="#">Placement Highlights</a>
-                    </li>
-                    <li>
-                      <a href="#">Career Guidance</a>
-                    </li>
-                    <li>
-                      <a href="#">Collaborations</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="menu_col">
-                <div className="hamburger_item">
-                  <h3>Campus Life</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Gallery</a>
-                    </li>
-                    <li>
-                      <a href="#">Academic Facilities</a>
-                    </li>
-                    <li>
-                      <a href="#">Sports Facilities</a>
-                    </li>
-                    <li>
-                      <a href="#">Hostel Facilities</a>
-                    </li>
-                    <li>
-                      <a href="#">Transportation</a>
-                    </li>
-                    <li>
-                      <a href="#">Events</a>
-                    </li>
-                    <li>
-                      <a href="#">Student Clubs &amp; Societies</a>
-                    </li>
-                    <li>
-                      <a href="#">Social Services</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="hamburger_item">
-                <h3>Admissions</h3>
-                <ul>
-                  <li>
-                    <a href="#">Download Prospectus</a>
-                  </li>
-                  <li>
-                    <a href="#">Book Campus Tour</a>
-                  </li>
-                  <li>
-                    <a href="#">Admission Process</a>
-                  </li>
-                  <li>
-                    <a href="#">Course, Eligibility &amp; Fee Structure</a>
-                  </li>
-                  <li>
-                    <a href="#">Student Speaks</a>
-                  </li>
-                  <li>
-                    <a href="#">Scholarships &amp; Financial Aid</a>
-                  </li>
-                  <li>
-                    <a href="#">International Admissions</a>
-                  </li>
-                  <li>
-                    <a href="#">FAQs</a>
-                  </li>
-                </ul>
-              </div>
-            </div> */}
           </div>
         <div className="hambur_btmsec">
           <ul className="hamber_btmmenu">

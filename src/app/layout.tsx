@@ -4,13 +4,14 @@ import Header from "@/components/header/Header";
 import AosProvider from "@/components/common/AosProvider";
 
 import RevealImages from "@/components/common/RevealImages";
-import Footer from "@/components/footer/Footer";
+import dynamic from "next/dynamic";
 import { NonceProvider } from "@/lib/NonceProvider";
 import { headers } from "next/headers";
 import Providers from "@/lib/Providers";
 import ScrollToTop from "@/components/common/ScrollToTop";
-import '@/styles/globals.css'
 import RouteProgress from "@/components/loader/RouteProgress";
+const Footer = dynamic(()=>import("@/components/footer/Footer"));
+import '@/styles/globals.css'
 
 const stackSansText = Stack_Sans_Text({
   subsets: ['latin'],
