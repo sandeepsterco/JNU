@@ -40,7 +40,7 @@ export default async function SchoolNoData() {
               {schoolName}
             </h1>
             
-            <Link href={APPLY_NOW} className="apply_now" style={{
+            <Link href={APPLY_NOW ?? '/apply-now'} className="apply_now" style={{
                 marginTop:'3rem'
             }}>
               Apply Now

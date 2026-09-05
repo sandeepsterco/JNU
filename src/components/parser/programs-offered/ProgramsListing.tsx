@@ -94,7 +94,7 @@ export default function ProgramsListing({
               <div className="program_bx_right">
                 <h4>Eligibility</h4>
                 <h5>Fee Structure</h5>
-                <Link href={APPLY_NOW} className="apply_now">
+                <Link href={APPLY_NOW ?? '/apply-now'} className="apply_now">
                   Apply Now
                 </Link>
               </div>
