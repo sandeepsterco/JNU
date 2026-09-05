@@ -7,7 +7,7 @@ opacity: 0.4; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-i
 .school_filter{ display: flex; align-items: center; gap: 2rem;}
 .school_filter p{ font: var(--font-18); font-weight: 200; color: var(--color-white); border-right: 1px solid var(--color-white); padding-right: 2rem; margin-right:0rem;}
 .school_pagination{ display: flex; position: absolute; bottom: 0;}
-.sch_dropdown { position: relative; flex-shrink: 0; z-index: 9; }
+.sch_dropdown { position: relative; flex-shrink: 0; z-index: 10; }
 .sch_dropdown>.dropdown_toggle { position: relative; min-width: 28.3rem; padding-block:1.5rem; cursor: pointer; font: var(--font-21); font-weight: 700; border: 0; padding-right: 2.8rem; background-color: transparent; text-align: left; color: var(--color-white); }
 .sch_dropdown>.dropdown_toggle::after {
     content: "";
