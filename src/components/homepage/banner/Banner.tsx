@@ -64,10 +64,10 @@ export default function HomeBanner({ data }: HomeBannerProps) {
                 loop={true}
                 effect="fade"
                 speed={500}
-                autoplay={{
-                    delay: slideTiming,
-                    disableOnInteraction: false
-                }}
+                // autoplay={{
+                //     delay: slideTiming,
+                //     disableOnInteraction: false
+                // }}
                 pagination={{
                     el: ".hero_pagination",
                     clickable: true,

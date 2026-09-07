@@ -29,7 +29,9 @@ export default function HomeStats({data}:StatsPropsInterface) {
                     <ul>
                         {StatsData?.map((item, idx)=>(
                             <li key={idx}>
-                                <div dangerouslySetInnerHTML={{__html:item.heading ?? ''}} />
+                                {item.heading && 
+                                    <div dangerouslySetInnerHTML={{__html:item.heading ?? ''}} />
+                                }
                                 {item?.image && (
                                     <img src={item.image} className="img-fluid" alt="qs logo" />
                                 )}

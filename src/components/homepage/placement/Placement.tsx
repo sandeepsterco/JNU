@@ -174,7 +174,7 @@ export default function HomePlacement({data, modular}:PlacementPropsInterface) {
                                             spaceBetween: 0
                                         },
                                         768: {
-                                            slidesPerView: 3,
+                                            slidesPerView: 4,
                                             spaceBetween: 0
                                         },
                                         992: {
