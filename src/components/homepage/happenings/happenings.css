@@ -19,7 +19,7 @@
 .happening_Bx .happening_video_cnt .date span{ border-left: 1px solid var(--color-white);}
 .happening_video figure{ padding-bottom: 1px;}
 .happening_img figure{ height: 100%;}
-.happ_sch{ background-color: var(--color-fd); display: grid; grid-template-columns: 60% auto; padding-block: 3.5rem; padding-inline: 3rem; gap: 5rem; position: relative; margin-bottom: 0.1rem;}
+.happ_sch{ background-color: var(--color-fd); display: grid; grid-template-columns: 60% auto; padding-block: 3.5rem; padding-inline: 3rem; gap: 5rem; position: relative; margin-bottom: 0.1rem; min-height: 29.4rem;}
 .happ_sch>figure>img{ max-width: 17.4rem;}
 .happ_sch_Bx{ display: flex; flex-direction: column; justify-content: space-between; border-right: 1px solid #ccc; padding-right: 8rem;}
 .happening_Bx date,
@@ -31,7 +31,7 @@
 .happ_sch_Bx p{ font: var(--font-21); line-height: 2.6rem;}
 .happ_next{ width:2rem; position: absolute; top:3.8rem; right: 3.4rem;}
 
-.happ_Bx{ padding: 3rem; display: flex; flex-direction: column; justify-content: space-between; position: relative;}
+.happ_Bx{ padding: 3rem; display: flex; flex-direction: column; justify-content: space-between; position: relative; min-height: 29.4rem;}
 .happ_Bx *{ color: var(--color-white);}
 .happ_Bx date span,
 .happ_Bx .date span{ border-color: var(--color-white);}
@@ -67,6 +67,8 @@
     .happ_sch { padding-block: 3.6rem 3.7rem; }
     .happ_left .happ_Bx date,
     .happ_left .happ_Bx .date { padding-bottom:15.6rem;}
+    .happ_sch{min-height: 29.7rem;}
+    .happ_left .happ_Bx{min-height: 29.6rem;}
 }
 
 .happ_video_wrap { position: relative; }

@@ -57,12 +57,12 @@ opacity: 0.4; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-i
 .school_title{ text-align: center;}
 .school_title .font18{ color: var(--color-06); margin-bottom: 1.5rem;}
 .school_title .font42{ color: var(--color-cf);}
-.school_title blockquote{ color: var(--color-black); margin-bottom: 6rem; font-size: var(--font-18); font-weight: 200; padding-block: 3rem; padding-inline: 2rem;}
+.school_title blockquote{ color: var(--color-black); font-size: var(--font-18); font-weight: 200; padding-block: 3rem; padding-inline: 2rem; margin-bottom: 0;}
 
 
 .about_soet{ padding-block: 10rem 15rem;}
-.soet_listing{ display: grid; grid-template-columns: repeat(3, 30.4rem); justify-content: space-between; list-style: none; padding: 0; row-gap: 5.4rem;}
-.soet_listing li a{ font: var(--font-18); color: var(--color-cf); padding-left: 2rem; border-left: 0.4rem solid var(--color-f9);}
+.soet_listing{ display: grid; grid-template-columns: repeat(3, 30.4rem); justify-content: space-between; list-style: none; padding: 0; row-gap: 5.4rem; margin-top: 6rem; }
+.soet_listing li a{ font: var(--font-18); color: var(--color-cf); padding-left: 2rem; border-left: 0.4rem solid var(--color-f9); display: flex;}
 .soet_listing li a:hover{ color: var(--color-black);}
 
 .soet_link_list{ display: flex; margin-top: 8.3rem; padding: 0 0 2rem; align-items: center; position: relative;justify-content: space-between;}
@@ -78,7 +78,7 @@ opacity: 0.4; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-i
 
 .school_studyat_jnu{ background-color: var(--color-white); padding-block: 8.5rem;}
 .our_department_list{ display: grid; grid-template-columns:36rem 36rem 36rem 25rem; padding: 0; list-style: none; row-gap: 4.5rem; padding-block: 7.6rem 0; column-gap: 5.6rem;}
-.our_department_list li{ font: var(--font-24); font-weight: 300; border-right: 1px solid rgba(112, 112, 112, 0.25); display: block; padding-bottom: 1.5rem; position: relative; display: flex; flex-direction: column; justify-content: space-between;}
+.our_department_list li{ font: var(--font-24); font-weight: 300; border-right: 1px solid rgba(112, 112, 112, 0.25); display: block; padding-bottom: 1.5rem; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding-right: 1rem;}
 .our_department_list li:nth-child(4n+4){ border:none;}
 .our_department_list li:hover{ color: var(--color-cf);}
 .our_department_list li span{ display: block; margin-bottom: 1.5rem;}
