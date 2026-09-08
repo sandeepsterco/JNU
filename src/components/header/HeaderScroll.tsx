@@ -17,6 +17,7 @@ export default function HeaderScroll({
     const isHomePage = pathname === '/'
     const isProgramPage = pathname.includes('program')
     const isSchoolPage = pathname.includes('school')
+    const isDepartmentPage = pathname.includes('department')
 
     const baseClass = `main_header ${
         isHomePage ? 'home_header' : isProgramPage ? 'inner_header': ''
@@ -56,8 +57,8 @@ export default function HeaderScroll({
                 header.style.transform = 'translateY(0)'
             }
     
-            // school_header should only be present on school pages, and only at the top
-            if (isSchoolPage) {
+            // school_header should only be present on school & department pages, and only at the top
+            if (isSchoolPage || isDepartmentPage) {
                 header.classList.toggle('school_header', scrollTop <= 0)
             } else {
                 header.classList.remove('school_header')
@@ -69,10 +70,10 @@ export default function HeaderScroll({
         onScroll()
         window.addEventListener('scroll', onScroll, { passive: true })
         return () => window.removeEventListener('scroll', onScroll)
-    }, [pathname, isSchoolPage])
+    }, [pathname, isSchoolPage, isDepartmentPage])
 
     return (
-        <header ref={headerRef} className={baseClass} style={{ transition: 'transform 0.3s ease' }}>
+        <header ref={headerRef} className={baseClass}>
             {children}
         </header>
     )

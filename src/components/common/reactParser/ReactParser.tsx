@@ -99,8 +99,8 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
                                 {...rest}
                                 src={resolvedSrc}
                                 alt={props.alt || ""}
-                                loading="lazy"
-                                decoding="async"
+                                // loading="lazy"
+                                // decoding="async"
                                 style={{ ...(props.style || {}) }}
                             />
                         );
