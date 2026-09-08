@@ -1,3 +1,8 @@
+.school_title { text-align: center; }
+.school_title .font18 { color: var(--color-06); margin-bottom: 1.5rem; }
+.school_title .font42 { color: var(--color-cf); }
+.school_title blockquote { color: var(--color-black); margin-bottom: 6rem; font-size: var(--font-18); font-weight: 200; padding-block: 3rem; padding-inline: 2rem; }
+
 /* ====================Department page hero section End css================ */
 .deparment_banner { position: relative; }
 .deparment_banner::after { background: transparent linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.69; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-index: 1; height: 100%; }
@@ -57,3 +62,30 @@ to { stroke-dashoffset: 0; }
 .captcha_box img { width: 16rem; }
 .submit_btn { width: 12.2rem; height: 4.3rem; background: #F9CE2E; border: 1px solid #F9CE2E; border: 0; font-weight: 600; cursor: pointer; font: var(--font-18); line-height: 3rem; }
 /*==================== Enquiry form  CSS Start ====================*/
+
+/* ====================About Section CSS Start==================== */
+.dep_about_banner { display: grid; }
+.dep_about_banner>* { grid-area: 1/1; }
+.dep_abt_ypath { background:#0000007d 0% 0% no-repeat padding-box; opacity: 1; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); max-width: 41rem; height: 100%; padding: 5.7rem 6.2rem 0 6.3rem; }
+.dep_abt_ypath>* { color: var(--color-white); }
+.dep_abt_ypath>ul>li { color: var(--color-white); }
+.dep_abt_ypath h3 { font-weight: 200; margin-bottom: 3.6rem; }
+.dep_abt_ypath p { font: var(--font-14); font-weight: 200; }
+.dep_abt_ypath ul { padding-block: 5.1rem 4.8rem; padding-left: 0; list-style: none; }
+.dep_abt_ypath ul>li>a { font: var(--font-14); padding-bottom: 1.6rem; font-weight: 200; border-bottom: 0.1rem dashed var(--color-f9); display: inline-flex; align-items: center; gap: 1.6rem; }
+.dep_abt_ypath ul>li>a img { filter: brightness(0) invert(1); width: 0.7rem; }
+.dep_abt_ypath ul>li:not(:last-child) { margin-bottom: 2.4rem; }
+.dep_abt_mission { padding-block: 6rem 12rem; }
+.dep_abu_migrid { display: grid; grid-template-columns: 71.95% auto; position: relative; padding-bottom: 7.4rem; }
+.dep_abu_migrid .dep_abmis_desc { padding-right: 10rem; margin-right: 8.6rem; border-right: 0.1rem solid #D1D1D1; }
+.dep_abmis_desc p { font: var(--font-16); font-weight: 300; }
+.dep_amis_rgt h4 { margin-bottom: 2.7rem; color: var(--color-cf); }
+.dep_amis_rgt h5 { font-weight: 300; line-height: 3rem; }
+.dep_abu_migrid::before { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 0.4rem; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 31.2%, var(--color-f9) 31.2%, var(--color-f9) 100%); }
+.virtual_tour_about { position: relative; overflow: hidden; padding: 0.9rem 2.8rem; background-color: var(--color-cf); font: var(--font-18); font-weight: 400; z-index: 1; transition: color .4s ease; line-height: 1.2; border: 1px solid var(--color-cf); display: inline-flex; gap: 1rem; margin-bottom: 0.8rem; }
+.virtual_tour_about::before { content: ""; position: absolute; inset: 0; background: var(--color-06); transform: translateX(-101%); transition: transform .4s ease; z-index: -1; }
+.virtual_tour_about:hover { color: var(--color-white); border-color: var(--color-06); }
+.virtual_tour_about:hover::before { transform: translateX(0); }
+.dep_abt_ypath .apply_now { color: var(--color-black); }
+.dep_abt_ypath .apply_now:hover { color: var(--color-white); }
+/* ====================About Section CSS End ====================*/

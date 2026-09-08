@@ -90,9 +90,7 @@ export default function HeaderScroll({
     }, [pathname, isSchoolPage, isDepartmentPage])
 
     return (
-        <header ref={headerRef} className={baseClass} style={{
-            transition: 'top 0.3s ease',
-        }}>
+        <header ref={headerRef} className={baseClass}>
             {children}
         </header>
     )

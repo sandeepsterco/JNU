@@ -7,7 +7,8 @@ import '@/components/homepage/research/research.css'
 import '@/components/homepage/alumni/alumni.css'
 import '@/components/homepage/happenings/happenings.css'
 import '@/components/homepage/faqs/faq.css'
-import '@/styles/school.css'
+import './school.css'
+import '@/styles/common/statsWrapper.css'
 import SchoolNoData from "@/components/ui/SchoolNoData";
 
 export default async function SchoolHomePage({params, searchParams}:{params:Promise<{school:string}>; searchParams:Promise<{search?:string; duration?:string; school?:string;}>}) {

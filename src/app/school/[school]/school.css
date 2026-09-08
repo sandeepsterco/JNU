@@ -47,12 +47,7 @@ opacity: 0.4; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-i
 .school_slider_logo figure{ max-width: 6.6rem;}
 .school_slider_logo p{ font: var(--font-10); color: var(--color-white); font-weight: 300; max-width: 31rem; padding-block: 1rem; border-left: 1px solid #ccc; padding-left: 3rem;}
 
-.school_stats_wrapper { padding-block: 3rem; padding-inline: 7rem; position: relative; margin-bottom: 10.4rem;}
-.school_stats_wrapper ul{ display: grid; grid-template-columns: repeat(4, 1fr); list-style-type: none; padding:3.2rem 6rem; background-color: #fff; margin-top: -6rem; gap: 9rem; box-shadow: 0px 36px 99px #CF1E621C; border-bottom: 0.4rem solid var(--color-f9);}
-.school_stats_wrapper ul li{ display: flex; align-items: center; gap: 1.2rem; font: var(--font-20); position: relative;}
-.school_stats_wrapper ul li:nth-child(1)::after, .school_stats_wrapper ul li:nth-child(2)::after{ background-color: var(--color-d5); width: 0.1rem; top:-1rem; bottom: -1rem; right: -4rem; position:absolute; content: "";}
-.school_stats_wrapper ul li h3{ font: var(--font-62); letter-spacing: -2.48px; font-weight: 400; color: var(--color-cf);}
-.school_stats_wrapper ul li h3 sup{ font: var(--font-21); letter-spacing: -0.84px; top: -3.5rem;}
+
 
 .school_title{ text-align: center;}
 .school_title .font18{ color: var(--color-06); margin-bottom: 1.5rem;}

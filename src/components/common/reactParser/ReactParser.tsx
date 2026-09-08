@@ -47,10 +47,34 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
         replace(domNode) {
             if (domNode instanceof Element && domNode.attribs) {
 
+                // ✅ Hide empty block/inline elements (no visible text or child elements)
+                const emptyTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'blockquote'];
+
+                if (emptyTags.includes(domNode.name)) {
+                    const hasText = domNode.children.some(
+                      (child) => child.type === 'text' && (child as any).data?.trim() !== ''
+                    );
+                    const hasElement = domNode.children.some(
+                      (child) => child.type === 'tag'
+                    );
+
+                    const isPlaceholderOnly = domNode.children.every((child) => {
+                        if (child.type === 'text') {
+                          const text = (child as any).data?.trim() ?? '';
+                          return text === '' || text.startsWith('{');
+                        }
+                        return false; // any tag child means it's not placeholder-only
+                    });
+
+                    if (!hasText || isPlaceholderOnly) {
+                      return <></>;  // ✅ renders nothing
+                    }
+                }
+
                 if (domNode.name === 'a') {
                     const href = (domNode.attribs?.href || '').trim();
 
-                    const isInvalid = !href || href === '#' || href.startsWith("{") || href.startsWith("javascript:");
+                    const isInvalid = !href || href.startsWith("{") || href.startsWith("javascript:");
 
                     if (isInvalid) return <></>;
                 }
