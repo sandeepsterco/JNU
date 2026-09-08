@@ -419,6 +419,7 @@
 .vehicles_box_main { margin-top: 6rem; border: 2px solid rgba(35, 31, 32, 0.1); display: grid; grid-template-columns: repeat(4,1fr); }
 .vehicles_box { border-right: 2px solid rgba(35, 31, 32, 0.1); padding-block: 5.2rem; display: flex; flex-direction: column; align-items: center; }
 .vehicles_box_main .vehicles_box:last-child { border-right: 0; }
+.vehicles_box figure{ min-height: 9rem;}
 .vehicles_box img { width: auto; }
 .vehicles_box h3 { color: var(--color-cf); font: var(--font-21); line-height: 3rem; font-weight: 500; padding-block: 1.1rem; }
 .airplane_bx h3 { padding-top: 2.4rem; }

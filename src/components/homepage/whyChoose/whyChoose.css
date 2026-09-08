@@ -16,7 +16,7 @@
 .why_background{ position: relative;}
 .why_background::after{ background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
 opacity: 0.86; position: absolute; bottom: 0; left: 0; right: 0; height: 26.4rem; content: "";}
-.why_background figure>img{ mix-blend-mode: darken; margin-top: -5rem;}
+.why_background picture figure>img{ mix-blend-mode: darken; margin-top: -5rem;}
 .why_background_footer{ position: absolute; bottom: 3.8rem; left: 0; right: 0; z-index: 1;}
 .why_grid{ display: flex; align-items: center; justify-content: space-between;}
 .why_grid ul{ display: flex; align-items: center; list-style: none; padding: 0; gap: 13.6rem;}

@@ -1,5 +1,5 @@
 .our_alumni_section{ padding-block: 20rem;}
-.alumni_slider_section{ padding-top: 6rem;}
+.alumni_slider_section{ padding-top: 6rem; padding-left: 1.5rem;}
 .alumni_header{ display: flex; justify-content: space-between; align-items: center;}
 .alumni_header_right { display: flex; position: relative; gap: 1rem; }
 .alumni_header_right .alumni-prev, .alumni_header_right .alumni-next{ position: relative; width: 3rem; border: 1px solid var(--color-cf); height: 3rem; text-align: center; margin-top: 0; left: 0; right: 0;}
@@ -19,6 +19,28 @@
 .alumni_bx_bottom p span{ border-left: 1px solid #CFCFCF; padding-left:1rem; margin-left: 1rem;}
 .alumni_video{ max-height: 68rem; width: 100%; object-fit: cover;}
 .alumni_img img{max-height: 68rem;}
+
+
+.alumni_slider_section .swiper-slide.alumni-even .alumni_img img {
+    max-height: 63.5rem;
+    object-fit: cover;
+    object-position: top;
+}
+
+.alumni_slider_section .swiper-slide.alumni-even .alumni_bx_bottom{ position: absolute; bottom: 0; left: 0; right: 0; z-index: 2;}
+.alumni_slider_section .swiper-slide.alumni-even .alumni_bx_bottom .qoute_icon, .alumni_slider_section .swiper-slide.alumni-even .alumni_bx_bottom h4{ display: none;}
+.alumni_slider_section .swiper-slide.alumni-even .alumni_bx_bottom *{ color: var(--color-white);}
+.alumni_slider_section .swiper-slide.alumni-even .alumni_bx_bottom::before{ content:""; position: absolute; background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+opacity: 0.69; bottom: 0; right: 0; left: 0; height: 18rem; z-index: -1;}
+.alumni_slider_section .swiper-slide.alumni-odd .alumni_img img { max-height: 39.5rem; object-fit: cover; object-position: top; }
+
+.alumni_slider_section .swiper-slide:has(.alumni_video) .alumni_img img{ max-height: 63.5rem; }
+
+.alumni_slider_section .swiper-slide:has(.alumni_video) .alumni_poster img{ width: 100%; max-height: 63.5rem; max-height: 63.5rem; object-fit: cover; object-position: top; }
+
+.alumni_slider_section .swiper-slide:has(.alumni_video) .alumni_video { width: 100%; max-height: 63.5rem; object-fit: cover; object-position: top; }
+
+
 .play-pause-btn{ width: 7rem; height: 7rem; background-color: rgba(255, 255, 255, 0.3); border-radius: 7rem; position: absolute; top: 1.5rem; right: 2.8rem; color: var(--color-white); font: var(--font-24);}
 .alumni_cnt{ position: absolute; bottom: 4.7rem; left: 3.2rem; z-index: 2;}
 .alumni_cnt *{ color: var(--color-white);}

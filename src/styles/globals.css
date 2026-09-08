@@ -151,24 +151,30 @@ h6{font:var(--font-18);color: var(--color-black);}
   .max-content-lg{ width:100%; max-width:2150px; padding-right:0; margin-inline:auto 0; }
 }
 
+/* 
+@media (max-width:1920px){
+  html{font-size:min(0.45454545vw,10px);}
+
+
+} */
+
+
+
+
 @media(max-width:991px){    
   html {font-size: 45.2%;}
   .container-lg{max-width:100%;padding-inline:3.2rem;}
   .container{max-width:100%;padding-inline:3.2rem;}
   .max-container{max-width:100%;padding-inline:3.2rem;}
   .max-content-lg{max-width:100%;padding-inline:3.2rem;}
+  .desktop-img{display:none;}
+  .mobile-img{display:block;}
 }
 
 @media(max-width:767px){       
   html {font-size: 65.2%;}
 }
 
-
-
-@media (max-width:991px){
-  .desktop-img{display:none;}
-  .mobile-img{display:block;}
-}
 
 /* Title Area Start */
 .font18{font:var(--font-18); font-weight: var(--fw-400);}
@@ -192,21 +198,7 @@ h6{font:var(--font-18);color: var(--color-black);}
 .custom_bullets > li::before { content: ""; position: absolute; width: 0.8rem; height: 0.8rem; background-color: var(--color-cf); left: -2rem; top: 0.8rem; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; }
 .custom_bullets ol{ margin: 0; padding: 0 0 0 2rem; }
 .custom_bullets ol > li { position: relative; list-style: none;}
-.custom_bullets ol > li::before {
-  content: "";
-  position: absolute;
-  width: 0.8rem;
-  height: 0.8rem;
-  background-color: transparent;
-  left: -2rem;
-  top: 0.8rem;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  border: 1px solid #F2903F;
-}
+.custom_bullets ol > li::before { content: ""; position: absolute; width: 0.8rem; height: 0.8rem; background-color: transparent; left: -2rem; top: 0.8rem; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; border: 1px solid #F2903F; }
 .breadcrumb{ display: flex; list-style: none; padding: 0; gap: 2rem; margin-top: 2.2rem;}
 .breadcrumb li{ font: var(--font-16); font-weight: 500; color: var(--color-23); line-height: 1;}
 .breadcrumb li:first-child{ border-right: 1px solid var(--color-f9); padding-right: 2rem; }
