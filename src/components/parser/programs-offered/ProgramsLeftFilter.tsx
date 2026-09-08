@@ -156,13 +156,19 @@ export default function ProgramsLeftFilter({isDataLoading}:{isDataLoading:(val:b
   const [selected, setSelected] = useState(() => {
     const initial: any = {};
     searchParams.forEach((value, key) => {
-      if (key !== "search") initial[key] = value;
+      if (key !== "search") initial[key] = value.split(',').filter(Boolean);
     });
     return initial;
   });
 
   const handleSelect = (filterKey: string, optionId: string | number) => {
-    setSelected((prev: any) => ({ ...prev, [filterKey]: String(optionId) }));
+    const value = String(optionId);
+    setSelected((prev: any) => { 
+      const current = prev[filterKey] ?? [];
+      const next = current.includes(value) ? current.filter((v:any)=>v !== value) : [...current, value]
+
+      return { ...prev, [filterKey]: next };
+    });
   };
 
   const applyFilters = () => {
@@ -170,8 +176,10 @@ export default function ProgramsLeftFilter({isDataLoading}:{isDataLoading:(val:b
     const search = searchParams.get("search");
     if (search) params.set("search", search);
 
-    Object.entries(selected).forEach(([key, value]: any) => {
-      if (value && key !== "search") params.set(key, String(value));
+    Object.entries(selected).forEach(([key, values]) => {
+      if (Array.isArray(values) && values.length > 0) {
+        params.set(key, values.join(","));
+      }
     });
 
     const query = params.toString();
@@ -255,11 +263,11 @@ export default function ProgramsLeftFilter({isDataLoading}:{isDataLoading:(val:b
                         <div className="form-check">
                           <input
                             className="form-check-input"
-                            type="radio"
+                            type="checkbox"
                             name={item.key}
                             id={inputId}
                             value={option.slug ?? String(option.id)}
-                            checked={selected[item.key] == String(option.id)}
+                            checked={(selected[item.key] ?? []).includes(String(option.id))}
                             onChange={() => handleSelect(item.key, option.id)}
                           />
 
