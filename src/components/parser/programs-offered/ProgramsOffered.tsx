@@ -36,8 +36,6 @@ export default async function ProgramsOffered({
   const currentSlug = await getSlug(0);
   const params = new URLSearchParams();
 
-  console.log('currentSlug',currentSlug);
-
   if (search) params.set("search", search);
   if (school) params.set("school", school);
   if (duration) params.set("duration", duration);
