@@ -10,6 +10,7 @@ import { InitResearchSwiper } from "@/lib/cms/initResearchSwiper";
 import { InitMaxContent } from "@/lib/cms/initMaxContent";
 import { usePathname } from "next/navigation";
 import { InitGalleryPopup } from "@/lib/cms/initGalleryPopup";
+import { InitDepartmentHero } from "@/lib/cms/initDepartmentHero";
 
 function waitForLayout() {
   return new Promise<void>((resolve) => {
@@ -86,6 +87,14 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
         cleanupFns.push(cleanup);
       }
 
+      if (root.querySelector(".depart_hero:not([data-swiper-init])")) {
+        const cleanup = await InitDepartmentHero(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
       
 
     }

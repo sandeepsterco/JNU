@@ -63,64 +63,52 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                 </div>
             </div>
 
-            <div className="full-width">
-                <div className="max-content-lg pe-lg-0 me-lg-0">
+                <div className="max-container pe-lg-0 me-lg-0">
                     <div className="alumni_slider_section" data-aos="fade-up">
                         <Swiper
                             modules={[Navigation, Autoplay]}
                             className="alumni_swiper"
                             loop={hasMultiple}
-                            autoplay={hasMultiple ? {
-                                delay: 3000,
-                                disableOnInteraction: false,
-                                pauseOnMouseEnter: true,
-                            } : false}
+                            autoplay={
+                                hasMultiple
+                                    ? {
+                                        delay: 3000,
+                                        disableOnInteraction: false,
+                                        pauseOnMouseEnter: true,
+                                    }
+                                    : false
+                            }
                             speed={1000}
                             slidesPerView={1}
                             spaceBetween={0}
                             effect="slide"
-                            navigation={hasMultiple ? {
-                                prevEl: prevRef.current,
-                                nextEl: nextRef.current,
-                            } : false}
-                            onBeforeInit={(swiper: any) => {
-                                if (typeof swiper.params.navigation !== "boolean") {
-                                    swiper.params.navigation.prevEl = prevRef.current;
-                                    swiper.params.navigation.nextEl = nextRef.current;
-                                }
-                            }}
-                            onSwiper={(swiper) => {
-                                setTimeout(() => {
-                                    if (typeof swiper.params.navigation !== "boolean") {
-                                        swiper.navigation.destroy();
-                                        swiper.navigation.init();
-                                        swiper.navigation.update();
-                                    }
-                                });
-                            }}
-                            grabCursor={true}
+
                             breakpoints={{
                                 320: {
                                     slidesPerView: 1,
-                                    spaceBetween: 0
+                                    spaceBetween: 0,
                                 },
                                 768: {
                                     slidesPerView: 2,
-                                    spaceBetween: 3
+                                    spaceBetween: 3,
                                 },
                                 992: {
                                     slidesPerView: 3,
-                                    spaceBetween: 3
+                                    spaceBetween: 3,
                                 },
                                 1200: {
                                     slidesPerView: 3.7,
-                                    spaceBetween: 3
-                                }
+                                    spaceBetween: 3,
+                                },
                             }}
                         >
                             {data.map((item, index) => (
-                                <SwiperSlide key={index}>
+                                <SwiperSlide
+                                        key={index}
+                                        className={`${index % 2 === 0 ? "alumni-even" : "alumni-odd"} ${item.video ? "has-video" : ""}`}
+                                    >
                                     <div className="alumni_slider_bx">
+
                                         {!item.video ? (
                                             <>
                                                 <figure className="alumni_img">
@@ -160,11 +148,15 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                                                     </p>
                                                 </div>
 
-                                                <Link href={`${BASE_URL}alumni/${item.slug}`} className="overlap_btn" />
+                                                <Link
+                                                    href={`${BASE_URL}alumni/${item.slug}`}
+                                                    className="overlap_btn"
+                                                />
                                             </>
                                         ) : (
                                             <div className="alumni_img">
                                                 <figure className="alumni_img">
+
                                                     <video
                                                         className="alumni_video"
                                                         muted
@@ -193,6 +185,7 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                                                     >
                                                         ▶
                                                     </button>
+
                                                 </figure>
 
                                                 <figure className="alumni_logo">
@@ -212,13 +205,13 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                                                 </div>
                                             </div>
                                         )}
+
                                     </div>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
                     </div>
                 </div>
-            </div>
 
         </section>
     )

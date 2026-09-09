@@ -2,19 +2,14 @@ import ReactParserDynamic from "@/components/common/reactParser/ReactParserDynam
 import apiFetch from "@/lib/api"
 import { getSlug } from "@/lib/getSlug";
 import NotFound from "@/app/not-found";
-import '@/components/homepage/placement/placement.css'
-import '@/components/homepage/research/research.css'
-import '@/components/homepage/alumni/alumni.css'
-import '@/components/homepage/happenings/happenings.css'
-import '@/components/homepage/faqs/faq.css'
-import './school.css'
-import '@/styles/common/statsWrapper.css'
 import SchoolNoData from "@/components/ui/SchoolNoData";
+import './department.css'
+import '@/styles/common/statsWrapper.css'
 
-export default async function SchoolHomePage({params, searchParams}:{params:Promise<{school:string}>; searchParams:Promise<{search?:string; duration?:string; school?:string;}>}) {
+export default async function DepartmentHomePage({params, searchParams}:{params:Promise<{department:string}>; searchParams:Promise<{search?:string; duration?:string; school?:string;}>}) {
     const {...resolvedSearchParams} = await searchParams;
-    const {school} = await params;
-    const {data, error} = await apiFetch(`school/${school}`);
+    const {department} = await params;
+    const {data, error} = await apiFetch(`department/${department}`);
 
 
     if(error || !data.status) {
@@ -33,4 +28,6 @@ export default async function SchoolHomePage({params, searchParams}:{params:Prom
             <ReactParserDynamic html={combineHTML} searchParams={resolvedSearchParams} />
         </>
     )
+
+    
 }

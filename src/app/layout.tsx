@@ -5,8 +5,6 @@ import AosProvider from "@/components/common/AosProvider";
 
 import RevealImages from "@/components/common/RevealImages";
 import dynamic from "next/dynamic";
-import { NonceProvider } from "@/lib/NonceProvider";
-import { headers } from "next/headers";
 import Providers from "@/lib/Providers";
 import ScrollToTop from "@/components/common/ScrollToTop";
 import RouteProgress from "@/components/loader/RouteProgress";
@@ -36,14 +34,11 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersList = await headers();
-  const nonce = headersList.get('x-nonce') ?? '';
-
   return (
     <html
       lang="en"
@@ -51,17 +46,15 @@ export default async function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <RouteProgress />
-        <NonceProvider nonce={nonce}>
-          <Providers>
-            <AosProvider>
-              <ScrollToTop />
-              <Header />
-              {children}
-              <Footer />
-              <RevealImages />
-            </AosProvider>
-          </Providers>
-        </NonceProvider>
+        <Providers>
+          <AosProvider>
+            <Header />
+            {children}
+            <Footer />
+            <RevealImages />
+          </AosProvider>
+        </Providers>
+        <ScrollToTop />
       </body>
     </html>
   );

@@ -184,12 +184,6 @@ h6{font:var(--font-18);color: var(--color-black);}
 }
 
 
-
-@media (max-width:991px){
-  .desktop-img{display:none;}
-  .mobile-img{display:block;}
-}
-
 /* Title Area Start */
 .font18{font:var(--font-18); font-weight: var(--fw-400);}
 .font21{font:var(--font-21); font-weight: var(--fw-400);}

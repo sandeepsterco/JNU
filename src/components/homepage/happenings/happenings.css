@@ -57,6 +57,8 @@
     .happ_sch { padding-block: 3.6rem 3.7rem; }
     .happ_left .happ_Bx date,
     .happ_left .happ_Bx .date { padding-bottom:15.6rem;}
+    .happ_sch{min-height: 29.7rem;}
+    .happ_left .happ_Bx{min-height: 29.6rem;}
 }
 
 .happ_video_wrap{position:relative;}

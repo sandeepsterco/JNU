@@ -1,0 +1,91 @@
+.school_title { text-align: center; }
+.school_title .font18 { color: var(--color-06); margin-bottom: 1.5rem; }
+.school_title .font42 { color: var(--color-cf); }
+.school_title blockquote { color: var(--color-black); margin-bottom: 6rem; font-size: var(--font-18); font-weight: 200; padding-block: 3rem; padding-inline: 2rem; }
+
+/* ====================Department page hero section End css================ */
+.deparment_banner { position: relative; }
+.deparment_banner::after { background: transparent linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.69; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-index: 1; height: 100%; }
+.deparment_banner_content { position: absolute; top: auto; bottom: 15.7rem; display: flex; flex-direction: column; justify-content: space-between; }
+.deparment_banner .container-fluid { max-width: var(--mw2545); padding-inline: 10rem; }
+.deparment_banner_tx { max-width: 55rem; padding-inline: 5rem 0; position: relative; z-index: 9; }
+.deparment_banner_tx h1 { font: var(--font-72); color: var(--color-white); letter-spacing: -2.16px; font-weight: 600; line-height: 1; }
+.deparment_banner_tx h1 span { font-weight: 200; }
+.deparment_slider_logo { display: flex; gap: 3rem; align-items: center; padding-block: 2rem 5rem; }
+.deparment_slider_logo figure { max-width: 6.6rem; }
+.deparment_slider_logo p { font: var(--font-10); color: var(--color-white); font-weight: 300; max-width: 31rem; padding-block: 1rem; border-left: 1px solid #ccc; padding-left: 3rem; }
+
+.deparment_banner>.dep_hero_pagination { display: flex; gap: 1.7rem; position: absolute; z-index: 10; width: auto; top: auto; bottom: 8.4rem!important; left: 14.7rem!important; right: auto; align-items: center; }
+
+.bullet-num { position: absolute; display: block; align-content: center; width: 2.4rem; height: 2.4rem; z-index: 2; font: var(--font-12); font-weight: 300; color: var(--color-white); background-color: var(--color-0b); line-height: 1; border-radius: 50%; padding-top: 0.4rem; }
+.swiper-pagination-bullet-active .bullet-num { background-color: transparent; }
+.progress-ring { transform: rotate(-90deg); opacity: 0; transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; -o-transition: all 0.5s ease; }
+.swiper-pagination-bullet-active .progress-ring { opacity: 1; }
+.swiper-pagination-bullet:hover .progress-ring { opacity: 0.5; }
+/* animation */
+.dep_hero_pagination { display: flex; gap: 16px; z-index: 10; }
+.swiper-pagination-bullet { width: auto !important; height: auto !important; background: transparent !important; opacity: 1 !important; display: flex; justify-content: center; }
+.bullet-content { display: none; }
+.swiper-pagination-bullet-active .bullet-content { display: block; }
+.swiper-pagination-bullet-active .bullet-dot { display: none; }
+.bullet-dot { width: 8px; height: 8px; border-radius: 50%; background: #fff; display: block; }
+.progress-ring { transform: rotate(-90deg); }
+.progressbg { fill: none; stroke: #777; stroke-width: 1; }
+.progress { fill: none; stroke: var(--color-fa); stroke-width: 1; stroke-linecap: round; stroke-dasharray: 69.12; stroke-dashoffset: 69.12; }
+.bullet-content { position: relative; width: 2.4rem; height: 2.4rem; }
+.progress-ring { position: absolute; inset: 0; width: 2.4rem; height: 2.4rem; transform: rotate(-90deg); }
+.bullet-num { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 1rem; line-height: 1; font-weight: 600; color: #fff; z-index: 2; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+.bullet-content { position: relative; width: 2.4rem; height: 2.4rem; }
+.progress-ring { position: absolute; inset: 0; width: 2.4rem; height: 2.4rem; transform: rotate(-90deg); }
+.bullet-num { position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); font-size: 1rem; line-height: 1; font-weight: 600; color: #fff; z-index: 2; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%; }
+@keyframes progressAnim {
+ from { stroke-dashoffset: 69.12; }
+to { stroke-dashoffset: 0; }
+ }
+/* ====================Department page hero section End css================ */
+ /*==================== Enquiry form  CSS Start ====================*/
+.enquiry_form_box { position: absolute; top: 0; right: 0; width: 51rem; z-index: 99; height: 100%; }
+.top_strip { display: flex; height: 5rem; }
+.call_btn { width: 50%; background: #ec1c72; color: #fff; display: flex; justify-content: center; align-items: center; text-decoration: none; font: var(--font-16); }
+.admission_btn { width: 50%; background: var(--color-f7); border: 0; font: var(--font-16); cursor: pointer; }
+.form_wrap { background: #00000066; padding-inline: 7rem 6.4rem; padding-block: 12.55rem; height: 100%; }
+.form_wrap h2 { color: #fff; font: var(--font-40); margin-bottom: .5rem; }
+.form_wrap>p { color: var(--color-white); margin-bottom: 3rem; }
+.form_wrap input,
+.form_wrap select { width: 100%; height: 4.2rem; background: transparent; border: 1px solid #DEDEDE33; color: var(--color-white); padding: 1rem 1.5rem 1.1rem; margin-bottom: 2rem; padding-block: 1rem 1.1rem; outline: none; }
+.form_wrap input::placeholder { font: var(--font-16); line-height: 2.1rem; color: var(--color-white); opacity: 0.6; }
+.form_wrap select:invalid { font: var(--font-16); line-height: 2.1rem; color: var(--color-white); opacity: 0.6; }
+.form_wrap select option { color: #000000; background-color: #ffffff; }
+.checkbox input { height: 17px; margin-bottom: 0; width: 1.7rem; }
+.checkbox { display: flex; gap: 0.8rem; color: #fff; font-size: 1.2rem; margin-bottom: 2.5rem; }
+.captcha_box { display: flex; gap: 1rem; margin-bottom: 2rem; }
+.captcha_box img { width: 16rem; }
+.submit_btn { width: 12.2rem; height: 4.3rem; background: #F9CE2E; border: 1px solid #F9CE2E; border: 0; font-weight: 600; cursor: pointer; font: var(--font-18); line-height: 3rem; }
+/*==================== Enquiry form  CSS Start ====================*/
+
+/* ====================About Section CSS Start==================== */
+.dep_about_banner { display: grid; }
+.dep_about_banner>* { grid-area: 1/1; }
+.dep_abt_ypath { background:#0000007d 0% 0% no-repeat padding-box; opacity: 1; backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); max-width: 41rem; height: 100%; padding: 5.7rem 6.2rem 0 6.3rem; }
+.dep_abt_ypath>* { color: var(--color-white); }
+.dep_abt_ypath>ul>li { color: var(--color-white); }
+.dep_abt_ypath h3 { font-weight: 200; margin-bottom: 3.6rem; }
+.dep_abt_ypath p { font: var(--font-14); font-weight: 200; }
+.dep_abt_ypath ul { padding-block: 5.1rem 4.8rem; padding-left: 0; list-style: none; }
+.dep_abt_ypath ul>li>a { font: var(--font-14); padding-bottom: 1.6rem; font-weight: 200; border-bottom: 0.1rem dashed var(--color-f9); display: inline-flex; align-items: center; gap: 1.6rem; }
+.dep_abt_ypath ul>li>a img { filter: brightness(0) invert(1); width: 0.7rem; }
+.dep_abt_ypath ul>li:not(:last-child) { margin-bottom: 2.4rem; }
+.dep_abt_mission { padding-block: 6rem 12rem; }
+.dep_abu_migrid { display: grid; grid-template-columns: 71.95% auto; position: relative; padding-bottom: 7.4rem; }
+.dep_abu_migrid .dep_abmis_desc { padding-right: 10rem; margin-right: 8.6rem; border-right: 0.1rem solid #D1D1D1; }
+.dep_abmis_desc p { font: var(--font-16); font-weight: 300; }
+.dep_amis_rgt h4 { margin-bottom: 2.7rem; color: var(--color-cf); }
+.dep_amis_rgt h5 { font-weight: 300; line-height: 3rem; }
+.dep_abu_migrid::before { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 0.4rem; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 31.2%, var(--color-f9) 31.2%, var(--color-f9) 100%); }
+.virtual_tour_about { position: relative; overflow: hidden; padding: 0.9rem 2.8rem; background-color: var(--color-cf); font: var(--font-18); font-weight: 400; z-index: 1; transition: color .4s ease; line-height: 1.2; border: 1px solid var(--color-cf); display: inline-flex; gap: 1rem; margin-bottom: 0.8rem; }
+.virtual_tour_about::before { content: ""; position: absolute; inset: 0; background: var(--color-06); transform: translateX(-101%); transition: transform .4s ease; z-index: -1; }
+.virtual_tour_about:hover { color: var(--color-white); border-color: var(--color-06); }
+.virtual_tour_about:hover::before { transform: translateX(0); }
+.dep_abt_ypath .apply_now { color: var(--color-black); }
+.dep_abt_ypath .apply_now:hover { color: var(--color-white); }
+/* ====================About Section CSS End ====================*/

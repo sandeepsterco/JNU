@@ -2,43 +2,79 @@
 import { useEffect } from "react"
 import { usePathname } from "next/navigation"
 
-export default function RevealImages(){
-    const pathname = usePathname();
+const imageMap = [
+  { selector: '.image',  className: 'reveal-image'  },
+  { selector: '.image2', className: 'reveal-image2' },
+  { selector: '.image3', className: 'reveal-image3' },
+]
 
-    useEffect(()=>{
-        if (window.innerWidth < 992) return;
+export default function RevealImages() {
+  const pathname = usePathname()
 
-        const imageMap = [
-            { selector: '.image',  className: 'reveal-image'  },
-            { selector: '.image2', className: 'reveal-image2' },
-            { selector: '.image3', className: 'reveal-image3' },
-        ];
+  useEffect(() => {
+    if (window.innerWidth < 992) return
 
-        const observers: IntersectionObserver[] = [];
+    const observers: IntersectionObserver[] = []
+    const ioMap = new Map<string, IntersectionObserver>()
 
-        imageMap.forEach(({selector, className})=>{
-            const observer = new IntersectionObserver((entries)=>{
-                entries.forEach((entry)=>{
-                    if(entry.isIntersecting){
-                        entry.target.classList.add(className);
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                rootMargin:"0px 0px -100px 0px"
-            });
+    imageMap.forEach(({ selector, className }) => {
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add(className)
+              io.unobserve(entry.target)
+            }
+          })
+        },
+        { rootMargin: "0px 0px -100px 0px" }
+      )
+      ioMap.set(selector, io)
+      observers.push(io)
+    })
 
-            document.querySelectorAll(selector).forEach((el)=>{
-                // skip elements that already have the class (avoids re-adding on same page)
-                if (!el.classList.contains(className)) {
-                    observer.observe(el);
-                }
-            });
-            observers.push(observer);
+    const observeEl = (el: Element) => {
+      imageMap.forEach(({ selector, className }) => {
+        if (el.matches?.(selector) && !el.classList.contains(className)) {
+          ioMap.get(selector)!.observe(el)
+        }
+        // also catch matches nested inside newly added nodes
+        el.querySelectorAll?.(selector).forEach((child) => {
+          if (!child.classList.contains(className)) {
+            ioMap.get(selector)!.observe(child)
+          }
         })
+      })
+    }
 
-        return () => observers.forEach((o) => o.disconnect());
-    }, [pathname])
+    // 1. Observe whatever already exists right now
+    imageMap.forEach(({ selector, className }) => {
+      document.querySelectorAll(selector).forEach((el) => {
+        if (!el.classList.contains(className)) {
+          ioMap.get(selector)!.observe(el)
+        }
+      })
+    })
 
-    return null;
+    // 2. Watch for anything added later (async-rendered images/components)
+    const mutationObserver = new MutationObserver((mutations) => {
+      mutations.forEach((m) => {
+        m.addedNodes.forEach((node) => {
+          if (node instanceof Element) observeEl(node)
+        })
+      })
+    })
+
+    mutationObserver.observe(document.body, {
+      childList: true,
+      subtree: true,
+    })
+
+    return () => {
+      observers.forEach((o) => o.disconnect())
+      mutationObserver.disconnect()
+    }
+  }, [pathname])
+
+  return null
 }
