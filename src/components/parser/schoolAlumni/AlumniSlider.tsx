@@ -121,14 +121,15 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                                                         loading="lazy"
                                                     />
                                                 </figure>
-
-                                                <figure className="alumni_logo">
-                                                    <img
-                                                        src={item.logo ?? ''}
-                                                        alt={item.name}
-                                                        className="img-fluid"
-                                                    />
-                                                </figure>
+                                                {item.logo && (
+                                                    <figure className="alumni_logo">
+                                                        <img
+                                                            src={item.logo ?? ''}
+                                                            alt={item.name}
+                                                            className="img-fluid"
+                                                        />
+                                                    </figure>
+                                                )}
 
                                                 <div className="alumni_bx_bottom">
                                                     <figure className="qoute_icon">
@@ -187,14 +188,15 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                                                     </button>
 
                                                 </figure>
-
-                                                <figure className="alumni_logo">
-                                                    <img
-                                                        src={item.logo ?? ''}
-                                                        alt={item.name}
-                                                        className="img-fluid"
-                                                    />
-                                                </figure>
+                                                {item.logo && (
+                                                    <figure className="alumni_logo">
+                                                        <img
+                                                            src={item.logo ?? ''}
+                                                            alt={item.name}
+                                                            className="img-fluid"
+                                                        />
+                                                    </figure>
+                                                )}
 
                                                 <div className="alumni_cnt">
                                                     <h5>{item.name}</h5>
