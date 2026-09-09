@@ -14,7 +14,8 @@
 .jnu_atglance_section { background-image: url(/images/back_pattern.svg); background-size: contain; background-repeat: repeat; width: 100%; padding-block: 12rem; }
 .jnu_title_header { text-align: center; }
 .jnu_title_header .font21 { margin-bottom: 3rem; color: var(--color-cf); font-weight: 500; }
-.jnu_title_header blockquote { font: var(--font-21); font-weight: 300; color: var(--color-23); line-height: 1.6; margin-bottom: 2rem; }
+.jnu_title_header blockquote { font: var(--font-21); font-weight: 300; color: var(--color-23); line-height: 1.6; margin-bottom: 0; }
+.jnu_atglance_section .jnu_title_header blockquote{margin:0 0 3rem 0;}
 .jnu_title_header p { font: var(--font-14); font-weight: 300; }
 .at_glance_Bx { padding-inline: 4rem; }
 .at_glance_Bx ul { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5rem; list-style: none; padding:9.3rem 0 0; margin: 0; }
@@ -93,6 +94,16 @@
 .glance_logos ul li:nth-child(4n + 1) { padding-left: 0; }
 .glance_logos ul li h5 { font: var(--font-18); font-weight:400; color: var(--color-black); margin-block: 2rem 3rem; }
 .glance_logos ul li p { font: var(--font-14); font-weight:300; color: var(--color-black); }
+.glance_logos ul li:nth-child(n+5){padding-top:3rem;}
+.jnu_title_header.iqac_cont p{margin:3rem 0 0 0;}
+.left_img .academic_foundation{margin-top:0;border-top:0;}
+.left_list{padding:0;margin:5rem 0 0 0;}
+.left_list li{margin:0 0 2rem 0;font-weight:300;padding:0 0 0 3rem;position:relative;}
+.left_list li:before{content:"";position:absolute;top:9px;left:0;background-color:var(--color-cf);border-radius:50%;width:0.6rem;height:0.6rem;}
+.academic_foundation:last-child{border:none;padding-block:5rem 5rem;}
+.left_sec_ttl{border-top:1px solid #dedede;padding-top:12rem;}
+.left_img{padding-bottom:10rem;}
+
 /* ================= Faculty Listing Page==============  */
 .faculty_section { padding-block: 11rem; width: 100%; position: relative; }
 .faculty_section::before { background-image: url(/images/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 41.8rem; width: 100%; content: ""; z-index: -1; }
