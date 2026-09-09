@@ -14,6 +14,9 @@ import SocialGrids from '@/components/parser/SocialGrids';
 import SchoolFaqTabs from '@/components/parser/SchoolFaqTabs';
 import SchoolFilter from '@/components/parser/schoolFilter/SchoolFilter';
 import SchoolDepartments from '@/components/parser/SchoolDepartments';
+import DepartmentProgramsOffered from '@/components/parser/department/DepartmentProgramsOffered';
+import DepartmentFaculty from '@/components/parser/department/DepartmentFaculty';
+import DepartmentFacilities from '@/components/parser/department/DepartmentFacilities';
 
 interface ProgramsSearchParams {
     search?: string;
@@ -154,6 +157,9 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
                 if (domNode.attribs.id === "school_faq_tabs") return <SchoolFaqTabs  />;
                 if (domNode.attribs.id === "school_dropdown") return <SchoolFilter  />;
                 if (domNode.attribs.id === "school_departments") return <SchoolDepartments  />;
+                if (domNode.attribs.id === "department_programs_offered") return <DepartmentProgramsOffered  />;
+                if (domNode.attribs.id === "department_faculties") return <DepartmentFaculty  />;
+                if (domNode.attribs.id === "department_facilities") return <DepartmentFacilities  />;
             }
         }
     }

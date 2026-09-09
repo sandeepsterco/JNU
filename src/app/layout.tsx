@@ -10,6 +10,7 @@ import ScrollToTop from "@/components/common/ScrollToTop";
 import RouteProgress from "@/components/loader/RouteProgress";
 const Footer = dynamic(()=>import("@/components/footer/Footer"));
 import '@/styles/globals.css'
+import MainWrapper from "@/components/MainWrapper";
 
 const stackSansText = Stack_Sans_Text({
   subsets: ['latin'],
@@ -49,7 +50,7 @@ export default function RootLayout({
         <Providers>
           <AosProvider>
             <Header />
-            {children}
+            <MainWrapper>{children}</MainWrapper>
             <Footer />
             <RevealImages />
           </AosProvider>
