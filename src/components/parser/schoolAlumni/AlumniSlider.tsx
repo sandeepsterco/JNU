@@ -140,7 +140,7 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                                                         />
                                                     </figure>
 
-                                                    <h4>{item.message}</h4>
+                                                    <h4 className="alumni_msg_desc">{item.message}</h4>
 
                                                     <h5>{item.name}</h5>
 
