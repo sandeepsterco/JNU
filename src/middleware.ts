@@ -13,9 +13,23 @@ export function middleware(request: NextRequest) {
     );
   }
 
-  return NextResponse.next();
+  const requestHeaders = new Headers(request.headers);
+  requestHeaders.set('x-pathname', pathname);
+
+  const response = NextResponse.next({
+    request: { headers: requestHeaders },
+  });
+
+  response.headers.set('x-pathname', pathname);
+
+  if (pathname === "/&") {
+    return NextResponse.redirect(new URL("/", request.url), 301);
+  }
+
+  return response;
 }
 
 export const config = {
   matcher: ['/((?!_next/static|_next/image|favicon.ico).*)'],
+
 };
