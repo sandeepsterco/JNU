@@ -112,13 +112,13 @@ main{padding-top:var(--header-height);}
     --font-34: var(--fw-normal) 3.4rem/0.76 var(--stack);
     --font-30: var(--fw-normal) 3rem/1.4 var(--stack);
     --font-29: var(--fw-bold) 2.9rem/1.25 var(--stack);
-    --font-24: var(--fw-normal) 2.4rem/1.25 var(--stack);
+    --font-24: var(--fw-normal) 1.8rem/1.25 var(--stack);
     --font-21: var(--fw-normal) 2.1rem/1.14 var(--stack);
     --font-20: var(--fw-normal) 2rem/1.13 var(--stack);
     --font-18: var(--fw-normal) 1.4rem/1.66 var(--stack);
-    --font-16: var(--fw-normal) 1.6rem/1.5 var(--stack);
-    --font-15: var(--fw-normal) 1.5rem/1.5 var(--stack);
-    --font-14: var(--fw-normal) 1.4rem/1.5 var(--stack);
+    --font-16: var(--fw-normal) 1.4rem/1.5 var(--stack);
+    --font-15: var(--fw-normal) 1.3rem/1.5 var(--stack);
+    --font-14: var(--fw-normal) 1.2rem/1.5 var(--stack);
     --font-12: var(--fw-normal) 1.2rem/1.5 var(--stack);
     --font-10: var(--fw-normal) 1rem/1.4 var(--stack);
     --font-9: var(--fw-normal) 0.9rem/1.4 var(--stack);
