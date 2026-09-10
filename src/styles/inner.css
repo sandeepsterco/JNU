@@ -440,3 +440,12 @@
 .map::after { content: ""; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(126, 125, 125, 0.35); pointer-events: none; z-index: 9999; }
 .leadership_detail_section::before { background-image: url(/images/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 83.77rem; width: 100%; content: ""; z-index: -1; }
 /* Contact Ends Here */
+
+/* happening css starts here */
+.extra_content{margin:6rem 0 0 0;}
+.extra_content h4{font:var(--font-24);color:var(--color-23);font-weight:400;margin:4rem 0 4rem 0;}
+.extra_content ul{padding:0;margin:3rem 0 0 0;}
+.extra_content ul li{position:relative;padding:0 0 0 3rem;margin:0 0 2rem 0;font-weight: 300;}
+.extra_content ul li:before{content:"";position:absolute;top:7px;left:0;background-color:var(--color-cf);width:6px;height:6px;border-radius:50%;}
+
+/* happening css ends here */
