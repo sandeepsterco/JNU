@@ -13,26 +13,30 @@ function Accordion({ faqs }: { faqs: ModularFAQInterface[] }) {
     setActiveIndex((prev) => (prev === index ? null : index));
   };
 
-  return (
-    <div className="accordion">
-      {faqs.map((faq, index) => {
-        const isActive = activeIndex === index;
-        return (
-          <div key={faq.slug} className={`tab${isActive ? " active" : ""}`}>
-            <div className="tab-heading" onClick={() => handleClick(index)}>
-              <h5>{faq.question}</h5>
-            </div>
-            <div
-              className="tab-content"
-              style={{ height: isActive ? "auto" : 0, overflow: "hidden" }}
-            >
-              <p>{faq.answer}</p>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
+    return (
+        <div className="accordion">
+            {faqs.map((faq, index) => {
+                const isActive = activeIndex === index
+                return (
+                    <div
+                        key={faq.slug}
+                        className={`tab${isActive ? ' active' : ''}`}
+                        onClick={() => handleClick(index)}
+                    >
+                        <div className="tab-heading">
+                            <h5>{faq.question}</h5>
+                        </div>
+                        <div
+                            className="tab-content"
+                            style={{ height: isActive ? 'auto' : 0, overflow: 'hidden' }}
+                        >
+                            <p dangerouslySetInnerHTML={{__html:faq.answer}} />
+                        </div>
+                    </div>
+                )
+            })}
+        </div>
+    )
 }
 
 export default function FaqTabs({ modular }: FaqTabsInterface) {
