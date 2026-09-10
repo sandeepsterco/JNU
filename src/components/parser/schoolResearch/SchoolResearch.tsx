@@ -1,6 +1,7 @@
 import apiFetch from "@/lib/api"
 import { getSlug } from "@/lib/getSlug"
 import Image from "next/image";
+import './schoolResearch.css'
 
 export interface ResearchDataInterface {
     name:string;
