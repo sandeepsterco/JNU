@@ -62,7 +62,7 @@ export default function VideoTabs({data}:VideoTabsInterface) {
     >
       <div className="tab_container">
         {data.videotabs.map((tab) => (
-          <div key={tab.id}>
+          <div className="tabs_item" key={tab.id}>
             {/* Mobile Drawer Heading */}
             <h3
               className={`tab_drawer_heading ${

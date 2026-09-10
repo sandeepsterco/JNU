@@ -49,12 +49,12 @@ export default function Collaborations({data}:CollaborationPropsInterface) {
                                 snapOnRelease: true
                             }}
                             breakpoints={{
-                                320: {
-                                    slidesPerView: 2,
-                                    spaceBetween: 10
+                                0: {
+                                    slidesPerView: 2.5,
+                                    spaceBetween: 30
                                 },
                                 768: {
-                                    slidesPerView: 3,
+                                    slidesPerView: 4,
                                     spaceBetween: 20
                                 },
                                 992: {

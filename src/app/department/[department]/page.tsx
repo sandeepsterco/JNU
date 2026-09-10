@@ -5,6 +5,10 @@ import NotFound from "@/app/not-found";
 import SchoolNoData from "@/components/ui/SchoolNoData";
 import './department.css'
 import '@/styles/common/statsWrapper.css'
+import '@/components/homepage/placement/placement.css';
+import '@/components/homepage/research/research.css'
+import '@/components/homepage/faqs/faq.css'
+import '@/components/homepage/happenings/happenings.css'
 
 export default async function DepartmentHomePage({params, searchParams}:{params:Promise<{department:string}>; searchParams:Promise<{search?:string; duration?:string; school?:string;}>}) {
     const {...resolvedSearchParams} = await searchParams;

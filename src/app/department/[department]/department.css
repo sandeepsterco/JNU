@@ -15,7 +15,7 @@
 .deparment_slider_logo figure { max-width: 6.6rem; }
 .deparment_slider_logo p { font: var(--font-10); color: var(--color-white); font-weight: 300; max-width: 31rem; padding-block: 1rem; border-left: 1px solid #ccc; padding-left: 3rem; }
 
-.deparment_banner>.dep_hero_pagination { display: flex; gap: 1.7rem; position: absolute; z-index: 10; width: auto; top: auto; bottom: 8.4rem!important; left: 14.7rem!important; right: auto; align-items: center; }
+.deparment_banner>.dep_hero_pagination { display: flex; gap: 1.7rem; position: absolute; z-index: 10; width: auto!important; top: auto; bottom: 8.4rem!important; left: 14.7rem!important; right: auto; align-items: center; }
 
 .bullet-num { position: absolute; display: block; align-content: center; width: 2.4rem; height: 2.4rem; z-index: 2; font: var(--font-12); font-weight: 300; color: var(--color-white); background-color: var(--color-0b); line-height: 1; border-radius: 50%; padding-top: 0.4rem; }
 .swiper-pagination-bullet-active .bullet-num { background-color: transparent; }
@@ -89,3 +89,146 @@ to { stroke-dashoffset: 0; }
 .dep_abt_ypath .apply_now { color: var(--color-black); }
 .dep_abt_ypath .apply_now:hover { color: var(--color-white); }
 /* ====================About Section CSS End ====================*/
+
+
+/*==================== Program Section CSS Start==================== */
+.depart_prosec { margin-bottom: 20rem; }
+.deprt_progbox { background-color: var(--color-white); padding-block: 8.5rem; }
+.dep_program_list { display: grid; grid-template-columns: 36rem 36rem 36rem 25rem; padding: 0; list-style: none; row-gap: 4.5rem; padding-block: 7.6rem 0; column-gap: 5.6rem; }
+.dep_program_list li { font: var(--font-24); font-weight: 300; border-right: 1px solid rgba(112, 112, 112, 0.25); display: block; padding-bottom: 1.5rem; position: relative; display: flex; flex-direction: column; justify-content: space-between; }
+.dep_program_list li:nth-child(4n+4) { border: none; }
+.dep_program_list li:hover { color: var(--color-cf); }
+.dep_program_list li span { display: block; margin-bottom: 0.4rem; }
+.dep_program_list li .pro_name { margin-bottom: 1.5rem; max-width: 23.1rem; font: var(--font-21); font-weight: 300; color: var(--color-cf); }
+.dep_program_list li figure { max-width: 0.6rem; }
+.depat_program_bottom { background-color: var(--color-06); display: grid; grid-template-columns: 35% auto; padding-inline: 12.5rem; padding-block: 1rem; justify-content: space-between; }
+.depart_pbleft { display: flex; align-items: center; }
+.depart_pbleft p { color: var(--color-white); font-weight: 200; }
+.depart_pbrgt ul { display: flex; list-style: none; padding: 0; }
+.depart_pbrgt ul li a { display: flex; gap: 1rem; align-items: center; border-left: 1px solid #ccc; padding-inline: 2rem; color: var(--color-fa); font: var(--font-18); font-weight: 500; line-height: 1; }
+.depart_pbrgt ul li a:hover { color: var(--color-white); }
+.depart_pbrgt ul li a:hover img { filter: brightness(0) invert(1); }
+.depart_pbrgt ul li img { max-width: 2rem; }
+.depart_pbrgt { display: flex; align-items: center; }
+.depat_brochbtn { display: flex; }
+.download_brochure img { max-width: 1.5rem; }
+.depat_brochbtn .apply_now { position: relative; overflow: hidden; padding: 1rem 3rem; color: var(--color-black); background-color: var(--color-fa); font: var(--font-18); font-weight: 400; z-index: 1; transition: color .4s ease; line-height: 1.2; border: 1px solid var(--color-fa); }
+.depat_brochbtn .apply_now::before { content: ""; position: absolute; inset: 0; background: var(--color-white); transform: translateX(-101%); transition: transform .4s ease; z-index: -1; }
+.depat_brochbtn .apply_now:hover { color: var(--color-black); border-color: var(--color-white); }
+.depat_brochbtn .apply_now:hover::before { transform: translateX(0); }
+.download_brochure { position: relative; overflow: hidden; display: flex; gap: 1rem; color: var(--color-white); border: 1px solid rgba(255, 255, 255, 0.3); padding: 0.6rem 2.5rem; align-items: center; margin-right: 1rem; z-index: 1; line-height: 1; }
+.download_brochure::before { content: ""; position: absolute; inset: 0; background: var(--color-white); transform: translateX(-101%); transition: transform .4s ease; z-index: -1; }
+.download_brochure:hover { color: var(--color-black); }
+.download_brochure:hover::before { transform: translateX(0); }
+/* ====================Program Section CSS End==================== */
+
+/* ====================HOD Section CSS start ====================*/
+.dep_hodsec { padding-bottom: 13.3rem; }
+.dep_hod_main { padding-block: 7.3rem 16.6rem; position: relative; }
+.dep_hod_main:after { content: ''; background-image: url('/images/icons/dep_hod_shap.svg'); height: 85rem; width: 88.5rem; position: absolute; left: -28.5rem; top: -5rem; background-color: var(--color-cf); z-index: 0; }
+.dep_hod_main::before { content: ''; background-color: var(--color-white); width: auto; height: 100%; top: 0; position: absolute; left:41rem; right: 0; }
+.dep_hod_grid { display: grid; grid-template-columns: 33.9% auto; gap: 12.5rem; z-index: 1; position: relative; align-items: center; }
+.dep_mailbx { list-style: none; padding: 0; margin-top: 4.5rem; }
+.dep_mailbx>li>a { display: flex; align-items: center; gap: 1.4rem; }
+.dep_mailbx>li>a>span img { width: 1.7rem; height: 1.7rem; }
+.dep_mailbx>li>a>span { width: 5.4rem; height: 4.5rem; display: flex; align-items: center; justify-content: center; background-color: var(--color-f9); }
+.dep_mailbx>li>a:hover { color: var(--color-cf); }
+.dep_mailbx li:not(:last-child) { margin-bottom: 1rem; }
+.dep_mailbx>li:nth-child(2)>a>span { background-color: var(--color-cf); }
+.dep_hod_content figure { height: 3.9rem; width: 4.8rem; }
+.dep_hod_content>h3 { padding-block: 2.1rem; color: var(--color-cf); }
+.dep_hod_content>h4 { margin-bottom: 3.2rem; font-weight: 300;     padding-right: 5rem;}
+.dep_hod_content>p { font: var(--font-16); font-weight: 300; padding-bottom: 2.8rem; margin-bottom: 2.8rem; border-bottom: 0.1rem solid #70707033; line-height: 2.6rem; }
+.dep_hod_content span { font: var(--font-16); font-weight: 300; }
+.dep_hod_info>h3 { color: var(--color-cf);}
+
+@media(min-width:1920px) {
+ .dep_hod_main::before{ left: 28rem;}
+}
+@media(max-width:1919px) {
+ .dep_hod_main::before{ left: 15rem;}
+}
+
+/*==================== HOD Section CSS End ====================*/
+
+
+/* =============FACULTY section============ */
+.dep_faculty_section { padding-block: 18rem 0; }
+.dept_facuty_rgt { width: 35%; display: grid; align-items: center; grid-template-columns: auto 3rem; justify-content: space-between; gap: 4rem; padding-top: 5rem; }
+.dept_facuty_rgt p { font: var(--font-18); font-weight: 300; }
+.dept_facuty_rgt a { width: 3rem; height: 3rem; border: 1px solid var(--color-cf); text-align: center; display: block; padding: 0.7rem 1rem; }
+.dept_facuty_rgt a:hover { background-color: var(--color-cf); }
+.dept_facuty_rgt a:hover img { filter: brightness(0) invert(1); }
+.depfac_slider_sec { padding-block: 8rem 4.2rem; padding-left: 1.5rem;}
+.depat_faculty_bx { position: relative; height: 100%; }
+.depat_faculty_bx::before { content: ""; position: absolute; bottom: 0; left:3.5rem; max-width: 24.5rem; z-index: 9; width: 100%; height: 0.4rem; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 6.5rem, var(--color-06) 6.5rem, var(--color-06) 100%); }
+.depat_faculty_bx .dep_fac_img { position: relative; }
+.depat_faculty_bx .dep_fac_img img { max-height: 68rem; }
+/* .depart_faculty .swiper-slide:nth-child(even) .depat_faculty_bx::before { display: none; }
+.depart_faculty .swiper-slide:nth-child(even) .depat_faculty_bx::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.69; position: absolute; bottom: 0; left: 0; right: 0; height: 18rem; content: ""; z-index: 0; }
+.depart_faculty .swiper-slide:nth-child(even) .depat_faculty_bx .dep_facubx_btm { position: absolute; bottom: 0; background-color: transparent; width: 100%; padding:5.4rem  5.8rem ; }
+.depart_faculty .swiper-slide:nth-child(even) .depat_faculty_bx .dep_facubx_btm h5, .depart_faculty .swiper-slide:nth-child(even) .depat_faculty_bx .dep_facubx_btm p { color: var(--color-white); } */
+
+
+/* EVEN FACULTY CARD */
+.depart_faculty .swiper-slide.faculty-even .depat_faculty_bx::before {
+    display: none;
+}
+
+.depart_faculty .swiper-slide.faculty-even .depat_faculty_bx::after {
+    background: transparent linear-gradient(
+        180deg,
+        #00000000 0%,
+        #000000 100%
+    ) 0% 0% no-repeat padding-box;
+
+    opacity: 0.69;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 18rem;
+    content: "";
+    z-index: 0;
+}
+
+.depart_faculty .swiper-slide.faculty-even .depat_faculty_bx .dep_facubx_btm {
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    width: 100%;
+    padding: 5.4rem 5.8rem;
+}
+
+.depart_faculty .swiper-slide.faculty-even .dep_facubx_btm h5,
+.depart_faculty .swiper-slide.faculty-even .dep_facubx_btm p {
+    color: var(--color-white);
+}
+
+
+
+.depat_faculty_bx h5 { margin-bottom: 1rem; }
+.depat_faculty_bx p { max-width: 39.2rem; font: var(--font-14); font-weight: 300; line-height: 1.7; }
+.dep_facubx_btm { background-color: var(--color-f5); z-index: 2; padding-block: 3rem 5.2rem; padding-inline: 3.7rem; }
+.depat_faculty_bx a { z-index: 9; }
+.depa_fac_head { display: flex; justify-content: space-between; flex-wrap: wrap;align-items: center; }
+.dep_fhead_rgt { width: 35%; display: grid; align-items: center; grid-template-columns: auto 3rem; justify-content: space-between; gap: 4rem;}
+.dep_fhead_rgt p { font: var(--font-18); font-weight: 300; }
+.dep_fhead_rgt a { width: 3rem; height: 3rem; border: 1px solid var(--color-cf); text-align: center; display: block; padding: 0.7rem 1rem; }
+.dep_fhead_rgt a:hover { background-color: var(--color-cf); }
+.dep_fhead_rgt a:hover img { filter: brightness(0) invert(1); }
+
+/* =============END OF FACULTY section============ */
+
+/* =========Department Facilities  */
+
+.dept_facilites_sec { padding-block: 20rem; }
+.dept_facilites_sec .depa_fac_head { padding-bottom: 9.4rem; }
+.dept_facilites_bx { position: relative; }
+.dept_facilites_bx::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.8; bottom: 0; left: 0; right: 0; height: 29.9rem; content: ""; position: absolute; }
+.dept_facilites_bx p { padding-block: 4.6rem; margin-inline: 4.6rem; font: var(--font-24); font-weight: 300; line-height: 1.7; color: var(--color-white); }
+.dept_facilites_bx .dept_fac_bx_bottom { position: absolute; bottom: 0; left: 0; right: 0; ; z-index: 2; }
+.dept_facilites_bx a { z-index: 9; }
+.depa_fac_head .head_title p { font-weight: 200; margin-block: 3.7rem 2rem; }
+
+/* =============END OF department facilities */
