@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Stack_Sans_Text, Poppins } from 'next/font/google'
-import Header from "@/components/header/Header";
 import AosProvider from "@/components/common/AosProvider";
 
 import RevealImages from "@/components/common/RevealImages";
@@ -9,8 +8,7 @@ import Providers from "@/lib/Providers";
 import ScrollToTop from "@/components/common/ScrollToTop";
 import RouteProgress from "@/components/loader/RouteProgress";
 const Footer = dynamic(()=>import("@/components/footer/Footer"));
-import '@/styles/globals.css'
-import MainWrapper from "@/components/MainWrapper";
+import '@/styles/protected/globals.css'
 
 const stackSansText = Stack_Sans_Text({
   subsets: ['latin'],
@@ -49,8 +47,7 @@ export default function RootLayout({
         <RouteProgress />
         <Providers>
           <AosProvider>
-            <Header />
-            <MainWrapper>{children}</MainWrapper>
+            {children}
             <Footer />
             <RevealImages />
           </AosProvider>

@@ -9,8 +9,6 @@ import HeaderNav from "./HeaderNav";
 export interface ChildItemInterface {
   title: string;
   slug: string;
-  display_order?:number;
-  children?: ChildItemInterface[];
 }
 
 export interface HeaderMenuItem {
@@ -21,7 +19,12 @@ export interface HeaderMenuItem {
 }
 
 interface HeaderResponse {
-  header: HeaderMenuItem[];
+  data: HeaderMenuItem[];
+}
+
+interface SchoolHeaderInterface{
+  parentSlug?:string;
+  slug?:string;
 }
 
 const HeaderLogo = () => {
@@ -49,17 +52,19 @@ const HeaderLogo = () => {
   );
 };
 
-export default async function Header() {
-  const { data } = await apiFetch(`header`);
+export default async function SchoolHeader({parentSlug, slug}:SchoolHeaderInterface) {
+  const { data } = await apiFetch(`${parentSlug}/${slug}/navigation?q=header`);
 
-  const headerData = (data as HeaderResponse)?.header ?? [];
+  console.log('school header data',data);
+
+  const headerData = (data as HeaderResponse)?.data ?? [];
 
   return (
     <HeaderScroll>
       <div className="container-fluid">
         <HeaderLogo />
 
-        <HeaderNav headerData={headerData} />
+        <HeaderNav parentSlug={parentSlug} headerData={headerData} />
         
       </div>
     </HeaderScroll>

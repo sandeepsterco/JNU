@@ -1,0 +1,44 @@
+
+
+/* ================Admission dropdown=============== */
+.admission_dropdown { position: relative; }
+.admission_drop_menu { position: absolute; top: 100%; right: -25rem; width: 126.0rem; display: grid; grid-template-columns: 280px 1fr; background: #fff; visibility: hidden; opacity: 0; pointer-events: none; transition: opacity 0.3s ease, visibility 0.3s ease; z-index: 999; }
+.admission_drop_menu::after { content: ""; position: absolute; top: -1.5rem; left: 75%; width: 3rem; height: 3rem; background: #cccccc; transform: translateX(-50%) rotate(45deg); opacity: 0; visibility: hidden; }
+.admission_dropdown:not(.active) .admission_drop_menu::after { opacity: 0; visibility: hidden; }
+.admission_dropdown.active .admission_drop_menu::after { opacity: 1; visibility: visible; }
+.admission_dropdown.active .admission_drop_menu { visibility: visible; opacity: 1; pointer-events: auto; padding: 18.8rem 8.6rem 16.2rem 10rem; background-size: contain;}
+.admission_dropdown.active .admission_drop_menu::before{background: transparent linear-gradient(270deg, var(--unnamed-color-00000000) 0%, var(--unnamed-color-000000) 100%) 0% 0% no-repeat padding-box;
+background: transparent linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
+opacity: 0.5; content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: -2;}
+.admission_menu{ padding:0;}
+.admission_drop_menu{ display: grid; grid-template-columns: 37.5rem auto; gap: 10rem;}
+.admission_left blockquote{ font: var(--font-56); letter-spacing: -1.68px; color: var(--color-white); font-weight: 300; line-height: 1;}
+.admission_menu li a{ font: var(--font-18); color: var(--color-white); font-weight: 200; border-bottom: 1px dotted var(--color-white); padding: 1.35rem 0; display: block; position: relative;}
+.admission_menu li a::after{ background-image: url(/images/icons/nav-arrow-next.svg); position: absolute; top: 2rem; right: 0; min-width: 1.2rem; min-height: 1.2rem; content: ""; background-size: contain; background-repeat: no-repeat; filter: brightness(0) invert(1);}
+.admission_menu li a:hover{color: var(--color-cf);}
+.admission_menu li a:hover::after{filter: brightness(1) invert(0);}
+.admission_grid{ display: grid; grid-template-columns: repeat(2, 1fr);}
+.header_program_bx{ border: 1px solid #FFFFFF8A; padding: 3rem;}
+.header_program_bx:last-of-type{ border-left: 0;}
+.header_program_bx blockquote{ font: var(--font-38); letter-spacing: -1.14px; font-weight: 400; line-height: 1;}
+.header_program_bx *{ color: var(--color-white);}
+.header_program_bx>a{ font: var(--font-16); font-weight: 300; line-height: 1.4; display: block; max-width: 70%;} 
+.header_program_bx>a:hover{ color: var(--color-cf);}
+.header_program_bx p{ font: var(--font-14); padding-top:1.5rem;}
+.header_program_bx a.prog_apply_now{ margin-top: 2.5rem; display: block; font: var(--font-30); font-weight: 200; padding-right: 1rem; position: relative; max-width: 100%;}
+.header_program_bx a.prog_apply_now:hover{ color: var(--color-cf);}
+.header_program_bx a.prog_apply_now::after{ background-image: url(/images/icons/next.svg); position: absolute; top: 4rem; right: 0; min-width: 2.2rem; min-height: 2.2rem; content: ""; background-size: contain; background-repeat: no-repeat; filter: brightness(0) invert(1);}
+.header_program_bx a.prog_apply_now:hover::after{filter: brightness(1) invert(0);}
+.admission_Bx{border: 1px solid #FFFFFF8A; opacity: 1; backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); text-align: center; padding: 5rem 4rem 4rem; margin-top:-0.1rem; }
+.admission_Bx .banner_btn{ justify-content: center;}
+.admission_Bx p{ font: var(--font-18); font-weight: 200; color: var(--color-white);}
+.admission_Bx ul{ padding-block: 1rem;}
+.admission_Bx ul a{ color: var(--color-f9); font: var(--font-24); font-weight: 200; display: block; margin-block: 1.4rem; display: flex; justify-content: center; align-items: center; gap: 1rem;}
+.admission_Bx ul a figure{ max-width: 3rem;}
+.admission_Bx ul a:hover{ color: var(--color-black);}
+.admission_Bx .download_brochure{padding: 1rem 2.5rem;}
+.site_nav .admission_dropdown>a{position:relative; border: 1px solid rgba(207,30,98,0.3); padding:0.7rem 4.5rem 0.7rem 2.4rem; color: var(--color-cf);}
+.site_nav .admission_dropdown>a::after { content: ''; position: absolute; top: 1.8rem; right: 2rem; width: 1.5rem; height: 1rem; background: url(/images/icons/nav-arrow-down.svg) no-repeat center center; background-size: contain; pointer-events: none; transform: translateZ(0); -webkit-transform: translateZ(0); backface-visibility: hidden; -webkit-backface-visibility: hidden; will-change: transform; }
+
+
+

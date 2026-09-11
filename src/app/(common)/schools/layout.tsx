@@ -1,7 +1,7 @@
 import InnerHead from "@/components/header/InnerHead/InnerHead";
 import apiFetch from "@/lib/api";
 import { getSlug } from "@/lib/getSlug";
-import NotFound from "../not-found";
+import NotFound from "@/app/not-found";
 import '@/styles/inner.css'
 
 export default async function SchoolsPageLayout({ children }: { children: React.ReactNode }) {

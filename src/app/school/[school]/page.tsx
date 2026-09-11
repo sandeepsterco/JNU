@@ -1,7 +1,7 @@
 import ReactParserDynamic from "@/components/common/reactParser/ReactParserDynamic";
 import apiFetch from "@/lib/api"
 import { getSlug } from "@/lib/getSlug";
-import NotFound from "@/app/not-found";
+import NotFound from '@/app/not-found';
 import '@/components/homepage/placement/placement.css'
 import '@/components/homepage/research/research.css'
 import '@/components/homepage/alumni/alumni.css'

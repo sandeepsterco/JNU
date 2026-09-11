@@ -1,6 +1,6 @@
 import InnerHead from "@/components/header/InnerHead/InnerHead";
 import apiFetch from "@/lib/api";
-import NotFound from "../not-found";
+import NotFound from "@/app/not-found"
 import ComingSoon from "@/components/common/comingSoon/ComingSoon";
 import '@/styles/inner.css'
 

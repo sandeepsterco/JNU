@@ -35,6 +35,10 @@ body:has(.side_hamburger.is-open) .site_nav { transform: translateY(var(--hamb-w
 .school_header::after { background: transparent linear-gradient(0deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.32; position: absolute; left: 0; right: 0; top: 0; height: 14rem; content: ""; z-index: -1; }
 .inner_header1::after { background: transparent linear-gradient(0deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.32; position: absolute; left: 0; right: 0; top: 0; height: 14rem; content: ""; z-index: -1; }
 
+
+
+
+
 @media(max-width:991px) {
     .main_header{background-color: transparent;}
     .main_header > .container-fluid{padding-inline: 3.2rem;}
