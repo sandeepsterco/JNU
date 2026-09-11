@@ -8,6 +8,7 @@
 .alumni_header_right .alumni-prev:hover img, .alumni_header_right .alumni-next:hover img{filter:brightness(0) invert(1)}
 .alumni_header_right .alumni-prev:hover::after, .alumni_header_right .alumni-next:hover::after{ color: var(--color-white);}
 .alumni_slider_bx .alumni_logo{ max-width: 15.2rem; position: absolute; top: 3.5rem; left: 5.6rem;}
+.alumni_slider_bx .alumni_logo img{ max-height: 8rem;}
 .alumni_bx_bottom{ padding: 4.3rem 6.5rem;}
 .alumni_slider_bx{ position: relative; height: 100%;}
 .alumni_slider_section .swiper-slide{ height: auto;}
@@ -15,7 +16,7 @@
 .alumni_slider_bx::before { content: ""; position: absolute; bottom: 0; left:0rem; max-width: 24.5rem; z-index: 9; width: 100%; height: 4px; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 6.5rem, var(--color-06) 6.5rem, var(--color-06) 100%); }
 .alumni_bx_bottom h4{ font: var(--font-21); font-weight: 300; margin-bottom: 4rem; line-height: 1.5;}
 .alumni_bx_bottom h5{ font: var(--font-18); margin-bottom: 0rem; font-weight: 400;}
-.alumni_bx_bottom p{ font: var(--font-14); font-weight: 300; line-height: 1; padding-top: 0.5rem;}
+.alumni_bx_bottom p{ font: var(--font-14); font-weight: 300; line-height: 1.3; padding-top: 0.5rem;}
 .alumni_bx_bottom p span{ border-left: 1px solid #CFCFCF; padding-left:1rem; margin-left: 1rem;}
 .alumni_bx_bottom p span:empty{ display: none;}
 .alumni_video{ max-height: 68rem; width: 100%; object-fit: cover;}
