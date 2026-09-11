@@ -69,8 +69,8 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
                         return false; // any tag child means it's not placeholder-only
                     });
 
-                    if (!hasText || isPlaceholderOnly) {
-                      return <></>;  // ✅ renders nothing
+                    if ((!hasText && !hasElement) || isPlaceholderOnly) {
+                        return <></>;
                     }
                 }
 

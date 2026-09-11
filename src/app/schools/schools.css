@@ -1,0 +1,10 @@
+.leadership_section { padding-block: 11rem; background-image: url(/images/back_pattern.svg); background-size: contain; background-repeat: repeat; width: 100%; }
+.leadership_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem; row-gap: 4rem; }
+.leadership_cnt h4 { font: var(--font-24); font-weight: 300; margin-top: 3rem; }
+.leadership_Bx { position: relative; }
+.leadership_cnt { text-align: center; padding-bottom: 3rem; position:relative; }
+.leadership_Bx figure { overflow: hidden; }
+.leadership_Bx figure img { transition: transform 0.5s ease; }
+.leadership_Bx:hover figure img { transform: scale(1.1); }
+.leadership_cnt p { font: var(--font-14); font-weight: 300; }
+.leadership_cnt::after { content: ""; position: absolute; bottom: 0; left:0; width: 29rem; height: 0.4rem; right: 0; margin: auto; background: linear-gradient(to right, var(--color-cf) 0%, var(--color-cf) 85%, var(--color-f9) 85%, var(--color-f9) 100%); }
