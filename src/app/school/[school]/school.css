@@ -51,8 +51,9 @@ opacity: 0.4; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-i
 
 .school_title{ text-align: center;}
 .school_title .font18{ color: var(--color-06); margin-bottom: 1.5rem;}
-.school_title .font42{ color: var(--color-cf);}
+.school_title .font42{ color: var(--color-cf); line-height: 1.3;}
 .school_title blockquote{ color: var(--color-black); font-size: var(--font-18); font-weight: 200; padding-block: 3rem; padding-inline: 2rem; margin-bottom: 0;}
+
 
 
 .about_soet{ padding-block: 10rem 15rem;}
