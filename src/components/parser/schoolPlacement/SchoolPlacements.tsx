@@ -1,6 +1,7 @@
 import apiFetch from "@/lib/api"
 import { getSlug } from "@/lib/getSlug"
 import PlacementSlider from "./PlacementSlider";
+import NoData from "@/components/ui/NoData";
 
 export interface PlacementDataInterface{
     name:string;
@@ -27,7 +28,7 @@ export default async function SchoolPlacements() {
 
     const pageData = (data as PageDataInterface)?.data?.modular?.placements ?? [];
 
-    if(pageData && pageData?.length === 0) return;
+    if(pageData && pageData?.length === 0) return <NoData />;
 
     return (
         <div className="placement_left">

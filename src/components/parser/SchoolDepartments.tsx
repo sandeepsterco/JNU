@@ -2,6 +2,7 @@ import { BASE_URL } from "@/config/config";
 import apiFetch from "@/lib/api"
 import { getSlug } from "@/lib/getSlug";
 import Link from "next/link";
+import NoData from "../ui/NoData";
 
 interface PageDataInterface {
     data: DataInterface[]
@@ -18,6 +19,8 @@ export default async function SchoolDepartments() {
 
     if (error || !data.status) throw new Error(`Failed to fetch Departments`);
     const departments = (data as PageDataInterface)?.data ?? [];
+
+    if(departments.length == 0) return <NoData type="section" />
 
     return (
         <ul className="our_department_list">
