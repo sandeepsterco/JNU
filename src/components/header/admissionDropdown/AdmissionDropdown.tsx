@@ -42,7 +42,7 @@ export default function AdmissionDropdown({childrens}:{childrens:any}) {
     return (
       <aside
         className="admission_drop_menu"
-        style={{ backgroundImage: "url('/images/admission-background.webp')" }}
+        style={{ backgroundImage: `url('${getValue('admission_dropdown_image')?.image}')` }}
       >
         <div className="admission_left">
           <blockquote>{getValue('admission_title')?.value}</blockquote>
