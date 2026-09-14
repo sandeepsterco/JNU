@@ -20,8 +20,9 @@
 .tab.active .tab-heading h5::before { content: "−"; }
 .tab-content ul{margin-top: 2rem;}
 .tab-content ul li{color: var(--color-white);font: var(--font-14); font-weight: 300; line-height: 1.7;margin-bottom: 1rem; }
-
-
+.extra_info_evt ul{margin:3rem 0 0;padding:0;}
+.extra_info_evt ul li{margin:0 0 2rem;padding:0 0 0 3rem;font-weight:300;position:relative;}
+.extra_info_evt ul li:before{content:"";background-color:var(--color-cf);border-radius:50%;width:6px;height:6px;position:absolute;top:7px;left:0;}
 
 @media (max-width:1536px){
     .why_grid ul{gap: 13rem;}
