@@ -57,5 +57,6 @@ export default function FooterData({headerRes, quickLinksData, infoData}:{header
                 </div>
             </div>
         </footer>
+
     )
 }

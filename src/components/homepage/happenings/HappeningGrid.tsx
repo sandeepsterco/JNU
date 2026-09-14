@@ -52,7 +52,7 @@ function HappGrid({ item }: { item: NewsEvent }) {
 export function DateBlock({ date }: { date: { day: string; month: string; year: string } }) {
     return (
         <div className="date">
-            {date.day} <span>{date.month}<br />{date.year}</span>
+            {date.day} <span> {date.month} <br />{date.year}</span>
         </div>
     )
 }
