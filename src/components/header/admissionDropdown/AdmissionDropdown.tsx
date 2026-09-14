@@ -1,67 +1,65 @@
+"use client"
 import Link from "next/link";
+import { BASE_URL } from "@/config/config";
 import './admission_dropdown.css'
+import apiFetch from "@/lib/api";
+import { useQuery } from "@tanstack/react-query";
+import AdmissionDropdownRight from "./AdmissionRight";
 
-export default function AdmissionDropdown() {
+const getDropdownData = async()=>{
+  try{
+    const {data, error} = await apiFetch(`info`);
+
+    if(error){
+      throw new Error(error);
+    }
+    return data.data;
+  }catch(error){
+    throw error instanceof Error ? error : new Error('Failed to fetch info data')
+  }
+  
+}
+
+export default function AdmissionDropdown({childrens}:{childrens:any}) {
+    const {data, isLoading, isError} = useQuery({
+      queryKey:['admission-dropdown'],
+      queryFn:getDropdownData
+    })
+
+    const getValue = (key: string) => {
+      const found = data?.find((item: any) => item.key == key) ?? null;
+      if (found?.value || found?.image || found?.url) {
+        return {
+          value: found?.value ?? null,
+          image: found?.image ?? null,
+          url: found?.url ?? null,
+        }
+      } else {
+        return null;
+      }
+    }
+
     return (
       <aside
         className="admission_drop_menu"
         style={{ backgroundImage: "url('/images/admission-background.webp')" }}
       >
         <div className="admission_left">
-          <blockquote>A World of Opportunities Awaits</blockquote>
-          <ul className="admission_menu">
-            <li><Link href="#">Book Campus Tour</Link></li>
-            <li><Link href="#">Admission Process</Link></li>
-            <li><Link href="#">Course, Eligibility &amp; Fee Structure</Link></li>
-            <li><Link href="#">Student Speaks</Link></li>
-            <li><Link href="#">Scholarships &amp; Financial Aid</Link></li>
-            <li><Link href="#">International Admissions</Link></li>
-            <li><Link href="#">FAQs</Link></li>
-          </ul>
-        </div>
-  
-        <div className="admission_right">
-          <div className="admission_grid">
-            <div className="header_program_bx">
-              <blockquote>B.Tech.</blockquote>
-              <Link href="#">Computer Science &amp; Engineering</Link>
-              <p>(5 years Programme)</p>
-              <Link href="#" className="prog_apply_now">Apply Now 2026</Link>
-            </div>
-            <div className="header_program_bx">
-              <blockquote>Ph.D.</blockquote>
-              <Link href="#">Biomedical Engineering</Link>
-              <p>(5 years Programme)</p>
-              <Link href="#" className="prog_apply_now">Apply Now 2026</Link>
-            </div>
-          </div>
-  
-          <div className="admission_Bx">
-            <p>Take the First Step Towards Excellence</p>
-            <ul>
-              <li>
-                <a href="tel:18001021900">
-                  <img src="/images/phone-yellow.svg" className="img-fluid" alt="phone" />
-                  1800-102-1900
-                </a>
-              </li>
-              <li>
-                <a href="mailto:admissions@jnujaipur.ac.in">
-                  <img src="/images/mail-yellow.svg" className="img-fluid" alt="mail" />
-                  admissions@jnujaipur.ac.in
-                </a>
-              </li>
+          <blockquote>{getValue('admission_title')?.value}</blockquote>
+          {childrens?.length > 0 && (
+            <ul className="admission_menu">
+              {childrens.map((child:any, idx:number)=>(
+                <li key={idx}>
+                  <Link href={`${BASE_URL}${child.slug}`}>{child.title}</Link>
+                </li>
+              ))}
             </ul>
-  
-            <div className="banner_btn">
-              <a href="#" className="download_brochure">
-                <img src="/images/pdf-icon.svg" className="img-fluid" alt="Download Brochure" />
-                Download Brochure
-              </a>
-              <a href="#0" className="apply_now">Apply Now</a>
-            </div>
-          </div>
+          )}
         </div>
+
+        <AdmissionDropdownRight getValue={getValue} />
+  
+        
       </aside>
     )
   }

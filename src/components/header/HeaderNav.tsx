@@ -62,7 +62,7 @@ export default function HeaderNav({
               </Link>
 
               {isAdmission ? (
-                <AdmissionDropdown />
+                <AdmissionDropdown childrens={item.children} />
               ) : hasChildren ? (
                 <ul className="site_dropdown_menu">
                   {item.children!.map((innerItem, innerIdx) => (
