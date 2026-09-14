@@ -30,7 +30,7 @@ interface ProgramsSearchParams {
 
 interface ContentRendererProps {
     html: string;
-    searchParams?: ProgramsSearchParams;
+    searchParams: ProgramsSearchParams;
 }
 
 function hashString(str: string): string {
