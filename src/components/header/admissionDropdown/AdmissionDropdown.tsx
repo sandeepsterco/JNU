@@ -1,10 +1,10 @@
 "use client"
 import Link from "next/link";
 import { BASE_URL } from "@/config/config";
-import './admission_dropdown.css'
 import apiFetch from "@/lib/api";
 import { useQuery } from "@tanstack/react-query";
 import AdmissionDropdownRight from "./AdmissionRight";
+import './admission_dropdown.css'
 
 const getDropdownData = async()=>{
   try{
