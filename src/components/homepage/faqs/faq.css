@@ -33,5 +33,15 @@
 @media(max-width:991px) {
     .faq_section{padding-block:7rem 10rem;}
     .faq_tab ul{margin-block:3rem;}
+}
+@media(max-width:767px) {
+    .faq_section{padding-block:4rem 3rem;}
+    .faq_section h4{text-align:center;letter-spacing:-0.026rem;padding-inline:3rem;}
+    .faq_tab ul{margin-block:3rem;justify-content:center;}
+    .faq_tab ul li{font:var(--fw-500) 1.6rem / 1.66 var(--stack);}
+    .faq_tab ul li:after{top:1rem;left:-3rem;}
+    .tab-heading{padding: 2rem 1rem 2rem 3rem;}
+    .tab-heading h5:before{top:0.2rem;left:-2.5rem;transform:none;}
+    .tab-content p{margin:0 1rem 2rem 3rem;}
 
 }

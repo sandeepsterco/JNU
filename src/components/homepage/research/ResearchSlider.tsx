@@ -1,7 +1,7 @@
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
+import { Navigation, Autoplay, Grid } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -23,40 +23,45 @@ export default function ResearchSlider({data}:ResearchSliderInterface) {
     return (
         <div className="research_slider_section">
             <Swiper
-                modules={[Navigation, Autoplay]}
-                className="research_swiper"
-                loop={true}
-                autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                }}
-                speed={2000}
-                slidesPerView={1}
-                spaceBetween={0}
-                effect="slide"
-                navigation={{
-                    nextEl: ".arival-next",
-                    prevEl: ".arival-prev",
-                }}
-                grabCursor={true}
-                breakpoints={{
-                    320: {
-                        slidesPerView: 1,
-                        spaceBetween: 0,
-                    },
-                    768: {
-                        slidesPerView: 2,
-                        spaceBetween: 0,
-                    },
-                    992: {
-                        slidesPerView: 3,
-                        spaceBetween: 0,
-                    },
-                    1200: {
-                        slidesPerView: 4,
-                        spaceBetween: 0,
-                    },
-                }}
+                modules={[Navigation, Autoplay, Grid]}
+                    className="research_swiper"
+                    // loop={true}
+                    autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    }}
+                    speed={2000}
+                    slidesPerView={1}
+                    spaceBetween={0}
+                    effect="slide"
+                    navigation={{
+                        nextEl: ".arival-next",
+                        prevEl: ".arival-prev",
+                    }}
+                    grabCursor={true}
+                    breakpoints={{
+                        0: {
+                            slidesPerView: 2,
+                            spaceBetween: 10,
+                            autoplay:false,
+                            grid: {
+                                rows: 2,
+                                fill: 'row'
+                            },
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 0,
+                        },
+                        992: {
+                            slidesPerView: 3,
+                            spaceBetween: 0,
+                        },
+                        1200: {
+                            slidesPerView: 4,
+                            spaceBetween: 0,
+                        },
+                    }}
             >
                 {data?.map((item, idx)=>(
                     <SwiperSlide key={idx}>

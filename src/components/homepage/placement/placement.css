@@ -21,7 +21,7 @@
 .placement_right ul li h4 span{font:var(--font-30);color:var(--color-cf);font-weight:600;}
 .placement_right ul li p{font:var(--font-18);font-weight:300;padding-top:2rem;padding-right:2rem;}
 .placement_logos{padding-block:7.5rem;}
-
+.placement_logo_pagination{display: none;}
 @media(max-width:991px){
     .placement_section{padding-block:8rem 0;}
     .placement_wrapper{padding-block:5.5rem 0;}
@@ -34,18 +34,28 @@
 }
 
 @media(max-width:767px){
-    .placement_section{padding-block:4rem 0;}
+    .placement_section{padding-block:4rem 4rem;}
     .placement_wrapper{background-color:transparent;padding-block:0;}
     .placement_wrapper>.container{padding-inline:0;}
     .placement_header{text-align:center;}
     .placement_header_right{display:none;}
     .placement_right ul{flex-direction:column;padding-inline:1.6rem;}
-    .placement_grid{padding-top:2.9rem;}
-    .placement_Bx>figure>img{aspect-ratio:342/262;}
+    .placement_right ul li{text-align:center;padding-bottom:2.7rem;}
+    .placement_right ul li p{font:var(--fw-300) 1.6rem / 1.6 var(--stack);padding-top:0.8rem;padding-inline:2.5rem;}
+    .placement_right ul li:before{background:linear-gradient(to right,var(--color-fa) 0%,var(--color-fa) 80%,var(--color-cf) 80%,var(--color-cf) 100%);}
+    .placement_grid{padding-top:2.9rem;gap:3.6rem;}
+    .placement_Bx>figure>img{aspect-ratio:342 / 262;object-fit:cover;object-position:top center;}
     .placement_cnt{max-width:13.7rem;margin-left:auto;margin-bottom:auto;position:absolute;padding-top:2rem;justify-content:start;top:50%;transform:translateY(-50%);}
     .placement_cnt figcaption span{font:var(--fw-normal) 3.8rem / 1.33 var(--stack);letter-spacing:-0.182rem;color:var(--color-white);}
     .placement_cnt figcaption{font:var(--fw-normal) 1.4rem / 1 var(--stack);color:var(--color-white);font-weight:600;}
     .placement_cnt p{font:var(--fw-300) 1.4rem / 1.5 var(--stack);}
     .placement_right ul li h4{font:var(--fw-normal) 4.8rem / 1 var(--stack);letter-spacing:-0.23rem;}
-    .placement_right ul li h4>sup{font:var(--fw-600) 3rem / 1 var(--stack);top:-.5em;left:0.3em;}
+    .placement_right ul li h4>sup{font:var(--fw-600) 3rem / 1 var(--stack);top:-.5em;left:0.1em;}
+    .placement_right ul li h4 span{font: var(--fw-600) 3rem / 1 var(--stack);letter-spacing: 0;}
+    .placement_logos{width:100%;max-width:24.6rem;margin-inline:auto;padding-block:1.5rem 0;}
+    .placement_logo_pagination{display: flex;justify-content: center; gap: 0.5rem;}
+    .placement_logo_pagination .swiper-pagination-bullet{background-color:rgb(35 31 32 / 20%) !important;width:.5rem !important;height:.5rem !important;}
+    .placement_logo_pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{background-color: var(--color-f9) !important;}
+
 }
+

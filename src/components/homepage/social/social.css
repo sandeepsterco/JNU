@@ -16,3 +16,12 @@ ul.social_media_link li a:hover{transform:rotate(360deg);}
     .jnu_social_wall{padding-block:8rem;}
     .social_wall_grid{margin-top:5rem;}
 }
+
+@media(max-width:767px) {
+    .jnu_social_wall{padding-block:4rem 4.2rem;}
+    .jnu_social_wall .head_title blockquote{margin-bottom:0;}
+    .jnu_social_wall ul.social_media_link{gap:1.9rem;margin-top:2.7rem;}
+    .jnu_social_wall ul.social_media_link li{max-width:3.9rem;}
+    .social_wall_grid{grid-template-columns:repeat(2,1fr);gap:1rem;margin-top:4.7rem;}
+}
+

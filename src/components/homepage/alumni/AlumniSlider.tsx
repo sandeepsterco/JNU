@@ -69,9 +69,10 @@ export default function AlumniSlider({ alumniData, prevRef, nextRef }: AlumniSli
                 }}
                 grabCursor={true}
                 breakpoints={{
-                    320: {
+                    0: {
                         slidesPerView: 1,
-                        spaceBetween: 0
+                        spaceBetween: 0,
+                        autoplay:false,
                     },
                     768: {
                         slidesPerView: 2,

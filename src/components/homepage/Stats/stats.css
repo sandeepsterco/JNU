@@ -27,14 +27,14 @@
     .stats_wrapper{margin-bottom:5rem;padding:4.3rem 1.3rem 4.5rem;}
     .stats_wrapper:before {background: var(--color-fa);}
     .stats_wrapper ul{grid-template-columns:100%;}
-    .stats_wrapper ul li{border-right:0;border-top: 1px solid rgb(213 213 213 / 40%);padding-block:2rem 0;margin-top:2rem;}
+    .stats_wrapper ul li{font:var(--fw-300) 1.4rem / 1.5 var(--stack);border-right:0;border-top: 1px solid rgb(213 213 213 / 40%);padding-block:2rem 0;margin-top:2rem;}
     .stats_wrapper ul li:first-child{border-top:0;padding-right:0;font:var(--fw-200) 1.8rem / 1.5 var(--stack);text-align:center;margin-top:0;padding-top:0;}
-    .stats_wrapper ul li:not(:nth-child(1)){max-width:calc(100% - 5.2rem);margin-inline:auto;width:100%;}
+    .stats_wrapper ul li:not(:nth-child(1)){text-align:center;max-width:calc(100% - 5.2rem);margin-inline:auto;width:100%;}
     .counter_stats ul{grid-template-columns: repeat(1, 1fr);gap:6rem;}
-    .stats_wrapper ul li figcaption {gap:1rem;margin-top:1.8rem;}
+    .stats_wrapper ul li figcaption {gap:1rem;justify-content: center;margin-top:1.8rem;padding-inline:1.5rem;}
     .stats_wrapper ul li figcaption span.stats_no{font:var(--fw-600) 4.2rem / 1 var(--stack);letter-spacing:-0.202rem;}
     .stats_wrapper ul li figcaption .stats_no > sup{position:relative;right:-0.15em;top:-1.5em;}
-    .stats_wrapper ul li p{font:var(--fw-300) 1.4rem / 1.5 var(--stack);padding-top:0;}
+    .stats_wrapper ul li p{text-align:left;font:var(--fw-300) 1.4rem / 1.5 var(--stack);padding-top:0;}
     .stats_wrapper ul li img{max-width:15.5rem;}
     .counter_stats ul li{font:var(--fw-300) 1.6rem / 1.6 var(--stack);}
     .counter_stats ul li figcaption{font:var(--fw-normal) 4.2rem / 1 var(--stack);letter-spacing:-0.202rem;margin-bottom:0.8rem;}
