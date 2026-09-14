@@ -11,6 +11,7 @@ import { InitMaxContent } from "@/lib/cms/initMaxContent";
 import { usePathname } from "next/navigation";
 import { InitGalleryPopup } from "@/lib/cms/initGalleryPopup";
 import { InitDepartmentHero } from "@/lib/cms/initDepartmentHero";
+import { InitAlumniSwiper } from "@/lib/cms/initAlumniSwiper";
 
 function waitForLayout() {
   return new Promise<void>((resolve) => {
@@ -89,6 +90,15 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
 
       if (root.querySelector(".depart_hero:not([data-swiper-init])")) {
         const cleanup = await InitDepartmentHero(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
+
+      if (root.querySelector(".alumni_swiper:not([data-swiper-init])")) {
+        const cleanup = await InitAlumniSwiper(root);
         if (cancelled) {
           cleanup();
           return;
