@@ -26,7 +26,7 @@ export default function SchoolGrid({
         >
           <figure>
             <Image
-              src={item.image ?? "/images/placeholders/faculty.webp"}
+              src={item.image || "/images/placeholders/faculty.webp"}
               alt={item.name ?? "Leadership member"}
               width={475}
               height={484}
