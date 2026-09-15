@@ -1,9 +1,7 @@
 import apiFetch from "@/lib/api";
 import { getSlug } from "@/lib/getSlug";
-import ProgramSearch from "./ProgramSearch";
-import ProgramsLeftFilter from "./ProgramsLeftFilter";
 import "./programsOffered.css";
-import ProgramsListing from "./ProgramsListing";
+import ProgramMainData from "./ProgramMainData";
 
 interface SpecialInterface {
   name: string;
@@ -50,22 +48,16 @@ export default async function ProgramsOffered({
 
   return (
     <>
-      <div className="prg_search">
-        <ProgramSearch />
-      </div>
-      <div className="program_listing_grid">
-        <div className="progrem_left">
-          <ProgramsLeftFilter />
-        </div>
-
-        <ProgramsListing
-          key={`${search ?? ""}-${school ?? ""}-${duration ?? ""}-${degree ?? ""}-${specialization ?? ""}`}
-          programsData={programsData}
-          currentSlug={currentSlug}
-          filters={{ search, school, duration, degree, specialization }}
-          hasMoreInitially={Boolean(data?.next_page_url)}
-        />
-      </div>
+      <ProgramMainData
+        search={search}
+        school={school}
+        duration={duration}
+        degree={degree}
+        specialization={specialization}
+        programsData={programsData}
+        currentSlug={currentSlug}
+        data={data}
+      />
     </>
   );
 }

@@ -6,9 +6,14 @@
     align-items: center;
 }
 
+.no_data_parent.section{
+    min-height:auto;
+    margin-top: 4rem;
+}
+
 .no_data_parent .title{
-    font:var(--font-36);
-    font-weight: 600;
+    font:var(--font-30);
+    font-weight: 500;
 }
 
 .no_data_parent .para{

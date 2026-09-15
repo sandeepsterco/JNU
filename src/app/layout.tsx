@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import { Stack_Sans_Text, Poppins } from 'next/font/google'
-import Header from "@/components/header/Header";
 import AosProvider from "@/components/common/AosProvider";
 
 import RevealImages from "@/components/common/RevealImages";
-import Footer from "@/components/footer/Footer";
-import { NonceProvider } from "@/lib/NonceProvider";
-import { headers } from "next/headers";
+import dynamic from "next/dynamic";
 import Providers from "@/lib/Providers";
 import ScrollToTop from "@/components/common/ScrollToTop";
-import '@/styles/globals.css'
+import RouteProgress from "@/components/loader/RouteProgress";
+const Footer = dynamic(()=>import("@/components/footer/Footer"));
+import '@/styles/protected/globals.css'
 
 const stackSansText = Stack_Sans_Text({
   subsets: ['latin'],
@@ -34,31 +33,26 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const headersList = await headers();
-  const nonce = headersList.get('x-nonce') ?? '';
-
   return (
     <html
       lang="en"
       className={`${stackSansText.variable} ${poppins.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <NonceProvider nonce={nonce}>
-          <Providers>
-            <AosProvider>
-              <ScrollToTop />
-              <Header />
-              {children}
-              <Footer />
-              <RevealImages />
-            </AosProvider>
-          </Providers>
-        </NonceProvider>
+        <RouteProgress />
+        <Providers>
+          <AosProvider>
+            {children}
+            <Footer />
+            <RevealImages />
+          </AosProvider>
+        </Providers>
+        <ScrollToTop />
       </body>
     </html>
   );

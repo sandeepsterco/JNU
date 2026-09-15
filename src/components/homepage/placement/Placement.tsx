@@ -1,7 +1,7 @@
 "use client"
 import { Swiper, SwiperSlide } from 'swiper/react'
 import './placement.css'
-import { Autoplay, Navigation } from 'swiper/modules'
+import { Autoplay, Navigation, Pagination} from 'swiper/modules'
 import { BASE_URL } from '@/config/config';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -153,7 +153,7 @@ export default function HomePlacement({data, modular}:PlacementPropsInterface) {
                             <div className="placement_logos" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
                                 <Swiper
                                     className="placement_logo_swiper"
-                                    modules={[Autoplay, Navigation]}
+                                    modules={[Autoplay, Navigation, Pagination]}
                                     loop={true}
                                     autoplay={{
                                         delay: 3000,
@@ -167,14 +167,18 @@ export default function HomePlacement({data, modular}:PlacementPropsInterface) {
                                         nextEl: ".arival-next",
                                         prevEl: ".arival-prev",
                                     }}
+                                    pagination={{
+                                        el: ".placement_logo_pagination",
+                                        clickable: true
+                                    }}
                                     grabCursor={true}
                                     breakpoints={{
                                         320: {
-                                            slidesPerView: 2,
+                                            slidesPerView: 1,
                                             spaceBetween: 0
                                         },
                                         768: {
-                                            slidesPerView: 3,
+                                            slidesPerView: 4,
                                             spaceBetween: 0
                                         },
                                         992: {
@@ -196,6 +200,8 @@ export default function HomePlacement({data, modular}:PlacementPropsInterface) {
                                     ))}
                                     
                                 </Swiper>
+
+                                <div className="placement_logo_pagination"></div>
                             </div>
                         )}
 

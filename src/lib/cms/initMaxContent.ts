@@ -8,7 +8,7 @@ const BREAKPOINTS = [
     { min: 575, classes: ["sm", ""] },
   ] as const;
   
-  const ALL_SUFFIXES = ["xxl", "xl", "lg", "md", "sm", ""] as const;
+  const ALL_SUFFIXES = ["xxl", "xl", "md", "sm", ""] as const;
   
   function classFor(suffix: string) {
     return suffix ? `.max-content-${suffix}` : ".max-content";

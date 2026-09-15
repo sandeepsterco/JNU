@@ -14,6 +14,9 @@ import SocialGrids from '@/components/parser/SocialGrids';
 import SchoolFaqTabs from '@/components/parser/SchoolFaqTabs';
 import SchoolFilter from '@/components/parser/schoolFilter/SchoolFilter';
 import SchoolDepartments from '@/components/parser/SchoolDepartments';
+import DepartmentProgramsOffered from '@/components/parser/department/DepartmentProgramsOffered';
+import DepartmentFaculty from '@/components/parser/department/DepartmentFaculty';
+import DepartmentFacilities from '@/components/parser/department/DepartmentFacilities';
 
 interface ProgramsSearchParams {
     search?: string;
@@ -47,10 +50,34 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
         replace(domNode) {
             if (domNode instanceof Element && domNode.attribs) {
 
+                // ✅ Hide empty block/inline elements (no visible text or child elements)
+                const emptyTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'blockquote'];
+
+                if (emptyTags.includes(domNode.name)) {
+                    const hasText = domNode.children.some(
+                      (child) => child.type === 'text' && (child as any).data?.trim() !== ''
+                    );
+                    const hasElement = domNode.children.some(
+                      (child) => child.type === 'tag'
+                    );
+
+                    const isPlaceholderOnly = domNode.children.every((child) => {
+                        if (child.type === 'text') {
+                          const text = (child as any).data?.trim() ?? '';
+                          return text === '' || text.startsWith('{');
+                        }
+                        return false; // any tag child means it's not placeholder-only
+                    });
+
+                    if ((!hasText && !hasElement) || isPlaceholderOnly) {
+                        return <></>;
+                    }
+                }
+
                 if (domNode.name === 'a') {
                     const href = (domNode.attribs?.href || '').trim();
 
-                    const isInvalid = !href || href === '#' || href.startsWith("{") || href.startsWith("javascript:");
+                    const isInvalid = !href || href.startsWith("{") || href.startsWith("javascript:");
 
                     if (isInvalid) return <></>;
                 }
@@ -99,8 +126,8 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
                                 {...rest}
                                 src={resolvedSrc}
                                 alt={props.alt || ""}
-                                loading="lazy"
-                                decoding="async"
+                                // loading="lazy"
+                                // decoding="async"
                                 style={{ ...(props.style || {}) }}
                             />
                         );
@@ -130,6 +157,9 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
                 if (domNode.attribs.id === "school_faq_tabs") return <SchoolFaqTabs  />;
                 if (domNode.attribs.id === "school_dropdown") return <SchoolFilter  />;
                 if (domNode.attribs.id === "school_departments") return <SchoolDepartments  />;
+                if (domNode.attribs.id === "department_programs_offered") return <DepartmentProgramsOffered  />;
+                if (domNode.attribs.id === "department_faculties") return <DepartmentFaculty  />;
+                if (domNode.attribs.id === "department_facilities") return <DepartmentFacilities  />;
             }
         }
     }

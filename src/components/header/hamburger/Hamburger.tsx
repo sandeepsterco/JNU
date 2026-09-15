@@ -1,18 +1,59 @@
 "use client";
 
+import { BASE_URL } from "@/config/config";
+import apiFetch from "@/lib/api";
+import { useQuery } from "@tanstack/react-query";
+import Link from "next/link";
 import { useEffect, useState } from "react";
+
+const getHamburgerData = async () => {
+  try {
+    const { data, error } = await apiFetch(`sidebar`);
+
+    if (error) {
+      throw new Error(error);
+    }
+
+    return data.sidebar;
+  } catch (error) {
+    throw error instanceof Error
+      ? error
+      : new Error("Failed to fetch hamburger data");
+  }
+};
 
 export default function Hamburger() {
   const [isOpen, setIsOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
 
-  // useEffect(() => {
-  //   document.body.classList.toggle("hamburger-overlay", isOpen);
-  // }, [isOpen]);
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["hamburger"],
+    queryFn: getHamburgerData,
+  });
+
+  const closeMenu = () => setIsOpen(false);
+
+  useEffect(() => {
+    document.body.classList.toggle("hamburger-overlay", isOpen);
+    document.body.style.overflow = isOpen ? "hidden" : "";
+
+    return () => {
+      document.body.classList.remove("hamburger-overlay");
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
 
   return (
     <>
       <div className="nav_right">
-        <button className="search_btn" type="button">
+
+        {/* Search Button */}
+        <button
+          className="search_btn"
+          type="button"
+          onClick={() => setSearchOpen(true)}
+          aria-label="Open search"
+        >
           <img
             src="/images/icons/search-icon.svg"
             alt="search"
@@ -20,18 +61,26 @@ export default function Hamburger() {
           />
         </button>
 
-        <button className="phone_icon" type="button">
-          <img
+        {/* Phone */}
+        <button
+          className="phone_icon"
+          type="button"
+          aria-label="Phone"
+        >
+          <a href="tel:0141 3127028"><img
             src="/images/icons/phone-icon.svg"
             alt="phone"
             className="img-fluid"
-          />
+          /></a>
+          
         </button>
 
+        {/* Hamburger */}
         <button
           className="hamb_btn"
           type="button"
-          onClick={() => setIsOpen(!isOpen)}
+          onClick={() => setIsOpen((prev) => !prev)}
+          aria-label="Open menu"
         >
           <img
             src="/images/icons/hemburgure-icon.svg"
@@ -39,231 +88,168 @@ export default function Hamburger() {
             className="img-fluid"
           />
         </button>
+
       </div>
 
+      {/* Search Popup */}
+      <div className={`search_popup ${searchOpen ? "is-open" : ""}`}>
+        <div className="search_popup_inner">
+
+          <button
+            type="button"
+            className="search_close"
+            onClick={() => setSearchOpen(false)}
+            aria-label="Close search"
+          >
+            <span></span>
+            <span></span>
+          </button>
+
+          <form className="search_form">
+            <input
+              type="text"
+              placeholder="Search here..."
+              autoFocus={searchOpen}
+            />
+
+            <button
+              type="submit"
+              className="search_submit"
+              aria-label="Search"
+            >
+              <img
+                src="/images/icons/search-icon.svg"
+                alt="Search"
+                className="img-fluid"
+              />
+            </button>
+          </form>
+
+        </div>
+      </div>
+
+      {/* Hamburger Menu */}
       <div className={`hamburger_menu ${isOpen ? "is-open" : ""}`}>
         <div className="hamburger_menu_header">
+
           <div className="ham_menutop">
-            <div className="hambur_close" onClick={() => setIsOpen(false)}>
+
+            {/* Close */}
+            <div className="hambur_close" onClick={closeMenu}>
               <img
                 src="/images/icons/ham_close.svg"
-                alt="hamburger"
+                alt="Close hamburger"
                 className="img-fluid"
               />
             </div>
-            <div className="hamp_topgrid">
-              <div className="menu_col">
-                <div className="hamburger_item">
-                  <h3>About Us</h3>
-                  <ul>
-                    <li>
-                      <a href="#">University at Glance</a>
-                    </li>
-                    <li>
-                      <a href="#">JNU at UAE</a>
-                    </li>
-                    <li>
-                      <a href="#">JNU Hospital</a>
-                    </li>
-                    <li>
-                      <a href="#">Leadership</a>
-                    </li>
-                    <li>
-                      <a href="#">Social Responsibility</a>
-                    </li>
-                    <li>
-                      <a href="#">Accreditations &amp; Recognitions</a>
-                    </li>
-                    <li>
-                      <a href="#">Committees</a>
-                    </li>
-                  </ul>
-                </div>
+
+            {/* Dynamic Menu */}
+            {data?.length > 0 && (
+              <div className="hamp_topgrid">
+                {data.map((item: any, idx: number) => (
+                  <div key={idx} className="menu_col">
+                    <div className="hamburger_item">
+
+                      <h3>{item.title}</h3>
+
+                      {item?.children?.length > 0 && (
+                        <ul>
+                          {item.children.map(
+                            (childItem: any, childIdx: number) => (
+                              <li key={childIdx}>
+                                <Link
+                                  href={`${BASE_URL}${childItem.slug}`}
+                                  onClick={closeMenu}
+                                >
+                                  {childItem.title}
+                                </Link>
+                              </li>
+                            )
+                          )}
+                        </ul>
+                      )}
+
+                    </div>
+                  </div>
+                ))}
               </div>
-              <div className="menu_col">
-                <div className="hamburger_item">
-                  <h3>Academics</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Schools and List</a>
-                    </li>
-                    <li>
-                      <a href="#">Programs</a>
-                    </li>
-                    <li>
-                      <a href="#">Faculties</a>
-                    </li>
-                    <li>
-                      <a href="#">Collaborations &amp; Partnerships</a>
-                    </li>
-                    <li>
-                      <a href="#">Library</a>
-                    </li>
-                    <li>
-                      <a href="#">Examinations &amp; Results</a>
-                    </li>
-                    <li>
-                      <a href="#">Learning Facilities</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="menu_col">
-                <div className="hamburger_item">
-                  <h3>Research &amp; Innovation</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Research Highlights</a>
-                    </li>
-                    <li>
-                      <a href="#">Dr. Ambedkar Chair</a>
-                    </li>
-                    <li>
-                      <a href="#">Publications &amp; Patents</a>
-                    </li>
-                    <li>
-                      <a href="#">Innovation and Incubation Cell</a>
-                    </li>
-                    <li>
-                      <a href="#">Centers of Excellence</a>
-                    </li>
-                    <li>
-                      <a href="#">Funded projects</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div className="hamp_topgrid">
-              <div className="menu_col">
-                <div className="hamburger_item">
-                  <h3>Placements</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Student's Corner</a>
-                    </li>
-                    <li>
-                      <a href="#">Recruiter's Corner</a>
-                    </li>
-                    <li>
-                      <a href="#">Alumni Network</a>
-                    </li>
-                    <li>
-                      <a href="#">Placement Highlights</a>
-                    </li>
-                    <li>
-                      <a href="#">Career Guidance</a>
-                    </li>
-                    <li>
-                      <a href="#">Collaborations</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="menu_col">
-                <div className="hamburger_item">
-                  <h3>Campus Life</h3>
-                  <ul>
-                    <li>
-                      <a href="#">Gallery</a>
-                    </li>
-                    <li>
-                      <a href="#">Academic Facilities</a>
-                    </li>
-                    <li>
-                      <a href="#">Sports Facilities</a>
-                    </li>
-                    <li>
-                      <a href="#">Hostel Facilities</a>
-                    </li>
-                    <li>
-                      <a href="#">Transportation</a>
-                    </li>
-                    <li>
-                      <a href="#">Events</a>
-                    </li>
-                    <li>
-                      <a href="#">Student Clubs &amp; Societies</a>
-                    </li>
-                    <li>
-                      <a href="#">Social Services</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="hamburger_item">
-                <h3>Admissions</h3>
-                <ul>
-                  <li>
-                    <a href="#">Download Prospectus</a>
-                  </li>
-                  <li>
-                    <a href="#">Book Campus Tour</a>
-                  </li>
-                  <li>
-                    <a href="#">Admission Process</a>
-                  </li>
-                  <li>
-                    <a href="#">Course, Eligibility &amp; Fee Structure</a>
-                  </li>
-                  <li>
-                    <a href="#">Student Speaks</a>
-                  </li>
-                  <li>
-                    <a href="#">Scholarships &amp; Financial Aid</a>
-                  </li>
-                  <li>
-                    <a href="#">International Admissions</a>
-                  </li>
-                  <li>
-                    <a href="#">FAQs</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            )}
+
           </div>
-        <div className="hambur_btmsec">
-          <ul className="hamber_btmmenu">
-            <li>
-              <a href="#">Careers</a>
-            </li>
-            <li>
-              <a href="#">Study @ JNU</a>
-            </li>
 
-            <li>
-              <a href="#">Contact</a>
-            </li>
+          {/* Bottom Menu */}
+          <div className="hambur_btmsec">
+            <ul className="hamber_btmmenu">
 
-            <li>
-              <a href="#">ERP Login</a>
-            </li>
+              <li>
+                <Link href={`${BASE_URL}careers`} onClick={closeMenu}>
+                  Careers
+                </Link>
+              </li>
 
-            <li>
-              <a href="#">Public - Self Disclosure</a>
-            </li>
+              <li>
+                <Link href={`${BASE_URL}study-jnu`} onClick={closeMenu}>
+                  Study @ JNU
+                </Link>
+              </li>
 
-            <li>
-              <a href="#">Policies</a>
-            </li>
+              <li>
+                <Link href={`${BASE_URL}contact`} onClick={closeMenu}>
+                  Contact
+                </Link>
+              </li>
 
-            <li>
-              <a href="#">UGC e-Samadhaan Portal</a>
-            </li>
+              <li>
+                <Link href={`${BASE_URL}erp-login`} onClick={closeMenu}>
+                  ERP Login
+                </Link>
+              </li>
 
-            <li>
-              <a href="#">Holidays Calendar</a>
-            </li>
+              <li>
+                <Link href={`${BASE_URL}disclosure`} onClick={closeMenu}>
+                  Public - Self Disclosure
+                </Link>
+              </li>
 
-            <li>
-              <a href="#">Downloads</a>
-            </li>
+              <li>
+                <Link href={`${BASE_URL}policies`} onClick={closeMenu}>
+                  Policies
+                </Link>
+              </li>
 
-            <li>
-              <a href="#">Mandatory Disclosures</a>
-            </li>
-          </ul>
-        </div>
+              <li>
+                <Link href={`${BASE_URL}ugc-portal`} onClick={closeMenu}>
+                  UGC e-Samadhaan Portal
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href={`${BASE_URL}holidays-calendar`}
+                  onClick={closeMenu}
+                >
+                  Holidays Calendar
+                </Link>
+              </li>
+
+              <li>
+                <Link href={`${BASE_URL}downloads`} onClick={closeMenu}>
+                  Downloads
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href={`${BASE_URL}mandatory-disclosures`}
+                  onClick={closeMenu}
+                >
+                  Mandatory Disclosures
+                </Link>
+              </li>
+
+            </ul>
+          </div>
+
         </div>
       </div>
     </>
