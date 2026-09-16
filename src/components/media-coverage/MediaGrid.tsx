@@ -4,7 +4,7 @@ import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
-import { loadMoreGallery } from "@/actions/loadMoreGallery";
+import { loadMoreMedia } from "@/actions/loadMoreMedia";
 import "swiper/css";
 import "swiper/css/navigation";
 import './media-grid.css'
@@ -42,7 +42,7 @@ export default function MediaGrid({ mediaData, hasMoreInitially }: GalleryListPr
     const handleLoadMore = () => {
         startTransition(async () => {
             const nextPage = page + 1;
-            const result = await loadMoreGallery({ page: nextPage })
+            const result = await loadMoreMedia({ page: nextPage })
 
             setUpdatedData((prev) => [...prev, ...result.data])
             setHasMore(result.hasMore)
