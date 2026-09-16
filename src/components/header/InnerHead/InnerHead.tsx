@@ -51,7 +51,7 @@ export default function InnerHead({ headData }: HeadInterface) {
                     </ul>
                 )}
 
-                {headData?.tabs && (
+                {headData?.tabs && headData?.tabs?.length > 0 && (
                     <ul className="inner_nav">
                         {headData.tabs.map((item, idx) => {
                             const isActive = pathname?.replace(/\/$/, '') === `${item.slug}`.replace(/\/$/, '')
