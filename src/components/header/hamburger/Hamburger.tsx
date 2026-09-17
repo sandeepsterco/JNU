@@ -194,7 +194,7 @@ export default function Hamburger() {
               </li>
 
               <li>
-                <Link href={`${BASE_URL}contact`} onClick={closeMenu}>
+                <Link href={`${BASE_URL}contact-us`} onClick={closeMenu}>
                   Contact
                 </Link>
               </li>
