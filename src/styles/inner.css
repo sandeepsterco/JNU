@@ -649,13 +649,13 @@
 .SSR_wrapper li { list-style: none; }
 .ssr_links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; }
 .ssr_link_item a,
-.ssr_pdf_item a { width: 100%; height: 100%; }
+.ssr_pdf_item a { height: 100%; }
 /* Normal Link */
-.ssr_link_item a:before { content: ''; position: absolute; top: 50%; right: 1.5rem; width: 1.2rem; height: 1.5rem; transform: translateY(-50%); background: url(/images/nav-arrow-next.svg) no-repeat center center; background-size: contain; pointer-events: none; }
-.ssr_links li a { 
+.ssr_link_item a:before { content: ''; position: absolute; top: 50%; right: 1.5rem; width: 1.2rem; height: 1.5rem; transform: translateY(-50%); background: url(/images/icons/nav-arrow-next.svg) no-repeat center center; background-size: contain; pointer-events: none; }
+.ssr_links li { 
     display: flex; align-items: center; padding: 1.9rem 3rem 1.8rem 2.6rem; font: var(--font-21); color: var(--color-black); background: var(--color-white); position: relative; line-height: 1.5; }
 /* PDF */
-.ssr_pdf_item a { justify-content: space-between; gap: 4rem; }
+.ssr_pdf_item { justify-content: space-between; gap: 4rem; }
 .ssr_links li a:after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 1px; background: linear-gradient(
         to right,
         var(--color-cf) 0%,
