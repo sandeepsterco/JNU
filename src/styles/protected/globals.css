@@ -420,6 +420,10 @@ ul.social_media_link li a:hover { transform: rotate(360deg); }
 .download_brochure img{max-width:1.5rem;}
 
 
+/* custom List  */
+.custm_bullets > li { position: relative; list-style: none; font: var(--font-18); font-weight: 300; margin-block: 2.5rem; }
+.custm_bullets > li::before { content: ""; position: absolute; width: 0.8rem; height: 0.8rem; background-color: var(--color-cf); left: -2rem; top: 0.8rem; border-radius: 50%; -webkit-border-radius: 50%; }
+
 
 
 

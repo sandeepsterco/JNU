@@ -4,3 +4,5 @@
 .school_stats_wrapper ul li:nth-child(1)::after, .school_stats_wrapper ul li:nth-child(2)::after{ background-color: var(--color-d5); width: 0.1rem; top:-1rem; bottom: -1rem; right: -4rem; position:absolute; content: "";}
 .school_stats_wrapper ul li h3{ font: var(--font-62); letter-spacing: -2.48px; font-weight: 400; color: var(--color-cf);}
 .school_stats_wrapper ul li h3 sup{ font: var(--font-21); letter-spacing: -0.84px; top: -3.5rem;}
+
+
