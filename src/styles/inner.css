@@ -537,6 +537,7 @@
 .privacy_policy_wraper p a { color: var(--color-cf); line-height: 1.3; }
 .privacy_policy_wraper p a:hover { color: var(--color-black); }
 .pri_polispace { margin-bottom: 6rem; }
+.pri_polispace h2.font30{margin-bottom: 3rem;}
 .program_polici_main { padding-block: 12rem; }
 .pdf_lisbx { margin-bottom: 8rem; }
 .pdf_lisbx  h4 { margin-bottom: 3rem; color: var(--color-cf); }
@@ -671,3 +672,48 @@
 .placement_header_right a{width:3rem;height:3rem;border:1px solid var(--color-cf);text-align:center;display:block;padding:0.7rem 1rem;}
 .placement_header_right a:hover{background-color:var(--color-cf);}
 .placement_header_right a:hover img{filter:brightness(0) invert(1);}
+
+/* GS22092026 */
+/* UBA Page Css Start */
+.uba_mainsec { padding-block: 12rem; }
+.uba_hero_slider { margin-block: 5.6rem 0; }
+.uba_mainsec .jnu_title_header blockquote { margin: 0 0 3rem; }
+.uba_keypointsec { grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2.5rem; padding-block: 12rem 5rem; display: grid; }
+.uba_keypointrgt { max-width: 67rem; padding-inline: 13.5rem 0; }
+.uba_keypointrgt .jnu_title_header { text-align: left; }
+.uba_keypointrgt .jnu_title_header .font21 { margin-bottom: 2rem; }
+.uba_keypointrgt h4 { color: var(--color-23); margin-bottom: 2.4rem; padding-right: 8rem; font-weight: 300; line-height: 1.1; }
+.jnu_title_header p { font: var(--font-14); font-weight: 300; }
+.uba_keypointrgt blockquote { color: var(--color-cf); border-top: 1px solid #c4c4c4; margin-top: 5.3rem; padding-top: 5rem; padding-right: 2rem; font-weight: 300; }
+.uba_mainobj_lst { display: grid; grid-template-columns: repeat(5, 1fr); width: 100%; }
+.uba_mainobj_lst > .uba_obj_item { font: var(--font-14); color: var(--color-black); font-weight: 300; padding: 0 2rem; margin: 0; line-height: 1.5; box-sizing: border-box; }
+.uba_mainobj_lst > .uba_obj_item:first-child { padding-left: 0; }
+.uba_mainobj_lst > .uba_obj_item:not(:last-child) { border-right: 1px solid #ccc; }
+.uba_mainobj_lst > .uba_obj_item:last-child { padding-right: 0; }
+.uba_main_obj .jnu_title_header { text-align: left; }
+/* Social Impact/CSR Page CSS */
+.social_impact { padding-block: 12rem }
+.social_impact  blockquote { margin: 0 0 3rem; }
+.social_im_imgsec { margin-block: 5.6rem 0; position: relative; }
+.social_im_imgsec:before { opacity: 1; content: ""; background: linear-gradient(#0000 0%, #000 100%) no-repeat padding-box padding-box; height: 36.3rem; position: absolute; bottom: 0; left: 0; right: 0; }
+.social_content { position: absolute; bottom: 4.2rem; left: 9.7rem; right: 12.5rem; max-width: 70%; }
+.social_content h4 { margin-bottom: 2.4rem; font-weight: 300; line-height: 1.1; color: var(--color-white); }
+.social_content  p { font: var(--font-14); color: var(--color-white); font-weight: 300; margin-bottom: 1rem; }
+.csr_activity_main { padding-block: 0 12rem; }
+.csr_acti_grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 5rem; display: grid; }
+.csr_acv_bx { flex-wrap: wrap; gap: 2rem; display: flex; position: relative; }
+.csr_acv_bx figure { position: relative; }
+.csr_acv_bx .csr_ac_content { font: var(--font-14); color: var(--color-white); z-index: 2; position: absolute; bottom: 2.5rem; left: 3rem; right: 4rem; }
+.csr_acv_bx .csr_ac_content p { font: var(--font-14); color: var(--color-white); }
+.csr_acv_bx figure:after { content: ""; z-index: 0; background: linear-gradient(#0000 0%, #000 100%) no-repeat padding-box padding-box; height: 32rem; position: absolute; bottom: 0; left: 0; right: 0; }
+.csr_acv_bx .font21 { font: var(--font-24); color: var(--color-white); margin: 0 0 2rem; font-weight: 300; max-width: 70%; }
+.csr_activi_btm{ padding-block: 12rem 0;margin-top: 12rem;    border-top: 1px solid #c4c4c4;}
+.csr_activi_btm .cse_acti_grid { grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2.5rem; display: grid;    padding-block: 0 5rem; }
+.cse_acti_grid .jnu_title_header{text-align: left;}
+.cse_acti_grid .csr_acti_g_cnt{    max-width: 67rem; padding-inline:13.5rem 0 ;}
+.body_donate_grid { grid-template-columns: repeat(3, 1fr); gap: 4.1rem; display: grid; }
+.body_donate_bx  h5 { font: var(--font-18); margin-block: 2.3rem; font-weight: 700; }
+.body_donate_bx p { font: var(--font-16); max-width: 82%; font-weight: 300; }
+.gaze_linksec{margin-bottom: 8rem;}
+.regua_appr_title { margin-bottom: 4rem; }
+.regua_appr_title p { font: var(--font-14); font-weight: 300; }
