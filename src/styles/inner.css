@@ -627,6 +627,7 @@
 .acdemic_calender .pri_polispace h5{color: var(--color-cf);}
 .acdemic_calender .jest_exam_table{margin-bottom:9em;}
 .acdemic_calender .jest_exam_table .table-responsive{margin-bottom: 5rem;}
+.jest_exam_table tbody>tr>td{    border: 0.1rem solid #E8E8E8;}
 
 
 /* SS19092026 */
