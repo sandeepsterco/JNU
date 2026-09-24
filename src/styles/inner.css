@@ -700,3 +700,39 @@
 .gridbox_two { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem; align-items: start; }
 .gridbox_three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; align-items: start; }
 .gridbox_four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4rem; align-items: start; }
+
+
+/* GS23092026 */
+/* Online Resources Page CSS Start */
+.online_resource { padding-block: 12rem; }
+.online_resource .jnu_title_header blockquote { margin: 0 0 3rem; }
+.online_re_grid { grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2.5rem; padding-block: 12rem 5rem; display: grid; }
+.online_re_grid .online_res_rgt { max-width: 67rem; padding-inline: 13.5rem 0; display: flex; flex-direction: column; justify-content: space-between; height: 100%; }
+.online_re_grid .jnu_title_header { text-align: left; }
+.onl_swayam_logo figure { width: 30rem; }
+.online_rs_about p { font: var(--font-14); font-weight: 300; }
+.online_resource  .glance_logos { margin-top: 14rem; }
+.online_resource  .glance_logos ul li:nth-last-child(-n + 4) { border-bottom: none; padding-top: 3.5rem; }
+.online_res_btmtext { margin-top: 8rem; }
+/* E Resources Page CSS Start */
+.e_resourcemain { padding-block: 12rem; }
+.e_resou_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; margin: 0; padding: 0; margin-bottom: 2rem; padding-inline: 2rem; }
+.e_resou_grid .e_resou_item { display: flex; align-items: center; padding: 0.8rem 0rem .8rem 0rem; font: var(--font-18); color: var(--color-black); 
+    border-bottom: 0.1rem dashed var(--color-cf); position: relative; line-height: 1.5; justify-content: space-between; gap: 1rem; }
+.e_res_title h4 { color: var(--color-cf); margin-bottom: 3rem; font-weight: 500; }
+.e_resourcemain .faq_accordion h5, .e_resourcemain .tab_content p { color: var(--color-black); }
+.e_resourcemain .faq_accordion .accordion_tab.accordion_active { background-color: var(--color-white); border-radius: 1rem; }
+.e_resourcemain .faq_accordion .accordion_tab { border-bottom: 0.1rem solid #ccc; margin-top: 0.5rem; }
+.e_resourcemain  .faq_accordion .accordion_tab.accordion_active h5 { color: var(--color-cf); }
+.audio_con span{    display: inline-block;
+    margin-bottom: 1.3rem;}
+
+/* Redio Fm Page CSS */
+.radio_fm { padding-block: 12rem; }
+.radio_fm .jnu_title_header blockquote { margin: 0 0 3rem; }
+.radio_abt_grid { grid-template-columns: repeat(2, 1fr); gap: .6rem; padding-block: 3rem 5.6rem; display: grid; }
+.radio_abt_grid>.radio_abt_col { position: relative; }
+.radio_abt_col>.reabt_text h4 {  font: var(--font-24); margin-inline: 0 6.2rem; padding-block: 4.6rem; font-weight: 300; line-height: 1.7; }
+.fm_pro_over_sec { padding-block: 3rem 5rem; }
+.fm_pro_over_sec .jnu_title_header{padding-block: 3rem;}
+.radio_abt_col:before { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 65%, var(--color-06) 65%, var(--color-06) 100%); width: 100%; max-width: 36.8rem; height: 4px; position: absolute; bottom: 0; left: 0rem; }
