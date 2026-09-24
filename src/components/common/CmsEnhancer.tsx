@@ -13,6 +13,7 @@ import { InitGalleryPopup } from "@/lib/cms/initGalleryPopup";
 import { InitDepartmentHero } from "@/lib/cms/initDepartmentHero";
 import { InitAlumniSwiper } from "@/lib/cms/initAlumniSwiper";
 import { InitAccordion } from "@/lib/cms/initAccordion";
+import { InitGallery } from "@/lib/cms/initGallery";
 
 function waitForLayout() {
   return new Promise<void>((resolve) => {
@@ -47,6 +48,12 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
       // Initialize accordion
       if (root.querySelector(".custom-tabs")) {
         const cleanup = InitAccordion(root);
+        cleanupFns.push(cleanup);
+      }
+
+      // Initialize gallery
+      if (root.querySelector('[data-fancybox="gallery"]')) {
+        const cleanup = await InitGallery(root);
         cleanupFns.push(cleanup);
       }
 
