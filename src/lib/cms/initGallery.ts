@@ -27,9 +27,6 @@ export async function InitGallery(root: HTMLElement) {
           },
         },
       },
-      Thumbs: {
-        autoStart: false,
-      },
     });
 
     return () => {
