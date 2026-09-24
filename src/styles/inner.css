@@ -724,8 +724,13 @@
 .e_resourcemain .faq_accordion .accordion_tab.accordion_active { background-color: var(--color-white); border-radius: 1rem; }
 .e_resourcemain .faq_accordion .accordion_tab { border-bottom: 0.1rem solid #ccc; margin-top: 0.5rem; }
 .e_resourcemain  .faq_accordion .accordion_tab.accordion_active h5 { color: var(--color-cf); }
-.audio_con span{    display: inline-block;
-    margin-bottom: 1.3rem;}
+.audio_con span { display: inline-block; margin-bottom: 1.3rem; }
+.tab_heading { cursor: pointer; border-radius: 0; padding: 3rem 4rem; position: relative; }
+.tab_content { overflow-y: hidden; height: 0; transition: 0.5s ease; }
+.e_resourcemain .accordion_tab.accordion_active .tab_heading h5::before { content: "−"; }
+.e_resourcemain .accordion_tab .tab_heading h5::before { content: "+"; position: absolute; left: -3rem; top: 50%; transform: translateY(-50%); font: var(--font-24); line-height: 1; font-weight: 200; }
+.e_resourcemain .accordion_tab.accordion_active { border-bottom: 0px dashed rgba(255, 255, 255, 0.49); }
+.e_resourcemain h5 { pointer-events: none; color: var(--color-white); font: var(--font-18); position: relative; }
 
 /* Redio Fm Page CSS */
 .radio_fm { padding-block: 12rem; }

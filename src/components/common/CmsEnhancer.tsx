@@ -12,6 +12,7 @@ import { usePathname } from "next/navigation";
 import { InitGalleryPopup } from "@/lib/cms/initGalleryPopup";
 import { InitDepartmentHero } from "@/lib/cms/initDepartmentHero";
 import { InitAlumniSwiper } from "@/lib/cms/initAlumniSwiper";
+import { InitAccordion } from "@/lib/cms/initAccordion";
 
 function waitForLayout() {
   return new Promise<void>((resolve) => {
@@ -41,6 +42,12 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
       // Initialize tabs
       if (root.querySelector(".tabbed-content")) {
         InitTabs(root);
+      }
+
+      // Initialize accordion
+      if (root.querySelector(".custom-tabs")) {
+        const cleanup = InitAccordion(root);
+        cleanupFns.push(cleanup);
       }
 
       if (root.querySelector(".program_nav")) {
