@@ -775,11 +775,11 @@
 .phd_regula_col { position: relative; padding-right: 2rem; }
 .phd_regula_col:not(:last-child) { border-right: 1px solid #70707040; }
 /* Research Highlights page Css */
-.res_highli_sec  .jnu_title_header{margin-bottom: 8rem;}
+.res_highli_sec  .jnu_title_header { margin-bottom: 8rem; }
 .total_awards_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4.2rem; }
-.total_awards_grid{margin-bottom: 5rem;}
+.total_awards_grid { margin-bottom: 5rem; }
 .total_awa_col { background-color: var(--color-white); text-align: center; padding: 7.2rem 3.5rem; }
-.total_awa_col h4 { font: var(--font-18); font-weight: 300; }
+.total_awa_col h4 { font: var(--font-21); font-weight: 500; }
 .total_awa_col blockquote { font: var(--font-36); color: var(--color-cf); margin-block: 2.4rem 0; font-weight: 300; }
 .res_highli_sec { padding-block: 12rem; }
 .res_hig_col h3 { color: var(--color-06); font: var(--font-30); margin-block:  0 2rem; font-weight: 300; }
