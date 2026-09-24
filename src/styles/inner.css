@@ -741,20 +741,21 @@
 .fm_pro_over_sec { padding-block: 3rem 5rem; }
 .fm_pro_over_sec .jnu_title_header{padding-block: 3rem;}
 .radio_abt_col:before { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 65%, var(--color-06) 65%, var(--color-06) 100%); width: 100%; max-width: 36.8rem; height: 4px; position: absolute; bottom: 0; left: 0rem; }
+
 /* Research and Publications css starts here */
-    .jnu_title_header figure img { width:auto; margin:0 auto 4rem; }
+.jnu_title_header figure img { width:auto; margin:0 auto 4rem; }
 .excel-track figure { position:relative; }
 .excel-track figure:before { content:""; position:absolute; top:0; left:0; right:auto; bottom:0; width:50%; background:linear-gradient(to right,#000000d9 0%,transparent 100%); }
-.academic_foundation.research-cont { margin-top:6rem; padding-block:6rem 5rem; }
+.academic_foundation.research-cont { margin-top:0; padding-block:6rem 5rem; border: none; }
 .about_research.research-commitee { padding-block:0 20rem; }
 .about_research.research-commitee .jnu_title_header { margin:0 0 6rem 0; }
 .sponserd-sec .jes_ovrfactgrid { grid-template-columns:32% 32% 32%; padding-block:10rem 10rem; }
-.sponserd-sec .download_carriculum { border:none; }
-.sponserd-sec .download_carriculum img { max-width:100%; }
-.sponserd-sec .download_carriculum:hover { background:transparent; }
 .school-list .jnu_title_header { margin:0 0 5rem 0; }
 .school-list { padding:10rem 0; }
 .school-list .rule_punsi_box h3 { color:var(--color-cf); margin-bottom:2rem; font-weight:500; }
+.sponserd-sec .jes_fac_bx { padding:3rem; background:#ffffff; text-align:left; border:none; }
+.sponserd-sec .jes_ovrfactgrid { display:grid; grid-template-columns:repeat(2,1fr); padding-block:10rem 10rem; }
+.privacy_policy_wraper h4 { padding-bottom: 4rem; }
 /* Research and Publications css ends here */
 /* Research Awards Css */
 .res_awards { padding-block: 6rem 11rem; }
@@ -773,3 +774,18 @@
 .phd_regula_col p { font-weight: 300; }
 .phd_regula_col { position: relative; padding-right: 2rem; }
 .phd_regula_col:not(:last-child) { border-right: 1px solid #70707040; }
+/* Research Highlights page Css */
+.res_highli_sec  .jnu_title_header { margin-bottom: 8rem; }
+.total_awards_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4.2rem; }
+.total_awards_grid { margin-bottom: 5rem; }
+.total_awa_col { background-color: var(--color-white); text-align: center; padding: 7.2rem 3.5rem; }
+.total_awa_col h4 { font: var(--font-21); font-weight: 500; }
+.total_awa_col blockquote { font: var(--font-36); color: var(--color-cf); margin-block: 2.4rem 0; font-weight: 300; }
+.res_highli_sec { padding-block: 12rem; }
+.res_hig_col h3 { color: var(--color-06); font: var(--font-30); margin-block:  0 2rem; font-weight: 300; }
+.res_hig_col { background-color: var(--color-white); border: 1px solid #e3e3e3; width: 100%; padding: 3.2rem 4rem; position: relative; }
+.res_hig_col h5 { font: var(--font-18); color: var(--color-cf); margin-bottom: 1rem; font-weight: 500; }
+.res_hig_col h4 { margin-bottom: 1rem; font: var(--font-16); }
+.res_hig_col p { font: var(--font-16); font-weight: 200; position: relative; }
+.res_high_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+.res_hig_col:before { content: ""; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 37.5%, var(--color-06) 37.5%, var(--color-06) 100%); width: 100%; height: 2px; position: absolute; bottom: 0; left: 0; }
