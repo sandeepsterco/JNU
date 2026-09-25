@@ -789,3 +789,9 @@
 .res_hig_col p { font: var(--font-16); font-weight: 200; position: relative; }
 .res_high_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; }
 .res_hig_col:before { content: ""; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 37.5%, var(--color-06) 37.5%, var(--color-06) 100%); width: 100%; height: 2px; position: absolute; bottom: 0; left: 0; }
+
+/* Patents Page CSS */
+.patents_main { padding-block: 12rem; }
+.patents_main .jest_exam_table:not(:last-of-type) { margin-bottom: 5rem; }
+.patents_main tbody>tr>td:nth-child(4) ,
+.patents_main tbody>tr>td:nth-child(5) { min-width: 15rem; }
