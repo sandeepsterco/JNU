@@ -795,3 +795,105 @@
 .patents_main .jest_exam_table:not(:last-of-type) { margin-bottom: 5rem; }
 .patents_main tbody>tr>td:nth-child(4) ,
 .patents_main tbody>tr>td:nth-child(5) { min-width: 15rem; }
+
+/* GS12102026 */
+
+/* ================= Social Responsibility Page Start==============  */
+.social_respon_ovr { padding-block: 12rem; }
+.social_res_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 5rem;align-items: center; }
+.social_respon_ovr .jnu_title_header> blockquote{padding-inline: 1.5rem;}
+.social_res_grid> .socil_contentbx{max-width: 65rem;margin-inline: auto;}
+.social_res_grid> .socil_contentbx p{font-weight: 300;}
+.social_keyinti{padding-block: 0 12rem;}
+.social_keyintigrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3rem; }
+.social_keyintigrid> .social_keybx { background-color: var(--color-white); padding-inline: 5rem; padding-block: 5.5rem 10.5rem; text-align: center; position: relative; }
+.social_keyintigrid> .social_keybx >h4 { font: var(--font-24); font-weight: 300; color: var(--color-23); line-height: 1.6; margin-bottom: 0; margin-bottom: 3rem; }
+.social_keyintigrid> .social_keybx >p{font-weight: 300;}
+.social_keybx::after { content: ""; z-index: 9; background: linear-gradient(
+        to right,
+        var(--color-cf) 0%,
+        var(--color-cf) 55%,
+        var(--color-fa) 55%,
+        var(--color-fa) 100%
+    ); width: 64%; max-width: 63%; height: 0.4rem; position: absolute; bottom: 0; left: 0; right: 0; margin: 0 auto; }
+
+/* ================= Social Responsibility Page End==============  */
+
+
+
+/* ================= Hostel Facilities Page Start==============  */
+.hostal_faci_ovr { padding-block: 12rem 0rem; }
+.hostal_faci_ovr.hero_bg_pattern::before{height: 82rem;}
+.host_overgrid { display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2.5rem; }
+.host_overgrid> .hf_ovrgt { max-width: 57.5rem; margin-inline: auto; }
+.hf_ovrgt> .jnu_title_header { text-align: left; }
+.hf_ovrgt> .jnu_title_header h4 { color: var(--color-23); margin-bottom: 2.4rem; padding-right: 8rem; font-weight: 300; line-height: 1.1; }
+.hf_ovrgt> .jnu_title_header p { font: var(--font-16); line-height: 1.65; }
+.hf_ovrgt blockquote { color: var(--color-cf); padding-top: 7.5rem; padding-right: 10rem; font-weight: 300; }
+.accomtype{padding-top: 2.5rem;}
+.hf_accom_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; align-items: center; }
+.hf_accom_grid.hf_grid2{ align-items: start;margin-top: 0.2rem;margin-bottom: 10rem;padding-bottom: 10rem;border-bottom: 0.1rem solid var(--color-de);}
+.hf_accom_grid> .accom_lft { max-width: 56.9rem; margin-inline:auto; }
+.hf_accom_grid.hf_grid2> .accom_lft { max-width: 61.9rem; margin-inline:auto; }
+.accom_lft .font21 { margin-bottom: 3rem; color: var(--color-cf); font-weight: 500; }
+.accom_lft>p { font: var(--font-21); font-weight: 300; line-height: 1.7; }
+.hf_accom_fact { display: grid; margin-top: 8rem; grid-template-columns:19.8rem auto; gap: 5rem; }
+.hf_accom_fabx>h3 { font: var(--font-56); font-weight: normal; color: var(--color-cf); margin-bottom: 2.4rem; }
+.hf_accom_fabx>p { font: var(--font-16); }
+.accom_lft>.custm_bullets{    padding: 0 0 0 3rem;}
+.accom_lft>.custm_bullets> li{font: var(--font-21);font-weight: 300;line-height: 1.7; margin-block: 2.5rem 3.6rem;}
+.accom_lft>.custm_bullets> li::before{background-color: var(--color-f2);left: -3rem;}
+.cafet_aregrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; align-items: start; }
+.caft_left { display: flex; flex-direction: column; gap: 2.5rem; align-items: start; }
+.caft_lftbx { position: relative; }
+.cafet_area_sec { margin-bottom: 12rem; }
+.caft_lftbx figure { position: relative; overflow: hidden; }
+.caft_lftbx figure img { display: block; width: 100%; height: auto; }
+.caft_lftbx figure::after { content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 18rem; background: linear-gradient(180deg, #00000000 0%, #000000 100%); opacity: 0.5; pointer-events: none; }
+.caft_lftbx:nth-child(1) figure::after { height: 35.3rem; }
+.caft_lftbx .img_caption { position: absolute; left: 3rem; bottom: 3.2rem;right: 14.4rem; z-index: 2; }
+.caft_lftbx .img_caption> h5,.caft_lftbx .img_caption> p{color: var(--color-white);}
+.caft_lftbx .img_caption> h5{margin-bottom: 1.4rem;font-weight: 500;}
+.caft_lftbx .img_caption> p{font: var(--font-16);font-weight: 300;}
+.caft_areargt> .img_caption { padding: 4.6rem 5.3rem 6.5rem 5.3rem; background-color: var(--color-white); min-height: 27.3rem; position: relative; }
+.caft_areargt> .img_caption::after { content: ''; background-image: url('/images/wellness_pattern.svg'); height:  27.3rem; width: 41.6rem; position: absolute; right: 0; top: 0; bottom: 0; z-index: 0; }
+.caft_areargt> .img_caption .custom_lists { z-index: 9; position: relative; }
+.caft_areargt { position: relative; }
+.caft_areargt figure span{position: absolute;top: 5.2rem;left: 4rem;font: var(--font-21);color: var(--color-white);font-weight: 500;}
+.caft_areargt .img_caption .custom_lists > li{font-weight: 300;font: var(--font-16);}
+.caft_areargt .img_caption .custom_lists > li::before{background-color: var(--color-f2);}
+.whychoose_sec{padding-bottom: 15rem;}
+.whychoose_sec .jnu_title_header .font21{margin-bottom: 5rem;}
+.whychoose_grid{display: grid;grid-template-columns: repeat(4, 1fr);gap: 3rem;margin-bottom: 3rem;}
+.whychoose_grid> .whychoose_bx{background-color: var(--color-white);padding: 8rem 7.7rem 7.5rem 7.8rem;text-align: center;position: relative;}
+.whychoose_grid> .whychoose_bx> figure {height: 6rem;width: 6rem;margin-inline: auto;}
+.whychoose_grid> .whychoose_bx h5{font-weight: 300;line-height: 1.72;margin-bottom: 5rem;min-height: 14.5rem;}
+.whychoose_bx::after { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 16rem, var(--color-cf) 16rem, var(--color-cf) 100%); width: 25.4rem; max-width: 25.4rem; height: 0.2rem; position: absolute; bottom: 0.2rem; left: 0; right: 0; margin: 0 auto; }
+.visit_applybx { background-color: var(--color-cf); grid-template-columns: 40% 47% 13.1%; align-items: center; margin-top: 3rem; display: grid; position: relative; padding-inline: 40rem 9.1rem; min-height: 23.3rem; }
+.visit_applybx>figure { position: absolute; left: 4rem; top: 0; content: ''; height: 23.3rem; width: 45.2rem; }
+.visit_applybx .visit_text> h3 { font-weight: 200; color: var(--color-white); padding-right: 6.5rem; }
+.visit_desc> p { color: var(--color-white); font: var(--font-16); line-height: 1.7; font-weight: 300; margin-right: 11rem; }
+.visit_applybx::before { background-image: url(/images/patterns/visit_apply_pattren.svg); position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height:100%; width: 19.5rem; content: ""; z-index: 0; opacity: 0.47; }
+
+/* ================= Hostel Facilities Page End==============  */
+
+
+/* ================= Transportation Page Start==============  */
+.trans_ovr{padding-block: 12rem 0;}
+.trans_ovr .jnu_title_header{margin-bottom: 5.6rem;}
+.trans_ovrimg{margin-bottom: 12rem;}
+.trans_overbtm{margin-bottom: 4.6rem;}
+.trans_overbtm p{text-align: center;font: var(--font-16);    font-weight: 300;    max-width: 95%;line-height: 1.7;}
+.trans_bus{margin-top: 13.8rem;}
+.trans_bus .trans_bus_grid{display: grid;grid-template-columns: auto 48.89%;gap: 12.5rem;align-items: center;}
+.trans_bus_grid .trasn_buslft>p{font: var(--font-16);font-weight: 300;line-height: 1.7;}
+.trans_bus .trans_bus_grid .trasn_buslft{padding-right: 1.5rem;}
+.trans_bus{padding-bottom: 13rem;}
+.transgps_grid{display: grid;grid-template-columns: repeat(4, 1fr);gap: 3rem;margin-bottom: 3rem;}
+.transgps_grid> .trasngpsbx{background-color: var(--color-white);padding: 6.3rem 7.7rem 8.9rem 7.8rem;text-align: center;position: relative;}
+.transgps_grid> .trasngpsbx> figure {height: 6rem;width: 6rem;margin-inline: auto;}
+.transgps_grid> .trasngpsbx h5{font-weight: 300;line-height: 1.72;margin-bottom: 6.1rem;}
+.trasngpsbx::after { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 16rem, var(--color-cf) 16rem, var(--color-cf) 100%); width: 25.4rem; max-width: 25.4rem; height: 0.2rem; position: absolute; bottom: 0rem; left: 0; right: 0; margin: 0 auto; }
+
+/* ================= Transportation Page End==============  */
+

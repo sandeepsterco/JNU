@@ -33,6 +33,8 @@
   --color-36:#363636;
   --color-06:#063F8A;
   --color-54:#545152;
+    --color-f2:#F2903F;
+     --color-de:#DEDEDE;
   --font-85: var(--fw-normal) 8.5rem/1.12 var(--stack);
   --font-72: var(--fw-normal) 7.2rem/1.10 var(--stack);
   --font-69: var(--fw-normal) 6.9rem/1.78 var(--stack);
@@ -381,6 +383,12 @@ ul.social_media_link li { max-width: 3.9rem; }
 ul.social_media_link li a { transition: transform 0.5s ease; display: block; }
 ul.social_media_link li a:hover { transform: rotate(360deg); }
 .social_wall_grid { list-style: none; margin-top: 8rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.2rem; }
+.custom_lists { margin: 0; padding: 0 0 0 2rem; }
+.custom_lists > li { position: relative; list-style: none;}
+.custom_lists > li:not(:last-child) {
+    margin-bottom: 2rem;
+}
+.custom_lists > li::before { content: ""; position: absolute; width: 0.8rem; height: 0.8rem; background-color: var(--color-f9); left: -2rem; top: 0.8rem; border-radius: 50%; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -o-border-radius: 50%; }
 
 .custom_slider_btn{
   padding: 0.7rem 1rem;
