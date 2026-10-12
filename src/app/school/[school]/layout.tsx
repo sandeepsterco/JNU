@@ -9,7 +9,7 @@ export default async function SchoolLayout({
   children: React.ReactNode;
   params: Promise<{ school: string }>;
 }) {
-  const { school } = await params;
+  const { school } = await params; 
 
   return (
     <>
