@@ -854,7 +854,7 @@
 .caft_lftbx .img_caption> h5 { margin-bottom: 1.4rem; font-weight: 500; }
 .caft_lftbx .img_caption> p { font: var(--font-16); font-weight: 300; }
 .caft_areargt> .img_caption { padding: 4.6rem 5.3rem 6.5rem 5.3rem; background-color: var(--color-white); min-height: 27.3rem; position: relative; }
-.caft_areargt> .img_caption::after { content: ''; background-image: url('../images/wellness_pattern.svg'); height:  27.3rem; width: 41.6rem; position: absolute; right: 0; top: 0; bottom: 0; z-index: 0; }
+.caft_areargt> .img_caption::after { content: ''; background-image: url('/assets/images/wellness_pattern.svg'); height:  27.3rem; width: 41.6rem; position: absolute; right: 0; top: 0; bottom: 0; z-index: 0; }
 .caft_areargt> .img_caption .custom_lists { z-index: 9; position: relative; }
 .caft_areargt { position: relative; }
 .caft_areargt figure span { position: absolute; top: 5.2rem; left: 4rem; font: var(--font-21); color: var(--color-white); font-weight: 500; }
@@ -871,7 +871,7 @@
 .visit_applybx>figure { position: absolute; left: 4rem; top: 0; content: ''; height: 23.3rem; width: 45.2rem; }
 .visit_applybx .visit_text> h3 { font-weight: 200; color: var(--color-white); padding-right: 6.5rem; }
 .visit_desc> p { color: var(--color-white); font: var(--font-16); line-height: 1.7; font-weight: 300; margin-right: 11rem; }
-.visit_applybx::before { background-image: url(../images/visit_apply_pattren.svg); position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height:100%; width: 19.5rem; content: ""; z-index: 0; opacity: 0.47; }
+.visit_applybx::before { background-image: url(/assets/images/visit_apply_pattren.svg); position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height:100%; width: 19.5rem; content: ""; z-index: 0; opacity: 0.47; }
 /* ================= Hostel Facilities Page End==============  */
 /* ================= Transportation Page Start==============  */
 .trans_ovr { padding-block: 12rem 0; }
@@ -1017,14 +1017,14 @@
 
 
 .sports-facilities {padding-block: 12rem 14rem;position: relative;}
-.sports-facilities::before { background-image: url(../images/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 82rem; width: 100%; content: ""; z-index: -1; }
+.sports-facilities::before { background-image: url(/assets/images/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 82rem; width: 100%; content: ""; z-index: -1; }
 .sport_facillities{margin-top: 0;padding-top: 0;border: none;}
 .sport_facillities {display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.3rem; align-items: center; }
 .sport_facillities_right { padding-inline: 13.5rem 0; max-width: 69rem; }
 .sport_facillities_right .sport_title_header { text-align: left; }
 .sport_facillities_right h4 { font-weight: 300; margin-bottom: 2.4rem; line-height: 1.1; color: var(--color-23); padding-right: 8rem; }
 .sport_facillities_right .sport_title_header .font21 { margin-bottom: 2rem; }
-.jnu_atglance_section { background-image: url(../images/back_pattern.svg); background-size: contain; background-repeat: repeat; width: 100%; padding-block: 12rem; }
+.jnu_atglance_section { background-image: url(/assets/images/back_pattern.svg); background-size: contain; background-repeat: repeat; width: 100%; padding-block: 12rem; }
 .sport_title_header { text-align: center; }
 .sport_title_header .font21 { margin-bottom: 3rem; color: var(--color-cf); font-weight: 500; }
 .sport_title_header blockquote { font: var(--font-21); font-weight: 300; color: var(--color-23); line-height: 1.6; margin-bottom: 2.4rem; }
