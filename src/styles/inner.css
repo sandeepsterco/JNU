@@ -999,7 +999,7 @@
 .domainskill_grid .domainskill_rgtsec { max-width: 43.3rem; margin: auto; margin-left: 15rem; }
 .domainskill_grid .domainskill_rgtsec h5 { color: var(--color-cf); margin-bottom: 3.2rem; }
 .domainskill_grid .domainskill_rgtsec p { font: var(--font-16); font-weight: 300; }
-.domainskill_grid:after { content: ''; position: absolute; right: 0; top: 0; width: 19.2rem; height: 100%; background-image: url('../images/domain-skills-pattren.svg'); background-repeat: no-repeat; }
+.domainskill_grid:after { content: ''; position: absolute; right: 0; top: 0; width: 19.2rem; height: 100%; background-image: url('/assets/images/domain-skills-pattren.svg'); background-repeat: no-repeat; }
 .indust_inte_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
 .indust_inte_grid>.indus_intcol { background-color: var(--color-white); }
 .indus_inttext { margin-inline: 12.5rem 18rem; padding-block: 10.6rem 12.7rem; }
@@ -1019,8 +1019,8 @@
 .place_fact_grid .plaec_factbx p { font-weight: 300; }
 .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -3.2rem; }
 .place_fact_main { background-color: var(--color-white); padding-inline: 17.2rem 17.3rem; padding-block: 5.1rem; position: relative; }
-.place_fact_main:after { position: absolute; left: 0; width: 12.5rem; height: 100%; background-image: url(../images/placement_fact_pattern_01.svg); top: 0; content: ''; }
-.place_fact_main:before { position: absolute; right: 0; width: 12.5rem; height: 100%; background-image: url(../images/placement_fact_pattern_02.svg); top: 0; content: ''; }
+.place_fact_main:after { position: absolute; left: 0; width: 12.5rem; height: 100%; background-image: url(/assets/images/placement_fact_pattern_01.svg); top: 0; content: ''; }
+.place_fact_main:before { position: absolute; right: 0; width: 12.5rem; height: 100%; background-image: url(/assets/images/placement_fact_pattern_02.svg); top: 0; content: ''; }
 .place_com_trend { padding-block: 15rem ; }
 .plcom_tredgrid { display: grid; grid-template-columns: 35.6% auto; }
 .pc_tredrgt { padding-left: 7.55rem; margin-left: 5.3rem; position: relative; }
