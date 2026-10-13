@@ -803,12 +803,12 @@
 .social_res_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 5rem; align-items: center; }
 .social_respon_ovr .jnu_title_header> blockquote { padding-inline: 1.5rem; }
 .social_res_grid> .socil_contentbx { max-width: 65rem; margin-inline: auto; }
-.social_res_grid> .socil_contentbx p { font-weight: 300; }
+.social_res_grid> .socil_contentbx p { font-weight: 300;font: var(--font-16); line-height: 1.7;}
 .social_keyinti { padding-block: 0 12rem; }
 .social_keyinti .jnu_title_header .font21{margin-bottom: 4rem;}
 .social_keyintigrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3rem; }
 .social_keyintigrid> .social_keybx { background-color: var(--color-white); padding-inline: 5rem; padding-block: 5.5rem 14.7rem; text-align: center; position: relative; }
-.social_keyintigrid> .social_keybx >h4 { font: var(--font-24); font-weight: 300; color: var(--color-23); line-height: 1.5; margin-bottom: 2.4rem; }
+.social_keyintigrid> .social_keybx >h4 { font: var(--font-24); font-weight: 300; color: var(--color-23); line-height: 1.5; margin-bottom: 2.4rem;    min-height: 7rem; }
 .social_keyintigrid> .social_keybx >p { font: var(--font-16); line-height: 1.69; }
 .social_keybx::after { content: ""; z-index: 9; background: linear-gradient(
         to right,
@@ -975,12 +975,78 @@
 .alumni_netwk .jnu_title_header h2{font-weight: 300;margin-bottom: 3.2rem; }
 .alumni_netwk .jnu_title_header blockquote{margin-bottom: 3.2rem;padding-inline: 4rem;}
 .alumni_btmgrid{display: grid;grid-template-columns: auto 49.3%;gap: 8.2rem;align-items: center;}
-.alumni_btmgrid .alumni_nt_lft p{font: var(--font-16);}
+.alumni_btmgrid .alumni_nt_lft p{font: var(--font-16);line-height: 1.7;}
 .alumni_nt_lft h3{font-weight: 300;margin-top: 5.9rem;}
 .alumni_nt_lft{padding-left: 13.4rem;}
 .alumni_nt_lft p{padding-right: 8rem;}
 .alumni_ovrbtm{margin-block:2.5rem 0;}
 /* Alumni Network  Page  End */
+/* Career Guidance CSS Start*/
+.career_guid_main { padding-block: 12rem 0; }
+.career_guid_main.hero_bg_pattern::before { height: 100%; }
+.career_guid_grid { display: grid; grid-template-columns: 49.3% auto; align-items: center; gap: 15rem; }
+.career_guid_grgt { max-width: 47.5rem; }
+.career_guid_grgt>h4 { color: var(--color-cf); margin-bottom: 3.2rem; }
+.career_guid_grgt>p { font: var(--font-16); font-weight: 300; line-height: 1.7; }
+.ca_gui_softskill { margin-block: 9.5rem 12rem; }
+.cagui_soft_grid { display: grid; grid-template-columns: auto 49.3%; align-items: center; gap: 10rem; }
+.cagui_solft { max-width: 64.9rem; margin-left: auto; }
+.cagui_solft>h4 { color: var(--color-cf); margin-bottom: 3.2rem; }
+.cagui_solft>p { font: var(--font-16); font-weight: 300; line-height: 1.7; }
+.cagui_solft ul { margin-bottom: 3.6rem; }
+.domain_skill { margin-bottom: 12rem; }
+.domainskill_grid { display: grid; grid-template-columns: 49.3% auto ; align-items: center; background-color:  var(--color-white); position: relative; }
+.domainskill_grid .domainskill_rgtsec { max-width: 43.3rem; margin: auto; margin-left: 15rem; }
+.domainskill_grid .domainskill_rgtsec h5 { color: var(--color-cf); margin-bottom: 3.2rem; }
+.domainskill_grid .domainskill_rgtsec p { font: var(--font-16); font-weight: 300; }
+.domainskill_grid:after { content: ''; position: absolute; right: 0; top: 0; width: 19.2rem; height: 100%; background-image: url('../images/domain-skills-pattren.svg'); background-repeat: no-repeat; }
+.indust_inte_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+.indust_inte_grid>.indus_intcol { background-color: var(--color-white); }
+.indus_inttext { margin-inline: 12.5rem 18rem; padding-block: 10.6rem 12.7rem; }
+.indus_inttext .custom_lists { margin-bottom: 3.8rem; }
+.indus_inttext .custom_lists > li { font-weight: 300; font: var(--font-16); }
+.indus_inttext  p { font-weight: 300; }
+.industy_intresec { margin-bottom: 15rem; }
+.industy_intresec .jnu_title_header { margin-bottom: 8rem; }
+/* Career Guidance CSS End*/
+/* Placements Overview CSS Start*/
+.placement_ovr { padding-block: 12rem 0; }
+.place_ovrimg { margin-bottom: 15rem; }
+.placement_ovr .jnu_title_header { margin-bottom: 8rem; }
+.placement_ovr .jnu_title_header blockquote { padding-inline: 4rem; }
+.place_fact_grid { grid-template-columns: 23.8rem 17.7rem 13rem 16.4rem; display: grid; gap: 14rem; }
+.place_fact_grid .plaec_factbx h3 { font: var(--font-56); color: var(--color-cf); font-weight: 400; }
+.place_fact_grid .plaec_factbx p { font-weight: 300; }
+.place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -3.2rem; }
+.place_fact_main { background-color: var(--color-white); padding-inline: 17.2rem 17.3rem; padding-block: 5.1rem; position: relative; }
+.place_fact_main:after { position: absolute; left: 0; width: 12.5rem; height: 100%; background-image: url(../images/placement_fact_pattern_01.svg); top: 0; content: ''; }
+.place_fact_main:before { position: absolute; right: 0; width: 12.5rem; height: 100%; background-image: url(../images/placement_fact_pattern_02.svg); top: 0; content: ''; }
+.place_com_trend { padding-block: 15rem ; }
+.plcom_tredgrid { display: grid; grid-template-columns: 35.6% auto; }
+.pc_tredrgt { padding-left: 7.55rem; margin-left: 5.3rem; position: relative; }
+.pc_tredrgt::after { position: absolute; left: 0; top: 0; height: 100%; width: 0.1rem; content: ''; background-color: var(--color-d5); }
+.pc_tredrgt h4 { margin-top: 4.6rem; padding-top: 4.6rem; color: var(--color-cf); line-height: 1.142; border-top: 0.1rem solid var(--color-d5); font-weight: 300; }
+.pc_tredrgt p { font: var(--font-16); font-weight: 300; }
+.place_com_trend h5 { margin-bottom:2.5rem; color: var(--color-cf); font-weight: 500; padding-left: 10rem; }
+.pc_tredlft .pc_trenlft_text>p { font: var(--font-16); font-weight: 300; margin-bottom: 1.4rem; }
+.pc_trenlft_text { margin-bottom: 6.7rem; padding-left: 10rem; padding-right: 1rem; }
+.pc_trenlft_text span { font: var(--font-14); }
+.career_devlp_grid { display: grid; grid-template-columns: repeat(2, 1fr); position: relative; isolation: isolate; gap: 12.5rem; align-items: start; }
+.career_devlp_grid:after { content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 100%; background-color: var(--color-white); z-index: -1; }
+
+.career_devlp_grid .career_devl_rgt { max-width: 62.5rem; padding-top: 9.8rem; }
+.career_devlp_grid .career_devl_lft { z-index: 10; position: sticky; top: 0rem; }
+.career_devl_rgt h5 { margin-bottom: 3.4rem; color: var(--color-cf); font-weight: 500; }
+.career_devl_rgt p { font-weight: 300; font: var(--font-16); line-height: 1.68; }
+.career_rgttop h3 { font-weight: 300; margin-bottom: 4.7rem; line-height: 1.23; }
+.career_rgttop { margin-bottom: 12.4rem; }
+.career_rgt_btm h4 { font: var(--font-32); color: var(--color-ccc); margin-bottom: 1.6rem; font-weight: 300; }
+.career_rgt_btm h5 { margin-bottom: 3.2rem; }
+.career_rgt_btm { padding-bottom: 6.5rem; margin-bottom: 6.5rem; border-bottom: 0.1rem solid var(--color-d5); }
+.career_rgt_btm ul { margin-bottom: 4.8rem; }
+/* Placements Overview CSS End*/
+
+
 
 
 /* SS13102026 */
@@ -1007,10 +1073,44 @@
 .nsss_grid { display: grid; grid-template-columns: 49.3% auto; gap: 15rem; align-items: center; }
 .nss_rgtcontent { max-width: 42.6rem; }
 .nsss_grid h5 { color: var(--color-cf); padding-bottom: 2.4rem; font-weight: var(--fw-medium); }
-.border_line_dv { position: relative; }
-.border_line_dv::after { position: absolute; content: ''; bottom: 0; right: 48.1rem; margin-top: 24.5rem; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 70%, var(--color-cf) 70%, var(--color-cf) 100%); width: 23.9rem; height: 0.2rem; }
+.nsss_grid:first-child { position: relative; }
+.nsss_grid:first-child::after { position: absolute; content: ''; bottom: 0; right: 48.1rem; margin-top: 24.5rem; background: linear-gradient(
+        to right,
+        var(--color-fa) 0%,
+        var(--color-fa) 70%,
+        var(--color-cf) 70%,
+        var(--color-cf) 100%
+    ); width: 23.9rem; height: 0.2rem; }
 .scl_srvc_lst { margin-block: 2.5rem 15rem; }
 .scl_srvc_lst_grd { display: grid; grid-template-columns: 600fr 600fr; gap: 2.5rem; margin-bottom: 3.6rem; }
+
+/* Student Club  */
+.cstm_hero .hero_bg_pattern::before{height: 82rem;}
+.stdnt_ovrvew_grid{display: grid;grid-template-columns: 49.3% auto; gap: 15rem;padding-top: 12rem;}
+.stdnt_ovrvew_grid .stdnt_clb_rght{max-width: 57.5rem;padding-block: 18.8rem 18.7rem;}
+.stdnt_clb_rght h2{padding-right: 4rem;padding-bottom: 2.4rem;font-weight: 300;line-height: 1.14;}
+.radio_jnu{margin-top: 10rem;}
+.radio_jnu .jnu_title_header h5{margin-bottom: 2.4rem;}
+.radio_jnu .jnu_title_header p{font: var(--font-16);font-weight: 300;}
+.stdnt_culb_title{font: var(--font-21);color: var(--color-cf);font-weight: var(--fw-medium);line-height: 1.42;margin-bottom: 2.4rem;}
+.radio_jnu_grid{display: grid;grid-template-columns: 49.71% auto;gap: 13.7rem;margin-top: 6.7rem;padding-left: 1.5rem;}
+.radio_rght{max-width: 51.4rem;padding-top: 6rem;}
+.radio_left{position: relative;}
+.radio_left figure {position: sticky;top: 10rem;height: auto;overflow: hidden;}
+.radio_left figure:nth-child(1){    z-index: 1;}
+.radio_left figure:nth-child(2) {    z-index: 2;}
+.jnu_digital{margin-top: 10rem;}
+.jnu_digital_grid{display: grid;grid-template-columns: auto 49.3%;gap: 22.4rem;}
+.jnu_digital_lft {max-width: 51.3rem;margin-left: auto;padding-block: 12.2rem 20.3rem;}
+.our_blog{margin-top: 10rem;}
+.our_blog_grid{display: grid;grid-template-columns: 49.28% auto; gap: 15rem;}
+.our_blog_rght{max-width: 52rem;margin-right: auto;padding-block: 16.3rem 13.8rem;}
+.jnu_podcast{margin-top: 12rem;}
+.jnu_podcast .jnu_title_header h5{margin-bottom: 2.4rem;}
+.jnu_podcast .jnu_title_header p{font: var(--font-16);font-weight: 300;}
+.jnu_podcast_grd{display: grid;grid-template-columns: repeat(2,1fr);gap: 2.4rem;margin-top: 8rem;}
+.jnu_newslatter{padding-block: 10rem 12rem;}
+.jnu_newslatter .jnu_title_header h5{margin-bottom: 2.4rem;}
 
 
 /* JS13102026 */
