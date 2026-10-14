@@ -854,7 +854,7 @@
 .caft_lftbx .img_caption> h5 { margin-bottom: 1.4rem; font-weight: 500; }
 .caft_lftbx .img_caption> p { font: var(--font-16); font-weight: 300; }
 .caft_areargt> .img_caption { padding: 4.6rem 5.3rem 6.5rem 5.3rem; background-color: var(--color-white); min-height: 27.3rem; position: relative; }
-.caft_areargt> .img_caption::after { content: ''; background-image: url('/assets/images/wellness_pattern.svg'); height:  27.3rem; width: 41.6rem; position: absolute; right: 0; top: 0; bottom: 0; z-index: 0; }
+.caft_areargt> .img_caption::after { content: ''; background-image: url('/images/wellness_pattern.svg'); height:  27.3rem; width: 41.6rem; position: absolute; right: 0; top: 0; bottom: 0; z-index: 0; }
 .caft_areargt> .img_caption .custom_lists { z-index: 9; position: relative; }
 .caft_areargt { position: relative; }
 .caft_areargt figure span { position: absolute; top: 5.2rem; left: 4rem; font: var(--font-21); color: var(--color-white); font-weight: 500; }
@@ -871,7 +871,7 @@
 .visit_applybx>figure { position: absolute; left: 4rem; top: 0; content: ''; height: 23.3rem; width: 45.2rem; }
 .visit_applybx .visit_text> h3 { font-weight: 200; color: var(--color-white); padding-right: 6.5rem; }
 .visit_desc> p { color: var(--color-white); font: var(--font-16); line-height: 1.7; font-weight: 300; margin-right: 11rem; }
-.visit_applybx::before { background-image: url(/assets/images/visit_apply_pattren.svg); position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height:100%; width: 19.5rem; content: ""; z-index: 0; opacity: 0.47; }
+.visit_applybx::before { background-image: url(/images/visit_apply_pattren.svg); position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height:100%; width: 19.5rem; content: ""; z-index: 0; opacity: 0.47; }
 /* ================= Hostel Facilities Page End==============  */
 /* ================= Transportation Page Start==============  */
 .trans_ovr { padding-block: 12rem 0; }
@@ -999,7 +999,7 @@
 .domainskill_grid .domainskill_rgtsec { max-width: 43.3rem; margin: auto; margin-left: 15rem; }
 .domainskill_grid .domainskill_rgtsec h5 { color: var(--color-cf); margin-bottom: 3.2rem; }
 .domainskill_grid .domainskill_rgtsec p { font: var(--font-16); font-weight: 300; }
-.domainskill_grid:after { content: ''; position: absolute; right: 0; top: 0; width: 19.2rem; height: 100%; background-image: url('/assets/images/domain-skills-pattren.svg'); background-repeat: no-repeat; }
+.domainskill_grid:after { content: ''; position: absolute; right: 0; top: 0; width: 19.2rem; height: 100%; background-image: url('/images/domain-skills-pattren.svg'); background-repeat: no-repeat; }
 .indust_inte_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
 .indust_inte_grid>.indus_intcol { background-color: var(--color-white); }
 .indus_inttext { margin-inline: 12.5rem 18rem; padding-block: 10.6rem 12.7rem; }
@@ -1019,8 +1019,8 @@
 .place_fact_grid .plaec_factbx p { font-weight: 300; }
 .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -3.2rem; }
 .place_fact_main { background-color: var(--color-white); padding-inline: 17.2rem 17.3rem; padding-block: 5.1rem; position: relative; }
-.place_fact_main:after { position: absolute; left: 0; width: 12.5rem; height: 100%; background-image: url(/assets/images/placement_fact_pattern_01.svg); top: 0; content: ''; }
-.place_fact_main:before { position: absolute; right: 0; width: 12.5rem; height: 100%; background-image: url(/assets/images/placement_fact_pattern_02.svg); top: 0; content: ''; }
+.place_fact_main:after { position: absolute; left: 0; width: 12.5rem; height: 100%; background-image: url(/images/placement_fact_pattern_01.svg); top: 0; content: ''; }
+.place_fact_main:before { position: absolute; right: 0; width: 12.5rem; height: 100%; background-image: url(/images/placement_fact_pattern_02.svg); top: 0; content: ''; }
 .place_com_trend { padding-block: 15rem ; }
 .plcom_tredgrid { display: grid; grid-template-columns: 35.6% auto; }
 .pc_tredrgt { padding-left: 7.55rem; margin-left: 5.3rem; position: relative; }
@@ -1037,15 +1037,37 @@
 .career_devlp_grid .career_devl_rgt { max-width: 62.5rem; padding-top: 9.8rem; }
 .career_devlp_grid .career_devl_lft { z-index: 10; position: sticky; top: 0rem; }
 .career_devl_rgt h5 { margin-bottom: 3.4rem; color: var(--color-cf); font-weight: 500; }
-.career_devl_rgt p { font-weight: 300; font: var(--font-16); line-height: 1.68; }
+.career_devl_rgt p {  font: var(--font-16); line-height: 1.68; font-weight: 300;}
 .career_rgttop h3 { font-weight: 300; margin-bottom: 4.7rem; line-height: 1.23; }
 .career_rgttop { margin-bottom: 12.4rem; }
 .career_rgt_btm h4 { font: var(--font-32); color: var(--color-ccc); margin-bottom: 1.6rem; font-weight: 300; }
 .career_rgt_btm h5 { margin-bottom: 3.2rem; }
 .career_rgt_btm { padding-bottom: 6.5rem; margin-bottom: 6.5rem; border-bottom: 0.1rem solid var(--color-d5); }
 .career_rgt_btm ul { margin-bottom: 4.8rem; }
+.industy_mainsec{margin-top: 6.5rem;padding-bottom: 15.4rem;}
+.industy_mainsec .jnu_title_header{border-top: 0.1rem solid var(--color-de);padding-top: 10rem;}
+.industy_mainsec .jnu_title_header h5{    margin-bottom: 3.2rem;}
+.indust_grid{display: grid;grid-template-columns: repeat(3, 1fr);gap: 0.8rem;}
+.indust_grid> .industy_bx{padding-block: 2.2rem;background-color: var(--color-white);text-align: center;}
+.indust_grid> .industy_bx p{font: var(--font-18);line-height: 1.5;font-weight: 300;}
 /* Placements Overview CSS End*/
 
+/* Current opening at JNU Start*/
+.career_over { padding-block: 12rem 0; }
+.career_over .jnu_title_header { margin-bottom: 8rem; }
+.career_overimg { margin-bottom: 15rem; }
+.current_opening{position: relative;}
+.current_opening:after{background-color: var(--color-cf);position: absolute;top: 30.4rem;left: 0;height: 100%;width: 100%;content: '';z-index: -1;}
+.current_opening .jnu_title_header { margin-bottom: 8rem; }
+.current_opening .jnu_title_header h3 { margin-bottom: 2.4rem; font-weight: 300; color: var(--color-23); }
+.curr_open_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem; }
+.curr_open_grid .curre_openbx { background-color: var(--color-white); padding: 10.2rem 6.4rem 9.2rem 6.9rem; text-align: center; position: relative; }
+.curr_open_grid .curre_openbx figure { height: 6rem; width: 6rem; margin-inline: auto; }
+.curre_openbx>h4 { margin-bottom: 5.7rem; font: var(--font-24); font-weight: 300; }
+.curr_open_grid>.curre_openbx>p { font: var(--font-16); line-height: 1.7; margin-bottom: 6.8rem; font-weight: 300; }
+.curr_open_grid>.curre_openbx::after { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 16rem, var(--color-cf) 16rem, var(--color-cf) 100%); width: 25.4rem; max-width: 25.4rem; height: 0.2rem; position: absolute; bottom:0rem; left: 0; right: 0; margin: 0 auto; }
+.current_opening .submit_resbtn{padding-block: 7rem 9.7rem;text-align: center;}
+/* Current opening at JNU End*/
 
 
 
@@ -1116,15 +1138,15 @@
 /* JS13102026 */
 
 
-.sports-facilities {padding-block: 12rem 14rem;position: relative;}
-.sports-facilities::before { background-image: url(/assets/images/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 82rem; width: 100%; content: ""; z-index: -1; }
+.sports-facilities {padding-block: 12rem 14rem;}
+/* .sports-facilities::before { background-image: url(/assets/images/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 82rem; width: 100%; content: ""; z-index: -1; } */
 .sport_facillities{margin-top: 0;padding-top: 0;border: none;}
 .sport_facillities {display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.3rem; align-items: center; }
 .sport_facillities_right { padding-inline: 13.5rem 0; max-width: 69rem; }
 .sport_facillities_right .sport_title_header { text-align: left; }
 .sport_facillities_right h4 { font-weight: 300; margin-bottom: 2.4rem; line-height: 1.1; color: var(--color-23); padding-right: 8rem; }
 .sport_facillities_right .sport_title_header .font21 { margin-bottom: 2rem; }
-.jnu_atglance_section { background-image: url(/assets/images/back_pattern.svg); background-size: contain; background-repeat: repeat; width: 100%; padding-block: 12rem; }
+.jnu_atglance_section { background-image: url(/images/back_pattern.svg); background-size: contain; background-repeat: repeat; width: 100%; padding-block: 12rem; }
 .sport_title_header { text-align: center; }
 .sport_title_header .font21 { margin-bottom: 3rem; color: var(--color-cf); font-weight: 500; }
 .sport_title_header blockquote { font: var(--font-21); font-weight: 300; color: var(--color-23); line-height: 1.6; margin-bottom: 2.4rem; }
@@ -1204,6 +1226,104 @@
 .keyimageGroup figure:nth-child(2) {z-index: 2;}
 .keyimageGroup figure:nth-child(3) {z-index: 3;}
 .keyimageGroup figure img {width: 100%;height: 100%;display: block;object-fit: cover;}
+
+
+
+.collabo_classroom { padding-block: 11rem 12rem;}
+.collabo_classroom_overview { margin-block: 5.6rem 0; position: relative; }
+.collabo_classroom_overview::before { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.6; content: ""; bottom: 0; left: 0; right: 0; height: 26.3rem; position: absolute; }
+.collabo_classgrid { display: grid; grid-template-columns: auto 60rem; justify-content: space-between; }
+.collabo_foundation { padding-block: 12rem 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; align-items: center; }
+.collabo_foundation_right { padding-inline:11.2rem 0; max-width: 67rem; }
+.collabo_foundation_right .collabo_header { text-align: left; }
+.collabo_foundation_right h4 { font-weight: 300; margin-bottom: 2.4rem; line-height: 1.1; color: var(--color-23); padding-right: 8rem; }
+.collabo_foundation_right .collabo_header .font21 { margin-bottom: 2rem; }
+.collabo_header{text-align: center;}
+.collabo_foundation_right blockquote { color: var(--color-cf); border-top: 1px solid #c4c4c4; margin-top: 5.3rem; padding-top: 5rem; font-weight: 300; padding-right: 2rem; }
+.collabo_header .font21 { margin-bottom: 3rem; color: var(--color-cf); font-weight: 500; }
+.collabo_header blockquote { font: var(--font-21); font-weight: 300; color: var(--color-23); line-height: 1.6; margin-bottom: 0; }
+.collabo_header p { font: var(--font-16); font-weight: 300;line-height: 1.7; }
+.collabo_header .custm_bullets{margin-block: 4.1rem 4.5rem;}
+.collabo_header .custm_bullets > li::before {content: "";position: absolute;width: 0.8rem;height: 0.8rem;background-color: #F9CE2E;left: -2rem;top: 0.8rem;border-radius: 50%;-webkit-border-radius: 50%;}
+.collabo_header .custm_bullets > li {position: relative;list-style: none;font: var(--font-16);font-weight: 300;margin-block: 2.5rem;}
+
+
+.industours_section { width: 100%;}
+.industours_section .industours_grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; background-color: var(--color-23); padding-block: 1rem;}
+.industours_section .industours_bx { display: grid; grid-template-columns: minmax(0, 84rem) minmax(0, 1fr); gap: 1rem; min-width: 0;}
+.industours_section .industours_bx figure { margin: 0; min-width: 0; overflow: hidden;}
+.industours_section .industours_bx figure img { display: block; width: 100%; height: 100%; object-fit: cover;}
+.industours_section .industours_stage_global { display: flex; align-items: center; flex-direction: column; padding-inline: 6rem 9.7rem; justify-content: center; min-width: 0;}
+.industours_section .industours_stage_global h4 { font: var(--font-21); color: var(--color-white); font-weight:500; line-height: 1.7;margin-bottom: 2.4rem;}
+.industours_section .industours_stage_global p { font: var(--font-16); color: var(--color-white); font-weight:300; margin-block: 0;}
+.industours_section .industours_stage_global a { min-width: 3rem; min-height: 3rem; width: 3rem; height: 3rem; border: 1px solid var(--color-white); text-align: center; display: block; padding: 0.7rem 1rem; margin-top: 3.2rem;}
+.industours_section .industours_stage_global a:hover { background-color: var(--color-white);}
+.industours_section .industours_stage_global a img { filter: brightness(0) invert(1);}
+.industours_section .industours_stage_global a:hover img { filter: brightness(1) invert(0);}
+.industours_section .industours_grid_2 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; background-color: var(--color-23); padding-bottom: 1rem;}
+.industours_section .industours_audi_bx { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; min-width: 0;}
+.industours_section .industours_audi_bx:nth-child(2) { display: grid; grid-template-columns: repeat(1, minmax(0, 1fr)); gap: 1rem; min-width: 0;}
+.industours_section .industours_audi_bx figure { margin: 0; min-width: 0; overflow: hidden;}
+.industours_section .industours_audi_bx figure img { display: block; width: 100%; height: 100%; object-fit: cover;}
+.industours_section .industours_audi_bluebx { background-color: var(--color-06); position: relative; padding: 4.3rem;}
+.industours_section .industours_audi_bluebx p { line-height: 2.6rem; color: var(--color-white); font: var(--font-18); font-weight: 300; max-width: 70%;}
+.industours_section .industours_audi_bluebx h3 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; color: var(--color-white);}
+.industours_section .industours_audi_bluebx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem;}
+.industours_section .industours_audi_whitebx { background-color: var(--color-white); position: relative; padding: 4.3rem;}
+.industours_section .industours_audi_whitebx p { line-height: 2.6rem; color: var(--color-black); font: var(--font-24); font-weight: 300;}
+.industours_section .industours_audi_whitebx h3 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; color: var(--color-cf);}
+.industours_section .industours_audi_whitebx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem;}
+.industours_section .industours_bg_white { background-color: var(--color-white);}
+.industours_section .industours_audi_redbx { background-color: var(--color-white); position: relative; min-height: 100%;}
+.industours_section .industours_audi_redbx p { line-height: 2.6rem; color: var(--color-white); font: var(--font-18); max-width: 65%;}
+.industours_section .industours_audi_redbx h3 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; color: var(--color-white);}
+.industours_section .industours_audi_redbx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem;}
+.industours_section .industours_audi_redbx_overlay { position: absolute; inset: 0; background-color: rgba(207, 30, 98, 0.8); padding: 3.4rem 4.2rem;opacity: 0.56;}
+.industours_title_header { text-align: center; }
+.industours_title_header .font21 { margin-bottom: 3rem; color: var(--color-cf); font-weight: 500; }
+.industours_title_header blockquote { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; margin-bottom: 2.4rem; }
+
+.gymnasium_section {width: 100%;}
+.inter_grid {display: grid;grid-template-columns: repeat(2, minmax(0, 1fr));align-items: center;background: var(--color-white);}
+.inter_contant {position: relative;height: 100%;box-sizing: border-box;padding: 0rem 16.5rem 0 22.7rem;display: flex;flex-direction: column;justify-content: center;}
+.inter_contant > figure {position: absolute;left: 0;top: 0;bottom: 0;width: 12.5rem;max-width: 12.5rem;margin: 0;display: flex;align-items: center;justify-content: flex-start;pointer-events: none;}
+.inter_contant > figure img {display: block;width: 100%;height: auto;}
+.inter_content_inner {position: relative;z-index: 1;}
+.inter_contant .font21 {margin-top: 0;margin-bottom: 2.4rem;}
+.inter_contant > .inter_content_inner > p {font: var(--font-16);font-weight: 300;color: var(--color-23);line-height: 1.7;}
+.inter_contant .custm_bullets {margin-block: 4.1rem 4.5rem;}
+.inter_contant .custm_bullets > li::before {background-color: #F9CE2E;}
+.inter_image {width: 100%;height: 100%;margin: 0;}
+.inter_image img {display: block;width: 100%;height: 100%;object-fit: cover;}
+
+
+.partnership-sec {position: relative;overflow: clip;padding-bottom: 15rem;}
+.partnership_grid{display: grid;grid-template-columns: repeat(2, minmax(0, 1fr));align-items: self-start;gap: 2.5rem;border-bottom: solid 1px #DEDEDE;padding-bottom: 10.1rem}
+.partnership_right {padding-inline: 13.5rem 0;max-width: 62rem;}
+.partnership_header .font21 {margin-bottom: 2.4rem;color: var(--color-cf);font-weight: 500;}
+.partnership_header>p {font: var(--font-16);font-weight: 300;line-height: 1.7;}
+
+
+
+.partnership_stack {position: relative;display: grid;grid-template-columns: 1fr;}
+.partnership_slide {display: grid;grid-template-columns: repeat(2, minmax(0, 1fr));gap: 2.5rem;position: sticky;top: 14rem;min-height: auto;align-items: stretch;box-sizing: border-box;}
+.partnership_slide:nth-child(1) {z-index: 1;}
+.partnership_slide:nth-child(2) {z-index: 2;margin-top: -1px;}
+.partnership_image {min-width: 0;height: auto;overflow: hidden;}
+.partnership_image figure {height: auto;margin: 0;}
+.partnership_image img {display: block;height: auto;object-fit: cover;}
+.partnership_content {min-width: 0;height: auto;box-sizing: border-box;padding-inline: 12.5rem 0;background: #f5f5f5;display: flex;flex-direction: column;justify-content: center;max-width: 60rem;}
+.partnership_content .font21 {margin-bottom: 2.4rem;color: var(--color-cf);font-weight: 500;}
+.partnership_content p {font: var(--font-16);font-weight: 300;color: var(--color-23);line-height: 1.7;margin-bottom: 2rem;}
+.partnership_slide .custm_bullets {margin-block: 0rem 2rem;border-bottom: solid 1px #ddd;padding-bottom: 4rem;}
+.partnership_slide .custm_bullets > li::before {background-color: #F9CE2E;}
+.partnership_slide .custm_bullets > li:first-child{margin-top: 0;}
+.partnership_slide .custm_bullets > li:last-child{margin-bottom: 0;}
+.partnership_slide .btn{margin-top: 4.4rem;}
+.partnership_slide .btn>a {color: var(--color-cf);border: 1px solid #cf1e624d;padding: .7rem 4.5rem .7rem 2.4rem;position: relative;font: var(--font-16);font-weight: 300;line-height: 1.7;}
+.collabra_faq .font42{margin-bottom: 5.6rem;}
+.collabra_faq .tab_heading:first-child{padding-block:3.5rem 3.2rem;}
+.collabra_faq .tab_heading {border-bottom: 0.1rem dotted #fff;}
 
 
 
