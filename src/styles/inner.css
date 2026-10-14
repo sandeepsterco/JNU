@@ -868,6 +868,7 @@
 .whychoose_grid> .whychoose_bx h5 { font-weight: 300; line-height: 1.72; margin-bottom: 5rem; min-height: 14.5rem; }
 .whychoose_bx::after { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 16rem, var(--color-cf) 16rem, var(--color-cf) 100%); width: 25.4rem; max-width: 25.4rem; height: 0.2rem; position: absolute; bottom: 0.2rem; left: 0; right: 0; margin: 0 auto; }
 .visit_applybx { background-color: var(--color-cf); grid-template-columns: 40% 47% 13.1%; align-items: center; margin-top: 3rem; display: grid; position: relative; padding-inline: 40rem 9.1rem; min-height: 23.3rem; }
+.visit_applybx::after { content: ''; background-image: url('/images/visiting_bg_pattren.webp'); height:  100%; width: 100%; position: absolute; right: 0; top: 0; bottom: 0; z-index: 0; }
 .visit_applybx>figure { position: absolute; left: 4rem; top: 0; content: ''; height: 23.3rem; width: 45.2rem; }
 .visit_applybx .visit_text> h3 { font-weight: 200; color: var(--color-white); padding-right: 6.5rem; }
 .visit_desc> p { color: var(--color-white); font: var(--font-16); line-height: 1.7; font-weight: 300; margin-right: 11rem; }
@@ -1015,7 +1016,7 @@
 .placement_ovr .jnu_title_header { margin-bottom: 8rem; }
 .placement_ovr .jnu_title_header blockquote { padding-inline: 4rem; }
 .place_fact_grid { grid-template-columns: 23.8rem 17.7rem 13rem 16.4rem; display: grid; gap: 14rem; }
-.place_fact_grid .plaec_factbx h3 { font: var(--font-56); color: var(--color-cf); font-weight: 400; }
+.place_fact_grid .plaec_factbx h3 { font: var(--font-56); color: var(--color-cf); font-weight: 400;margin-bottom: 0.8rem; }
 .place_fact_grid .plaec_factbx p { font-weight: 300; }
 .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -3.2rem; }
 .place_fact_main { background-color: var(--color-white); padding-inline: 17.2rem 17.3rem; padding-block: 5.1rem; position: relative; }
@@ -1044,6 +1045,10 @@
 .career_rgt_btm h5 { margin-bottom: 3.2rem; }
 .career_rgt_btm { padding-bottom: 6.5rem; margin-bottom: 6.5rem; border-bottom: 0.1rem solid var(--color-d5); }
 .career_rgt_btm ul { margin-bottom: 4.8rem; }
+.career_rgt_btm ul li {
+    font: var(--font-16);
+    font-weight: 300;
+}
 .industy_mainsec{margin-top: 6.5rem;padding-bottom: 15.4rem;}
 .industy_mainsec .jnu_title_header{border-top: 0.1rem solid var(--color-de);padding-top: 10rem;}
 .industy_mainsec .jnu_title_header h5{    margin-bottom: 3.2rem;}
@@ -1058,6 +1063,7 @@
 .career_overimg { margin-bottom: 15rem; }
 .current_opening{position: relative;}
 .current_opening:after{background-color: var(--color-cf);position: absolute;top: 30.4rem;left: 0;height: 100%;width: 100%;content: '';z-index: -1;}
+.current_opening:before{background-image: url(/images/career_bg_pattern.svg);position: absolute;top: 30.4rem;right: 0;height:67.9rem;width: 50%;content: '';z-index: 1;opacity: 0.2;}
 .current_opening .jnu_title_header { margin-bottom: 8rem; }
 .current_opening .jnu_title_header h3 { margin-bottom: 2.4rem; font-weight: 300; color: var(--color-23); }
 .curr_open_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem; }
