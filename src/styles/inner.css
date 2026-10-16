@@ -809,7 +809,7 @@
 .social_keyintigrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3rem; }
 .social_keyintigrid> .social_keybx { background-color: var(--color-white); padding-inline: 5rem; padding-block: 5.5rem 14.7rem; text-align: center; position: relative; }
 .social_keyintigrid> .social_keybx >h4 { font: var(--font-24); font-weight: 300; color: var(--color-23); line-height: 1.5; margin-bottom: 2.4rem;    min-height: 7rem; }
-.social_keyintigrid> .social_keybx >p { font: var(--font-16); line-height: 1.69; }
+.social_keyintigrid> .social_keybx >p { font: var(--font-16); line-height: 1.69; font-weight: var(--fw-300);}
 .social_keybx::after { content: ""; z-index: 9; background: linear-gradient(
         to right,
         var(--color-fa) 0%,
@@ -868,6 +868,7 @@
 .whychoose_grid> .whychoose_bx h5 { font-weight: 300; line-height: 1.72; margin-bottom: 5rem; min-height: 14.5rem; }
 .whychoose_bx::after { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 16rem, var(--color-cf) 16rem, var(--color-cf) 100%); width: 25.4rem; max-width: 25.4rem; height: 0.2rem; position: absolute; bottom: 0.2rem; left: 0; right: 0; margin: 0 auto; }
 .visit_applybx { background-color: var(--color-cf); grid-template-columns: 40% 47% 13.1%; align-items: center; margin-top: 3rem; display: grid; position: relative; padding-inline: 40rem 9.1rem; min-height: 23.3rem; }
+.visit_applybx::after { content: ''; background-image: url('/images/visiting_bg_pattren.webp'); height:  100%; width: 100%; position: absolute; right: 0; top: 0; bottom: 0; z-index: 0; }
 .visit_applybx>figure { position: absolute; left: 4rem; top: 0; content: ''; height: 23.3rem; width: 45.2rem; }
 .visit_applybx .visit_text> h3 { font-weight: 200; color: var(--color-white); padding-right: 6.5rem; }
 .visit_desc> p { color: var(--color-white); font: var(--font-16); line-height: 1.7; font-weight: 300; margin-right: 11rem; }
@@ -1015,8 +1016,8 @@
 .placement_ovr .jnu_title_header { margin-bottom: 8rem; }
 .placement_ovr .jnu_title_header blockquote { padding-inline: 4rem; }
 .place_fact_grid { grid-template-columns: 23.8rem 17.7rem 13rem 16.4rem; display: grid; gap: 14rem; }
-.place_fact_grid .plaec_factbx h3 { font: var(--font-56); color: var(--color-cf); font-weight: 400; }
-.place_fact_grid .plaec_factbx p { font-weight: 300; }
+.place_fact_grid .plaec_factbx h3 { font: var(--font-56); color: var(--color-cf); font-weight: 400;margin-bottom: 0.8rem; }
+.place_fact_grid .plaec_factbx p { font-weight: 300; font: var(--font-16);}
 .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -3.2rem; }
 .place_fact_main { background-color: var(--color-white); padding-inline: 17.2rem 17.3rem; padding-block: 5.1rem; position: relative; }
 .place_fact_main:after { position: absolute; left: 0; width: 12.5rem; height: 100%; background-image: url(/images/placement_fact_pattern_01.svg); top: 0; content: ''; }
@@ -1044,6 +1045,10 @@
 .career_rgt_btm h5 { margin-bottom: 3.2rem; }
 .career_rgt_btm { padding-bottom: 6.5rem; margin-bottom: 6.5rem; border-bottom: 0.1rem solid var(--color-d5); }
 .career_rgt_btm ul { margin-bottom: 4.8rem; }
+.career_rgt_btm ul li {
+    font: var(--font-16);
+    font-weight: 300;
+}
 .industy_mainsec{margin-top: 6.5rem;padding-bottom: 15.4rem;}
 .industy_mainsec .jnu_title_header{border-top: 0.1rem solid var(--color-de);padding-top: 10rem;}
 .industy_mainsec .jnu_title_header h5{    margin-bottom: 3.2rem;}
@@ -1058,6 +1063,7 @@
 .career_overimg { margin-bottom: 15rem; }
 .current_opening{position: relative;}
 .current_opening:after{background-color: var(--color-cf);position: absolute;top: 30.4rem;left: 0;height: 100%;width: 100%;content: '';z-index: -1;}
+.current_opening:before{background-image: url(/images/career_bg_pattern.svg);position: absolute;top: 30.4rem;right: 0;height:67.9rem;width: 50%;content: '';z-index: 1;opacity: 0.2;}
 .current_opening .jnu_title_header { margin-bottom: 8rem; }
 .current_opening .jnu_title_header h3 { margin-bottom: 2.4rem; font-weight: 300; color: var(--color-23); }
 .curr_open_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem; }
@@ -1069,6 +1075,210 @@
 .current_opening .submit_resbtn{padding-block: 7rem 9.7rem;text-align: center;}
 /* Current opening at JNU End*/
 
+/* GS16102026 */
+/* Centres of Excellence Start*/
+.ctr_excell_over { padding-block: 12rem 0; }
+.ctr_excell_over .jnu_title_header { margin-bottom: 8rem; }
+.ctr_excell_over .jnu_title_header h3 {     font-weight: var(--fw-300); margin-bottom: 3rem; }
+.ctr_excell_grid { display: grid; gap: 15rem; grid-template-columns: 49.3% auto; align-items: center; }
+.ctr_excell_rgt p { font: var(--font-16);     font-weight: var(--fw-300); }
+.ctr_excell_rgt { max-width: 60rem; }
+.ctr_excell_rgt ul { margin-top: 5.5rem; margin-bottom: 9.8rem; padding-bottom: 7.9rem; border-bottom: 0.1rem solid var(--color-de); }
+.ctr_excell_rgt ul li { font: var(--font-16);     font-weight: var(--fw-300); }
+.ctr_excell_tabsec { margin-block: 13rem 15rem; }
+.ctr_exce_lft figure:nth-child(2) { max-width: 70.6%; margin-left: auto; margin-top: 2.5rem; }
+.ctr_excell_rgt .ctr_excrgt_btm h3 {     font-weight: var(--fw-300); color: var(--color-cf); margin-top: 4.7rem; }
+.ctr_tabtop .home_tabs { display: flex; justify-content: center; gap: 5.3rem; border-bottom: 0.1rem solid #E2E2E2; }
+.ctr_tabtop .home_tabs li { font: var(--font-21); font-weight: normal; color: var(--color-cf); padding-bottom: 3.1rem; border-bottom: 0.1rem solid transparent; }
+.ctr_tabtop .home_tabs li.home_active { border-bottom: 0.1rem dashed var(--color-f7); color: var(--color-06); }
+.ctr_extabbody { padding-top: 9.4rem; }
+.critical_thigrid { display: grid; grid-template-columns: auto 49.3%; gap: 12.5rem; margin-bottom: 2.5rem; }
+.critical_thigrid .criti_thiklft { max-width: 53.4rem; margin-left: auto; }
+.criti_thiklft h4 {     font-weight: var(--fw-300); line-height: 1.5; margin-bottom: 5.4rem; padding-right: 2.5rem; }
+.criti_thiklft p { font: var(--font-16);     font-weight: var(--fw-300); }
+.goal_benefi_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+.goal_benefi_grid .goal_bene_col { background-color: var(--color-white); padding: 5.8rem 10.6rem 11rem 10rem; }
+.goal_bene_col h5 { font: var(--font-18); margin-bottom: 3.2rem; }
+.goal_benefi_grid>.goal_bene_col>p { font: var(--font-16);     font-weight: var(--fw-300); margin-bottom: 3.1rem; }
+.ctr_extabbody ul.custom_lists { padding: 0 0 0 2rem; }
+.ctr_extabbody ul.custom_lists li { padding-block: 0; font: var(--font-16);     font-weight: var(--fw-300); }
+.fundmen_promain { padding: 5.4rem 3.7rem 7.1rem 6.2rem; background-color: var(--color-white); margin-top: 2rem; }
+.fundmen_promain .fundat_title { text-align: center; }
+.fundmen_promain .fundat_title h5 { font: var(--font-18); margin-bottom: 1.5rem; }
+.fundmen_promain .fundat_title p { font: var(--font-16);     font-weight: var(--fw-300); margin-bottom: 3.5rem; }
+.activity_grid { display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; }
+.activity_item { padding: 1.5rem 1.2rem; border-right: 1px solid var(--color-de); border-bottom: 1px solid var(--color-de); text-align: center; }
+.activity_item p { font: var(--font-16); }
+.activity_item:nth-child(4n) { border-right: none; }
+.activity_item:nth-child(n+5) { border-bottom: none; }
+.train_gradu_grid { display: grid; grid-template-columns: auto 49.3%; gap: 17.5rem; margin-bottom: 2.5rem; margin-top: 15rem; }
+.train_gradulft h5 { margin-bottom: 3rem; color: var(--color-cf); font-weight: 500; }
+.train_gradulft { max-width: 47.2rem; margin-left: auto; }
+.train_gradulft p { font: var(--font-16);     font-weight: var(--fw-300); padding-right: 3rem; }
+.train_gradulft > ul.custom_lists { margin-top: 4.8rem; }
+/* Centres of Excellence End*/
+
+
+/* Startup Ecosystem Start*/
+.startup_ecomain { padding-block: 10.6rem 0; }
+.startup_ecomain  .jnu_title_header blockquote{margin-bottom: 3rem;}
+.startup_ecogrid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 6rem; display: grid; }
+.startup_eco_btmtext { padding-block: 5.6rem 12.5rem; text-align: center; }
+.startup_eco_btmtext p { font: var(--font-16); text-align: center;     font-weight: var(--fw-300); }
+.startup_eco_btmtext blockquote { font: var(--font-21);     font-weight: var(--fw-300); color: var(--color-23); line-height: 1.6; margin-bottom: 5.6rem; }
+.place_fact_main.starup_eco_factbx { padding-inline: 22rem 22rem; padding-block: 8.3rem 7.7rem; }
+.backtoinno_btn { position: relative; overflow: hidden; border: 1px solid var(--color-cf); padding: 1rem 3rem; color: var(--color-cf); font: var(--font-16); font-weight: 300; z-index: 1; transition: color .4s ease; line-height: 1.2; display: inline-block; }
+.backtoinno_btn::before { content: ""; position: absolute; inset: 0; background: var(--color-cf); transform: translateX(-101%); transition: transform .4s ease; z-index: -1; }
+.backtoinno_btn:hover{color: var(--color-white);}
+.backtoinno_btn:hover::before { transform: translateX(0); }
+.startup_eco_fact { grid-template-columns: repeat(3, 1fr); display: grid; gap: 5rem; }
+.startup_eco_fact .plaec_factbx> h3 { font: var(--font-38); color: var(--color-cf); font-weight: 400; line-height: 1.10; }
+.startup_eco_fact p {     font-weight: var(--fw-300); }
+.infra_competit_sec { margin-bottom: 10rem; }
+.infra_competit_sec h5 { text-align: center; margin-bottom: 5.6rem; font: var(--font-21);     font-weight: var(--fw-300); color: var(--color-23); }
+.patent_ad_grp{padding-right: 25rem;}
+.startup_eco_btmgrid { display: grid; gap: 15rem; grid-template-columns:57.69% auto; align-items: center; margin-top: 5.6rem; }
+.startup_eco_btmgrid .startup_ecorgt { max-width: 47.8rem; }
+.startup_ecorgt p { font: var(--font-16);     font-weight: var(--fw-300); margin-bottom: 1.5rem; }
+.stat_eco_countbtm { display: grid; gap: 5.1rem; grid-template-columns: repeat(2, 1fr); margin-top: 6.3rem; padding-top: 6.9rem; border-top: 0.1rem solid var(--color-de); }
+.start_eco_cont_bx>h3 { font: var(--font-38); color: var(--color-cf); font-weight: normal; margin-bottom: 0.3rem; }
+.startup_keycollgrid { display: grid; gap: 19rem; grid-template-columns:46.39% auto; margin-top: 2.5rem; margin-bottom: 12rem; }
+.stup_keycoll_lft { max-width: 56rem; margin-left: auto;padding-top: 7.5rem; }
+.stup_keycoll_lft p { font: var(--font-16);     font-weight: var(--fw-300); }
+.stup_keycoll_rgt h3 { font: var(--font-38); color: var(--color-cf); font-weight: normal; margin-block:5rem 0.3rem; line-height: 1.10;}
+.stup_keycoll_rgt p { font: var(--font-16);     font-weight: var(--fw-300); }
+/* Startup Ecosystem End*/
+
+
+
+/* Dr. Ambedkar Chair event Start*/
+.am_chair_event_ist { padding-left: 12.5rem; margin-block: 8.2rem 13.5rem; }
+.am_chair_evtbx { display: grid; grid-template-columns: 37.5% auto; background-color: var(--color-white); align-items: center; }
+.am_chair_evtbx h5 { color: var(--color-cf); margin-block: 3.2rem 4rem; }
+.am_chair_evtbx p { font: var(--font-16); font-weight: var(--fw-300); }
+.amchair_ev_content { padding-inline: 13.4rem 15.6rem; }
+.am_chair_evtbx .am_evt_date { border: 0.1rem solid var(--color-cf); padding:.8rem 1.6rem ; }
+.am_chair_event_ist .am_chair_evtbx:not(:nth-last-child(2)) { margin-bottom: 4.9rem; }
+/* Dr. Ambedkar Chair event End*/
+
+
+
+/* Innovation and Incubation Cell Start */
+.inno_incu_main{padding-block: 12rem 0 ;}
+.inno_incu_main .jnu_title_header{margin-bottom: 5rem;}
+.inno_incu_main .jnu_title_header h5{margin-bottom: 3rem;}
+.inno_incu_ovrgrid{display: grid;grid-template-columns: repeat(2, 1fr);gap: 2.5rem;}
+.inno_incunx{display: flex;flex-wrap: wrap;gap: 2rem;}
+.inno_incu_main .inno_ovr_btmtext{padding-block: 5.6rem;}
+.inno_ovr_btmtext p { font-weight: var(--fw-300); font: var(--font-16); text-align: center; }
+.innov_incu_fact .place_fact_grid { grid-template-columns: 12.9% 26.6% 21.5% auto; display: grid; gap: 6.4rem; }
+.innov_incu_fact .place_fact_grid  .plaec_factbx> h3 { font: var(--font-38); color: var(--color-cf); font-weight: 400; line-height: 1.10; }
+.innov_incu_fact .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -5.8rem; right: -2rem; }
+.netwrth_grid { display: grid; grid-template-columns: 48.89% auto; gap: 10.4rem; align-items: center; margin-block: 5.6rem 12rem; }
+.netwrth_grid .ntwrt_rgt p { font: var(--font-16); font-weight: var(--fw-300); margin-bottom: 1.5rem; }
+.netwrth_grid .ntwrt_rgt { padding-right: 1.8rem; }
+.inno_incu_grid { grid-template-columns: repeat(3, 1fr); gap: 3rem; display: grid; }
+.inno_incu_grid .inno_incubx { background-color: var(--color-white); text-align: center; padding: 5rem 3.7rem  9.4rem 3.7rem;  position: relative; }
+.inno_incu_grid .inno_incubx  h4 { font: var(--font-24); color: var(--color-23); min-height: 7rem; margin-bottom: 2.4rem; font-weight: 300; line-height: 1.5; }
+.inno_incu_grid .inno_incubx p { font: var(--font-16); line-height: 1.69;font-weight: var(--fw-300); }
+.inno_incubx:after { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 70%, var(--color-cf) 70%, var(--color-cf) 100%); width: 64%; max-width: 63%; height: .2rem; margin: 0 auto; position: absolute; bottom: .1rem; left: 0; right: 0; }
+.innov_incu_keyhight .jnu_title_header h5{margin-bottom: 5.6rem;}
+.innov_incu_keyhight .load_more_btn{padding-top: 6.1rem;}
+.innov_incu_keyhight{padding-bottom: 13.5rem;}
+.grand_rcv .jnu_title_header{margin-bottom: 5.6rem;}
+.grand_rcv .jnu_title_header h3{font-weight: var(--fw-300);color: var(--color-23);}
+.grand_rcv .msme_grid{display: grid;grid-template-columns: repeat(2, 1fr);background-color: var(--color-cf);align-items: center;height: 100%;}
+.grand_rcv .msme_grid .msme_glft{padding: 7rem 13.2rem 8.9rem 12.5rem;}
+.grand_rcv .msme_grid .msme_glft h5 { color: var(--color-white); margin-bottom: 4rem; font-weight: var(--fw-300); }
+.grand_rcv .msme_grid .msme_glft ul { list-style: none; padding: 0; margin-bottom: 4rem; }
+.grand_rcv .msme_grid .msme_glft ul li { color: var(--color-white); font: var(--font-16); font-weight: var(--fw-300); }
+.grand_rcv .msme_grid .msme_glft ul li:not(:nth-last-child(1)) { margin-bottom: 1.5rem; }
+.grand_rcv .msme_grid .msme_glft p { color: var(--color-white); font: var(--font-16); font-weight: var(--fw-300); }
+.msme_grgt { position: relative; background-color: #231F203D; padding:7rem 7.2rem 8.9rem 8.5rem; ; height: 100%; display: flex; align-items: center; }
+.msme_grgt::after { position: absolute; left: 0; top: 0; right: 0; width: 100%; height: 100%; content: ''; background-image: url('../images/grand_rcv_pattern.webp'); z-index: 0; }
+.msme_grgt .msme_factbx { grid-template-columns: repeat(2, 1fr); z-index: 9; position: relative; gap: 7rem;width: 100%; }
+.place_fact_grid.msme_factbx .plaec_factbx h3 { font: var(--font-46); }
+.place_fact_grid.msme_factbx .plaec_factbx h3.font30 { font: var(--font-30); }
+.place_fact_grid.msme_factbx .plaec_factbx h3,.place_fact_grid.msme_factbx .plaec_factbx p { color: var(--color-white); }
+.msme_aboutgrid{display: grid;grid-template-columns: repeat(2, 1fr);gap: 2.5rem;margin-block: 2.5rem;}
+.msme_aboutgrid .msme_aboutbx{background-color: var(--color-white);padding: 6.7rem 13.2rem 7.7rem 12.5rem;}
+.msme_aboutgrid .msme_aboutbx h5{margin-bottom: 3.9rem;}
+.msme_aboutgrid .msme_aboutbx p{font: var(--font-16);font-weight: var(--fw-300);}
+.stp_eco_evtgrid{display: grid;grid-template-columns: repeat(2, 1fr);gap: 2.5rem;}
+.stp_eco_bx{position: relative;}
+.stp_eco_bx h6{position: absolute;bottom: 4rem;left: 5rem;color: var(--color-white);z-index: 9;}
+.stp_eco_bx::after { position: absolute; left: 0; bottom: 0; position: absolute; width: 100%; height: 15.6rem; background: linear-gradient(180deg, #00000000 0%, #000000 100%); opacity: 0.62; content: ''; z-index: 0; }
+.incu_ourservice{padding-block: 15rem 13.9rem;}
+.incu_ourservice  .jnu_title_header,
+.incu_ourservice  .jnu_title_header h5{margin-bottom: 5.6rem;}
+.incu_ourservice  .jnu_title_header p{font: var(--font-16);font-weight: var(--fw-300);    padding-inline: 10rem;}
+.incu_ourservice .inno_incu_grid .inno_incubx{padding: 5rem 6.8rem 6.7rem 6.8rem;}
+.incu_our_serbtm{text-align: center;margin-top: 4.8rem;}
+.incu_our_serbtm p{font: var(--font-16);font-weight: var(--fw-300);}
+.incu_coll_grid{display: grid;grid-template-columns: 49.3% auto;gap: 13.7rem;align-items: center;margin-bottom: 15rem;}
+.incu_coll_grid .incu_coll_rgt{max-width: 56.3rem;}
+ .incu_coll_text h5{margin-bottom: 4rem;color: var(--color-cf);}
+ .incu_coll_text p{font: var(--font-16);font-weight: var(--fw-300);}
+.incu_succ_grid{display: grid;grid-template-columns: auto 49.3%; gap: 21.8rem;align-items: center;}
+.incu_succ_lft{max-width: 53.2rem;margin-left: auto;}
+.inno_story_people{display: grid;grid-template-columns: repeat(2, 1fr);gap: 2.5rem;margin-top: 2.5rem;}
+.innio_story_col{background-color: var(--color-white);height: 100%;}
+.innio_story_col .inno_story_text{padding: 3.4rem 7.4rem 3.4rem 7.4rem;}
+.innio_story_col .inno_story_text h5{font-weight: var(--fw-300);margin-bottom: 2.4rem;}
+.innio_story_col .inno_story_text p{font: var(--font-16);font-weight: var(--fw-300);}
+.incu_collb_succ{margin-bottom: 12rem;}
+/* Innovation and Incubation Cell End */
+
+
+/* Dr. Ambedkar Chair Start */
+.ambed_chairovr{padding: 12rem  13.5rem;}
+.ambed_chir_grid{display: grid;grid-template-columns: 49.3% auto;gap: 15rem;align-items: center;}
+.ambed_rgt{max-width: 47.5rem;}
+.ambed_rgt> .jnu_title_header{text-align: left;}
+.ambed_rgt> .jnu_title_header h5{margin-bottom: 2.4rem;}
+.ambed_rgt> .jnu_title_header h3{margin-bottom: 2.4rem;font-weight: var(--fw-300);line-height: 1.14;color: var(--color-23);}
+.ambed_rgt> .jnu_title_header p{font: var(--font-16);font-weight: var(--fw-300);}
+.ambed_thrusd_sec .jnu_title_header{margin-bottom: 5rem;}
+.ambed_thre_grid { grid-template-columns: repeat(3, 1fr); gap: 3rem; display: grid; }
+.ambed_thre_grid .ambed_thur_bx { background-color: var(--color-white); text-align: center; padding: 5.1rem 5rem 6.3rem 5rem; position: relative; }
+.ambed_thre_grid .ambed_thur_bx h4 { font: var(--font-24); color: var(--color-23); margin-bottom: 3.8rem; font-weight: 300; line-height: 1.5; }
+.ambed_thur_bx:after { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 70%, var(--color-cf) 70%, var(--color-cf) 100%); width: 64%; max-width: 63%; height: .2rem; margin: 0 auto; position: absolute; bottom: .1rem; left: 0; right: 0; }
+.ambed_thre_grid .ambed_thur_bx figure{max-width: 8rem;height: 8rem;margin-inline: auto;}
+.ambed_ch_thrus_btm{padding-block: 3.7rem;    padding-inline: 1.5rem;}
+.ambed_ch_thrus_btm p{text-align: center;font: var(--font-16);font-weight: var(--fw-300);}
+.ambed_chri_vimis{margin-block: 15rem 3.7rem;}
+.ambed_vimis_grid{display: grid;grid-template-columns: repeat(2, 1fr);gap: 2.5rem;}
+.ambed_vimis_grid .ambed_vimision_bx { padding: 5rem 10rem 6.9rem 12.5rem; }
+.ambed_vimis_grid .ambed_vis_lft { background-color: var(--color-cf); }
+.ambed_vimis_grid .ambed_missrgt { background-color: var(--color-white); padding-right: 14.2rem; }
+.ambed_vimis_grid .ambed_vimision_bx h5 { margin-bottom: 3.3rem; }
+.ambed_vimis_grid .ambed_vimision_bx ul li { font: var(--font-16); font-weight: var(--fw-300); }
+.ambed_vimis_grid .ambed_vis_lft h5,
+.ambed_vimis_grid .ambed_vis_lft ul li { color: var(--color-white); }
+.abt_ambed_chair p{font: var(--font-16);font-weight: var(--fw-300);}
+.abt_ambed_chair .font21 { margin-bottom: 3.2rem; color: var(--color-cf); font-weight: 500; }
+.abt_ambed_grid ,.abt_ambed_legrid{ display: grid; grid-template-columns: 49.19% auto ; gap: 15rem; align-items: center; }
+.abt_ambed_grid .abt_ambed_rgt { max-width: 52.6rem; }
+.abt_ambed_legrid{margin-top: 3.5rem;align-items: end;}
+.abt_ambedle_lft p{padding-right: 7.1rem;}
+.ab_amd_lecareer{margin-block: 5.1rem 0rem ;padding-top: 5.1rem;border-top: 0.1rem solid var(--color-de);}
+.abt_ambed_legrid .ab_amd_lecareer>p { margin-bottom: 4.6rem; }
+.ab_lead_btns { display: flex; gap: 2.8rem; }
+.abambed_lead_bx { position: relative; }
+.abambed_lead_bx .abambed_le_info { position: absolute; bottom: 3.8rem; left: 3.5rem; color: var(--color-white); z-index: 9; max-width: 31.5rem;}
+.abambed_lead_bx .abambed_le_info h4{margin-bottom: 2.2rem;font-weight: var(--fw-300);line-height: 1.71;}
+.abambed_lead_bx .abambed_le_info h4,.abambed_lead_bx .abambed_le_info p{color: var(--color-white);}
+.abambed_lead_bx::after { position: absolute; left: 0; bottom: 0; position: absolute; width: 100%; height: 21.6rem; background: linear-gradient(180deg, #00000000 0%, #000000 100%); opacity: 0.62; content: ''; z-index: 0; }
+.ambed_chair_evet { padding-block: 14.9rem 15rem; }
+.ameb_fea_event { display: grid; grid-template-columns: 49.3% auto; background-color: var(--color-white); align-items: center; }
+.ameb_fea_event h5 { color: var(--color-cf); margin-block: 3.2rem 4rem; }
+.ameb_fea_event p { font: var(--font-16); font-weight: var(--fw-300); }
+.ameb_fea_event_content { padding-inline: 15.5rem 28.7rem; }
+.view_allevent a { display: flex; align-items: center; gap: 1.5rem; margin-top: 3.6rem; color: var(--color-cf); font: var(--font-16); }
+.view_allevent a:hover { color: var(--color-black); }
+.view_allevent a img { width: 3rem; height: 3rem; border: 1px solid var(--color-cf); text-align: center; display: block; padding: 0.7rem 1rem; }
+
+/* Dr. Ambedkar Chair End */
 
 
 /* SS13102026 */
