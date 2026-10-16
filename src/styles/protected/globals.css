@@ -33,8 +33,10 @@
   --color-36:#363636;
   --color-06:#063F8A;
   --color-54:#545152;
-    --color-f2:#F2903F;
-     --color-de:#DEDEDE;
+  --color-f2:#F2903F;
+  --color-de:#DEDEDE;
+  --color-c9:#C9C9C9;
+  --color-ccc:#CCCCCC;
   --font-85: var(--fw-normal) 8.5rem/1.12 var(--stack);
   --font-72: var(--fw-normal) 7.2rem/1.10 var(--stack);
   --font-69: var(--fw-normal) 6.9rem/1.78 var(--stack);
@@ -48,6 +50,7 @@
   --font-36: var(--fw-normal) 3.6rem/1.6 var(--stack);
   --font-33: var(--fw-normal) 3.3rem/1.4 var(--stack);
   --font-34: var(--fw-normal) 3.4rem/0.76 var(--stack);
+  --font-32: var(--fw-normal) 3.2rem/1.5 var(--stack);
   --font-30: var(--fw-normal) 3rem/1.4 var(--stack);
   --font-29: var(--fw-bold) 2.9rem/1.25 var(--stack);
   --font-24: var(--fw-normal) 2.4rem/1.25 var(--stack);
