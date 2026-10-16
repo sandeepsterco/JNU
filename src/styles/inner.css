@@ -1630,3 +1630,18 @@
 .corevalues_Bx figure { position: relative; }
 .corevalues_Bx p { position: absolute; bottom: 3.1rem; left: 4.6rem; font: var(--font-21); color: var(--color-white); z-index: 2;line-height: 3.6rem;font-weight: 300; }
 .corevalues_Bx figure::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.32; position: absolute; bottom: 0; right: 0; left: 0; content: ""; height: 18rem; z-index: 0; }
+
+
+.librarians_grid {display: grid;grid-template-columns: repeat(2,1fr);gap: 2.5rem;margin-block: 2.4rem 0;}
+.logo_content{padding-block: 3.2rem 0;}
+.logo_content .koha-logo{max-width: 17rem;}
+.logo_content>p{font: var(--font-16);font-weight: 300;color: var(--color-23);line-height: 1.7;padding-bottom: 4.2rem;padding-right: 14rem;}
+.logo_content>p>strong{font-weight: bold;}
+.libraries_sec .collabo_foundation{padding-block: 15rem 15rem;}
+.collabra_faq.library_faq .font42{margin-bottom: 1.2rem;}
+.library_faq p{font: var(--font-16);font-weight: 300;color: var(--color-white);line-height: 1.7;}
+.accordion_tab:first-child{margin-top: 5.3rem;}
+.library_faq .tab_content>ul{padding-inline: 5.2rem 0;}
+.library_faq .tab_content>ul>li {position: relative;list-style: none;font: var(--font-16);font-weight: 300;margin-block: 2.5rem;color: var(--color-white);}
+.library_faq .tab_content>ul>li:first-child{margin: 0;}
+.library_faq .tab_content>ul>li::before {content: "";position: absolute;width: 0.8rem;height: 0.8rem;background-color: #F9CE2E;left: -2rem;top: 0.8rem;border-radius: 50%;-webkit-border-radius: 50%;}
