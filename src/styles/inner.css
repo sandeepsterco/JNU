@@ -1195,7 +1195,7 @@
 .grand_rcv .msme_grid .msme_glft ul li:not(:nth-last-child(1)) { margin-bottom: 1.5rem; }
 .grand_rcv .msme_grid .msme_glft p { color: var(--color-white); font: var(--font-16); font-weight: var(--fw-300); }
 .msme_grgt { position: relative; background-color: #231F203D; padding:7rem 7.2rem 8.9rem 8.5rem; ; height: 100%; display: flex; align-items: center; }
-.msme_grgt::after { position: absolute; left: 0; top: 0; right: 0; width: 100%; height: 100%; content: ''; background-image: url('../images/grand_rcv_pattern.webp'); z-index: 0; }
+.msme_grgt::after { position: absolute; left: 0; top: 0; right: 0; width: 100%; height: 100%; content: ''; background-image: url('/images/grand_rcv_pattern.webp'); z-index: 0; }
 .msme_grgt .msme_factbx { grid-template-columns: repeat(2, 1fr); z-index: 9; position: relative; gap: 7rem;width: 100%; }
 .place_fact_grid.msme_factbx .plaec_factbx h3 { font: var(--font-46); }
 .place_fact_grid.msme_factbx .plaec_factbx h3.font30 { font: var(--font-30); }
