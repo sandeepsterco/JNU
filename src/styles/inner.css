@@ -809,7 +809,7 @@
 .social_keyintigrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3rem; }
 .social_keyintigrid> .social_keybx { background-color: var(--color-white); padding-inline: 5rem; padding-block: 5.5rem 14.7rem; text-align: center; position: relative; }
 .social_keyintigrid> .social_keybx >h4 { font: var(--font-24); font-weight: 300; color: var(--color-23); line-height: 1.5; margin-bottom: 2.4rem;    min-height: 7rem; }
-.social_keyintigrid> .social_keybx >p { font: var(--font-16); line-height: 1.69; }
+.social_keyintigrid> .social_keybx >p { font: var(--font-16); line-height: 1.69; font-weight: var(--fw-300);}
 .social_keybx::after { content: ""; z-index: 9; background: linear-gradient(
         to right,
         var(--color-fa) 0%,
@@ -1017,7 +1017,7 @@
 .placement_ovr .jnu_title_header blockquote { padding-inline: 4rem; }
 .place_fact_grid { grid-template-columns: 23.8rem 17.7rem 13rem 16.4rem; display: grid; gap: 14rem; }
 .place_fact_grid .plaec_factbx h3 { font: var(--font-56); color: var(--color-cf); font-weight: 400;margin-bottom: 0.8rem; }
-.place_fact_grid .plaec_factbx p { font-weight: 300; }
+.place_fact_grid .plaec_factbx p { font-weight: 300; font: var(--font-16);}
 .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -3.2rem; }
 .place_fact_main { background-color: var(--color-white); padding-inline: 17.2rem 17.3rem; padding-block: 5.1rem; position: relative; }
 .place_fact_main:after { position: absolute; left: 0; width: 12.5rem; height: 100%; background-image: url(/images/placement_fact_pattern_01.svg); top: 0; content: ''; }
