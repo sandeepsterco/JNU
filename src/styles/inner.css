@@ -338,6 +338,23 @@
 .library_Bx a:hover { background-color: var(--color-white); }
 .library_Bx a img { filter: brightness(0) invert(1); }
 .library_Bx a:hover img { filter: brightness(1) invert(0); }
+
+.library_coll_main{padding-block: 0 15rem;}
+.lib_coll_grid { display: grid; grid-template-columns:58.75% auto; gap: 0.9rem; }
+.lib_colla_lft { background-color: var(--color-white); padding: 4.6rem 12.8rem 5.1rem 8.1rem; }
+.lib_coll_grid h4 { font-weight: var(--fw-300); margin-bottom: 4.2rem; }
+.lib_colla_lft .place_fact_grid .plaec_factbx h3 { margin-bottom: 2.4rem; }
+.lib_colla_lft .place_fact_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 5rem; }
+.lib_e_res_rgt .place_fact_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 5rem; }
+.lib_e_res_rgt { background-color: var(--color-white); padding: 4.6rem 12.8rem 5.1rem 8.1rem; }
+.e_resou{ background-color: var(--color-white); padding: 4.6rem 7.8rem 5.1rem 8rem; }
+.lib_e_res_rgt .custom_lists { margin-top: 7.5rem; }
+.legal_resec { background-color: var(--color-white);  }
+.library_tech{padding:4.7rem 8.8rem 5.6rem 10rem;}
+.e_resou{padding: 4.7rem 7.3rem 5.6rem 8rem;}
+.lib_e_res_rgt .custom_lists > li, .legal_resec .custom_lists li { font: var(--font-16); font-weight: var(--fw-300);}
+.lib_e_res_rgt .custom_lists > li:not(:last-child) { margin-bottom: 0.2rem; }
+.library_tech .custom_lists {display: grid;grid-template-columns: repeat(2, 1fr);gap: 7.9rem;}
 .academic_library .jnu_title_header { padding-inline: 2rem; }
 .auditorium_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 10rem; background-color: var(--color-23); padding-block: 1rem; }
 .auditorium_bx { display: grid; grid-template-columns: 84rem auto; gap: 1rem; }
@@ -1171,7 +1188,7 @@
 .grand_rcv .msme_grid .msme_glft p { color: var(--color-white); font: var(--font-16); font-weight: var(--fw-300); }
 .msme_grgt { position: relative; background-color: #231F203D; padding:7rem 7.2rem 8.9rem 8.5rem; ; height: 100%; display: flex; align-items: center; }
 .msme_grgt::after { position: absolute; left: 0; top: 0; right: 0; width: 100%; height: 100%; content: ''; background-image: url('/images/grand_rcv_pattern.webp'); z-index: 0; }
-.msme_grgt .msme_factbx { grid-template-columns: repeat(2, 1fr); z-index: 9; position: relative; gap: 7rem; width: 100%; }
+.msme_grgt .msme_factbx { grid-template-columns: repeat(2, 1fr); z-index: 9; position: relative; gap: 7rem;width: 100%; }
 .place_fact_grid.msme_factbx .plaec_factbx h3 { font: var(--font-46); }
 .place_fact_grid.msme_factbx .plaec_factbx h3.font30 { font: var(--font-30); }
 .place_fact_grid.msme_factbx .plaec_factbx h3,.place_fact_grid.msme_factbx .plaec_factbx p { color: var(--color-white); }
@@ -1749,3 +1766,18 @@
 .corevalues_Bx figure { position: relative; }
 .corevalues_Bx p { position: absolute; bottom: 3.1rem; left: 4.6rem; font: var(--font-21); color: var(--color-white); z-index: 2; line-height: 3.6rem; font-weight: 300; }
 .corevalues_Bx figure::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.32; position: absolute; bottom: 0; right: 0; left: 0; content: ""; height: 18rem; z-index: 0; }
+
+
+.librarians_grid {display: grid;grid-template-columns: repeat(2,1fr);gap: 2.5rem;margin-block: 2.4rem 0;}
+.logo_content{padding-block: 3.2rem 0;}
+.logo_content .koha-logo{max-width: 17rem;}
+.logo_content>p{font: var(--font-16);font-weight: 300;color: var(--color-23);line-height: 1.7;padding-bottom: 4.2rem;padding-right: 14rem;}
+.logo_content>p>strong{font-weight: bold;}
+.libraries_sec .collabo_foundation{padding-block: 15rem 15rem;}
+.collabra_faq.library_faq .font42{margin-bottom: 1.2rem;}
+.library_faq p{font: var(--font-16);font-weight: 300;color: var(--color-white);line-height: 1.7;}
+.accordion_tab:first-child{margin-top: 5.3rem;}
+.library_faq .tab_content>ul{padding-inline: 5.2rem 0;}
+.library_faq .tab_content>ul>li {position: relative;list-style: none;font: var(--font-16);font-weight: 300;margin-block: 2.5rem;color: var(--color-white);}
+.library_faq .tab_content>ul>li:first-child{margin: 0;}
+.library_faq .tab_content>ul>li::before {content: "";position: absolute;width: 0.8rem;height: 0.8rem;background-color: #F9CE2E;left: -2rem;top: 0.8rem;border-radius: 50%;-webkit-border-radius: 50%;}
