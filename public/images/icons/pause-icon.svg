@@ -1,0 +1,10 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70" width="70" height="70">
+	<defs>
+		<image  width="15" height="21" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAVBAMAAABrtamEAAAAAXNSR0IB2cksfwAAADBQTFRF////////////////////////////////////////////////////////////////Tq+4QAAAABB0Uk5TAkx8cSkAR1z9/+sZplGqVXFbpsUAAAA2SURBVHicY2RUUhJgePf4FmOFotAqNr/3NxhPXmDZwWHDoM74cgPbNi4rBvcBZsDdA3chzM0A7yc9lvMwIGEAAAAASUVORK5CYII="/>
+	</defs>
+	<style>
+		.s0 { opacity: .2;fill: #ffffff } 
+	</style>
+	<path id="Ellipse_333" fill-rule="evenodd" class="s0" d="m34.86 69.72c-19.28 0-34.86-15.58-34.86-34.86 0-19.28 15.58-34.86 34.86-34.86 19.28 0 34.86 15.58 34.86 34.86 0 19.28-15.58 34.86-34.86 34.86z"/>
+	<use id="pause" href="#img1" x="28" y="25"/>
+</svg>

@@ -1,0 +1,28 @@
+.thank_you{
+    text-align: center;
+    height: calc(100vh - 38.3rem);
+    padding: 25rem 0 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.thank_you .heading{
+    font: var(--font-48);
+    margin-bottom: 1rem;
+    font-weight: 600;
+    color: var(--color-cf);
+}
+
+.thank_you .message{
+    font: var(--font-21);
+    padding-top: 1rem;
+}
+
+.thank_you .back_btn{
+    background-color: var(--color-fa);
+    color: var(--color-black);
+    border-radius: .5rem;
+    margin-top: 3rem;
+    padding: 1.5rem 3.5rem;
+}
