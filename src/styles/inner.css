@@ -297,9 +297,9 @@
 .academic_stats li { position: relative; padding-bottom: 4rem; }
 .academic_stats li::before { content: ""; position: absolute; bottom: 0; left: 0rem; max-width: 100%; z-index: 9; width: 100%; height: 0.2rem; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 72%, var(--color-cf) 72%, var(--color-cf) 100%); }
 .academic_foundation { border-top: 1px solid #DEDEDE; margin-top: 12rem; padding-block: 12rem 5rem; display: grid; grid-template-columns:49.3% auto; gap: 2.5rem; align-items: center; }
-.academic_foundation_right { padding-inline: 12.5rem 0; max-width: 67rem; }
+.academic_foundation_right { padding-inline: 12.5rem 0; max-width: 70rem; }
 .academic_foundation_right .jnu_title_header { text-align: left; }
-.academic_foundation_right h4 { font-weight: 300; margin-bottom: 2.4rem; line-height: 1.1; color: var(--color-23); padding-right: 8rem; }
+.academic_foundation_right h4 { font-weight: 300; margin-bottom: 2.4rem; line-height: 1.1; color: var(--color-23); padding-right: 10rem; }
 .academic_foundation_right .jnu_title_header p { font: var(--font-16); font-weight: var(--fw-300); }
 .academic_foundation_right .jnu_title_header .font21 { margin-bottom: 2rem; }
 .academic_foundation_right blockquote { color: var(--color-cf); border-top: 1px solid #c4c4c4; margin-top: 4.8rem; padding-top: 4.8rem; padding-right: 2rem; gap: 3rem; }
@@ -359,13 +359,17 @@
 .auditorium_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 10rem; background-color: var(--color-23); padding-block: 1rem; }
 .auditorium_bx { display: grid; grid-template-columns: 84rem auto; gap: 1rem; }
 .stage_global { display: flex; align-items: center; flex-direction: column; padding-inline: 5.8rem; justify-content: center; }
-.stage_global h4 { font: var(--font-60); color: var(--color-white); font-weight: 200; line-height: 0.95; }
+.stage_global h4 { font: var(--font-60); color: var(--color-white); font-weight: 200; line-height: 1.03; }
 .stage_global p { font: var(--font-30); color: var(--color-white); font-weight: 200; margin-block: 2rem; }
 .stage_global a { min-width: 3rem; min-height: 3rem; width: 3rem; height: 3rem; border: 1px solid var(--color-white); text-align: center; display: block; padding: 0.7rem 1rem; margin-top: 3.2rem; }
 .stage_global a:hover { background-color: var(--color-white); }
 .stage_global a img { filter: brightness(0) invert(1); }
 .stage_global a:hover img { filter: brightness(1) invert(0); }
 .auditorium_bx figure img { height: 100%; object-fit: cover; }
+.auditorium_bx .acd_audi_slider .swiper-slide { position: relative; }
+.auditorium_bx .acd_audi_slider .swiper-slide img { opacity: 0.8; }
+.acd_audi_slider .slide_content { position: absolute; left: 4.1rem; bottom: 3.8rem; max-width: 53.3rem; }
+.acd_audi_slider .slide_content p { color: var(--color-white); }
 .auditorium_grid_2 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; background-color: var(--color-23); padding-bottom: 1rem; }
 .audi_bx { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
 .audi_bluebx { background-color: var(--color-06); position: relative; padding: 4.3rem; }
@@ -373,7 +377,7 @@
 .audi_bluebx h3 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; color: var(--color-white); }
 .audi_bluebx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem; }
 .audi_whitebx { background-color: var(--color-white); position: relative; padding: 4.3rem; }
-.audi_whitebx p { line-height: 2.6rem; font-weight: 300; color: var(--color-black); font: var(--font-24); }
+.audi_whitebx p {  color: var(--color-black); font: var(--font-24);line-height: 2.6rem; font-weight: 300; }
 .audi_whitebx h3 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; color: var(--color-cf); }
 .audi_whitebx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem; }
 .bg-white { background-color: var(--color-white); }
@@ -381,7 +385,9 @@
 .audi_redbx p { line-height: 2.6rem; font-weight: 300; color: var(--color-white); font: var(--font-18); max-width: 65%; }
 .audi_redbx h3 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; color: var(--color-white); }
 .audi_redbx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem; }
-.audi_redbx_overlay { position: absolute; top:0; left: 0; background-color: rgba(207, 30, 98, 0.8); padding: 3.4rem 4.2rem; left: 0; bottom: 0; right: 0; }
+.audi_redbx:after { position: absolute; top: 0; left: 0; background-color: #CF1E62; padding: 3.4rem 4.2rem; left: 0; bottom: 0; right: 0; content: ''; height: 100%; width: 100%; mix-blend-mode: multiply; opacity: 1; }
+.audi_redbx_overlay { position: absolute; top: 0; left: 0; padding: 3.4rem 4.2rem; left: 0; bottom: 0; right: 0;z-index: 9; }
+
 .innovation_incubation { padding-block: 20rem; }
 .innovation_incubation .academic_foundation { border-top: 0; margin-top: 0; padding-block: 0; }
 .innovation_incubation .academic_foundation .academic_foundation_right blockquote { grid-template-columns: 40% auto; display: grid; gap: 3rem; }
