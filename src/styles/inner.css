@@ -391,6 +391,10 @@
 .innovation_incubation { padding-block: 20rem; }
 .innovation_incubation .academic_foundation { border-top: 0; margin-top: 0; padding-block: 0; }
 .innovation_incubation .academic_foundation .academic_foundation_right blockquote { grid-template-columns: 40% auto; display: grid; gap: 3rem; }
+ .aca_campusauditoriumSwiper .swiper-pagination { position: absolute;bottom: 4.5rem;top: auto;right: 7.2rem;width: 100%;display: flex;align-items: center;z-index: 99;justify-content: flex-end;margin-left: -4.5rem;}
+.aca_campusauditoriumSwiper .swiper-pagination-bullet {width: 0.8rem;height:0.8rem;display: inline-block;background: #fff;opacity: 0.8;margin: 0 0.3rem;}
+.aca_campusauditoriumSwiper .swiper-pagination-bullet-active {background:#F9CE2E;opacity: 1;}
+
 /* ====================school css================ */
 .school_banner { position: relative; }
 .school_banner_content { position: absolute; top: 14rem; bottom: 10rem; display: flex; flex-direction: column; justify-content: space-between; }
