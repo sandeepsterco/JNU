@@ -147,7 +147,7 @@ main{padding-top:var(--header-height);}
 audio,canvas,embed,iframe,img,object,svg,video{display:block;max-width:100%;width:100%;}
 html{scroll-behavior:smooth;}
 body{margin:0;-webkit-text-size-adjust:100%;-webkit-tap-highlight-color:transparent;background-color:var(--color-f5);overscroll-behavior:none;font:var(--font-18)}
-p{font:var(--font-18);font-family:var(--stack);line-height:1.66;font-weight:normal;color:var(--color-black);margin-bottom:3rem;}
+p{font:var(--font-18);font-family:var(--stack);font-weight:normal;color:var(--color-black);margin-bottom:3rem;}
 ul{margin:0;}
 li{font:var(--font-18);font-family:var(--stack);font-weight:normal;color:var(--color-black);}
 li:last-child{margin-bottom:0;}
@@ -212,7 +212,7 @@ h6{font:var(--font-18);color: var(--color-black);}
 /* Desktop & Laptop */
 @media (max-width: 1600px) {
 :root:root{
-      --font-18: var(--fw-normal) 2rem/1.5 var(--stack);
+      --font-18: var(--fw-normal) 2rem/1.4 var(--stack);
       --font-16: var(--fw-normal) 1.8rem/1.66 var(--stack);
       --font-15: var(--fw-normal) 1.3rem/1.5 var(--stack);
       --font-14: var(--fw-normal) 1.6rem/1.5 var(--stack);
