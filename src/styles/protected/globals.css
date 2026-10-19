@@ -214,9 +214,9 @@ h6{font:var(--font-18);color: var(--color-black);}
 :root:root{
       --font-18: var(--fw-normal) 2rem/1.4 var(--stack);
       --font-16: var(--fw-normal) 1.8rem/1.66 var(--stack);
-      --font-15: var(--fw-normal) 1.3rem/1.5 var(--stack);
-      --font-14: var(--fw-normal) 1.6rem/1.5 var(--stack);
-      --font-9: var(--fw-normal) 1.2rem/1.3 var(--stack);
+      --font-15: var(--fw-normal) 1.8rem/1.66 var(--stack);
+      --font-14: var(--fw-normal) 1.8rem/1.66 var(--stack);
+      --font-9: var(--fw-normal)  1.6rem/1.5  var(--stack);
   }
 }
 
