@@ -43,7 +43,7 @@ export default function LeadershipGrid({
           {item.slug && (
             <Link
               href={`${BASE_URL}leadership-management/${item.slug}`}
-              className="overlap_btn"
+              className="streched_link"
               aria-label={`View ${item.name ?? "leadership member"}`}
             />
           )}
