@@ -7,18 +7,26 @@
 .admission_dropdown:not(.active) .admission_drop_menu::after { opacity: 0; visibility: hidden; }
 .admission_dropdown.active .admission_drop_menu::after { opacity: 1; visibility: visible; }
 .admission_dropdown.active .admission_drop_menu { visibility: visible; opacity: 1; pointer-events: auto; padding: 18.8rem 8.6rem 16.2rem 10rem; background-size: contain;}
-.admission_dropdown.active .admission_drop_menu::before{background: transparent linear-gradient(270deg, var(--unnamed-color-00000000) 0%, var(--unnamed-color-000000) 100%) 0% 0% no-repeat padding-box;
+/* .admission_dropdown.active .admission_drop_menu::before{background: transparent linear-gradient(270deg, var(--unnamed-color-00000000) 0%, var(--unnamed-color-000000) 100%) 0% 0% no-repeat padding-box;
 background: transparent linear-gradient(270deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box;
-opacity: 0.5; content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: -2;}
+opacity: 0.5; content: ""; position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: -2;} */
+.admission_dropdown.active .admission_drop_menu::before { content: ""; position: absolute; inset: 0; z-index: 0; background: linear-gradient(
+        270deg,
+        rgba(170, 4, 68, 0.75) 0%,
+        rgba(170, 4, 68, 0.75) 70%,
+        rgba(170, 4, 68, 0.75) 100%
+    ); pointer-events: none; }
+
+.admission_dropdown.active .admission_drop_menu > * { position: relative; z-index: 1; }
 .admission_menu{ padding:0;}
 .admission_drop_menu{ display: grid; grid-template-columns: 37.5rem auto; gap: 10rem;}
 .admission_left blockquote{ font: var(--font-56); letter-spacing: -1.68px; color: var(--color-white); font-weight: 300; line-height: 1;}
-.admission_menu li a{ font: var(--font-18); color: var(--color-white); font-weight: 200; border-bottom: 1px dotted var(--color-white); padding: 1.35rem 0; display: block; position: relative;}
+.admission_menu li a{ font: var(--font-18); color: var(--color-white); font-weight: 200; border-bottom: 1px dotted #FFFFFF4D; padding: 1.35rem 0; display: block; position: relative;}
 .admission_menu li a::after{ background-image: url(/images/icons/nav-arrow-next.svg); position: absolute; top: 2rem; right: 0; min-width: 1.2rem; min-height: 1.2rem; content: ""; background-size: contain; background-repeat: no-repeat; filter: brightness(0) invert(1);}
 .admission_menu li a:hover{color: var(--color-cf);}
 .admission_menu li a:hover::after{filter: brightness(1) invert(0);}
 .admission_grid{ display: grid; grid-template-columns: repeat(2, 1fr);}
-.header_program_bx{ border: 1px solid #FFFFFF8A; padding: 3rem;}
+.header_program_bx{ border: 1px solid #FFFFFF4D; padding: 3rem;}
 .header_program_bx:last-of-type{ border-left: 0;}
 .header_program_bx blockquote{ font: var(--font-38); letter-spacing: -1.14px; font-weight: 400; line-height: 1;}
 .header_program_bx *{ color: var(--color-white);}
@@ -29,7 +37,8 @@ opacity: 0.5; content: ""; position: absolute; left: 0; right: 0; top: 0; bottom
 .header_program_bx a.prog_apply_now:hover{ color: var(--color-cf);}
 .header_program_bx a.prog_apply_now::after{ background-image: url(/images/icons/next.svg); position: absolute; top: 4rem; right: 0; min-width: 2.2rem; min-height: 2.2rem; content: ""; background-size: contain; background-repeat: no-repeat; filter: brightness(0) invert(1);}
 .header_program_bx a.prog_apply_now:hover::after{filter: brightness(1) invert(0);}
-.admission_Bx{border: 1px solid #FFFFFF8A; opacity: 1; backdrop-filter: blur(30px); -webkit-backdrop-filter: blur(30px); text-align: center; padding: 5rem 4rem 4rem; margin-top:-0.1rem; }
+.admission_Bx { border: 1px solid #FFFFFF4D; background: rgba(0, 0, 0, 0.15); -webkit-backdrop-filter: blur(30px); backdrop-filter: blur(30px); 
+    text-align: center; padding: 5rem 4rem 4rem; margin-top: -0.1rem; position: relative; }
 .admission_Bx .banner_btn{ justify-content: center;}
 .admission_Bx p{ font: var(--font-18); font-weight: 200; color: var(--color-white);}
 .admission_Bx ul{ padding-block: 1rem;}
