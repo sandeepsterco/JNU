@@ -9,6 +9,8 @@ import HeaderNav from "./HeaderNav";
 export interface ChildItemInterface {
   title: string;
   slug: string;
+  overwrite_url: string;
+  target_blank: string;
   display_order?:number;
   children?: ChildItemInterface[];
 }
@@ -16,6 +18,8 @@ export interface ChildItemInterface {
 export interface HeaderMenuItem {
   title: string;
   slug: string;
+  overwrite_url: string;
+  target_blank: string;
   display_order?:number;
   children?: ChildItemInterface[];
 }
