@@ -9,12 +9,16 @@ import HeaderNav from "./HeaderNav";
 export interface ChildItemInterface {
   title: string;
   slug: string;
+  overwrite_url: string;
+  target_blank: string;
 }
 
 export interface HeaderMenuItem {
   title: string;
   slug: string;
   display_order?:number;
+  overwrite_url: string;
+  target_blank: string;
   children?: ChildItemInterface[];
 }
 
