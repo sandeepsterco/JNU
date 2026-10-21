@@ -9,7 +9,7 @@
 .jnu_search button{margin-left:-6rem;}
 .study_at_jnu .head_title{text-align:center;}
 .prgrms_grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3rem;padding-block:7.6rem 9.5rem;}
-.prgrms_Bx{position:relative;border-right:1px solid rgba(112,112,112,0.25);}
+.prgrms_Bx{position:relative;border-right:1px solid rgba(112,112,112,0.25);padding-right: 3rem;}
 .prgrms_Bx:last-child{border-right:0;}
 .prgrms_Bx:hover span{background-color:var(--color-cf);}
 .prgrms_Bx:hover span img{filter:brightness(0) invert(1);}

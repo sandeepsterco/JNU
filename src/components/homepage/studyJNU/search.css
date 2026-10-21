@@ -9,8 +9,8 @@
     top:100%;
     box-shadow: 0 3px 50px rgba(0 0 0 / 10%);
   }
-  
+  .course_dropdown .courses_lists {text-align: left;}
   .course_dropdown .course_list{
-    padding:2rem 0;
+    padding:1.5rem 2rem;
     display:block;
   }
