@@ -23,20 +23,20 @@ opacity: 0.5; content: ""; position: absolute; left: 0; right: 0; top: 0; bottom
 .admission_left blockquote{ font: var(--font-56); letter-spacing: -1.68px; color: var(--color-white); font-weight: 300; line-height: 1;}
 .admission_menu li a{ font: var(--font-18); color: var(--color-white); font-weight: 200; border-bottom: 1px dotted #FFFFFF4D; padding: 1.35rem 0; display: block; position: relative;}
 .admission_menu li a::after{ background-image: url(/images/icons/nav-arrow-next.svg); position: absolute; top: 2rem; right: 0; min-width: 1.2rem; min-height: 1.2rem; content: ""; background-size: contain; background-repeat: no-repeat; filter: brightness(0) invert(1);}
-.admission_menu li a:hover{color: var(--color-cf);}
-.admission_menu li a:hover::after{filter: brightness(1) invert(0);}
+.admission_menu li a:hover{color: var(--color-fa);}
+.admission_menu li a:hover::after{filter: brightness(0) invert(1);}
 .admission_grid{ display: grid; grid-template-columns: repeat(2, 1fr);}
 .header_program_bx{ border: 1px solid #FFFFFF4D; padding: 3rem;}
 .header_program_bx:last-of-type{ border-left: 0;}
 .header_program_bx blockquote{ font: var(--font-38); letter-spacing: -1.14px; font-weight: 400; line-height: 1;}
 .header_program_bx *{ color: var(--color-white);}
 .header_program_bx>a{ font: var(--font-16); font-weight: 300; line-height: 1.4; display: block; max-width: 70%;} 
-.header_program_bx>a:hover{ color: var(--color-cf);}
+.header_program_bx>a:hover{ color: var(--color-fa);}
 .header_program_bx p{ font: var(--font-14); padding-top:1.5rem;}
 .header_program_bx a.prog_apply_now{ margin-top: 2.5rem; display: block; font: var(--font-30); font-weight: 200; padding-right: 1rem; position: relative; max-width: 100%;}
-.header_program_bx a.prog_apply_now:hover{ color: var(--color-cf);}
+.header_program_bx a.prog_apply_now:hover{ color: var(--color-fa);}
 .header_program_bx a.prog_apply_now::after{ background-image: url(/images/icons/next.svg); position: absolute; top: 4rem; right: 0; min-width: 2.2rem; min-height: 2.2rem; content: ""; background-size: contain; background-repeat: no-repeat; filter: brightness(0) invert(1);}
-.header_program_bx a.prog_apply_now:hover::after{filter: brightness(1) invert(0);}
+.header_program_bx a.prog_apply_now:hover::after{filter: brightness(0) invert(1);}
 .admission_Bx { border: 1px solid #FFFFFF4D; background: rgba(0, 0, 0, 0.15); -webkit-backdrop-filter: blur(30px); backdrop-filter: blur(30px); 
     text-align: center; padding: 5rem 4rem 4rem; margin-top: -0.1rem; position: relative; }
 .admission_Bx .banner_btn{ justify-content: center;}
