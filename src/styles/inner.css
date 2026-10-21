@@ -5,11 +5,10 @@
 .leadership_cnt h4 { font: var(--font-24); font-weight: 300; margin-top: 3rem; }
 .leadership_Bx { position: relative; }
 .leadership_cnt { text-align: center; padding-bottom: 3rem; position:relative; }
-.leadership_Bx figure { overflow: hidden; }
 .leadership_Bx figure img { transition: transform 0.5s ease; z-index: 9; position: relative; }
 .leadership_Bx:hover figure img { transform: scale(1.1); }
 .leadership_cnt p { font: var(--font-14); font-weight: 300; }
-.leadership_Bx figure { position: relative; }
+.leadership_Bx figure { position: relative;    z-index: 0; overflow: hidden;}
 .leadership_Bx figure:after { content: ""; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url("/images/leader_ship_bgimg.webp"); background-repeat: no-repeat; background-position: center; pointer-events: none; }
 .leadership_cnt::after { content: ""; position: absolute; bottom: 0; left:0; width: 29rem; height: 0.4rem; right: 0; margin: auto; background: linear-gradient(to right, var(--color-cf) 0%, var(--color-cf) 85%, var(--color-f9) 85%, var(--color-f9) 100%); }
 /* =================JNU at a Glance Page==============  */
@@ -1340,7 +1339,7 @@
 .jnu_newslatter { padding-block: 10rem 12rem; }
 .jnu_newslatter .jnu_title_header h5 { margin-bottom: 2.4rem; }
 /* JS13102026 */
-.sports-facilities { padding-block: 12rem 14rem; }
+.sport_facillities_main { padding-block: 12rem 14rem; }
 /* .sports-facilities::before { background-image: url(/assets/images/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 82rem; width: 100%; content: ""; z-index: -1; }
 */
 .sport_facillities { margin-top: 0; padding-top: 0; border: none; }
@@ -1602,7 +1601,21 @@
 .auditoriums .auditoriums_audi_redbx p { line-height: 2.6rem; color: var(--color-white); font: var(--font-18); max-width: 65%; }
 .auditoriums .auditoriums_audi_redbx h3 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; color: var(--color-white); }
 .auditoriums .auditoriums_audi_redbx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem; }
-.auditoriums .auditoriums_audi_redbx_overlay { position: absolute; inset: 0; background-color: rgba(207, 30, 98, 0.8); padding: 3.4rem 4.2rem; }
+.auditoriums .auditoriums_audi_redbx::after {
+    content: "";
+    mix-blend-mode: multiply;
+    opacity: 1;
+    background-color: #cf1e62;
+    width: 100%;
+    height: 100%;
+    padding: 3.4rem 4.2rem;
+    position: absolute;
+    inset: 0;
+}
+.auditoriums .auditoriums_audi_redbx_overlay {     z-index: 9;
+    padding: 3.4rem 4.2rem;
+    position: absolute;
+    inset: 0; }
 .auditoriums_title_header { text-align: center; }
 .auditoriums_title_header .font21 { margin-bottom: 3rem; color: var(--color-cf); font-weight: 500; }
 .auditoriums_title_header blockquote { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; margin-bottom: 2.4rem; }
@@ -1715,7 +1728,6 @@
 .vibrant_Bx p { position: absolute; bottom: 3.1rem; left: 4.6rem; font: var(--font-21); color: var(--color-white); z-index: 2; }
 .vibrant_Bx figure::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.32; position: absolute; bottom: 0; right: 0; left: 0; content: ""; height: 18rem; z-index: 0; }
 .vibrant_Bx { display: flex; flex-wrap: wrap; gap: 2rem; }
-.art_labs.rank_value_bx { max-width: 41.5rem; }
 .rank_value_grid { grid-template-columns: 32.99% auto 49.71%; display: grid; }
 .rank_value_bx { position: relative; }
 .campus_overlay { position: absolute; right: 4.3rem; top: 2.3rem; }
@@ -1748,7 +1760,9 @@
 .pattern { position: absolute; top: 0; right: 0; width: 50%; height: 50%; background: transparent url("/images/internation_grid_pattern.png") no-repeat top right; background-size: contain; pointer-events: none; mix-blend-mode: color-burn; }
 .student_community { background-color: var(--color-white); min-height: 30rem; margin-top: 1rem; }
 .intenration_pattern { content: ""; position: absolute; top: 0; right: 0; background: transparent url("/images/internation_grid_pattern.png") no-repeat; height: 100%; width: 50%; mix-blend-mode: normal; background-size: contain; }
-.last_group { display: flex; gap: 1.1rem; }
+.last_group {     gap: 1.1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); }
 .pink_box { background-color: var(--color-cf); height: 30rem; }
 .exper_faculties { padding-top: 1rem; }
 .exper_faculties::before { position: absolute; content: ""; top: 0; height: 100%; width: 100%; background-color: var(--color-23); opacity: 0.3; }
