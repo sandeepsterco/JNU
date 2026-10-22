@@ -1711,11 +1711,12 @@
 .vibrant_campuses { padding-block: 5rem 15rem; }
 .vibrant_campuses h3 { text-align: center; margin-bottom: 10rem; font-weight: 300; }
 .vibrant_campuses>.container-lg { border-bottom: solid 1px #ddd; }
-.vibrant_campuses>.container-lg blockquote { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; text-align: center; padding-inline: 5rem; margin: 0; padding-bottom: 5rem; }
+.vibrant_campuses>.container-lg blockquote { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; text-align: center;
+     padding-inline: 5rem; margin-bottom: 10rem; padding-bottom: 5rem;border-bottom: 0.1rem solid var(--color-d5); }
 .vibrant_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 5rem; }
 .vibrant_Bx figure { position: relative; }
 .vibrant_Bx p { position: absolute; bottom: 3.1rem; left: 4.6rem; font: var(--font-21); color: var(--color-white); z-index: 2; }
-.vibrant_Bx figure::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.32; position: absolute; bottom: 0; right: 0; left: 0; content: ""; height: 18rem; z-index: 0; }
+.vibrant_Bx figure::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.60; position: absolute; bottom: 0; right: 0; left: 0; content: ""; height: 18rem; z-index: 0; }
 .vibrant_Bx { display: flex; flex-wrap: wrap; gap: 2rem; }
 .rank_value_grid { grid-template-columns: 32.99% auto 49.71%; display: grid; }
 .rank_value_bx { position: relative; }
@@ -1796,8 +1797,8 @@
 .corevalues_sec { padding-block: 0 15.2rem; }
 .corevalues_Bx { display: grid; grid-template-columns: repeat(3, 1fr); gap:0.5rem; margin-top: 5rem; }
 .corevalues_Bx figure { position: relative; }
-.corevalues_Bx p { position: absolute; bottom: 3.1rem; left: 4.6rem; font: var(--font-21); color: var(--color-white); z-index: 2; line-height: 3.6rem; font-weight: 300; }
-.corevalues_Bx figure::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.32; position: absolute; bottom: 0; right: 0; left: 0; content: ""; height: 18rem; z-index: 0; }
+.corevalues_Bx p { position: absolute; bottom: 3.1rem; left: 4.6rem; font: var(--font-21); color: var(--color-white); z-index: 2; line-height: 3.6rem; font-weight: 300;min-height: 7rem; }
+.corevalues_Bx figure::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.60; position: absolute; bottom: 0; right: 0; left: 0; content: ""; height: 24.1rem; z-index: 0; }
 
 
 .librarians_grid {display: grid;grid-template-columns: repeat(2,1fr);gap: 2.5rem;margin-block: 2.4rem 0;}
