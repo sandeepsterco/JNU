@@ -1824,3 +1824,19 @@
 .library_faq .tab_content>ul>li {position: relative;list-style: none;font: var(--font-16);font-weight: 300;margin-block: 2.5rem;color: var(--color-white);}
 .library_faq .tab_content>ul>li:first-child{margin: 0;}
 .library_faq .tab_content>ul>li::before {content: "";position: absolute;width: 0.8rem;height: 0.8rem;background-color: #F9CE2E;left: -2rem;top: 0.8rem;border-radius: 50%;-webkit-border-radius: 50%;}
+
+
+/*  Admission Process Start*/
+.admis_over { padding-block: 12rem 0; }
+.admis_over .jnu_title_header { margin-bottom: 8rem; }
+.admis_procss { padding-block: 12rem; }
+.admis_step:not(:last-child) { border-bottom: .1rem solid var(--color-d5); margin-bottom: 6.5rem; padding-bottom: 6.5rem; }
+.admis_step h4 { font: var(--font-32); color: var(--color-ccc); margin-bottom: 1.6rem; font-weight: 300; }
+.admis_step h5 { margin-bottom: 3.2rem; color: var(--color-cf); margin-bottom: 3.4rem; font-weight: 500; }
+.admis_step p { font: var(--font-16); font-weight: 300; line-height: 1.68; }
+.admis_step ul { margin-block: 3rem; }
+.admis_step ul li { font: var(--font-16); font-weight: 300; }
+.admis_step a { margin-top: 3rem; }
+.admis_step h3 { font: var(--font-21); color: var(--color-23); margin-bottom: 2.5rem; font-weight: 300; line-height: 1.6; }
+
+/*  Admission Process End*/
