@@ -1233,10 +1233,10 @@
 .ambed_chairovr { padding: 12rem  13.5rem; }
 .ambed_chir_grid { display: grid; grid-template-columns: 49.3% auto; gap: 15rem; align-items: center; }
 .ambed_rgt { max-width: 47.5rem; }
-.ambed_rgt> .jnu_title_header { text-align: left; }
-.ambed_rgt> .jnu_title_header h5 { margin-bottom: 2.4rem; }
-.ambed_rgt> .jnu_title_header h3 { margin-bottom: 2.4rem; font-weight: var(--fw-300); line-height: 1.14; color: var(--color-23); }
-.ambed_rgt> .jnu_title_header p { font: var(--font-16); font-weight: var(--fw-300); }
+.ambed_rgt > .jnu_title_header { text-align: left; }
+.ambed_rgt > .jnu_title_header h5 { margin-bottom: 2.4rem; }
+.ambed_rgt > .jnu_title_header h3 { margin-bottom: 2.4rem; font-weight: var(--fw-300); line-height: 1.14; color: var(--color-23); }
+.ambed_rgt > .jnu_title_header p { font: var(--font-16); font-weight: var(--fw-300);line-height: 1.68; }
 .ambed_thrusd_sec .jnu_title_header { margin-bottom: 5rem; }
 .ambed_thre_grid { grid-template-columns: repeat(3, 1fr); gap: 3rem; display: grid; }
 .ambed_thre_grid .ambed_thur_bx { background-color: var(--color-white); text-align: center; padding: 5.1rem 5rem 6.3rem 5rem; position: relative; }
