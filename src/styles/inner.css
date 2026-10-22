@@ -1489,7 +1489,8 @@
 .industours_section .industours_audi_redbx p { line-height: 2.6rem; color: var(--color-white); font: var(--font-18); max-width: 65%; }
 .industours_section .industours_audi_redbx h3 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; color: var(--color-white); }
 .industours_section .industours_audi_redbx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem; }
-.industours_section .industours_audi_redbx_overlay { position: absolute; inset: 0; background-color: rgba(207, 30, 98, 0.8); padding: 3.4rem 4.2rem; opacity: 0.56; }
+.industours_section .industours_audi_redbx_overlay { z-index: 9; padding: 3.4rem 4.2rem; position: absolute; inset: 0; ; }
+.industours_section .industours_audi_redbx:after { content: ""; opacity: 1; background-color: #cf1e62; width: 100%; height: 100%; padding: 3.4rem 4.2rem; position: absolute; inset: 0; opacity: 0.56; }
 .industours_title_header { text-align: center; }
 .industours_title_header .font21 { margin-bottom: 3rem; color: var(--color-cf); font-weight: 500; }
 .industours_title_header blockquote { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; margin-bottom: 2.4rem; }
@@ -1601,21 +1602,8 @@
 .auditoriums .auditoriums_audi_redbx p { line-height: 2.6rem; color: var(--color-white); font: var(--font-18); max-width: 65%; }
 .auditoriums .auditoriums_audi_redbx h3 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; color: var(--color-white); }
 .auditoriums .auditoriums_audi_redbx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem; }
-.auditoriums .auditoriums_audi_redbx::after {
-    content: "";
-    mix-blend-mode: multiply;
-    opacity: 1;
-    background-color: #cf1e62;
-    width: 100%;
-    height: 100%;
-    padding: 3.4rem 4.2rem;
-    position: absolute;
-    inset: 0;
-}
-.auditoriums .auditoriums_audi_redbx_overlay {     z-index: 9;
-    padding: 3.4rem 4.2rem;
-    position: absolute;
-    inset: 0; }
+.auditoriums .auditoriums_audi_redbx::after { content: ""; mix-blend-mode: multiply; opacity: 1; background-color: #cf1e62; width: 100%; height: 100%; padding: 3.4rem 4.2rem; position: absolute; inset: 0; }
+.auditoriums .auditoriums_audi_redbx_overlay { z-index: 9; padding: 3.4rem 4.2rem; position: absolute; inset: 0; }
 .auditoriums_title_header { text-align: center; }
 .auditoriums_title_header .font21 { margin-bottom: 3rem; color: var(--color-cf); font-weight: 500; }
 .auditoriums_title_header blockquote { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; margin-bottom: 2.4rem; }
@@ -1830,13 +1818,18 @@
 .admis_over { padding-block: 12rem 0; }
 .admis_over .jnu_title_header { margin-bottom: 8rem; }
 .admis_procss { padding-block: 12rem; }
-.admis_step:not(:last-child) { border-bottom: .1rem solid var(--color-d5); margin-bottom: 6.5rem; padding-bottom: 6.5rem; }
-.admis_step h4 { font: var(--font-32); color: var(--color-ccc); margin-bottom: 1.6rem; font-weight: 300; }
+.admi_probx { position: relative; padding-left: 6.8rem; }
+.admi_probx::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: #545454; opacity: 0.24; }
+.admi_probx .step { position: relative; padding-bottom: 8rem; }
+.admis_step  h4 { color: var(--color-06); font: var(--font-48); letter-spacing: -0.48px; font-weight: 500; margin: 0 0 3rem 0; padding: 0 0 3rem 0; border-bottom: 2px dashed var(--color-d5); line-height: 1.1; }
+.admis_step .circle { position: absolute; left: -9.4rem; top: 5.2rem; width: 5.5rem; height: 5.5rem; border-radius: 50%; background: var(--color-white); border: 1rem solid var(--color-06); z-index: 2; }
+.admis_step:not(:last-child) {  margin-bottom: 6.5rem; padding-bottom: 6.5rem; }
 .admis_step h5 { margin-bottom: 3.2rem; color: var(--color-cf); margin-bottom: 3.4rem; font-weight: 500; }
 .admis_step p { font: var(--font-16); font-weight: 300; line-height: 1.68; }
 .admis_step ul { margin-block: 3rem; }
 .admis_step ul li { font: var(--font-16); font-weight: 300; }
 .admis_step a { margin-top: 3rem; }
 .admis_step h3 { font: var(--font-21); color: var(--color-23); margin-bottom: 2.5rem; font-weight: 300; line-height: 1.6; }
+.admis_procss .admis_step  ul + a { margin-top: 0rem; }
 
 /*  Admission Process End*/
