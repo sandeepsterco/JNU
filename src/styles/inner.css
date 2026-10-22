@@ -824,7 +824,7 @@
 .social_res_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 5rem; align-items: center; }
 .social_respon_ovr .jnu_title_header> blockquote { padding-inline: 1.5rem; }
 .social_res_grid> .socil_contentbx { max-width: 65rem; margin-inline: auto; }
-.social_res_grid> .socil_contentbx p { font-weight: 300; font: var(--font-16); line-height: 1.7; }
+.social_res_grid> .socil_contentbx p { font: var(--font-16); line-height: 1.7; font-weight: 300; }
 .social_keyinti { padding-block: 0 12rem; }
 .social_keyinti .jnu_title_header .font21 { margin-bottom: 4rem; }
 .social_keyintigrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3rem; }
