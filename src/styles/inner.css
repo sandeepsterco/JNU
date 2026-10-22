@@ -1686,7 +1686,8 @@
 .research-facili .custm_bullets > li { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; }
 .research-strategy.research-area { padding-bottom: 15rem; }
 .research-area .researchStra_list ul>li { padding-inline: 5rem 6.5rem; padding-block: 2.5rem; }
-.research-strategy.research-area blockquote { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; margin-top: 4.7rem; }
+.research-strategy.research-area blockquote { font: var(--font-21); font-weight: 300; color: var(--color-23); line-height: 1.7; margin-top: 4.6rem; }
+.research-strategy.research-area p{margin-top: 4.6rem;font: var(--font-16); font-weight: 300; text-align: center;}
 .research-strategy.research-area .container-lg { border: none; padding-bottom: 0; }
 .jnu_atglance_section { background-image: url(/images/back_pattern.svg); background-size: contain; background-repeat: repeat; width: 100%; padding-block: 12rem; }
 .jnu_blance .jnu_title_header { text-align: center; }
