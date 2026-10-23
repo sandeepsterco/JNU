@@ -1033,7 +1033,7 @@
 .place_fact_grid { grid-template-columns: 23.8rem 17.7rem 13rem 16.4rem; display: grid; gap: 14rem; }
 .place_fact_grid .plaec_factbx h3 { font: var(--font-56); color: var(--color-cf); font-weight: 400; margin-bottom: 0.8rem; }
 .place_fact_grid .plaec_factbx p { font: var(--font-16); font-weight: 300; }
-.place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -3.2rem; }
+.place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -3.2rem;right: 1.5rem; }
 .place_fact_main { background-color: var(--color-white); padding-inline: 17.2rem 17.3rem; padding-block: 5.1rem; position: relative; }
 .place_fact_main:after { position: absolute; left: 0; width: 12.5rem; height: 100%; background-image: url(/images/placement_fact_pattern_01.svg); top: 0; content: ''; }
 .place_fact_main:before { position: absolute; right: 0; width: 12.5rem; height: 100%; background-image: url(/images/placement_fact_pattern_02.svg); top: 0; content: ''; }
@@ -1162,7 +1162,7 @@
 .am_chair_evtbx p { font: var(--font-16); font-weight: var(--fw-300); }
 .amchair_ev_content { padding-inline: 13.4rem 15.6rem; }
 .am_chair_evtbx .am_evt_date { border: 0.1rem solid var(--color-cf); padding:.8rem 1.6rem ; }
-.am_chair_event_ist .am_chair_evtbx:not(:nth-last-child(2)) { margin-bottom: 4.9rem; }
+.am_chair_event_ist .am_chair_evtbx:not(:nth-last-child(1)) { margin-bottom: 4.9rem; }
 /* Dr. Ambedkar Chair event End*/
 /* Innovation and Incubation Cell Start */
 .inno_incu_main { padding-block: 12rem 0 ; }
@@ -1174,7 +1174,7 @@
 .inno_ovr_btmtext p { font-weight: var(--fw-300); font: var(--font-16); text-align: center; }
 .innov_incu_fact .place_fact_grid { grid-template-columns: 12.9% 26.6% 21.5% auto; display: grid; gap: 6.4rem; }
 .innov_incu_fact .place_fact_grid  .plaec_factbx> h3 { font: var(--font-38); color: var(--color-cf); font-weight: 400; line-height: 1.10; }
-.innov_incu_fact .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -5.8rem; right: -2rem; }
+.innov_incu_fact .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -1.8rem; right: 0rem; }
 .netwrth_grid { display: grid; grid-template-columns: 48.89% auto; gap: 10.4rem; align-items: center; margin-block: 5.6rem 12rem; }
 .netwrth_grid .ntwrt_rgt p { font: var(--font-16); font-weight: var(--fw-300); margin-bottom: 1.5rem; }
 .netwrth_grid .ntwrt_rgt { padding-right: 1.8rem; }
@@ -1522,11 +1522,12 @@
 .partnership_content .font21 { margin-bottom: 2.4rem; color: var(--color-cf); font-weight: 500; }
 .partnership_content p { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; margin-bottom: 2rem; }
 .partnership_slide .custm_bullets { margin-block: 0rem 2rem; border-bottom: solid 1px #ddd; padding-bottom: 4rem; }
+.partnership_slide .custm_bullets li{font: var(--font-16);font-weight: var(--fw-300);color: var(--color-23);}
 .partnership_slide .custm_bullets > li::before { background-color: #F9CE2E; }
 .partnership_slide .custm_bullets > li:first-child { margin-top: 0; }
 .partnership_slide .custm_bullets > li:last-child { margin-bottom: 0; }
 .partnership_slide .btn { margin-top: 4.4rem; }
-.partnership_slide .btn>a { color: var(--color-cf); border: 1px solid #cf1e624d; padding: .7rem 4.5rem .7rem 2.4rem; position: relative; font: var(--font-16); font-weight: 300; line-height: 1.7; }
+/* .partnership_slide .btn>a { color: var(--color-cf); border: 1px solid #cf1e624d; padding: .7rem 4.5rem .7rem 2.4rem; position: relative; font: var(--font-16); font-weight: 300; line-height: 1.7; } */
 .collabra_faq .font42 { margin-bottom: 5.6rem; }
 .collabra_faq .tab_heading:first-child { padding-block:3.5rem 3.2rem; }
 .collabra_faq .tab_heading { border-bottom: 0.1rem dotted #fff; }
@@ -1835,3 +1836,11 @@
 .admis_procss .admis_step  ul + a { margin-top: 0rem; }
 
 /*  Admission Process End*/
+
+/* load More button common Start*/
+[data-load-item][hidden],
+[data-load-more] [data-load-item][hidden],
+[hidden].load_more_btn {
+    display: none;
+}
+/* load More button common End*/
