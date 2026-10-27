@@ -23,9 +23,7 @@ interface HappeningsPropsInterface {
 }
 
 
-export default function Happenings({ data, modular }: HappeningsPropsInterface) {
-    
-
+export default function Happenings({ data, modular }: HappeningsPropsInterface) {  
     return (
         <section className="happening_section">
             <div className="container-fluid">
@@ -39,10 +37,7 @@ export default function Happenings({ data, modular }: HappeningsPropsInterface) 
                         </Link>
                     )}
                 </div>
-
-                <HappeningGrid modular={modular} />
-
-                
+                <HappeningGrid modular={modular} />                
             </div>
         </section>
     )

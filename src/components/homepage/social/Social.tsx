@@ -6,6 +6,7 @@ export interface SocialInterface{
     name:string;
     image:string;
     slug:string;
+    url:string;
 }
 
 interface SocialPropsInterface{

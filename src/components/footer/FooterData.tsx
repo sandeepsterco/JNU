@@ -52,7 +52,7 @@ export default function FooterData({headerRes, quickLinksData, infoData}:{header
                         <p>© Copyright 2026 - JNU. All Rights Reserved.</p>
                     </div>
                     <div className="footer_bottom_right">
-                        <p>Website Design and Development by <a href="https://www.stercodigitex.com/" target="_blank">Sterco</a> </p>
+                        <p>Website Design and Development by <a href="https://www.stercodigitex.com/" target="_blank">Sterco Digitex</a> </p>
                     </div>
                 </div>
             </div>

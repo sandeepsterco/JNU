@@ -2,7 +2,7 @@
 /* =================About Us-Leadership Listing==============  */
 .leadership_section { padding-block: 11rem; background-image: url(/images/back_pattern.svg); background-size: contain; background-repeat: repeat; width: 100%; }
 .leadership_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem; row-gap: 4rem; }
-.leadership_cnt h4 { font: var(--font-24); font-weight: 300; margin-top: 3rem; }
+.leadership_cnt h4 { font: var(--font-24); font-weight: 300; margin-top: 3rem; line-height: 1.4; }
 .leadership_Bx { position: relative; }
 .leadership_cnt { text-align: center; padding-bottom: 3rem; position:relative; }
 .leadership_Bx figure img { transition: transform 0.5s ease; z-index: 9; position: relative; }
@@ -252,7 +252,7 @@
 .download_carriculum { display: flex; align-items: center; font: var(--font-16); font-weight: 500; gap:1rem; border: 1px solid var(--color-cf); padding: 1rem 2rem; width: max-content; margin-top: 4rem; }
 .download_carriculum figure,
 .download_carriculum img { max-width: 1.5rem; }
-.download_carriculum:hover { background-color: var(--color-cf); color: var(--color-white); }
+.download_carriculum:hover { color: var(--color-cf); }
 #fees { padding-top: 4rem; }
 #fees .fee_structure_grid { background-color: var(--color-white); padding: 4rem; position: relative; }
 .fee_structure_grid::before { content: ""; position: absolute; bottom: 0; left: 0rem; max-width: 100%; z-index: 9; width: 100%; height: 0.4rem; background: linear-gradient(to right, var(--color-cf) 0%, var(--color-cf) 55%, var(--color-fa) 55%, var(--color-fa) 100%); }
@@ -1177,7 +1177,7 @@
 .inno_ovr_btmtext p { font-weight: var(--fw-300); font: var(--font-16); text-align: center; }
 .innov_incu_fact .place_fact_grid { grid-template-columns: 12.9% 26.6% 21.5% auto; display: grid; gap: 6.4rem; }
 .innov_incu_fact .place_fact_grid  .plaec_factbx> h3 { font: var(--font-38); color: var(--color-cf); font-weight: 400; line-height: 1.10; }
-.innov_incu_fact .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -1.8rem; right: 0rem; }
+.innov_incu_fact .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -1.3rem; right: -0.9rem; }
 .netwrth_grid { display: grid; grid-template-columns: 48.89% auto; gap: 10.4rem; align-items: center; margin-block: 5.6rem 12rem; }
 .netwrth_grid .ntwrt_rgt p { font: var(--font-16); font-weight: var(--fw-300); margin-bottom: 1.5rem; }
 .netwrth_grid .ntwrt_rgt { padding-right: 1.8rem; }
@@ -1530,7 +1530,8 @@
 .partnership_slide .custm_bullets > li:first-child { margin-top: 0; }
 .partnership_slide .custm_bullets > li:last-child { margin-bottom: 0; }
 .partnership_slide .btn { margin-top: 4.4rem; }
-/* .partnership_slide .btn>a { color: var(--color-cf); border: 1px solid #cf1e624d; padding: .7rem 4.5rem .7rem 2.4rem; position: relative; font: var(--font-16); font-weight: 300; line-height: 1.7; } */
+.partnership_slide .btn>a { color: var(--color-cf); border: 1px solid #cf1e624d; padding: .7rem 4.5rem .7rem 2.4rem; position: relative; font: var(--font-16); font-weight: 300; line-height: 1.7; }
+.partnership_slide .btn > a:hover{ color: var(--color-white);}
 .collabra_faq .font42 { margin-bottom: 5.6rem; }
 .collabra_faq .tab_heading:first-child { padding-block:3.5rem 3.2rem; }
 .collabra_faq .tab_heading { border-bottom: 0.1rem dotted #fff; }
