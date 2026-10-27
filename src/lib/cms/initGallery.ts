@@ -4,7 +4,7 @@ function loadFancyboxCSS() {
   if (fancyboxCSSLoaded) return;
   
   // Dynamically import CSS only when needed
-  import("@fancyapps/ui/dist/fancybox/fancybox.css");
+  // import("@fancyapps/ui/dist/fancybox/fancybox.css");
   fancyboxCSSLoaded = true;
 }
 

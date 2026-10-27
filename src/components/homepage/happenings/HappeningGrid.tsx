@@ -104,8 +104,9 @@ function VideoBlock({ item }: { item: NewsEvent }) {
             <div className="happening_video_cnt">
                 <DateBlock date={date} />
                 <p>{item.name}</p>
-                <Link className="happ_next" href={`${BASE_URL}news-events/${item.slug}`}>
-                    <img src="/images/icons/next.svg" className="img-fluid" alt="next" />
+                <span className="nxt_arrow"><img src="/images/icons/next.svg" className="img-fluid" alt="next" /></span>
+                <Link className="overlap_btn" href={`${BASE_URL}news-events/${item.slug}`}>
+                    
                 </Link>
             </div>
         </div>
