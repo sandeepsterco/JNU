@@ -1174,7 +1174,7 @@
 .inno_ovr_btmtext p { font-weight: var(--fw-300); font: var(--font-16); text-align: center; }
 .innov_incu_fact .place_fact_grid { grid-template-columns: 12.9% 26.6% 21.5% auto; display: grid; gap: 6.4rem; }
 .innov_incu_fact .place_fact_grid  .plaec_factbx> h3 { font: var(--font-38); color: var(--color-cf); font-weight: 400; line-height: 1.10; }
-.innov_incu_fact .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -1.8rem; right: 0rem; }
+.innov_incu_fact .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -1.3rem; right: -0.9rem; }
 .netwrth_grid { display: grid; grid-template-columns: 48.89% auto; gap: 10.4rem; align-items: center; margin-block: 5.6rem 12rem; }
 .netwrth_grid .ntwrt_rgt p { font: var(--font-16); font-weight: var(--fw-300); margin-bottom: 1.5rem; }
 .netwrth_grid .ntwrt_rgt { padding-right: 1.8rem; }
