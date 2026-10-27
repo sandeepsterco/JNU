@@ -152,6 +152,7 @@
 .bottom_detail_left {
   padding-top: 1rem;
 }
+.bottom_detail_left p{font: var(--font-16);font-weight: 300;}
 .content_16_26 {
   font: var(--font-16);
   font-weight: 300;

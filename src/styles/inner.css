@@ -2,7 +2,7 @@
 /* =================About Us-Leadership Listing==============  */
 .leadership_section { padding-block: 11rem; background-image: url(/images/back_pattern.svg); background-size: contain; background-repeat: repeat; width: 100%; }
 .leadership_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem; row-gap: 4rem; }
-.leadership_cnt h4 { font: var(--font-24); font-weight: 300; margin-top: 3rem; }
+.leadership_cnt h4 { font: var(--font-24); font-weight: 300; margin-top: 3rem; line-height: 1.4; }
 .leadership_Bx { position: relative; }
 .leadership_cnt { text-align: center; padding-bottom: 3rem; position:relative; }
 .leadership_Bx figure img { transition: transform 0.5s ease; z-index: 9; position: relative; }
@@ -249,7 +249,7 @@
 .download_carriculum { display: flex; align-items: center; font: var(--font-16); font-weight: 500; gap:1rem; border: 1px solid var(--color-cf); padding: 1rem 2rem; width: max-content; margin-top: 4rem; }
 .download_carriculum figure,
 .download_carriculum img { max-width: 1.5rem; }
-.download_carriculum:hover { background-color: var(--color-cf); color: var(--color-white); }
+.download_carriculum:hover { color: var(--color-cf); }
 #fees { padding-top: 4rem; }
 #fees .fee_structure_grid { background-color: var(--color-white); padding: 4rem; position: relative; }
 .fee_structure_grid::before { content: ""; position: absolute; bottom: 0; left: 0rem; max-width: 100%; z-index: 9; width: 100%; height: 0.4rem; background: linear-gradient(to right, var(--color-cf) 0%, var(--color-cf) 55%, var(--color-fa) 55%, var(--color-fa) 100%); }
@@ -824,7 +824,7 @@
 .social_res_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 5rem; align-items: center; }
 .social_respon_ovr .jnu_title_header> blockquote { padding-inline: 1.5rem; }
 .social_res_grid> .socil_contentbx { max-width: 65rem; margin-inline: auto; }
-.social_res_grid> .socil_contentbx p { font-weight: 300; font: var(--font-16); line-height: 1.7; }
+.social_res_grid> .socil_contentbx p { font: var(--font-16); line-height: 1.7; font-weight: 300; }
 .social_keyinti { padding-block: 0 12rem; }
 .social_keyinti .jnu_title_header .font21 { margin-bottom: 4rem; }
 .social_keyintigrid { display: grid; grid-template-columns: repeat(3,1fr); gap: 3rem; }
@@ -1033,7 +1033,7 @@
 .place_fact_grid { grid-template-columns: 23.8rem 17.7rem 13rem 16.4rem; display: grid; gap: 14rem; }
 .place_fact_grid .plaec_factbx h3 { font: var(--font-56); color: var(--color-cf); font-weight: 400; margin-bottom: 0.8rem; }
 .place_fact_grid .plaec_factbx p { font: var(--font-16); font-weight: 300; }
-.place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -3.2rem; }
+.place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -3.2rem;right: 1.5rem; }
 .place_fact_main { background-color: var(--color-white); padding-inline: 17.2rem 17.3rem; padding-block: 5.1rem; position: relative; }
 .place_fact_main:after { position: absolute; left: 0; width: 12.5rem; height: 100%; background-image: url(/images/placement_fact_pattern_01.svg); top: 0; content: ''; }
 .place_fact_main:before { position: absolute; right: 0; width: 12.5rem; height: 100%; background-image: url(/images/placement_fact_pattern_02.svg); top: 0; content: ''; }
@@ -1162,7 +1162,7 @@
 .am_chair_evtbx p { font: var(--font-16); font-weight: var(--fw-300); }
 .amchair_ev_content { padding-inline: 13.4rem 15.6rem; }
 .am_chair_evtbx .am_evt_date { border: 0.1rem solid var(--color-cf); padding:.8rem 1.6rem ; }
-.am_chair_event_ist .am_chair_evtbx:not(:nth-last-child(2)) { margin-bottom: 4.9rem; }
+.am_chair_event_ist .am_chair_evtbx:not(:nth-last-child(1)) { margin-bottom: 4.9rem; }
 /* Dr. Ambedkar Chair event End*/
 /* Innovation and Incubation Cell Start */
 .inno_incu_main { padding-block: 12rem 0 ; }
@@ -1174,7 +1174,7 @@
 .inno_ovr_btmtext p { font-weight: var(--fw-300); font: var(--font-16); text-align: center; }
 .innov_incu_fact .place_fact_grid { grid-template-columns: 12.9% 26.6% 21.5% auto; display: grid; gap: 6.4rem; }
 .innov_incu_fact .place_fact_grid  .plaec_factbx> h3 { font: var(--font-38); color: var(--color-cf); font-weight: 400; line-height: 1.10; }
-.innov_incu_fact .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -5.8rem; right: -2rem; }
+.innov_incu_fact .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -1.3rem; right: -0.9rem; }
 .netwrth_grid { display: grid; grid-template-columns: 48.89% auto; gap: 10.4rem; align-items: center; margin-block: 5.6rem 12rem; }
 .netwrth_grid .ntwrt_rgt p { font: var(--font-16); font-weight: var(--fw-300); margin-bottom: 1.5rem; }
 .netwrth_grid .ntwrt_rgt { padding-right: 1.8rem; }
@@ -1233,10 +1233,10 @@
 .ambed_chairovr { padding: 12rem  13.5rem; }
 .ambed_chir_grid { display: grid; grid-template-columns: 49.3% auto; gap: 15rem; align-items: center; }
 .ambed_rgt { max-width: 47.5rem; }
-.ambed_rgt> .jnu_title_header { text-align: left; }
-.ambed_rgt> .jnu_title_header h5 { margin-bottom: 2.4rem; }
-.ambed_rgt> .jnu_title_header h3 { margin-bottom: 2.4rem; font-weight: var(--fw-300); line-height: 1.14; color: var(--color-23); }
-.ambed_rgt> .jnu_title_header p { font: var(--font-16); font-weight: var(--fw-300); }
+.ambed_rgt > .jnu_title_header { text-align: left; }
+.ambed_rgt > .jnu_title_header h5 { margin-bottom: 2.4rem; }
+.ambed_rgt > .jnu_title_header h3 { margin-bottom: 2.4rem; font-weight: var(--fw-300); line-height: 1.14; color: var(--color-23); }
+.ambed_rgt > .jnu_title_header p { font: var(--font-16); font-weight: var(--fw-300);line-height: 1.68; }
 .ambed_thrusd_sec .jnu_title_header { margin-bottom: 5rem; }
 .ambed_thre_grid { grid-template-columns: repeat(3, 1fr); gap: 3rem; display: grid; }
 .ambed_thre_grid .ambed_thur_bx { background-color: var(--color-white); text-align: center; padding: 5.1rem 5rem 6.3rem 5rem; position: relative; }
@@ -1489,7 +1489,8 @@
 .industours_section .industours_audi_redbx p { line-height: 2.6rem; color: var(--color-white); font: var(--font-18); max-width: 65%; }
 .industours_section .industours_audi_redbx h3 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; color: var(--color-white); }
 .industours_section .industours_audi_redbx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem; }
-.industours_section .industours_audi_redbx_overlay { position: absolute; inset: 0; background-color: rgba(207, 30, 98, 0.8); padding: 3.4rem 4.2rem; opacity: 0.56; }
+.industours_section .industours_audi_redbx_overlay { z-index: 9; padding: 3.4rem 4.2rem; position: absolute; inset: 0; ; }
+.industours_section .industours_audi_redbx:after { content: ""; opacity: 1; background-color: #cf1e62; width: 100%; height: 100%; padding: 3.4rem 4.2rem; position: absolute; inset: 0; opacity: 0.56; }
 .industours_title_header { text-align: center; }
 .industours_title_header .font21 { margin-bottom: 3rem; color: var(--color-cf); font-weight: 500; }
 .industours_title_header blockquote { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; margin-bottom: 2.4rem; }
@@ -1521,11 +1522,13 @@
 .partnership_content .font21 { margin-bottom: 2.4rem; color: var(--color-cf); font-weight: 500; }
 .partnership_content p { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; margin-bottom: 2rem; }
 .partnership_slide .custm_bullets { margin-block: 0rem 2rem; border-bottom: solid 1px #ddd; padding-bottom: 4rem; }
+.partnership_slide .custm_bullets li{font: var(--font-16);font-weight: var(--fw-300);color: var(--color-23);}
 .partnership_slide .custm_bullets > li::before { background-color: #F9CE2E; }
 .partnership_slide .custm_bullets > li:first-child { margin-top: 0; }
 .partnership_slide .custm_bullets > li:last-child { margin-bottom: 0; }
 .partnership_slide .btn { margin-top: 4.4rem; }
 .partnership_slide .btn>a { color: var(--color-cf); border: 1px solid #cf1e624d; padding: .7rem 4.5rem .7rem 2.4rem; position: relative; font: var(--font-16); font-weight: 300; line-height: 1.7; }
+.partnership_slide .btn > a:hover{ color: var(--color-white);}
 .collabra_faq .font42 { margin-bottom: 5.6rem; }
 .collabra_faq .tab_heading:first-child { padding-block:3.5rem 3.2rem; }
 .collabra_faq .tab_heading { border-bottom: 0.1rem dotted #fff; }
@@ -1601,21 +1604,8 @@
 .auditoriums .auditoriums_audi_redbx p { line-height: 2.6rem; color: var(--color-white); font: var(--font-18); max-width: 65%; }
 .auditoriums .auditoriums_audi_redbx h3 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; color: var(--color-white); }
 .auditoriums .auditoriums_audi_redbx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem; }
-.auditoriums .auditoriums_audi_redbx::after {
-    content: "";
-    mix-blend-mode: multiply;
-    opacity: 1;
-    background-color: #cf1e62;
-    width: 100%;
-    height: 100%;
-    padding: 3.4rem 4.2rem;
-    position: absolute;
-    inset: 0;
-}
-.auditoriums .auditoriums_audi_redbx_overlay {     z-index: 9;
-    padding: 3.4rem 4.2rem;
-    position: absolute;
-    inset: 0; }
+.auditoriums .auditoriums_audi_redbx::after { content: ""; mix-blend-mode: multiply; opacity: 1; background-color: #cf1e62; width: 100%; height: 100%; padding: 3.4rem 4.2rem; position: absolute; inset: 0; }
+.auditoriums .auditoriums_audi_redbx_overlay { z-index: 9; padding: 3.4rem 4.2rem; position: absolute; inset: 0; }
 .auditoriums_title_header { text-align: center; }
 .auditoriums_title_header .font21 { margin-bottom: 3rem; color: var(--color-cf); font-weight: 500; }
 .auditoriums_title_header blockquote { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; margin-bottom: 2.4rem; }
@@ -1698,7 +1688,8 @@
 .research-facili .custm_bullets > li { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; }
 .research-strategy.research-area { padding-bottom: 15rem; }
 .research-area .researchStra_list ul>li { padding-inline: 5rem 6.5rem; padding-block: 2.5rem; }
-.research-strategy.research-area blockquote { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; margin-top: 4.7rem; }
+.research-strategy.research-area blockquote { font: var(--font-21); font-weight: 300; color: var(--color-23); line-height: 1.7; margin-top: 4.6rem; }
+.research-strategy.research-area p{margin-top: 4.6rem;font: var(--font-16); font-weight: 300; text-align: center;}
 .research-strategy.research-area .container-lg { border: none; padding-bottom: 0; }
 .jnu_atglance_section { background-image: url(/images/back_pattern.svg); background-size: contain; background-repeat: repeat; width: 100%; padding-block: 12rem; }
 .jnu_blance .jnu_title_header { text-align: center; }
@@ -1722,11 +1713,12 @@
 .vibrant_campuses { padding-block: 5rem 15rem; }
 .vibrant_campuses h3 { text-align: center; margin-bottom: 10rem; font-weight: 300; }
 .vibrant_campuses>.container-lg { border-bottom: solid 1px #ddd; }
-.vibrant_campuses>.container-lg blockquote { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; text-align: center; padding-inline: 5rem; margin: 0; padding-bottom: 5rem; }
+.vibrant_campuses>.container-lg blockquote { font: var(--font-16); font-weight: 300; color: var(--color-23); line-height: 1.7; text-align: center;
+     padding-inline: 5rem; margin-bottom: 10rem; padding-bottom: 5rem;border-bottom: 0.1rem solid var(--color-d5); }
 .vibrant_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 5rem; }
 .vibrant_Bx figure { position: relative; }
 .vibrant_Bx p { position: absolute; bottom: 3.1rem; left: 4.6rem; font: var(--font-21); color: var(--color-white); z-index: 2; }
-.vibrant_Bx figure::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.32; position: absolute; bottom: 0; right: 0; left: 0; content: ""; height: 18rem; z-index: 0; }
+.vibrant_Bx figure::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.60; position: absolute; bottom: 0; right: 0; left: 0; content: ""; height: 18rem; z-index: 0; }
 .vibrant_Bx { display: flex; flex-wrap: wrap; gap: 2rem; }
 .rank_value_grid { grid-template-columns: 32.99% auto 49.71%; display: grid; }
 .rank_value_bx { position: relative; }
@@ -1807,8 +1799,8 @@
 .corevalues_sec { padding-block: 0 15.2rem; }
 .corevalues_Bx { display: grid; grid-template-columns: repeat(3, 1fr); gap:0.5rem; margin-top: 5rem; }
 .corevalues_Bx figure { position: relative; }
-.corevalues_Bx p { position: absolute; bottom: 3.1rem; left: 4.6rem; font: var(--font-21); color: var(--color-white); z-index: 2; line-height: 3.6rem; font-weight: 300; }
-.corevalues_Bx figure::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.32; position: absolute; bottom: 0; right: 0; left: 0; content: ""; height: 18rem; z-index: 0; }
+.corevalues_Bx p { position: absolute; bottom: 3.1rem; left: 4.6rem; font: var(--font-21); color: var(--color-white); z-index: 2; line-height: 3.6rem; font-weight: 300;min-height: 7rem; }
+.corevalues_Bx figure::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.60; position: absolute; bottom: 0; right: 0; left: 0; content: ""; height: 24.1rem; z-index: 0; }
 
 
 .librarians_grid {display: grid;grid-template-columns: repeat(2,1fr);gap: 2.5rem;margin-block: 2.4rem 0;}
@@ -1830,13 +1822,26 @@
 .admis_over { padding-block: 12rem 0; }
 .admis_over .jnu_title_header { margin-bottom: 8rem; }
 .admis_procss { padding-block: 12rem; }
-.admis_step:not(:last-child) { border-bottom: .1rem solid var(--color-d5); margin-bottom: 6.5rem; padding-bottom: 6.5rem; }
-.admis_step h4 { font: var(--font-32); color: var(--color-ccc); margin-bottom: 1.6rem; font-weight: 300; }
+.admi_probx { position: relative; padding-left: 6.8rem; }
+.admi_probx::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 5px; background: #545454; opacity: 0.24; }
+.admi_probx .step { position: relative; padding-bottom: 8rem; }
+.admis_step  h4 { color: var(--color-06); font: var(--font-48); letter-spacing: -0.48px; font-weight: 500; margin: 0 0 3rem 0; padding: 0 0 3rem 0; border-bottom: 2px dashed var(--color-d5); line-height: 1.1; }
+.admis_step .circle { position: absolute; left: -9.4rem; top: 5.2rem; width: 5.5rem; height: 5.5rem; border-radius: 50%; background: var(--color-white); border: 1rem solid var(--color-06); z-index: 2; }
+.admis_step:not(:last-child) {  margin-bottom: 6.5rem; padding-bottom: 6.5rem; }
 .admis_step h5 { margin-bottom: 3.2rem; color: var(--color-cf); margin-bottom: 3.4rem; font-weight: 500; }
 .admis_step p { font: var(--font-16); font-weight: 300; line-height: 1.68; }
 .admis_step ul { margin-block: 3rem; }
 .admis_step ul li { font: var(--font-16); font-weight: 300; }
 .admis_step a { margin-top: 3rem; }
 .admis_step h3 { font: var(--font-21); color: var(--color-23); margin-bottom: 2.5rem; font-weight: 300; line-height: 1.6; }
+.admis_procss .admis_step  ul + a { margin-top: 0rem; }
 
 /*  Admission Process End*/
+
+/* load More button common Start*/
+[data-load-item][hidden],
+[data-load-more] [data-load-item][hidden],
+[hidden].load_more_btn {
+    display: none;
+}
+/* load More button common End*/

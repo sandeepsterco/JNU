@@ -42,7 +42,12 @@ export default function AdmissionDropdown({childrens}:{childrens:any}) {
     return (
       <aside
         className="admission_drop_menu"
-        style={{ backgroundImage: `url('${getValue('admission_dropdown_image')?.image}')` }}
+        style={{
+  backgroundImage: `url('${getValue('admission_dropdown_image')?.image}')`,
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+  backgroundSize: 'cover'
+}}
       >
         <div className="admission_left">
           <blockquote>{getValue('admission_title')?.value}</blockquote>

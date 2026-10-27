@@ -18,6 +18,7 @@ import SchoolDepartments from '@/components/parser/SchoolDepartments';
 import DepartmentProgramsOffered from '@/components/parser/department/DepartmentProgramsOffered';
 import DepartmentFaculty from '@/components/parser/department/DepartmentFaculty';
 import DepartmentFacilities from '@/components/parser/department/DepartmentFacilities';
+import LoadMoreEnhancer from '@/components/parser/LoadMoreEnhancer';
 
 interface ProgramsSearchParams {
     search?: string;
@@ -170,6 +171,7 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
         <div id={containerId}>
             {parse(sanitizedHtml, options)}
             <CmsEnhancer containerId={containerId} />
+            <LoadMoreEnhancer containerId={containerId} />
         </div>
     )
 }

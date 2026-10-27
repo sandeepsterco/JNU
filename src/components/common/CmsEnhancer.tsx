@@ -7,6 +7,7 @@ import { InitAdfSwiper } from "@/lib/cms/initAdfSwiper";
 import { useEffect } from "react";
 import { InitPlacementSwiper } from "@/lib/cms/initPlacementSwiper";
 import { InitResearchSwiper } from "@/lib/cms/initResearchSwiper";
+import { InitResearchHighlightSwiper } from "@/lib/cms/InitResearchHighlightSwiper";
 import { InitMaxContent } from "@/lib/cms/initMaxContent";
 import { usePathname } from "next/navigation";
 import { InitGalleryPopup } from "@/lib/cms/initGalleryPopup";
@@ -86,6 +87,14 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
 
       if (root.querySelector(".research_swiper:not([data-swiper-init])")) {
         const cleanup = await InitResearchSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
+      if (root.querySelector(".highlights_highlights:not([data-swiper-init])")) {
+        const cleanup = await InitResearchHighlightSwiper(root);
         if (cancelled) {
           cleanup();
           return;
