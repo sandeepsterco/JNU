@@ -9,28 +9,7 @@ opacity: 0.4; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-i
 .school_pagination{ display: flex; position: absolute; bottom: 0;}
 .sch_dropdown { position: relative; flex-shrink: 0; z-index: 10; }
 .sch_dropdown>.dropdown_toggle { position: relative; min-width: 28.3rem; padding-block:1.5rem; cursor: pointer; font: var(--font-21); font-weight: 700; border: 0; padding-right: 2.8rem; background-color: transparent; text-align: left; color: var(--color-white); }
-.sch_dropdown>.dropdown_toggle::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    right: 0;
-    width: 1.5rem;
-    height: 1.5rem;
-    background: url(/images/icons/nav-arrow-down.svg) no-repeat;
-    background-position: right 0 center;
-    background-size: 1.3rem;
-    transform: translateY(-50%) rotate(0);
-    -webkit-transform: translateY(-50%) rotate(0);
-    -moz-transform: translateY(-50%) rotate(0);
-    -ms-transform: translateY(-50%) rotate(0);
-    -o-transform: translateY(-50%) rotate(0);
-    transition: all 0.5s ease;
-    -webkit-transition: all 0.5s ease;
-    -moz-transition: all 0.5s ease;
-    -ms-transition: all 0.5s ease;
-    -o-transition: all 0.5s ease;
-    filter: brightness(0) invert(1);
-}
+.sch_dropdown>.dropdown_toggle::after { content: ""; position: absolute; top: 50%; right: 0; width: 1.5rem; height: 1.5rem; background: url(/images/icons/nav-arrow-down.svg) no-repeat; background-position: right 0 center; background-size: 1.3rem; transform: translateY(-50%) rotate(0); -webkit-transform: translateY(-50%) rotate(0); -moz-transform: translateY(-50%) rotate(0); -ms-transform: translateY(-50%) rotate(0); -o-transform: translateY(-50%) rotate(0); transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; -o-transition: all 0.5s ease; filter: brightness(0) invert(1); }
 .sch_dropdown>.dropdown_toggle.show::after { transform: translateY(-50%) rotate(180deg); -webkit-transform: translateY(-50%) rotate(180deg); -moz-transform: translateY(-50%) rotate(180deg); -ms-transform: translateY(-50%) rotate(180deg); -o-transform: translateY(-50%) rotate(180deg); }
 .sch_dropdown>.dropdown { position: absolute; margin: 0; right: 0; top: 100%; width: 108%; background-color: var(--color-white); box-shadow: 0px 5px 8px rgb(0 0 0 / 8%); max-height: 0; overflow: auto; transition: max-height 0.8s ease;}
 .sch_dropdown .dropdown ul{ padding: 2rem 2rem;}
@@ -97,5 +76,45 @@ opacity: 0.4; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-i
 .download_brochure { position: relative; overflow: hidden; display: flex; gap: 1rem; color: var(--color-white); border: 1px solid rgba(255, 255, 255, 0.3); padding: 0.6rem 2.5rem; align-items: center; margin-right: 1rem; z-index: 1; line-height: 1; }
 .download_brochure::before { content: ""; position: absolute; inset: 0; background: var(--color-white); transform: translateX(-101%); transition: transform .4s ease; z-index: -1; }
 .download_brochure:hover { color: var(--color-black); }
-.download_brochure:hover::before { transform: translateX(0); }
+.download_brochure:hover::before { transform: translateX(0);}
+
+.success_speak{ padding-block: 10rem 15rem;}
+.success_speak .head_title{ text-align: center;}
+.custom_tabs input[type="radio"] { display: none; }
+.custom_tabs .tab_nav { display: flex; gap: 1.5rem; border-bottom: 1px solid #DFDFDF; justify-content: center; margin-top: 2rem; }
+.custom_tabs .tab_nav label { padding: 1.2rem 1rem 2rem; font: var(--font-18); cursor: pointer; color: #9E9E9E; border-bottom: 0.3rem solid transparent; transition: 0.3s ease; font-weight: 600; letter-spacing: 2.7px; font-family: var(--poppins); }
+.custom_tabs .tab_nav label:hover { color: var(--color-cf); }
+.custom_tabs #tab_one:checked ~ .tab_nav label[for="tab_one"],
+.custom_tabs #tab_two:checked ~ .tab_nav label[for="tab_two"],
+.custom_tabs #tab_three:checked ~ .tab_nav label[for="tab_three"] { color: var(--color-cf); border-bottom-color: var(--color-f2);}
+.custom_tabs .tab_panel { display: none; padding: 2rem 0; }
+.custom_tabs #tab_one:checked ~ .tab_content .panel_one, .custom_tabs #tab_two:checked ~ .tab_content .panel_two, .custom_tabs #tab_three:checked ~ .tab_content .panel_three { display: block; }
+.success_speak .swiper-wrapper{ padding-top: 5rem;}
+.success_speak_videobx{ position: relative;}
+.success_speak_videobx::before{background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; position: absolute; left: 0; right: 0; bottom: 0; height: 21rem; content: "";}
+.success_speak_bx_flex{ display: flex; position: absolute; bottom: 2.2rem; left: 2.4rem; right: 2.4rem; gap: 1.5rem;}
+.success_speak_bx_flex .play-pause-btn{width:5.8rem;height:5.8rem;background-color:var(--color-f2);border-radius:7rem;color:var(--color-white);font:var(--font-24);}
+.success_speak_bx_flex h5{ font: var(--font-18); font-weight: 200; color: var(--color-white);}
+.success_speak_bx_flex h6{ font: var(--font-14); font-weight: 300; color: var(--color-white);}
+.success_speak_bx_flex p{ font: var(--font-14); font-weight: 200; color:rgba(255, 255, 255, 0.6);}
+.success_speak_bx{ background-color: var(--color-white); padding: 7rem 4.4rem 2.8rem 4rem; height: 100%;}
+.success_speak_bx::before{ width: 5.8rem; left: 4.4rem; top: -2.3rem; left: 5rem; height: 4.7rem; background-repeat: no-repeat; content: ""; position: absolute;background-size: contain;}
+
+.swiper-slide:nth-child(2) .success_speak_bx::before {
+    background-image: url(/images/pink-qoute.svg);
+}
+
+.swiper-slide:nth-child(4) .success_speak_bx::before {
+    background-image: url(/images/orange-qoute.svg);
+}
+
+.success_speak_bx p{ font: var(--font-21); font-weight: 300; color: var(--color-black); line-height: 1.5;}
+.success_speak_bx span img{width: 5.4rem; height: 5.4rem; border-radius: 100%;}
+.success_speak_bx .success_speak_bx_flex *{ color: var(--color-black);}
+.success_speak_bx figure{ margin-bottom: 3rem;}
+.success_speak_bx figure img{ max-width: 5.8rem;margin-top: -4.4rem;}
+.success_speak_bx .success_speak_bx_flex{ left: 4.4rem; border-top: 1px solid #eee; margin-top: 2rem; padding-top: 2rem;}
+.success_speak_bx .success_speak_bx_flex p{ font: var(--font-14); font-weight: 200; color:#231F20;}
+.success_speak .swiper-slide{ height: auto;}
+
 
