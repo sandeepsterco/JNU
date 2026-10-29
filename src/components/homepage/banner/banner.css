@@ -50,7 +50,7 @@
     to{stroke-dashoffset:0;}
 }
 
-.logo_banner{padding-block:8rem 5rem;max-width:37.4rem;display:grid;grid-template-columns:12.5rem auto;gap:3rem;align-items:center;}
+.logo_banner{padding-block:8rem 5rem;max-width:45rem;display:grid;grid-template-columns:12.5rem auto;gap:3rem;align-items:center;}
 .emp_by{font:var(--font-12);font-weight:200;border-left:1px solid #0c185b66;padding-left:2.5rem;padding-top:0.5rem;}
 .emp_by span{display:block;color:var(--color-0c);font-weight:500;}
 .banner_btn{display:flex;gap:1rem;align-items:center;}
