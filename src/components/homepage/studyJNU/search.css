@@ -13,4 +13,5 @@
   .course_dropdown .course_list{
     padding:1.5rem 2rem;
     display:block;
+    text-align: left;
   }
