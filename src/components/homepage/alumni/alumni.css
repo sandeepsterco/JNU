@@ -35,7 +35,7 @@
 .alumni_cnt{position:absolute;bottom:4.7rem;left:3.2rem;z-index:2;}
 .alumni_cnt *{color:var(--color-white);}
 .alumni_cnt h5{font:var(--font-18);color:var(--color-white);}
-.alumni_cnt p{font:var(--font-14);font-weight:300;line-height:1;padding-top:0.5rem;}
+.alumni_cnt p{font:var(--font-14);font-weight:300;line-height:1.4;padding-top:0.5rem;}
 .alumni_cnt p span{border-left:1px solid #CFCFCF;padding-left:1rem;margin-left:1rem;}
 .alumni_slider_bx:has(video)::after{background:transparent linear-gradient(180deg,#00000000 0%,#000000 100%) 0% 0% no-repeat padding-box;opacity:0.69;position:absolute;bottom:0;left:0;right:0;height:18rem;content:"";z-index:0;}
 .alumni_slider_bx:has(video)::before{display:none;}

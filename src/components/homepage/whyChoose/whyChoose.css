@@ -32,6 +32,14 @@
 .int_logo_slider figure{text-align:center;}
 .int_logo_slider figure img{max-width:15.2rem;margin:0 auto;}
 .int_collabration_grid h3{font-weight:300;line-height:1.6;}
+.why_jnu p{max-width:30rem;font-weight:300;}
+
+
+@media (max-width:1536px){
+    .why_grid ul{ gap: 11.6rem;}
+    .int_collabration_grid:before{height: 2px;}
+
+}
 
 @media(max-width:991px){
     .why_choose{padding-block:8rem 0;}

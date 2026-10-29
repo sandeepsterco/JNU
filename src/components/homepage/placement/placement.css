@@ -22,6 +22,13 @@
 .placement_right ul li p{font:var(--font-18);font-weight:300;padding-top:2rem;padding-right:2rem;}
 .placement_logos{padding-block:7.5rem;}
 .placement_logo_pagination{display: none;}
+
+
+@media(max-width:1536px){
+.placement_right ul li:before{height: 1px; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 70%, var(--color-cf) 70%, var(--color-cf) 100%);}
+
+}
+
 @media(max-width:991px){
     .placement_section{padding-block:8rem 0;}
     .placement_wrapper{padding-block:5.5rem 0;}
