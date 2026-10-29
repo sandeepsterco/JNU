@@ -405,7 +405,7 @@ video {
 
 /* ====================school css================ */
 .school_banner { position: relative; }
-.school_banner_content { position: absolute; top: 14rem; bottom: 10rem; display: flex; flex-direction: column; justify-content: space-between; }
+.school_banner_content { position: absolute; top: 14rem; bottom: 10rem; display: flex; flex-direction: column; justify-content: space-between; z-index: 9999;}
 .school_banner .container-fluid { max-width: var(--mw2545); padding-inline: 10rem; }
 .school_filter { display: flex; align-items: center; gap: 2rem; }
 .school_filter p { font: var(--font-18); font-weight: 200; color: var(--color-white); border-right: 1px solid var(--color-white); padding-right: 2rem; margin-right:0rem; }
@@ -1450,7 +1450,7 @@ video {
 .dgtl_resrce_lft ul{margin-top: 2.8rem;}
 .dgtl_resrce_lft ul li{font: var(--font-16);font-weight: 300;}
 .dgtl_resrce_grd{display: grid;grid-template-columns: auto 49.28% ;}
-.dgtl_resrce_lft{max-width: 75rem; margin-left: auto;background-color: var(--color-white);padding-inline: 12.5rem 14.5rem;padding-block: 4.7rem 7.8rem;}
+.dgtl_resrce_lft{max-width: 75rem; margin-left: auto;background-color: var(--color-white);padding-inline: 12.5rem 14.5rem;padding-block: 4.7rem 0rem;}
 .collabo_classroom { padding-block: 11rem 12rem; }
 .collabo_classroom_overview { margin-block: 5.6rem 0; position: relative; }
 .collabo_classroom_overview::before { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.6; content: ""; bottom: 0; left: 0; right: 0; height: 26.3rem; position: absolute; }
@@ -1733,6 +1733,7 @@ video {
 .rank_value_bx { position: relative; }
 .campus_overlay { position: absolute; right: 4.3rem; top: 2.3rem; }
 .campus_overlay h4 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; }
+/* .national_image figure img{ opacity: 0.4;} */
 .campus_overlay h4 sup { font: var(--font-30); top: -2.5rem; }
 .campus_overlay * { color: var(--color-white); }
 .rank_value_bx p { font: var(--font-18); font-weight: 300; line-height: 2.6rem; }

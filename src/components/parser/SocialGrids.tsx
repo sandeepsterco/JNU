@@ -7,6 +7,7 @@ export interface SocialDataInterface {
     name: string;
     image: string;
     slug: string;
+    url:string;
 }
 
 interface PageDataInterface {
