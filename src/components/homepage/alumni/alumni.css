@@ -8,7 +8,7 @@
 .alumni_header_right .alumni-prev:hover img,.alumni_header_right .alumni-next:hover img{filter:brightness(0) invert(1)}
 .alumni_header_right .alumni-prev:hover::after,.alumni_header_right .alumni-next:hover::after{color:var(--color-white);}
 .alumni_slider_bx .alumni_logo{max-width:15.2rem;position:absolute;top:3.5rem;left:5.6rem;}
-.alumni_slider_bx .alumni_logo img{max-height:10rem;}
+.alumni_slider_bx .alumni_logo img{max-height:13rem;}
 .alumni_bx_bottom{padding:4.3rem 6.5rem;}
 .alumni_slider_bx{position:relative;height:100%;}
 .alumni_slider_section .swiper-slide{height:auto;}
@@ -42,7 +42,7 @@
 .alumni_img{position:relative;}
 .alumni_video{width:100%;height:100%;object-fit:cover;display:none;}
 .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);cursor:pointer;z-index:2;}
-.alumni_msg_desc{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;min-height:5.5rem;}
+.alumni_msg_desc{display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;min-height:5.5rem;}
 
 
 
