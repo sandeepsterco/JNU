@@ -932,6 +932,9 @@ video {
 .founded_table thead > tr > th:nth-child(4) { width: 10%; }
 .funded_resetitle { margin-bottom: 5.6rem; }
 .funded_resetitle h5 { color: var(--color-white); margin-bottom: 3.2rem; }
+.funded_resec .funded_resetitle h4{    color: var(--color-white);
+    letter-spacing: -1.26px;
+    font-weight: 300;}
 /* Unique Funding Accordion */
 .fundacc_wrapper { width: 100%; }
 .fundacc_list { width: 100%; }
@@ -1708,9 +1711,13 @@ video {
 .jnu_multiCampus { padding-top: 10rem; }
 .at_glance_Bx { padding-inline: 4rem; }
 .at_glance_Bx ul { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5rem; list-style: none; padding: 9.3rem 0 0; margin: 0; }
+
 .at_glance_Bx ul li { background-color: var(--color-white); padding: 7.5rem 4rem 5.6rem; text-align: center; }
 .at_glance_Bx ul li h4 { font: var(--font-24); font-weight: 300; max-width: 18.2rem; margin: 0 auto 3rem; color: var(--color-black); }
 .at_glance_Bx ul li p { font: var(--font-14); font-weight: 300; margin: 0 auto 3rem; color: var(--color-black); }
+.at_glance_Bx ul li:nth-child(2) p {
+    margin-bottom: 0;
+}
 .at_glance_Bx ul li h3 { font: var(--font-48); color: #ff0000; letter-spacing: -4.13px; font-weight: 900; }
 .at_glance_Bx ul li figure img { max-width: 8rem; margin: 0 auto; }
 .at_glance_Bx ul li h6 { font: var(--font-16); color: var(--color-black); font-weight: 400; }
