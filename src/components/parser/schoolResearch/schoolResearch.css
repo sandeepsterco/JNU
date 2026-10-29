@@ -1,0 +1,12 @@
+.research_grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.3rem; margin-top: 8rem;}
+.research_Bx figcaption{ padding-inline: 2rem 0;}
+.research_Bx figcaption h4{ font: var(--font-18); color: var(--color-black); font-weight: 300; margin-block: 2rem 1rem;}
+.research_Bx figcaption p{ font: var(--font-14); color: var(--color-black); max-width: 66%;}
+.research_header .head_title p{ font-weight: 200; margin-block:3.7rem 2rem;}
+.school_research_counter{ display: grid; grid-template-columns: repeat(3, 21.8rem); list-style: none; padding: 0; gap: 2rem;}
+.school_research_counter li figcaption { font: var(--font-56); color: var(--color-cf); font-weight: 400; }
+.school_research_section .research_header{ margin-inline: 0rem -4rem;}
+.school_research_section { padding-block: 20rem 0; }
+.school_research_counter li figcaption sup { font: var(--font-30); font-weight: 600; top:-2.8rem; margin-left: -1.5rem;}
+.research_header_right li p{ max-width: 15rem; }
+.school_research_section .research_slider_section { padding-top: 9.4rem;}

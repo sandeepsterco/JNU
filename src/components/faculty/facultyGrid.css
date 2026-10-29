@@ -1,0 +1,19 @@
+.faculty_section{ padding-block: 11rem; width: 100%; position: relative;}
+.faculty_section::before{background-image: url(/images/patterns/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 41.8rem; width: 100%; content: ""; z-index: -1;}
+.faculty_filter{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem;}
+.faculty_filter .custom_select{ position: relative;}
+.faculty_filter .custom_select::after{ content: ""; position: absolute; right: 2rem; top: 50%; width: 0.8rem; height: 0.8rem; border-right: 1px solid #333; border-bottom: 1px solid #333; transform: translateY(-70%) rotate(45deg); pointer-events: none; }
+.faculty_filter input{ width: 100%; height: 4.7rem; border: 1px solid #CF1E6266; font: var(--font-14); font-weight: 300; padding-inline: 3rem; background:var(--color-white)}
+.faculty_filter select{ width: 100%; height: 4.7rem; border: 1px solid #CF1E6266; font: var(--font-14); font-weight: 300; padding-inline: 3rem; appearance: none; -webkit-appearance: none; -moz-appearance: none; cursor: pointer;  background:var(--color-white)}
+.faculty_filter .form-control::placeholder{ color: var(--color-black);}
+.faculty_filter .input-group{ position: relative;}
+.faculty_filter .btn_search{ position: absolute; right: 2rem; top: 1.5rem; max-width: 1.4rem;}
+.faculty_grid{ display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem; row-gap: 4rem; margin-top: 5.6rem;}
+.faculty_cnt h4{ font: var(--font-24); font-weight: 300; margin-top: 3rem; }
+.faculty_Bx{ position: relative;}
+.faculty_cnt{ text-align: center; padding-bottom: 3rem; position:relative;}
+.faculty_Bx figure{ overflow: hidden;}
+.faculty_Bx figure img{transition: transform 0.5s ease;}
+.faculty_Bx:hover figure img{  transform: scale(1.1);}
+.faculty_cnt p{ font: var(--font-14); font-weight: 300; }
+.faculty_cnt::after{ content: ""; position: absolute; bottom: 0; left:0; width: 100%; height: 0.4rem; right: 0; margin: auto; background: linear-gradient(to right, var(--color-cf) 0%, var(--color-cf) 50%, var(--color-f9) 50%, var(--color-f9) 100%); }
