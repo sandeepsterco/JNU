@@ -38,7 +38,7 @@ export default function FooterData({headerRes, quickLinksData, infoData}:{header
                                     .filter((item:any)=>(item.key == 'facebook' || item.key == 'twitter' || item.key == 'youtube' || item.key == 'instagram' || item.key == 'linkedin'))
                                     .map((item:any)=>(
                                         <li key={item.key}>
-                                            <Link href={item.value ?? ''}>
+                                            <Link href={item.value ?? ''} target="_blank">
                                                 <img src={item.image} className="img-fluid" alt={item.key} />
                                             </Link>
                                         </li>

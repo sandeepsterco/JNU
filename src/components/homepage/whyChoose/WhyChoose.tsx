@@ -24,7 +24,7 @@ interface WhyChooseUsInterface{
         subtitle:string;
         lists:ListInterface[];
         links:LinkInterface[];
-        slug:string;
+        view_more:string;
         desktopimage:string;
         mobileimage:string;
         virtualtoururl?:string;
@@ -66,8 +66,8 @@ export default function WhyChoose({data, collaboration}:WhyChooseUsInterface) {
                                 </ul>
                             )}  
 
-                            {data.slug && (
-                                <Link href={data.slug} className="load_more" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">Load More 
+                            {data.view_more && (
+                                <Link href={data.view_more} className="load_more" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">Load More 
                                     <figure><img src="/images/icons/nav-arrow-down.svg" className="img-fluid" alt="arrow" /></figure>
                                 </Link>
                             )}

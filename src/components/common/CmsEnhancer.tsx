@@ -15,7 +15,10 @@ import { InitDepartmentHero } from "@/lib/cms/initDepartmentHero";
 import { InitAlumniSwiper } from "@/lib/cms/initAlumniSwiper";
 import { InitAccordion } from "@/lib/cms/initAccordion";
 import { InitGallery } from "@/lib/cms/initGallery";
+import { initAcademicCampusSwiper } from "@/lib/cms/initAcademicCampusSwiper";
+import { InitReadMore } from "@/lib/cms/initReadMore";
 import { initSuccessspeakSwiper } from "@/lib/cms/initSuccessspeakSwiper";
+import { InitCommonAccordion } from "@/lib/cms/initCommonAccordion";
 
 function waitForLayout() {
   return new Promise<void>((resolve) => {
@@ -136,8 +139,25 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
           return;
         }
         cleanupFns.push(cleanup);
-      }     
+      }
+       if (root.querySelector(".aca_campusauditoriumSwiper:not([data-swiper-init])")) {
+        const cleanup = await initAcademicCampusSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
+      
 
+      // inside init(), with the others
+      if (root.querySelector(".read-btn")) {
+        cleanupFns.push(InitReadMore(root));
+      }
+
+      if (root.querySelector(".common_accordion")) {
+        cleanupFns.push(InitCommonAccordion(root));
+      }
     }
 
     init();
