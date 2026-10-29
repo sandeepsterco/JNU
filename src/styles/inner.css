@@ -19,6 +19,12 @@
 .jnu_atglance_section .jnu_title_header blockquote { margin:0 0 3rem 0; }
 .jnu_title_header p { font: var(--font-14); font-weight: 300; }
 .at_glance_Bx { padding-inline: 4rem; }
+video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .at_glance_Bx ul { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5rem; list-style: none; padding:9.3rem 0 0; margin: 0; }
 .at_glance_Bx ul li { background-color: var(--color-white); padding: 7.5rem 4rem 5.6rem; text-align: center; }
 .at_glance_Bx ul li h4 { font: var(--font-24); font-weight: 300; max-width:18.2rem; margin: 0 auto 3rem; color: var(--color-black); }
@@ -1489,7 +1495,7 @@
 .industours_section .industours_audi_whitebx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem; }
 .industours_section .industours_bg_white { background-color: var(--color-white); }
 .industours_section .industours_audi_redbx { background-color: var(--color-white); position: relative; min-height: 100%; }
-.industours_section .industours_audi_redbx p { line-height: 2.6rem; color: var(--color-white); font: var(--font-18); max-width: 65%; }
+.industours_section .industours_audi_redbx p { line-height: 2.6rem; color: var(--color-white); font: var(--font-18); max-width: 79%; }
 .industours_section .industours_audi_redbx h3 { font: var(--font-56); font-weight: 400; margin-bottom: 1rem; line-height: 1.2; color: var(--color-white); }
 .industours_section .industours_audi_redbx h3 sup { font: var(--font-30); font-weight: 400; top: -2.5rem; }
 .industours_section .industours_audi_redbx_overlay { z-index: 9; padding: 3.4rem 4.2rem; position: absolute; inset: 0; ; }
@@ -1530,8 +1536,8 @@
 .partnership_slide .custm_bullets > li:first-child { margin-top: 0; }
 .partnership_slide .custm_bullets > li:last-child { margin-bottom: 0; }
 .partnership_slide .btn { margin-top: 4.4rem; }
-.partnership_slide .btn>a { color: var(--color-cf); border: 1px solid #cf1e624d; padding: .7rem 4.5rem .7rem 2.4rem; position: relative; font: var(--font-16); font-weight: 300; line-height: 1.7; }
-.partnership_slide .btn > a:hover{ color: var(--color-white);}
+/* .partnership_slide .btn>a { color: var(--color-cf); border: 1px solid #cf1e624d; padding: .7rem 4.5rem .7rem 2.4rem; position: relative; font: var(--font-16); font-weight: 300; line-height: 1.7; }
+.partnership_slide .btn > a:hover{ color: var(--color-white);} */
 .collabra_faq .font42 { margin-bottom: 5.6rem; }
 .collabra_faq .tab_heading:first-child { padding-block:3.5rem 3.2rem; }
 .collabra_faq .tab_heading { border-bottom: 0.1rem dotted #fff; }
