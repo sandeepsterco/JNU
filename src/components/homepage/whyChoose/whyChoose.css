@@ -36,10 +36,24 @@
 
 
 @media (max-width:1536px){
-    .why_grid ul{ gap: 11.6rem;}
-    .int_collabration_grid:before{height: 2px;}
-
+    .why_choose{padding-block:10rem 0;}
+    .why_choose .head_title blockquote{margin-top:1.2rem;}
+    .why_jnu ul{gap:4.6rem;padding:4.6rem 0 0;}
+    .why_jnu ul li{padding:0.5rem 0 0 3.4rem;}
+    .why_jnu ul li:before{width:1.7rem;height:6.3rem;left:0;}
+    .why_jnu ul li h4{margin-bottom:0.6rem;}
+    .why_choose .col-lg-10{width:100%;}
+    .why_background_footer{bottom: 2.2rem;}
+    .why_background_footer .container{max-width:100%;}
+    .why_grid{max-width:89rem;margin-inline:auto;}
+    .why_grid ul{gap:1.6rem;flex-shrink:0;}
+    .why_grid ul li a:after{width:0.4rem;height:0.4rem;top:0.8rem;left:0;}
+    .why_grid ul li:not(:first-child)>a{padding-left:1.5rem;}
+    .virtual_tour{padding:0.5rem 1.6rem;gap:0.6rem;}
+    .virtual_tour>figure>img{width: 1.4rem;}
+    .why_btn{margin-left:3.2rem;}
 }
+
 
 @media(max-width:991px){
     .why_choose{padding-block:8rem 0;}

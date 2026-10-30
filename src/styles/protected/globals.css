@@ -95,6 +95,38 @@ html{font-size:min(0.3929273084479vw,10px);}
 section{width:100%;max-width:var(--mw2545);margin-inline:auto;}
 main{padding-top:var(--header-height);}
 
+/* Desktop & Laptop */
+@media (max-width: 1600px) {
+:root{
+      --font-18: var(--fw-normal) 2rem/1.4 var(--stack);
+      --font-16: var(--fw-normal) 1.8rem/1.66 var(--stack);
+      --font-15: var(--fw-normal) 1.8rem/1.66 var(--stack);
+      --font-14: var(--fw-normal) 1.8rem/1.66 var(--stack);
+      --font-9: var(--fw-normal)  1.6rem/1.5  var(--stack);
+  }
+}
+@media(max-width:1536px){
+  :root{
+    --font-72: var(--fw-normal) 3.6rem / 1.083 var(--stack);
+    --font-56: var(--fw-600) 3rem / 1.25 var(--stack);
+    --font-42: var(--fw-600) 2.4rem / 1.08 var(--stack);
+    --font-24: var(--fw-normal) 1.8rem / 1.5 var(--stack);
+    --font-21: var(--fw-300) 1.4rem / 1.5 var(--stack);
+    --font-18: var(--fw-normal) 1.3rem / 1.5 var(--stack);
+    --font-16: var(--fw-300) 1.3rem / 1.5 var(--stack);
+    --font-14: var(--fw-300) 1.3rem / 1.5 var(--stack);
+    --mx1118: min( 1118px, calc(100% - ((100% - min(1118px, 81.8448023vw)) / 2)) );
+    --header-height: 8.5rem;
+  }
+  html{font-size:min(0.73206442166vw, 10px);}
+  .container-lg{max-width:min(934px,68.3748169vw);margin-inline:auto;padding-inline:1.5rem;}
+  .max-content-lg{width:100%;max-width:var(--mx1118);padding-right:0;margin-inline:auto 0;}
+  .max-container-lg{width:100%;max-width:var(--mx1118);padding-right:0;margin-inline:auto 0;margin:0 auto;}
+  .container{max-width:min(850px,55.338541666vw);margin-inline:auto;padding-inline:1.5rem;}
+
+}
+
+
 @media(max-width:991px){
   html{font-size:45.5%;}
   .max-container-lg{max-width:100%;padding-inline: 3.2rem;}
@@ -203,22 +235,17 @@ h6{font:var(--font-18);color: var(--color-black);}
 .head_title:has(.font18) blockquote{ margin:2.4rem 0 0;}
 .head_title .font18{ color:var(--color-06); letter-spacing: 2.7px; text-transform: uppercase; font-weight: 600; font-family: var(--poppins);}
 
+@media(max-width:1536px){
+  .head_title:has(.font18) blockquote{margin:1rem 0 0;}
+}
+
 @media(max-width:767px){
   .head_title .font18{font:var(--fw-600) 1.4rem/1.66 var(--stack);color:var(--color-black);letter-spacing:0.27rem;}
   .head_title:has(.font18) blockquote{margin:1.6rem 0 0;}
  /* .head_title blockquote{font:var(--fw-normal) 2.1rem / 1.2 var(--stack);} */
 
 }
-/* Desktop & Laptop */
-@media (max-width: 1600px) {
-:root:root{
-      --font-18: var(--fw-normal) 2rem/1.4 var(--stack);
-      --font-16: var(--fw-normal) 1.8rem/1.66 var(--stack);
-      --font-15: var(--fw-normal) 1.8rem/1.66 var(--stack);
-      --font-14: var(--fw-normal) 1.8rem/1.66 var(--stack);
-      --font-9: var(--fw-normal)  1.6rem/1.5  var(--stack);
-  }
-}
+
 
 /* @media (max-width: 1536px) {
      html{font-size:min(0.5208333333vw,10px);}
