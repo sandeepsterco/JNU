@@ -44,6 +44,7 @@
     .study_at_jnu .container{max-width: 100%;padding-inline:12.5rem;}
     .prgrms_grid {padding-block: 4rem 5.6rem;}
     .prgrms_Bx h4{margin-bottom:1.1rem;}
+    .prgrms_Bx p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden;}
     .prgrms_Bx span{width: 1.6rem;height: 1.6rem;padding: 0;margin-top: 1.4rem;}
     .prgrms_Bx span>img{width: 0.4rem;}
     .prgrms_Bx:last-child{padding-right:0;}

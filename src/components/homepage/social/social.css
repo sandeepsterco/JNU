@@ -13,6 +13,16 @@ ul.social_media_link li a{transition:transform 0.5s ease;display:block;}
 ul.social_media_link li a:hover{transform:rotate(360deg);}
 .social_wall_grid{padding:0;list-style:none;margin-top:8rem;display:grid;grid-template-columns:repeat(4,1fr);gap:0.2rem;}
 .social_linkicon{position: absolute;right: 2rem;top: 2rem;width: 2.9rem;height: 2.9rem;}
+
+
+@media(max-width:1536px) {
+    .jnu_social_wall{padding-block:10rem 12rem;}
+    .jnu_social_wall .container{max-width:min(934px,68.3748vw);}
+    ul.social_media_link{gap: 1.1rem; margin-top: 1.1rem;}
+    ul.social_media_link li{max-width:2.1rem;}
+    .social_wall_grid{margin-top:4.3rem;}
+
+}
 @media(max-width:991px) {
     .jnu_social_wall{padding-block:8rem;}
     .social_wall_grid{margin-top:5rem;}

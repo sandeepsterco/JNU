@@ -53,11 +53,11 @@ export default function AlumniSlider({ alumniData, prevRef, nextRef }: AlumniSli
             <Swiper
                 modules={[Navigation, Autoplay]}
                 loop={true}
-                autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true
-                }}
+                // autoplay={{
+                //     delay: 3000,
+                //     disableOnInteraction: false,
+                //     pauseOnMouseEnter: true
+                // }}
                 className="alumni_swiper"
                 speed={1000}
                 slidesPerView={1}

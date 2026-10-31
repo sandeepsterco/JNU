@@ -121,8 +121,8 @@ main{padding-top:var(--header-height);}
   html{font-size:min(0.73206442166vw, 10px);}
   .container-lg{max-width:min(934px,68.3748169vw);margin-inline:auto;padding-inline:1.5rem;}
   .max-content-lg{width:100%;max-width:var(--mx1118);padding-right:0;margin-inline:auto 0;}
-  .max-container-lg{width:100%;max-width:var(--mx1118);padding-right:0;margin-inline:auto 0;margin:0 auto;}
-  .container{max-width:min(850px,55.338541666vw);margin-inline:auto;padding-inline:1.5rem;}
+  .max-container-lg{width:100%;max-width:min(1118px, 81.8448023vw);padding-right:0;margin-inline:auto 0;margin:0 auto;}
+  .container{max-width:min(850px,62.22547584vw);margin-inline:auto;padding-inline:1.5rem;}
 
 }
 

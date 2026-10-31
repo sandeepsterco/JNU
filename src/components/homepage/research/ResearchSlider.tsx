@@ -26,10 +26,10 @@ export default function ResearchSlider({data}:ResearchSliderInterface) {
                 modules={[Navigation, Autoplay, Grid]}
                     className="research_swiper"
                     // loop={true}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false,
-                    }}
+                    // autoplay={{
+                    //     delay: 3000,
+                    //     disableOnInteraction: false,
+                    // }}
                     speed={2000}
                     slidesPerView={1}
                     spaceBetween={0}
