@@ -7,6 +7,7 @@
 .alumni_header_right .alumni-prev:hover,.alumni_header_right .alumni-next:hover{background-color:var(--color-cf);}
 .alumni_header_right .alumni-prev:hover img,.alumni_header_right .alumni-next:hover img{filter:brightness(0) invert(1)}
 .alumni_header_right .alumni-prev:hover::after,.alumni_header_right .alumni-next:hover::after{color:var(--color-white);}
+.alumni_header_right .alumni-prev>svg, .alumni_header_right .alumni-next>svg{display: none;}
 .alumni_slider_bx .alumni_logo{max-width:15.2rem;position:absolute;top:3.5rem;left:5.6rem;}
 .alumni_slider_bx .alumni_logo img{max-height:10rem;}
 .alumni_bx_bottom{padding:4.3rem 6.5rem;}
@@ -45,7 +46,24 @@
 .alumni_msg_desc{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;min-height:5.5rem;}
 
 
-
+@media(max-width:1536px){
+    .our_alumni_section{padding-block: 10rem 12.1rem;}
+    .our_alumni_section .container{max-width:var(--mx1118);margin-inline:auto 0;padding-right: 28.1rem;}
+    .alumni_header_right .alumni-prev, .alumni_header_right .alumni-next{top:1.5rem;width: 1.6rem; height: 1.6rem;padding: 0;display: inline-flex; justify-content: center;}
+    .alumni_header_right .alumni-prev>img, .alumni_header_right .alumni-next>img{width: 0.5rem; }
+    .alumni_slider_section{padding-top:3.1rem;}
+    .alumni_slider_bx .alumni_logo img{max-height:2.4rem;}
+    .alumni_slider_bx .alumni_logo{top:1.5rem;left:2.5rem;}
+    .qoute_icon{max-width:3.2rem;margin-block:-5rem 1rem;}
+    .alumni_bx_bottom{padding: 3.2rem 3.3rem 2rem;}
+    .alumni_bx_bottom h4:empty{display: none;}
+    .alumni_bx_bottom p span{margin-left:0.5rem;padding-left:0.5rem;}
+    .alumni_bx_bottom p { padding-top: 2rem;}
+    .alumni_header_right{gap:0.4rem;}
+    .alumni_slider_bx .play-pause-btn{font:var(--font-21);width:3.7rem;height:3.7rem;top:0.8rem;right:1.4rem;}
+    .alumni_cnt{padding:2.2rem 1.7rem;bottom:0;left:0;}
+    .alumni_slider_bx:before{max-width:13.2rem;height:2px;background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 3.5rem, var(--color-06) 3.5rem, var(--color-06) 100%);}
+}
 
 
 
