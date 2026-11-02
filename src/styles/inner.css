@@ -619,6 +619,11 @@ video { display: block; width: 100%; height: 100%; object-fit: cover; }
 .conf_topsec  input[type="radio"] { accent-color:     var(--color-cf); ; }
 .hero_bg_pattern { position: relative; }
 .hero_bg_pattern::before { background-image: url(/images/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 83.77rem; width: 100%; z-index: -1; }
+@media(max-width:1536px) {
+    .hero_bg_pattern::before{
+        height: 38.5rem;
+    }
+}
 /* privacy Policy Page CSS */
 .privacy_policy_wraper { padding-block: 12rem; }
 .privacy_policy_wraper blockquote { font: var(--font-21); color: var(--color-23); margin-bottom: 0; font-weight: 300; line-height: 1.6; }
@@ -1414,8 +1419,6 @@ video { display: block; width: 100%; height: 100%; object-fit: cover; }
 .jnu_newslatter .jnu_title_header h5 { margin-bottom: 2.4rem; }
 /* JS13102026 */
 .sport_facillities_main { padding-block: 12rem 14rem; }
-/* .sports-facilities::before { background-image: url(/assets/images/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 82rem; width: 100%; content: ""; z-index: -1; }
-*/
 .sport_facillities { margin-top: 0; padding-top: 0; border: none; }
 .sport_facillities { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.3rem; align-items: center; }
 .sport_facillities_right { padding-inline: 13.5rem 0; max-width: 69rem; }
@@ -1497,6 +1500,21 @@ video { display: block; width: 100%; height: 100%; object-fit: cover; }
 .keyimageGroup figure:nth-child(2) { z-index: 2; }
 .keyimageGroup figure:nth-child(3) { z-index: 3; }
 .keyimageGroup figure img { width: 100%; height: 100%; display: block; object-fit: cover; }
+@media(max-width:1536px) {
+.sport_facillities_main { padding-block: 6.4rem 10rem; }
+.sport_facillities_right { padding-inline: 5.8rem 0; }
+.sport_title_header.right-content { padding-inline:  0 5.8rem; }
+.stage_global p { font: var(--font-16); }
+.gymnasium_section { padding-block: 7rem 10rem; }
+.gymnasium_foundation_right { max-width: 34rem; padding-inline: 6.5rem 0; }
+.gymnasium_grid{margin-top: 1.6rem;gap: 1.6rem;}
+.gymnasium_box figure{margin-bottom: 0rem;}
+.key-events_right{padding-inline:10.9rem 4.7rem;}
+.key-events_grid{gap: 1.6rem;padding-bottom: 6.4rem;}
+}
+
+
+
 /* Library */
 .library_top_sec .jnu_title_header blockquote { padding-inline: 3rem; }
 .library_top_sec .jnu_title_header h5 { padding-top: 10.4rem; }
