@@ -1831,7 +1831,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
     .vibrant_Bx p{bottom:1.1rem;left:2.6rem;}
     .vibrant_Bx figure:after{height:10rem;}
     .rank_best_wrapper{margin-top:5.7rem;}
-    .enagage_pattern{padding-top:8.3rem;padding-left:3.1rem;}
+    .enagage_pattern{padding-top:11rem;padding-left:3.1rem;}
     .enagage_pattern h5{height:auto;line-height:normal;}
     .enagage_pattern p{line-height:normal;}
     .common_overlay_text{left:1.8rem;}
@@ -1841,14 +1841,15 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
     .blue_box p{line-height:1.5;}
     .rank_value_bx p{line-height:1.5;}
     .distungish_wraper{padding-bottom:0.5rem;}
-    .blue_box{height:20rem;}
-    .student_community{min-height:20rem;margin-top:0.5rem;}
+    .blue_box{height:16.2rem;}
+    .student_community{min-height:16.2rem;margin-top:0.5rem;}
     .rank_value_grid_2{gap:0.5rem;padding-top:0.5rem;}
     .exper_faculties{padding-top:0.5rem;}
-    .pink_box{height:20rem;}
+    .pink_box{height:16.2rem;}
     .last_group{gap:0.8rem;}
-
+    .state_art_bottom{height:16.2rem;margin-top:0.5rem;}
 }
+
 
 
 .about_research { padding-block: 14.3rem 20rem; }
