@@ -237,6 +237,7 @@ h6{font:var(--font-18);color: var(--color-black);}
 
 @media(max-width:1536px){
   .head_title:has(.font18) blockquote{margin:1rem 0 0;}
+  .head_title .font18{letter-spacing: 0.005rem;}
 }
 
 @media(max-width:767px){
