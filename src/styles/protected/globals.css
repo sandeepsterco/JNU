@@ -108,19 +108,24 @@ main{padding-top:var(--header-height);}
 @media(max-width:1536px){
   :root{
     --font-72: var(--fw-normal) 3.6rem / 1.083 var(--stack);
+    --font-62: var(--fw-600) 3rem / 1.25 var(--stack);
+    --font-60: var(--fw-600) 2.8rem / 1.25 var(--stack);
     --font-56: var(--fw-600) 3rem / 1.25 var(--stack);
+    --font-48: var(--fw-normal) 2.6rem / 1.25 var(--stack);
     --font-42: var(--fw-600) 2.4rem / 1.08 var(--stack);
     --font-24: var(--fw-normal) 1.8rem / 1.5 var(--stack);
     --font-21: var(--fw-300) 1.4rem / 1.5 var(--stack);
+    --font-20: var(--fw-normal) 1.3rem / 1.5 var(--stack);
     --font-18: var(--fw-normal) 1.3rem / 1.5 var(--stack);
     --font-16: var(--fw-300) 1.3rem / 1.5 var(--stack);
     --font-14: var(--fw-300) 1.3rem / 1.5 var(--stack);
-    --mx1118: min( 1118px, calc(100% - ((100% - min(1118px, 81.8448023vw)) / 2)) );
+    --mx1118:calc(100% - ((100% - min(1118px, 81.8448023vw)) / 2));
+    --mx934:calc(100% - ((100% - min(934px,68.3748169vw)) / 2));
     --header-height: 8.5rem;
   }
   html{font-size:min(0.73206442166vw, 10px);}
   .container-lg{max-width:min(934px,68.3748169vw);margin-inline:auto;padding-inline:1.5rem;}
-  .max-content-lg{width:100%;max-width:var(--mx1118);padding-right:0;margin-inline:auto 0;}
+  .max-content-lg{width:100%;max-width:var(--mx934);padding-right:0;margin-inline:auto 0;}
   .max-container-lg{width:100%;max-width:min(1118px, 81.8448023vw);padding-right:0;margin-inline:auto 0;margin:0 auto;}
   .container{max-width:min(850px,62.22547584vw);margin-inline:auto;padding-inline:1.5rem;}
 
@@ -267,6 +272,11 @@ h6{font:var(--font-18);color: var(--color-black);}
 .breadcrumb li:first-child{border-right:1px solid var(--color-f9);padding-right:2rem;}
 .breadcrumb li a{font:var(--font-14);font-weight:600;color:var(--color-23);line-height:1;}
 .breadcrumb li a:hover{color:var(--color-cf);}
+
+@media(max-width:1536px){
+  .arrow_box{width:1.6rem;height:1.6rem;display:inline-flex;justify-content: center; padding:0;}
+  .arrow_box img{max-width: 0.5rem;}
+}
 
 
 /* Reveal Animations */

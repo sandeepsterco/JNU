@@ -44,7 +44,8 @@ export async function initSuccessspeakSwiper(root: HTMLElement): Promise<() => v
       breakpoints: {
         768: { slidesPerView: 2, spaceBetween: 26 },
         992: { slidesPerView: 3, spaceBetween: 26 },
-        1200: { slidesPerView: MAX_PER_VIEW, spaceBetween: 26 },
+        1200: { slidesPerView: MAX_PER_VIEW, spaceBetween: 10 },
+        1920: { slidesPerView: MAX_PER_VIEW, spaceBetween: 26 },
       },
     });
 

@@ -48,11 +48,11 @@
 
 @media(max-width:1536px){
     .our_alumni_section{padding-block: 10rem 12.1rem;}
-    .our_alumni_section .container{max-width:var(--mx1118);margin-inline:auto 0;padding-right: 28.1rem;}
+    .our_alumni_section .container{max-width:min(934px,68.3748169vw);}
     .alumni_header_right .alumni-prev, .alumni_header_right .alumni-next{top:1.5rem;width: 1.6rem; height: 1.6rem;padding: 0;display: inline-flex; justify-content: center;}
     .alumni_header_right .alumni-prev>img, .alumni_header_right .alumni-next>img{width: 0.5rem; }
     .alumni_slider_section{padding-top:3.1rem;}
-    .alumni_slider_bx .alumni_logo img{max-height:2.4rem;}
+    .alumni_slider_bx .alumni_logo img{max-height:6.4rem;}
     .alumni_slider_bx .alumni_logo{top:1.5rem;left:2.5rem;}
     .qoute_icon{max-width:3.2rem;margin-block:-5rem 1rem;}
     .alumni_bx_bottom{padding: 3.2rem 3.3rem 2rem;}
