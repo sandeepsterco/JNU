@@ -102,12 +102,13 @@ main{padding-top:var(--header-height);}
       --font-16: var(--fw-normal) 1.8rem/1.66 var(--stack);
       --font-15: var(--fw-normal) 1.8rem/1.66 var(--stack);
       --font-14: var(--fw-normal) 1.8rem/1.66 var(--stack);
-      --font-9: var(--fw-normal)  1.6rem/1.5  var(--stack);
+   
   }
 }
 @media(max-width:1536px){
   :root{
     --font-72: var(--fw-normal) 3.6rem / 1.083 var(--stack);
+     --font-60: var(--fw-600) 3.2rem/1 var(--stack);
     --font-56: var(--fw-600) 3rem / 1.25 var(--stack);
     --font-42: var(--fw-600) 2.4rem / 1.08 var(--stack);
     --font-24: var(--fw-normal) 1.8rem / 1.5 var(--stack);
