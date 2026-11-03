@@ -1260,6 +1260,36 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .train_gradulft p{font:var(--font-16);font-weight:var(--fw-300);padding-right:3rem;}
 .train_gradulft > ul.custom_lists{margin-top:4.8rem;}
 
+@media(max-width:1536px){
+    .ctr_excell_over{padding-block:6rem 0;}
+    .ctr_excell_over .jnu_title_header{margin-bottom:3rem;}
+    .ctr_excell_over .jnu_title_header h3{margin-bottom:3rem;}
+    .ctr_excell_rgt .ctr_excrgt_btm h3{margin-top:1.7rem;}
+    .ctr_excell_grid{grid-template-columns:54.3% auto;gap:3rem;}
+    .ctr_exce_lft figure:nth-child(2){margin-top:1.5rem;}
+    .ctr_excell_rgt ul{margin-top:2.5rem;margin-bottom:2.8rem;padding-bottom:1.9rem;}
+    .ctr_excell_rgt ul li:not(:last-child){margin-bottom: 1rem;}
+    .ctr_excell_rgt .ctr_excrgt_btm h3{margin-top:1.7rem;}
+    .ctr_excell_tabsec{margin-block:8rem 8rem;}
+    .ctr_extabbody{padding-top:5.4rem;}
+    .ctr_tabtop .home_tabs{gap:4.3rem;padding:0;}
+    .ctr_tabtop .home_tabs li{padding-bottom:2.1rem;}
+    .critical_thigrid{gap:3.5rem;margin-bottom:1.5rem;}
+    .criti_thiklft h4{margin-bottom:2.4rem;padding-right:0.5rem;}
+    .goal_benefi_grid .goal_bene_col{padding:3.8rem 3.6rem 5rem 4rem;}
+    .goal_benefi_grid{gap:1.5rem;}
+    .goal_bene_col h5{margin-bottom:1.2rem;}
+    .goal_benefi_grid > .goal_bene_col > p{margin-bottom:2.1rem;}
+    .fundmen_promain{padding:2.4rem 1.7rem 4.1rem 2.2rem;}
+    .fundmen_promain .fundat_title p{margin-bottom:2.5rem;}
+    .activity_item{padding:1rem 1rem;}
+    .train_gradu_grid{gap:3.5rem;margin-top:6rem;margin-bottom:1.5rem;}
+    .train_gradulft h5{margin-bottom:1.5rem;}
+    .train_gradulft > ul.custom_lists{margin-top:2.8rem;}
+    .train_gradulft p{padding-right:0;}
+
+
+}
 /* Centres of Excellence End*/
 /* Startup Ecosystem Start*/
 .startup_ecomain{padding-block:10.6rem 0;}
@@ -1485,7 +1515,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
     .ambed_vimis_grid .ambed_vimision_bx{padding:5rem 5rem 4.9rem 5.5rem;}
     .ambed_vimis_grid .ambed_vimision_bx h5{margin-bottom:2.3rem;}
     .abt_ambed_chair .container{max-width:min(934px,68.3748169vw);}
-    .abt_ambed_grid,.abt_ambed_legrid{gap:5rem;}
+    .abt_ambed_grid,.abt_ambed_legrid{gap:7rem;}
     .abt_ambed_chair .font21{margin-bottom:1.5rem;}
     .abt_ambedle_lft p{padding-right:0;}
     .ab_amd_lecareer{margin-block:2.1rem 0;padding-top:2.1rem;}
@@ -1493,7 +1523,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
     .ab_lead_btns{flex-wrap:wrap;gap:1rem;}
     .abambed_lead_bx .abambed_le_info{max-width:25.5rem;bottom:1.8rem;left:1.5rem;}
     .abambed_lead_bx .abambed_le_info h4{margin-bottom:1.2rem;line-height:1.5;}
-    .ameb_fea_event_content{padding-inline:5.5rem 5.7rem;} 
+    .ameb_fea_event_content{padding-inline:7rem 5.7rem;} 
     .ambed_chair_evet{padding-block:8.9rem 9rem;}
     .ameb_fea_event h5{margin-block:1.2rem 2rem;}
     .view_allevent a{gap:1rem;margin-top:2.6rem;}
