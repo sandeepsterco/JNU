@@ -150,6 +150,15 @@ body:has(.side_hamburger.is-open) .site_nav { transform: translateY(var(--hamb-w
    Mobile
 ========================= */
 
+
+@media (max-width: 1536px) {
+    .search_popup_inner{width:min(90%,85rem);}
+    .search_form{padding-bottom:0.5rem;}
+    .search_form input{height:4rem;font-size:1.6rem;}
+    .search_close span{width:2.2rem;}
+    .search_submit img{width:1.8rem;height:1.8rem;}
+}
+
 @media (max-width: 767px) {
     .search_popup_inner{width:calc(100% - 4rem);}
     .search_close{top:-6rem;width:4rem;height:4rem;}
