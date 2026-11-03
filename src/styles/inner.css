@@ -2120,4 +2120,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .about_faqmain .fundacc_heading  h5, .about_faqmain .fundacc_inner p{color: var(--color-23);}
 .about_faqmain .fundacc_inner {background-color: var(--color-white);color: var(--color-23);}
 .about_faqmain .fundacc_item{    border-bottom: 1px dashed var(--color-d5);}
+.about_faqmain ul{margin-top: 2rem;}
+.about_faqmain ul li {  font: var(--font-14); margin-bottom: 1rem; font-weight: 300; line-height: 1.7; }
+.about_faqmain ul li a, .about_faqmain p a{color: var(--color-cf);font-weight: var(--fw-medium);}
 /****************** School About Us end*******************/
