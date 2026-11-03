@@ -47,36 +47,33 @@ export default function WhyChoose({data, collaboration}:WhyChooseUsInterface) {
                         <blockquote data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" dangerouslySetInnerHTML={{__html:data.subtitle}} />
                     )}
                 </div>
-                <div className="row">
-                    <div className="col-lg-10 mx-auto">
-                        <div className="why_jnu">
-                            {data?.lists && data?.lists.length > 0 && (
-                                <ul>
-                                    {data.lists.map((item, idx)=>(
-                                        <li key={idx} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                            {item?.heading && (
-                                                <h4>{item.heading}</h4>
-                                            )}
-                                            {item?.subheading && (
-                                                <p>{item.subheading}</p>
-                                            )}
-                                        </li>
-                                    ))}
-                                    
-                                </ul>
-                            )}  
+                <div className="col-lg-10 mx-auto">
+                    <div className="why_jnu">
+                        {data?.lists && data?.lists.length > 0 && (
+                            <ul>
+                                {data.lists.map((item, idx)=>(
+                                    <li key={idx} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                                        {item?.heading && (
+                                            <h4>{item.heading}</h4>
+                                        )}
+                                        {item?.subheading && (
+                                            <p>{item.subheading}</p>
+                                        )}
+                                    </li>
+                                ))}
+                                
+                            </ul>
+                        )}  
 
-                            {data.view_more && (
-                                <Link href={data.view_more} className="load_more" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">Load More 
-                                    <figure><img src="/images/icons/nav-arrow-down.svg" className="img-fluid" alt="arrow" /></figure>
-                                </Link>
-                            )}
-                            
-                            
-                        </div>
+                        {data.view_more && (
+                            <Link href={data.view_more} className="load_more" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">Load More 
+                                <figure><img src="/images/icons/nav-arrow-down.svg" className="img-fluid" alt="arrow" /></figure>
+                            </Link>
+                        )}
+                        
+                        
                     </div>
                 </div>
-
             </div>
 
 

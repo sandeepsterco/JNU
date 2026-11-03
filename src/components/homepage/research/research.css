@@ -18,7 +18,18 @@
 .research_slider_bx:hover .research_bx_bottom p{color:var(--color-white);}
 .research_slider_bx a{z-index:9;}
 
-
+@media(max-width:1536px){
+    .research_section{padding-block:10rem 0;}
+    .research_section .container{max-width:min(934px,68.3748vw);}
+    .research_slider_section{padding-top:3.4rem;}
+    .research_header_right{grid-template-columns:auto 2rem;gap:1.6rem;width:38.3%;padding-top:2rem;}
+    .research_header_right a{display:inline-flex;justify-content:center;width:1.6rem;height:1.6rem;padding:0;}
+    .research_header_right a>img{width:0.5rem;}
+    .research_bx_bottom{min-height:8.8rem;}
+    .research_slider_bx figure>img{aspect-ratio: 343/329;}
+    .research_slider_bx p{font:var(--fw-300) 1.6rem/1.5  var(--stack);max-width:24.1rem;margin-inline:3.4rem;padding-block:2.4rem;}
+    .research_slider_bx:before{height:2px;left:3.3rem;max-width:19.9rem;}
+}
 @media(max-width:991px){
     .research_section{padding-block:10rem 0;}
     .research_header{flex-direction: column;}
