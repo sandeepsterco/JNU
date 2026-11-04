@@ -407,20 +407,13 @@ ul.social_media_link li a:hover { transform: rotate(360deg); }
 .custm_bullets > li::before { content: ""; position: absolute; width: 0.8rem; height: 0.8rem; background-color: var(--color-cf); left: -2rem; top: 0.8rem; border-radius: 50%; -webkit-border-radius: 50%; }
 
 
-<<<<<<< HEAD
 @media(max-width:1536px){
   .custm_bullets > li{margin-block: 0 1.5rem;}
   .custm_bullets > li:last-child{margin-bottom: 0;}
-  .custm_bullets > li:before{width:0.5rem;height:0.5rem;}
+  .custm_bullets > li::before { width: 0.6rem; height: 0.6rem; top: 0.7rem;}
   .custom_lists > li:before{width:0.5rem;height:0.5rem;}
 }
 
-=======
-@media (max-width:1536px){
-  .custm_bullets > li::before { width: 0.6rem; height: 0.6rem; top: 0.7rem;}
-
-}
->>>>>>> 9f8ce094152becfb2dcca82a46bc4e0b59230120
 
 
   /* ======================= DONT WRITE CSS IN THIS FILE================== */
