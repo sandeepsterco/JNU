@@ -449,10 +449,10 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .lib_coll_grid .custom_lists { margin-top: 2.3rem; padding-left:1.8rem}
 .lib_coll_grid .custom_lists > li { font:var(--font-9);}
 .lib_coll_grid .custom_lists > li:before { width: 0.6rem; height: 0.6rem; top: 0.3rem;left: -1.8rem; }
-.library_tech { padding: 2.5rem 7.8rem 3rem 5.4rem;margin-left: 2.4rem; }
+.library_tech { padding: 2.5rem 7.8rem 3rem 5.4rem;margin-left: 0rem; }
 .e_resou { padding: 2.5rem 4rem 3rem 4.4rem; }
 .library_tech .custom_lists { gap: 4.3rem; }
-.library_coll_main { padding-block: 0 10rem; }
+.library_coll_main { padding-block: 0 10rem;}
 .auditorium_grid { margin-top: 4.8rem; }
 .legal_resec  .custom_lists { padding-left:.8rem}
 .legal_resec  .custom_lists li:before{left: -0.8rem;width: 0.3rem; height: 0.3rem; top: 0.3rem;}
@@ -463,7 +463,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .auditorium_grid_2{    padding-bottom: 0.6rem;}
 .stage_global{padding-inline: 3.1rem 1.9rem;}
 .audi_bluebx{padding:1.8rem 3.5rem 5.8rem 2.4rem }
-.audi_bluebx p{    max-width: 100%;}
+.audi_bluebx p { max-width: 100%;}
 .audi_whitebx{padding:1.8rem 3.5rem 5.8rem 2.4rem }
 .audi_whitebx p{font:var(--font-16)}
 .audi_redbx_overlay{padding:1.8rem 3.5rem 5.8rem 2.4rem }
@@ -481,6 +481,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .acd_audi_slider .slide_content{max-width: 31.9rem;left:2.2rem;bottom: 1.7rem;}
 .acd_audi_slider .slide_content p{font-weight: var(--fw-300);}
  }
+
+
 /* ====================school css================ */
 .school_banner { position: relative; }
 .school_banner_content { position: absolute; top: 14rem; bottom: 10rem; display: flex; flex-direction: column; justify-content: space-between; z-index: 9999; }
