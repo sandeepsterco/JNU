@@ -1015,6 +1015,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 /* ================= Transportation Page End==============  */
 /* Funded Projects Page  Start */
 .funded_resec { background-color: var(--color-38); padding-block: 10rem 14rem; }
+.funded_resec .faq_section{background-color: transparent;padding: 0;}
 .res_founded_main { padding-block: 12rem 13rem; }
 .founded_table thead>tr>th { background-color: var(--color-cf); font: var(--font-18); font-weight: 300; }
 .founded_table tbody>tr>td { border: 0.1rem solid #E8E8E8; }
@@ -1035,7 +1036,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .fundacc_item.fundacc_active { background-color: rgba(255, 255, 255, 0.1); border-radius: 1rem; border-bottom-color: transparent; }
 .fundacc_item.fundacc_active .fundacc_heading h5::before { content: "−"; }
 .fundacc_panel { height: 0; overflow: hidden; transition: height 0.4s ease; }
-.fundacc_inner { padding: 0 3.8rem 3rem 5.2rem; }
+.fundacc_inner { padding: 0 3.8rem 3rem 6.4rem; }
 .fundacc_inner p { margin: 0; color: var(--color-white); font: var(--font-14); font-weight: 300; line-height: 1.7; }
 .fundacc_inner .funded_inves { margin-bottom: 2rem; display: flex; }
 .fundacc_inner .funded_inves h5 { color: var(--color-white); margin-bottom: 1rem; }
@@ -2041,4 +2042,86 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
     .read-btn{width:1.6rem;height:1.6rem;padding:0;margin-top:2rem;}
 }
 
+
 /* load More button common End*/
+
+[dirdata-load-item][hidden],
+[dirdata-load-more] [dirdata-load-item][hidden],
+[hidden].load_more_btn { display: none; }
+
+
+/* GS03112026 */
+/****************** School About Us start*******************/
+.sch_about_overview { padding-block: 12rem 0; }
+.sch_about_overview .jnu_title_header h5 { margin-bottom: 3rem; }
+.sch_about_overview .jnu_title_header { margin-bottom: 5rem; }
+.sch_about_overview .sch_ovrbtm_content { padding-block: 5.6rem; }
+.sch_ovrbtm_content p { font: var(--font-16); text-align: center; font-weight: var(--fw-300); }
+.sch_ab_highlight { padding-block: 12rem 0rem; }
+.sch_ab_highlight .sch_high_grid{border-bottom: .1rem solid var(--color-d5);padding-bottom: 12rem;}
+.sch_high_grid ul { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; padding: 0; display: grid; }
+.sch_high_grid ul>li { background: var(--color-white); font: var(--font-16); border-left: .5rem solid #f9ce2e; padding-block: 2.7rem 5.4rem; padding-inline: 5.8rem; font-weight: 300; line-height: 1.6; list-style: none; }
+.sch_vimission { padding-block: 12rem 12rem; }
+.sch_vis_misgrid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem; display: grid; }
+.sch_vis_misgrid .sch_vision { background-color: var(--color-cf); padding: 5rem 10rem 6.9rem 12.5rem; }
+.sch_vis_misgrid .sch_mission { background-color: var(--color-white); padding-right: 14.2rem; padding: 5rem 10rem 6.9rem 12.5rem; }
+.sch_vis_misgrid h5 { margin-bottom: 3.3rem; }
+.sch_vis_misgrid .sch_vision h5 { color: var(--color-white); }
+.sch_vis_misgrid .sch_vision h6 { font: var(--font-21); color: var(--color-white); font-weight: 300; line-height: 3.6rem; }
+.sch_vis_misgrid .sch_mission ul li { font: var(--font-16); font-weight: var(--fw-300); }
+.sch_dir_msg { padding-block: 12rem; position: relative; }
+.sch_dir_msg_grid { display: grid; grid-template-columns: 60rem auto; gap: 12rem; align-items: start; }
+.sch_dir_msg_grid figure { position: sticky; top: 10rem; height: auto; overflow: hidden; }
+.sch_dir_msg_content h3 { font: var(--font-48); letter-spacing: -0.48px; color: var(--color-cf); margin-bottom: 1rem; font-weight: 500; }
+.sch_dir_msg_content blockquote { font: var(--font-24); color: var(--color-black); margin-bottom: 4rem; font-weight: 300;line-height: 1.5; }
+.sch_dir_msg_content p { font: var(--font-16); font-weight: 300; }
+.sch_dir_msg_author { padding-top: 4.8rem; }
+.sch_dir_msg_author h4 { margin-bottom: 0.2rem; font: var(--font-24); }
+.sch_dir_msg_author .designation { font: var(--font-18); font-weight: 300; }
+.sch_dir_msg_content .load_more_btn { padding-top:0; display: inline-block; }
+.sch_dir_msg_content .load_more_btn.is-expanded { margin-top: 3rem; }
+.dirload_more_arrow { display: inline-flex; align-items: center; transition: transform 0.3s ease; }
+.dirload_more_arrow img { display: block; transition: transform 0.3s ease; }
+.load_more_btn.is-expanded .dirload_more_arrow { transform: rotate(180deg); }
+.sch_achiment{padding-block: 12rem;}
+.sch_achi_grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem; row-gap: 4rem; margin-top: 5.6rem; }
+.sch_achi_grid  .sch_achivent_item { position: relative; }
+.faculty_Bx figure { overflow: hidden; }
+.sch_achivent_item figure img { transition: transform 0.5s ease; }
+.sch_achivent_cnt { text-align: center; padding-bottom: 3rem; position: relative; }
+.sch_achivent_cnt::after { content: ""; position: absolute; bottom: 0; left: 0; width: 100%; height: 0.4rem; right: 0; margin: auto; background: linear-gradient(to right, var(--color-cf) 0%, var(--color-cf) 50%, var(--color-f9) 50%, var(--color-f9) 100%); }
+.sch_achivent_cnt p { font: var(--font-14); font-weight: 300; }
+.sch_achivent_cnt h4 { font: var(--font-24); font-weight: 300; margin-top: 3rem; }
+.school_achivnt_main{padding-block: 12rem;}
+.school_achivnt_grid { display: grid; grid-template-columns: 60rem auto; gap: 12rem; align-items: start; }
+.school_achivnt_content blockquote { font: var(--font-24); color: var(--color-black); margin-bottom: 4rem; font-weight: 300; line-height: 1.5; }
+.school_achivnt_content p { font: var(--font-16); font-weight: 300; }
+.career_pathmain { padding-block: 12rem 12rem; background-color: var(--color-38); }
+.career_path_swimain .career_path_col { background: var(--color-white); font: var(--font-16); padding: 4rem 5.4rem; position: relative; min-height: 64.1rem; }
+.career_path_swimain .career_path_col ul li { font: var(--font-16); font-weight: var(--fw-300); }
+.career_path_swimain .career_path_col::after { content: ""; position: absolute; z-index: 9; bottom: 0; left: 50%; transform: translateX(-50%); width: 64%; max-width: 63%; height: 0.2rem; background: linear-gradient(
+        to right,
+        var(--color-fa) 0%,
+        var(--color-fa) 70%,
+        var(--color-cf) 70%,
+        var(--color-cf) 100%
+    ); }
+.career_path_swimain .career_path_col h5 { margin-bottom: 3.3rem; line-height: 1.5; }
+.career_pathmain .jnu_title_header .font42 { color: var(--color-white); letter-spacing: -1.26px; font-weight: 300; margin-bottom: 3.2rem; }
+.carpath_header { justify-content: space-between; align-items: center; display: flex; padding-bottom: 6rem; }
+.carpath_header .head_title h3 { color: var(--color-white); }
+.carpath_header .head_title blockquote { font: var(--font-42); color: var(--color-white); font-weight: 300; }
+.career_path_arrow { display: flex; position: relative; gap: 1rem; }
+.career_path_arrow  .carpath-prev,  .career_path_arrow  .carpath-next { position: relative; width: 3rem; border: 1px solid var(--color-f9); display: flex; height: 3rem; text-align: center; margin-top: 0; left: 0; right: 0; }
+.career_path_arrow .carpath-prev::after, .career_path_arrow .carpath-next::after { font-size: 1.2rem; color: var(--color-f9); }
+.career_path_arrow  .carpath-prev:hover::after,  .career_path_arrow  .carpath-next:hover::after { color: var(--color-white); }
+.career_path_arrow  .carpath-prev:hover,  .career_path_arrow  .carpath-next:hover { border: 1px solid var(--color-white); }
+.about_faqmain{padding-bottom: 12rem;}
+.about_faqmain .fundacc_heading{background-color: var(--color-white);}
+.about_faqmain .fundacc_heading  h5, .about_faqmain .fundacc_inner p{color: var(--color-23);}
+.about_faqmain .fundacc_inner {background-color: var(--color-white);color: var(--color-23);}
+.about_faqmain .fundacc_item{    border-bottom: 1px dashed var(--color-d5);}
+.about_faqmain ul{margin-top: 2rem;}
+.about_faqmain ul li {  font: var(--font-14); margin-bottom: 1rem; font-weight: 300; line-height: 1.7; }
+.about_faqmain ul li a, .about_faqmain p a{color: var(--color-cf);font-weight: var(--fw-medium);}
+/****************** School About Us end*******************/
