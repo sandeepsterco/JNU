@@ -1015,6 +1015,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 /* ================= Transportation Page End==============  */
 /* Funded Projects Page  Start */
 .funded_resec { background-color: var(--color-38); padding-block: 10rem 14rem; }
+.funded_resec .faq_section{background-color: transparent;padding: 0;}
 .res_founded_main { padding-block: 12rem 13rem; }
 .founded_table thead>tr>th { background-color: var(--color-cf); font: var(--font-18); font-weight: 300; }
 .founded_table tbody>tr>td { border: 0.1rem solid #E8E8E8; }
