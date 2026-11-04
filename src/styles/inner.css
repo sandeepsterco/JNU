@@ -1065,6 +1065,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .founded_table thead > tr > th:nth-child(4){width:10%;}
 .funded_resetitle{margin-bottom:5.6rem;}
 .funded_resetitle h5{color:var(--color-white);margin-bottom:3.2rem;}
+.funded_resetitle h4{margin-bottom: 1.2rem;}
+.funded_resetitle p{color: var(--color-white);font-weight: var(--fw-300);}
 .funded_resec .funded_resetitle h4{color:var(--color-white);letter-spacing:-1.26px;font-weight:300;}
 
 
@@ -1080,11 +1082,12 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .fundacc_item.fundacc_active{background-color:rgba(255,255,255,0.1);border-radius:1rem;border-bottom-color:transparent;}
 .fundacc_item.fundacc_active .fundacc_heading h5::before{content:"−";}
 .fundacc_panel{height:0;overflow:hidden;transition:height 0.4s ease;}
-.fundacc_inner{padding:0 3.8rem 3rem 5.2rem;}
+.fundacc_inner{padding:0 3.8rem 3rem 6.4rem;}
 .fundacc_inner p{margin:0;color:var(--color-white);font:var(--font-14);font-weight:300;line-height:1.7;}
 .fundacc_inner .funded_inves{margin-bottom:2rem;display:flex;}
 .fundacc_inner .funded_inves h5{color:var(--color-white);margin-bottom:1rem;}
 .fundacc_inner .funded_inves h5:nth-child(1){padding-right:2.3rem;margin-right:2.3rem;border-right:0.1rem solid var(--color-white);}
+.fundacc_inner ul li { position: relative; list-style: none; font: var(--font-16); font-weight: 300; margin-block: 0 2.5rem; color: var(--color-white); }
 .project_scho_life{padding-block:17rem 15.5rem;}
 .project_scho_life .jnu_title_header{margin-bottom:5.4rem;}
 .project_scho_life .jnu_title_header h5{margin-bottom:5.5rem;}
@@ -2565,12 +2568,15 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .career_path_arrow .carpath-prev::after, .career_path_arrow .carpath-next::after { font-size: 1.2rem; color: var(--color-f9); }
 .career_path_arrow  .carpath-prev:hover::after,  .career_path_arrow  .carpath-next:hover::after { color: var(--color-white); }
 .career_path_arrow  .carpath-prev:hover,  .career_path_arrow  .carpath-next:hover { border: 1px solid var(--color-white); }
+.common_faq_overview { padding-block: 12rem 0;} .common_faq_overview .jnu_title_header { margin-bottom: 5rem; }
+ .sch_about_overview .jnu_title_header h2{color: var(--color-23);}
 .about_faqmain{padding-bottom: 12rem;}
-.about_faqmain .fundacc_heading{background-color: var(--color-white);}
-.about_faqmain .fundacc_heading  h5, .about_faqmain .fundacc_inner p{color: var(--color-23);}
-.about_faqmain .fundacc_inner {background-color: var(--color-white);color: var(--color-23);}
-.about_faqmain .fundacc_item{    border-bottom: 1px dashed var(--color-d5);}
-.about_faqmain ul{margin-top: 2rem;}
-.about_faqmain ul li {  font: var(--font-14); margin-bottom: 1rem; font-weight: 300; line-height: 1.7; }
+.about_faqmain .fundacc_heading { background-color: var(--color-white); }
+.about_faqmain .fundacc_heading  h5, .about_faqmain .fundacc_inner p { color: var(--color-23); }
+.about_faqmain .fundacc_inner { background-color: var(--color-white); color: var(--color-23); }
+.about_faqmain .fundacc_item { border-bottom: 1px dashed var(--color-d5); }
+.about_faqmain ul { margin-top: 2rem; margin-bottom: 1.5rem; }
+.about_faqmain ul li { font: var(--font-14); margin-bottom: 1rem; font-weight: 300; line-height: 1.7; color: var(--color-23); }
 .about_faqmain ul li a, .about_faqmain p a{color: var(--color-cf);font-weight: var(--fw-medium);}
+.common_table_main {padding-block: 12rem ;}
 /****************** School About Us end*******************/
