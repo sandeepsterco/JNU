@@ -2580,3 +2580,44 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .about_faqmain ul li a, .about_faqmain p a{color: var(--color-cf);font-weight: var(--fw-medium);}
 .common_table_main {padding-block: 12rem ;}
 /****************** School About Us end*******************/
+
+
+
+/* GS04112026 */
+/* Scholarships & Financial Aid  Start*/
+.scholar_aid_main { padding-block: 11rem 12rem; }
+.scholar_aid_main .font42 { font: var(--font-42); color: var(--color-23); margin-bottom: 5.6rem; font-weight: 300; }
+.scholar_overfullimg figure { margin-block: 5.6rem  0; position: relative; }
+/* .scholar_merigrid { grid-template-columns: 58.75% auto; gap: .9rem; display: grid; } */
+.scholar_merit .jnu_title_header .font21 { margin-bottom: 4.6rem; }
+.scholar_meriover .schol_meritop { background-color: var(--color-white); padding: 5rem 6.5rem ; }
+.scholar_meriover .custom_lists>li { font: var(--font-16); font-weight: 300; }
+.scholar_meriover  p { font: var(--font-16); font-weight: var(--fw-300); }
+.schol_meritop .jest_exam_table { margin-bottom: 3rem; }
+.schol_meritop .custom_lists { display: grid; grid-template-columns: repeat(3, 1fr); gap:0 6rem; margin-block: 3rem; }
+.schol_meritop h5, .schol_meri_rgt .scho_rgtbx h5 { font: var(--font-24); color: var(--color-23); margin-bottom: 2.4rem; font-weight: 300; line-height: 1.5; }
+.scholar_meriover .schol_meri_rgt h5{margin-top: 2.5rem;}
+.schol_meri_rgt { display: grid; grid-template-columns: 40% auto; margin-top: 2.6rem;gap: 5rem; align-items: center;}
+.scholar_merit { padding-bottom: 12rem; }
+.schol_finac_grid { grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2.5rem; display: grid; }
+.scho_fin_lft { max-width: 67rem; padding-inline: 13.2rem 0; }
+.scho_fin_lft  .jnu_title_header{text-align: left;}
+.scho_fin_lft .jnu_title_header p{font: var(--font-16);font-weight: var(--fw-300);}
+.schol_easybx { padding-block: 8rem 12.3rem; }
+.schol_easybx ul { grid-template-columns: repeat(3, 1fr); gap: .6rem; padding: 0; display: grid; }
+.schol_easybx ul>li { list-style: none; background: var(--color-white); text-align: center; padding: 2.4rem 2.5rem 2.4rem 2.4rem; color: var(--color-23); font: var(--font-18); font-weight: 300; line-height: 1.5; }
+.schol_easybx .jnu_title_header { text-align: left; margin-bottom: 4.6rem; }
+.schol_easybx p{font: var(--font-16);font-weight: var(--fw-300);}
+.scholneed_assit { display: grid; grid-template-columns: 30% 45% auto; margin-bottom: 10rem; background-color: var(--color-cf); align-items: center; position: relative; }
+.scholneed_assit::before { background-image: url(/images/apply_pattern.svg); position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 100%; width: 20%; content: ""; z-index: 0; opacity: 0.47; }
+.scholneed_assit>figure { max-width: 27rem; position: relative; z-index: 2; margin-left: 2rem; }
+.scholneed_assit .apply_cnt h4 { color: var(--color-white); font: var(--font-30); font-weight: 200; max-width: 76%; margin-bottom:2.2rem; }
+.scholneed_assit .apply_cnt ul { display: flex; gap: 4.8rem; list-style: none; padding: 0; margin-top: 2rem; }
+.scholneed_assit .apply_cnt p { color: var(--color-white); font: var(--font-16); font-weight: 300; padding-bottom: 1.5rem; }
+.scholneed_assit .apply_cnt span { color: var(--color-f9); font: var(--font-14); padding-bottom: .5rem; font-weight: 300; }
+.scholneed_assit .apply_cnt ul li a:hover { color: var(--color-white); border-color: var(--color-white); }
+.scholneed_assit ul li { display: flex; gap: 1rem; color: var(--color-white); font: var(--font-16); font-weight: 300; align-items: center; border-bottom: 1px dashed var(--color-f9); width: max-content; padding-block: 0 1.2rem; margin-bottom: 1.5rem; }
+.scholneed_assit ul li a { border-bottom: none; width: max-content; padding-block: 0; margin-bottom: 0; }
+.scholneed_assit  .apply_contact .apply_now { margin-top: 0.5rem; }
+
+/* Scholarships & Financial Aid  End*/
