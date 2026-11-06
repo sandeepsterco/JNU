@@ -20,6 +20,7 @@ import { InitReadMore } from "@/lib/cms/initReadMore";
 import { initSuccessspeakSwiper } from "@/lib/cms/initSuccessspeakSwiper";
 import { InitCommonAccordion } from "@/lib/cms/initCommonAccordion";
 import { CustomTabs1 } from "@/lib/cms/initCustomTabs1";
+import { InitAuditoriumSwiper } from "@/lib/cms/initAuditoriumSwiper";
 
 function waitForLayout() {
   return new Promise<void>((resolve) => {
@@ -71,6 +72,15 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
 
       if (root.querySelector(".program_nav")) {
         const cleanup = InitProgramNav(root);
+        cleanupFns.push(cleanup);
+      }
+
+      if (root.querySelector(".auditoriumSwiper:not([data-swiper-init])")) {
+        const cleanup = await InitAuditoriumSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
         cleanupFns.push(cleanup);
       }
 
