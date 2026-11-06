@@ -1027,13 +1027,38 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .whychoose_grid> .whychoose_bx> figure{height:6rem;width:6rem;margin-inline:auto;}
 .whychoose_grid> .whychoose_bx h5{font-weight:300;line-height:1.72;margin-bottom:5rem;min-height:14.5rem;}
 .whychoose_bx::after{content:"";z-index:9;background:linear-gradient(to right,var(--color-fa) 0%,var(--color-fa) 16rem,var(--color-cf) 16rem,var(--color-cf) 100%);width:25.4rem;max-width:25.4rem;height:0.2rem;position:absolute;bottom:0.2rem;left:0;right:0;margin:0 auto;}
-.visit_applybx{background-color:var(--color-cf);grid-template-columns:40% 47% 13.1%;align-items:center;margin-top:3rem;display:grid;position:relative;padding-inline:40rem 9.1rem;min-height:23.3rem;}
+.visit_applybx{background-color:var(--color-cf);grid-template-columns:40% 47% 13.1%;align-items:center;margin-top:3rem;display:grid;position:relative;
+    padding-inline:40rem 9.1rem;min-height:23.3rem;overflow: hidden;}
 .visit_applybx::after{content:'';background-image:url('/images/visiting_bg_pattren.webp');height:100%;width:100%;position:absolute;right:0;top:0;bottom:0;z-index:0;}
 .visit_applybx>figure{position:absolute;left:4rem;top:0;content:'';height:23.3rem;width:45.2rem;}
 .visit_applybx .visit_text> h3{font-weight:200;color:var(--color-white);padding-right:6.5rem;}
 .visit_desc> p{color:var(--color-white);font:var(--font-16);line-height:1.7;font-weight:300;margin-right:11rem;}
 .visit_applybx::before{background-image:url(/images/visit_apply_pattren.svg);position:absolute;top:0;left:0;bottom:0;background-repeat:repeat;content:"";height:100%;width:19.5rem;content:"";z-index:0;opacity:0.47;}
-
+@media(max-width:1536px){
+    .hostal_faci_ovr { padding-block: 6.4rem 0; }
+    .hf_ovrgt blockquote { padding-top: 3.5rem; }
+    .hf_accom_fact { grid-template-columns: 12.8rem 23.8rem; gap: 3rem; margin-top: 5rem; }
+    .hf_accom_grid.hf_grid2 { margin-bottom: 6.4rem; padding-bottom: 6.4rem; }
+    .cafet_aregrid,.caft_left { gap: 1.6rem; }
+    .caft_lftbx .img_caption { bottom: 1.5rem; left: 1.5rem; right: 1.5rem; }
+    .caft_areargt > .img_caption { padding: 2.4rem 2.3rem 2.5rem; min-height: 100%; }
+    .caft_areargt > .img_caption:after { width: 50%; height: 100%; }
+    .caft_areargt figure span { top: 2.2rem; left: 2rem; }
+    .caft_areargt figure { max-height: 30.1rem; }
+    .whychoose_grid { gap: 1.5rem; }
+    .whychoose_grid > .whychoose_bx { padding:4rem 2.5rem 3.5rem 2.5rem }
+    .whychoose_grid > .whychoose_bx h5 { min-height: 9.5rem; margin-bottom: 3rem; }
+    .whychoose_bx:after { width: 60%; max-width: 60%; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 40%, var(--color-cf) 40% , var(--color-cf) 100%); bottom: 0rem; }
+    .visit_applybx { min-height: 18.1rem; grid-template-columns: 39% 49% 19.1%; padding-inline: 16rem 6.1rem; }
+    .visit_applybx .visit_text > h3 { padding-right: 2.5rem; }
+    .visit_desc > p { margin-right: 4rem; }
+    .visit_applybx > figure { width: 30rem; height: 15.5rem; top: auto; bottom: -0.1rem; left: -6.3rem; }
+    .whychoose_sec { padding-bottom: 6.4rem; }
+    .cafet_area_sec { margin-bottom: 6.4rem; }
+    .whychoose_sec .jnu_title_header .font21 { margin-bottom: 1.9rem; }
+    .whychoose_grid > .whychoose_bx > figure { width: 5rem; height: 5rem; }
+    .accom_lft .font21{margin-bottom: 1.8rem;}
+}
 /* ================= Hostel Facilities Page End==============  */
 /* ================= Transportation Page Start==============  */
 .trans_ovr{padding-block:12rem 0;}
@@ -1041,17 +1066,27 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .trans_ovrimg{margin-bottom:12rem;}
 .trans_overbtm{margin-bottom:4.6rem;}
 .trans_overbtm p{text-align:center;font:var(--font-16);font-weight:300;max-width:95%;line-height:1.7;}
-.trans_bus{margin-top:13.8rem;}
-.trans_bus .trans_bus_grid{display:grid;grid-template-columns:auto 48.89%;gap:12.5rem;align-items:center;}
+.trans_bus{margin-block:13.8rem 13rem;}
+.trans_bus .trans_bus_grid { display:grid; grid-template-columns:auto 48.89%; gap:12.5rem; align-items:center; width: 83.1%; margin: auto; }
 .trans_bus_grid .trasn_buslft>p{font:var(--font-16);font-weight:300;line-height:1.7;}
 .trans_bus .trans_bus_grid .trasn_buslft{padding-right:1.5rem;}
-.trans_bus{padding-bottom:13rem;}
 .transgps_grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3rem;margin-bottom:3rem;}
 .transgps_grid> .trasngpsbx{background-color:var(--color-white);padding:6.3rem 7.7rem 8.9rem 7.8rem;text-align:center;position:relative;}
 .transgps_grid> .trasngpsbx> figure{height:6rem;width:6rem;margin-inline:auto;}
 .transgps_grid> .trasngpsbx h5{font-weight:300;line-height:1.72;margin-bottom:6.1rem;}
 .trasngpsbx::after{content:"";z-index:9;background:linear-gradient(to right,var(--color-fa) 0%,var(--color-fa) 16rem,var(--color-cf) 16rem,var(--color-cf) 100%);width:25.4rem;max-width:25.4rem;height:0.2rem;position:absolute;bottom:0rem;left:0;right:0;margin:0 auto;}
-
+@media(max-width:1536px){
+.trasngpsbx::after { width: 60%; max-width: 60%; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 40%, var(--color-cf) 40%, var(--color-cf) 100%); bottom: 0rem; }
+.trans_ovr { padding-block: 6.4rem 0; }
+.trans_ovr .jnu_title_header { margin-bottom: 3rem; }
+.trans_ovrimg { margin-bottom: 6.4rem; }
+.transgps_grid > .trasngpsbx { padding:4rem 2.5rem 3.5rem 2.5rem }
+.transgps_grid > .trasngpsbx h5{    margin-bottom: 3.1rem;}
+.transgps_grid > .trasngpsbx figure { width: 5rem; height: 5rem; }
+.trans_bus { margin-block: 6.4rem 6.4rem; }
+.trans_bus .trans_bus_grid{width: 100%;gap: 3.8rem;}
+.transgps_grid{gap: 1.6rem;}
+}
 /* ================= Transportation Page End==============  */
 /* Funded Projects Page  Start */
 .funded_resec{background-color:var(--color-38);padding-block:10rem 14rem;}
@@ -1334,9 +1369,6 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .curr_open_grid > .curre_openbx > p{margin-bottom: 3rem;}
 .current_opening .jnu_title_header { margin-bottom: 5rem; }
 .current_opening .submit_resbtn{padding-block: 5rem 5.7rem;}
-
-
-
 
 }
 
@@ -1666,7 +1698,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .social_services_slide{position:relative;overflow:hidden;}
 .social_services_slide::after{content:"";position:absolute;inset:0;background:linear-gradient( to top,rgba(0,0,0,0.88) 0%,rgba(0,0,0,0.4) 28%,transparent 45% );pointer-events:none;}
 .social_services_slide > img{width:100%;height:100%;display:block;object-fit:cover;object-position:center;}
-.social_services_content{position:absolute;bottom:5.2rem;z-index:2;color:#fff;width:100.6rem;}
+.social_services_content{position:absolute;bottom:5.2rem;z-index:2;color:#fff;width:60%;}
 .social_services_content h3{padding-bottom:2.4rem;color:var(--color-white);font-weight:var(--fw-medium);}
 .social_services_content p{color:var(--color-white);}
 .desc16{font:var(--font-16);font-weight:300;line-height:1.6;}
@@ -1680,6 +1712,12 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .scl_srvc_lst{margin-block:2.5rem 15rem;}
 .scl_srvc_lst_grd{display:grid;grid-template-columns:600fr 600fr;gap:2.5rem;margin-bottom:3.6rem;}
 
+@media(max-width:1536px){
+.social_services_banner h2 { padding-block: 6.4rem 4.1rem; }
+.social_services_content { width: 82%; bottom: 3.2rem; left: 3rem; }
+.prades_grid { grid-template-columns: 564fr 584fr; gap: 4.5rem; margin-top: 2rem; }
+
+}
 /* Student Club  */
 .cstm_hero .hero_bg_pattern::before{height:82rem;}
 .stdnt_ovrvew_grid{display:grid;grid-template-columns:49.3% auto;gap:15rem;padding-top:12rem;}
@@ -1707,7 +1745,23 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .jnu_podcast_grd{display:grid;grid-template-columns:repeat(2,1fr);gap:2.4rem;margin-top:8rem;}
 .jnu_newslatter{padding-block:10rem 12rem;}
 .jnu_newslatter .jnu_title_header h5{margin-bottom:2.4rem;}
+@media(max-width:1536px){
+    .stdnt_ovrvew_grid { padding-top: 6.4rem; gap: 5.8rem; align-items: center; }
+    .stdnt_ovrvew_grid .stdnt_clb_rght { padding: 0; }
+    .radio_jnu { margin-top: 6.4rem; }
+    .radio_jnu_grid { padding-left: 0; gap: 5.8rem; }
+    .jnu_digital_grid { gap: 7.4rem; }
+    .jnu_digital_lft { padding: 0; }
+    .our_blog { margin-top: 6.4rem; }
+    .our_blog_grid { gap: 5.4rem; }
+    .our_blog_rght { padding: 0; }
+    .jnu_podcast { margin-top: 6.4rem; }
+    .jnu_podcast .jnu_title_header h5 { margin-bottom: 1.9rem; }
+    .jnu_podcast_grd { margin-top: 5.2rem; gap: 1.6rem; }
+    .jnu_newslatter { padding: 5.4rem 5rem; }
+    .jnu_newslatter .jnu_title_header h5 ,.radio_jnu .jnu_title_header h5{ margin-bottom: 1.9rem; }
 
+}
 /* JS13102026 */
 .sport_facillities_main { padding-block: 12rem 14rem; }
 .sport_facillities { margin-top: 0; padding-top: 0; border: none; }
@@ -2580,3 +2634,44 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .about_faqmain ul li a, .about_faqmain p a{color: var(--color-cf);font-weight: var(--fw-medium);}
 .common_table_main {padding-block: 12rem ;}
 /****************** School About Us end*******************/
+
+
+
+/* GS04112026 */
+/* Scholarships & Financial Aid  Start*/
+.scholar_aid_main { padding-block: 11rem 12rem; }
+.scholar_aid_main .font42 { font: var(--font-42); color: var(--color-23); margin-bottom: 5.6rem; font-weight: 300; }
+.scholar_overfullimg figure { margin-block: 5.6rem  0; position: relative; }
+/* .scholar_merigrid { grid-template-columns: 58.75% auto; gap: .9rem; display: grid; } */
+.scholar_merit .jnu_title_header .font21 { margin-bottom: 4.6rem; }
+.scholar_meriover .schol_meritop { background-color: var(--color-white); padding: 5rem 6.5rem ; }
+.scholar_meriover .custom_lists>li { font: var(--font-16); font-weight: 300; }
+.scholar_meriover  p { font: var(--font-16); font-weight: var(--fw-300); }
+.schol_meritop .jest_exam_table { margin-bottom: 3rem; }
+.schol_meritop .custom_lists { display: grid; grid-template-columns: repeat(3, 1fr); gap:0 6rem; margin-block: 3rem; }
+.schol_meritop h5, .schol_meri_rgt .scho_rgtbx h5 { font: var(--font-24); color: var(--color-23); margin-bottom: 2.4rem; font-weight: 300; line-height: 1.5; }
+.scholar_meriover .schol_meri_rgt h5{margin-top: 2.5rem;}
+.schol_meri_rgt { display: grid; grid-template-columns: 40% auto; margin-top: 2.6rem;gap: 5rem; align-items: center;}
+.scholar_merit { padding-bottom: 12rem; }
+.schol_finac_grid { grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2.5rem; display: grid; }
+.scho_fin_lft { max-width: 67rem; padding-inline: 13.2rem 0; }
+.scho_fin_lft  .jnu_title_header{text-align: left;}
+.scho_fin_lft .jnu_title_header p{font: var(--font-16);font-weight: var(--fw-300);}
+.schol_easybx { padding-block: 8rem 12.3rem; }
+.schol_easybx ul { grid-template-columns: repeat(3, 1fr); gap: .6rem; padding: 0; display: grid; }
+.schol_easybx ul>li { list-style: none; background: var(--color-white); text-align: center; padding: 2.4rem 2.5rem 2.4rem 2.4rem; color: var(--color-23); font: var(--font-18); font-weight: 300; line-height: 1.5; }
+.schol_easybx .jnu_title_header { text-align: left; margin-bottom: 4.6rem; }
+.schol_easybx p{font: var(--font-16);font-weight: var(--fw-300);}
+.scholneed_assit { display: grid; grid-template-columns: 30% 45% auto; margin-bottom: 10rem; background-color: var(--color-cf); align-items: center; position: relative; }
+.scholneed_assit::before { background-image: url(/images/apply_pattern.svg); position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 100%; width: 20%; content: ""; z-index: 0; opacity: 0.47; }
+.scholneed_assit>figure { max-width: 27rem; position: relative; z-index: 2; margin-left: 2rem; }
+.scholneed_assit .apply_cnt h4 { color: var(--color-white); font: var(--font-30); font-weight: 200; max-width: 76%; margin-bottom:2.2rem; }
+.scholneed_assit .apply_cnt ul { display: flex; gap: 4.8rem; list-style: none; padding: 0; margin-top: 2rem; }
+.scholneed_assit .apply_cnt p { color: var(--color-white); font: var(--font-16); font-weight: 300; padding-bottom: 1.5rem; }
+.scholneed_assit .apply_cnt span { color: var(--color-f9); font: var(--font-14); padding-bottom: .5rem; font-weight: 300; }
+.scholneed_assit .apply_cnt ul li a:hover { color: var(--color-white); border-color: var(--color-white); }
+.scholneed_assit ul li { display: flex; gap: 1rem; color: var(--color-white); font: var(--font-16); font-weight: 300; align-items: center; border-bottom: 1px dashed var(--color-f9); width: max-content; padding-block: 0 1.2rem; margin-bottom: 1.5rem; }
+.scholneed_assit ul li a { border-bottom: none; width: max-content; padding-block: 0; margin-bottom: 0; }
+.scholneed_assit  .apply_contact .apply_now { margin-top: 0.5rem; }
+
+/* Scholarships & Financial Aid  End*/
