@@ -19,6 +19,7 @@ import { initAcademicCampusSwiper } from "@/lib/cms/initAcademicCampusSwiper";
 import { InitReadMore } from "@/lib/cms/initReadMore";
 import { initSuccessspeakSwiper } from "@/lib/cms/initSuccessspeakSwiper";
 import { InitCommonAccordion } from "@/lib/cms/initCommonAccordion";
+import { CustomTabs1 } from "@/lib/cms/initCustomTabs1";
 
 function waitForLayout() {
   return new Promise<void>((resolve) => {
@@ -53,6 +54,12 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
       // Initialize accordion
       if (root.querySelector(".custom-tabs")) {
         const cleanup = InitAccordion(root);
+        cleanupFns.push(cleanup);
+      }
+
+      // custom tabs 1
+      if(root.querySelector('.custom-tabs-1')){
+        const cleanup = CustomTabs1(root);
         cleanupFns.push(cleanup);
       }
 
