@@ -18,6 +18,7 @@ interface BannerItem {
     logodescription: string;
     banner: string;
     mobilebanner:string;
+    exploreurl:string;
 }
 
 interface HomeBannerProps {
@@ -113,8 +114,8 @@ export default function HomeBanner({ data }: HomeBannerProps) {
                                         )}
                                     </div>
                                     <div className="banner_btn">
-                                        <Link href="#0" className="explore_btn">Explore JNU</Link>
-                                        <Link href={APPLY_NOW ?? '/apply-now'} className="apply_now">Apply Now</Link>
+                                        <Link href={item.exploreurl} className="explore_btn">Explore JNU</Link>
+                                        <Link href={APPLY_NOW ?? '/apply-now'} className="apply_now" target='_blank'>Apply Now</Link>
                                     </div>
                                 </div>
                             </div>

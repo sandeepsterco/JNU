@@ -97,7 +97,7 @@ export default function StudyJNU({data, modular}:ProgramPropsInterface) {
                                 </Link>
                             )}
                             
-                            <Link className="apply_now" href={APPLY_NOW ?? '/apply-now'}>Apply Now</Link>
+                            <Link className="apply_now" href={APPLY_NOW ?? '/apply-now'} target='_blank'>Apply Now</Link>
                         </div>
                     </div>
                 </div>

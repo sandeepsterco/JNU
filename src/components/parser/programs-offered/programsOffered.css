@@ -97,7 +97,8 @@
 .bba_sectble{margin-top:3.5rem;margin-bottom:3rem;}
 .bba_sectble tbody > tr > td:last-child{text-align:left;}
 .bba_sectble tbody > tr > td:nth-child(n+3){padding-inline:3.5rem;}
-
+.program_section_bx#overview .custm_bullets{display: grid;grid-template-columns: repeat(2, 1fr );gap: 0 3.5rem;}
+.program_section_bx#overview .custm_bullets li    {font: var(--font-16);margin-bottom: 0;}
 
 
 @media(max-width:1536px){

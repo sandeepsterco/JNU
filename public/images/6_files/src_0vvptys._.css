@@ -1448,7 +1448,7 @@ video {
 }
 
 .academic_classroom_overview:before {
-  opacity: .6;
+  opacity: .8;
   content: "";
   background: linear-gradient(#0000 0%, #000 100%) no-repeat padding-box padding-box;
   height: 26.3rem;
