@@ -22,7 +22,7 @@ export default async function LeadershipManagement({
   const pagination = data?.data;
 
   return (
-    <section className="leadership_section">
+    <section className="leadership_section hero_bg_pattern">
       <div className="container">
         {error ? (
           <NoData heading="Leadership data unavailable" para={error} />
