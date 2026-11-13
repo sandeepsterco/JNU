@@ -18,7 +18,7 @@ export default async function SchoolPage({
     : [];
 
   return (
-    <section className="leadership_section leadership_section">
+    <section className="leadership_section hero_bg_pattern">
       <div className="container">
         {error ? (
           <NoData heading="Leadership data unavailable" para={error} />
