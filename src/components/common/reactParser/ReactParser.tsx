@@ -28,11 +28,12 @@ interface ProgramsSearchParams {
     type?: string;
     school?: string;
     degree?: string;
+    page?:string;
 }
 
 interface ContentRendererProps {
     html: string;
-    searchParams: ProgramsSearchParams;
+    searchParams?: ProgramsSearchParams;
 }
 
 function hashString(str: string): string {
@@ -147,7 +148,7 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
                     );
                 }
 
-                if (domNode.attribs.id === "programOffered") return <ProgramsOffered searchParams={searchParams}  />;
+                if (domNode.attribs.id === "programOffered") return <ProgramsOffered searchParams={searchParams ?? {}} />;
                 if (domNode.attribs.id === "contact_info") return <ContactInfo  />;
                 if (domNode.attribs.id === "sidebar_related_news") return <RelatedNews  />;
                 if (domNode.attribs.id === "school_placements") return <SchoolPlacements  />;
