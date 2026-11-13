@@ -2680,3 +2680,20 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .scholneed_assit  .apply_contact .apply_now { margin-top: 0.5rem; }
 .course-eligibility-fee .abu_committ_mainsec  .jnu_title_header{display: none;}
 /* Scholarships & Financial Aid  End*/
+
+
+/* leadershipbottom */
+.goveringbody_main,
+.goveringbody_main .faq_section { background-color: transparent; }
+.gover_bdybx { display: grid; grid-template-columns: 30% auto; gap: 5rem; align-items: center; }
+.gover_bxrgt { padding-right: 10rem; }
+.goveringbody_main .gover_bxrgt p { margin-bottom: 3rem; font: var(--font-16); font-weight: var(--fw-300);color: var(--color-23); }
+.gover_bxrgt .gover_auth { margin-top: 5rem; position: relative; }
+.gover_bxrgt .gover_auth h5 { font: var(--font-24); margin-bottom: .2rem; color: var(--color-23); margin-bottom: 0.5rem; }
+.gover_bxrgt .gover_auth p.designation { color: var(--color-23); }
+.gover_bxrgt .gover_auth::after { content: ""; position: absolute; bottom: -2.5rem; left: 0; width: 29rem; height: 0.4rem; right: 0; background: linear-gradient(to right, var(--color-cf) 0%, var(--color-cf) 65%, var(--color-f9) 65%, var(--color-f9) 100%); }
+.goveringbody_main .fundacc_item.fundacc_active { background-color: var(--color-white); }
+.goveringbody_main .fundacc_heading{border-bottom: 1px dashed var(--color-d5);}
+.goveringbody_main .fundacc_item.fundacc_active .fundacc_heading{border-bottom: 0.1rem solid transparent;}
+.goveringbody_main .fundacc_heading h5{color: var(--color-23);     font: var(--font-21);}
+.goveringbody_main .fundacc_inner{    padding: 0 3.8rem 5rem 6.8rem;}

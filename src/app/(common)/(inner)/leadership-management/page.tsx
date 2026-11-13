@@ -4,6 +4,7 @@ import LeadershipGrid, {
   LeadershipItem,
 } from "@/components/leadership/LeadershipGrid";
 import PaginationWrapper from "@/components/pagination/PaginationWrapper";
+import ReactParserDynamic from "@/components/common/reactParser/ReactParserDynamic";
 
 export default async function LeadershipManagement({
   searchParams,
@@ -13,13 +14,18 @@ export default async function LeadershipManagement({
   const { page } = await searchParams;
   const currentPage = Number(page) || 1;
 
-  const { data, error } = await apiFetch(`leadership?page=${currentPage}`);
+  const [{ data, error }, {data:cmsData}] = await Promise.all([
+    apiFetch(`leadership?page=${currentPage}`),
+    apiFetch(`cms/leadership-management`),
+  ]);
 
   const leadershipItems: LeadershipItem[] = Array.isArray(data?.data?.data)
     ? data.data.data
     : [];
 
   const pagination = data?.data;
+
+  const combinedHTML = Object.values(cmsData?.data?.sections).join('') || '';
 
   return (
     <>
@@ -44,7 +50,8 @@ export default async function LeadershipManagement({
         </div>
       </section>
 
-      
+      <ReactParserDynamic html={combinedHTML}  />
+
     </>
   );
 }
