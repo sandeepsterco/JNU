@@ -14,13 +14,15 @@ export default function SocialGrid({ modular }: PropsInterface) {
                 {modular.map((item, idx) => (
                     <li key={idx}>
                         <Image width={368} height={460} src={item?.image} className="img-fluid image" alt={item?.name ?? 'News Image'} />
-                   {/* <div className="social_linkicon">
-                    <Image width={29} height={29}  src="https://project-demo.in/jnu-jaipur/assets/img/support-info/1782820570_X2s1pPNExvde9k2z3vMl.svg" className="img-fluid" alt="linkedin"/>
-                   </div> */}
+                        {item.social_icon && (
+                            <div className="social_linkicon">
+                                <Image width={29} height={29} src={item.social_icon} className="img-fluid" alt={item?.name ? `${item.name} social icon` : 'social icon'} />
+                            </div>
+                        )}
                         <Link href={item?.url} className="streched_link" target="_blank"></Link>
                     </li>
                 ))}
             </ul>
         </>
     )
-}
+}   
