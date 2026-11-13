@@ -19,6 +19,7 @@ import DepartmentProgramsOffered from '@/components/parser/department/Department
 import DepartmentFaculty from '@/components/parser/department/DepartmentFaculty';
 import DepartmentFacilities from '@/components/parser/department/DepartmentFacilities';
 import LoadMoreEnhancer from '@/components/parser/LoadMoreEnhancer';
+import AmbedkarEvents from '@/components/parser/ambedkar-events/AmbedkarEvents';
 
 interface ProgramsSearchParams {
     search?: string;
@@ -28,11 +29,13 @@ interface ProgramsSearchParams {
     type?: string;
     school?: string;
     degree?: string;
+    page?:string;
 }
 
 interface ContentRendererProps {
     html: string;
-    searchParams: ProgramsSearchParams;
+    searchParams?: ProgramsSearchParams;
+    data?: any;
 }
 
 function hashString(str: string): string {
@@ -43,7 +46,7 @@ function hashString(str: string): string {
     return (hash >>> 0).toString(36);
 }
 
-export default function ReactParser({ html, searchParams }: ContentRendererProps) {
+export default function ReactParser({ html, searchParams, data }: ContentRendererProps) {
     // const sanitizedHtml = DOMPurify.sanitize(html);
     const sanitizedHtml = html;
     const containerId = `cms-block-${hashString(sanitizedHtml)}`;
@@ -52,7 +55,6 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
         replace(domNode) {
             if (domNode instanceof Element && domNode.attribs) {
 
-                // ✅ Hide empty block/inline elements (no visible text or child elements)
                 const emptyTags = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'blockquote'];
 
                 if (emptyTags.includes(domNode.name)) {
@@ -147,7 +149,7 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
                     );
                 }
 
-                if (domNode.attribs.id === "programOffered") return <ProgramsOffered searchParams={searchParams}  />;
+                if (domNode.attribs.id === "programOffered") return <ProgramsOffered searchParams={searchParams ?? {}} />;
                 if (domNode.attribs.id === "contact_info") return <ContactInfo  />;
                 if (domNode.attribs.id === "sidebar_related_news") return <RelatedNews  />;
                 if (domNode.attribs.id === "school_placements") return <SchoolPlacements  />;
@@ -162,6 +164,7 @@ export default function ReactParser({ html, searchParams }: ContentRendererProps
                 if (domNode.attribs.id === "department_programs_offered") return <DepartmentProgramsOffered  />;
                 if (domNode.attribs.id === "department_faculties") return <DepartmentFaculty  />;
                 if (domNode.attribs.id === "department_facilities") return <DepartmentFacilities  />;
+                if (domNode.attribs.id === "ambedkar_events") return <AmbedkarEvents data={data}  />;
             }
         }
     }

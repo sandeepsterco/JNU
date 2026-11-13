@@ -1,6 +1,6 @@
 .title24_36 { font: var(--font-24); line-height: 1.6; }
 /* =================About Us-Leadership Listing==============  */
-.leadership_section{padding-block:11rem;background-image:url(/images/back_pattern.svg);background-size:contain;background-repeat:repeat;width:100%;}
+.leadership_section{padding-block:11rem;background-size:contain;background-repeat:repeat;width:100%;}
 .leadership_grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem;row-gap:4rem;}
 .leadership_cnt h4{font:var(--font-24);font-weight:300;margin-top:3rem;line-height:1.4;}
 .leadership_Bx{position:relative;}
@@ -2629,9 +2629,10 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .common_faq_overview { padding-block: 12rem 0;} .common_faq_overview .jnu_title_header { margin-bottom: 5rem; }
  .sch_about_overview .jnu_title_header h2{color: var(--color-23);}
 .about_faqmain{padding-bottom: 12rem;}
-.about_faqmain .fundacc_heading { background-color: var(--color-white); }
+.about_faqmain .fundacc_item.fundacc_active{border-bottom: 0.1rem solid transparent;border-radius: 1rem;}
+.about_faqmain .fundacc_item.fundacc_active {background-color: var(--color-white);}
 .about_faqmain .fundacc_heading  h5, .about_faqmain .fundacc_inner p { color: var(--color-23); }
-.about_faqmain .fundacc_inner { background-color: var(--color-white); color: var(--color-23); }
+.about_faqmain .fundacc_inner { color: var(--color-23); }
 .about_faqmain .fundacc_item { border-bottom: 1px dashed var(--color-d5); }
 .about_faqmain ul { margin-top: 2rem; margin-bottom: 1.5rem; }
 .about_faqmain ul li { font: var(--font-14); margin-bottom: 1rem; font-weight: 300; line-height: 1.7; color: var(--color-23); }
@@ -2678,4 +2679,30 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .scholneed_assit ul li a { border-bottom: none; width: max-content; padding-block: 0; margin-bottom: 0; }
 .scholneed_assit  .apply_contact .apply_now { margin-top: 0.5rem; }
 .course-eligibility-fee .abu_committ_mainsec  .jnu_title_header{display: none;}
+.patent_publi_main { padding-block: 12rem; }
+.patent_publi_main .patent_table_sec .jnu_title_header{text-align: left;}
+.patent_publi_main .patent_table_sec .jnu_title_header blockquote{margin-bottom: 3rem;}
+.patent_publi_main .patent_table_sec:not(:last-child) {
+  padding-bottom: 7rem; 
+}
 /* Scholarships & Financial Aid  End*/
+
+
+/* leadershipbottom */
+.goveringbody_main,
+.goveringbody_main .faq_section { background-color: transparent; padding-top: 0;}
+.goveringbody_main .funded_resetitle {border-top: 0.1rem solid var(--color-d5);padding-top: 10rem;}
+.goveringbody_main .funded_resetitle h5,
+.goveringbody_main .funded_resetitle h4{color: var(--color-23);}
+.gover_bdybx { display: grid; grid-template-columns: 30% auto; gap: 5rem; align-items: center; }
+.gover_bxrgt { padding-right: 10rem; }
+.goveringbody_main .gover_bxrgt p { margin-bottom: 3rem; font: var(--font-16); font-weight: var(--fw-300);color: var(--color-23); }
+.gover_bxrgt .gover_auth { margin-top: 5rem; position: relative; }
+.gover_bxrgt .gover_auth h5 { font: var(--font-24); margin-bottom: .2rem; color: var(--color-23); margin-bottom: 0.5rem; }
+.gover_bxrgt .gover_auth p.designation { color: var(--color-23); }
+.gover_bxrgt .gover_auth::after { content: ""; position: absolute; bottom: -2.5rem; left: 0; width: 29rem; height: 0.4rem; right: 0; background: linear-gradient(to right, var(--color-cf) 0%, var(--color-cf) 65%, var(--color-f9) 65%, var(--color-f9) 100%); }
+.goveringbody_main .fundacc_item.fundacc_active { background-color: var(--color-white); }
+.goveringbody_main .fundacc_heading{border-bottom: 1px dashed var(--color-d5);}
+.goveringbody_main .fundacc_item.fundacc_active .fundacc_heading{border-bottom: 0.1rem solid transparent;}
+.goveringbody_main .fundacc_heading h5{color: var(--color-23);     font: var(--font-21);}
+.goveringbody_main .fundacc_inner{    padding: 0 3.8rem 5rem 6.8rem;}

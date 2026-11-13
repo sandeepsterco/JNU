@@ -7,7 +7,7 @@ import '@/components/homepage/research/research.css'
 import '@/components/homepage/alumni/alumni.css'
 import '@/components/homepage/happenings/happenings.css'
 import '@/components/homepage/faqs/faq.css'
-import './school.css'
+import '../school.css'
 import '@/styles/common/statsWrapper.css'
 import SchoolNoData from "@/components/ui/SchoolNoData";
 

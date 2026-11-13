@@ -33,6 +33,7 @@
 body:has(.side_hamburger.is-open) .site_nav{transform:translateY(var(--hamb-width));-webkit-transform:translateY(var(--hamb-width));-moz-transform:translateY(var(--hamb-width));-ms-transform:translateY(var(--hamb-width));-o-transform:translateY(var(--hamb-width));}
 .school_header{background-color:transparent;padding-block:3.7rem 0;}
 .school_header::after{background:transparent linear-gradient(0deg,#00000000 0%,#000000 100%) 0% 0% no-repeat padding-box;opacity:0.32;position:absolute;left:0;right:0;top:0;height:14.4rem;content:"";z-index:-1;}
+.school_inner_header.school_header::after{display:none;}
 .inner_header1::after{background:transparent linear-gradient(0deg,#00000000 0%,#000000 100%) 0% 0% no-repeat padding-box;opacity:0.32;position:absolute;left:0;right:0;top:0;height:14rem;content:"";z-index:-1;}
 .school_banner{position:relative;overflow:hidden;}
 .school_banner::before{content:"";z-index:0;opacity:.69;background:linear-gradient(to right,#000 0%,#0000 100%) no-repeat;width:142.6rem;position:absolute;top:0;bottom:0;left:0;}
