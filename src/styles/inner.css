@@ -2682,9 +2682,12 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .patent_publi_main { padding-block: 12rem; }
 .patent_publi_main .patent_table_sec .jnu_title_header{text-align: left;}
 .patent_publi_main .patent_table_sec .jnu_title_header blockquote{margin-bottom: 3rem;}
-.patent_publi_main .patent_table_sec:not(:last-child) {
-  padding-bottom: 7rem; 
-}
+.patent_publi_main .patent_table_sec:not(:last-child) { padding-bottom: 7rem; }
+.nirf_overview {padding-top: 12rem;}
+.career_pathwaymain {padding-block: 12rem;}
+.career_path_grid .inno_incubx{text-align: left;}
+.career_pathbx:not(:last-child) { padding-bottom: 7rem; }
+.career_pathbx .jnu_title_header{text-align: left;}
 /* Scholarships & Financial Aid  End*/
 
 

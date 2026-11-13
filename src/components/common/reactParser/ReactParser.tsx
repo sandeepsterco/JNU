@@ -20,6 +20,7 @@ import DepartmentFaculty from '@/components/parser/department/DepartmentFaculty'
 import DepartmentFacilities from '@/components/parser/department/DepartmentFacilities';
 import LoadMoreEnhancer from '@/components/parser/LoadMoreEnhancer';
 import AmbedkarEvents from '@/components/parser/ambedkar-events/AmbedkarEvents';
+import SchoolTestimonial from '@/components/parser/schoolTestimonial/SchoolTestimonial';
 
 interface ProgramsSearchParams {
     search?: string;
@@ -36,6 +37,7 @@ interface ContentRendererProps {
     html: string;
     searchParams?: ProgramsSearchParams;
     data?: any;
+    params?: any;
 }
 
 function hashString(str: string): string {
@@ -46,7 +48,7 @@ function hashString(str: string): string {
     return (hash >>> 0).toString(36);
 }
 
-export default function ReactParser({ html, searchParams, data }: ContentRendererProps) {
+export default function ReactParser({ html, searchParams, data, params }: ContentRendererProps) {
     // const sanitizedHtml = DOMPurify.sanitize(html);
     const sanitizedHtml = html;
     const containerId = `cms-block-${hashString(sanitizedHtml)}`;
@@ -165,6 +167,7 @@ export default function ReactParser({ html, searchParams, data }: ContentRendere
                 if (domNode.attribs.id === "department_faculties") return <DepartmentFaculty  />;
                 if (domNode.attribs.id === "department_facilities") return <DepartmentFacilities  />;
                 if (domNode.attribs.id === "ambedkar_events") return <AmbedkarEvents data={data}  />;
+                if (domNode.attribs.id === "school_testimonial") return <SchoolTestimonial params={params} data={data}  />;
             }
         }
     }
