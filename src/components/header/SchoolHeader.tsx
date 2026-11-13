@@ -29,6 +29,7 @@ interface HeaderResponse {
 interface SchoolHeaderInterface{
   parentSlug?:string;
   slug?:string;
+  customClass?:string;
 }
 
 const HeaderLogo = () => {
@@ -56,15 +57,13 @@ const HeaderLogo = () => {
   );
 };
 
-export default async function SchoolHeader({parentSlug, slug}:SchoolHeaderInterface) {
+export default async function SchoolHeader({parentSlug, slug, customClass}:SchoolHeaderInterface) {
   const { data } = await apiFetch(`${parentSlug}/${slug}/navigation?q=header`);
-
-  console.log('school header data',data);
 
   const headerData = (data as HeaderResponse)?.data ?? [];
 
   return (
-    <HeaderScroll>
+    <HeaderScroll customClass={customClass}>
       <div className="container-fluid">
         <HeaderLogo />
 

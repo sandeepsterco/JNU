@@ -26,7 +26,7 @@ export default async function SchoolLayout({
 
   return (
     <>
-      <SchoolHeader parentSlug="school" slug={school} />
+      <SchoolHeader parentSlug="school" slug={school} customClass="school_inner_header" />
       <MainWrapper>
         <main className="site_main">
           <InnerHead headData={headData} />
