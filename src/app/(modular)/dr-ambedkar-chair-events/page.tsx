@@ -24,6 +24,7 @@ export default async function AmbedkarChairEventPage({
       <ReactParserDynamic
         html={combinedHtml}
         searchParams={resolvedSearchParams}
+        data={data}
       />
     </div>
   );
