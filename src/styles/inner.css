@@ -2681,13 +2681,19 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .course-eligibility-fee .abu_committ_mainsec  .jnu_title_header{display: none;}
 .patent_publi_main { padding-block: 12rem; }
 .patent_publi_main .patent_table_sec .jnu_title_header{text-align: left;}
-
+.patent_publi_main .patent_table_sec .jnu_title_header blockquote{margin-bottom: 3rem;}
+.patent_publi_main .patent_table_sec:not(:last-child) {
+  padding-bottom: 7rem; 
+}
 /* Scholarships & Financial Aid  End*/
 
 
 /* leadershipbottom */
 .goveringbody_main,
-.goveringbody_main .faq_section { background-color: transparent; }
+.goveringbody_main .faq_section { background-color: transparent; padding-top: 0;}
+.goveringbody_main .funded_resetitle {border-top: 0.1rem solid var(--color-d5);padding-top: 10rem;}
+.goveringbody_main .funded_resetitle h5,
+.goveringbody_main .funded_resetitle h4{color: var(--color-23);}
 .gover_bdybx { display: grid; grid-template-columns: 30% auto; gap: 5rem; align-items: center; }
 .gover_bxrgt { padding-right: 10rem; }
 .goveringbody_main .gover_bxrgt p { margin-bottom: 3rem; font: var(--font-16); font-weight: var(--fw-300);color: var(--color-23); }
