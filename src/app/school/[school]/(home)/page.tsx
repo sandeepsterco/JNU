@@ -30,7 +30,7 @@ export default async function SchoolHomePage({params, searchParams}:{params:Prom
 
     return (
         <>
-            <ReactParserDynamic html={combineHTML} searchParams={resolvedSearchParams} />
+            <ReactParserDynamic html={combineHTML} data={data} searchParams={resolvedSearchParams} params={school} />
         </>
     )
 }

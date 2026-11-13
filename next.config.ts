@@ -31,6 +31,7 @@ const cspHeader = `
   frame-src 'self'
     https://www.youtube.com
     https://youtube.com
+    https://www.youtube-nocookie.com
     https://www.google.com
     https://www.gstatic.com
     https://www.recaptcha.net

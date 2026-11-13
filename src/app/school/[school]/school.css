@@ -125,10 +125,11 @@
 .success_speak .head_title{text-align:center;}
 .custom_tabs input[type="radio"]{display:none;}
 .custom_tabs .tab_nav{display:flex;gap:1.5rem;border-bottom:1px solid #DFDFDF;justify-content:center;margin-top:2rem;}
-.custom_tabs .tab_nav label{padding:1.2rem 1rem 2rem;font:var(--font-18);cursor:pointer;color:#9E9E9E;border-bottom:0.3rem solid transparent;transition:0.3s ease;font-weight:600;letter-spacing:2.7px;font-family:var(--poppins);}
+.custom_tabs .tab_nav label{padding:1.2rem 1rem 2rem;font:var(--font-18);cursor:pointer;color:#9E9E9E;border-bottom:0.3rem solid transparent;transition:0.3s ease;font-weight:600;letter-spacing:2.7px;font-family:var(--poppins); text-transform:uppercase;}
 .custom_tabs .tab_nav label:hover{color:var(--color-cf);}
-.custom_tabs #tab_one:checked ~ .tab_nav label[for="tab_one"],.custom_tabs #tab_two:checked ~ .tab_nav label[for="tab_two"],.custom_tabs #tab_three:checked ~ .tab_nav label[for="tab_three"]{color:var(--color-cf);border-bottom-color:var(--color-f2);}
+.custom_tabs #tab_one:checked ~ .tab_nav label[for="tab_one"],.custom_tabs #tab_two:checked ~ .tab_nav label[for="tab_two"],.custom_tabs #tab_three:checked ~ .tab_nav label[for="tab_three"], .custom_tabs .tab_nav label.active{color:var(--color-cf);border-bottom-color:var(--color-f2);}
 .custom_tabs .tab_panel{display:none;padding:2rem 0;}
+.custom_tabs .tab_panel.active{display:block;}
 .custom_tabs #tab_one:checked ~ .tab_content .panel_one,.custom_tabs #tab_two:checked ~ .tab_content .panel_two,.custom_tabs #tab_three:checked ~ .tab_content .panel_three{display:block;}
 .success_speak .swiper-wrapper{padding-top:5rem;}
 .success_speak_videobx{position:relative;}
