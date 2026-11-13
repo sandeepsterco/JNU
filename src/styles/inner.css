@@ -2679,6 +2679,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .scholneed_assit ul li a { border-bottom: none; width: max-content; padding-block: 0; margin-bottom: 0; }
 .scholneed_assit  .apply_contact .apply_now { margin-top: 0.5rem; }
 .course-eligibility-fee .abu_committ_mainsec  .jnu_title_header{display: none;}
+.paddingbt { padding-block: 12rem; }
+
 /* Scholarships & Financial Aid  End*/
 
 
