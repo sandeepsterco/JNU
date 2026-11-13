@@ -1,6 +1,6 @@
 .title24_36 { font: var(--font-24); line-height: 1.6; }
 /* =================About Us-Leadership Listing==============  */
-.leadership_section{padding-block:11rem;background-image:url(/images/back_pattern.svg);background-size:contain;background-repeat:repeat;width:100%;}
+.leadership_section{padding-block:11rem;background-size:contain;background-repeat:repeat;width:100%;}
 .leadership_grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem;row-gap:4rem;}
 .leadership_cnt h4{font:var(--font-24);font-weight:300;margin-top:3rem;line-height:1.4;}
 .leadership_Bx{position:relative;}
@@ -2629,9 +2629,10 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .common_faq_overview { padding-block: 12rem 0;} .common_faq_overview .jnu_title_header { margin-bottom: 5rem; }
  .sch_about_overview .jnu_title_header h2{color: var(--color-23);}
 .about_faqmain{padding-bottom: 12rem;}
-.about_faqmain .fundacc_heading { background-color: var(--color-white); }
+.about_faqmain .fundacc_item.fundacc_active{border-bottom: 0.1rem solid transparent;border-radius: 1rem;}
+.about_faqmain .fundacc_item.fundacc_active {background-color: var(--color-white);}
 .about_faqmain .fundacc_heading  h5, .about_faqmain .fundacc_inner p { color: var(--color-23); }
-.about_faqmain .fundacc_inner { background-color: var(--color-white); color: var(--color-23); }
+.about_faqmain .fundacc_inner { color: var(--color-23); }
 .about_faqmain .fundacc_item { border-bottom: 1px dashed var(--color-d5); }
 .about_faqmain ul { margin-top: 2rem; margin-bottom: 1.5rem; }
 .about_faqmain ul li { font: var(--font-14); margin-bottom: 1rem; font-weight: 300; line-height: 1.7; color: var(--color-23); }
