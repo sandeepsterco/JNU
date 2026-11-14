@@ -67,7 +67,7 @@ export default async function SchoolHeader({parentSlug, slug, customClass}:Schoo
       <div className="container-fluid">
         <HeaderLogo />
 
-        <HeaderNav parentSlug={parentSlug} headerData={headerData} />
+        <HeaderNav parentSlug={parentSlug} headerData={headerData} schoolId={data?.schoolId} />
         
       </div>
     </HeaderScroll>
