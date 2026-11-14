@@ -2717,3 +2717,28 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .goveringbody_main .fundacc_item.fundacc_active .fundacc_heading{border-bottom: 0.1rem solid transparent;}
 .goveringbody_main .fundacc_heading h5{color: var(--color-23);     font: var(--font-21);}
 .goveringbody_main .fundacc_inner{    padding: 0 3.8rem 5rem 6.8rem;}
+
+/* award page css */
+
+.about_awards { padding-block: 12rem; }
+.award_gridbx { grid-template-columns: 49.3% auto; align-items: center; gap: 15rem; display: grid;}
+.hn_pro_info{margin-bottom: 4rem;}
+ .hn_pro_info h5 { font: var(--font-24); margin-bottom: .2rem; }
+ .hn_pro_info blockquote { font: var(--font-18); font-weight: 300; }
+.award_gridbx .ab_awa_des p { font-weight: var(--fw-300); }
+.about_awards_four .award_gridbx{grid-template-columns:  auto 49.3%;
+    align-items: center;
+    gap: 15rem;
+    display: grid;}
+.ab_awardbx .ab_award_list  .custm_bullets{display: grid;grid-template-columns: repeat(2, 1fr);gap: 0 4rem;}
+.ab_awardbx .ab_award_list  .custm_bullets li{margin-top: 0;}
+.about_awards_two { padding-block: 12rem; background-color: var(--color-white); }
+.hn_pro_change_bx { grid-template-columns: 39.3% auto; gap: 9rem; display: grid; position: relative; align-items: start; }
+.hn_pro_change_bx .custm_bullets > li:first-child { margin-top: 0; }
+.hn_pro_chaimg figure { margin-bottom: 3.5rem; }
+.hn_pro_chaimg { margin-bottom: 3rem; position: sticky; top: 5rem; align-items: start; }
+.ab_award_four .ab_hn_pro_chaimg figure { margin-bottom: 3.5rem; }
+.about_awards_three{padding-block: 12rem;}
+.about_awards_four{background-color: var(--color-23);padding-block: 12rem;}
+.about_awards_one .award_gridbx{margin-bottom: 5rem;}
+.about_awards_four .hn_pro_info h5,.about_awards_four .hn_pro_info blockquote ,.about_awards_four .custm_bullets > li{color: var(--color-white);}
