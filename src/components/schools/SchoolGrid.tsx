@@ -40,13 +40,13 @@ export default function SchoolGrid({
             {item.designation && <p>{item.designation}</p>}
           </div>
 
-          {item.slug && (
+          {/* {item.slug && (
             <Link
               href={`${BASE_URL}school/${item.slug}`}
               className="overlap_btn"
               aria-label={`View ${item.name ?? "leadership member"}`}
             />
-          )}
+          )} */}
         </div>
       ))}
     </div>

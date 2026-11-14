@@ -78,12 +78,12 @@ export default async function SchoolHeader({parentSlug, slug, customClass}:Schoo
       <div className="container-fluid">
         <HeaderLogo />
 
-        <HeaderNav
+        {/* <HeaderNav
           parentSlug={parentSlug}
           headerData={headerData}
           sidebarData={sidebarData}
           schoolId={schoolId}
-        />
+        /> */}
         
       </div>
     </HeaderScroll>
