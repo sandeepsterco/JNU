@@ -1,6 +1,6 @@
 "use client";
 
-import { BASE_URL } from "@/config/config";
+import { APPLY_NOW, BASE_URL } from "@/config/config";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { HamburgerMenuItem } from "../Header";
@@ -136,7 +136,7 @@ export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
                             (childItem, childIdx) => (
                               <li key={childIdx}>
                                 <Link
-                                  href={`${BASE_URL}${childItem.slug}`}
+                                  href={`${BASE_URL}${childItem.overwrite_url || childItem.slug}`}
                                   onClick={closeMenu}
                                 >
                                   {childItem.title}
@@ -166,7 +166,7 @@ export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
               </li>
 
               <li>
-                <Link href={`${BASE_URL}study-jnu`} onClick={closeMenu}>
+                <Link href={APPLY_NOW || 'https://apply.jnujaipur.ac.in/'} target="_blank" onClick={closeMenu}>
                   Study @ JNU
                 </Link>
               </li>
@@ -178,7 +178,7 @@ export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
               </li>
 
               <li>
-                <Link href={`${BASE_URL}erp-login`} onClick={closeMenu}>
+                <Link href={`https://univ.jnujaipur.ac.in/Account/Login`} target="_blank" onClick={closeMenu}>
                   ERP Login
                 </Link>
               </li>
@@ -190,13 +190,13 @@ export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
               </li>
 
               <li>
-                <Link href={`${BASE_URL}policies`} onClick={closeMenu}>
+                <Link href={`${BASE_URL}privacy-policy`} onClick={closeMenu}>
                   Policies
                 </Link>
               </li>
 
               <li>
-                <Link href={`${BASE_URL}ugc-portal`} onClick={closeMenu}>
+                <Link href={`https://samadhaan.ugc.ac.in/`} target="_blank" onClick={closeMenu}>
                   UGC e-Samadhaan Portal
                 </Link>
               </li>

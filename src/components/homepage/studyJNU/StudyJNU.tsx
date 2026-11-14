@@ -9,6 +9,7 @@ interface ModularProgramInterface{
     description:string;
     image:string;
     slug:string;
+    id:number;
 }
 
 interface ProgramPropsInterface{
@@ -51,8 +52,8 @@ export default function StudyJNU({data, modular}:ProgramPropsInterface) {
                                             <p>{item.description}</p>
                                         )}
                                         <span><img src="/images/icons/nav-arrow-next.svg" className="img-fluid" alt="arrow" /></span>
-                                        {item?.slug && (
-                                            <Link href={`${BASE_URL}programs?type=${item.slug}`} className="overlap_btn"></Link>
+                                        {item?.id && (
+                                            <Link href={`${BASE_URL}programs?degree=${item.id}`} className="overlap_btn"></Link>
                                         )}
                                     </div>
                                 ))}
