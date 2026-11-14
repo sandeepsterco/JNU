@@ -1004,7 +1004,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .cafet_area_sec{margin-bottom:12rem;}
 .caft_lftbx figure{position:relative;overflow:hidden;}
 .caft_lftbx figure img{display:block;width:100%;height:auto;}
-.caft_lftbx figure::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:18rem;background:linear-gradient(180deg,#00000000 0%,#000000 100%);opacity:0.5;pointer-events:none;}
+.caft_lftbx figure::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:18rem;background:linear-gradient(180deg,#00000000 0%,#000000 100%);opacity:0.8;pointer-events:none;}
 .caft_lftbx:nth-child(1) figure::after{height:35.3rem;}
 .caft_lftbx .img_caption{position:absolute;left:3rem;bottom:3.2rem;right:14.4rem;z-index:2;}
 .caft_lftbx .img_caption> h5,.caft_lftbx .img_caption> p{color:var(--color-white);}
@@ -1086,7 +1086,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 }
 /* ================= Transportation Page End==============  */
 /* Funded Projects Page  Start */
-.funded_resec{background-color:var(--color-38);padding-block:10rem 14rem;}
+.funded_resec{background-color:var(--color-38);padding-block:10rem 10rem;}
 .funded_resec .faq_section{background-color: transparent;padding: 0;}
 .res_founded_main{padding-block:12rem 13rem;}
 .founded_table thead>tr>th{background-color:var(--color-cf);font:var(--font-18);font-weight:300;}
@@ -1494,7 +1494,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .inno_incu_main .inno_ovr_btmtext{padding-block:5.6rem;}
 .inno_ovr_btmtext p{font-weight:var(--fw-300);font:var(--font-16);text-align:center;}
 .innov_incu_fact .place_fact_grid{grid-template-columns:12.9% 26.6% 21.5% auto;display:grid;gap:6.4rem;}
-.innov_incu_fact .place_fact_grid .plaec_factbx> h3{font:var(--font-38);color:var(--color-cf);font-weight:400;line-height:1.10;}
+.innov_incu_fact .place_fact_grid .plaec_factbx> h3{font:var(--font-34);color:var(--color-cf);font-weight:400;line-height:1.10;}
 .innov_incu_fact .place_fact_grid .plaec_factbx sup{font:var(--font-30);font-weight:600;top:-1.3rem;right:-0.9rem;}
 .netwrth_grid{display:grid;grid-template-columns:48.89% auto;gap:10.4rem;align-items:center;margin-block:5.6rem 12rem;}
 .netwrth_grid .ntwrt_rgt p{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:1.5rem;}
@@ -2783,4 +2783,44 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .tab_contbx .abu_commitbbx p>strong{font-weight: 500;font: var(--font-18);}
 .tab_contbx .custm_bullets.grid_2 {display: grid;grid-template-columns: repeat(2,1fr);gap: 0;margin-block: 3rem;}
 .tab_contbx .custm_bullets.grid_2>li{margin-block: 0 2.5rem;}
+/* book campus visit css ends here */
+.abu_committ_mainsec.hero_bg_pattern .jnu_title_header{display: none;}
+.testimo_sec {padding-bottom: 8rem;}
+.testimo_bottom>h3{margin-bottom: 3.2rem;
+    font: var(--font-42);
+    letter-spacing: -1.26px;
+    font-weight: 300;text-transform: capitalize;}
+.testimo_bottom>ul{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    margin-block: 4rem 0;
+}
+
+.testimo_bottom>.custm_bullets > li{gap: 0;margin-top: 0;}
+.transport_grid{grid-template-columns:44rem auto;gap:21rem;display:grid;width:83.1%;margin:auto;}
+.public_transport h3{color:var(--color-cf);margin-bottom:3rem;font-weight:500;}
+.public_transport p{font:var(--font-18);font-family:var(--stack);color:var(--color-black);margin-top:2rem;font-weight:200;line-height:1.7;}
+.transport_sec{padding-block:0 12rem;}
+.public_transport hr {
+    border-bottom: 1px solid #c6c6c6;
+    display: block;
+    margin: 4rem 0;
+}.explore_btn_grp {
+    height: auto;
+    overflow: hidden;
+    line-height: 3;
+    margin-top: 3rem;
+}
+.public_transport > a {
+    font: var(--font-24);
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    gap: 0 1.5rem;
+    margin-top: 2rem;
+}
+.public_transport > a img {
+    max-width: 3rem;
+}
+
 /* book campus visit css ends here */
