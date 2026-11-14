@@ -21,6 +21,8 @@ import DepartmentFacilities from '@/components/parser/department/DepartmentFacil
 import LoadMoreEnhancer from '@/components/parser/LoadMoreEnhancer';
 import AmbedkarEvents from '@/components/parser/ambedkar-events/AmbedkarEvents';
 import SchoolTestimonial from '@/components/parser/schoolTestimonial/SchoolTestimonial';
+import CampusTourForm from '@/components/parser/campusTourForm/CampusTourForm';
+import AlumniRegistrationForm from '@/components/parser/alumniRegistrationForm/AlumniRegistrationForm';
 
 interface ProgramsSearchParams {
     search?: string;
@@ -168,6 +170,8 @@ export default function ReactParser({ html, searchParams, data, params }: Conten
                 if (domNode.attribs.id === "department_facilities") return <DepartmentFacilities  />;
                 if (domNode.attribs.id === "ambedkar_events") return <AmbedkarEvents data={data}  />;
                 if (domNode.attribs.id === "school_testimonial") return <SchoolTestimonial params={params} data={data}  />;
+                if (domNode.attribs.id === "campusTourForm") return <CampusTourForm  />;
+                if (domNode.attribs.id === "alumni_registration_form") return <AlumniRegistrationForm  />;
             }
         }
     }

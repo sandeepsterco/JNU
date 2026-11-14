@@ -17,6 +17,7 @@ interface TabsInterface{
     tab:string;
     video?:string;
     id?:string;
+    image?:string | null;
 }
 
 interface ExperiencePropsInterface{

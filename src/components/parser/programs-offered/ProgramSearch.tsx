@@ -14,7 +14,7 @@ export default function ProgramSearch({isDataLoading}:{isDataLoading:(val:boolea
     useEffect(() => {
         const timer = setTimeout(() => {
             setDebouncedQuery(searchQuery)
-        }, 500)
+        }, 1000)
 
         return () => clearTimeout(timer);
     }, [searchQuery]);

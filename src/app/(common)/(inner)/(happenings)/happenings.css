@@ -93,3 +93,5 @@
 .extr_info_pdf a:hover{color:var(--color-cf)}
 /* event deatil gallery */
 .event_de_gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.6rem; padding-top: 6rem; }
+.news_empty_state { padding-block: 10rem 5rem; text-align: center; }
+.news_empty_state p { font: var(--font-21); }
