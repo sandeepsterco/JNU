@@ -11,7 +11,10 @@ interface GalleryDataInterface {
     thumbnail: string;
     date: string;
     slug: string;
-    id: number
+    id: number;
+    mapping_items?: {
+        images?: { image: string }[];
+    };
 }
 
 interface GalleryResponseInterface {
