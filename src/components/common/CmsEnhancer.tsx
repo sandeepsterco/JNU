@@ -21,6 +21,7 @@ import { initSuccessspeakSwiper } from "@/lib/cms/initSuccessspeakSwiper";
 import { InitCommonAccordion } from "@/lib/cms/initCommonAccordion";
 import { CustomTabs1 } from "@/lib/cms/initCustomTabs1";
 import { InitAuditoriumSwiper } from "@/lib/cms/initAuditoriumSwiper";
+import { initPlacementsOverviewSlider } from "@/lib/cms/initPlacementsOverview";
 
 function waitForLayout() {
   return new Promise<void>((resolve) => {
@@ -124,6 +125,14 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
       }
        if (root.querySelector(".success_speak_slider:not([data-swiper-init])")) {
         const cleanup = await initSuccessspeakSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
+       if (root.querySelector(".placement_ovr_slider:not([data-swiper-init])")) {
+        const cleanup = await initPlacementsOverviewSlider(root);
         if (cancelled) {
           cleanup();
           return;
