@@ -61,7 +61,7 @@ export default async function NewsEventsPage({ searchParams }: PageProps) {
     return (
         <>
             {featuredNews.length > 0 && (
-                <FeaturedNews data={featuredNews} />
+                <FeaturedNews data={featuredNews} slug={slug} />
             )}
 
             {newsAndEvents?.data?.length === 0 ? (
