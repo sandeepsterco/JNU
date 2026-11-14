@@ -2783,3 +2783,4 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .tab_contbx .abu_commitbbx p>strong{font-weight: 500;font: var(--font-18);}
 .tab_contbx .custm_bullets.grid_2 {display: grid;grid-template-columns: repeat(2,1fr);gap: 0;margin-block: 3rem;}
 .tab_contbx .custm_bullets.grid_2>li{margin-block: 0 2.5rem;}
+/* book campus visit css ends here */
