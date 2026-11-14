@@ -120,7 +120,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 /* ================= Faculty Listing Page==============  */
 .faculty_section{padding-block:11rem;width:100%;position:relative;}
 .faculty_section::before{background-image:url(/images/back_pattern.svg);background-size:contain;position:absolute;top:0;left:0;bottom:0;background-repeat:repeat;content:"";height:41.8rem;width:100%;content:"";z-index:-1;}
-.faculty_filter{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem;}
+.faculty_filter{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem; padding-bottom: 5.6rem;}
 .faculty_filter .custom_select{position:relative;}
 .faculty_filter .custom_select::after{content:"";position:absolute;right:2rem;top:50%;width:0.8rem;height:0.8rem;border-right:1px solid #333;border-bottom:1px solid #333;transform:translateY(-70%) rotate(45deg);pointer-events:none;}
 .faculty_filter input{width:100%;height:4.7rem;border:1px solid #CF1E6266;font:var(--font-14);font-weight:300;padding-inline:3rem;}
@@ -2037,6 +2037,10 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .collabra_faq .font42 { margin-bottom: 5.6rem; }
 .collabra_faq .tab_heading:first-child { padding-block:3.5rem 3.2rem; }
 .collabra_faq .tab_heading { border-bottom: 0.1rem dotted #fff; }
+.train_stpbx { padding-top: 3rem; }
+.train_stpbx h5 { margin-bottom: 3rem; }
+.train_stpbx .custom_lists { margin-bottom: 3rem; }
+.train_stpbx .custom_lists li { padding-block: 0; font-weight: var(--fw-300); }
 .exa-resul { padding-block: 10.4rem 15rem; }
 .exa-resul-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; align-items: center; }
 .exa_header { text-align: center; }

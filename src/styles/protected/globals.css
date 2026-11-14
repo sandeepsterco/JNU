@@ -261,7 +261,7 @@ blockquote{margin:0;}
      html{font-size:min(0.5208333333vw,10px);}
 } */
 
-.overlap_btn{font-size:0;position:absolute;top:0;bottom:0;left:0;right:0;}
+.overlap_btn{font-size:0;position:absolute;top:0;bottom:0;left:0;right:0; z-index:9;}
 .arrow_box{width:3rem;height:3rem;border:1px solid var(--color-cf);text-align:center;display:block;padding:0.7rem 1rem;}
 .arrow_box:hover{background-color:var(--color-cf);}
 .arrow_box:hover img{filter:brightness(0) invert(1);}
@@ -325,7 +325,7 @@ tbody>tr:not(:last-child){border-bottom:0.1rem solid #E8E8E8;}
 .item-content thead>tr{background-color:rgba(0,63,138,0.16);}
 .item-content thead>tr th{font:var(--font-16);color:var(--color-06);}
 tbody>tr>td{font:var(--font-16);font-weight:300;color:var(--color-black);letter-spacing:0;padding-block:1.25rem;text-align:left;}
-tbody>tr>td:nth-child(-n+2){padding-inline:3.9rem;}
+tbody>tr>td:nth-child(-n+2){padding-inline:2.3rem;}
 tbody>tr>td:nth-child(n+3){padding-inline:2.5rem;}
 
 @media(max-width:1536px){
