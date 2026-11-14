@@ -7,6 +7,7 @@
 .program_Bx p{font:var(--font-14);font-weight:300;}
 .program_Bx figure{max-width:6rem;margin:3rem auto 0;}
 .prg_search{margin-top:10rem;}
+.school-page .prg_search{margin-top:0;}
 .prg_search .input-group{position:relative;}
 .prg_search input{width:100%;height:5.2rem;border:1px solid #CF1E6266;font:var(--font-14);font-weight:300;padding-inline:3rem;}
 .prg_search .btn_search{position:absolute;right:2rem;top:1.5rem;}

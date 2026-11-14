@@ -105,14 +105,14 @@ export default function HomeBanner({ data }: HomeBannerProps) {
                                     {item.subheading && (
                                         <p>{item.subheading}</p>
                                     )}
-                                    <div className="logo_banner">
+                                    {/* <div className="logo_banner">
                                         {item.logo && (
                                             <img src={item.logo} className="img-fluid w-100" alt="Banner Logo" />
                                         )}
                                         {item.logodescription && (
                                             <div className="emp_by" dangerouslySetInnerHTML={{ __html: item.logodescription }} />
                                         )}
-                                    </div>
+                                    </div> */}
                                     <div className="banner_btn">
                                         <Link href={item.exploreurl} className="explore_btn">Explore JNU</Link>
                                         <Link href={APPLY_NOW ?? '/apply-now'} className="apply_now" target='_blank'>Apply Now</Link>
