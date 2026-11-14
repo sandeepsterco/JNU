@@ -2713,3 +2713,57 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .goveringbody_main .fundacc_item.fundacc_active .fundacc_heading{border-bottom: 0.1rem solid transparent;}
 .goveringbody_main .fundacc_heading h5{color: var(--color-23);     font: var(--font-21);}
 .goveringbody_main .fundacc_inner{    padding: 0 3.8rem 5rem 6.8rem;}
+
+
+
+/* book campus visit css starts here */
+
+.cont-form.campus_visit{background:var(--color-cf);border-bottom:.3rem solid var(--color-f9);padding:5rem 5rem;box-shadow:0 0 6px #d4d4d4;margin-right:3rem;}
+.benifit h4{color:#fff;font:var(--font-24);margin-bottom:4.5rem;font-weight:300;}
+.cont-form .form-group{position:relative;}
+.cont-form.campus_visit .form-group{margin-bottom:10px;color:#333;}
+.cont-form .form-control{color:#fff;background:none;border:none;border-bottom:1px solid #ffffff2e;width:100%;padding-bottom:1.4rem;}
+.cont-form.campus_visit .form-control{border-bottom:1px solid #ddd;}
+.campus_visit_box .eligible-lateral.campus_v .campus_part{color:#fff;padding:4rem;background-color:var(--color-06);}
+.campus_visit_box .eligible-lateral.campus_v .campus_part2{background:#f7eeee;margin-top:2rem;padding:4rem;}
+.cont-form .form-control::placeholder{color:#fff;}
+.btn-new input{width:12.2rem;height:4.3rem;font:var(--font-18);border:1px solid var(--color-ff);cursor:pointer;background:linear-gradient(to right,var(--color-cf) 50%,var(--color-ff) 50%);color:#000;background-position:100% 100%;background-size:200% 100%;margin-top:1rem;transition:all .35s;}
+.campus_part h3{color:#fff;font:var(--font-24);margin-bottom:3rem;font-weight:300;}
+.campus_part p{color:#fff;}
+.campus_part2 h3{font:var(--font-24);margin-bottom:3rem;font-weight:300;}
+.get_direction1{display:flex;align-items:center;justify-content:space-between;}
+.campus-view .campus_img{width:60px;height:60px;border-radius:100%;padding:1rem 1rem;line-height:1;margin:3rem auto 1rem;background-color:#fee601;text-align:center;}
+.lateral-1.bg_remove{padding-block:0 12rem;}
+.get_direction1 .get_ancher{width:16.2rem;height:5.3rem;font:var(--font-18);border:1px solid var(--color-ff);cursor:pointer;background:linear-gradient(to right,var(--color-cf) 50%,var(--color-ff) 50%);color:#000;background-position:100% 100%;background-size:200% 100%;margin-top:1rem;transition:all .35s;text-align:center;padding:1rem 1rem;}
+.jnu_title_header p{font:var(--font-18);font-family:var(--stack);color:var(--color-black);font-weight:200;line-height:1.7;margin-top:2rem;}
+.cont-form input[type="date"]::-webkit-calendar-picker-indicator{filter:invert(1);cursor:pointer;}
+.research_policy img{max-width:1.5rem;}
+.research_policy a{display:flex;align-items:center;gap:0 1rem;}
+.research_policy{text-align:center;display:flex;justify-content:center;margin-top:5rem;}
+.transport_grid{grid-template-columns:44rem auto;gap:21rem;display:grid;width:83.1%;margin:auto;}
+.public_transport h3{color:var(--color-cf);margin-bottom:3rem;font-weight:500;}
+.public_transport p{font:var(--font-18);font-family:var(--stack);color:var(--color-black);margin-top:2rem;font-weight:200;line-height:1.7;}
+.transport_sec{padding-block:0 12rem;}
+.public_transport hr {
+    border-bottom: 1px solid #c6c6c6;
+    display: block;
+    margin: 4rem 0;
+}.explore_btn_grp {
+    height: auto;
+    overflow: hidden;
+    line-height: 3;
+    margin-top: 3rem;
+}
+.public_transport > a {
+    font: var(--font-24);
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    gap: 0 1.5rem;
+    margin-top: 2rem;
+}
+.public_transport > a img {
+    max-width: 3rem;
+}
+
+/* book campus visit css ends here */
