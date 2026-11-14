@@ -3,6 +3,7 @@ import NewsFilter from './NewsFilter';
 import FeaturedNews from '@/components/news/FeaturedNews';
 import NewsList from './NewsList';
 import "@/app/(common)/(inner)/(happenings)/happenings.css";
+import { BASE_URL } from '@/config/config';
 
 interface DataInterface {
     name: string;
@@ -99,7 +100,7 @@ export default async function NewsEventsPage({ params, searchParams }: PageProps
                     <NewsList
                         key={`${schoolId}-${department ?? ''}-${date ?? ''}`}
                         initialData={newsAndEvents?.data ?? []}
-                        slug={`school/${school}/events`}
+                        slug={`${BASE_URL}news-events`}
                         filters={{ school: String(schoolId), department, date }}
                         hasMoreInitially={Boolean(newsAndEvents?.next_page_url)}
                     />
