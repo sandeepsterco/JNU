@@ -5,6 +5,7 @@ import apiFetch from "@/lib/api";
 import "./header.css";
 import HeaderScroll from "./HeaderScroll";
 import HeaderNav from "./HeaderNav";
+import type { HamburgerMenuItem } from "./Header";
 
 export interface ChildItemInterface {
   title: string;
@@ -24,6 +25,11 @@ export interface HeaderMenuItem {
 
 interface HeaderResponse {
   data: HeaderMenuItem[];
+  schoolId?: number;
+}
+
+interface SidebarResponse {
+  data: HamburgerMenuItem[];
 }
 
 interface SchoolHeaderInterface{
@@ -58,16 +64,26 @@ const HeaderLogo = () => {
 };
 
 export default async function SchoolHeader({parentSlug, slug, customClass}:SchoolHeaderInterface) {
-  const { data } = await apiFetch(`${parentSlug}/${slug}/navigation?q=header`);
+  const [headerResponse, sidebarResponse] = await Promise.all([
+    apiFetch(`${parentSlug}/${slug}/navigation?q=header`),
+    apiFetch(`${parentSlug}/${slug}/navigation?q=sidebar`),
+  ]);
 
-  const headerData = (data as HeaderResponse)?.data ?? [];
+  const headerData = (headerResponse.data as HeaderResponse)?.data ?? [];
+  const sidebarData = (sidebarResponse.data as SidebarResponse)?.data ?? [];
+  const schoolId = (headerResponse.data as HeaderResponse)?.schoolId;
 
   return (
     <HeaderScroll customClass={customClass}>
       <div className="container-fluid">
         <HeaderLogo />
 
-        <HeaderNav parentSlug={parentSlug} headerData={headerData} schoolId={data?.schoolId} />
+        <HeaderNav
+          parentSlug={parentSlug}
+          headerData={headerData}
+          sidebarData={sidebarData}
+          schoolId={schoolId}
+        />
         
       </div>
     </HeaderScroll>

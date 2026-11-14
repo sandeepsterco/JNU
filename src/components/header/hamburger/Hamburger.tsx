@@ -1,35 +1,13 @@
 "use client";
 
 import { BASE_URL } from "@/config/config";
-import apiFetch from "@/lib/api";
-import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import type { HamburgerMenuItem } from "../Header";
 
-const getHamburgerData = async () => {
-  try {
-    const { data, error } = await apiFetch(`sidebar`);
-
-    if (error) {
-      throw new Error(error);
-    }
-
-    return data.sidebar;
-  } catch (error) {
-    throw error instanceof Error
-      ? error
-      : new Error("Failed to fetch hamburger data");
-  }
-};
-
-export default function Hamburger() {
+export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
   const [isOpen, setIsOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
-
-  const { data, isLoading, isError } = useQuery({
-    queryKey: ["hamburger"],
-    queryFn: getHamburgerData,
-  });
 
   const closeMenu = () => setIsOpen(false);
 
@@ -146,16 +124,16 @@ export default function Hamburger() {
             {/* Dynamic Menu */}
             {data?.length > 0 && (
               <div className="hamp_topgrid">
-                {data.map((item: any, idx: number) => (
+                {data.map((item, idx) => (
                   <div key={idx} className="menu_col">
                     <div className="hamburger_item">
 
                       <h3>{item.title}</h3>
 
-                      {item?.children?.length > 0 && (
+                      {item.children && item.children.length > 0 && (
                         <ul>
                           {item.children.map(
-                            (childItem: any, childIdx: number) => (
+                            (childItem, childIdx) => (
                               <li key={childIdx}>
                                 <Link
                                   href={`${BASE_URL}${childItem.slug}`}

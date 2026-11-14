@@ -6,14 +6,16 @@ import { useState } from 'react'
 import { BASE_URL } from '@/config/config'
 import Hamburger from './hamburger/Hamburger'
 import AdmissionDropdown from './admissionDropdown/AdmissionDropdown'
-import type { HeaderMenuItem } from './Header'
+import type { HamburgerMenuItem, HeaderMenuItem } from './Header'
 
 export default function HeaderNav({
   headerData,
+  sidebarData,
   parentSlug,
   schoolId,
 }: {
   headerData: HeaderMenuItem[]
+  sidebarData: HamburgerMenuItem[]
   parentSlug?: string
   schoolId?:number
 }) {
@@ -134,7 +136,7 @@ export default function HeaderNav({
         })}
       </ul>
 
-      <Hamburger />
+      <Hamburger data={sidebarData} />
     </>
   )
 }
