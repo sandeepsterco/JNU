@@ -183,16 +183,11 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .item-content .custom_bullets { display: flex; flex-wrap: wrap; }
 @media all and (min-width: 800px) {
  .item.active .item-content { padding-top: 0; }
-.tabs-side .tabs li { margin-bottom: 2px; }
- }
+.tabs-side .tabs li { margin-bottom: 2px; }}
 .faculty_bottom_tab .tabbed-content .tabs { display: none; }
-/* .faculty_bottom_tab .tabbed-content .item { min-height: 2em; }
-*/
 .faculty_bottom_tab .tabbed-content .item::before { content: attr(data-title); }
 .faculty_bottom_tab .tabbed-content .item .accordion-title { opacity: 0; visibility: hidden; height: 0; }
 .faculty_bottom_tab .tabbed-content .item .item-content { display:none; }
-/* .faculty_bottom_tab .tabbed-content .item.active .accordion-title { opacity: 1; visibility: visible; height: auto; }
-*/
 .faculty_bottom_tab .tabbed-content .item.active .item-content { display:block; padding-top: 4.8rem; }
 @media all and (min-width: 800px) {
  .faculty_bottom_tab .tabbed-content .tabs { display: block; }
@@ -1158,7 +1153,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
  
 /* Funded Projects Page  End */
 /* Committees  Page  Start */
-.abut_committe_grid{display:grid;grid-template-columns:22.56% auto;gap:7.3rem;align-items:start;}
+.abut_committe_grid{display:grid;grid-template-columns:25.56% auto;gap:7.3rem;align-items:start;}
 .abu_committ_mainsec{padding-block:12rem 10rem;}
 .abu_committ_mainsec .jnu_title_header{margin-bottom:9.8rem;padding-inline:1.5rem;}
 .abut_committe_lft{background-color:var(--color-white);padding:3.9rem 5.8rem 7.2rem 5.8rem;position:relative;}
@@ -2716,9 +2711,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .goveringbody_main .fundacc_heading{border-bottom: 1px dashed var(--color-d5);}
 .goveringbody_main .fundacc_item.fundacc_active .fundacc_heading{border-bottom: 0.1rem solid transparent;}
 .goveringbody_main .fundacc_heading h5{color: var(--color-23);     font: var(--font-21);}
-.goveringbody_main .fundacc_inner{    padding: 0 3.8rem 5rem 6.8rem;}
+.goveringbody_main .fundacc_inner{padding: 0 3.8rem 5rem 6.8rem;}
 
-/* award page css */
 
 .about_awards { padding-block: 12rem; }
 .award_gridbx { grid-template-columns: 49.3% auto; align-items: center; gap: 15rem; display: grid;}
@@ -2773,3 +2767,19 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .research_policy{text-align:center;display:flex;justify-content:center;margin-top:5rem;}
 
 /* book campus visit css ends here */
+.caree_path:first-child{padding: 0;}
+.caree_path {padding-top: 6rem;}
+.caree_path .jnu_title_header .font21{text-align: left;}
+.caree_path .jnu_title_header p{font: var(--font-21);font-weight: 300;line-height: 1.4;text-align: left;margin-bottom: 4rem;line-height: 1.5;}
+.caree_path .inno_incubx h4{margin-bottom: 3rem;}
+.caree_path .inno_incubx{background: var(--color-white);padding: 6rem;}
+.caree_path .gridbox_three{gap: 2rem;row-gap: 0;}
+.caree_path .gridbox_three  li{margin-top: 0;}
+.abut_committe_rgt h2{font: var(--font-24);color: var(--color-black);margin-bottom: 4rem;}
+.abut_committe_rgt blockquote{font: var(--font-21);color: var(--color-black);margin-bottom: 3rem;line-height: 1.5;font-weight: 300;}
+.abut_committe_rgt h3{margin-bottom: 3rem}
+.tab_contbx .patent_table_sec{margin-block: 3rem 2rem;}
+.tab_contbx .custm_bullets > li {font: var(--font-16);margin-block: 2.5rem;font-weight: 300;list-style: none;position: relative;}
+.tab_contbx .abu_commitbbx p>strong{font-weight: 500;font: var(--font-18);}
+.tab_contbx .custm_bullets.grid_2 {display: grid;grid-template-columns: repeat(2,1fr);gap: 0;margin-block: 3rem;}
+.tab_contbx .custm_bullets.grid_2>li{margin-block: 0 2.5rem;}
