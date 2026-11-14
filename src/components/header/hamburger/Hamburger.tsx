@@ -136,7 +136,7 @@ export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
                             (childItem, childIdx) => (
                               <li key={childIdx}>
                                 <Link
-                                  href={`${BASE_URL}${childItem.slug}`}
+                                  href={`${BASE_URL}${childItem.overwrite_url || childItem.slug}`}
                                   onClick={closeMenu}
                                 >
                                   {childItem.title}
