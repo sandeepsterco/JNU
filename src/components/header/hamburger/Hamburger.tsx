@@ -124,8 +124,9 @@ export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
             {/* Dynamic Menu */}
             {data?.length > 0 && (
               <div className="hamp_topgrid">
-                {data.map((item, idx) => (
-                  <div key={idx} className="menu_col">
+                {data.map((item, idx) => {
+                  if(idx > 0){
+                    return <div key={idx} className="menu_col">
                     <div className="hamburger_item">
 
                       <h3>{item.title}</h3>
@@ -149,7 +150,9 @@ export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
 
                     </div>
                   </div>
-                ))}
+                  }
+                  
+                })}
               </div>
             )}
 
