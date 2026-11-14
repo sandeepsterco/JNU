@@ -70,6 +70,7 @@ export default async function NewsEventsPage({ searchParams }: PageProps) {
                 </div>
             ) : (
                 <NewsList
+                    key={`${school ?? ''}-${department ?? ''}-${date ?? ''}`}
                     initialData={newsAndEvents?.data ?? []}
                     slug={slug}
                     filters={{ school, department, date }}

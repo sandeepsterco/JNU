@@ -57,7 +57,7 @@ export default function NewsList({ initialData, hasMoreInitially, slug, filters 
                                     <h4>{item.name}</h4>
                                 )}
                             </div>
-                            <Link className="overlap_btn" href={`${BASE_URL}${slug}/${item.slug}`}></Link>
+                            <Link className="overlap_btn" href={`${slug}/${item.slug}`}></Link>
                         </div>
                     ))}
 

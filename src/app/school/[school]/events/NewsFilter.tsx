@@ -1,15 +1,14 @@
 "use client"
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-
+ 
 interface Option {
     id: string | number
     name: string;
-    slug:string;
 }
 
 interface NewsFilterProps {
-    schools?: Option[]
+    fixedSchoolId: string | number
     departments?: Option[]
 }
 
@@ -18,7 +17,7 @@ const getLastNYears = (n:number)=>{
     return Array.from({length:n}, (_, i)=>currentYear - i)
 }
 
-export default function NewsFilter({schools = [], departments=[]}:NewsFilterProps) {
+export default function NewsFilter({fixedSchoolId, departments=[]}:NewsFilterProps) {
     const searchParams = useSearchParams();
     const pathname = usePathname();
     const router = useRouter();
@@ -26,34 +25,23 @@ export default function NewsFilter({schools = [], departments=[]}:NewsFilterProp
 
     const updateParams = (key:string, value:string)=>{
         const params = new URLSearchParams(searchParams.toString());
+        params.set('school', String(fixedSchoolId));
         if(value){
             params.set(key, value)
         }else{
             params.delete(key)
         }
         params.delete('page')
-        router.push(`${pathname}?${params.toString()}`)
+        const query = params.toString()
+        router.push(query ? `${pathname}?${query}` : pathname)
     }
 
     return (
-        <div className="faculty_filter">
-            {schools?.length > 0 && (
-                <div className="filter_Bx">
-                    <div className="custom_select">
-                        <select className="form-select" aria-label="Default select example" value={searchParams.get('school') ?? ''} onChange={(e)=>updateParams('school', e.target.value)}>
-                            <option value="">Filter by School</option>
-                            {schools?.map((item)=>(
-                                <option key={item.id} value={item.id}>{item.name}</option>
-                            ))}
-                        </select>
-                    </div>
-                </div>
-            )}
-
+        <div className="faculty_filter school_events_filter">
             {departments?.length > 0 && (
                 <div className="filter_Bx">
                     <div className="custom_select">
-                        <select className="form-select" aria-label="Default select example" value={searchParams.get('department') ?? ''} onChange={(e)=>updateParams('department', e.target.value)}>
+                        <select className="form-select" aria-label="Filter by Department" value={searchParams.get('department') ?? ''} onChange={(e)=>updateParams('department', e.target.value)}>
                             <option value="">Filter by Department</option>
                             {departments?.map((item)=>(
                                 <option key={item.id} value={item.id}>{item.name}</option>
@@ -66,7 +54,7 @@ export default function NewsFilter({schools = [], departments=[]}:NewsFilterProp
             
             <div className="filter_Bx">
                 <div className="custom_select">
-                    <select className="form-select" aria-label="Default select example" value={searchParams.get('date') ?? ''} onChange={(e)=>updateParams('date', e.target.value)}>
+                    <select className="form-select" aria-label="Filter by Year" value={searchParams.get('date') ?? ''} onChange={(e)=>updateParams('date', e.target.value)}>
                         <option value="">Filter by Year</option>
                         {years.map((y) => (
                             <option key={y} value={y}>{y}</option>
