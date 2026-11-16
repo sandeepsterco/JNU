@@ -28,7 +28,8 @@ export interface HamburgerMenuItem {
   title: string;
   slug: string;
   overwrite_url:string | null;
-  children?: HamburgerMenuItem[];
+  children?: HamburgerMenuItem[] | [];
+  target_blank:number;
 }
 
 interface HeaderResponse {
