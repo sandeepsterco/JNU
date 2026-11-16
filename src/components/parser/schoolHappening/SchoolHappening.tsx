@@ -113,7 +113,8 @@ export default function SchoolHappeningGrid({ data }: { data: ISchoolHappening }
     if (!items.length) return null
 
     return (
-        <div className="happening_grid happening_grid_3">
+        <div className="container">
+            <div className=" happening_grid_3">
             {items.map((item, i) => (
                 <div
                     key={item.slug}
@@ -125,6 +126,7 @@ export default function SchoolHappeningGrid({ data }: { data: ISchoolHappening }
                     <HappeningCard item={item} variant={i === 1 ? "blue" : "image"} />
                 </div>
             ))}
+        </div>
         </div>
     )
 }
