@@ -2823,14 +2823,14 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .place_custom_tabs #tab_two:checked~.place_tab_content .panel_two,
 .place_custom_tabs #tab_three:checked~.place_tab_content .panel_three,
 .place_custom_tabs #tab_four:checked~.place_tab_content .panel_four { display: block; }
-.place_custom_tabs .place_tab_tablesec { margin-bottom: 8rem; }
-.place_custom_tabs .place_tab_tablesec h4 { color: var(--color-cf); margin-bottom: 3.2rem; }
+ .place_tab_tablesec { margin-bottom: 8rem; }
+ .place_tab_tablesec h4 { color: var(--color-cf); margin-bottom: 3.2rem; }
 
 /************ Recruiters Corner ************/
 .recruiters-corner .sport_facillities_main.hero_bg_pattern:before { display: none; }
 .recruiters_corner_main { padding-top: 0; }
 .recruiters_corner_main .jnu_title_header { margin-block:  0 9rem; }
-.recruiters_corner_main .recr_cor_btngrp { text-align: center; margin-top: 8rem; }
+ .recr_cor_btngrp { text-align: center; margin-top: 8rem; }
 .reccorner_connet { padding-bottom: 12rem; }
 .reccorner_connet .re_con_congrd { border: none; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 1.3rem; margin-top: 0; padding-top: 0; display: grid; }
 .reccorner_connet .re_con_congrd   .re_con_conrgt { padding-left: 12rem; }
@@ -2842,3 +2842,4 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .rec_content_infobx .contact_info_box:first-child { margin-top: 5rem; }
 .re_con_conrgt .contact_info_box .icon_contact_bx { align-items: center; }
 .re_con_conrgt .contact_info_box p,.re_con_conrgt .contact_info_box  a { font: var(--font-21); }
+.stucon_place_drive{padding-top: 12rem;}
