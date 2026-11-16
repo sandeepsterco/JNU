@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -21,6 +22,7 @@ interface TabsInterface{
   counttitle1?:string;
   counttitle2?:string;
   counttitle3?:string;
+  image?:string | null;
 }
 
 interface VideoTabsInterface{
@@ -87,21 +89,34 @@ export default function VideoTabs({data}:VideoTabsInterface) {
               <div className={`home_tab_content ${tab.id}`}>
                 <div className="video_section">
 
-
-                  <div id="youtube-player">
-                    <video
-                      ref={activeTab === tab.id ? videoRef : null}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                    >
-                      <source
-                        src={tab.video || ""}
-                        type="video/mp4"
+                  {tab.image ? (
+                    <div className="video_image">
+                      <Image
+                        alt={tab.heading || tab.tab}
+                        className="img-fluid"
+                        fill
+                        loading="lazy"
+                        sizes="100vw"
+                        src={tab.image}
+                        style={{ objectFit: "cover" }}
                       />
-                    </video>
-                  </div>
+                    </div>
+                  ) : (
+                    <div id="youtube-player">
+                      <video
+                        ref={activeTab === tab.id ? videoRef : null}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                      >
+                        <source
+                          src={tab.video || ""}
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                  )}
 
                   <div className="video_content">
                     {tab?.heading && (

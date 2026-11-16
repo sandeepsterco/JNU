@@ -85,7 +85,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .exper_faculties::before { position: absolute; content: ''; top: 0; height: 100%; width: 100%; background-color: var(--color-23); opacity: 0.3; }
 .state_art_bottom { background: transparent url('/images/jnu_rank_best_last_grid.png') 0% 0% no-repeat padding-box; height: 30.1rem; background-size: contain; margin-top: 1rem; mix-blend-mode: overlay; }
 @media (max-width:2200px) {
-.at_glance_Bx { padding-inline: 10rem; }
+ .at_glance_Bx { padding-inline: 10rem; }
 .ranked_flex { padding-inline: 3rem; }
  }
 .about_research { padding-block: 14.3rem 20rem; }
@@ -333,8 +333,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .academic_library { padding-block: 12rem 10rem; }
 .library_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 5rem; font: var(--font-16); font-weight: 400; text-align: left; align-items: center; line-height: 1.2; padding-inline: 1.1rem; margin-bottom:8rem; }
 .library_grid span { font: var(--font-48); color: var(--color-cf); font-weight: 900; }
-.library_Bx figure {position:relative;}
-.library_Bx figure {position:relative;}
+.library_Bx figure { position: relative; }
+.library_Bx figure { position: relative; }
 .library_Bx { display: flex; flex-wrap: wrap; gap: 2rem; }
 .library_Bx figcaption { position: absolute; left: 0; bottom: 0; right: 0; z-index: 9; padding: 3.5rem; }
 .library_Bx figcaption::after { background: transparent linear-gradient(180deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.72; position: absolute; bottom: 0; left: 0; right: 0; position: absolute; content: ""; height: 38.4rem; }
@@ -448,8 +448,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .lib_coll_grid .custom_lists > li:before { width: 0.6rem; height: 0.6rem; top: 0.3rem;left: -1.8rem; }
 .library_tech { padding: 2.5rem 7.8rem 3rem 5.4rem;margin-left: 2.4rem; }
 .e_resou { padding: 2.5rem 4rem 3rem 4.4rem; }
-.library_tech .custom_lists { gap: 4.3rem;}
-.library_coll_main { padding-block: 0 10rem;}
+.library_tech .custom_lists { gap: 4.3rem; }
+.library_coll_main { padding-block: 0 10rem; }
 .auditorium_grid { margin-top: 4.8rem; }
 .legal_resec  .custom_lists { padding-left:.8rem}
 .legal_resec  .custom_lists li:before{left: -0.8rem;width: 0.3rem; height: 0.3rem; top: 0.3rem;}
@@ -2737,6 +2737,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .about_awards_one .award_gridbx{margin-bottom: 5rem;}
 .about_awards_four .hn_pro_info h5,.about_awards_four .hn_pro_info blockquote ,.about_awards_four .custm_bullets > li{color: var(--color-white);}
 
+
+
 /* book campus visit css starts here */
 
 .cont-form.campus_visit{background:var(--color-cf);border-bottom:.3rem solid var(--color-f9);padding:5rem 5rem;box-shadow:0 0 6px #d4d4d4;margin-right:3rem;}
@@ -2786,5 +2788,5 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .testimo_sec {padding-bottom: 8rem;}
 .testimo_bottom>h3{margin-bottom: 3.2rem;font: var(--font-42);letter-spacing: -1.26px;font-weight: 300;text-transform: capitalize;}
 .testimo_bottom>ul{display: grid;grid-template-columns: repeat(2,1fr);margin-block: 4rem 0;}
-.testimo_bottom>.custm_bullets > li{gap: 0;margin-top: 0;}
 
+.testimo_bottom>.custm_bullets > li{gap: 0;margin-top: 0;}
