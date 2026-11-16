@@ -169,3 +169,35 @@
 
 
 
+
+
+
+/* SAS About Aria Start */
+.sasabt_sec{position:relative;padding-block:17.7rem 10rem;}
+.sasabt_sec:before{content:"";z-index:-1;background-image:url(/images/back_pattern.svg);background-repeat:repeat;background-size:contain;width:100%;height:45rem;position:absolute;top:0;bottom:0;left:0;}
+.sasabt_sec .jnu_title_header{margin-bottom:8.4rem;padding-inline:4.5rem;}
+.sasabt_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;}
+.sasabt_grid>figure{display:grid;gap:2rem;}
+.sasabt_caption{text-align: center; margin-top:8rem;padding-inline: 3rem;}
+.sasabt_caption>p{font:var(--font-21);color:var(--color-23);margin-bottom:0;font-weight:300;line-height:1.6;}
+
+
+.sas_misgrid{grid-template-columns:repeat(2,1fr);gap:2.5rem;display:grid; margin-top: 8rem;}
+.sas_misgrid .sas_vision{position:relative;background-color:var(--color-cf);padding:6rem 25.8rem 7.3rem 12.5rem;}
+.sas_misgrid .sas_mission{padding:6rem 20.5rem .8rem 12.7rem;}
+.sas_misgrid .sas_vision::before{content:"";z-index:0;opacity:.4;background-image:url(/images/school_vision.svg);background-repeat:repeat;width:22.5rem;height:100%;position:absolute;top:0;bottom:0;right:0;}
+.sas_misgrid h5{margin-bottom:5rem;color:var(--color-cf);font-weight:500;}
+.sas_misgrid .sas_vision h5{color:var(--color-white);}
+.sas_misgrid .sas_vision blockquote{font:var(--font-21);color:var(--color-white);font-weight:300;line-height:3.6rem;}
+.sas_misgrid .sas_mission ul li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;}
+.sas_misgrid .sas_mission ul li:before{background-color:var(--color-f2);width:0.7rem;height:0.7rem;}
+
+
+
+
+.sasabt_heighlight { padding-bottom: 4.3rem; }
+.sasabt_heighlight .jnu_title_header{padding-block: 10rem 5rem;border-top: 1px solid #CECECE;}
+.sch_ab_highlight .sasabt_high_grid{padding-bottom: 12rem;}
+.sasabt_high_grid ul { grid-template-columns: repeat(4, 1fr); gap: 2.5rem; padding: 0; display: grid; }
+.sasabt_high_grid ul>li { background: var(--color-white); font: var(--font-16); padding: 5.4rem 1.8rem 6.9rem; font-weight: 300; line-height: 1.6; list-style: none; text-align: center; position: relative; }
+.sasabt_high_grid ul>li::before{ content: ""; z-index: 9; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 60%, var(--color-fa) 60%, var(--color-fa) 100%); width: 100%; max-width: 10rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0rem; left: 0; right: 0rem;}
