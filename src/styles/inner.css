@@ -2915,3 +2915,28 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .testimo_bottom>ul{display: grid;grid-template-columns: repeat(2,1fr);margin-block: 4rem 0;}
 
 .testimo_bottom>.custm_bullets > li{gap: 0;margin-top: 0;}
+
+
+/* GS12112026 */
+ .plament_regist_main{margin-top: 3rem;}
+.plament_regist_main .form-control { width: 100%; height: 4.2rem; background: transparent; border: 1px solid rgba(112, 112, 112, 0.25); color: var(--color-black); padding: 1rem 1.5rem; outline: none; }
+.plament_regist_main label { margin-bottom: 1rem; display: inline-block; }
+.plament_regist_main .form_group, .frm_checkbx_group { margin-bottom: 2.3rem; position: relative; }
+.place_regist_bx { background-color: var(--color-white); padding:3rem 4.5rem; margin-bottom: 3rem; }
+.place_regist_bx .com_ftitle .font24 { margin-block: 3rem 2.5rem; }
+.place_regist_bx .comfrm_col> label { margin-bottom: 1.5rem; }
+.place_regist_bx input::-webkit-file-upload-button,
+.place_regist_bx input .file-upload-button { -webkit-appearance: button; font-size: inherit; font-weight: 600; color: #fff; background: var(--color-cf); padding: .7em .9em; cursor: pointer; border: 0; border-radius: 0; }
+.place_fil_upload  .form-control { border: none; padding: 0; }
+.place_regist_bx input[type="checkbox"],
+.place_regist_bx input[type="radio"] { accent-color: var(--color-cf); }
+.plament_regist_main select.form-control{color: #727171;}
+.declation_sec  .com_ftitle p ,.com_ftitle p{font: var(--font-16);font-weight: var(--fw-300);margin-bottom: 3rem;}
+.plament_regist_main .frm_checkbx_group .frm_chcbx{display: flex;align-items: center;gap: 0.8rem;}
+.plament_regist_main .frm_checkbx_group .frm_chcbx label{margin-bottom: 0;}
+.plament_regist_main .frm_checkbx_group input{height:  3rem;width: 1.5rem;}
+.plament_regist_main input[type="checkbox"] { accent-color: var(--color-cf); }
+.consent_fm .frm_chcbx{display: flex; gap: 1rem;}
+.frm_checkbx_group label{font: var(--font-16);font-weight: var(--fw-300);}
+.comfrm_col button { width: auto; height: 4.3rem;     padding-inline: 1.5rem;font: var(--font-18); border: 1px solid var(--color-ff); cursor: pointer; background: linear-gradient(to right, var(--color-cf) 50%, var(--color-ff) 50%); color: #000; background-position: 100% 100%; background-size: 200% 100%; margin-top: 4rem; transition: all .35s; }
+.comfrm_col button:hover { color: #fff; background-position: 0 100%; border: 1px solid #fff; }

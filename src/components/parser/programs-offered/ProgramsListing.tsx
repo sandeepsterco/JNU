@@ -68,7 +68,7 @@ export default function ProgramsListing({
             <div key={item.id+idx} className="program_grid_bx">
               <div className="program_bx_left">
                 <h4>
-                  <Link href={`${BASE_URL}${currentSlug}/${item.slug}`}>
+                  <Link href={`${BASE_URL}programs/${item.slug}`}>
                     {item.name}
                   </Link>
                 </h4>
