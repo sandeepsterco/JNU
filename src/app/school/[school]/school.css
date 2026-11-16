@@ -171,3 +171,7 @@
 
 .sch_facilities { padding-block: 12rem;}
 .sch_facilities .jnu_title_header{ padding-inline: 5rem;}
+
+.school_facity_dep{background-color: var(--color-f5);}
+.school_facity_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 15rem; align-items: center;}
+.school_facity_dep{ max-width: 54.6rem;}
