@@ -81,7 +81,7 @@
 
 .school_studyat_jnu{ background-color: var(--color-white); padding-block: 8.5rem;}
 .our_department_list{ display: grid; grid-template-columns:36rem 36rem 36rem 25rem; padding: 0; list-style: none; row-gap: 4.5rem; padding-block: 7.6rem 0; column-gap: 5.6rem;}
-.our_department_list li{ font: var(--font-24); font-weight: 300; border-right: 1px solid rgba(112, 112, 112, 0.25); display: block; padding-bottom: 1.5rem; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding-right: 1rem;}
+.our_department_list li{ font: var(--font-24); font-weight: 300; border-right: 1px solid rgba(112, 112, 112, 0.25); display: block; padding-bottom: 1.5rem; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding-right: 2rem;}
 .our_department_list li:nth-child(4n+4){ border:none;}
 .our_department_list li:hover{ color: var(--color-cf);}
 .our_department_list li span{ display: block; margin-bottom: 1.5rem;}
