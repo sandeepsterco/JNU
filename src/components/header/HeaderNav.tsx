@@ -13,18 +13,16 @@ export default function HeaderNav({
   sidebarData,
   parentSlug,
   schoolId,
+  parentPath
 }: {
   headerData: HeaderMenuItem[]
   sidebarData: HamburgerMenuItem[]
   parentSlug?: string
-  schoolId?:number
+  schoolId?:number;
+  parentPath?:string;
 }) {
   const pathname = usePathname()
   const [openSlug, setOpenSlug] = useState<string | null>(null)
-
-  const isDepartment = pathname.includes('department')
-
-  if (isDepartment) return null
 
   const isAdmissionItem = (item: HeaderMenuItem) =>
     item.slug?.toLowerCase().includes('admission')
@@ -136,7 +134,7 @@ export default function HeaderNav({
         })}
       </ul>
 
-      <Hamburger data={sidebarData} />
+      <Hamburger data={sidebarData} parentSlug={parentSlug} />
     </>
   )
 }

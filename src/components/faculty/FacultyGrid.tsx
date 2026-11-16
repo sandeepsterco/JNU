@@ -25,31 +25,34 @@ interface PaginationLink {
     active: boolean;
 }
 
-interface FacultyPropsInterface {
-    data: {
-        current_page: number;
-        data: Faculty[];
-        first_page_url: string;
-        from: number;
-        last_page: number;
-        last_page_url: string;
-        links: PaginationLink[];
-        next_page_url: string | null;
-        path: string;
-        per_page: number;
-        prev_page_url: string | null;
-        to: number;
-        total: number;
-    },
-    loadFacultyAction: any;
+interface FacultyPageData {
+    current_page: number;
+    data: Faculty[];
+    first_page_url: string;
+    from: number;
+    last_page: number;
+    last_page_url: string;
+    links: PaginationLink[];
+    next_page_url: string | null;
+    path: string;
+    per_page: number;
+    prev_page_url: string | null;
+    to: number;
+    total: number;
 }
 
-export default function FacultyGrid({ data, loadFacultyAction }: FacultyPropsInterface) {
+interface FacultyPropsInterface {
+    data: FacultyPageData;
+    loadFacultyAction: (params: { page?: number; search?: string; school?: string; department?: string }) => Promise<FacultyPageData>;
+    fixedSchoolId?: string | number;
+}
+
+export default function FacultyGrid({ data, loadFacultyAction, fixedSchoolId }: FacultyPropsInterface) {
     const [facultyList, setFacultyList] = useState<Faculty[]>(data?.data ?? []);
     const [currentPage, setCurrentPage] = useState(1);
     const [lastPage, setLastPage] = useState(data?.last_page ?? 1);
     const [searchValue, setSearchValue] = useState('');
-    const [schoolValue, setSchoolValue] = useState('');
+    const [schoolValue, setSchoolValue] = useState(fixedSchoolId === undefined ? '' : String(fixedSchoolId));
     const [departmentValue, setDepartmentValue] = useState('');
     const [isPending, startTransition] = useTransition();
 
@@ -77,7 +80,7 @@ export default function FacultyGrid({ data, loadFacultyAction }: FacultyPropsInt
     return (
         <section className="faculty_section">
             <div className="container">
-                <FacultyFilter onSearchChange={setSearchValue} onSchoolChange={setSchoolValue} onDepartmentChange={setDepartmentValue} schoolValue={schoolValue} departmentValue={departmentValue} />
+                <FacultyFilter onSearchChange={setSearchValue} onSchoolChange={setSchoolValue} onDepartmentChange={setDepartmentValue} schoolValue={schoolValue} departmentValue={departmentValue} showSchoolFilter={fixedSchoolId === undefined} />
 
                 {facultyList.length == 0 && (
                     <NoData />
