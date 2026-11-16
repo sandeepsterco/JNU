@@ -5,7 +5,7 @@
 .main_header.sticky{background-color:var(--color-white);padding-block:2rem;z-index:9999;}
 .main_header>.container-fluid{max-width:var(--mw2545);display:flex;align-items:center;justify-content:space-between;padding-inline:10rem;}
 .site_navbar{display:block;max-width:57.2rem;display:grid;grid-template-columns:55% auto;gap:3rem;align-items:center;}
-.site_navbar img:last-child{border:1px solid rgba(207,30,98,0.3);padding:0.8rem 1rem;}
+.site_navbar img.main_logo:nth-child(2){border:1px solid rgba(207,30,98,0.3);padding:0.8rem 1rem;}
 .site_nav{display:flex;gap:7rem;margin-left:auto;padding:0;}
 .site_nav li{list-style:none;}
 .site_nav>li{position:relative;padding-bottom:3rem;margin-top:3rem;}

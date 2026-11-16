@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import type { HamburgerMenuItem } from "../Header";
 
 export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
+  console.log('hamburger data', data);
   const [isOpen, setIsOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
