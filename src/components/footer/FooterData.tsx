@@ -12,7 +12,7 @@ export default function FooterData({headerRes, quickLinksData, infoData}:{header
                             <ul className="footer_link">
                                 {headerRes?.data?.footer.map((item:any, idx:number)=>(
                                     <li key={idx}>
-                                        <Link href={`${BASE_URL}${item.slug}`}>{item.title}</Link>
+                                        <Link href={`${BASE_URL}${item?.overwrite_url || item.slug}`}>{item.title}</Link>
                                     </li>
                                 ))}
                             </ul>
@@ -23,7 +23,7 @@ export default function FooterData({headerRes, quickLinksData, infoData}:{header
                             <ul>
                                 {quickLinksData.map((item:any, idx:number)=>(
                                     <li key={idx}>
-                                        <Link href={`${BASE_URL}${item.slug}`}>{item.title}</Link>
+                                        <Link href={`${BASE_URL}${item?.overwrite_url || item.slug}`}>{item.title}</Link>
                                     </li>
                                 ))}
                             </ul>
