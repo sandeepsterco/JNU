@@ -1,24 +1,47 @@
-import FacultyGrid from "@/components/faculty/FacultyGrid";
+import NoData from "@/components/ui/NoData";
 import apiFetch from "@/lib/api";
+import { notFound } from "next/navigation";
+import "../school.css";
 
-export default async function SchoolFacultyList(){
-    const {data, error} = await apiFetch(`faculty`);
+interface Department {
+  id: number;
+  name: string;
+}
 
-    async function loadFaculty(params:{page?:number; search?:string, school?:string, department?:string} ){
-        "use server";
-        const query = new URLSearchParams();
-        if(params.page) query.set('page', String(params.page))
-        if(params.search) query.set('search', params.search)
-        if(params.school) query.set('school', params.school);
-        if(params.department) query.set('department', params.department);
-        const {data, error} = await apiFetch(`faculty?${query.toString()}`);
-        if(error) throw new Error("Failed to load more faculty");
-        return data.data;
-    }
+interface DepartmentsResponse {
+  status: boolean;
+  data: Department[];
+}
 
-    const facultyData = data.data;
+export default async function SchoolDepartmentsPage({
+  params,
+}: {
+  params: Promise<{ school: string }>;
+}) {
+  const { school } = await params;
+  const { data, error } = await apiFetch(`departments-by-school/${school}`);
 
-    return(
-        <FacultyGrid data={facultyData} loadFacultyAction={loadFaculty} />
-    )
+  if (error || !data?.status) {
+    return notFound();
+  }
+
+  const departments = (data as DepartmentsResponse).data ?? [];
+
+  if (departments.length === 0) {
+    return <NoData type="section" />;
+  }
+
+  return (
+    <div className="school_department">
+      <div className="container">
+        <ul className="our_department_list">
+          {departments.map((department) => (
+            <li key={department.id}>
+              <span>{department.name}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
 }

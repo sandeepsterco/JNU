@@ -24,10 +24,6 @@ export default function HeaderNav({
   const pathname = usePathname()
   const [openSlug, setOpenSlug] = useState<string | null>(null)
 
-  const isDepartment = pathname.includes('department')
-
-  if (isDepartment) return null
-
   const isAdmissionItem = (item: HeaderMenuItem) =>
     item.slug?.toLowerCase().includes('admission')
 
