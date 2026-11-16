@@ -36,7 +36,7 @@
     .placement_right ul li h4 span{font:var(--fw-600) 1.6rem / 1.68 var(--stack);}
     .placement_right ul li:before{height: 1px; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 70%, var(--color-cf) 70%, var(--color-cf) 100%);}
     .placement_grid{padding-top: 4.3rem;grid-template-columns: 576fr 196fr;gap:5.3rem}
-    .placement_left{display: grid;}
+    .placement_left{display: grid;} 
     .placement_left .swiper{width: 100%;}
     .placement_right ul{gap: 1.6rem;}
     .placement_right ul li{padding-bottom:1.6rem;}
