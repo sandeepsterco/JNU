@@ -169,6 +169,42 @@
 
 
 
+.sch_facilities { padding-block: 12rem;}
+.sch_facilities .jnu_title_header{ padding-inline: 5rem;}
+
+.school_facity_dep{background-color: var(--color-f5);}
+.school_facity_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 15rem; align-items: center;}
+.school_facity_dep_cnt{ max-width: 54.6rem;}
+.school_facity_dep_cnt h5{ color: var(--color-cf); margin-bottom: 4rem; padding-right: 10rem;}
+.school_facity_dep_cnt  p{ font: var(--font-16);}
+.facility_des{ padding-block: 12rem; text-align: center;}
+.facility_des blockquote{ font: var(--font-21); font-weight: 300; max-width: 122.5rem; margin: 0 auto; line-height: 1.5;}
+.facility_des_grid{ padding-top: 5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem; row-gap: 6rem;}
+.facility_des_bx figure{ margin-bottom: 2.5rem;}
+.facility_des_bx p{ font: var(--font-16); padding-inline: 2rem;}
+.facility_deparment{ padding-top: 5rem; }
+.facility_deparment .jnu_title_header{text-align: left; max-width: 117.2rem;}
+.facility_dep_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 12.5rem;}
+.facility_dep_list li{ font: var(--font-16);}
+.facility_dep_list{ padding-top: 2rem; max-width: 59.4rem;}
+.facility_dep_list ul{ padding-left: 0;}
+.facility_dep_grid{ padding-block: 8rem 12rem;}
+
+
+
+@media (max-width:1536px){
+    .sch_facilities { padding-block: 6rem; }
+    .sch_facilities .jnu_title_header { padding-inline: 0; }
+    .school_facity_grid{gap: 7rem;}
+    .school_facity_dep_cnt h5{padding-right: 12rem;}
+    .facility_des { text-align: center; padding-block: 8rem 6rem; }
+    .facility_des_bx p{ padding-inline: 0rem;}
+    .facility_des_grid{padding-top: 3rem;}
+    .facility_des_bx figure { margin-bottom: 1.5rem; }
+    .facility_dep_grid{ gap: 6rem; padding-block:5rem 8rem;}
+    .facility_dep_list{ padding-top: 0;}
+
+}
 
 
 
@@ -212,3 +248,9 @@
 .sasachiv_caption{padding-block:5.8rem;}
 .sasachiv_caption>h3{font:var(--font-24);font-weight:300;color:var(--color-black);margin-bottom:2rem;}
 .sasachiv_caption>p{font:var(--font-16);font-weight:300;line-height:1.6;}
+.sasabt_heighlight { padding-bottom: 4.3rem; }
+.sasabt_heighlight .jnu_title_header{padding-block: 10rem 5rem;border-top: 1px solid #CECECE;}
+.sch_ab_highlight .sasabt_high_grid{padding-bottom: 12rem;}
+.sasabt_high_grid ul { grid-template-columns: repeat(4, 1fr); gap: 2.5rem; padding: 0; display: grid; }
+.sasabt_high_grid ul>li { background: var(--color-white); font: var(--font-16); padding: 5.4rem 1.8rem 6.9rem; font-weight: 300; line-height: 1.6; list-style: none; text-align: center; position: relative; }
+.sasabt_high_grid ul>li::before{ content: ""; z-index: 9; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 60%, var(--color-fa) 60%, var(--color-fa) 100%); width: 100%; max-width: 10rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0rem; left: 0; right: 0rem;}
