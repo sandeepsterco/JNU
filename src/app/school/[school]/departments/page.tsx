@@ -2,10 +2,13 @@ import NoData from "@/components/ui/NoData";
 import apiFetch from "@/lib/api";
 import { notFound } from "next/navigation";
 import "../school.css";
+import Image from "next/image";
 
 interface Department {
   id: number;
   name: string;
+  slug:string;
+  image:string;
 }
 
 interface DepartmentsResponse {
@@ -32,13 +35,23 @@ export default async function SchoolDepartmentsPage({
   }
 
   return (
-    <div className="school_department">
+    <div className="school_department leadership_section hero_bg_pattern">
       <div className="container">
-        <ul className="our_department_list">
+        <ul className="leadership_grid">
           {departments.map((department) => (
-            <li key={department.id}>
-              <span>{department.name}</span>
-            </li>
+            <div className="leadership_Bx" key={department.id}>
+              <figure>
+                <Image
+                  className="img-fluid"
+                src={department.image || "/images/depament_placeholder.webp"}
+                alt={department.name || "Department"}
+                width={435}
+                height={357}
+                />
+              </figure>
+              <div className="leadership_cnt"><h4>{department.name}</h4></div>
+              <a className="overlap_btn" href={department.slug}></a>
+            </div>
           ))}
         </ul>
       </div>
