@@ -98,7 +98,7 @@ body:has(.side_hamburger.is-open) .site_nav{transform:translateY(var(--hamb-widt
 .school_header .hamber_btmmenu > li > a:hover{color:var(--color-cf);}
 .school_header .hambur_btmsec{height:100%;}
 .school_header .hambur_btmsec:before{top:auto;bottom:0;}
-.school_header .hambur_btmsec:after{display:none;}
+.school_header .hambur_btmsec:after{height:25rem;inset:auto;bottom:0;}
 
 
 @media(max-width:1536px) {
