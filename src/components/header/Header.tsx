@@ -28,7 +28,8 @@ export interface HamburgerMenuItem {
   title: string;
   slug: string;
   overwrite_url:string | null;
-  children?: HamburgerMenuItem[];
+  children?: HamburgerMenuItem[] | [];
+  target_blank:number;
 }
 
 interface HeaderResponse {
@@ -46,7 +47,7 @@ const HeaderLogo = () => {
         src="/images/logo.webp"
         width={344}
         height={63}
-        className="img-fluid"
+        className="img-fluid main_logo"
         alt="JNU"
         loading="eager"
         fetchPriority="high"
@@ -55,11 +56,21 @@ const HeaderLogo = () => {
         src="/images/naacgrade-a-logo.webp"
         width={188}
         height={61}
-        className="img-fluid"
+        className="img-fluid main_logo"
         alt="JNU"
         loading="eager"
         fetchPriority="high"
       />
+
+      <Image
+          src="/images/logo_white.webp"
+          width={596}
+          height={68}
+          className="img-fluid logo_white d-none"
+          alt="JNU"
+          loading="eager"
+          fetchPriority="high"
+        />
     </Link>
   );
 };
