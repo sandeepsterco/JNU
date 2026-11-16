@@ -1,49 +1,24 @@
-import ReactParserDynamic from "@/components/common/reactParser/ReactParserDynamic";
+import FacultyGrid from "@/components/faculty/FacultyGrid";
 import apiFetch from "@/lib/api";
-import { getSlug } from "@/lib/getSlug";
-import "@/components/homepage/placement/placement.css";
-import "@/components/homepage/research/research.css";
-import "@/components/homepage/alumni/alumni.css";
-import "@/components/homepage/happenings/happenings.css";
-import "@/components/homepage/faqs/faq.css";
-import "@/styles/common/statsWrapper.css";
-import SchoolNoData from "@/components/ui/SchoolNoData";
-import "../school.css";
-import { notFound } from "next/navigation";
-import ProgramsOffered from "@/components/parser/programs-offered/ProgramsOffered";
 
-export default async function SchoolFacultyPage({
-  params,
-  searchParams,
-}: {
-  params: Promise<{ school: string }>;
-  searchParams: Promise<{
-    search?: string;
-    duration?: string;
-    school?: string;
-  }>;
-}) {
-  const { ...resolvedSearchParams } = await searchParams;
-  const { school } = await params;
-  const { data, error } = await apiFetch(`school/${school}/programs`);
+export default async function SchoolFacultyList(){
+    const {data, error} = await apiFetch(`faculty`);
 
-  if (error || !data.status) {
-    return notFound();
-  }
+    async function loadFaculty(params:{page?:number; search?:string, school?:string, department?:string} ){
+        "use server";
+        const query = new URLSearchParams();
+        if(params.page) query.set('page', String(params.page))
+        if(params.search) query.set('search', params.search)
+        if(params.school) query.set('school', params.school);
+        if(params.department) query.set('department', params.department);
+        const {data, error} = await apiFetch(`faculty?${query.toString()}`);
+        if(error) throw new Error("Failed to load more faculty");
+        return data.data;
+    }
 
-  const cmsData = data?.data?.sections ?? {};
-  const modularData = data?.data?.modular ?? {};
+    const facultyData = data.data;
 
-  const combineHTML = Object.values(cmsData).join("");
-
-  // if(!cmsData || cmsData?.length === 0) return <SchoolNoData />
-
-  return (
-    <section className="program_section">
-      <div className="container">
-        <ProgramsOffered searchParams={resolvedSearchParams} />
-        {/* <ReactParserDynamic html={combineHTML} searchParams={resolvedSearchParams} /> */}
-      </div>
-    </section>
-  );
+    return(
+        <FacultyGrid data={facultyData} loadFacultyAction={loadFaculty} />
+    )
 }
