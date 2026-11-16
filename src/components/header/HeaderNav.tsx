@@ -136,7 +136,7 @@ export default function HeaderNav({
         })}
       </ul>
 
-      <Hamburger data={sidebarData} />
+      <Hamburger data={sidebarData} parentSlug="school" />
     </>
   )
 }
