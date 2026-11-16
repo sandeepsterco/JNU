@@ -1240,6 +1240,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .cagui_solft>h4 { color: var(--color-cf); margin-bottom: 3.2rem; }
 .cagui_solft>p { font: var(--font-16); font-weight: 300; line-height: 1.7; }
 .cagui_solft ul { margin-bottom: 3.6rem; }
+.cagui_solft ul li {font: var(--font-16);font-weight: var(--fw-300);}
 .domain_skill { margin-bottom: 12rem; }
 .domainskill_grid { display: grid; grid-template-columns: 49.3% auto ; align-items: center; background-color:  var(--color-white); position: relative; }
 .domainskill_grid .domainskill_rgtsec { max-width: 43.3rem; margin: auto; margin-left: 15rem; }
@@ -1250,8 +1251,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .indust_inte_grid>.indus_intcol { background-color: var(--color-white); display: flex; flex-direction: column; justify-content: center; }
 .indus_inttext { margin-inline: 12.5rem 18rem;}
 .indus_inttext .custom_lists { margin-bottom: 3.8rem; }
-.indus_inttext .custom_lists > li { font-weight: 300; font: var(--font-16); }
-.indus_inttext  p { font-weight: 300; }
+.indus_inttext .custom_lists > li { font: var(--font-16); font-weight: 300; }
+.indus_inttext  p { font: var(--font-16); font-weight: var(--fw-300); }
 .industy_intresec { margin-bottom: 15rem; }
 .industy_intresec .jnu_title_header { margin-bottom: 8rem; }
 
@@ -2819,6 +2820,26 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .place_custom_tabs #tab_two:checked~.place_tab_content .panel_two,
 .place_custom_tabs #tab_three:checked~.place_tab_content .panel_three,
 .place_custom_tabs #tab_four:checked~.place_tab_content .panel_four { display: block; }
+ .place_tab_tablesec { margin-bottom: 8rem; }
+ .place_tab_tablesec h4 { color: var(--color-cf); margin-bottom: 3.2rem; }
+
+/************ Recruiters Corner ************/
+.recruiters-corner .sport_facillities_main.hero_bg_pattern:before { display: none; }
+.recruiters_corner_main { padding-top: 0; }
+.recruiters_corner_main .jnu_title_header { margin-block:  0 9rem; }
+ .recr_cor_btngrp { text-align: center; margin-top: 8rem; }
+.reccorner_connet { padding-bottom: 12rem; }
+.reccorner_connet .re_con_congrd { border: none; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 1.3rem; margin-top: 0; padding-top: 0; display: grid; }
+.reccorner_connet .re_con_congrd   .re_con_conrgt { padding-left: 12rem; }
+.re_con_conrgt h5 { color: var(--color-cf); margin-bottom: 3rem; font-weight: 500; }
+.re_con_conrgt blockquote { font: var(--font-21); color: var(--color-23); margin-bottom: 2; font-weight: 300; line-height: 1.6; }
+.re_con_conrgt p { font: var(--font-16); font-weight: var(--fw-300); }
+.re_con_conrgt .contact_info_box { border-bottom: 1.9px solid #231f201a; margin-bottom: 4rem; padding-bottom: 3.4rem; }
+.re_con_conrgt .contact_info_box figure { width: 3rem; }
+.rec_content_infobx .contact_info_box:first-child { margin-top: 5rem; }
+.re_con_conrgt .contact_info_box .icon_contact_bx { align-items: center; }
+.re_con_conrgt .contact_info_box p,.re_con_conrgt .contact_info_box  a { font: var(--font-21); }
+.stucon_place_drive{padding-top: 12rem;}
 .place_custom_tabs .place_tab_tablesec { margin-bottom: 8rem; }
 .place_custom_tabs .fundacc_item.place_tab_tablesec{margin-bottom: 0;}
 .place_custom_tabs .fundacc_item.place_tab_tablesec.fundacc_active{margin-bottom:3rem;}
