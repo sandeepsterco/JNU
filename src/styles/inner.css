@@ -370,7 +370,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .auditorium_grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 10rem; background-color: var(--color-23); padding-block: 1rem; }
 .auditorium_bx { display: grid; grid-template-columns: 84rem auto; gap: 1rem; }
 .stage_global { display: flex; align-items: center; flex-direction: column; padding-inline: 5.8rem; justify-content: center; }
-.stage_global h4 { font: var(--font-48); color: var(--color-white); font-weight: 200; line-height: 1.13; }
+.stage_global h4 { font: var(--font-60); color: var(--color-white); font-weight: 200; line-height: 1.03; }
 .stage_global p { font: var(--font-30); color: var(--color-white); font-weight: 200; margin-block: 2rem; }
 .stage_global a { min-width: 3rem; min-height: 3rem; width: 3rem; height: 3rem; border: 1px solid var(--color-white); text-align: center; display: block; padding: 0.7rem 1rem; margin-top: 3.2rem; }
 .stage_global a:hover { background-color: var(--color-white); }
@@ -1004,7 +1004,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .cafet_area_sec{margin-bottom:12rem;}
 .caft_lftbx figure{position:relative;overflow:hidden;}
 .caft_lftbx figure img{display:block;width:100%;height:auto;}
-.caft_lftbx figure::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:18rem;background:linear-gradient(180deg,#00000000 0%,#000000 100%);opacity:0.8;pointer-events:none;}
+.caft_lftbx figure::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:18rem;background:linear-gradient(180deg,#00000000 0%,#000000 100%);opacity:0.5;pointer-events:none;}
 .caft_lftbx:nth-child(1) figure::after{height:35.3rem;}
 .caft_lftbx .img_caption{position:absolute;left:3rem;bottom:3.2rem;right:14.4rem;z-index:2;}
 .caft_lftbx .img_caption> h5,.caft_lftbx .img_caption> p{color:var(--color-white);}
@@ -1279,7 +1279,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .place_ovrimg { margin-bottom: 15rem; }
 .placement_ovr .jnu_title_header { margin-bottom: 8rem; }
 .placement_ovr .jnu_title_header blockquote { padding-inline: 4rem; }
-/* .place_fact_grid { grid-template-columns: 23.8rem 17.7rem 13rem 16.4rem; display: grid; gap: 14rem; } */
+.place_fact_grid { grid-template-columns: 23.8rem 17.7rem 13rem 16.4rem; display: grid; gap: 14rem; }
 .place_fact_grid .plaec_factbx h3 { font: var(--font-56); color: var(--color-cf); font-weight: 400; margin-bottom: 0.8rem; }
 .place_fact_grid .plaec_factbx p { font: var(--font-16); font-weight: 300; }
 .place_fact_grid .plaec_factbx sup { font: var(--font-30); font-weight: 600; top: -3.2rem; right: 1.5rem; }
@@ -1494,7 +1494,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .inno_incu_main .inno_ovr_btmtext{padding-block:5.6rem;}
 .inno_ovr_btmtext p{font-weight:var(--fw-300);font:var(--font-16);text-align:center;}
 .innov_incu_fact .place_fact_grid{grid-template-columns:12.9% 26.6% 21.5% auto;display:grid;gap:6.4rem;}
-.innov_incu_fact .place_fact_grid .plaec_factbx> h3{font:var(--font-34);color:var(--color-cf);font-weight:400;line-height:1.10;}
+.innov_incu_fact .place_fact_grid .plaec_factbx> h3{font:var(--font-38);color:var(--color-cf);font-weight:400;line-height:1.10;}
 .innov_incu_fact .place_fact_grid .plaec_factbx sup{font:var(--font-30);font-weight:600;top:-1.3rem;right:-0.9rem;}
 .netwrth_grid{display:grid;grid-template-columns:48.89% auto;gap:10.4rem;align-items:center;margin-block:5.6rem 12rem;}
 .netwrth_grid .ntwrt_rgt p{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:1.5rem;}
@@ -2736,10 +2736,6 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .about_awards_four{background-color: var(--color-23);padding-block: 12rem;}
 .about_awards_one .award_gridbx{margin-bottom: 5rem;}
 .about_awards_four .hn_pro_info h5,.about_awards_four .hn_pro_info blockquote ,.about_awards_four .custm_bullets > li{color: var(--color-white);}
-.leadership_Bx.pulication_sch_list .leadership_cnt { background-color: var(--color-white); text-align: center; padding: 5rem 3.7rem 5rem; position: relative; height: 100%; }
-.leadership_Bx.pulication_sch_list span { border: 1px solid var(--color-cf); justify-content: center; align-items: center; width: 3rem; height: 3rem; margin-top: 3rem; padding: .4rem .9rem .4rem 1.1rem; display: flex; margin-inline: auto; }
-.leadership_Bx.pulication_sch_list .leadership_cnt:after { max-width: 100%; }
-.leadership_Bx.pulication_sch_list .leadership_cnt .leadership_cnt h4 { min-height: 10.7rem; }
 
 
 
@@ -2790,41 +2786,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 /* book campus visit css ends here */
 .abu_committ_mainsec.hero_bg_pattern .jnu_title_header{display: none;}
 .testimo_sec {padding-bottom: 8rem;}
-.testimo_bottom>h3{margin-bottom: 3.2rem;
-    font: var(--font-42);
-    letter-spacing: -1.26px;
-    font-weight: 300;text-transform: capitalize;}
-.testimo_bottom>ul{
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    margin-block: 4rem 0;
-}
+.testimo_bottom>h3{margin-bottom: 3.2rem;font: var(--font-42);letter-spacing: -1.26px;font-weight: 300;text-transform: capitalize;}
+.testimo_bottom>ul{display: grid;grid-template-columns: repeat(2,1fr);margin-block: 4rem 0;}
 
 .testimo_bottom>.custm_bullets > li{gap: 0;margin-top: 0;}
-.transport_grid{grid-template-columns:44rem auto;gap:21rem;display:grid;width:83.1%;margin:auto;}
-.public_transport h3{color:var(--color-cf);margin-bottom:3rem;font-weight:500;}
-.public_transport p{font:var(--font-18);font-family:var(--stack);color:var(--color-black);margin-top:2rem;font-weight:200;line-height:1.7;}
-.transport_sec{padding-block:0 12rem;}
-.public_transport hr {
-    border-bottom: 1px solid #c6c6c6;
-    display: block;
-    margin: 4rem 0;
-}.explore_btn_grp {
-    height: auto;
-    overflow: hidden;
-    line-height: 3;
-    margin-top: 3rem;
-}
-.public_transport > a {
-    font: var(--font-24);
-    line-height: 1.6;
-    display: flex;
-    align-items: center;
-    gap: 0 1.5rem;
-    margin-top: 2rem;
-}
-.public_transport > a img {
-    max-width: 3rem;
-}
-
-/* book campus visit css ends here */
