@@ -650,7 +650,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .convo_guid_pdf figure { max-width: 1.5rem; }
 .conf_topsec  input[type="radio"] { accent-color:     var(--color-cf); ; }
 .hero_bg_pattern { position: relative; }
-.hero_bg_pattern::before { background-image: url(/images/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 83.77rem; width: 100%; z-index: -1; }
+.hero_bg_pattern::before { background-image: url(/images/back_pattern.svg); background-size: contain; position: absolute; top: 0; left: 0; bottom: 0; background-repeat: repeat; content: ""; height: 45rem; width: 100%; z-index: -1; }
 @media(max-width:1536px) {
     .hero_bg_pattern::before{
         height: 38.5rem;
