@@ -27,7 +27,7 @@
 @media(max-width:1536px){
     .placement_section{padding-block:10rem 0;}
     .placement_section .max-container-lg{padding-inline: 1.5rem;}
-    .placement_wrapper{padding-block:4.2rem 0;}
+    .placement_wrapper{padding-block:4.2rem 0;} 
     .placement_wrapper>.container{max-width: 100%;padding-inline: 9.2rem 16.7rem;}
     .placement_header_right{grid-template-columns:auto 2rem;gap:1.1rem;padding-top:2.5rem;align-items:start;}
     .placement_header_right p{font-weight:300;line-height:1.38;}
