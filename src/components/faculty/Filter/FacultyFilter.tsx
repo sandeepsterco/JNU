@@ -68,7 +68,7 @@ export default function FacultyFilter({onSearchChange, onSchoolChange, onDepartm
                     <input type="text" className="form-control" value={searchValue} placeholder="Search Faculty" aria-label="Recipient’s username" aria-describedby="button-addon2" onChange={(e)=>setSearchValue(e.target.value)} />
 
                     <button className="btn btn_search" type="button" id="button-addon2">
-                        <img src="images/icons/search-icon.svg" alt="search" className="img-fluid" />
+                        <img src="/images/icons/search-icon.svg" alt="search" className="img-fluid" />
                     </button>
                 </div>
             </div>

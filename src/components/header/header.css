@@ -1,11 +1,19 @@
 .main_header{position:fixed;top:0;left:0;width:100%;z-index:1090;padding-block:3.7rem 3rem;transition:all 0.5s ease;-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-ms-transition:all 0.5s ease;-o-transition:all 0.5s ease;background-color:var(--color-f5);}
 /* School Home Page CSS Start */
+.main_header .logo_white{display: none;}
 .main_header.school_home_header .site_nav > li > a { color: var(--color-white); }
 .main_header.school_home_header:before { content: ""; z-index: 0; background: transparent linear-gradient(0deg, #00000000 0%, #000000 100%) 0% 0% no-repeat padding-box; opacity: 0.9; height: 20.5rem; position: absolute; bottom: 0; left: 0; width: 100%; right: 0; }
 .main_header.school_home_header  .nav_right button img { filter:  brightness(0) invert(1) ; }
 .main_header.school_home_header.header_fix:before { display: none; }
 .main_header.school_home_header.header_fix  .nav_right button img{ filter:  brightness(1) invert(0) ; }
 .main_header.school_home_header.header_fix .site_nav > li > a{color: var(--color-black);}
+.main_header.school_home_header .main_logo{display: none;}
+.main_header.school_home_header .logo_white {display: block;}
+.main_header.school_home_header .site_navbar img:last-child{padding: 0;border: none;}
+.main_header.school_home_header .site_navbar{grid-template-columns: 1fr;}
+.main_header.school_home_header.header_fix .logo_white{display: none;}
+.main_header.school_home_header.header_fix .main_logo{display: block;}
+.main_header.school_home_header.header_fix .site_navbar{grid-template-columns: 55% auto;}
 /* School Home Page CSS End */
 
 .header_fix{background-color:var(--color-f5);}
