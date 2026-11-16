@@ -61,7 +61,7 @@ export default async function NewsEventsPage({ searchParams }: PageProps) {
     return (
         <>
             {featuredNews.length > 0 && (
-                <FeaturedNews data={featuredNews} />
+                <FeaturedNews data={featuredNews} slug={slug} />
             )}
 
             {newsAndEvents?.data?.length === 0 ? (
@@ -70,6 +70,7 @@ export default async function NewsEventsPage({ searchParams }: PageProps) {
                 </div>
             ) : (
                 <NewsList
+                    key={`${school ?? ''}-${department ?? ''}-${date ?? ''}`}
                     initialData={newsAndEvents?.data ?? []}
                     slug={slug}
                     filters={{ school, department, date }}

@@ -1,3 +1,4 @@
+import { APPLY_NOW } from "@/config/config";
 import parse from "html-react-parser";
 import Link from "next/link";
 
@@ -44,7 +45,9 @@ export default function AdmissionDropdownRight({getValue}:{getValue:any}){
               <figure><img src="/images/icons/pdf-icon.svg" className="img-fluid" alt="Download Brochure" /></figure>
                 Download Brochure
               </a>
-              <Link href={getValue('apply_now')?.value || '/apply-now'} className="apply_now">Apply Now</Link>
+              <Link href={APPLY_NOW || getValue('apply_now')?.value || '/apply-now'} className="apply_now" target={APPLY_NOW ? "_blank" : "_self"}>
+                Apply Now
+              </Link>
             </div>
           </div>
         </div>

@@ -7,11 +7,14 @@ export interface SocialInterface{
     image:string;
     slug:string;
     url:string;
+    social_icon?:string;
+    
 }
 
 interface SocialPropsInterface{
     data:{
         title:string;
+        social_icon?:string;
     },
     modular:SocialInterface[]
 }

@@ -1,5 +1,5 @@
 "use client"
-import { useState, useRef, useTransition, useEffect } from "react";
+import { useState, useRef, useTransition } from "react";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
@@ -22,6 +22,9 @@ interface DataInterface {
     slug: string;
     thumbnail: string;
     title: string;
+    mapping_items?: {
+        images?: { image: string }[];
+    };
 }
 
 interface GalleryListProps {
@@ -36,6 +39,7 @@ export default function GalleryGrid({ galleryData, hasMoreInitially, filters }: 
     const [isOpen, setIsOpen] = useState(false);
     const [hasMore, setHasMore] = useState(hasMoreInitially)
     const [activeIndex, setActiveIndex] = useState(0);
+    const [activeImageIndex, setActiveImageIndex] = useState(0);
     const swiperRef = useRef<SwiperType | null>(null);
     const [isPending, startTransition] = useTransition();
 
@@ -52,12 +56,18 @@ export default function GalleryGrid({ galleryData, hasMoreInitially, filters }: 
 
     const openModal = (index: number) => {
         setActiveIndex(index);
+        setActiveImageIndex(0);
         setIsOpen(true);
     };
 
     const closeModal = () => setIsOpen(false);
 
     const activeItem = updatedData[activeIndex];
+    const activeImages = activeItem?.mapping_items?.images
+        ?.map(({ image }) => image)
+        .filter(Boolean) ?? [];
+    const thumbnail = activeItem?.thumbnail || `/images/placeholders/hapennig_gallery_placeholder.webp`;
+    const slides = [thumbnail, ...activeImages.filter((image) => image !== thumbnail)];
 
     return (
         <>
@@ -104,21 +114,21 @@ export default function GalleryGrid({ galleryData, hasMoreInitially, filters }: 
 
                         <Swiper
                             modules={[Navigation]}
-                            loop={updatedData.length > 1}
-                            initialSlide={activeIndex}
+                            loop={slides.length > 1}
+                            initialSlide={activeImageIndex}
                             onSwiper={(swiper) => {
                                 swiperRef.current = swiper;
                             }}
                             onSlideChange={(swiper) => {
-                                setActiveIndex(swiper.realIndex);
+                                setActiveImageIndex(swiper.realIndex);
                             }}
                             className="gallerySwiper"
                         >
-                            {updatedData.map((item) => (
-                                <SwiperSlide key={item.id}>
+                            {slides.map((image, index) => (
+                                <SwiperSlide key={`${image}-${index}`}>
                                     <img
-                                        src={item?.thumbnail ? item.thumbnail : `/images/placeholders/hapennig_gallery_placeholder.webp`}
-                                        alt={item.title}
+                                        src={image}
+                                        alt={activeItem?.title || "Gallery image"}
                                     />
                                 </SwiperSlide>
                             ))}

@@ -7,8 +7,10 @@ const HIDE_SECTIONS = ['.testim_sec']
 
 export default function HeaderScroll({
     children,
+    customClass,
 }: {
-    children: React.ReactNode
+    children: React.ReactNode;
+    customClass?:string
 }) {
     const headerRef = useRef<HTMLElement>(null)
     const lastScrollTop = useRef(0)
@@ -19,7 +21,7 @@ export default function HeaderScroll({
     const isSchoolPage = pathname.includes('school')
     const isDepartmentPage = pathname.includes('department')
 
-    const baseClass = `main_header ${
+    const baseClass = `${customClass || ''} main_header ${
         isHomePage ? 'home_header' : isProgramPage ? 'inner_header' : ''
     }`
 

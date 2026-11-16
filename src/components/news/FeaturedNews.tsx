@@ -3,8 +3,10 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
+import Link from 'next/link';
+import { BASE_URL } from '@/config/config';
 
-export default function FeaturedNews({ data }: { data: any }) {
+export default function FeaturedNews({ data, slug }: { data: any; slug?: string }) {
     return (
         <section className="news_event_sec">
             {data?.length > 1 && (
@@ -51,6 +53,7 @@ export default function FeaturedNews({ data }: { data: any }) {
                             <div className="news_image">
                                 <img src={item.image} alt={item.name} />
                             </div>
+                            <Link className="overlap_btn" href={`${BASE_URL}${slug}/${item.slug}`}></Link>
                         </div>
                     </SwiperSlide >
                 ))}

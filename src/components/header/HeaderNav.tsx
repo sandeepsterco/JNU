@@ -6,14 +6,18 @@ import { useState } from 'react'
 import { BASE_URL } from '@/config/config'
 import Hamburger from './hamburger/Hamburger'
 import AdmissionDropdown from './admissionDropdown/AdmissionDropdown'
-import type { HeaderMenuItem } from './Header'
+import type { HamburgerMenuItem, HeaderMenuItem } from './Header'
 
 export default function HeaderNav({
   headerData,
+  sidebarData,
   parentSlug,
+  schoolId,
 }: {
   headerData: HeaderMenuItem[]
+  sidebarData: HamburgerMenuItem[]
   parentSlug?: string
+  schoolId?:number
 }) {
   const pathname = usePathname()
   const [openSlug, setOpenSlug] = useState<string | null>(null)
@@ -24,6 +28,9 @@ export default function HeaderNav({
 
   const isAdmissionItem = (item: HeaderMenuItem) =>
     item.slug?.toLowerCase().includes('admission')
+
+  const isProgramItem = (item: HeaderMenuItem) =>
+    item.slug?.toLowerCase().includes('programs')
 
   // Get the URL for a menu item
   const getHref = (item: HeaderMenuItem) => {
@@ -62,6 +69,7 @@ export default function HeaderNav({
 
           const isAdmission = isAdmissionItem(item)
           const isOpen = openSlug === item.slug
+          const isProgram = isProgramItem(item)
 
           return (
             <li
@@ -89,7 +97,7 @@ export default function HeaderNav({
               }}
             >
               <Link
-                href={href}
+                href={`${isProgram ? href + `?school=${schoolId}` : href}`}
                 target={getTarget(item)}
                 rel={getRel(item)}
               >
@@ -128,7 +136,7 @@ export default function HeaderNav({
         })}
       </ul>
 
-      <Hamburger />
+      <Hamburger data={sidebarData} />
     </>
   )
 }

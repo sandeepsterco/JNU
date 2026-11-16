@@ -7,7 +7,7 @@ import '@/components/homepage/research/research.css'
 import '@/components/homepage/alumni/alumni.css'
 import '@/components/homepage/happenings/happenings.css'
 import '@/components/homepage/faqs/faq.css'
-import './school.css'
+import '../school.css'
 import '@/styles/common/statsWrapper.css'
 import SchoolNoData from "@/components/ui/SchoolNoData";
 
@@ -30,7 +30,7 @@ export default async function SchoolHomePage({params, searchParams}:{params:Prom
 
     return (
         <>
-            <ReactParserDynamic html={combineHTML} searchParams={resolvedSearchParams} />
+            <ReactParserDynamic html={combineHTML} data={data} searchParams={resolvedSearchParams} params={school} />
         </>
     )
 }

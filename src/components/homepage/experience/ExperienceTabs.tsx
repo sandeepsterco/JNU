@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 
@@ -12,6 +13,16 @@ interface TabsInterface{
   tab:string;
   video?:string | null;
   id?:string;
+  heading?:string;
+  description?:string;
+  buttonlink?:string;
+  count1?:string;
+  count2?:string;
+  count3?:string;
+  counttitle1?:string;
+  counttitle2?:string;
+  counttitle3?:string;
+  image?:string | null;
 }
 
 interface VideoTabsInterface{
@@ -77,41 +88,74 @@ export default function VideoTabs({data}:VideoTabsInterface) {
             {activeTab === tab.id && (
               <div className={`home_tab_content ${tab.id}`}>
                 <div className="video_section">
-                  <div id="youtube-player">
-                    <video
-                      ref={activeTab === tab.id ? videoRef : null}
-                      autoPlay
-                      muted
-                      loop
-                      playsInline
-                    >
-                      <source
-                        src="/videos/campus-video.mp4"
-                        type="video/mp4"
+
+                  {tab.image ? (
+                    <div className="video_image">
+                      <Image
+                        alt={tab.heading || tab.tab}
+                        className="img-fluid"
+                        fill
+                        loading="lazy"
+                        sizes="100vw"
+                        src={tab.image}
+                        style={{ objectFit: "cover" }}
                       />
-                    </video>
-                  </div>
+                    </div>
+                  ) : (
+                    <div id="youtube-player">
+                      <video
+                        ref={activeTab === tab.id ? videoRef : null}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                      >
+                        <source
+                          src={tab.video || ""}
+                          type="video/mp4"
+                        />
+                      </video>
+                    </div>
+                  )}
 
                   <div className="video_content">
-                    {data?.overlayheading && (
-                      <h3 dangerouslySetInnerHTML={{__html:data.overlayheading}} />
+                    {tab?.heading && (
+                      <h3 dangerouslySetInnerHTML={{__html:tab.heading}} />
                     )}
 
-                    <div dangerouslySetInnerHTML={{__html:data.overlaydescription}} />
+                    {tab?.description && (
+                      <div dangerouslySetInnerHTML={{__html:tab.description}} />
+                    )}
 
-                    {data?.overlaycounter && (
+                    {(tab?.count1 || tab?.count2 || tab?.count3) && (
                       <ul>
-                        {data.overlaycounter.map((item, idx)=>(
-                          <li key={idx}>
-                            <h5 dangerouslySetInnerHTML={{__html:item?.count}} />
-                            <p dangerouslySetInnerHTML={{__html:item.title}} />
-                          </li>
-                        ))} 
+                          {tab?.count1 && (
+                            <li>
+                              <h5 dangerouslySetInnerHTML={{__html:tab?.count1}} />
+                              <p dangerouslySetInnerHTML={{__html:tab?.counttitle1 || ''}} />
+                            </li>
+                          )}
+
+                          {tab?.count2 && (
+                            <li>
+                              <h5 dangerouslySetInnerHTML={{__html:tab?.count2}} />
+                              <p dangerouslySetInnerHTML={{__html:tab?.counttitle2 || ''}} />
+                            </li>
+                          )}
+
+                          {tab?.count3 && (
+                            <li>
+                              <h5 dangerouslySetInnerHTML={{__html:tab?.count3}} />
+                              <p dangerouslySetInnerHTML={{__html:tab?.counttitle3 || ''}} />
+                            </li>
+                          )}
+
+                          
                       </ul>
                     )}
 
-                    {data?.overlayslug && (
-                      <Link href={data.overlayslug}>
+                    {tab?.buttonlink && (
+                      <Link href={tab.buttonlink}>
                         <img
                           src="/images/icons/nav-arrow-next.svg"
                           className="img-fluid"
@@ -121,6 +165,7 @@ export default function VideoTabs({data}:VideoTabsInterface) {
                     )}
                     
                   </div>
+
                 </div>
               </div>
             )}

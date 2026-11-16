@@ -9,4 +9,5 @@
     .inner_head{padding-block:3.4rem 1.6rem;}
     .inner_head .container{max-width: min(934px, 68.3748vw);}
     .inner_nav{grid-template-columns:repeat(4,1fr);gap:1.2rem 3.7rem;margin-top:2.7rem;}
+    .inner_nav li a.active:before {top: 1rem;}
 }

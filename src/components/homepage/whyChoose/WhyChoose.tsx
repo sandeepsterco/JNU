@@ -94,12 +94,12 @@ export default function WhyChoose({data, collaboration}:WhyChooseUsInterface) {
                             </ul>
                             <div className="why_btn">
                                 {data?.virtualtoururl && (
-                                    <Link href={data.virtualtoururl} className="virtual_tour">
-                                        <figure><img src="/images/icons/360-degrees.svg" className="img-fluid" alt="360" /></figure> Virtual Tour
+                                    <Link href={data.virtualtoururl} className="virtual_tour" target='_blank'>
+                                        <figure><img src="/images/icons/360-degrees.svg" className="img-fluid" alt="360"  /></figure> Virtual Tour
                                     </Link>
                                 )}
                                 
-                                <Link href={APPLY_NOW ?? '/apply-now'} className="apply_now">Apply Now</Link>
+                                <Link href={APPLY_NOW ?? '/apply-now'} className="apply_now" target='_blank'>Apply Now</Link>
                             </div>
                         </div>
                     </div>

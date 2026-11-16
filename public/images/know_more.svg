@@ -1,20 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="72" viewBox="0 0 72 72">
-  <defs>
-    <filter id="Rectangle_156" x="0" y="0" width="72" height="72" filterUnits="userSpaceOnUse">
-      <feOffset dy="12" input="SourceAlpha"/>
-      <feGaussianBlur stdDeviation="7" result="blur"/>
-      <feFlood flood-opacity="0.031"/>
-      <feComposite operator="in" in2="blur"/>
-      <feComposite in="SourceGraphic"/>
-    </filter>
-  </defs>
-  <g id="Group_29980" data-name="Group 29980" transform="translate(21 9)">
-    <g transform="matrix(1, 0, 0, 1, -21, -9)" filter="url(#Rectangle_156)">
-      <g id="Rectangle_156-2" data-name="Rectangle 156" transform="translate(21 9)" fill="none" stroke="#cf1e62" stroke-width="1">
-        <rect width="30" height="30" stroke="none"/>
-        <rect x="0.5" y="0.5" width="29" height="29" fill="none"/>
-      </g>
-    </g>
-    <path id="Path_826" data-name="Path 826" d="M696.654,1256.869l5.2,5.2-5.2,5.2" transform="translate(-684.485 -1247.581)" fill="none" stroke="#cf1e62" stroke-width="1"/>
-  </g>
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30" width="30" height="30">
+	<style>
+		.s0 { fill: none } 
+		.s1 { fill: none;stroke: #cf1e62;stroke-width: 1 } 
+	</style>
+	<g id="Group_29980">
+		<g>
+			<g id="Rectangle_156-2">
+				<path fill-rule="evenodd" class="s0" d="m30 0v30h-30v-30z"/>
+				<path fill-rule="evenodd" class="s1" d="m29.5 0.5v29h-29v-29z"/>
+			</g>
+		</g>
+		<path id="Path_826" fill-rule="evenodd" class="s1" d="m12.17 9.29l5.2 5.2-5.2 5.2"/>
+	</g>
 </svg>

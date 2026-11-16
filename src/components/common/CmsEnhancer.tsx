@@ -19,6 +19,9 @@ import { initAcademicCampusSwiper } from "@/lib/cms/initAcademicCampusSwiper";
 import { InitReadMore } from "@/lib/cms/initReadMore";
 import { initSuccessspeakSwiper } from "@/lib/cms/initSuccessspeakSwiper";
 import { InitCommonAccordion } from "@/lib/cms/initCommonAccordion";
+import { CustomTabs1 } from "@/lib/cms/initCustomTabs1";
+import { InitAuditoriumSwiper } from "@/lib/cms/initAuditoriumSwiper";
+import { initPlacementsOverviewSlider } from "@/lib/cms/initPlacementsOverview";
 
 function waitForLayout() {
   return new Promise<void>((resolve) => {
@@ -56,6 +59,12 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
         cleanupFns.push(cleanup);
       }
 
+      // custom tabs 1
+      if(root.querySelector('.custom-tabs-1')){
+        const cleanup = CustomTabs1(root);
+        cleanupFns.push(cleanup);
+      }
+
       // Initialize gallery
       if (root.querySelector('[data-fancybox="gallery"]')) {
         const cleanup = await InitGallery(root);
@@ -64,6 +73,15 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
 
       if (root.querySelector(".program_nav")) {
         const cleanup = InitProgramNav(root);
+        cleanupFns.push(cleanup);
+      }
+
+      if (root.querySelector(".auditoriumSwiper:not([data-swiper-init])")) {
+        const cleanup = await InitAuditoriumSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
         cleanupFns.push(cleanup);
       }
 
@@ -107,6 +125,14 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
       }
        if (root.querySelector(".success_speak_slider:not([data-swiper-init])")) {
         const cleanup = await initSuccessspeakSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
+       if (root.querySelector(".placement_ovr_slider:not([data-swiper-init])")) {
+        const cleanup = await initPlacementsOverviewSlider(root);
         if (cancelled) {
           cleanup();
           return;

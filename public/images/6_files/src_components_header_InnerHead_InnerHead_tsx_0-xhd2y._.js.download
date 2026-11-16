@@ -1,0 +1,121 @@
+(globalThis["TURBOPACK"] || (globalThis["TURBOPACK"] = [])).push([typeof document === "object" ? document.currentScript : undefined,
+"[project]/src/components/header/InnerHead/InnerHead.tsx [app-client] (ecmascript)", ((__turbopack_context__) => {
+"use strict";
+
+__turbopack_context__.s([
+    "default",
+    ()=>InnerHead
+]);
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/compiled/react/jsx-dev-runtime.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/client/app-dir/link.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/navigation.js [app-client] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$config$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/src/config/config.ts [app-client] (ecmascript)");
+;
+var _s = __turbopack_context__.k.signature();
+'use client';
+;
+;
+;
+;
+function InnerHead({ headData }) {
+    _s();
+    const pathname = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"])();
+    const segments = pathname.split('/').filter(Boolean);
+    const slug = segments[0];
+    const childSlug = segments[1] ?? '';
+    const isNewsDetailPage = slug === 'news-events' && childSlug.trim() !== '' && childSlug !== slug;
+    if (isNewsDetailPage) return null;
+    return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
+        className: "inner_head",
+        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+            className: "container",
+            children: [
+                (headData?.tab_title || headData?.page_title || headData?.name) && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
+                    dangerouslySetInnerHTML: {
+                        __html: headData.name || headData.tab_title || headData.page_title || ''
+                    }
+                }, void 0, false, {
+                    fileName: "[project]/src/components/header/InnerHead/InnerHead.tsx",
+                    lineNumber: 47,
+                    columnNumber: 11
+                }, this),
+                headData?.school_name && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                    className: "breadcrumb",
+                    children: [
+                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                            children: headData.school_name
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/header/InnerHead/InnerHead.tsx",
+                            lineNumber: 60,
+                            columnNumber: 13
+                        }, this),
+                        headData?.admission && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                            children: headData.admission
+                        }, void 0, false, {
+                            fileName: "[project]/src/components/header/InnerHead/InnerHead.tsx",
+                            lineNumber: 63,
+                            columnNumber: 15
+                        }, this)
+                    ]
+                }, void 0, true, {
+                    fileName: "[project]/src/components/header/InnerHead/InnerHead.tsx",
+                    lineNumber: 59,
+                    columnNumber: 11
+                }, this),
+                headData?.tabs && headData.tabs.length > 0 && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
+                    className: "inner_nav",
+                    children: headData.tabs.map((item, idx)=>{
+                        const href = item.overwrite_url ? item.overwrite_url : `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$config$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BASE_URL"]}${item.slug}`;
+                        const opensNewTab = Number(item.target_blank) === 1;
+                        const isExternal = /^https?:\/\//i.test(href);
+                        const isActive = !isExternal && (pathname.replace(/\/$/, '') === `/${item.slug}`.replace(/\/$/, '') || pathname.replace(/\/$/, '') === `${__TURBOPACK__imported__module__$5b$project$5d2f$src$2f$config$2f$config$2e$ts__$5b$app$2d$client$5d$__$28$ecmascript$29$__["BASE_URL"]}${item.slug}`.replace(/\/$/, ''));
+                        return /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
+                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
+                                href: href,
+                                className: isActive ? 'active' : '',
+                                target: opensNewTab ? '_blank' : undefined,
+                                rel: opensNewTab ? 'noopener noreferrer' : undefined,
+                                children: item.title
+                            }, void 0, false, {
+                                fileName: "[project]/src/components/header/InnerHead/InnerHead.tsx",
+                                lineNumber: 92,
+                                columnNumber: 19
+                            }, this)
+                        }, item.slug || idx, false, {
+                            fileName: "[project]/src/components/header/InnerHead/InnerHead.tsx",
+                            lineNumber: 91,
+                            columnNumber: 17
+                        }, this);
+                    })
+                }, void 0, false, {
+                    fileName: "[project]/src/components/header/InnerHead/InnerHead.tsx",
+                    lineNumber: 69,
+                    columnNumber: 11
+                }, this)
+            ]
+        }, void 0, true, {
+            fileName: "[project]/src/components/header/InnerHead/InnerHead.tsx",
+            lineNumber: 43,
+            columnNumber: 7
+        }, this)
+    }, void 0, false, {
+        fileName: "[project]/src/components/header/InnerHead/InnerHead.tsx",
+        lineNumber: 42,
+        columnNumber: 5
+    }, this);
+}
+_s(InnerHead, "xbyQPtUVMO7MNj7WjJlpdWqRcTo=", false, function() {
+    return [
+        __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$navigation$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["usePathname"]
+    ];
+});
+_c = InnerHead;
+var _c;
+__turbopack_context__.k.register(_c, "InnerHead");
+if (typeof globalThis.$RefreshHelpers$ === 'object' && globalThis.$RefreshHelpers !== null) {
+    __turbopack_context__.k.registerExports(__turbopack_context__.m, globalThis.$RefreshHelpers$);
+}
+}),
+]);
+
+//# sourceMappingURL=src_components_header_InnerHead_InnerHead_tsx_0-xhd2y._.js.map

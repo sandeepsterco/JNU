@@ -1,4 +1,4 @@
-.leadership_section{padding-block:11rem;background-image:url(/images/back_pattern.svg);background-size:contain;background-repeat:repeat;width:100%;}
+.leadership_section{padding-block:11rem;background-size:contain;background-repeat:repeat;width:100%;}
 .leadership_grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem;row-gap:4rem;}
 .leadership_Bx{position:relative;}
 .leadership_cnt{text-align:center;padding-bottom:3rem;position:relative;}

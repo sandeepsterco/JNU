@@ -7,6 +7,7 @@
 .program_Bx p{font:var(--font-14);font-weight:300;}
 .program_Bx figure{max-width:6rem;margin:3rem auto 0;}
 .prg_search{margin-top:10rem;}
+.school-page .prg_search{margin-top:0;}
 .prg_search .input-group{position:relative;}
 .prg_search input{width:100%;height:5.2rem;border:1px solid #CF1E6266;font:var(--font-14);font-weight:300;padding-inline:3rem;}
 .prg_search .btn_search{position:absolute;right:2rem;top:1.5rem;}
@@ -97,7 +98,8 @@
 .bba_sectble{margin-top:3.5rem;margin-bottom:3rem;}
 .bba_sectble tbody > tr > td:last-child{text-align:left;}
 .bba_sectble tbody > tr > td:nth-child(n+3){padding-inline:3.5rem;}
-
+.program_section_bx#overview .custm_bullets{display: grid;grid-template-columns: repeat(2, 1fr );gap: 0 3.5rem;}
+.program_section_bx#overview .custm_bullets li    {font: var(--font-16);margin-bottom: 0;}
 
 
 @media(max-width:1536px){
