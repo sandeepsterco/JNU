@@ -23,6 +23,7 @@ import AmbedkarEvents from '@/components/parser/ambedkar-events/AmbedkarEvents';
 import SchoolTestimonial from '@/components/parser/schoolTestimonial/SchoolTestimonial';
 import CampusTourForm from '@/components/parser/campusTourForm/CampusTourForm';
 import AlumniRegistrationForm from '@/components/parser/alumniRegistrationForm/AlumniRegistrationForm';
+import SchoolHappening from '@/components/parser/schoolHappening/SchoolHappening';
 
 interface ProgramsSearchParams {
     search?: string;
@@ -172,6 +173,7 @@ export default function ReactParser({ html, searchParams, data, params }: Conten
                 if (domNode.attribs.id === "school_testimonial") return <SchoolTestimonial params={params} data={data}  />;
                 if (domNode.attribs.id === "campusTourForm") return <CampusTourForm  />;
                 if (domNode.attribs.id === "alumni_registration_form") return <AlumniRegistrationForm  />;
+                if (domNode.attribs.id === "school_happenings") return <SchoolHappening data={data}  />;
             }
         }
     }
