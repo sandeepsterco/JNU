@@ -11,6 +11,9 @@ export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
 
   const closeMenu = () => setIsOpen(false);
 
+  const topMenus = data.filter((item) => item.children && item.children.length > 0);
+  const bottomMenus = data.filter((item) => item.children && item.children.length === 0);
+
   useEffect(() => {
     document.body.classList.toggle("hamburger-overlay", isOpen);
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -122,9 +125,9 @@ export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
             </div>
 
             {/* Dynamic Menu */}
-            {data?.length > 0 && (
+            {topMenus?.length > 0 && (
               <div className="hamp_topgrid">
-                {data.map((item, idx) => (
+                {topMenus.map((item, idx) => (
                   <div key={idx} className="menu_col">
                     <div className="hamburger_item">
 
@@ -156,77 +159,21 @@ export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
           </div>
 
           {/* Bottom Menu */}
-          <div className="hambur_btmsec">
-            <ul className="hamber_btmmenu">
+          {bottomMenus?.length > 0 && (
+            <div className="hambur_btmsec">
+              <ul className="hamber_btmmenu">
+                {bottomMenus.map((item, idx)=>(
+                  <li key={idx}>
+                    <Link href={`${item.target_blank ? item.overwrite_url : `${BASE_URL}${item.overwrite_url || item.slug}`}`} target={item.target_blank ? '_blank' : '_self'} onClick={closeMenu}>
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
 
-              <li>
-                <Link href={`${BASE_URL}careers`} onClick={closeMenu}>
-                  Careers
-                </Link>
-              </li>
-
-              <li>
-                <Link href={APPLY_NOW || 'https://apply.jnujaipur.ac.in/'} target="_blank" onClick={closeMenu}>
-                  Study @ JNU
-                </Link>
-              </li>
-
-              <li>
-                <Link href={`${BASE_URL}contact-us`} onClick={closeMenu}>
-                  Contact
-                </Link>
-              </li>
-
-              <li>
-                <Link href={`https://univ.jnujaipur.ac.in/Account/Login`} target="_blank" onClick={closeMenu}>
-                  ERP Login
-                </Link>
-              </li>
-
-              <li>
-                <Link href={`${BASE_URL}disclosure`} onClick={closeMenu}>
-                  Public - Self Disclosure
-                </Link>
-              </li>
-
-              <li>
-                <Link href={`${BASE_URL}privacy-policy`} onClick={closeMenu}>
-                  Policies
-                </Link>
-              </li>
-
-              <li>
-                <Link href={`https://samadhaan.ugc.ac.in/`} target="_blank" onClick={closeMenu}>
-                  UGC e-Samadhaan Portal
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href={`${BASE_URL}holidays-calendar`}
-                  onClick={closeMenu}
-                >
-                  Holidays Calendar
-                </Link>
-              </li>
-
-              <li>
-                <Link href={`${BASE_URL}downloads`} onClick={closeMenu}>
-                  Downloads
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  href={`${BASE_URL}mandatory-disclosures`}
-                  onClick={closeMenu}
-                >
-                  Mandatory Disclosures
-                </Link>
-              </li>
-
-            </ul>
-          </div>
+              </ul>
+            </div>
+          )}
+          
 
         </div>
       </div>
