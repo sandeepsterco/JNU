@@ -93,6 +93,7 @@ export default async function SchoolHeader({parentSlug, slug, customClass}:Schoo
           headerData={headerData}
           sidebarData={sidebarData}
           schoolId={schoolId}
+          parentPath="school"
         />
         
       </div>

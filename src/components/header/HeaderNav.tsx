@@ -13,11 +13,13 @@ export default function HeaderNav({
   sidebarData,
   parentSlug,
   schoolId,
+  parentPath
 }: {
   headerData: HeaderMenuItem[]
   sidebarData: HamburgerMenuItem[]
   parentSlug?: string
-  schoolId?:number
+  schoolId?:number;
+  parentPath?:string;
 }) {
   const pathname = usePathname()
   const [openSlug, setOpenSlug] = useState<string | null>(null)
@@ -136,7 +138,7 @@ export default function HeaderNav({
         })}
       </ul>
 
-      <Hamburger data={sidebarData} parentSlug="school" />
+      <Hamburger data={sidebarData} parentSlug={parentPath} />
     </>
   )
 }
