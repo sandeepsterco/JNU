@@ -2940,3 +2940,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .frm_checkbx_group label{font: var(--font-16);font-weight: var(--fw-300);}
 .comfrm_col button { width: auto; height: 4.3rem;     padding-inline: 1.5rem;font: var(--font-18); border: 1px solid var(--color-ff); cursor: pointer; background: linear-gradient(to right, var(--color-cf) 50%, var(--color-ff) 50%); color: #000; background-position: 100% 100%; background-size: 200% 100%; margin-top: 4rem; transition: all .35s; }
 .comfrm_col button:hover { color: #fff; background-position: 0 100%; border: 1px solid #fff; }
+
+
+.school_testimonial_detail_page{padding-block: 11rem; position: relative;}
+.school_testimonial_detail_page .description{margin-top:4rem;}
+.school_testimonial_detail_image{margin-top:4rem;}
