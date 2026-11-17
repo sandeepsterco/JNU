@@ -35,7 +35,7 @@ export default async function FacultyDetail({
         <SchoolHeader
           parentSlug="school"
           slug={schoolSlug}
-          customClass="school_inner_header"
+          customClass="school_header school_inner_header"
         />
       )}
       <ReactParserDynamic
