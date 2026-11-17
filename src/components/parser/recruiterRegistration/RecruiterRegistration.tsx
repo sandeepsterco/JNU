@@ -126,7 +126,6 @@ function SelectField({
     );
 }
 
-/** Multiple checkboxes sent as an array: eligible_programs[] = MBA, eligible_programs[] = BBA ... */
 function CheckGroup({ label, name, options }: { label: string; name: string; options: string[] }) {
     const { values } = useContext(FormCtx);
     const selected = (values[name] ?? "").split("|");
@@ -342,7 +341,7 @@ export default function RecruiterRegistrationForm() {
 
                                 {/* Submit */}
                                 <div className="com_ftitle">
-                                    <div className="comfrm_grid">
+                                    <div className="comfrm_grid1">
                                         <div className="comfrm_col">
                                             <button type="button" className="btn" disabled={isPending} onClick={submitForm}>
                                                 {isPending ? "Submitting..." : "Submit Registration"}
