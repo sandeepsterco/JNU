@@ -45,9 +45,10 @@ interface FacultyPropsInterface {
     data: FacultyPageData;
     loadFacultyAction: (params: { page?: number; search?: string; school?: string; department?: string }) => Promise<FacultyPageData>;
     fixedSchoolId?: string | number;
+    schoolSlug?: string;
 }
 
-export default function FacultyGrid({ data, loadFacultyAction, fixedSchoolId }: FacultyPropsInterface) {
+export default function FacultyGrid({ data, loadFacultyAction, fixedSchoolId, schoolSlug }: FacultyPropsInterface) {
     const [facultyList, setFacultyList] = useState<Faculty[]>(data?.data ?? []);
     const [currentPage, setCurrentPage] = useState(1);
     const [lastPage, setLastPage] = useState(data?.last_page ?? 1);
@@ -102,7 +103,10 @@ export default function FacultyGrid({ data, loadFacultyAction, fixedSchoolId }: 
                                     )}
                                 </div>
                                 {item?.slug && (
-                                    <Link href={`${BASE_URL}faculty/${item.slug}`} className="overlap_btn"></Link>
+                                    <Link
+                                        href={`${BASE_URL}faculty/${item.slug}${schoolSlug ? `?school=${encodeURIComponent(schoolSlug)}` : ''}`}
+                                        className="overlap_btn"
+                                    ></Link>
                                 )}
                             </div>
                         ))}
