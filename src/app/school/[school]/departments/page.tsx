@@ -50,7 +50,7 @@ export default async function SchoolDepartmentsPage({
                 />
               </figure>
               <div className="leadership_cnt"><h4>{department.name}</h4></div>
-              <a className="overlap_btn" href={department.slug}></a>
+              {/* <a className="overlap_btn" href={department.slug}></a> */}
             </div>
           ))}
         </ul>
