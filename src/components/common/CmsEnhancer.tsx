@@ -123,7 +123,7 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
         }
         cleanupFns.push(cleanup);
       }
-       if (root.querySelector(".success_speak_slider:not([data-swiper-init])")) {
+       if (root.querySelector(".success_speak_slider:not([data-react-swiper]):not([data-swiper-init])")) {
         const cleanup = await initSuccessspeakSwiper(root);
         if (cancelled) {
           cleanup();
