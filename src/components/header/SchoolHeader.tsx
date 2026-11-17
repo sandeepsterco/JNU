@@ -64,7 +64,7 @@ const HeaderLogo = () => {
         src="/images/logo_white.webp"
         width={596}
         height={68}
-        className="img-fluid logo_white d-none"
+        className="img-fluid logo_white"
         alt="JNU"
         loading="eager"
         fetchPriority="high"

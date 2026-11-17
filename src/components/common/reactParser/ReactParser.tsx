@@ -174,6 +174,8 @@ export default function ReactParser({ html, searchParams, data, params }: Conten
                 if (domNode.attribs.id === "campusTourForm") return <CampusTourForm  />;
                 if (domNode.attribs.id === "alumni_registration_form") return <AlumniRegistrationForm  />;
                 if (domNode.attribs.id === "school_happenings") return <SchoolHappening data={data}  />;
+                if (domNode.attribs.id === "placment_registration_form") return <CampusTourForm  />;
+                
             }
         }
     }
