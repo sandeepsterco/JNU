@@ -1,30 +1,44 @@
 import ReactParserDynamic from "@/components/common/reactParser/ReactParserDynamic";
 import NoData from "@/components/ui/NoData";
-import apiFetch from "@/lib/api"
-import { getSlug } from "@/lib/getSlug"
+import apiFetch from "@/lib/api";
+import { getSlug } from "@/lib/getSlug";
 import { notFound } from "next/navigation";
 
 interface SearchParams {
-    search?: string;
-    duration?: string;
-    school?: string;
+  search?: string;
+  duration?: string;
+  school?: string;
 }
 
 interface FacultyDetailProps {
-    searchParams: Promise<SearchParams>;
-    params:any
+  searchParams: Promise<SearchParams>;
+  params: any;
 }
 
-export default async function FacultyDetail({ searchParams, params }: FacultyDetailProps) {
-    const {slug} = await params;
-    const resolvedSearchParams = await searchParams;
-    const {data, error} = await apiFetch(`news-events/${slug}`);
+export default async function FacultyDetail({
+  searchParams,
+  params,
+}: FacultyDetailProps) {
+  const { slug } = await params;
+  const resolvedSearchParams = await searchParams;
+  const { data, error } = await apiFetch(`news-events/${slug}`);
 
-    const cmsData = data?.newsAndEvent?.cms ?? [];
+  const cmsData = data?.newsAndEvent?.cms ?? [];
 
-    const combinedHTML = Object.values(cmsData).join('') || '';
+  const combinedHTML = Object.values(cmsData).join("") || "";
 
-    return (
-        <ReactParserDynamic html={combinedHTML} searchParams={resolvedSearchParams} />
-    );
+  return (
+    <>
+      <ReactParserDynamic
+        html={combinedHTML}
+        searchParams={resolvedSearchParams}
+      />
+
+      <div className="container">
+        <div className="even_back">
+            <a href="#" className="backtoinno_btn ">Go To Back </a>
+        </div>
+      </div>
+    </>
+  );
 }

@@ -170,7 +170,7 @@ export default function Hamburger({ data, parentSlug=''}: { data: HamburgerMenuI
                     </Link>
                   </li>
                 ))}
-
+                <a href="#" className="goto_backbtm">Go To University </a>
               </ul>
             </div>
           )}
