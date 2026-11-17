@@ -540,12 +540,20 @@ ul.social_media_link li a:hover { transform: rotate(360deg); }
 }
 
 /* Arrow */
-.happ_card .happ_next {
-    width: 1.6rem;
+.happening_col .happ_card .happ_next {
+    width: 2rem;
     position: static;
     filter: brightness(0) invert(1);
 }
-
+.happening_grid_3 .happening_col:nth-child(2) .happ_card .happ_next,
+.happening_grid_3 .happening_col:nth-child(3) .happ_card .happ_next {
+    width: 2rem;
+    position: static;
+    margin-right: 8rem;
+}
+.happening_grid_3 .happening_col:nth-child(3) .happ_card .happ_next{
+filter:none;
+}
 /* Bottom title */
 .happ_card_title {
     position: absolute;
@@ -577,3 +585,9 @@ ul.social_media_link li a:hover { transform: rotate(360deg); }
     inset: 0;
     z-index: 3;
 }
+
+.happ_card_title {
+    top: 42rem;
+    bottom: auto;
+}
+.happening_header.school_home>h5{text-align: center;margin: 0 auto;}
