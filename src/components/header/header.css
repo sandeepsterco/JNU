@@ -16,7 +16,8 @@
 .main_header.school_home_header.header_fix .site_navbar{grid-template-columns: 55% auto;}
 .main_header.school_inner_header {background-color: var(--color-white);}
 .school-page main { padding-top: 12.9rem; }
-
+.main_header.school_home_header .site_nav > .admission_dropdown > a{border: 0.1rem solid #a39999;}
+.main_header.school_home_header .site_nav > .admission_dropdown > a:after{filter: brightness(0) invert(1);}
 /* School Home Page CSS End */
 
 .header_fix{background-color:var(--color-f5);}
