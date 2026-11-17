@@ -1,8 +1,7 @@
 import ReactParserDynamic from "@/components/common/reactParser/ReactParserDynamic";
-import NoData from "@/components/ui/NoData";
 import apiFetch from "@/lib/api";
-import { getSlug } from "@/lib/getSlug";
 import { notFound } from "next/navigation";
+import SchoolHeader from "@/components/header/SchoolHeader";
 
 interface SearchParams {
   search?: string;
@@ -12,7 +11,7 @@ interface SearchParams {
 
 interface FacultyDetailProps {
   searchParams: Promise<SearchParams>;
-  params: any;
+  params: Promise<{ slug: string }>;
 }
 
 export default async function FacultyDetail({
@@ -22,13 +21,22 @@ export default async function FacultyDetail({
   const { slug } = await params;
   const resolvedSearchParams = await searchParams;
   const { data, error } = await apiFetch(`news-events/${slug}`);
+  if (error || !data?.status) notFound();
 
   const cmsData = data?.newsAndEvent?.cms ?? [];
 
   const combinedHTML = Object.values(cmsData).join("") || "";
+  const schoolSlug = resolvedSearchParams.school;
 
   return (
     <>
+      {schoolSlug && (
+        <SchoolHeader
+          parentSlug="school"
+          slug={schoolSlug}
+          customClass="school_inner_header"
+        />
+      )}
       <ReactParserDynamic
         html={combinedHTML}
         searchParams={resolvedSearchParams}

@@ -6,7 +6,15 @@ import 'swiper/css/navigation';
 import Link from 'next/link';
 import { BASE_URL } from '@/config/config';
 
-export default function FeaturedNews({ data, slug }: { data: any; slug?: string }) {
+interface FeaturedNewsItem {
+    id: number;
+    date?: string;
+    name?: string;
+    image?: string;
+    slug: string;
+}
+
+export default function FeaturedNews({ data, slug, schoolSlug }: { data: FeaturedNewsItem[]; slug?: string; schoolSlug?: string }) {
     return (
         <section className="news_event_sec">
             {data?.length > 1 && (
@@ -34,7 +42,7 @@ export default function FeaturedNews({ data, slug }: { data: any; slug?: string 
                     prevEl: '.news-prev',
                 }}
             >
-                {data.map((item: any) => (
+                {data.map((item) => (
                     <SwiperSlide key={item.id}>
                         <div className="news_card">
                             <div className="news_content">
@@ -53,7 +61,14 @@ export default function FeaturedNews({ data, slug }: { data: any; slug?: string 
                             <div className="news_image">
                                 <img src={item.image} alt={item.name} />
                             </div>
-                            <Link className="overlap_btn" href={`${BASE_URL}${slug}/${item.slug}`}></Link>
+                            <Link
+                                className="overlap_btn"
+                                href={`${BASE_URL}${slug}/${item.slug}${
+                                    schoolSlug
+                                        ? `?school=${encodeURIComponent(schoolSlug)}`
+                                        : ""
+                                }`}
+                            ></Link>
                         </div>
                     </SwiperSlide >
                 ))}
