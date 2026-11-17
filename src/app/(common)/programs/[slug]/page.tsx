@@ -33,7 +33,7 @@ export default async function ProgramDetailPage({params, searchParams}:{params:P
                 <SchoolHeader
                     parentSlug="school"
                     slug={schoolSlug}
-                    customClass="school_inner_header"
+                    customClass="school_inner_header school_header"
                 />
             )}
             {pageData.cms.length == 0 ? <ComingSoon /> : (

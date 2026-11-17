@@ -29,7 +29,7 @@ export default async function FacultyDetail({ searchParams }: FacultyDetailProps
 
     return (
         <>
-            {school && <SchoolHeader parentSlug="school" slug={school} customClass="school_inner_header" />}
+            {school && <SchoolHeader parentSlug="school" slug={school} customClass="school_inner_header school_header" />}
             <ReactParserDynamic html={combinedHTML} searchParams={resolvedSearchParams} />
         </>
     );

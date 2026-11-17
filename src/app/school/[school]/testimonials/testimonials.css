@@ -32,7 +32,8 @@
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 3rem;
-  padding-top: 5rem;
+  padding-top: 8rem;
+  row-gap: 10rem;
 }
 
 .school_testimonial_card {
@@ -109,7 +110,7 @@
 }
 
 .school_testimonial_quote_card::before {
-  top: 2rem;
+  top: -2rem;
   left: 4rem;
   background-image: url("/images/pink-qoute.svg");
 }

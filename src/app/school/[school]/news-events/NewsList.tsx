@@ -1,7 +1,6 @@
 "use client"
 
 import { loadMoreNews } from "@/actions/loadMoreNews"
-import { BASE_URL } from "@/config/config"
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useTransition } from "react"
@@ -19,9 +18,10 @@ interface NewsListProps {
     hasMoreInitially: boolean
     slug: string
     filters: { school?: string; department?: string; date?: string }
+    schoolSlug: string
 }
 
-export default function NewsList({ initialData, hasMoreInitially, slug, filters }: NewsListProps) {
+export default function NewsList({ initialData, hasMoreInitially, slug, filters, schoolSlug }: NewsListProps) {
     const [items, setItems] = useState<DataInterface[]>(initialData);
     const [page, setPage] = useState(1)
     const [hasMore, setHasMore] = useState(hasMoreInitially)
@@ -57,7 +57,10 @@ export default function NewsList({ initialData, hasMoreInitially, slug, filters 
                                     <h4>{item.name}</h4>
                                 )}
                             </div>
-                            <Link className="overlap_btn" href={`${slug}/${item.slug}`}></Link>
+                            <Link
+                                className="overlap_btn"
+                                href={`${slug}/${item.slug}?school=${encodeURIComponent(schoolSlug)}`}
+                            ></Link>
                         </div>
                     ))}
 

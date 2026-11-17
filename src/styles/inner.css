@@ -2619,7 +2619,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .inno_listing ul.custom_lists li{ margin-bottom: 2.5rem;}
 .inno_listing ul.custom_lists li::before{ width: 0.7rem; height: 0.7rem; background-color: var(--color-f2);}
 .sch_dir_msg_grid figure { position: sticky; top: 10rem; height: auto;}
-.sch_dir_msg_grid figure::before{content:""; position:absolute; top:-3.7rem; left:3rem; width:9.4rem; height:7.6rem; background:url(/images/quote.svg) no-repeat;}
+.sch_dir_msg_grid figure::before{content:""; position:absolute; top:-3.7rem; left:3rem; width:9.4rem; height:7.6rem; background:url(/images/quote.svg) no-repeat; background-size: cover;}
 .sch_dir_msg_content h3 { font: var(--font-48); letter-spacing: -0.48px; color: var(--color-cf); margin-bottom: 1rem; font-weight: 500; }
 .sch_dir_msg_content blockquote { font: var(--font-24); color: var(--color-black); margin-bottom: 3.2rem; font-weight: 300;line-height: 1.5; }
 .sch_dir_msg_content p { font: var(--font-16); font-weight: 300; }
@@ -2946,3 +2946,46 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .school_testimonial_detail_page{padding-block: 11rem; position: relative;}
 .school_testimonial_detail_page .description{margin-top:4rem;}
 .school_testimonial_detail_image{margin-top:4rem;}
+
+.even_back{text-align: center; margin-bottom: 12rem;}
+
+/* allied health science about us page css starts here */
+
+.health_about{padding-block:12rem 0;}
+.health_cont blockquote{font:var(--font-21);color:var(--color-23);margin-bottom:0;font-weight:300;line-height:1.6;}
+.health_cont{text-align:center;margin:0 3rem 8rem;}
+.health_img{grid-template-columns:repeat(2,1fr);display:grid;gap:2rem;margin-bottom:6rem;}
+.health_cont1 P{font:var(--font-16);color:var(--color-00);font-weight:300;line-height:1.6;max-width:90%;margin:0 auto;}
+.health_cont1{text-align:center;border-bottom:1px solid #CECECE;padding-bottom:8rem;}
+.health_hight{padding-block:10rem 8.5rem;}
+.health_list h4{color:var(--color-cf);margin-bottom:5rem;font-weight:500;text-align:center;}
+.health_list ul{padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2.6rem;}
+.health_list ul li{background:var(--color-white);font:var(--font-16);text-align:center;padding-block:4.8rem 5.5rem;padding-inline:4.1rem;font-weight:300;line-height:1.6;list-style:none;position:relative;}
+.health_list ul li:before{content:"";z-index:9;background:linear-gradient(to right,var(--color-fa) 0%,var(--color-fa) 40%,var(--color-cf) 40%,var(--color-cf) 100%);width:30%;max-width:30%;height:2px;margin:0 auto;position:absolute;bottom:0;left:0;right:0;}
+.vision_grid{display:grid;grid-template-columns:repeat(2,1fr);}
+.vision_list{background-color:var(--color-cf);padding:6.5rem 14rem 10rem 15rem;position:relative;}
+.vision_list h4{font:var(--font-21);margin-bottom:5rem;font-weight:500;color:var(--color-white);position:relative;z-index:1;}
+.vision_list ul li{list-style:none;position:relative;font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;padding-left:2.4rem;color:var(--color-white);position:relative;z-index:1;}
+.vision_mission{padding:6.5rem 6rem 10rem 15rem;position:relative;}
+.vision_mission h4{font:var(--font-21);margin-bottom:5rem;font-weight:500;color:var(--color-cf);}
+.vision_mission ul,.vision_list ul{padding:0;margin:0;}
+.vision_mission ul li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;list-style:none;position:relative;padding-left:2.4rem;}
+.vision_mission ul li:before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}
+.vision_list ul li:before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}
+.vision_list .overlays{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;}
+.health_vision{padding-block:0 10rem;}
+.health_btom{padding-block:12rem 15rem;padding-inline:13.5rem;position:relative;}
+.health_btom_msg{background:url(/images/director_msg.webp) 0 0 / cover;padding-top:12.5rem;position:relative;}
+.health_btom_msg:after{content:"";content:"";background:url(/images/school_dean_path.svg) right 0 center no-repeat;background-color:var(--color-06);width:65.8rem;height:100%;position:absolute;top:0;left:0;background-repeat:no-repeat;background-size:cover;}
+.health_btom_grid{z-index:9;grid-template-columns:60rem auto;gap:15rem;padding-right:6rem;display:grid;position:relative;}
+.health_btom_grid figure{height:auto;position:sticky;top:10rem;}
+.health_btom_grid figure:before{content:"";background:url(/images/quote.svg) no-repeat;width:15.4rem;height:11rem;position:absolute;top:-3.7rem;left:3rem;}
+.health_btom_content blockquote{font:var(--font-24);color:var(--color-black);margin-bottom:3.2rem;font-weight:300;line-height:1.5;}
+.health_btom_conbx p{font:var(--font-16);font-weight:300;}
+.health_btom_msg .load_more_btn{justify-content:flex-start;margin:3.2rem 0;padding:0;}
+.abt_social ul{padding:0;margin:0;display:flex;gap:1.2rem;}
+.abt_social ul li img{max-width:3.2rem;}
+.abt_social{margin-top:3.2rem;}
+.health_btom_content{margin:3rem 0;}
+
+/* allied health science about us page css ends here */
