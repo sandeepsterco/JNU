@@ -144,6 +144,7 @@ body:has(.side_hamburger.is-open) .site_nav{transform:translateY(var(--hamb-widt
     .school_header .hamburger_menu_header{max-width:27rem;}
     .school_header .hamber_btmmenu{padding:8rem 3rem;}
     .school_header .hambur_btmsec:before{height:.3rem;}
+    .school-page main { padding-top: 9.7rem; }
 }
 @media(max-width:991px) {
     .main_header{background-color: transparent;}

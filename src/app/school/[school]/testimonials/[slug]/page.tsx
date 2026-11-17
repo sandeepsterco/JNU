@@ -49,31 +49,30 @@ export default async function SchoolTestimonialDetailPage({
 
   return (
     <>
-      <section className="leadership_detail_section">
+      <section className="testimonials_detail_section">
         <div className="container-fluid">
-          <div className="detail_main">
-            <div className="detail_left">
-              
-            </div>
-            <div className="detail_right">
-              <div className="image_sec">
-                <figure>
-                  <img
-                    src={testimonial?.detail_image || ''}
-                    className="img-fluid"
-                    alt={testimonial.name}
-                  />
-                </figure>
-              </div>
-              <div className="content_sec">
-                {/* <h3 className="title24_36">test</h3> */}
-                <p className="content_16_26">{testimonial.description}</p>
-                <div className="author_details">
-                  <h4>{testimonial.name}</h4>
-                  <p className="designation">{testimonial.course}</p>
+          <div className="testimonials_path">
+            <div className="container">
+              <div className="testimonials_main">
+                <div className="testimonials_image_sec">
+                  <figure>
+                    <img
+                      src={testimonial?.detail_image || ''}
+                      className="img-fluid"
+                      alt={testimonial.name}
+                    />
+                  </figure>
                 </div>
-                
-                <div className="bottom_line"></div>
+                <div className="testimonials_content_sec">
+                  {/* <h3 className="title24_36">test</h3> */}
+                  <p className="content_16_26">{testimonial.description}</p>
+                  <div className="author_details">
+                    <h4>{testimonial.name}</h4>
+                    <p className="designation">{testimonial.course}</p>
+                  </div>
+
+                  <div className="bottom_line"></div>
+                </div>
               </div>
             </div>
           </div>
