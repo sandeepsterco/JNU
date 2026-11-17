@@ -1,281 +1,241 @@
 "use client";
 
-import { useState } from "react";
-import type { FormEvent } from "react";
+import { createContext, startTransition, useActionState, useContext, useEffect, useMemo, useRef } from "react";
+import type { InputHTMLAttributes } from "react";
+import {
+    submitAlumniRegistration,
+    type AlumniFormState,
+} from "@/actions/SubmitAlumniRegistration";
 
-export interface FacultyInterface {
-  name: string;
-  image: string;
-  slug: string;
-  designation?: string;
+const initialState: AlumniFormState = {
+    success: false,
+    message: "",
+    errors: {},
+    values: {},
+};
+
+type Errors = AlumniFormState["errors"];
+type Values = NonNullable<AlumniFormState["values"]>;
+
+/* Errors (from the API) and previously submitted values are shared with every field via context */
+const FormCtx = createContext<{ errors: Errors; values: Values }>({ errors: {}, values: {} });
+
+function FieldError({ name }: { name: string }) {
+    const { errors } = useContext(FormCtx);
+    const key = Object.keys(errors).find(
+        (k) => k === name || k.startsWith(`${name}.`) || k.startsWith(`${name}[`),
+    );
+    const raw = key ? errors[key] : undefined;
+    const message = Array.isArray(raw) ? raw[0] : raw;
+    return message ? <span className="field_error">{message}</span> : null;
 }
 
+function Label({ htmlFor, children, req }: { htmlFor: string; children: React.ReactNode; req?: boolean }) {
+    return (
+        <label htmlFor={htmlFor}>
+            {children}
+            {req && <sup>*</sup>}
+        </label>
+    );
+}
+
+type InputExtras = Omit<InputHTMLAttributes<HTMLInputElement>, "name" | "type" | "id" | "defaultValue">;
+
+function TextField({
+    label,
+    name,
+    type = "text",
+    placeholder,
+    req,
+    ...rest
+}: { label: string; name: string; type?: string; placeholder?: string; req?: boolean } & InputExtras) {
+    const { values } = useContext(FormCtx);
+    return (
+        <div className="comfrm_col">
+            <div className="form_group">
+                <Label htmlFor={name} req={req}>{label}</Label>
+                <input
+                    id={name}
+                    type={type}
+                    name={name}
+                    className="form-control"
+                    placeholder={placeholder}
+                    defaultValue={values[name] ?? ""}
+                    {...rest}
+                />
+                <FieldError name={name} />
+            </div>
+        </div>
+    );
+}
+
+function SelectField({
+    label,
+    name,
+    placeholder,
+    options,
+    req,
+}: {
+    label: string;
+    name: string;
+    placeholder: string;
+    options: (string | [string, string])[]; // value, or [value, label]
+    req?: boolean;
+}) {
+    const { values } = useContext(FormCtx);
+    return (
+        <div className="comfrm_col">
+            <div className="form_group">
+                <Label htmlFor={name} req={req}>{label}</Label>
+                <select id={name} name={name} className="form-control" defaultValue={values[name] ?? ""}>
+                    <option value="">{placeholder}</option>
+                    {options.map((o) => {
+                        const [value, text] = Array.isArray(o) ? o : [o, o];
+                        return (
+                            <option key={value} value={value}>
+                                {text}
+                            </option>
+                        );
+                    })}
+                </select>
+                <FieldError name={name} />
+            </div>
+        </div>
+    );
+}
+
+const YES_NO = ["Yes", "No"];
+
+const PROGRAMME_TYPES: [string, string][] = [
+    ["1", "Under Graduate"],
+    ["2", "Post Graduate"],
+    ["3", "Doctoral"],
+    ["4", "Diploma"],
+];
+
+const PROGRAMMES: [string, string][] = [
+    ["1", "BBA / BBA (Honours) / BBA (Honours with Research)"],
+    ["17", "Masters of Arts in English"],
+    ["3", "BCA"],
+    ["4", "B.Com. / B.Com. (Honours) / B.Com. (Honours with Research)"],
+    ["8", "MCA"],
+    ["12", "Bachelor of Arts (Hons.) in English"],
+    ["18", "Ph.D. English"],
+    ["19", "B.A., LL.B."],
+    ["20", "BBA.LL.B. (Hons.)"],
+    ["21", "LLB"],
+    ["22", "LLM"],
+    ["25", "B.Sc. Nursing"],
+    ["28", "B.Tech. Biotechnology"],
+    ["45", "B.Tech. Computer Science Engineering"],
+    ["68", "B. Pharm"],
+    ["91", "MBA (Dual Specialization)"],
+    ["93", "MBA (Hospital and Healthcare Management)"],
+    ["128", "B.Sc. Hospitality and Hotel Administration"],
+    ["129", "BHMCT (Hotel Management and Catering Technology)"],
+    ["135", "B.Sc. (Hons.) Agriculture"],
+    ["197", "MBBS"],
+    ["211", "MD (Radio Diagnosis)"],
+    ["212", "MD (Dermatology, Venereology & Leprosy)"],
+    ["214", "MS (Obstetrics & Gynaecology)"],
+    ["215", "MD (Paediatrics)"],
+    ["216", "MS (Ophthalmology)"],
+    ["217", "MS (General Surgery)"],
+    ["218", "MS (Orthopaedics)"],
+    ["219", "MD (Psychiatry)"],
+    ["222", "MD (Anaesthesiology)"],
+    ["3333", "Others"],
+];
+
 export default function AlumniRegistrationForm() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+    const [state, formAction, isPending] = useActionState(submitAlumniRegistration, initialState);
+    const formRef = useRef<HTMLFormElement>(null);
 
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    setIsSubmitting(true);
-    setIsSubmitted(false);
+    const ctx = useMemo(
+        () => ({ errors: state.errors ?? {}, values: state.values ?? {} }),
+        [state],
+    );
 
-    window.setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-    }, 2000);
-  }
+    // After each response: on success clear the form and show the message, otherwise scroll to the first error
+    useEffect(() => {
+        if (state.success) {
+            formRef.current?.reset(); // values are {} on success, so this clears everything
+            document.getElementById("form_status")?.scrollIntoView({ behavior: "smooth", block: "center" });
+            return;
+        }
+        if (state.message || Object.keys(state.errors ?? {}).length > 0) {
+            formRef.current
+                ?.querySelector<HTMLElement>(".field_error")
+                ?.scrollIntoView({ behavior: "smooth", block: "center" });
+        }
+    }, [state]);
 
-  return(
-    <section className="common_formsec common_fm_bg">
-            <form onSubmit={handleSubmit} encType="multipart/form-data">
-                <div className="container">
-                    <div className="conf_topsec">
+    // Called from the button's click (not a "submit" event) so nothing else on the page can trigger a native submit
+    function submitForm() {
+        if (!formRef.current || isPending) return;
+        const formData = new FormData(formRef.current);
+        startTransition(() => formAction(formData));
+    }
 
-                        <div className="comfrm_grid">
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="erpId">ERP ID<sup>*</sup></label>
-                                    <input type="text" id="erpId" name="erpId" className="form-control" placeholder="ERP ID"
-                                        required />
-                                </div>
+    return (
+        <FormCtx.Provider value={ctx}>
+            <section className="common_formsec common_fm_bg">
+                <form ref={formRef} noValidate onSubmit={(e) => e.preventDefault()}>
+                    <div className="container">
+                        <div className="conf_topsec">
+                            <div className="comfrm_grid">
+                                <TextField label="ERP ID" name="erp_id" placeholder="ERP ID" req maxLength={50} />
+                                <TextField label="Enrolment Number" name="enrolment_number"
+                                    placeholder="Enrolment Number" req maxLength={50} />
+                                <TextField label="Name in Full" name="name" placeholder="Name in Full" req
+                                    autoComplete="name" maxLength={100} />
+                                <TextField label="Father’s Name" name="father_name" placeholder="Father’s Name" req
+                                    maxLength={100} />
+                                <SelectField label="Gender" name="gender" placeholder="Select Gender" req
+                                    options={["Male", "Female", "Other"]} />
+                                <SelectField label="Select Programme Type" name="programme_type"
+                                    placeholder="Select Type" req options={PROGRAMME_TYPES} />
+                                <SelectField label="Name of the Programme" name="programme_name"
+                                    placeholder="Select Course" req options={PROGRAMMES} />
+                                <TextField label="If Other Programme" name="other_programme"
+                                    placeholder="Other Programme" maxLength={150} />
+                                <TextField label="Mobile Number" name="mobile_number" type="tel"
+                                    placeholder="Mobile Number" req inputMode="numeric" maxLength={10}
+                                    autoComplete="tel" />
+                                <TextField label="WhatsApp Number" name="whatsapp_number" type="tel"
+                                    placeholder="WhatsApp Number" req inputMode="numeric" maxLength={10} />
+                                <TextField label="Email Address" name="email" type="email"
+                                    placeholder="Email Address" req autoComplete="email" maxLength={254} />
+                                <TextField label="Batch" name="batch" placeholder="Batch" req maxLength={30} />
+                                <SelectField label="Alumni Meet (22 Feb 2025 Evening)" name="alumni_meet"
+                                    placeholder="Select Option" req options={YES_NO} />
+                                <SelectField label="Musical Evening with Gala Dinner"
+                                    name="musical_evening_gala_dinner" placeholder="Select Option" req
+                                    options={YES_NO} />
                             </div>
 
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="enrolmentNumber">
-                                        Enrolment Number<sup>*</sup>
-                                    </label>
-                                    <input type="text" id="enrolmentNumber" name="enrolmentNumber" className="form-control"
-                                        placeholder="Enrolment Number" required />
-                                </div>
+                            <button type="button" className="btn btn-primary" disabled={isPending} onClick={submitForm}>
+                                {isPending ? "Submitting..." : "Submit"}
+                            </button>
+
+                            <div id="form_status">
+                                {state.success && (
+                                    <div className="success_msg">
+                                        <p role="status" aria-live="polite" className="message">
+                                            {state.message}
+                                        </p>
+                                    </div>
+                                )}
+                                {!state.success && state.message && (
+                                    <p role="alert" aria-live="assertive" className="field_error">
+                                        {state.message}
+                                    </p>
+                                )}
                             </div>
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="fullName">Name in Full<sup>*</sup></label>
-                                    <input type="text" id="fullName" name="fullName" className="form-control"
-                                        placeholder="Name in Full" required />
-                                </div>
-                            </div>
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="fatherName">Father’s Name<sup>*</sup></label>
-                                    <input type="text" id="fatherName" name="fatherName" className="form-control"
-                                        placeholder="Father’s Name" required />
-                                </div>
-                            </div>
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="gender">Gender<sup>*</sup></label>
-
-                                    <select id="gender" name="gender" className="form-control nice-select" required defaultValue="">
-                                        <option value="" disabled>
-                                            Select Gender
-                                        </option>
-                                        <option value="Male">Male</option>
-                                        <option value="Female">Female</option>
-                                        <option value="Other">Other</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="programmeType">
-                                        Select Programme Type<sup>*</sup>
-                                    </label>
-
-                                    <select id="programmeType" name="programmeType" className="form-control nice-select"
-                                        required defaultValue="">
-                                        <option value="" disabled>
-                                            Select Type
-                                        </option>
-                                        <option value="1">Under Graduate</option>
-                                        <option value="2">Post Graduate</option>
-                                        <option value="3">Doctoral</option>
-                                        <option value="4">Diploma</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="programmeName">
-                                        Name of the Programme<sup>*</sup>
-                                    </label>
-
-                                    <select id="programmeName" name="programmeName" className="form-control nice-select"
-                                        required defaultValue="">
-
-                                        <option value="" disabled>
-                                            Select Course
-                                        </option>
-
-                                        {/* Keep your complete existing programme options here */}
-
-                                        <option value="1">
-                                            BBA / BBA (Honours) / BBA (Honours with Research)
-                                        </option>
-                                        <option value="17">
-                                            Masters of Arts in English
-                                        </option>
-                                        <option value="3">BCA</option>
-                                        <option value="4">
-                                            B.Com. / B.Com. (Honours) /
-                                            B.Com. (Honours with Research)
-                                        </option>
-                                        <option value="8">MCA</option>
-                                        <option value="12">
-                                            Bachelor of Arts (Hons.) in English
-                                        </option>
-                                        <option value="18">Ph.D. English</option>
-                                        <option value="19">B.A., LL.B.</option>
-                                        <option value="20">BBA.LL.B. (Hons.)</option>
-                                        <option value="21">LLB</option>
-                                        <option value="22">LLM</option>
-                                        <option value="25">B.Sc. Nursing</option>
-                                        <option value="28">B.Tech. Biotechnology</option>
-                                        <option value="45">
-                                            B.Tech. Computer Science Engineering
-                                        </option>
-                                        <option value="68">B. Pharm</option>
-                                        <option value="91">MBA (Dual Specialization)</option>
-                                        <option value="93">
-                                            MBA (Hospital and Healthcare Management)
-                                        </option>
-                                        <option value="128">
-                                            B.Sc. Hospitality and Hotel Administration
-                                        </option>
-                                        <option value="129">
-                                            BHMCT (Hotel Management and Catering Technology)
-                                        </option>
-                                        <option value="135">
-                                            B.Sc. (Hons.) Agriculture
-                                        </option>
-                                        <option value="197">MBBS</option>
-                                        <option value="211">MD (Radio Diagnosis)</option>
-                                        <option value="212">
-                                            MD (Dermatology, Venereology &amp; Leprosy)
-                                        </option>
-                                        <option value="214">
-                                            MS (Obstetrics &amp; Gynaecology)
-                                        </option>
-                                        <option value="215">MD (Paediatrics)</option>
-                                        <option value="216">MS (Ophthalmology)</option>
-                                        <option value="217">MS (General Surgery)</option>
-                                        <option value="218">MS (Orthopaedics)</option>
-                                        <option value="219">MD (Psychiatry)</option>
-                                        <option value="222">MD (Anaesthesiology)</option>
-                                        <option value="3333">Others</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="otherProgramme">
-                                        If Other Programme<sup>*</sup>
-                                    </label>
-                                    <input type="text" id="otherProgramme" name="otherProgramme" className="form-control"
-                                        placeholder="Other Programme" required />
-                                </div>
-                            </div>
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="mobileNumber">
-                                        Mobile Number<sup>*</sup>
-                                    </label>
-                                    <input type="tel" id="mobileNumber" name="mobileNumber" className="form-control"
-                                        placeholder="Mobile Number" inputMode="numeric" maxLength={10} required />
-                                </div>
-                            </div>
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="whatsappNumber">
-                                        WhatsApp Number<sup>*</sup>
-                                    </label>
-                                    <input type="tel" id="whatsappNumber" name="whatsappNumber" className="form-control"
-                                        placeholder="WhatsApp Number" inputMode="numeric" maxLength={10} required />
-                                </div>
-                            </div>
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="emailId">Email Address<sup>*</sup></label>
-                                    <input type="email" id="emailId" name="emailId" className="form-control"
-                                        placeholder="Email Address" required />
-                                </div>
-                            </div>
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="batch">Batch<sup>*</sup></label>
-                                    <input type="text" id="batch" name="batch" className="form-control" placeholder="Batch"
-                                        required />
-                                </div>
-                            </div>
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="alumniMeet">
-                                        Alumni Meet (22 Feb 2025 Evening)<sup>*</sup>
-                                    </label>
-
-                                    <select id="alumniMeet" name="alumniMeet" className="form-control nice-select" required defaultValue="">
-                                        <option value="" disabled>
-                                            Select Option
-                                        </option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="musicalEvening">
-                                        Musical Evening with Gala Dinner<sup>*</sup>
-                                    </label>
-
-                                    <select id="musicalEvening" name="musicalEvening" className="form-control nice-select"
-                                        required defaultValue="">
-                                        <option value="" disabled>
-                                            Select Option
-                                        </option>
-                                        <option value="Yes">Yes</option>
-                                        <option value="No">No</option>
-                                    </select>
-                                </div>
-                            </div>
-
-
-                            <div className="comfrm_col">
-                                <div className="form_group">
-                                    <label htmlFor="captcha">Captcha<sup>*</sup></label>
-                                    <input type="text" id="captcha" name="captcha" className="form-control"
-                                        placeholder="Enter captcha code" required />
-                                </div>
-                            </div>
-
                         </div>
-
-                        <button type="submit" className="btn btn-primary" disabled={isSubmitting}>
-                            {isSubmitting ? "Submitting..." : "Submit"}
-                        </button>
-                        {isSubmitted && (
-                            <p role="status" aria-live="polite">
-                                Your alumni registration has been submitted successfully.
-                            </p>
-                        )}
-
                     </div>
-                </div>
-            </form>
-        </section>
-  )
+                </form>
+            </section>
+        </FormCtx.Provider>
+    );
 }
