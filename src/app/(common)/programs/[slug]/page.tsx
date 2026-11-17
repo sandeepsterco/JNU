@@ -1,6 +1,7 @@
 import ComingSoon from "@/components/common/comingSoon/ComingSoon";
 import ReactParserDynamic from "@/components/common/reactParser/ReactParserDynamic";
 import FAQs from "@/components/homepage/faqs/FAQs";
+import SchoolHeader from "@/components/header/SchoolHeader";
 import apiFetch from "@/lib/api";
 import { getSlug } from "@/lib/getSlug";
 
@@ -8,6 +9,7 @@ interface SearchParams{
     search?:string;
     duration?:string;
     school?:string;
+    schoolSlug?:string;
 }
 
 export default async function ProgramDetailPage({params, searchParams}:{params:Promise<{slug:string}>, searchParams:Promise<SearchParams>}){
@@ -23,9 +25,17 @@ export default async function ProgramDetailPage({params, searchParams}:{params:P
     const combinedHtml = Object.values(pageData?.cms ?? {}).join('');
 
     const {faqs:modularFAQ} = pageData?.modular ?? {};
+    const schoolSlug = resolvedSearchParams.schoolSlug;
 
     return(
         <>
+            {schoolSlug && (
+                <SchoolHeader
+                    parentSlug="school"
+                    slug={schoolSlug}
+                    customClass="school_inner_header"
+                />
+            )}
             {pageData.cms.length == 0 ? <ComingSoon /> : (
                 <>
                     <ReactParserDynamic html={combinedHtml} searchParams={resolvedSearchParams} />
