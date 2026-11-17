@@ -3,6 +3,7 @@ import NoData from "@/components/ui/NoData";
 import apiFetch from "@/lib/api"
 import { getSlug } from "@/lib/getSlug"
 import { notFound } from "next/navigation";
+import SchoolHeader from "@/components/header/SchoolHeader";
 
 interface SearchParams {
     search?: string;
@@ -24,8 +25,12 @@ export default async function FacultyDetail({ searchParams }: FacultyDetailProps
     }
 
     const combinedHTML = Object.values(data?.faculty?.cms).join('') || '';
+    const school = resolvedSearchParams.school;
 
     return (
-        <ReactParserDynamic html={combinedHTML} searchParams={resolvedSearchParams} />
+        <>
+            {school && <SchoolHeader parentSlug="school" slug={school} customClass="school_inner_header" />}
+            <ReactParserDynamic html={combinedHTML} searchParams={resolvedSearchParams} />
+        </>
     );
 }

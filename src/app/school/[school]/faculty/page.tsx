@@ -56,6 +56,7 @@ export default async function SchoolFacultyList({ params }: PageProps) {
             data={facultyResponse.data}
             loadFacultyAction={loadFaculty}
             fixedSchoolId={schoolId}
+            schoolSlug={school}
         />
     );
 }

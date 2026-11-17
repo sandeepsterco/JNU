@@ -903,6 +903,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .audio_con span { display: inline-block; margin-bottom: 1.3rem; }
 .tab_heading { cursor: pointer; border-radius: 0; padding: 3rem 4rem; position: relative; }
 .tab_content { overflow-y: hidden; height: 0; transition: 0.5s ease; }
+.school-page .tab_content{height:auto;}
 .e_resourcemain .accordion_tab.accordion_active .tab_heading h5::before { content: "−"; }
 .e_resourcemain .accordion_tab .tab_heading h5::before { content: "+"; position: absolute; left: -3rem; top: 50%; transform: translateY(-50%); font: var(--font-24); line-height: 1; font-weight: 200; }
 .e_resourcemain .accordion_tab.accordion_active { border-bottom: 0px dashed rgba(255, 255, 255, 0.49); }
@@ -2945,3 +2946,5 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .school_testimonial_detail_page{padding-block: 11rem; position: relative;}
 .school_testimonial_detail_page .description{margin-top:4rem;}
 .school_testimonial_detail_image{margin-top:4rem;}
+
+.even_back{text-align: center; margin-bottom: 12rem;}

@@ -34,6 +34,7 @@ export default async function ProgramsOffered({
 }: ProgramsOfferedProps) {
   const { search, school, duration, degree, specialization } = searchParams;
   const currentSlug = await getSlug(0);
+  const schoolSlug = currentSlug === "school" ? await getSlug(1) : undefined;
   const params = new URLSearchParams();
 
   if (search) params.set("search", search);
@@ -56,6 +57,7 @@ export default async function ProgramsOffered({
         specialization={specialization}
         programsData={programsData}
         currentSlug={currentSlug}
+        schoolSlug={schoolSlug}
         data={data}
       />
     </>

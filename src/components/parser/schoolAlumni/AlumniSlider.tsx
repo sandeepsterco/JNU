@@ -69,10 +69,10 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                           </p>
                         </div>
 
-                        <Link
+                        {/* <Link
                           href={`${BASE_URL}alumni/${item.slug}`}
                           className="overlap_btn"
-                        />
+                        /> */}
                       </>
                     ) : (
                       <div className="alumni_img">
