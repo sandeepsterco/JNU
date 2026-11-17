@@ -2,6 +2,7 @@ import ReactParserDynamic from "@/components/common/reactParser/ReactParserDynam
 import apiFetch from "@/lib/api";
 import { notFound } from "next/navigation";
 import SchoolHeader from "@/components/header/SchoolHeader";
+import BackBtn from "@/components/common/BackBtn";
 
 interface SearchParams {
   search?: string;
@@ -43,9 +44,7 @@ export default async function FacultyDetail({
       />
 
       <div className="container">
-        <div className="even_back">
-            <a href="#" className="backtoinno_btn ">Go To Back </a>
-        </div>
+        <BackBtn />
       </div>
     </>
   );
