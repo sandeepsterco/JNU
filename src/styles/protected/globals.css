@@ -606,3 +606,8 @@ filter:none;
 }
 .happening_header.school_home>h5{text-align: center;margin: 0 auto;}
 
+@media (max-width:1536px){
+  .happ_card { min-height: 26rem; }
+.happening_grid_3 { padding-top: 3rem; }
+
+}
