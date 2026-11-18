@@ -18,6 +18,7 @@ interface RecruiterApiResponse {
 }
 
 const GENERIC_ERROR = "Please correct the highlighted fields and submit again.";
+const CHECKBOX_GROUP_FIELDS = ["eligible_programs", "recruitment_process", "preferred_mode"];
 
 // Text fields only (files can't be re-filled by the browser). Skips React/Next internal "$ACTION..." fields.
 function collectValues(formData: FormData): Record<string, string> {
@@ -30,14 +31,21 @@ function collectValues(formData: FormData): Record<string, string> {
     return values;
 }
 
-// Body sent to the API: no internal fields, no empty (unselected) file inputs.
+// Body sent to the API: checkbox groups are pipe-delimited strings, and empty files are omitted.
 function buildOutbound(formData: FormData): FormData {
     const out = new FormData();
     for (const [key, value] of formData.entries()) {
         if (key.startsWith("$ACTION")) continue;
+        if (CHECKBOX_GROUP_FIELDS.some((name) => key === `${name}[]`)) continue;
         if (value instanceof File && value.size === 0) continue;
         out.append(key, value);
     }
+
+    for (const name of CHECKBOX_GROUP_FIELDS) {
+        const selected = formData.getAll(`${name}[]`).filter((value): value is string => typeof value === "string");
+        out.set(name, selected.join("|"));
+    }
+
     return out;
 }
 

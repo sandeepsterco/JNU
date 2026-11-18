@@ -427,6 +427,8 @@ ul.social_media_link li a:hover { transform: rotate(360deg); }
     margin-top:3rem;
 }
 
+.success_msg p{margin-bottom:0!important;}
+
 
   /* ======================= DONT WRITE CSS IN THIS FILE================== */
 
