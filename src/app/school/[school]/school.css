@@ -27,7 +27,7 @@
 
 @media(max-width:1536px){
     .school_banner .container-fluid{padding-inline:4.5rem;}
-    .school_banner_content{top:6rem;bottom:10rem;}
+    .school_banner_content{top:8.5rem;bottom:10rem;}
     .school_filter p{padding-right:1rem;}
     .sch_dropdown > .dropdown_toggle{padding-block:0.5rem;padding-right:1.8rem;}
     .sch_dropdown > .dropdown_toggle:after{width:1rem;height:1rem;background-size:1rem;}
@@ -51,10 +51,10 @@
 }
 
 
-.about_soet{ padding-block: 10rem 15rem;}
+.about_soet{ padding-block: 10rem 0rem;}
 .soet_listing{ display: grid; grid-template-columns: repeat(3, 30.4rem); justify-content: space-between; list-style: none; padding: 0; row-gap: 5.4rem; margin-top: 6rem; }
 .soet_listing li a{ font: var(--font-18); color: var(--color-cf); padding-left: 2rem; border-left: 0.4rem solid var(--color-f9); display: flex;}
-.soet_listing li a:hover{ color: var(--color-black);}
+.soet_listing li a:hover{ color: var(--color-cf); cursor: auto;}
 .soet_link_list{ display: flex; margin-top: 8.3rem; padding: 0 0 2rem; align-items: center; position: relative;justify-content: space-between;}
 .soet_link{ display: flex; justify-content: space-between; list-style: none; gap: 11.3rem; padding: 0;}
 .soet_link li a{ font: var(--font-18); font-weight: 300; position: relative;}
@@ -79,6 +79,7 @@
     .soet_link li a:after{right: -3.5rem;}
 }
 
+.school_studyjnu_section{ padding-top: 15rem;}
 .school_studyat_jnu{ background-color: var(--color-white); padding-block: 8.5rem;}
 .our_department_list{ display: grid; grid-template-columns:36rem 36rem 36rem 25rem; padding: 0; list-style: none; row-gap: 4.5rem; padding-block: 7.6rem 0; column-gap: 5.6rem;}
 .our_department_list li{ font: var(--font-24); font-weight: 300; border-right: 1px solid rgba(112, 112, 112, 0.25); display: block; padding-bottom: 1.5rem; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding-right: 2rem;}
@@ -121,7 +122,7 @@
 }
 
 
-.success_speak{padding-block:10rem 15rem;}
+.success_speak{padding-block:16rem 15rem;}
 .success_speak .head_title{text-align:center;}
 .custom_tabs input[type="radio"]{display:none;}
 .custom_tabs .tab_nav{display:flex;gap:1.5rem;border-bottom:1px solid #DFDFDF;justify-content:center;margin-top:2rem;}
@@ -139,8 +140,8 @@
 .success_speak_bx_flex h5{font:var(--font-18);font-weight:200;color:var(--color-white);}
 .success_speak_bx_flex h6{font:var(--font-14);font-weight:300;color:var(--color-white);}
 .success_speak_bx_flex p{font:var(--font-14);font-weight:200;color:rgba(255,255,255,0.6);}
-.success_speak_bx{background-color:var(--color-white);padding: 7rem 4.4rem 11.8rem 4rem;height:100%;}
-.success_speak_bx::before{width:5.8rem;left:4.4rem;top:-2.3rem;left:5rem;height:4.7rem;background-repeat:no-repeat;content:"";position:absolute;background-size:contain;}
+.success_speak_bx{background-color:var(--color-white);padding: 6rem 4.4rem 4rem 4rem;height:100%;}
+.success_speak_bx::before{width:5.8rem;left:4.4rem;top:-2.3rem;left:4rem;height:4.7rem;background-repeat:no-repeat;content:"";position:absolute;background-size:contain;}
 /* .swiper-slide:nth-child(2) .success_speak_bx::before{background-image:url(/images/pink-qoute.svg);}
 .swiper-slide:nth-child(4) .success_speak_bx::before{background-image:url(/images/orange-qoute.svg);} */
 
@@ -150,18 +151,20 @@
 .swiper-slide:nth-child(even):not(:has(.success_speak_videobx)) .success_speak_bx::before {
     background-image: url(/images/orange-qoute.svg);
 }
+.success_speak .tab_content{ padding-top: 8rem;}
 
 
 .success_speak_bx p{font:var(--font-21);color:var(--color-black);font-weight:300;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden;}
-.success_speak_bx span img{border-radius:100%;width:5.4rem;height:5.4rem;object-fit:cover;object-position:top center;}
+.success_speak_bx span img{border-radius:100%;width:5.4rem;height:5.4rem;min-width: 5.4rem; object-fit:cover;object-position:top center;}
 .success_speak_bx .success_speak_bx_flex *{ color: var(--color-black);}
 .success_speak_bx figure{ margin-bottom: 3rem;}
 .success_speak_bx figure img{ max-width: 5.8rem;margin-top: -4.4rem;}
-.success_speak_bx .success_speak_bx_flex{ left: 4.4rem; border-top: 1px solid #eee; margin-top: 2rem; padding-top: 2rem;}
+.success_speak_bx .success_speak_bx_flex{ left: 4.4rem; border-top: 1px solid #eee; margin-top: 2rem; padding-top: 2rem; position: inherit;}
 .success_speak_bx .success_speak_bx_flex p{ font: var(--font-14); font-weight: 200; color:#231F20;}
 .success_speak .swiper-slide{ height: auto;}
-
-
+.faq_section .arrow_box{ margin-top: 5rem; border-color: var(--color-white);}
+.faq_section .arrow_box img{  filter: brightness(0) invert(1);}
+.faq_section .arrow_box:hover { border-color: var(--color-cf);}
 @media(max-width:1536px){
     .success_speak{padding-block:5rem 10rem;}
     .success_speak .container{max-width:min(1118px, 81.8448023vw);}
@@ -198,7 +201,7 @@
 .facility_dep_list{ padding-top: 2rem; max-width: 59.4rem;}
 .facility_dep_list ul{ padding-left: 0;}
 .facility_dep_grid{ padding-block: 8rem 12rem;}
-
+.facility_des_bx h5{ margin-bottom: 1.5rem; line-height: 1.4;}
 
 
 @media (max-width:1536px){
@@ -261,6 +264,9 @@
 .sasabt_high_grid ul>li::before{ content: ""; z-index: 9; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 60%, var(--color-fa) 60%, var(--color-fa) 100%); width: 100%; max-width: 10rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0rem; left: 0; right: 0rem;}
 
 
+
+.research_section .research_header{ border-top: 1px solid rgba(6, 63, 138, 0.25); padding-top: 15rem;}
+.school_research_section .research_header .head_title{ max-width: 50%;}
 /* SBM About Aria Start */
 .sbmabt_sec{position:relative;padding-block:12rem 10rem;}
 .sbmabt_sec:before{content:"";z-index:-1;background-image:url(/images/back_pattern.svg);background-repeat:repeat;background-size:contain;width:100%;height:45rem;position:absolute;top:0;bottom:0;left:0;}
@@ -307,7 +313,7 @@
 
 
 /* SBM Teaching Pedagogies */
-.sbmtp_sec{padding-block:5rem 5rem;}
+.sbmtp_sec{padding-block:5rem 8rem;}
 .sbmtp_sec .jnu_title_header{margin-bottom: 4rem;}
 .sbmtp_sec .jnu_title_header .font21{margin-bottom: 0;}
 .sbmtp_sec .jnu_title_header p{font:var(--font-16);font-weight:300;margin-top:2.4rem;padding-inline:10rem;}
@@ -316,3 +322,17 @@
 .sbmtp_grid>.sbmtp_item::before{content:"";background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
 .sbmtp_grid>.sbmtp_item>h5{font:var(--font-21);font-weight:300;color:var(--color-23);margin-bottom:1.6rem;}
 .sbmtp_grid>.sbmtp_item>p{font:var(--font-16);font-weight:300;}
+
+
+/* SBM Specializations */
+.sbmsplz_sec{position: relative; padding-block:8.2rem 13.6rem;z-index: 1;}
+.sbmsplz_sec::after{content:"";z-index:-1;background:url(/images/sbmsplz-bg.svg) #CF1E62;background-size:cover;background-repeat:no-repeat;background-position:center;width:100%;height:calc(100% - 37%);position:absolute;bottom:0;left:0;}
+.sbmsplz_sec .jnu_title_header{margin-bottom:4rem;}
+.sbmsplz_sec .jnu_title_header .font21{margin-bottom:0;}
+.sbmsplz_sec .jnu_title_header p{font:var(--font-16);font-weight:bold;margin-top:0.7rem;}
+.sbmsplz_grid{grid-template-columns:repeat(3,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows:1fr;padding-inline:4.1rem;}
+.sbmsplz_grid>.sbmsplz_item{background:var(--color-white);padding:5.7rem 3.1rem;position:relative;}
+.sbmsplz_grid>.sbmsplz_item>h6{font:var(--font-16);line-height:1.8;font-weight:500;color:var(--color-black);margin-bottom:2.3rem;}
+.sbmsplz_grid>.sbmsplz_item>ul{padding:0;margin:0;}
+.sbmsplz_grid>.sbmsplz_item>ul>li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:0.5rem;padding-left:2.4rem;list-style:none;position:relative;}
+.sbmsplz_grid>.sbmsplz_item>ul>li::before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}

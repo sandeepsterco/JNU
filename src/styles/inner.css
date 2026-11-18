@@ -2741,6 +2741,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .patent_publi_main .patent_table_sec:not(:last-child) { padding-bottom: 7rem; }
 .nirf_overview {padding-top: 12rem;}
 .career_pathwaymain {padding-block: 12rem;}
+.career_pathwaymain .jnu_title_header{margin-bottom: 4.5rem;}
 .career_path_grid .inno_incubx{text-align: left;}
 .career_pathbx:not(:last-child) { padding-bottom: 7rem; }
 .career_pathbx .jnu_title_header{text-align: left;}
@@ -2990,3 +2991,36 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .health_btom_content{margin:3rem 0;}
 
 /* allied health science about us page css ends here */
+
+/* allied health science facility page css starts here */
+
+.faci_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7rem 2.7rem;}
+.health_facility{padding-block:0 10rem;position:relative;margin-top:10rem;}
+.faci_cont h4{color:var(--color-cf);text-align:center;margin-bottom:5rem;font-weight:500;}
+.health_facility > img{z-index:-1;background-color:#cf1e62;position:absolute;top:22rem;left:0;right:0;}
+.faci_grid_grp{position:relative;}
+.faci_grid figcaption h4{font:var(--font-18);color:var(--color-white);margin-bottom:2rem;font-weight:500;}
+.faci_grid figcaption p{font:var(--font-16);color:var(--color-white);font-weight:300;}
+.faci_grid figcaption{margin-top:3.5rem;margin-right:3rem;}
+.faci_grid figure:nth-child(n+3) figcaption h4,.faci_grid figure:nth-child(n+3) figcaption p{color:var(--color-black);}
+.reach_grid{grid-template-columns:repeat(2,1fr);gap:2.7rem;display:grid;margin-bottom:6.6rem;}
+.fac_reach_para h4{font:var(--font-18);color:var(--color-black);margin-bottom:2rem;font-weight:500;}
+.fac_reach_para p{font:var(--font-16);color:var(--color-black);font-weight:300;}
+.fac_reach_cont{margin-right:21rem;}
+.fac_reach_para:not(:last-child){border-bottom:2px dashed #959595;margin-bottom:3.8rem;padding-bottom:3.8rem;}
+.fac_reach{padding-block:6rem 5rem;}
+.reach_grid2{grid-template-columns:repeat(2,1fr);gap:2.7rem;display:grid;align-items:center;}
+.fac_reach_cont2{padding:0 10rem;}
+.fac_reach2{padding-block:10rem 15rem;}
+.support_grid{display:grid;grid-template-columns:repeat(2,1fr);align-items:center;gap:2.7rem;margin:5.6rem 0;}
+.support_list ul{padding:0;margin:0;}
+.support_list ul li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;padding-left:2.4rem;list-style:none;position:relative;color:var(--color-black);}
+.support_list ul li:before{content:"";background-color:var(--color-f9);border-radius:50%;width:.7rem;height:.7rem;position:absolute;top:.9rem;left:0;}
+.support_list{margin-right:12.5rem;}
+.fac_reach_ttl h4{font:var(--font-18);color:var(--color-black);margin-bottom:2rem;font-weight:500;}
+.fac_reach_ttl p{font:var(--font-16);color:var(--color-black);font-weight:300;}
+.fac_reach_ttl2 p{font:var(--font-16);color:var(--color-black);font-weight:300;}
+.fac_reach_ttl2{max-width:80%;}
+.details_data h4{margin-top:5rem;margin-bottom:2rem;}
+
+/* allied health science facility page css ends here */
