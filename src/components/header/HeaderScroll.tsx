@@ -20,7 +20,7 @@ export default function HeaderScroll({
 
     const isHomePage = pathname === '/'
     const isProgramPage = pathname.includes('program')
-    const isSchoolPage = pathname.includes('school')
+    const isSchoolPage = pathname.includes('school') && !pathname.includes('schools')
     const isDepartmentPage = pathname.includes('department')
     const hasSchoolHeaderClass = customClass?.split(/\s+/).includes('school_header') ?? false
 
