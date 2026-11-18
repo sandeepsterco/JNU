@@ -23,6 +23,10 @@ import AmbedkarEvents from '@/components/parser/ambedkar-events/AmbedkarEvents';
 import SchoolTestimonial from '@/components/parser/schoolTestimonial/SchoolTestimonial';
 import CampusTourForm from '@/components/parser/campusTourForm/CampusTourForm';
 import AlumniRegistrationForm from '@/components/parser/alumniRegistrationForm/AlumniRegistrationForm';
+import SchoolHappening from '@/components/parser/schoolHappening/SchoolHappening';
+import PlacementRegistrationForm from '@/components/parser/placementRegistrationForm/PlacementRegistrationForm';
+import RecruiterRegistrationForm from '@/components/parser/recruiterRegistration/RecruiterRegistration';
+import ApplyNowForm from '@/components/parser/applyNowForm/ApplyNowForm';
 
 interface ProgramsSearchParams {
     search?: string;
@@ -172,6 +176,12 @@ export default function ReactParser({ html, searchParams, data, params }: Conten
                 if (domNode.attribs.id === "school_testimonial") return <SchoolTestimonial params={params} data={data}  />;
                 if (domNode.attribs.id === "campusTourForm") return <CampusTourForm  />;
                 if (domNode.attribs.id === "alumni_registration_form") return <AlumniRegistrationForm  />;
+                if (domNode.attribs.id === "school_happenings") return <SchoolHappening data={data}  />;
+                if (domNode.attribs.id === "placment_registration_form") return <PlacementRegistrationForm  />;
+                if (domNode.attribs.id === "recruiter_registration_form") return <RecruiterRegistrationForm  />;
+                if (domNode.attribs.id === "apply_now_form") return <ApplyNowForm  />;
+                
+                
             }
         }
     }

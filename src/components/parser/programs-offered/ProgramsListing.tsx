@@ -19,12 +19,14 @@ interface Filters {
 export default function ProgramsListing({
   programsData,
   currentSlug,
+  schoolSlug,
   filters,
   hasMoreInitially,
   loading
 }: {
   programsData: ProgramsDataInterface[];
   currentSlug: string;
+  schoolSlug?: string;
   filters: Filters;
   hasMoreInitially: boolean;
   loading:Boolean
@@ -68,7 +70,16 @@ export default function ProgramsListing({
             <div key={item.id+idx} className="program_grid_bx">
               <div className="program_bx_left">
                 <h4>
-                  <Link href={`${BASE_URL}${currentSlug}/${item.slug}`}>
+                  <Link
+                    href={`${BASE_URL}programs/${item.slug}${
+                      schoolSlug
+                        ? `?${new URLSearchParams({
+                            ...(filters.school ? { school: filters.school } : {}),
+                            schoolSlug,
+                          }).toString()}`
+                        : ""
+                    }`}
+                  >
                     {item.name}
                   </Link>
                 </h4>

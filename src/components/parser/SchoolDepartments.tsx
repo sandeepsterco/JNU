@@ -24,13 +24,17 @@ export default async function SchoolDepartments() {
 
     return (
         <ul className="our_department_list">
-            {departments.map((department) => (
-                <li key={department.id}>
-                    <span>{department.name}</span>
-                    <figure><img src="/images/icons/nav-arrow-next.svg" alt="next arrow" /></figure>
-                    <Link href={`${BASE_URL}department/${department.slug}`} className="overlap_btn"></Link>
-                </li>
-            ))}
+            {departments.map((department) => {
+                const dName = department.name.replace(/^department of\s*/i, '');
+
+                return (
+                    <li key={department.id}>
+                        <span>{dName}</span>
+                        {/* <figure><img src="/images/icons/nav-arrow-next.svg" alt="next arrow" /></figure> */}
+                        {/* <Link href={`${BASE_URL}department/${department.slug}`} className="overlap_btn"></Link> */}
+                    </li>
+                )
+            })}
         </ul>
     )
 }

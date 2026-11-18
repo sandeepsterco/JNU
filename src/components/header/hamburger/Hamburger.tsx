@@ -5,7 +5,8 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import type { HamburgerMenuItem } from "../Header";
 
-export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
+export default function Hamburger({ data, parentSlug=''}: { data: HamburgerMenuItem[],parentSlug?:string; }) {
+  console.log('hamburger data', data);
   const [isOpen, setIsOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
 
@@ -139,7 +140,7 @@ export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
                             (childItem, childIdx) => (
                               <li key={childIdx}>
                                 <Link
-                                  href={`${BASE_URL}${childItem.overwrite_url || childItem.slug}`}
+                                  href={`${childItem.target_blank ? childItem.overwrite_url : `${BASE_URL}${parentSlug ? parentSlug+'/' : ''}${childItem.overwrite_url || childItem.slug}`}`} target={childItem.target_blank ? '_blank' : '_self'}
                                   onClick={closeMenu}
                                 >
                                   {childItem.title}
@@ -165,12 +166,12 @@ export default function Hamburger({ data }: { data: HamburgerMenuItem[] }) {
               <ul className="hamber_btmmenu">
                 {bottomMenus.map((item, idx)=>(
                   <li key={idx}>
-                    <Link href={`${item.target_blank ? item.overwrite_url : `${BASE_URL}${item.overwrite_url || item.slug}`}`} target={item.target_blank ? '_blank' : '_self'} onClick={closeMenu}>
+                    <Link href={`${item.target_blank ? item.overwrite_url : `${BASE_URL}${parentSlug ? parentSlug+'/' : ''}${item.overwrite_url || item.slug}`}`} target={item.target_blank ? '_blank' : '_self'} onClick={closeMenu}>
                       {item.title}
                     </Link>
                   </li>
                 ))}
-
+                <a href={BASE_URL} className="goto_backbtm">Go To University </a>
               </ul>
             </div>
           )}

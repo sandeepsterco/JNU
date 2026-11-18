@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef } from 'react'
-import { usePathname } from 'next/navigation'
+import { usePathname, useSearchParams } from 'next/navigation'
 
 const HIDE_SECTIONS = ['.testim_sec']
 
@@ -15,15 +15,18 @@ export default function HeaderScroll({
     const headerRef = useRef<HTMLElement>(null)
     const lastScrollTop = useRef(0)
     const pathname = usePathname()
+    const searchParams = useSearchParams()
+    const isSchoolFacultyDetail = !customClass && Boolean(searchParams.get('school'))
 
     const isHomePage = pathname === '/'
     const isProgramPage = pathname.includes('program')
-    const isSchoolPage = pathname.includes('school')
+    const isSchoolPage = pathname.includes('school') && !pathname.includes('schools')
     const isDepartmentPage = pathname.includes('department')
+    const hasSchoolHeaderClass = customClass?.split(/\s+/).includes('school_header') ?? false
 
-    const baseClass = `${customClass || ''} main_header ${
+    const baseClass = `main_header ${
         isHomePage ? 'home_header' : isProgramPage ? 'inner_header' : ''
-    }`
+    } ${customClass || ''} `
 
     useEffect(() => {
         const header = headerRef.current
@@ -77,7 +80,7 @@ export default function HeaderScroll({
             }
     
             // school_header should only be present on school & department pages, and only at the top
-            if (isSchoolPage || isDepartmentPage) {
+            if (isSchoolPage || isDepartmentPage || hasSchoolHeaderClass) {
                 header.classList.toggle('school_header', scrollTop <= 0)
             } else {
                 header.classList.remove('school_header')
@@ -89,7 +92,9 @@ export default function HeaderScroll({
         onScroll()
         window.addEventListener('scroll', onScroll, { passive: true })
         return () => window.removeEventListener('scroll', onScroll)
-    }, [pathname, isSchoolPage, isDepartmentPage])
+    }, [pathname, isSchoolPage, isDepartmentPage, hasSchoolHeaderClass])
+
+    if (isSchoolFacultyDetail) return null
 
     return (
         <header ref={headerRef} className={baseClass}>

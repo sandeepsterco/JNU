@@ -16,7 +16,7 @@ export default async function SchoolLayout({
 }) {
   const { school } = await params;
 
-  const {data, error} = await apiFetch(`school/${school}/programs`);
+  const {data, error} = await apiFetch(`school/${school}/faculty`);
 
   if(error || !data.status){
       return notFound();

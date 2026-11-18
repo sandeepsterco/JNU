@@ -14,6 +14,7 @@ interface ProgramPropsInterface {
   specialization?: string;
   programsData: ProgramsDataInterface[];
   currentSlug: string;
+  schoolSlug?: string;
   data: any;
 }
 
@@ -25,6 +26,7 @@ export default function ProgramMainData({
   specialization,
   programsData,
   currentSlug,
+  schoolSlug,
   data,
 }: ProgramPropsInterface) {
   const [loading, isDataLoading] = useState(false);
@@ -44,6 +46,7 @@ export default function ProgramMainData({
           key={`${search ?? ""}-${school ?? ""}-${duration ?? ""}-${degree ?? ""}-${specialization ?? ""}`}
           programsData={programsData}
           currentSlug={currentSlug}
+          schoolSlug={schoolSlug}
           filters={{ search, school, duration, degree, specialization }}
           hasMoreInitially={Boolean(data?.next_page_url)}
           loading={loading}

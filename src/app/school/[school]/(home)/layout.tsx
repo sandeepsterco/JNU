@@ -13,9 +13,8 @@ export default async function SchoolLayout({
 
   return (
     <>
-      <SchoolHeader parentSlug="school" slug={school} />
+      <SchoolHeader parentSlug="school" slug={school} customClass="school_home_header" />
       <MainWrapper>{children}</MainWrapper>
     </>
   );
 }
-

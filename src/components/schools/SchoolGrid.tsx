@@ -28,7 +28,7 @@ export default function SchoolGrid({
             <Image
               src={item.image || "/images/placeholders/faculty.webp"}
               alt={item.name ?? "Leadership member"}
-              width={475}
+              width={475} 
               height={484}
               className="img-fluid"
               loading="lazy"
@@ -40,13 +40,13 @@ export default function SchoolGrid({
             {item.designation && <p>{item.designation}</p>}
           </div>
 
-          {/* {item.slug && (
+          {item.slug && item.slug.includes('school-of-engineering-technology') && (
             <Link
               href={`${BASE_URL}school/${item.slug}`}
               className="overlap_btn"
               aria-label={`View ${item.name ?? "leadership member"}`}
             />
-          )} */}
+          )}
         </div>
       ))}
     </div>
