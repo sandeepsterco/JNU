@@ -27,7 +27,7 @@
 
 @media(max-width:1536px){
     .school_banner .container-fluid{padding-inline:4.5rem;}
-    .school_banner_content{top:6rem;bottom:10rem;}
+    .school_banner_content{top:8.5rem;bottom:10rem;}
     .school_filter p{padding-right:1rem;}
     .sch_dropdown > .dropdown_toggle{padding-block:0.5rem;padding-right:1.8rem;}
     .sch_dropdown > .dropdown_toggle:after{width:1rem;height:1rem;background-size:1rem;}
