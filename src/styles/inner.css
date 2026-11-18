@@ -2741,6 +2741,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .patent_publi_main .patent_table_sec:not(:last-child) { padding-bottom: 7rem; }
 .nirf_overview {padding-top: 12rem;}
 .career_pathwaymain {padding-block: 12rem;}
+.career_pathwaymain .jnu_title_header{margin-bottom: 4.5rem;}
 .career_path_grid .inno_incubx{text-align: left;}
 .career_pathbx:not(:last-child) { padding-bottom: 7rem; }
 .career_pathbx .jnu_title_header{text-align: left;}
@@ -3022,3 +3023,51 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .details_data h4{margin-top:5rem;margin-bottom:2rem;}
 
 /* allied health science facility page css ends here */
+
+/* language about us css starts here */
+
+.sll_grid{grid-template-columns:85rem auto;align-items:center;gap:2.5rem;display:grid;margin-bottom:1.8rem;}
+.sll_content{padding-inline:12.5rem 26rem;}
+.sll_content p{font:var(--font-16);font-weight:300;}
+.sll_content h4{font:var(--font-24);color:var(--color-black);font-weight:300;margin-bottom:2.8rem;}
+.sll2_grid{grid-template-columns:auto 60rem;align-items:center;gap:2.5rem;display:grid;}
+.sll2_content{padding-inline:0 14.3rem;}
+.sll2_content p{font:var(--font-16);font-weight:300;}
+.about_slls{padding-block:12rem 12rem;}
+.about_slls .health_cont{margin:0 5rem 8rem;}
+.slls_sec2{padding-block:12rem 15rem;position:relative;}
+.slls_sec2 .slls_overlay2{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:auto;z-index:1;background-color:#CF1E62;overflow:hidden;}
+.slls_sec2 figure{position:relative;z-index:2;}
+.slls_content{text-align:center;margin-bottom:9.3rem;position:relative;z-index:2;}
+.slls_content p{color:var(--color-white);font:var(--font-21);font-weight:300;line-height:1.6;}
+.slls_imggrid{grid-template-columns:60rem auto;align-items:center;gap:12.5rem;display:grid;margin-top:2.5rem;}
+.slls_imgcont p{font:var(--font-16);font-weight:300;}
+
+/* language about us css ends here */
+
+/* language facility css starts here */
+
+.facility_slls{padding-block:12rem 12rem;}
+.facility_slls_cont{margin-bottom:8.6rem;text-align:center;}
+.facility_slls_cont blockquote{font:var(--font-21);color:var(--color-23);margin-bottom:0;font-weight:300;line-height:1.6;}
+.facility2_content{margin-top:8.7rem;text-align:center;}
+.facility2_content p{font:var(--font-16);color:var(--color-00);max-width:90%;margin:0 auto;font-weight:300;line-height:1.6;}
+.facility_slls3_grid{grid-template-columns:auto 85rem;gap:2.5rem;display:grid;margin-bottom:4rem;}
+.facility_slls3_pera p{font:var(--font-16);color:var(--color-00);font-weight:300;line-height:1.6;margin-bottom:2rem;}
+.facility_slls3_pera{margin-right:12.5rem;margin-top:3.6rem;}
+.facility_slls4_grid{grid-template-columns:85rem auto;gap:2.5rem;display:grid;}
+.facility_slls3{position:relative;overflow:hidden;padding-bottom:15rem;}
+.facility_slls3 .slls_overlay2{position:absolute;left:0;right:0;bottom:0;background-color:#cf1e62;z-index:-1;height: 68rem;}
+.facility_slls4_cont p{font:var(--font-16);color:var(--color-white);margin:0 10rem 0 13rem;padding-block:10rem 8rem;padding-inline:0;font-weight:300;line-height:1.6;border-bottom:1px solid #F9CE2E;}
+.facility_slls4_cont{display:flex;flex-direction:column;height:100%;}
+.facility_slls4_grid > figure img,.facility_slls3_grid > figure img{object-fit:cover;}
+.facility_slls4_grid > figure,.facility_slls4_grid > figure img,.facility_slls3_grid > figure,.facility_slls3_grid > figure img{height:100%;}
+.facility_slls4{padding-block:12rem 15rem;}
+.facility_slls55_cont p{font:var(--font-16);color:var(--color-00);margin-bottom:2rem;font-weight:300;line-height:1.6;}
+.facility_slls5_grid{grid-template-columns:auto 72.5rem;gap:2.5rem;display:grid;align-items:center;}
+.facility_slls55_cont blockquote{font:var(--font-21);color:var(--color-23);margin-bottom:4rem;font-weight:300;line-height:1.6;}
+.facility_slls55_cont p{font:var(--font-16);color:var(--color-00);margin-bottom:2rem;font-weight:300;line-height:1.6;}
+.facility_slls55_cont{margin-right:19rem;}
+
+
+/* language facility css ends here */

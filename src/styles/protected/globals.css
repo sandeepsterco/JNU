@@ -239,10 +239,10 @@ blockquote{margin:0;}
 .font36{font:var(--font-36);}
 .font42{font:var(--font-42);}
 .font48{font:var(--font-48);}
-.head_title blockquote{font:var(--font-42); color:var(--color-cf); font-weight: 300;}
+.head_title blockquote{font:var(--font-42); color:var(--color-cf); font-weight: 300; line-height: 1.3;}
 .head_title:has(.font18) blockquote{ margin:2.4rem 0 0;}
 .head_title .font18{ color:var(--color-06); letter-spacing: 2.7px; text-transform: uppercase; font-weight: 600; font-family: var(--poppins);}
-
+.happening_section + .jnu_social_wall{ padding-top: 15rem;}
 @media(max-width:1536px){
   .head_title:has(.font18) blockquote{margin:1rem 0 0;}
   .head_title .font18{letter-spacing: 0.005rem;}
