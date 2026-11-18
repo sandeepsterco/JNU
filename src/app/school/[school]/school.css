@@ -122,7 +122,7 @@
 }
 
 
-.success_speak{padding-block:10rem 15rem;}
+.success_speak{padding-block:16rem 15rem;}
 .success_speak .head_title{text-align:center;}
 .custom_tabs input[type="radio"]{display:none;}
 .custom_tabs .tab_nav{display:flex;gap:1.5rem;border-bottom:1px solid #DFDFDF;justify-content:center;margin-top:2rem;}
@@ -151,10 +151,11 @@
 .swiper-slide:nth-child(even):not(:has(.success_speak_videobx)) .success_speak_bx::before {
     background-image: url(/images/orange-qoute.svg);
 }
+.success_speak .tab_content{ padding-top: 8rem;}
 
 
 .success_speak_bx p{font:var(--font-21);color:var(--color-black);font-weight:300;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden;}
-.success_speak_bx span img{border-radius:100%;width:5.4rem;height:5.4rem;object-fit:cover;object-position:top center;}
+.success_speak_bx span img{border-radius:100%;width:5.4rem;height:5.4rem;min-width: 5.4rem; object-fit:cover;object-position:top center;}
 .success_speak_bx .success_speak_bx_flex *{ color: var(--color-black);}
 .success_speak_bx figure{ margin-bottom: 3rem;}
 .success_speak_bx figure img{ max-width: 5.8rem;margin-top: -4.4rem;}
