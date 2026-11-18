@@ -40,7 +40,7 @@ export default function SchoolGrid({
             {item.designation && <p>{item.designation}</p>}
           </div>
 
-          {item.slug && (
+          {item.slug && item.slug.includes('school-of-engineering-technology') && (
             <Link
               href={`${BASE_URL}school/${item.slug}`}
               className="overlap_btn"
