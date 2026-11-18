@@ -171,10 +171,10 @@ function TestimonialCard({ item }: { item: TestimonialDataInterface }) {
         <div className="success_speak_bx">
             {item.description && <p>{item.description}</p>}
             <div className="success_speak_bx_flex">
-                {item.profile_image && (
+                {item.image && (
                     <span>
                         <Image
-                            src={item.profile_image}
+                            src={item.image}
                             alt={item.name}
                             className="img-fluid"
                             loading="lazy"
