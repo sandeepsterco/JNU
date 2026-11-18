@@ -240,16 +240,12 @@
 .sas_misgrid .sas_mission ul li:before{background-color:var(--color-f2);width:0.7rem;height:0.7rem;}
 
 
-
-
 .sasabt_heighlight{padding-bottom:4.3rem;}
 .sasabt_heighlight .jnu_title_header{padding-block:10rem 5rem;border-top:1px solid #CECECE;}
-.sch_ab_highlight .sasabt_high_grid{padding-bottom:12rem;}
 .sasabt_high_grid ul{grid-template-columns:repeat(4,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows: 1fr;}
 .sasabt_high_grid ul>li{background:var(--color-white);font:var(--font-16);padding:5.4rem 1.8rem 6.9rem;font-weight:300;line-height:1.6;list-style:none;text-align:center;position:relative;}
 .sasabt_high_grid ul>li::before{content:"";z-index:9;background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
-.sch_facilities{padding-block:12rem;}
-.sch_facilities .jnu_title_header{padding-inline:5rem;}
+
 
 .sasachiv_sec{padding-bottom:15.2rem;}
 .sasachiv_sec .jnu_title_header{margin-bottom:5rem;text-align:left;}
@@ -261,7 +257,7 @@
 .sasachiv_caption>p{font:var(--font-16);font-weight:300;line-height:1.6;}
 .sasabt_heighlight { padding-bottom: 4.3rem; }
 .sasabt_heighlight .jnu_title_header{padding-block: 10rem 5rem;border-top: 1px solid #CECECE;}
-.sch_ab_highlight .sasabt_high_grid{padding-bottom: 12rem;}
+.sasabt_heighlight .jnu_title_header .font21{margin-bottom: 0;}
 .sasabt_high_grid ul { grid-template-columns: repeat(4, 1fr); gap: 2.5rem; padding: 0; display: grid; }
 .sasabt_high_grid ul>li { background: var(--color-white); font: var(--font-16); padding: 5.4rem 1.8rem 6.9rem; font-weight: 300; line-height: 1.6; list-style: none; text-align: center; position: relative; }
 .sasabt_high_grid ul>li::before{ content: ""; z-index: 9; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 60%, var(--color-fa) 60%, var(--color-fa) 100%); width: 100%; max-width: 10rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0rem; left: 0; right: 0rem;}
@@ -270,3 +266,58 @@
 
 .research_section .research_header{ border-top: 1px solid rgba(6, 63, 138, 0.25); padding-top: 15rem;}
 .school_research_section .research_header .head_title{ max-width: 50%;}
+/* SBM About Aria Start */
+.sbmabt_sec{position:relative;padding-block:12rem 10rem;}
+.sbmabt_sec:before{content:"";z-index:-1;background-image:url(/images/back_pattern.svg);background-repeat:repeat;background-size:contain;width:100%;height:45rem;position:absolute;top:0;bottom:0;left:0;}
+.sbmabt_sec .head_title{text-align: center; margin-bottom:8.4rem;padding-inline:4.5rem;}
+.sbmabt_sec .head_title>blockquote{margin-bottom: 1.2rem;}
+.sbmabt_sec .head_title>h5{font:var(--font-24);font-weight:300;color:var(--color-black);margin-bottom:6rem;}
+.sbmabt_sec .head_title>p{font:var(--font-21);font-weight:300;line-height: 1.7; color:var(--color-black);}
+
+.sbmabt_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;}
+.sbmabt_grid>figure:nth-child(3){max-width:60rem;margin-left:auto;}
+.sbmabt_caption{padding-top:3.9rem;padding-inline:5.7rem 12.5rem;}
+.sbmabt_caption>p{font:var(--font-16);font-weight: 300; color:var(--color-black);}
+
+/* SBM Heighligh Aria */
+.sbmabt_heighlight{padding-bottom:4.3rem;}
+.sbmabt_heighlight .jnu_title_header{padding-block:10rem 5rem;border-top:1px solid #CECECE;}
+.sbmabt_heighlight .jnu_title_header .font21{margin-bottom: 0;}
+.sbmabt_high_grid ul{grid-template-columns:repeat(4,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows:1fr;}
+.sbmabt_high_grid ul>li{background:var(--color-white);font:var(--font-16);padding:5.4rem 1.8rem 6.9rem;font-weight:300;line-height:1.6;list-style:none;text-align:center;position:relative;}
+.sbmabt_high_grid ul>li::before{content:"";background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
+
+/* SBM Mission Vision Aria */
+.sbm_misgrid{grid-template-columns:repeat(2,1fr);gap:2.5rem;display:grid;margin-top:2.9rem;}
+.sbm_misgrid .sbm_vision{position:relative;background-color:var(--color-cf);padding:8.4rem 11.2rem 8.4rem 11.3rem;}
+.sbm_misgrid .sbm_mission{padding:8.4rem 5rem 8.4rem 12.5rem;}
+.sbm_misgrid .sbm_vision::before{content:"";z-index:0;opacity:.4;background-image:url(/images/vision-texture.svg);background-repeat:no-repeat;background-size:cover;width:100%;height:100%;position:absolute;top:0;bottom:0;right:0;}
+.sbm_misgrid h5{margin-bottom:5rem;color:var(--color-cf);font-weight:500;}
+.sbm_misgrid .sbm_vision h5{color:var(--color-white);}
+.sbm_misgrid .sbm_vision blockquote{font:var(--font-21);color:var(--color-white);font-weight:300;line-height:3.6rem;}
+.sbm_misgrid .sbm_mission blockquote{font:var(--font-21);color:var(--color-black);font-weight:300;line-height:3.6rem;}
+.sbmabt_figure{margin-top: 8rem;}
+
+
+.sbmhead_sec{padding-bottom: 0;}
+
+/* SBM Achivments Aria */
+.sbmachive_sec{position:relative;padding-block:2.5rem 10rem;}
+.sbmachive_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;}
+.sbmachive_caption{background-color:var(--color-white);padding:15.3rem 21.6rem 15.3rem 14.9rem;}
+.sbmachive_caption>h5{font-weight:var(--fw-500);color:var(--color-cf);margin-bottom:5rem;}
+.sbmachive_caption>ul{padding:0;margin:0;}
+.sbmachive_caption>ul>li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;padding-left:2.4rem;list-style:none;position:relative;}
+.sbmachive_caption>ul>li::before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}
+
+
+/* SBM Teaching Pedagogies */
+.sbmtp_sec{padding-block:5rem 4.3rem;}
+.sbmtp_sec .jnu_title_header{margin-bottom: 4rem;}
+.sbmtp_sec .jnu_title_header .font21{margin-bottom: 0;}
+.sbmtp_sec .jnu_title_header p{font:var(--font-16);font-weight:300;margin-top:2.4rem;padding-inline:10rem;}
+.sbmtp_grid{grid-template-columns:repeat(4,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows:1fr;padding-inline:4.1rem;}
+.sbmtp_grid>.sbmtp_item{background:var(--color-white);text-align:center;padding:6.5rem 2.6rem 6.9rem;position:relative;}
+.sbmtp_grid>.sbmtp_item::before{content:"";background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
+.sbmtp_grid>.sbmtp_item>h5{font:var(--font-21);font-weight: 300; margin-bottom: 1.6rem;}
+.sbmtp_grid>.sbmtp_item>p{font:var(--font-16);font-weight:300;}
