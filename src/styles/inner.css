@@ -3024,3 +3024,22 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .details_data h4{margin-top:5rem;margin-bottom:2rem;}
 
 /* allied health science facility page css ends here */
+
+
+
+
+/* SCSS About page css */
+.scs_sch_about { padding-block: 12rem 0rem; }
+.scs_sch_about .jnu_title_header { padding-bottom: 8rem; }
+.scs_sch_about .scss_abt_grid { grid-template-columns: 57.65% auto; display: grid; align-items: center; margin-bottom: 1.8rem; gap: 2.5rem; }
+.scss_abt_grid .scss_abt_rgt { padding-left: 12.5rem; }
+.scss_abt_grid .scss_abt_rgt .font24 { font-weight: var(--fw-300); line-height: 1.5; margin-bottom: 2.8rem; padding-right: 2.1rem; }
+.scss_abt_grid .scss_abt_rgt p { font: var(--font-16); font-weight: var(--fw-300); padding-right: 3rem; }
+.scs_sch_about .scss_abt_grid_two { grid-template-columns: 57.65% auto; display: grid; align-items: center; margin-bottom: 1.8rem; gap: 2.5rem; }
+.scs_sch_about .scss_abt_grid_two .scss_abt_lftcon { max-width: 45.7rem; margin-right: 14rem; margin-left: auto; }
+.scs_sch_about .scss_abt_grid_two .scss_abt_lftcon p { font: var(--font-16); font-weight: var(--fw-300); }
+.scss_abt_gridmain {    margin-right: 10.6rem;}
+
+.scss_vis_mis .custom_lists li{font: var(--font-16);font-weight: var(--fw-300);}
+
+.scss_vis_mis .sbm_misgrid .sbm_mission {    padding: 3.6rem 5rem 0rem 12.5rem;}
