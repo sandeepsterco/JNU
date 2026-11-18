@@ -28,7 +28,7 @@ export default function SchoolGrid({
             <Image
               src={item.image || "/images/placeholders/faculty.webp"}
               alt={item.name ?? "Leadership member"}
-              width={475}
+              width={475} 
               height={484}
               className="img-fluid"
               loading="lazy"
