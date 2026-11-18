@@ -166,7 +166,7 @@
 .faq_section .arrow_box img{  filter: brightness(0) invert(1);}
 .faq_section .arrow_box:hover { border-color: var(--color-cf);}
 @media(max-width:1536px){
-    .success_speak{padding-block:5rem 10rem;}
+    .success_speak{padding-block:10rem 0rem;}
     .success_speak .container{max-width:min(1118px, 81.8448023vw);}
     .success_speak_bx p{font:var(--fw-300) 1.3rem / 1.5 var(--stack)}
     .success_speak_bx:before{width:3.8rem;height:2.7rem;top:-1.3rem;left:2rem;}
@@ -177,6 +177,8 @@
     .success_speak_bx span img{width:4rem;height:4rem;}
     .custom_tabs .tab_nav label{letter-spacing:0.17rem;padding:0.5rem 1rem 1rem;border-bottom:.2rem solid #0000;}
     .success_speak .swiper-wrapper{padding-top:3rem;}
+    .success_speak .tab_content { padding-top: 3rem; }
+
 }
 
 
@@ -313,12 +315,26 @@
 
 
 /* SBM Teaching Pedagogies */
-.sbmtp_sec{padding-block:5rem 4.3rem;}
+.sbmtp_sec{padding-block:5rem 8rem;}
 .sbmtp_sec .jnu_title_header{margin-bottom: 4rem;}
 .sbmtp_sec .jnu_title_header .font21{margin-bottom: 0;}
 .sbmtp_sec .jnu_title_header p{font:var(--font-16);font-weight:300;margin-top:2.4rem;padding-inline:10rem;}
 .sbmtp_grid{grid-template-columns:repeat(4,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows:1fr;padding-inline:4.1rem;}
 .sbmtp_grid>.sbmtp_item{background:var(--color-white);text-align:center;padding:6.5rem 2.6rem 6.9rem;position:relative;}
 .sbmtp_grid>.sbmtp_item::before{content:"";background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
-.sbmtp_grid>.sbmtp_item>h5{font:var(--font-21);font-weight: 300; margin-bottom: 1.6rem;}
+.sbmtp_grid>.sbmtp_item>h5{font:var(--font-21);font-weight:300;color:var(--color-23);margin-bottom:1.6rem;}
 .sbmtp_grid>.sbmtp_item>p{font:var(--font-16);font-weight:300;}
+
+
+/* SBM Specializations */
+.sbmsplz_sec{position: relative; padding-block:8.2rem 13.6rem;z-index: 1;}
+.sbmsplz_sec::after{content:"";z-index:-1;background:url(/images/sbmsplz-bg.svg) #CF1E62;background-size:cover;background-repeat:no-repeat;background-position:center;width:100%;height:calc(100% - 37%);position:absolute;bottom:0;left:0;}
+.sbmsplz_sec .jnu_title_header{margin-bottom:4rem;}
+.sbmsplz_sec .jnu_title_header .font21{margin-bottom:0;}
+.sbmsplz_sec .jnu_title_header p{font:var(--font-16);font-weight:bold;margin-top:0.7rem;}
+.sbmsplz_grid{grid-template-columns:repeat(3,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows:1fr;padding-inline:4.1rem;}
+.sbmsplz_grid>.sbmsplz_item{background:var(--color-white);padding:5.7rem 3.1rem;position:relative;}
+.sbmsplz_grid>.sbmsplz_item>h6{font:var(--font-16);line-height:1.8;font-weight:500;color:var(--color-black);margin-bottom:2.3rem;}
+.sbmsplz_grid>.sbmsplz_item>ul{padding:0;margin:0;}
+.sbmsplz_grid>.sbmsplz_item>ul>li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:0.5rem;padding-left:2.4rem;list-style:none;position:relative;}
+.sbmsplz_grid>.sbmsplz_item>ul>li::before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}

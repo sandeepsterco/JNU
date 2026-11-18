@@ -26,7 +26,7 @@
 
 
 @media(max-width:1536px){
-    .placement_section{padding-block:10rem 0;}
+    .placement_section{padding-block:5rem 0;}
     .placement_section .max-container-lg{padding-inline: 1.5rem;}
     .placement_wrapper{padding-block:4.2rem 0;} 
     .placement_wrapper>.container{max-width: 100%;padding-inline: 9.2rem 16.7rem;}
@@ -48,6 +48,8 @@
     .placement_cnt figcaption{font:var(--fw-600) 1.6rem/1.5  var(--stack);}
     .placement_cnt figcaption span{font-weight: normal;}
     .placement_logos{padding-block:3.9rem;}
+    .alumni_slider_section .swiper-slide .alumni_img img{ max-height: 20rem;}
+    .alumni_msg_desc{ min-height: 6.5rem;}
 }
 
 @media(max-width:991px){
