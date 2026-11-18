@@ -11,6 +11,27 @@
 .leadership_Bx figure{position:relative;z-index:0;overflow:hidden;}
 .leadership_Bx figure:after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-image:url("/images/leader_ship_bgimg.webp");background-repeat:no-repeat;background-position:center;pointer-events:none;}
 .leadership_cnt::after{content:"";position:absolute;bottom:0;left:0;width: 100%; max-width:29rem;height:0.4rem;right:0;margin:auto;background:linear-gradient(to right,var(--color-cf) 0%,var(--color-cf) 85%,var(--color-f9) 85%,var(--color-f9) 100%);}
+.leadership_Bx.pulication_sch_list .leadership_cnt {
+    background-color: var(--color-white);
+    text-align: center;
+    height: 100%;
+    padding: 5rem 3.7rem;
+    position: relative;
+}
+.leadership_Bx.pulication_sch_list span {
+    border: 1px solid var(--color-cf);
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-inline: auto;
+    padding: .4rem .9rem .4rem 1.1rem;
+    display: flex;
+}
+.leadership_Bx.pulication_sch_list .leadership_cnt:after {
+    max-width: 100%;
+}
 
 @media(max-width:1536px){
     .leadership_section{padding-block:7rem;}
@@ -882,6 +903,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .audio_con span { display: inline-block; margin-bottom: 1.3rem; }
 .tab_heading { cursor: pointer; border-radius: 0; padding: 3rem 4rem; position: relative; }
 .tab_content { overflow-y: hidden; height: 0; transition: 0.5s ease; }
+.school-page .tab_content{height:auto;}
 .e_resourcemain .accordion_tab.accordion_active .tab_heading h5::before { content: "−"; }
 .e_resourcemain .accordion_tab .tab_heading h5::before { content: "+"; position: absolute; left: -3rem; top: 50%; transform: translateY(-50%); font: var(--font-24); line-height: 1; font-weight: 200; }
 .e_resourcemain .accordion_tab.accordion_active { border-bottom: 0px dashed rgba(255, 255, 255, 0.49); }
@@ -2597,11 +2619,11 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .inno_listing ul.custom_lists li{ margin-bottom: 2.5rem;}
 .inno_listing ul.custom_lists li::before{ width: 0.7rem; height: 0.7rem; background-color: var(--color-f2);}
 .sch_dir_msg_grid figure { position: sticky; top: 10rem; height: auto;}
-.sch_dir_msg_grid figure::before{content:""; position:absolute; top:-3.7rem; left:3rem; width:9.4rem; height:7.6rem; background:url(/images/quote.svg) no-repeat;}
+.sch_dir_msg_grid figure::before{content:""; position:absolute; top:-3.7rem; left:3rem; width:9.4rem; height:7.6rem; background:url(/images/quote.svg) no-repeat; background-size: cover;}
 .sch_dir_msg_content h3 { font: var(--font-48); letter-spacing: -0.48px; color: var(--color-cf); margin-bottom: 1rem; font-weight: 500; }
 .sch_dir_msg_content blockquote { font: var(--font-24); color: var(--color-black); margin-bottom: 3.2rem; font-weight: 300;line-height: 1.5; }
 .sch_dir_msg_content p { font: var(--font-16); font-weight: 300; }
-.sch_dir_msg_author { padding-top: 1rem; }
+.sch_dir_msg_author { padding-top: 3.2rem; }
 .sch_dir_msg_author h4 { margin-bottom: 2.4rem; font: var(--font-24); }
 .sch_dir_msg_author .designation { font: var(--font-18); font-weight: 300; }
 .sch_dir_msg_content .load_more_btn { padding-top:0; display: inline-block; }
@@ -2719,6 +2741,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .patent_publi_main .patent_table_sec:not(:last-child) { padding-bottom: 7rem; }
 .nirf_overview {padding-top: 12rem;}
 .career_pathwaymain {padding-block: 12rem;}
+.career_pathwaymain .jnu_title_header{margin-bottom: 4.5rem;}
 .career_path_grid .inno_incubx{text-align: left;}
 .career_pathbx:not(:last-child) { padding-bottom: 7rem; }
 .career_pathbx .jnu_title_header{text-align: left;}
@@ -2819,6 +2842,12 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .tab_contbx .custm_bullets.grid_2 {display: grid;grid-template-columns: repeat(2,1fr);gap: 0;margin-block: 3rem;}
 .tab_contbx .custm_bullets.grid_2>li{margin-block: 0 2.5rem;}
 /* book campus visit css ends here */
+.abu_committ_mainsec.hero_bg_pattern .jnu_title_header{display: none;}
+.testimo_sec {padding-bottom: 8rem;}
+.testimo_bottom>h3{margin-bottom: 3.2rem;font: var(--font-42);letter-spacing: -1.26px;font-weight: 300;text-transform: capitalize;}
+.testimo_bottom>ul{display: grid;grid-template-columns: repeat(2,1fr);margin-block: 4rem 0;}
+
+.testimo_bottom>.custm_bullets > li{gap: 0;margin-top: 0;}
 .abu_committ_mainsec.hero_bg_pattern .jnu_title_header { display: none; }
 .testimo_sec { padding-bottom: 8rem; }
 .testimo_bottom>h3 { margin-bottom: 3.2rem; font: var(--font-42); letter-spacing: -1.26px; font-weight: 300; text-transform: capitalize; }
@@ -2888,3 +2917,110 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .testimo_bottom>ul{display: grid;grid-template-columns: repeat(2,1fr);margin-block: 4rem 0;}
 
 .testimo_bottom>.custm_bullets > li{gap: 0;margin-top: 0;}
+
+
+/* GS12112026 */
+ .plament_regist_main{margin-top: 3rem;}
+.plament_regist_main .form-control { width: 100%; height: 4.2rem; background: transparent; border: 1px solid rgba(112, 112, 112, 0.25); color: var(--color-black); padding: 1rem 1.5rem; outline: none; }
+.plament_regist_main label { margin-bottom: 1rem; display: inline-block; }
+.plament_regist_main .form_group, .frm_checkbx_group { margin-bottom: 2.3rem; position: relative; }
+.place_regist_bx { background-color: var(--color-white); padding:3rem 4.5rem; margin-bottom: 3rem; }
+.place_regist_bx .com_ftitle .font24 { margin-block: 3rem 2.5rem; }
+.place_regist_bx .comfrm_col> label { margin-bottom: 1.5rem; }
+.place_regist_bx input::-webkit-file-upload-button,
+.place_regist_bx input .file-upload-button { -webkit-appearance: button; font-size: inherit; font-weight: 600; color: #fff; background: var(--color-cf); padding: .7em .9em; cursor: pointer; border: 0; border-radius: 0; }
+.place_fil_upload  .form-control { border: none; padding: 0; }
+.place_regist_bx input[type="checkbox"],
+.place_regist_bx input[type="radio"] { accent-color: var(--color-cf); }
+.plament_regist_main select.form-control{color: #727171;}
+.declation_sec  .com_ftitle p ,.com_ftitle p{font: var(--font-16);font-weight: var(--fw-300);margin-bottom: 3rem;}
+.plament_regist_main .frm_checkbx_group .frm_chcbx{display: flex;align-items: center;gap: 0.8rem;}
+.plament_regist_main .frm_checkbx_group .frm_chcbx label{margin-bottom: 0;}
+.plament_regist_main .frm_checkbx_group input{height:  3rem;width: 1.5rem;}
+.plament_regist_main input[type="checkbox"] { accent-color: var(--color-cf); }
+.consent_fm .frm_chcbx{display: flex; gap: 1rem;}
+.frm_checkbx_group label{font: var(--font-16);font-weight: var(--fw-300);}
+.comfrm_col button { width: auto; height: 4.3rem;     padding-inline: 1.5rem;font: var(--font-18); border: 1px solid var(--color-ff); cursor: pointer; background: linear-gradient(to right, var(--color-cf) 50%, var(--color-ff) 50%); color: #000; background-position: 100% 100%; background-size: 200% 100%; margin-top: 4rem; transition: all .35s; }
+.comfrm_col button:hover { color: #fff; background-position: 0 100%; border: 1px solid #fff; }
+
+
+.school_testimonial_detail_page{padding-block: 11rem; position: relative;}
+.school_testimonial_detail_page .description{margin-top:4rem;}
+.school_testimonial_detail_image{margin-top:4rem;}
+
+.even_back{text-align: center; margin-bottom: 12rem;}
+
+/* allied health science about us page css starts here */
+
+.health_about{padding-block:12rem 0;}
+.health_cont blockquote{font:var(--font-21);color:var(--color-23);margin-bottom:0;font-weight:300;line-height:1.6;}
+.health_cont{text-align:center;margin:0 3rem 8rem;}
+.health_img{grid-template-columns:repeat(2,1fr);display:grid;gap:2rem;margin-bottom:6rem;}
+.health_cont1 P{font:var(--font-16);color:var(--color-00);font-weight:300;line-height:1.6;max-width:90%;margin:0 auto;}
+.health_cont1{text-align:center;border-bottom:1px solid #CECECE;padding-bottom:8rem;}
+.health_hight{padding-block:10rem 8.5rem;}
+.health_list h4{color:var(--color-cf);margin-bottom:5rem;font-weight:500;text-align:center;}
+.health_list ul{padding:0;margin:0;display:grid;grid-template-columns:repeat(4,1fr);gap:2.6rem;}
+.health_list ul li{background:var(--color-white);font:var(--font-16);text-align:center;padding-block:4.8rem 5.5rem;padding-inline:4.1rem;font-weight:300;line-height:1.6;list-style:none;position:relative;}
+.health_list ul li:before{content:"";z-index:9;background:linear-gradient(to right,var(--color-fa) 0%,var(--color-fa) 40%,var(--color-cf) 40%,var(--color-cf) 100%);width:30%;max-width:30%;height:2px;margin:0 auto;position:absolute;bottom:0;left:0;right:0;}
+.vision_grid{display:grid;grid-template-columns:repeat(2,1fr);}
+.vision_list{background-color:var(--color-cf);padding:6.5rem 14rem 10rem 15rem;position:relative;}
+.vision_list h4{font:var(--font-21);margin-bottom:5rem;font-weight:500;color:var(--color-white);position:relative;z-index:1;}
+.vision_list ul li{list-style:none;position:relative;font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;padding-left:2.4rem;color:var(--color-white);position:relative;z-index:1;}
+.vision_mission{padding:6.5rem 6rem 10rem 15rem;position:relative;}
+.vision_mission h4{font:var(--font-21);margin-bottom:5rem;font-weight:500;color:var(--color-cf);}
+.vision_mission ul,.vision_list ul{padding:0;margin:0;}
+.vision_mission ul li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;list-style:none;position:relative;padding-left:2.4rem;}
+.vision_mission ul li:before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}
+.vision_list ul li:before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}
+.vision_list .overlays{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:100%;}
+.health_vision{padding-block:0 10rem;}
+.health_btom{padding-block:12rem 15rem;padding-inline:13.5rem;position:relative;}
+.health_btom_msg{background:url(/images/director_msg.webp) 0 0 / cover;padding-top:12.5rem;position:relative;}
+.health_btom_msg:after{content:"";content:"";background:url(/images/school_dean_path.svg) right 0 center no-repeat;background-color:var(--color-06);width:65.8rem;height:100%;position:absolute;top:0;left:0;background-repeat:no-repeat;background-size:cover;}
+.health_btom_grid{z-index:9;grid-template-columns:60rem auto;gap:15rem;padding-right:6rem;display:grid;position:relative;}
+.health_btom_grid figure{height:auto;position:sticky;top:10rem;}
+.health_btom_grid figure:before{content:"";background:url(/images/quote.svg) no-repeat;width:15.4rem;height:11rem;position:absolute;top:-3.7rem;left:3rem;}
+.health_btom_content h5{font:var(--font-21);color:var(--color-cf);margin-bottom:3.2rem;font-weight:500;line-height:1.5;}
+.health_btom_content blockquote{font:var(--font-24);color:var(--color-black);margin-bottom:3.2rem;font-weight:300;line-height:1.5;}
+.health_btom_conbx p{font:var(--font-16);font-weight:300;}
+.health_btom_msg .load_more_btn{justify-content:flex-start;margin:3.2rem 0 0;padding:0;}
+.abt_social ul{padding:0;margin:0;display:flex;gap:1.2rem;}
+.abt_social ul li img{max-width:3.2rem;}
+.abt_social{margin-top:3.2rem;}
+.health_btom_content{margin:3rem 0;}
+
+/* allied health science about us page css ends here */
+
+/* allied health science facility page css starts here */
+
+.faci_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7rem 2.7rem;}
+.health_facility{padding-block:0 10rem;position:relative;margin-top:10rem;}
+.faci_cont h4{color:var(--color-cf);text-align:center;margin-bottom:5rem;font-weight:500;}
+.health_facility > img{z-index:-1;background-color:#cf1e62;position:absolute;top:22rem;left:0;right:0;}
+.faci_grid_grp{position:relative;}
+.faci_grid figcaption h4{font:var(--font-18);color:var(--color-white);margin-bottom:2rem;font-weight:500;}
+.faci_grid figcaption p{font:var(--font-16);color:var(--color-white);font-weight:300;}
+.faci_grid figcaption{margin-top:3.5rem;margin-right:3rem;}
+.faci_grid figure:nth-child(n+3) figcaption h4,.faci_grid figure:nth-child(n+3) figcaption p{color:var(--color-black);}
+.reach_grid{grid-template-columns:repeat(2,1fr);gap:2.7rem;display:grid;margin-bottom:6.6rem;}
+.fac_reach_para h4{font:var(--font-18);color:var(--color-black);margin-bottom:2rem;font-weight:500;}
+.fac_reach_para p{font:var(--font-16);color:var(--color-black);font-weight:300;}
+.fac_reach_cont{margin-right:21rem;}
+.fac_reach_para:not(:last-child){border-bottom:2px dashed #959595;margin-bottom:3.8rem;padding-bottom:3.8rem;}
+.fac_reach{padding-block:6rem 5rem;}
+.reach_grid2{grid-template-columns:repeat(2,1fr);gap:2.7rem;display:grid;align-items:center;}
+.fac_reach_cont2{padding:0 10rem;}
+.fac_reach2{padding-block:10rem 15rem;}
+.support_grid{display:grid;grid-template-columns:repeat(2,1fr);align-items:center;gap:2.7rem;margin:5.6rem 0;}
+.support_list ul{padding:0;margin:0;}
+.support_list ul li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;padding-left:2.4rem;list-style:none;position:relative;color:var(--color-black);}
+.support_list ul li:before{content:"";background-color:var(--color-f9);border-radius:50%;width:.7rem;height:.7rem;position:absolute;top:.9rem;left:0;}
+.support_list{margin-right:12.5rem;}
+.fac_reach_ttl h4{font:var(--font-18);color:var(--color-black);margin-bottom:2rem;font-weight:500;}
+.fac_reach_ttl p{font:var(--font-16);color:var(--color-black);font-weight:300;}
+.fac_reach_ttl2 p{font:var(--font-16);color:var(--color-black);font-weight:300;}
+.fac_reach_ttl2{max-width:80%;}
+.details_data h4{margin-top:5rem;margin-bottom:2rem;}
+
+/* allied health science facility page css ends here */

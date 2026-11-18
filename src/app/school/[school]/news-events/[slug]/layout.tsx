@@ -42,6 +42,7 @@ export default async function NewsDetailLayout({ children, params }: Readonly<{ 
                 </div>
             </section>
             {combinedHTML === '' ? <NoData /> : children}
+            
         </>
     )
 }

@@ -10,6 +10,12 @@ interface FacultyFilterProps {
     onDepartmentChange:(value:string)=>void;
     schoolValue?:string;
     departmentValue?:string;
+    showSchoolFilter?: boolean;
+}
+
+interface FilterOption {
+    id: number;
+    name: string;
 }
 
 const getSchoolData = async()=>{
@@ -40,10 +46,11 @@ const getDepartmentData = async()=>{
     }
 }
 
-export default function FacultyFilter({onSearchChange, onSchoolChange, onDepartmentChange, schoolValue, departmentValue }:FacultyFilterProps) {
+export default function FacultyFilter({onSearchChange, onSchoolChange, onDepartmentChange, schoolValue, departmentValue, showSchoolFilter = true }:FacultyFilterProps) {
     const {data:schoolData, isLoading:schoolLoading, isError, error} = useQuery({
         queryKey:['schools'],
-        queryFn:getSchoolData
+        queryFn:getSchoolData,
+        enabled: showSchoolFilter
     })
 
     const {data:departmentData, isLoading:departmenetLoading, isError:departmentError} = useQuery({
@@ -68,27 +75,29 @@ export default function FacultyFilter({onSearchChange, onSchoolChange, onDepartm
                     <input type="text" className="form-control" value={searchValue} placeholder="Search Faculty" aria-label="Recipient’s username" aria-describedby="button-addon2" onChange={(e)=>setSearchValue(e.target.value)} />
 
                     <button className="btn btn_search" type="button" id="button-addon2">
-                        <img src="images/icons/search-icon.svg" alt="search" className="img-fluid" />
+                        <img src="/images/icons/search-icon.svg" alt="search" className="img-fluid" />
                     </button>
                 </div>
             </div>
 
-            <div className="filter_Bx">
-                <div className="custom_select">
-                    <select className="form-select" aria-label="Default select example" disabled={schoolLoading} value={schoolValue} onChange={(e)=>onSchoolChange(e.target.value)}>
-                        {schoolLoading ? (
-                            <option>Loading Schools...</option>
-                        ) : (
-                            <>  
-                                <option value="">Select School</option>
-                                {schoolData?.map((item:any)=>(
-                                    <option key={item.id} value={item.id}>{item.name}</option>
-                                ))}
-                            </>
-                        )}
-                    </select>
+            {showSchoolFilter && (
+                <div className="filter_Bx">
+                    <div className="custom_select">
+                        <select className="form-select" aria-label="Default select example" disabled={schoolLoading} value={schoolValue} onChange={(e)=>onSchoolChange(e.target.value)}>
+                            {schoolLoading ? (
+                                <option>Loading Schools...</option>
+                            ) : (
+                                <>
+                                    <option value="">Select School</option>
+                                    {schoolData?.map((item: FilterOption)=>(
+                                        <option key={item.id} value={item.id}>{item.name}</option>
+                                    ))}
+                                </>
+                            )}
+                        </select>
+                    </div>
                 </div>
-            </div>
+            )}
 
             <div className="filter_Bx">
                 <div className="custom_select">
@@ -98,7 +107,7 @@ export default function FacultyFilter({onSearchChange, onSchoolChange, onDepartm
                         ) : (
                             <>  
                                 <option value="">Select Department</option>
-                                {departmentData?.map((item:any)=>(
+                                {departmentData?.map((item: FilterOption)=>(
                                     <option key={item.id} value={item.id}>{item.name}</option>
                                 ))}
                             </>

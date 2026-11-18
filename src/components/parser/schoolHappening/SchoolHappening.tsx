@@ -113,18 +113,24 @@ export default function SchoolHappeningGrid({ data }: { data: ISchoolHappening }
     if (!items.length) return null
 
     return (
-        <div className="happening_grid happening_grid_3">
-            {items.map((item, i) => (
-                <div
-                    key={item.slug}
-                    className="happening_col"
-                    data-aos="fade-up"
-                    data-aos-duration="1000"
-                    data-aos-delay={aosDelays[i]}
-                >
-                    <HappeningCard item={item} variant={i === 1 ? "blue" : "image"} />
-                </div>
-            ))}
+        <div className="container">
+            {/* <div className="happening_header school_home">
+                <h5 className="font18">HAPPENINGS@JNU</h5>
+                <a href="/news"><img className="img-fluid" alt="arrow" src="/images/icons/nav-arrow-next.svg" /></a>
+            </div> */}
+            <div className=" happening_grid_3">
+                {items.map((item, i) => (
+                    <div
+                        key={item.slug}
+                        className="happening_col"
+                        data-aos="fade-up"
+                        data-aos-duration="1000"
+                        data-aos-delay={aosDelays[i]}
+                    >
+                        <HappeningCard item={item} variant={i === 1 ? "blue" : "image"} />
+                    </div>
+                ))}
+            </div>
         </div>
     )
 }

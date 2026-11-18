@@ -22,7 +22,6 @@ export default async function SchoolPages({params, searchParams}:{params:Promise
     }
 
     const cmsData = data?.data?.sections ?? {};
-    const modularData = data?.data?.modular ?? {};
 
     const combineHTML = Object.values(cmsData).join('');
 
@@ -30,7 +29,7 @@ export default async function SchoolPages({params, searchParams}:{params:Promise
 
     return (
         <>
-            <ReactParserDynamic html={combineHTML} searchParams={resolvedSearchParams} />
+            <ReactParserDynamic html={combineHTML} data={data} searchParams={resolvedSearchParams} />
         </>
     )
 }

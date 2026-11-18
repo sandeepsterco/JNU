@@ -28,6 +28,10 @@ interface HeaderResponse {
   schoolId?: number;
 }
 
+interface MainHeaderResponse {
+  header: HeaderMenuItem[];
+}
+
 interface SidebarResponse {
   data: HamburgerMenuItem[];
 }
@@ -64,7 +68,7 @@ const HeaderLogo = () => {
         src="/images/logo_white.webp"
         width={596}
         height={68}
-        className="img-fluid logo_white d-none"
+        className="img-fluid logo_white"
         alt="JNU"
         loading="eager"
         fetchPriority="high"
@@ -74,12 +78,33 @@ const HeaderLogo = () => {
 };
 
 export default async function SchoolHeader({parentSlug, slug, customClass}:SchoolHeaderInterface) {
-  const [headerResponse, sidebarResponse] = await Promise.all([
+  const [headerResponse, sidebarResponse, mainHeaderResponse] = await Promise.all([
     apiFetch(`${parentSlug}/${slug}/navigation?q=header`),
     apiFetch(`${parentSlug}/${slug}/navigation?q=sidebar`),
+    apiFetch("header"),
   ]);
 
-  const headerData = (headerResponse.data as HeaderResponse)?.data ?? [];
+  const schoolHeaderData = (headerResponse.data as HeaderResponse)?.data ?? [];
+  const mainHeaderData = (mainHeaderResponse.data as MainHeaderResponse)?.header ?? [];
+  const admissionMenu = mainHeaderData.find((item) =>
+    item.slug?.toLowerCase().includes("admission")
+  );
+  const headerData = admissionMenu
+    ? [
+        {
+          title: "Home",
+          slug: `${slug}`,
+          overwrite_url: "",
+          target_blank: "",
+          display_order: 0,
+          children:[]
+        },
+        ...schoolHeaderData.filter(
+          (item) => !item.slug?.toLowerCase().includes("admission")
+        ),
+        admissionMenu,
+      ]
+    : schoolHeaderData;
   const sidebarData = (sidebarResponse.data as SidebarResponse)?.data ?? [];
   const schoolId = (headerResponse.data as HeaderResponse)?.schoolId;
 

@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -24,6 +24,8 @@ export interface TestimonialDataInterface {
     display_order: number | null;
 }
 
+const EMPTY_TESTIMONIALS: TestimonialDataInterface[] = [];
+
 interface PageDataInterface {
     data: {
         modular: {
@@ -35,10 +37,10 @@ interface PageDataInterface {
 export default function SchoolTestimonial({
     data,
 }: {
-    params?: any;
+    params?: string;
     data: PageDataInterface;
 }) {
-    const testimonials = data?.data?.modular?.testimonials ?? [];
+    const testimonials = data?.data?.modular?.testimonials ?? EMPTY_TESTIMONIALS;
 
     // Group by `type` (Students / Parents / Alumni ...) keeping first-seen order
     const groups = useMemo(() => {
@@ -91,17 +93,15 @@ export default function SchoolTestimonial({
 
             <div className="tab_content">
                 <div className="tab_panel active" role="tabpanel">
-                    <div className="success_speak_slider">
+                    <div className="success_speak_slider" data-react-swiper>
                         {/* key forces Swiper to re-init when the tab changes */}
                         <Swiper
                             key={active.type}
                             className="swiper success_speak_swiper"
+                            modules={[Autoplay]}
                             autoplay={{ delay: 3000, disableOnInteraction: false }}
-                            // modules={[Navigation, Pagination]}
                             spaceBetween={20}
                             slidesPerView={1}
-                            // pagination={{ clickable: true }}
-                            // navigation
                             breakpoints={{
                                 768: { slidesPerView: 2 },
                                 1200: { slidesPerView: 4 },

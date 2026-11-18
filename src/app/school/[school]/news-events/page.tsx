@@ -89,7 +89,7 @@ export default async function NewsEventsPage({ params, searchParams }: PageProps
                     departments={departmentData?.data ?? []}
                 />
                 {featuredNews.length > 0 && (
-                    <FeaturedNews data={featuredNews} />
+                    <FeaturedNews data={featuredNews} slug="news-events" schoolSlug={school} />
                 )}
 
                 {newsAndEvents?.data?.length === 0 ? (
@@ -102,6 +102,7 @@ export default async function NewsEventsPage({ params, searchParams }: PageProps
                         initialData={newsAndEvents?.data ?? []}
                         slug={`${BASE_URL}news-events`}
                         filters={{ school: String(schoolId), department, date }}
+                        schoolSlug={school}
                         hasMoreInitially={Boolean(newsAndEvents?.next_page_url)}
                     />
                 )}

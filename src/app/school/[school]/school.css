@@ -1,13 +1,13 @@
 /* ====================school css================ */
 .school_banner{position:relative;}
 .school_banner::after{background:transparent linear-gradient(180deg,#00000000 0%,#000000 100%) 0% 0% no-repeat padding-box;opacity:0.4;position:absolute;bottom:0;left:0;right:0;content:"";z-index:0;height:70rem;}
-.school_banner_content{position:absolute;top:14rem;bottom:15.7rem;display:flex;flex-direction:column;justify-content:space-between;}
+.school_banner_content{position:absolute;top:12.5rem;bottom:15.7rem;display:flex;flex-direction:column;justify-content:space-between;}
 .school_banner .container-fluid{max-width:var(--mw2545);padding-inline:10rem;}
-.school_filter{display:flex;align-items:center;gap:2rem;}
+.school_filter{display:flex;align-items:center;gap:2rem;z-index: 9999;}
 .school_filter p{font:var(--font-18);font-weight:200;color:var(--color-white);border-right:1px solid var(--color-white);padding-right:2rem;margin-right:0rem;}
 .school_pagination{display:flex;position:absolute;bottom:0;}
 .sch_dropdown{position:relative;flex-shrink:0;z-index:10;}
-.sch_dropdown>.dropdown_toggle{position:relative;min-width:28.3rem;padding-block:1.5rem;cursor:pointer;font:var(--font-21);font-weight:700;border:0;padding-right:2.8rem;background-color:transparent;text-align:left;color:var(--color-white);}
+.sch_dropdown>.dropdown_toggle{position:relative;min-width:28.3rem;padding-block:1.5rem;cursor:pointer;font:var(--font-21);border:0;padding-right:2.8rem;background-color:transparent;text-align:left;color:var(--color-white);}
 .sch_dropdown>.dropdown_toggle::after{content:"";position:absolute;top:50%;right:0;width:1.5rem;height:1.5rem;background:url(/images/icons/nav-arrow-down.svg) no-repeat;background-position:right 0 center;background-size:1.3rem;transform:translateY(-50%) rotate(0);-webkit-transform:translateY(-50%) rotate(0);-moz-transform:translateY(-50%) rotate(0);-ms-transform:translateY(-50%) rotate(0);-o-transform:translateY(-50%) rotate(0);transition:all 0.5s ease;-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-ms-transition:all 0.5s ease;-o-transition:all 0.5s ease;filter:brightness(0) invert(1);}
 .sch_dropdown>.dropdown_toggle.show::after{transform:translateY(-50%) rotate(180deg);-webkit-transform:translateY(-50%) rotate(180deg);-moz-transform:translateY(-50%) rotate(180deg);-ms-transform:translateY(-50%) rotate(180deg);-o-transform:translateY(-50%) rotate(180deg);}
 .sch_dropdown>.dropdown{position:absolute;margin:0;right:0;top:100%;width:108%;background-color:var(--color-white);box-shadow:0px 5px 8px rgb(0 0 0 / 8%);max-height:0;overflow:auto;transition:max-height 0.8s ease;}
@@ -18,16 +18,16 @@
 .sch_dropdown .dropdown li a{font:var(--font-18);font-weight:400;color:var(--color-black);letter-spacing:0.04rem;display:block;line-height:2.4rem;}
 .sch_dropdown .dropdown li a:hover{color:var(--color-cf);}
 .school_filter{max-width:43.2rem;}
-.school_banner_tx{max-width:58rem;padding-inline:5rem 0;position:relative;z-index:9;}
+.school_banner_tx{max-width:80rem;padding-inline:5rem 0;position:relative;z-index:9;}
 .school_banner_tx h1{font:var(--font-72);color:var(--color-white);letter-spacing:-2.16px;font-weight:600;line-height:1;}
-.school_banner_tx h1 span{font-weight:200;}
+.school_banner_tx h1 span{font-weight:200; display: block;}
 .school_slider_logo{display:flex;gap:3rem;align-items:center;padding-block:2rem 5rem;}
 .school_slider_logo figure{max-width:6.6rem;}
 .school_slider_logo p{font:var(--font-10);color:var(--color-white);font-weight:300;max-width:31rem;padding-block:1rem;border-left:1px solid #ccc;padding-left:3rem;}
 
 @media(max-width:1536px){
     .school_banner .container-fluid{padding-inline:4.5rem;}
-    .school_banner_content{top:6rem;bottom:10rem;}
+    .school_banner_content{top:8.5rem;bottom:10rem;}
     .school_filter p{padding-right:1rem;}
     .sch_dropdown > .dropdown_toggle{padding-block:0.5rem;padding-right:1.8rem;}
     .sch_dropdown > .dropdown_toggle:after{width:1rem;height:1rem;background-size:1rem;}
@@ -51,10 +51,10 @@
 }
 
 
-.about_soet{ padding-block: 10rem 15rem;}
+.about_soet{ padding-block: 10rem 0rem;}
 .soet_listing{ display: grid; grid-template-columns: repeat(3, 30.4rem); justify-content: space-between; list-style: none; padding: 0; row-gap: 5.4rem; margin-top: 6rem; }
 .soet_listing li a{ font: var(--font-18); color: var(--color-cf); padding-left: 2rem; border-left: 0.4rem solid var(--color-f9); display: flex;}
-.soet_listing li a:hover{ color: var(--color-black);}
+.soet_listing li a:hover{ color: var(--color-cf); cursor: auto;}
 .soet_link_list{ display: flex; margin-top: 8.3rem; padding: 0 0 2rem; align-items: center; position: relative;justify-content: space-between;}
 .soet_link{ display: flex; justify-content: space-between; list-style: none; gap: 11.3rem; padding: 0;}
 .soet_link li a{ font: var(--font-18); font-weight: 300; position: relative;}
@@ -79,6 +79,7 @@
     .soet_link li a:after{right: -3.5rem;}
 }
 
+.school_studyjnu_section{ padding-top: 15rem;}
 .school_studyat_jnu{ background-color: var(--color-white); padding-block: 8.5rem;}
 .our_department_list{ display: grid; grid-template-columns:36rem 36rem 36rem 25rem; padding: 0; list-style: none; row-gap: 4.5rem; padding-block: 7.6rem 0; column-gap: 5.6rem;}
 .our_department_list li{ font: var(--font-24); font-weight: 300; border-right: 1px solid rgba(112, 112, 112, 0.25); display: block; padding-bottom: 1.5rem; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding-right: 2rem;}
@@ -121,7 +122,7 @@
 }
 
 
-.success_speak{padding-block:10rem 15rem;}
+.success_speak{padding-block:16rem 15rem;}
 .success_speak .head_title{text-align:center;}
 .custom_tabs input[type="radio"]{display:none;}
 .custom_tabs .tab_nav{display:flex;gap:1.5rem;border-bottom:1px solid #DFDFDF;justify-content:center;margin-top:2rem;}
@@ -139,20 +140,31 @@
 .success_speak_bx_flex h5{font:var(--font-18);font-weight:200;color:var(--color-white);}
 .success_speak_bx_flex h6{font:var(--font-14);font-weight:300;color:var(--color-white);}
 .success_speak_bx_flex p{font:var(--font-14);font-weight:200;color:rgba(255,255,255,0.6);}
-.success_speak_bx{background-color:var(--color-white);padding:7rem 4.4rem 2.8rem 4rem;height:100%;}
-.success_speak_bx::before{width:5.8rem;left:4.4rem;top:-2.3rem;left:5rem;height:4.7rem;background-repeat:no-repeat;content:"";position:absolute;background-size:contain;}
-.swiper-slide:nth-child(2) .success_speak_bx::before{background-image:url(/images/pink-qoute.svg);}
-.swiper-slide:nth-child(4) .success_speak_bx::before{background-image:url(/images/orange-qoute.svg);}
-.success_speak_bx p{ font: var(--font-21); font-weight: 300; color: var(--color-black); line-height: 1.5;}
-.success_speak_bx span img{width: 5.4rem; height: 5.4rem; border-radius: 100%;}
+.success_speak_bx{background-color:var(--color-white);padding: 6rem 4.4rem 4rem 4rem;height:100%;}
+.success_speak_bx::before{width:5.8rem;left:4.4rem;top:-2.3rem;left:4rem;height:4.7rem;background-repeat:no-repeat;content:"";position:absolute;background-size:contain;}
+/* .swiper-slide:nth-child(2) .success_speak_bx::before{background-image:url(/images/pink-qoute.svg);}
+.swiper-slide:nth-child(4) .success_speak_bx::before{background-image:url(/images/orange-qoute.svg);} */
+
+.swiper-slide:not(:has(.success_speak_videobx)) .success_speak_bx::before {
+    background-image: url(/images/pink-qoute.svg);
+}
+.swiper-slide:nth-child(even):not(:has(.success_speak_videobx)) .success_speak_bx::before {
+    background-image: url(/images/orange-qoute.svg);
+}
+.success_speak .tab_content{ padding-top: 8rem;}
+
+
+.success_speak_bx p{font:var(--font-21);color:var(--color-black);font-weight:300;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden;}
+.success_speak_bx span img{border-radius:100%;width:5.4rem;height:5.4rem;min-width: 5.4rem; object-fit:cover;object-position:top center;}
 .success_speak_bx .success_speak_bx_flex *{ color: var(--color-black);}
 .success_speak_bx figure{ margin-bottom: 3rem;}
 .success_speak_bx figure img{ max-width: 5.8rem;margin-top: -4.4rem;}
-.success_speak_bx .success_speak_bx_flex{ left: 4.4rem; border-top: 1px solid #eee; margin-top: 2rem; padding-top: 2rem;}
+.success_speak_bx .success_speak_bx_flex{ left: 4.4rem; border-top: 1px solid #eee; margin-top: 2rem; padding-top: 2rem; position: inherit;}
 .success_speak_bx .success_speak_bx_flex p{ font: var(--font-14); font-weight: 200; color:#231F20;}
 .success_speak .swiper-slide{ height: auto;}
-
-
+.faq_section .arrow_box{ margin-top: 5rem; border-color: var(--color-white);}
+.faq_section .arrow_box img{  filter: brightness(0) invert(1);}
+.faq_section .arrow_box:hover { border-color: var(--color-cf);}
 @media(max-width:1536px){
     .success_speak{padding-block:5rem 10rem;}
     .success_speak .container{max-width:min(1118px, 81.8448023vw);}
@@ -169,3 +181,144 @@
 
 
 
+.sch_facilities { padding-block: 12rem;}
+.sch_facilities .jnu_title_header{ padding-inline: 5rem;}
+
+.school_facity_dep{background-color: var(--color-f5);}
+.school_facity_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 15rem; align-items: center;}
+.school_facity_dep_cnt{ max-width: 54.6rem;}
+.school_facity_dep_cnt h5{ color: var(--color-cf); margin-bottom: 4rem; padding-right: 10rem;}
+.school_facity_dep_cnt  p{ font: var(--font-16);}
+.facility_des{ padding-block: 12rem; text-align: center;}
+.facility_des blockquote{ font: var(--font-21); font-weight: 300; max-width: 122.5rem; margin: 0 auto; line-height: 1.5;}
+.facility_des_grid{ padding-top: 5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem; row-gap: 6rem;}
+.facility_des_bx figure{ margin-bottom: 2.5rem;}
+.facility_des_bx p{ font: var(--font-16); padding-inline: 2rem;}
+.facility_deparment{ padding-top: 5rem; }
+.facility_deparment .jnu_title_header{text-align: left; max-width: 117.2rem;}
+.facility_dep_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 12.5rem;}
+.facility_dep_list li{ font: var(--font-16);}
+.facility_dep_list{ padding-top: 2rem; max-width: 59.4rem;}
+.facility_dep_list ul{ padding-left: 0;}
+.facility_dep_grid{ padding-block: 8rem 12rem;}
+.facility_des_bx h5{ margin-bottom: 1.5rem; line-height: 1.4;}
+
+
+@media (max-width:1536px){
+    .sch_facilities { padding-block: 6rem; }
+    .sch_facilities .jnu_title_header { padding-inline: 0; }
+    .school_facity_grid{gap: 7rem;}
+    .school_facity_dep_cnt h5{padding-right: 12rem;}
+    .facility_des { text-align: center; padding-block: 8rem 6rem; }
+    .facility_des_bx p{ padding-inline: 0rem;}
+    .facility_des_grid{padding-top: 3rem;}
+    .facility_des_bx figure { margin-bottom: 1.5rem; }
+    .facility_dep_grid{ gap: 6rem; padding-block:5rem 8rem;}
+    .facility_dep_list{ padding-top: 0;}
+
+}
+
+
+
+/* SAS About Aria Start */
+.sasabt_sec{position:relative;padding-block:17.7rem 10rem;}
+.sasabt_sec:before{content:"";z-index:-1;background-image:url(/images/back_pattern.svg);background-repeat:repeat;background-size:contain;width:100%;height:45rem;position:absolute;top:0;bottom:0;left:0;}
+.sasabt_sec .jnu_title_header{margin-bottom:8.4rem;padding-inline:4.5rem;}
+.sasabt_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;}
+.sasabt_grid>figure{display:grid;gap:2rem;}
+.sasabt_caption{text-align: center; margin-top:8rem;padding-inline: 3rem;}
+.sasabt_caption>p{font:var(--font-21);color:var(--color-23);margin-bottom:0;font-weight:300;line-height:1.6;}
+
+
+.sas_misgrid{grid-template-columns:repeat(2,1fr);gap:2.5rem;display:grid; margin-top: 8rem;}
+.sas_misgrid .sas_vision{position:relative;background-color:var(--color-cf);padding:6rem 25.8rem 7.3rem 12.5rem;}
+.sas_misgrid .sas_mission{padding:6rem 20.5rem .8rem 12.7rem;}
+.sas_misgrid .sas_vision::before{content:"";z-index:0;opacity:.4;background-image:url(/images/school_vision.svg);background-repeat:repeat;width:22.5rem;height:100%;position:absolute;top:0;bottom:0;right:0;}
+.sas_misgrid h5{margin-bottom:5rem;color:var(--color-cf);font-weight:500;}
+.sas_misgrid .sas_vision h5{color:var(--color-white);}
+.sas_misgrid .sas_vision blockquote{font:var(--font-21);color:var(--color-white);font-weight:300;line-height:3.6rem;}
+.sas_misgrid .sas_mission ul li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;}
+.sas_misgrid .sas_mission ul li:before{background-color:var(--color-f2);width:0.7rem;height:0.7rem;}
+
+
+.sasabt_heighlight{padding-bottom:4.3rem;}
+.sasabt_heighlight .jnu_title_header{padding-block:10rem 5rem;border-top:1px solid #CECECE;}
+.sasabt_high_grid ul{grid-template-columns:repeat(4,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows: 1fr;}
+.sasabt_high_grid ul>li{background:var(--color-white);font:var(--font-16);padding:5.4rem 1.8rem 6.9rem;font-weight:300;line-height:1.6;list-style:none;text-align:center;position:relative;}
+.sasabt_high_grid ul>li::before{content:"";z-index:9;background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
+
+
+.sasachiv_sec{padding-bottom:15.2rem;}
+.sasachiv_sec .jnu_title_header{margin-bottom:5rem;text-align:left;}
+.sasachiv_grid{display:grid;gap:4rem;padding-right:5.4rem;}
+.sasachiv_item{grid-template-columns:475fr 821fr;gap:12.5rem;display:grid;padding-top:4rem;border-top:1px solid #cecece;}
+.sasachiv_item:first-child{padding-top:0;border-top:0;}
+.sasachiv_caption{padding-block:5.8rem;}
+.sasachiv_caption>h3{font:var(--font-24);font-weight:300;color:var(--color-black);margin-bottom:2rem;}
+.sasachiv_caption>p{font:var(--font-16);font-weight:300;line-height:1.6;}
+.sasabt_heighlight { padding-bottom: 4.3rem; }
+.sasabt_heighlight .jnu_title_header{padding-block: 10rem 5rem;border-top: 1px solid #CECECE;}
+.sasabt_heighlight .jnu_title_header .font21{margin-bottom: 0;}
+.sasabt_high_grid ul { grid-template-columns: repeat(4, 1fr); gap: 2.5rem; padding: 0; display: grid; }
+.sasabt_high_grid ul>li { background: var(--color-white); font: var(--font-16); padding: 5.4rem 1.8rem 6.9rem; font-weight: 300; line-height: 1.6; list-style: none; text-align: center; position: relative; }
+.sasabt_high_grid ul>li::before{ content: ""; z-index: 9; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 60%, var(--color-fa) 60%, var(--color-fa) 100%); width: 100%; max-width: 10rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0rem; left: 0; right: 0rem;}
+
+
+
+.research_section .research_header{ border-top: 1px solid rgba(6, 63, 138, 0.25); padding-top: 15rem;}
+.school_research_section .research_header .head_title{ max-width: 50%;}
+/* SBM About Aria Start */
+.sbmabt_sec{position:relative;padding-block:12rem 10rem;}
+.sbmabt_sec:before{content:"";z-index:-1;background-image:url(/images/back_pattern.svg);background-repeat:repeat;background-size:contain;width:100%;height:45rem;position:absolute;top:0;bottom:0;left:0;}
+.sbmabt_sec .head_title{text-align: center; margin-bottom:8.4rem;padding-inline:4.5rem;}
+.sbmabt_sec .head_title>blockquote{margin-bottom: 1.2rem;}
+.sbmabt_sec .head_title>h5{font:var(--font-24);font-weight:300;color:var(--color-black);margin-bottom:6rem;}
+.sbmabt_sec .head_title>p{font:var(--font-21);font-weight:300;line-height: 1.7; color:var(--color-black);}
+
+.sbmabt_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;}
+.sbmabt_grid>figure:nth-child(3){max-width:60rem;margin-left:auto;}
+.sbmabt_caption{padding-top:3.9rem;padding-inline:5.7rem 12.5rem;}
+.sbmabt_caption>p{font:var(--font-16);font-weight: 300; color:var(--color-black);}
+
+/* SBM Heighligh Aria */
+.sbmabt_heighlight{padding-bottom:4.3rem;}
+.sbmabt_heighlight .jnu_title_header{padding-block:10rem 5rem;border-top:1px solid #CECECE;}
+.sbmabt_heighlight .jnu_title_header .font21{margin-bottom: 0;}
+.sbmabt_high_grid ul{grid-template-columns:repeat(4,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows:1fr;}
+.sbmabt_high_grid ul>li{background:var(--color-white);font:var(--font-16);padding:5.4rem 1.8rem 6.9rem;font-weight:300;line-height:1.6;list-style:none;text-align:center;position:relative;}
+.sbmabt_high_grid ul>li::before{content:"";background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
+
+/* SBM Mission Vision Aria */
+.sbm_misgrid{grid-template-columns:repeat(2,1fr);gap:2.5rem;display:grid;margin-top:2.9rem;}
+.sbm_misgrid .sbm_vision{position:relative;background-color:var(--color-cf);padding:8.4rem 11.2rem 8.4rem 11.3rem;}
+.sbm_misgrid .sbm_mission{padding:8.4rem 5rem 8.4rem 12.5rem;}
+.sbm_misgrid .sbm_vision::before{content:"";z-index:0;opacity:.4;background-image:url(/images/vision-texture.svg);background-repeat:no-repeat;background-size:cover;width:100%;height:100%;position:absolute;top:0;bottom:0;right:0;}
+.sbm_misgrid h5{margin-bottom:5rem;color:var(--color-cf);font-weight:500;}
+.sbm_misgrid .sbm_vision h5{color:var(--color-white);}
+.sbm_misgrid .sbm_vision blockquote{font:var(--font-21);color:var(--color-white);font-weight:300;line-height:3.6rem;}
+.sbm_misgrid .sbm_mission blockquote{font:var(--font-21);color:var(--color-black);font-weight:300;line-height:3.6rem;}
+.sbmabt_figure{margin-top: 8rem;}
+
+
+.sbmhead_sec{padding-bottom: 0;}
+
+/* SBM Achivments Aria */
+.sbmachive_sec{position:relative;padding-block:2.5rem 10rem;}
+.sbmachive_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;}
+.sbmachive_caption{background-color:var(--color-white);padding:15.3rem 21.6rem 15.3rem 14.9rem;}
+.sbmachive_caption>h5{font-weight:var(--fw-500);color:var(--color-cf);margin-bottom:5rem;}
+.sbmachive_caption>ul{padding:0;margin:0;}
+.sbmachive_caption>ul>li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;padding-left:2.4rem;list-style:none;position:relative;}
+.sbmachive_caption>ul>li::before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}
+
+
+/* SBM Teaching Pedagogies */
+.sbmtp_sec{padding-block:5rem 4.3rem;}
+.sbmtp_sec .jnu_title_header{margin-bottom: 4rem;}
+.sbmtp_sec .jnu_title_header .font21{margin-bottom: 0;}
+.sbmtp_sec .jnu_title_header p{font:var(--font-16);font-weight:300;margin-top:2.4rem;padding-inline:10rem;}
+.sbmtp_grid{grid-template-columns:repeat(4,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows:1fr;padding-inline:4.1rem;}
+.sbmtp_grid>.sbmtp_item{background:var(--color-white);text-align:center;padding:6.5rem 2.6rem 6.9rem;position:relative;}
+.sbmtp_grid>.sbmtp_item::before{content:"";background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
+.sbmtp_grid>.sbmtp_item>h5{font:var(--font-21);font-weight: 300; margin-bottom: 1.6rem;}
+.sbmtp_grid>.sbmtp_item>p{font:var(--font-16);font-weight:300;}
