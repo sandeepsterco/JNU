@@ -171,6 +171,7 @@
 }
 .success_speak_bx span img{border-radius:100%;width:5.4rem;height:5.4rem;min-width: 5.4rem; object-fit:cover;object-position:top center;background-color: #f4eee2}
 .success_speak_bx .success_speak_bx_flex *{ color: var(--color-black);}
+.success_speak_bx .success_speak_bx_flex:hover *{ color: var(--color-cf);}
 .success_speak_bx figure{ margin-bottom: 3rem;}
 .success_speak_bx figure img{ max-width: 5.8rem;margin-top: -4.4rem;}
 .success_speak_bx .success_speak_bx_flex{ left: 4.4rem; border-top: 1px solid #eee; margin-top: 2rem; padding-top: 2rem; position: inherit;}
@@ -405,6 +406,7 @@
 .school_facity_grid_sc p{ font: var(--font-16); font-weight: 300; max-width: 45rem;}
 .school_facity_farms{ padding-bottom: 12rem;}
 
+.school-school-of-engineering-technology-facilities .school_facity_grid figure { max-width: 100%; }
 .school_facity_grid_sc2{display: grid; grid-template-columns: 60rem 85rem; gap: 2.5rem; align-items: center; padding-left: 11rem;}
 .school_facity_grid_sc2 h5 { color: var(--color-cf); margin-bottom:2.4rem; font-weight: 500; }
 .school_facity_grid_sc2 p{ font: var(--font-16); font-weight: 300; max-width: 50rem;}
@@ -445,4 +447,74 @@
 .soil_grid p{padding-right: 6rem;}
 .soil_data_scetion { padding-block: 10rem 8rem; }
 .soil_data_grid_right { padding-inline: 4rem 4rem; }
+
+
+
+
+}
+.soe_education_grid{ margin-top: 7rem;}
+.soe_education_grid ul{ display: grid; grid-template-columns: repeat(3, 1fr); gap:2.4rem; padding: 0;}
+.soe_education_grid ul li{background-color: var(--color-white); font: var(--font-16); padding: 6.8rem 5.7rem; text-align: center; font-weight: 300; min-height: 31rem; position: relative;}
+.soe_education_grid ul li:before { content: ""; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 30%, var(--color-fa) 30%, var(--color-fa) 100%); width: 100%; max-width: 24rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0; left: 0; right: 0;}
+.school-school-of-education-about-soe .scss_vis_mis{ border-top: 0; padding-top: 0; margin-top: 13rem;}
+.school-school-of-education-about-soe  .sbm_misgrid .sbm_vision { display: flex; flex-direction: column; justify-content: center; padding: 0 7rem 0 11.3rem;}
+.school-school-of-education-about-soe  .sbm_vision blockquote{ line-height: 1.8;max-width: 46rem;}
+.school-school-of-education-about-soe .scss_vis_mis .custom_lists { max-width: 55rem; }
+.school-school-of-education-about-soe .scss_vis_mis .sbm_misgrid .sbm_mission { padding: 3.6rem 5rem 0 10rem; }
+
+.school-school-of-education-about-soe .health_btom_grid figure:before{ display: none;}
+.health_btom_content> img{ max-width: 4.4rem; margin-bottom: 3.2rem;}
+.school-school-of-education-about-soe .health_btom_grid { z-index: 9; grid-template-columns: 60.2rem auto; gap: 15rem; padding-right: 0;}
+.school-school-of-education-about-soe .health_btom_grid  figure{ margin-left: -5rem; }
+.school-school-of-education-about-soe .scss_vis_mis .custom_lists li{ margin-bottom: 1.5rem;}
+.school-school-of-education-about-soe .scss_vis_mis .custom_lists li:last-child{ margin-bottom: 0;}
+.sbmtp_list { grid-template-columns: repeat(1, 1fr); gap: 1.6rem; padding: 0; padding-inline: 4.1rem; display: grid; padding-top: 1.6rem; }
+
+.sbmtp_list > .sbmtp_item { background: var(--color-white); padding: 6.5rem 12.5rem 0rem; position: relative; min-height: 31.7rem; }
+.sbmtp_list > .sbmtp_item > h5 { font: var(--font-16); color: var(--color-23); margin-bottom: 3.1rem; font-weight: 500; }
+.sbmtp_list > .sbmtp_item > p { font: var(--font-16); font-weight: 300; }
+.sbmtp_list > .sbmtp_item:before { content: ""; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 30%, var(--color-fa) 30%, var(--color-fa) 100%); width: 100%; max-width: 24rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0; left:10rem;}
+.global_outreach{ padding-block: 4rem 12rem;}
+.global_outreach .title_header{ text-align: center; max-width: 116.5rem; margin: 0 auto; padding-bottom: 5.6rem;}
+
+.global_outreach .title_header > h5 { font: var(--font-21); color: var(--color-23); margin-bottom: 3.1rem; font-weight: 300; }
+.global_outreach .title_header > p { font: var(--font-16); font-weight: 300; color: var(--color-black);}
+.global_outreach_grid{ margin-top:12rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 17.5rem; padding-bottom: 5.8rem; border-bottom: 1px solid #CECECE; position: relative;}
+.global_outreach_grid::after { content: ""; position: absolute; width: 1px; height: 100%; background: #cecece; left: 50%; top: 0; }
+
+
+.global_outreach_grid p{font: var(--font-16); font-weight: 300; margin-bottom: 2rem;}
+.global_outreach_grid h5 { font: var(--font-21); color: var(--color-23); margin-bottom: 2.4rem; font-weight: 300; }
+
+.global_outreach .global_reasearch{ text-align: center; max-width: 112.4rem; margin: 0 auto; padding-block:8rem 0rem;}
+.global_outreach .global_reasearch > h5 { font: var(--font-21); color: var(--color-23); margin-bottom: 3.1rem; font-weight: 300; }
+.global_outreach .global_reasearch > p { font: var(--font-16); font-weight: 300; color: var(--color-black);}
+
+@media (max-width:1536px){
+.soe_education_grid ul li{min-height: 24rem; padding: 3rem 2rem;}
+.soe_education_grid { margin-top: 5rem; }
+.school-school-of-education-about-soe .scss_vis_mis .sbm_misgrid .sbm_mission { padding: 0 0 0 3rem; }
+.school-school-of-education-about-soe .sbm_misgrid .sbm_vision{padding: 0 4rem 0 4rem;}
+.sbm_misgrid h5{margin-bottom: 2rem;}
+.school-school-of-education-about-soe .scss_vis_mis{ margin-top: 8rem;}
+.school-school-of-education-about-soe .health_btom_grid { z-index: 9; grid-template-columns: 36rem auto; gap: 5rem; padding-right: 0; }
+.sbmtp_list > .sbmtp_item { background: var(--color-white); min-height: 30.7rem; padding: 4.5rem 5rem 0; position: relative; }
+.sbmtp_list > .sbmtp_item:before{ left: 4rem;}
+.global_outreach_grid { border-bottom: 1px solid #cecece; grid-template-columns: repeat(2, 1fr); gap: 7.5rem; margin-top: 6rem; padding-bottom: 1.8rem; }
+.global_outreach { padding-block: 4rem 8rem; }
+.global_outreach .global_reasearch{padding-block: 5rem 0;}
+}
+.education_facility_section{ padding-bottom: 8rem;}
+.education_facility_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 2.5rem;}
+.educ_grid_bx{ padding-inline: 10rem;display: flex; flex-direction: column; justify-content: center;}
+.educ_grid_bx p{max-width: 38.8rem; font:var(--font-16); }
+.educ_grid_bx_2{ padding-inline: 10rem; display: flex; flex-direction: column; justify-content: center; position: relative;}
+.educ_grid_bx_2 p{max-width: 40rem; font:var(--font-16); }
+.educ_grid_bx_2:after { content: ""; background: linear-gradient(to right, var(--color-f9) 0%, var(--color-f9) 70%, var(--color-cf) 70%, var(--color-cf) 100%); width: 100%; max-width: 24rem; height: .2rem; margin: auto; position: absolute; bottom: 0; left: 10rem; }
+
+
+@media (max-width:1536px){
+    .educ_grid_bx{ padding-inline: 2rem;}
+    .educ_grid_bx_2{ padding-inline: 2rem;}
+    .educ_grid_bx_2:after{ left: 2rem;}
 }
