@@ -36,7 +36,7 @@ interface PageDataInterface {
     };
 }
 
-export default async function SchoolTestimonial({
+export default function SchoolTestimonial({
     data,
     params
 }: {
@@ -86,7 +86,7 @@ export default async function SchoolTestimonial({
             .map(({ type, items }) => ({ type, items }));
     }, [testimonials]);
 
-    const [activeTab, setActiveTab] = useState(0);
+    const [activeType, setActiveType] = useState<string | null>(null);
 
     // Bind Fancybox once; delegated binding also covers slides rendered after tab changes
     useEffect(() => {
@@ -99,26 +99,35 @@ export default async function SchoolTestimonial({
 
     if (groups.length === 0) return null;
 
-    const active = groups[Math.min(activeTab, groups.length - 1)];
+    const active = groups.find((group) => group.type === activeType) ?? groups[0];
+    const activeTab = groups.findIndex((group) => group.type === active.type);
 
     return (
         <div className="custom_tabs">
             <div className="tab_nav" role="tablist">
                 {groups.map((group, index) => (
-                    <label
+                    <button
+                        type="button"
+                        id={`testimonial-tab-${index}`}
                         key={group.type}
                         role="tab"
                         aria-selected={index === activeTab}
+                        aria-controls="school-testimonial-panel"
                         className={index === activeTab ? "active" : ""}
-                        onClick={() => setActiveTab(index)}
+                        onClick={() => setActiveType(group.type)}
                     >
                         {group.type}
-                    </label>
+                    </button>
                 ))}
             </div>
 
             <div className="tab_content">
-                <div className="tab_panel active" role="tabpanel">
+                <div
+                    id="school-testimonial-panel"
+                    className="tab_panel active"
+                    role="tabpanel"
+                    aria-labelledby={`testimonial-tab-${activeTab}`}
+                >
                     <div className="success_speak_slider" data-react-swiper>
                         {/* key forces Swiper to re-init when the tab changes */}
                         <Swiper
