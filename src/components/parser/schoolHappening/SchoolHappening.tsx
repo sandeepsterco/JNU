@@ -45,7 +45,7 @@ function openVideo(src: string) {
     Fancybox.show([{ src, type: "html5video" }])
 }
 
-function HappeningCard({ item, variant }: { item: NewsEvent; variant: "image" | "blue" }) {
+function HappeningCard({ item, variant, params }: { item: NewsEvent; variant: "image" | "blue"; params:string }) {
     const date = parseDate(item.date)
     // null, "" or whitespace-only => no video
     const videoUrl = typeof item.video === "string" ? item.video.trim() : ""
@@ -84,7 +84,7 @@ function HappeningCard({ item, variant }: { item: NewsEvent; variant: "image" | 
 
             <p className="happ_card_title">{item.name}</p>
 
-            <Link href={`${BASE_URL}news-events/${item.slug}`} className="overlap_btn" aria-label={item.name}></Link>
+            <Link href={`${BASE_URL}news-events/${item.slug}?school=${params}`} className="overlap_btn" aria-label={item.name}></Link>
         </div>
     )
 }
@@ -97,7 +97,7 @@ function toOrder(value: string | null): number | null {
 
 const aosDelays = [200, 400, 600]
 
-export default function SchoolHappeningGrid({ data }: { data: ISchoolHappening }) {
+export default function SchoolHappeningGrid({ data, params }: { data: ISchoolHappening; params:string }) {
     const items = [...(data?.data?.modular?.["news-events"] ?? [])]
         .sort((a, b) => {
             // items with a display_order come first (ascending); null/""/invalid go last
@@ -125,7 +125,7 @@ export default function SchoolHappeningGrid({ data }: { data: ISchoolHappening }
                         className="happening_col"
                         
                     >
-                        <HappeningCard item={item} variant={i === 1 ? "blue" : "image"} />
+                        <HappeningCard item={item} variant={i === 1 ? "blue" : "image"} params={params} />
                     </div>
                 ))}
             </div>
