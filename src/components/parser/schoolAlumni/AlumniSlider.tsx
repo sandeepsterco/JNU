@@ -70,7 +70,7 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                           </p>
                           )}
 
-                        {item?.designation && (
+                        {!item?.course && item?.designation && (
                           <p>
                             {item.designation}
                           </p>
