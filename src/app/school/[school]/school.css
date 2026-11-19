@@ -174,7 +174,7 @@
     .success_speak_bx{padding:4rem 2.4rem 1.8rem 2rem;}
     .success_speak_bx .success_speak_bx_flex{margin-top:1rem;padding-top:1rem;left:2.4rem;}
     .success_speak_bx .success_speak_bx_flex>span{flex-shrink: 0;}
-    .success_speak_bx span img{width:4rem;height:4rem;}
+    .success_speak_bx span img{width:4rem;height:4rem;min-width:4rem;}
     .custom_tabs .tab_nav label{letter-spacing:0.17rem;padding:0.5rem 1rem 1rem;border-bottom:.2rem solid #0000;}
     .success_speak .swiper-wrapper{padding-top:3rem;}
     .success_speak .tab_content { padding-top: 3rem; }
