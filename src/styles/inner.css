@@ -498,6 +498,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .innovation_incubation .academic_foundation .academic_foundation_right blockquote{grid-template-columns: 32% 48%;font-weight: normal;gap: 1.7rem;}
 .acd_audi_slider .slide_content{max-width: 31.9rem;left:2.2rem;bottom: 1.7rem;}
 .acd_audi_slider .slide_content p{font-weight: var(--fw-300);}
+
+
  }
 
 
@@ -2602,7 +2604,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .sch_vis_misgrid .sch_mission { padding: 6rem 12.5rem 0.8rem 10rem; }
 .sch_vis_misgrid h5 { margin-bottom: 5rem; color: var(--color-cf); font-weight: 500; }
 .sch_vis_misgrid .sch_vision h5 { color: var(--color-white); }
-.sch_vis_misgrid .sch_vision h6 { font: var(--font-21); color: var(--color-white); font-weight: 300; line-height: 3.6rem; }
+.sch_vis_misgrid .sch_vision h6 { font: var(--font-21); color: var(--color-white); font-weight: 300; line-height: 1.8; }
 .sch_vis_misgrid .sch_mission ul li { font: var(--font-16); font-weight: var(--fw-300); margin-bottom:2.5rem; }
 .sch_vis_misgrid .sch_mission ul li:before{ background-color: var(--color-f2); width: 0.7rem; height: 0.7rem;}
 .sch_dir_msg { padding-block: 12rem 15rem; position: relative; padding-inline: 13.5rem; }
@@ -2660,7 +2662,31 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .sch_vimission { padding-block:2.5rem 0; }
 .sch_vis_misgrid .sch_vision h6{ max-width: 46.7rem;}
 
+@media (max-width:1536px){
+    .sch_about_overview { padding-block: 8rem 0; }
+    .sch_about_ovr_img{ padding-top: 0;}
+    .sch_vis_misgrid .sch_vision { background-color: var(--color-cf); padding: 6rem 4rem 0.9rem 4.5rem; }
+    .sch_vis_misgrid .sch_mission { padding: 1rem 3rem; }
+    .sch_vis_misgrid .sch_vision:before{ width: 10rem;}
+    .sch_value_grid{padding-inline: 2.5rem;}
+    .sch_value_grid .sch_value { padding: 3rem; }
+    .sch_value_grid .sch_value:after{ right: 8rem;}
+    .sch_ab_highlight { padding-block: 9rem 0; }
+    .sch_high_grid ul > li{padding-block: 5.5rem; padding-inline: 2.8rem;}
+    .sch_dir_msg { padding-block: 6rem 10rem; padding-inline: 3.5rem; position: relative; }
+    .sch_ab_highlight .sch_high_grid { padding-bottom: 9rem; }
+    .sch_dir_msg_grid { z-index: 9; grid-template-columns: 36rem auto; align-items: center; gap: 5rem; padding-right: 0; display: grid; position: relative; }
+    .sch_direct_msg:after{ max-width: 40rem;}
+    .sch_direct_msg{padding-top: 7.5rem;}
+    .sch_dir_msg_grid figure:before{width: 7.4rem; height: 5.6rem;}
+    .sch_dir_msg_author { padding-top: 2rem; }
+    .inno_incu_grid_bx_left { padding-right: 3rem;}
+    .inno_incu_grid_bx_right{padding-inline: 6rem 2rem;}
 
+
+
+
+}
 
 .career_pathmain { padding-block: 12rem 12rem; background-color: var(--color-38); }
 .career_path_swimain .career_path_col { background: var(--color-white); font: var(--font-16); padding: 4rem 5.4rem; position: relative; min-height: 64.1rem; }
@@ -3110,3 +3136,15 @@ z-index: -1;}
 .socss_lib_title .jnu_title_header{padding-block: 8rem 5rem;}
 
 /* Socss  Page Facilities Css End */
+
+
+@media (max-width:1536px){
+    .scs_sch_about { padding-block: 8rem 0; }
+    .scs_sch_about .jnu_title_header { padding-bottom: 4rem; }
+    .health_btom { padding-block: 6rem 10rem; padding-inline: 3.5rem; position: relative; }
+    .health_btom_msg:after{ max-width:45rem;}
+    .health_btom_msg{ padding-top: 6rem;}
+    .sbmtp_sec.scss_achimvnt { padding-block: 8rem 6rem; }
+    
+
+}
