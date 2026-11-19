@@ -123,9 +123,7 @@ export default function SchoolHappeningGrid({ data }: { data: ISchoolHappening }
                     <div
                         key={item.slug}
                         className="happening_col"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay={aosDelays[i]}
+                        
                     >
                         <HappeningCard item={item} variant={i === 1 ? "blue" : "image"} />
                     </div>
