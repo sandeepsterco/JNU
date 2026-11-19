@@ -20,5 +20,6 @@
     .school_research_counter li p{line-height:1.3;}
     .school_research_section .research_header_right{grid-template-columns:auto;gap:1.6rem;width:40.3%;padding-top:0;}
     .school_research_section .research_slider_section{padding-top:3.4rem;}
+    .research_grid{ margin-top: 5rem;}
 
 }

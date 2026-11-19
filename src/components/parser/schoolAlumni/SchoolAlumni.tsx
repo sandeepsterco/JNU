@@ -11,6 +11,7 @@ export interface AlumniDataInterface {
     logo: string;
     video?: string | null;
     slug?: string;
+    designation?:string;
 }
 
 interface PageDataInterface {

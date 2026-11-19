@@ -64,9 +64,18 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
 
                           <h5>{item.name}</h5>
 
-                          <p>
+                          {item?.course && (
+                            <p>
                             {item.course} <span>{item.batch}</span>
                           </p>
+                          )}
+
+                        {item?.designation && (
+                          <p>
+                            {item.designation}
+                          </p>
+                        )}
+                          
                         </div>
 
                         {/* <Link

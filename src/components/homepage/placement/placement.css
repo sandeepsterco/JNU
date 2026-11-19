@@ -8,6 +8,9 @@
 .placement_header_right a:hover img{filter:brightness(0) invert(1);}
 .placement_grid{display:grid;grid-template-columns:74% auto;gap:7rem;padding-top:8.4rem;}
 .placement_Bx{position:relative;}
+.placement_left .swiper-slide:nth-child(odd)>.placement_Bx{background: url(/images/placement-bg01.webp) no-repeat center / cover;}
+.placement_left .swiper-slide:nth-child(even)>.placement_Bx{background: url(/images/placement-bg02.webp) no-repeat center / cover;}
+
 .placement_Bx::before{background:transparent linear-gradient(180deg,#00000000 0%,#000000 100%) 0% 0% no-repeat padding-box;opacity:0.57;bottom:0;left:0;right:0;height:25.9rem;content:"";position:absolute;}
 .placement_cnt{position:absolute;bottom:3.3rem;left:2.4rem;right:2.4rem;display:flex;justify-content:space-between;align-items:center;}
 .placement_cnt h4{color:var(--color-white);font:var(--font-24);font-weight:300;}
@@ -23,6 +26,7 @@
 .placement_right ul li p{font:var(--font-18);font-weight:300;padding-top:2rem;padding-right:2rem;}
 .placement_logos{padding-block:7.5rem;}
 .placement_logo_pagination{display: none;}
+
 
 
 @media(max-width:1536px){
@@ -49,6 +53,7 @@
     .placement_cnt figcaption span{font-weight: normal;}
     .placement_logos{padding-block:3.9rem;}
     .alumni_slider_section .swiper-slide .alumni_img img{ max-height: 20rem;}
+    .alumni_slider_section .swiper-slide .alumni_logo img{max-height:3.4rem;}
     .alumni_msg_desc{ min-height: 6.5rem;}
 }
 
