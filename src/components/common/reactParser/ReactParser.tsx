@@ -176,7 +176,7 @@ export default function ReactParser({ html, searchParams, data, params }: Conten
                 if (domNode.attribs.id === "school_testimonial") return <SchoolTestimonial params={params} data={data}  />;
                 if (domNode.attribs.id === "campusTourForm") return <CampusTourForm  />;
                 if (domNode.attribs.id === "alumni_registration_form") return <AlumniRegistrationForm  />;
-                if (domNode.attribs.id === "school_happenings") return <SchoolHappening data={data}  />;
+                if (domNode.attribs.id === "school_happenings") return <SchoolHappening data={data} params={params}  />;
                 if (domNode.attribs.id === "placment_registration_form") return <PlacementRegistrationForm  />;
                 if (domNode.attribs.id === "recruiter_registration_form") return <RecruiterRegistrationForm  />;
                 if (domNode.attribs.id === "apply_now_form") return <ApplyNowForm  />;
