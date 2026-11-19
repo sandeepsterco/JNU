@@ -489,3 +489,17 @@
 .global_outreach { padding-block: 4rem 8rem; }
 .global_outreach .global_reasearch{padding-block: 5rem 0;}
 }
+.education_facility_section{ padding-bottom: 8rem;}
+.education_facility_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 2.5rem;}
+.educ_grid_bx{ padding-inline: 10rem;display: flex; flex-direction: column; justify-content: center;}
+.educ_grid_bx p{max-width: 38.8rem; font:var(--font-16); }
+.educ_grid_bx_2{ padding-inline: 10rem; display: flex; flex-direction: column; justify-content: center; position: relative;}
+.educ_grid_bx_2 p{max-width: 40rem; font:var(--font-16); }
+.educ_grid_bx_2:after { content: ""; background: linear-gradient(to right, var(--color-f9) 0%, var(--color-f9) 70%, var(--color-cf) 70%, var(--color-cf) 100%); width: 100%; max-width: 24rem; height: .2rem; margin: auto; position: absolute; bottom: 0; left: 10rem; }
+
+
+@media (max-width:1536px){
+    .educ_grid_bx{ padding-inline: 2rem;}
+    .educ_grid_bx_2{ padding-inline: 2rem;}
+    .educ_grid_bx_2:after{ left: 2rem;}
+}
