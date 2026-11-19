@@ -65,7 +65,7 @@ export default async function SchoolTestimonialDetailPage({
                 </div>
                 <div className="testimonials_content_sec">
                   {/* <h3 className="title24_36">test</h3> */}
-                  <p className="content_16_26">{testimonial.description}</p>
+                  <p className="content_16_26" dangerouslySetInnerHTML={{__html:testimonial.description || ''}} />
                   <div className="author_details">
                     <h4>{testimonial.name}</h4>
                     <p className="designation">{testimonial.course}</p>

@@ -122,7 +122,9 @@ export default function SchoolHappeningGrid({ data }: { data: ISchoolHappening }
                 {items.map((item, i) => (
                     <div
                         key={item.slug}
-                        className="happening_col">
+                        className="happening_col"
+                        
+                    >
                         <HappeningCard item={item} variant={i === 1 ? "blue" : "image"} />
                     </div>
                 ))}

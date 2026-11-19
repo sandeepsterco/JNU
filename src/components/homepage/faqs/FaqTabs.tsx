@@ -75,7 +75,7 @@ export default function FaqTabs({ modular }: FaqTabsInterface) {
     <>
       <div className="faq_tab">
         <ul
-          className="tabs"          
+          className="tabs"
         >
           {tabLabels.map((label, i) => (
             <li
