@@ -202,10 +202,10 @@ function QuoteTestimonialCard({
         <p className="school_testimonial_message">{testimonial.description}</p>
       )}
       <div className="success_speak_bx_flex">
-        {testimonial.profile_image && (
+        {testimonial.image && (
           <span>
             <Image
-              src={testimonial.profile_image}
+              src={testimonial.image}
               alt={testimonial.name}
               className="img-fluid"
               loading="lazy"

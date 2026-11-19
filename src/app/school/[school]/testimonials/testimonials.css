@@ -143,6 +143,7 @@
   color: var(--color-black);
 }
 
+
 .school_testimonial_quote_card .success_speak_bx_flex p {
   margin: 0;
   color: #231f20;
@@ -279,3 +280,5 @@
     font-size: 3rem;
   }
 }
+
+.testimonials_image_sec figure img{background-color: var(--color-white);}

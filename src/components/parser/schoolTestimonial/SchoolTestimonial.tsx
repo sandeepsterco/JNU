@@ -42,14 +42,17 @@ export default function SchoolTestimonial({
 }) {
     const testimonials = data?.data?.modular?.testimonials ?? EMPTY_TESTIMONIALS;
 
-    // Group by `type` (Students / Parents / Alumni ...) keeping first-seen order
+    const PRIORITY_TYPES = ["Students", "Parents", "Alumni"];
+
     const groups = useMemo(() => {
         const map = new Map<string, TestimonialDataInterface[]>();
+
         testimonials.forEach((item) => {
-            const key = item.type || "Others";
+            const key = item.type?.trim() || "Others";
             if (!map.has(key)) map.set(key, []);
             map.get(key)!.push(item);
         });
+
         map.forEach((list) =>
             list.sort(
                 (a, b) =>
@@ -57,7 +60,27 @@ export default function SchoolTestimonial({
                     (b.display_order ?? Number.MAX_SAFE_INTEGER)
             )
         );
-        return Array.from(map.entries()).map(([type, items]) => ({ type, items }));
+
+        const priorityIndex = (type: string) =>
+            PRIORITY_TYPES.findIndex(
+                (p) => p.toLowerCase() === type.toLowerCase()
+            );
+
+        return Array.from(map.entries())
+            .map(([type, items], firstSeen) => ({ type, items, firstSeen }))
+            .sort((a, b) => {
+                const ai = priorityIndex(a.type);
+                const bi = priorityIndex(b.type);
+
+                // both are priority types -> follow Students / Parents / Alumni order
+                if (ai !== -1 && bi !== -1) return ai - bi;
+                // only one is a priority type -> it goes first
+                if (ai !== -1) return -1;
+                if (bi !== -1) return 1;
+                // neither -> keep API first-seen order
+                return a.firstSeen - b.firstSeen;
+            })
+            .map(({ type, items }) => ({ type, items }));
     }, [testimonials]);
 
     const [activeTab, setActiveTab] = useState(0);
@@ -171,10 +194,10 @@ function TestimonialCard({ item }: { item: TestimonialDataInterface }) {
         <div className="success_speak_bx">
             {item.description && <p>{item.description}</p>}
             <div className="success_speak_bx_flex">
-                {item.profile_image && (
+                {item.image && (
                     <span>
                         <Image
-                            src={item.profile_image}
+                            src={item.image}
                             alt={item.name}
                             className="img-fluid"
                             loading="lazy"
