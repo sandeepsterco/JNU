@@ -53,6 +53,7 @@
     .placement_cnt figcaption span{font-weight: normal;}
     .placement_logos{padding-block:3.9rem;}
     .alumni_slider_section .swiper-slide .alumni_img img{ max-height: 20rem;}
+    .alumni_slider_section .swiper-slide .alumni_logo img{max-height:3.4rem;}
     .alumni_msg_desc{ min-height: 6.5rem;}
 }
 
