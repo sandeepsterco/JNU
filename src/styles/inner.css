@@ -3028,7 +3028,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 
 
 
-/* SCSS About page css */
+/* SCSS About page css start*/
 .scs_sch_about { padding-block: 12rem 0rem; }
 .scs_sch_about .jnu_title_header { padding-bottom: 8rem; }
 .scs_sch_about .scss_abt_grid { grid-template-columns: 53.85% auto; display: grid; align-items: center; margin-bottom: 1.8rem; gap: 2.5rem; }
@@ -3048,3 +3048,4 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .sbmtp_sec.scss_achimvnt {
     padding-block:12rem 13.1rem;
 }
+/* SCSS About page css start*/
