@@ -84,18 +84,12 @@ export default function HomeAlumni({data}:AlumniPropsInterface) {
               {data?.title && (
                 <h3
                   className="font18"
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="200"
                   dangerouslySetInnerHTML={{__html:data.title}}
                 />
               )}
               
               {data?.subtitle && (
                 <blockquote
-                  data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="400"
                   dangerouslySetInnerHTML={{__html:data.subtitle}}
                 />
               )}
@@ -104,9 +98,6 @@ export default function HomeAlumni({data}:AlumniPropsInterface) {
   
             <div
               className="alumni_header_right"
-              data-aos="fade-up"
-              data-aos-duration="1000"
-              data-aos-delay="200"
             >
                 <div ref={prevRef} className="alumni-prev swiper-button-prev custom_slider_btn">
                     <img src="/images/icons/nav-arrow-prev.svg" className="img-fluid" alt="arrow" />

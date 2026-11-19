@@ -9,6 +9,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
+import Link from "next/link";
+import { BASE_URL } from "@/config/config";
 
 export interface TestimonialDataInterface {
     name: string;
@@ -36,6 +38,7 @@ interface PageDataInterface {
 
 export default function SchoolTestimonial({
     data,
+    params
 }: {
     params?: string;
     data: PageDataInterface;
@@ -83,7 +86,7 @@ export default function SchoolTestimonial({
             .map(({ type, items }) => ({ type, items }));
     }, [testimonials]);
 
-    const [activeTab, setActiveTab] = useState(0);
+    const [activeType, setActiveType] = useState<string | null>(null);
 
     // Bind Fancybox once; delegated binding also covers slides rendered after tab changes
     useEffect(() => {
@@ -96,26 +99,35 @@ export default function SchoolTestimonial({
 
     if (groups.length === 0) return null;
 
-    const active = groups[Math.min(activeTab, groups.length - 1)];
+    const active = groups.find((group) => group.type === activeType) ?? groups[0];
+    const activeTab = groups.findIndex((group) => group.type === active.type);
 
     return (
         <div className="custom_tabs">
             <div className="tab_nav" role="tablist">
                 {groups.map((group, index) => (
-                    <label
+                    <button
+                        type="button"
+                        id={`testimonial-tab-${index}`}
                         key={group.type}
                         role="tab"
                         aria-selected={index === activeTab}
+                        aria-controls="school-testimonial-panel"
                         className={index === activeTab ? "active" : ""}
-                        onClick={() => setActiveTab(index)}
+                        onClick={() => setActiveType(group.type)}
                     >
                         {group.type}
-                    </label>
+                    </button>
                 ))}
             </div>
 
             <div className="tab_content">
-                <div className="tab_panel active" role="tabpanel">
+                <div
+                    id="school-testimonial-panel"
+                    className="tab_panel active"
+                    role="tabpanel"
+                    aria-labelledby={`testimonial-tab-${activeTab}`}
+                >
                     <div className="success_speak_slider" data-react-swiper>
                         {/* key forces Swiper to re-init when the tab changes */}
                         <Swiper
@@ -132,7 +144,7 @@ export default function SchoolTestimonial({
                         >
                             {active.items.map((item) => (
                                 <SwiperSlide key={item.slug}>
-                                    <TestimonialCard item={item} />
+                                    <TestimonialCard item={item} params={params} />
                                 </SwiperSlide>
                             ))}
                         </Swiper>
@@ -143,7 +155,7 @@ export default function SchoolTestimonial({
     );
 }
 
-function TestimonialCard({ item }: { item: TestimonialDataInterface }) {
+function TestimonialCard({ item, params }: { item: TestimonialDataInterface; params?:string; }) {
     // video_url (YouTube/Vimeo/etc.) takes priority; otherwise use the uploaded file
     const videoSrc = item.video_url || item.video || "";
     const hasVideo = Boolean(videoSrc);
@@ -191,28 +203,31 @@ function TestimonialCard({ item }: { item: TestimonialDataInterface }) {
     }
 
     return (
-        <div className="success_speak_bx">
-            {item.description && <p>{item.description}</p>}
-            <div className="success_speak_bx_flex">
-                {item.image && (
-                    <span>
-                        <Image
-                            src={item.image}
-                            alt={item.name}
-                            className="img-fluid"
-                            loading="lazy"
-                            width={41}
-                            height={41}
-                        />
-                    </span>
-                )}
-                <figcaption>
-                    <h5>{item.name}</h5>
-                    <h6>{item.course}</h6>
-                    <p>{item.year}</p>
-                </figcaption>
+      
+            <div className="success_speak_bx">
+                {item.description && <div className="testimonial_para"><p className="" dangerouslySetInnerHTML={{__html:item.description}} /></div>}
+                <div className="success_speak_bx_flex">
+                    {item.image && (
+                        <span>
+                            <Image
+                                src={item.image}
+                                alt={item.name}
+                                className="img-fluid"
+                                loading="lazy"
+                                width={41}
+                                height={41}
+                            />
+                        </span>
+                    )}
+                    <figcaption>
+                        <h5>{item.name}</h5>
+                        <h6>{item.course}</h6>
+                        <p>{item.year}</p>
+                    </figcaption>
+                      <Link href={`${BASE_URL}school/${params || ''}/testimonials/${item.slug}`} className="overlap_btn"></Link>
+                </div>
+                {/* <a href="#" className="overlap_btn" aria-label={item.name} /> */}
             </div>
-            {/* <a href="#" className="overlap_btn" aria-label={item.name} /> */}
-        </div>
+        
     );
 }

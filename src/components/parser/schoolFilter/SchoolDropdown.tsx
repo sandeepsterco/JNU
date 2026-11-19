@@ -40,7 +40,7 @@ export default function SchoolDropdown({ data, currentSlug }: SchoolDropdownProp
                 {label}
             </button>
 
-            {/* <div className={`dropdown ${open ? "show" : ""}`}>
+            <div className={`dropdown ${open ? "show" : ""}`}>
                 <ul>
                     {data.map((item) => (
                         <li key={item.id} className={item.slug === currentSlug ? "active" : ""}>
@@ -54,7 +54,7 @@ export default function SchoolDropdown({ data, currentSlug }: SchoolDropdownProp
                         </li>
                     ))}
                 </ul>
-            </div> */}
+            </div>
         </div>
     );
 }

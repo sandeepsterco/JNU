@@ -14,7 +14,7 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
   return (
 
       <div className="max-content-lg pe-lg-0 me-lg-0">
-        <div className="alumni_slider_section" data-aos="fade-up">
+        <div className="alumni_slider_section">
           {/* Vanilla Swiper container — hydrated by InitAlumniSwiper via CmsEnhancer */}
           <div
             className="swiper alumni_swiper"
@@ -70,7 +70,7 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                           </p>
                           )}
 
-                        {item?.designation && (
+                        {!item?.course && item?.designation && (
                           <p>
                             {item.designation}
                           </p>

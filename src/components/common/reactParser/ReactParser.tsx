@@ -1,5 +1,5 @@
 
-import parse, { attributesToProps, HTMLReactParserOptions, Element } from 'html-react-parser'
+import parse, { attributesToProps, domToReact, HTMLReactParserOptions, Element } from 'html-react-parser'
 // import DOMPurify from 'isomorphic-dompurify'
 import Image from 'next/image';
 import CmsEnhancer from '../CmsEnhancer';
@@ -54,6 +54,21 @@ function hashString(str: string): string {
     return (hash >>> 0).toString(36);
 }
 
+function normalizeHref(raw: string): string {
+    const href = raw.trim();
+
+    // already absolute / special / internal anchors
+    if (/^(https?:|mailto:|tel:|\/|#)/i.test(href)) return href;
+
+    // bare email -> mailto
+    if (/^[^\s@\/]+@[^\s@\/]+\.[^\s@\/]+$/.test(href)) return `mailto:${href}`;
+
+    // external link without protocol (www.xxx.com / linkedin.com/in/xxx)
+    if (/^www\./i.test(href) || /linkedin\.com/i.test(href)) return `https://${href}`;
+
+    return href;
+}
+
 export default function ReactParser({ html, searchParams, data, params }: ContentRendererProps) {
     // const sanitizedHtml = DOMPurify.sanitize(html);
     const sanitizedHtml = html;
@@ -87,12 +102,26 @@ export default function ReactParser({ html, searchParams, data, params }: Conten
                 }
 
                 if (domNode.name === 'a') {
-                    const href = (domNode.attribs?.href || '').trim();
+    const rawHref = (domNode.attribs?.href || '').trim();
 
-                    const isInvalid = !href || href.startsWith("{") || href.startsWith("javascript:");
+    const isInvalid = !rawHref || rawHref.startsWith("{") || rawHref.startsWith("javascript:");
+    if (isInvalid) return <></>;
 
-                    if (isInvalid) return <></>;
-                }
+    const finalHref = normalizeHref(rawHref);
+    const isExternal = /^https?:/i.test(finalHref);
+
+    const { href: _href, ...restProps } = attributesToProps(domNode.attribs) as any;
+
+    return (
+        <a
+            {...restProps}
+            href={finalHref}
+            {...(isExternal ? { target: '_blank', rel: 'noopener noreferrer' } : {})}
+        >
+            {domToReact(domNode.children as any, options)}
+        </a>
+    );
+}
 
                 if (domNode.name === 'li') {
                     const hasContent = domNode.children.some((child) => {
@@ -176,7 +205,7 @@ export default function ReactParser({ html, searchParams, data, params }: Conten
                 if (domNode.attribs.id === "school_testimonial") return <SchoolTestimonial params={params} data={data}  />;
                 if (domNode.attribs.id === "campusTourForm") return <CampusTourForm  />;
                 if (domNode.attribs.id === "alumni_registration_form") return <AlumniRegistrationForm  />;
-                if (domNode.attribs.id === "school_happenings") return <SchoolHappening data={data}  />;
+                if (domNode.attribs.id === "school_happenings") return <SchoolHappening data={data} params={params}  />;
                 if (domNode.attribs.id === "placment_registration_form") return <PlacementRegistrationForm  />;
                 if (domNode.attribs.id === "recruiter_registration_form") return <RecruiterRegistrationForm  />;
                 if (domNode.attribs.id === "apply_now_form") return <ApplyNowForm  />;

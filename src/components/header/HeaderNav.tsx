@@ -95,7 +95,7 @@ export default function HeaderNav({
               }}
             >
               <Link
-                href={`${isProgram ? href + `?school=${schoolId}` : href}`}
+                href={`${isProgram ? href + `?school=${schoolId}` : isAdmission ? `${BASE_URL}${item.overwrite_url || item.slug}` : href}`}
                 target={getTarget(item)}
                 rel={getRel(item)}
               >

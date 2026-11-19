@@ -1,5 +1,5 @@
 /* ====================school css================ */
-.school_banner{position:relative;}
+.school_banner{position:relative; z-index: 0;}
 .school_banner::after{background:transparent linear-gradient(180deg,#00000000 0%,#000000 100%) 0% 0% no-repeat padding-box;opacity:0.4;position:absolute;bottom:0;left:0;right:0;content:"";z-index:0;height:70rem;}
 .school_banner_content{position:absolute;top:12.5rem;bottom:15.7rem;display:flex;flex-direction:column;justify-content:space-between;}
 .school_banner .container-fluid{max-width:var(--mw2545);padding-inline:10rem;}
@@ -18,7 +18,7 @@
 .sch_dropdown .dropdown li a{font:var(--font-18);font-weight:400;color:var(--color-black);letter-spacing:0.04rem;display:block;line-height:2.4rem;}
 .sch_dropdown .dropdown li a:hover{color:var(--color-cf);}
 .school_filter{max-width:43.2rem;}
-.school_banner_tx{max-width:80rem;padding-inline:5rem 0;position:relative;z-index:9;}
+.school_banner_tx{max-width:80rem;padding-inline:5rem 0;position:relative;z-index:9;min-height: 25rem;}
 .school_banner_tx h1{font:var(--font-72);color:var(--color-white);letter-spacing:-2.16px;font-weight:600;line-height:1;}
 .school_banner_tx h1 span{font-weight:200; display: block;}
 .school_slider_logo{display:flex;gap:3rem;align-items:center;padding-block:2rem 5rem;}
@@ -126,9 +126,9 @@
 .success_speak .head_title{text-align:center;}
 .custom_tabs input[type="radio"]{display:none;}
 .custom_tabs .tab_nav{display:flex;gap:1.5rem;border-bottom:1px solid #DFDFDF;justify-content:center;margin-top:2rem;}
-.custom_tabs .tab_nav label{padding:1.2rem 1rem 2rem;font:var(--font-18);cursor:pointer;color:#9E9E9E;border-bottom:0.3rem solid transparent;transition:0.3s ease;font-weight:600;letter-spacing:2.7px;font-family:var(--poppins); text-transform:uppercase;}
-.custom_tabs .tab_nav label:hover{color:var(--color-cf);}
-.custom_tabs #tab_one:checked ~ .tab_nav label[for="tab_one"],.custom_tabs #tab_two:checked ~ .tab_nav label[for="tab_two"],.custom_tabs #tab_three:checked ~ .tab_nav label[for="tab_three"], .custom_tabs .tab_nav label.active{color:var(--color-cf);border-bottom-color:var(--color-f2);}
+.custom_tabs .tab_nav label,.custom_tabs .tab_nav button{padding:1.2rem 1rem 2rem;font:var(--font-18);cursor:pointer;color:#9E9E9E;border:0;border-bottom:0.3rem solid transparent;background:none;transition:0.3s ease;font-weight:600;letter-spacing:2.7px;font-family:var(--poppins);text-transform:uppercase;}
+.custom_tabs .tab_nav label:hover,.custom_tabs .tab_nav button:hover{color:var(--color-cf);}
+.custom_tabs #tab_one:checked ~ .tab_nav label[for="tab_one"],.custom_tabs #tab_two:checked ~ .tab_nav label[for="tab_two"],.custom_tabs #tab_three:checked ~ .tab_nav label[for="tab_three"], .custom_tabs .tab_nav label.active,.custom_tabs .tab_nav button.active{color:var(--color-cf);border-bottom-color:var(--color-f2);}
 .custom_tabs .tab_panel{display:none;padding:2rem 0;}
 .custom_tabs .tab_panel.active{display:block;}
 .custom_tabs #tab_one:checked ~ .tab_content .panel_one,.custom_tabs #tab_two:checked ~ .tab_content .panel_two,.custom_tabs #tab_three:checked ~ .tab_content .panel_three{display:block;}
@@ -154,7 +154,21 @@
 .success_speak .tab_content{ padding-top: 8rem;}
 
 
-.success_speak_bx p{font:var(--font-21);color:var(--color-black);font-weight:300;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden;}
+/* .success_speak_bx p,
+.success_speak_bx p p{font:var(--font-21);color:var(--color-black);font-weight:300;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden;} */
+.testimonial_para {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+}
+
+.testimonial_para p {
+    font: var(--font-21);
+    color: var(--color-black);
+    font-weight: 300;
+    line-height: 1.5;
+}
 .success_speak_bx span img{border-radius:100%;width:5.4rem;height:5.4rem;min-width: 5.4rem; object-fit:cover;object-position:top center;background-color: #f4eee2}
 .success_speak_bx .success_speak_bx_flex *{ color: var(--color-black);}
 .success_speak_bx figure{ margin-bottom: 3rem;}
@@ -175,7 +189,7 @@
     .success_speak_bx .success_speak_bx_flex{margin-top:1rem;padding-top:1rem;left:2.4rem;}
     .success_speak_bx .success_speak_bx_flex>span{flex-shrink: 0;}
     .success_speak_bx span img{width:4rem;height:4rem;min-width:4rem;}
-    .custom_tabs .tab_nav label{letter-spacing:0.17rem;padding:0.5rem 1rem 1rem;border-bottom:.2rem solid #0000;}
+    .custom_tabs .tab_nav label,.custom_tabs .tab_nav button{letter-spacing:0.17rem;padding:0.5rem 1rem 1rem;border-bottom:.2rem solid #0000;}
     .success_speak .swiper-wrapper{padding-top:3rem;}
     .success_speak .tab_content { padding-top: 3rem; }
     .our_department_list { grid-template-columns: 22rem 22rem 22rem 19rem; gap: 3.5rem 4.6rem;}
