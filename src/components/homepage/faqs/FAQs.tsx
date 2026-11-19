@@ -25,10 +25,7 @@ export default function FAQs({ data, modular }: FAQInterface) {
                     <div className="col-lg-10 mx-auto">
                         {data?.title && (
                             <h4
-                                className="font42"
-                                data-aos="fade-up"
-                                data-aos-duration="1000"
-                                data-aos-delay="200"
+                                className="font42"                               
                                 dangerouslySetInnerHTML={{ __html: data.title }}
                             />
                         )}

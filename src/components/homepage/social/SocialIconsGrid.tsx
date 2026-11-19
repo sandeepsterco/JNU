@@ -7,7 +7,7 @@ export default async function SocialIconsGrid() {
     if(error || !apiData.status) throw new Error(`Failed to fetch Social Data`)
 
     return (
-        <ul className="social_media_link" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+        <ul className="social_media_link">
             {apiData.data
                 .filter((item: any) => (item.key == 'facebook' || item.key == 'twitter' || item.key == 'youtube' || item.key == 'instagram' || item.key == 'linkedin'))
                 .map((item: any) => (

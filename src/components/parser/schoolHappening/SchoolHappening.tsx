@@ -122,11 +122,7 @@ export default function SchoolHappeningGrid({ data }: { data: ISchoolHappening }
                 {items.map((item, i) => (
                     <div
                         key={item.slug}
-                        className="happening_col"
-                        data-aos="fade-up"
-                        data-aos-duration="1000"
-                        data-aos-delay={aosDelays[i]}
-                    >
+                        className="happening_col">
                         <HappeningCard item={item} variant={i === 1 ? "blue" : "image"} />
                     </div>
                 ))}

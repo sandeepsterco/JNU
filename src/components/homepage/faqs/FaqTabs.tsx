@@ -75,10 +75,7 @@ export default function FaqTabs({ modular }: FaqTabsInterface) {
     <>
       <div className="faq_tab">
         <ul
-          className="tabs"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-          data-aos-delay="400"
+          className="tabs"          
         >
           {tabLabels.map((label, i) => (
             <li
@@ -99,9 +96,6 @@ export default function FaqTabs({ modular }: FaqTabsInterface) {
 
       <div
         className="faq_question"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-        data-aos-delay="500"
       >
         {tabLabels.map((label) => {
           const isActive = activeTab === label;
