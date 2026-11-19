@@ -38,9 +38,9 @@ export async function initSOCSSLibraryFacilitiesSwiper(root: HTMLElement): Promi
         },
         breakpoints: {
           320: { slidesPerView: 1, spaceBetween: 0 },
-          768: { slidesPerView: 2, spaceBetween: 3 },
-          992: { slidesPerView: 5, spaceBetween: 3 },
-          1200: { slidesPerView: 6, spaceBetween: 3 },
+          768: { slidesPerView: 2, spaceBetween: 60 },
+          992: { slidesPerView: 5, spaceBetween: 40 },
+          1200: { slidesPerView: 6, spaceBetween: 60 },
         },
       })
     );

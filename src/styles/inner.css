@@ -3130,10 +3130,32 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .socss_labtitle { padding-block: 3.2rem 0; }
 .socss_lab_facigrid { grid-template-columns: repeat(3, 1fr); align-items: start; gap: 5.4rem 2.7rem; display: grid; }
 .socss_labtitle h5 { font-weight: var(--fw-300); color: var(--color-23); padding-inline: 10rem; text-align: center; line-height: 1.7; }
-.socss_libr_faci .socss_lib_title{position: relative;}
-.socss_libr_faci .socss_lib_title::after{position: absolute;top: 0;width: 100%;height: 65rem; content:"";left: 0;background-color: var(--color-white);
-z-index: -1;}
-.socss_lib_title .jnu_title_header{padding-block: 8rem 5rem;}
+.socss_libr_faci .socss_lib_title { position: relative; }
+.socss_libr_faci .socss_lib_title::after { position: absolute; top: 0; width: 100%; height: 65rem; content:""; left: 0; background-color: var(--color-white); z-index: -1; }
+.socss_lib_title .jnu_title_header { padding-block: 8rem 5rem; }
+.socss_lib_title .jnu_title_header blockquote { font: var(--font-24); font-weight: var(--fw-300); line-height: 1.5; }
+.socss_sub_elab { padding-block: 4.6rem 4.2rem; text-align: center; }
+.socss_sub_elab p { font: var(--font-16); font-weight: var(--fw-300); }
+.elibrary_logo { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.socss_library_facili  .elibrary_logo figure { width: 100%; height: 12.3rem; margin: 0; display: flex; align-items: center; justify-content: center; }
+.socss_library_facili  .elibrary_logo figure img { width: auto; height: auto; max-width: 100%; max-height: 12.3rem; object-fit: contain; display: block; }
+.socss_pds_wrap { padding-top: 10rem; margin-block: 8rem; border-top: 1px solid #cecece; }
+.socss_pds_row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15rem; }
+.socss_pds-left { position: relative; }
+.socss_pds-left::after { content: ''; right: -4.5rem; top: 0; position: absolute; background-color:  #cecece; width: 0.1rem; height: 13.4rem; }
+.socss_pds_row .font21 { margin-bottom: 2.5rem; color: var(--color-cf); font-weight: var(--fw-medium); }
+.socss_pds_row p { font: var(--font-16); font-weight: var(--fw-300); }
+.pds_content { display: grid; gap: 2.1rem; grid-template-columns: 8rem auto; align-items: center; }
+.pds_content .pds_logo { max-width: 7.9rem; }
+.socss_insutry_tie { position: relative; }
+.socss_insutry_tie::before { content: ""; z-index: -1; background-image: url(/images/soil-vector.svg); background-repeat: no-repeat; background-size: cover; background-color: var(--color-cf); width: 100%; height: 45.1rem; position: absolute; top: 3.5rem; bottom: 0; left: 0; }
+.socss_indus_bx { background-color: var(--color-white); padding-block: 5.6rem 7.2rem; margin-bottom: 14.2rem; }
+.socss_indus_bx  .jnu_title_header { padding-bottom: 4.2rem; }
+.socss_indus_bx  .jnu_title_header  blockquote { font: var(--font-16); font-weight: var(--fw-300); }
+.socss_indus_logo { text-align: center; }
+.socss_indus_logo figure { max-height: 7.4rem; width: 100%; }
+.socss_indus_logo figure { height: 100%; width: 100%; margin-bottom: 0.62rem; }
+.socss_indus_logo p { font: var(--font-14); font-weight: var(--fw-300); }
 
 /* Socss  Page Facilities Css End */
 

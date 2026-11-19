@@ -1,5 +1,5 @@
 /* ====================school css================ */
-.school_banner{position:relative;}
+.school_banner{position:relative; z-index: 0;}
 .school_banner::after{background:transparent linear-gradient(180deg,#00000000 0%,#000000 100%) 0% 0% no-repeat padding-box;opacity:0.4;position:absolute;bottom:0;left:0;right:0;content:"";z-index:0;height:70rem;}
 .school_banner_content{position:absolute;top:12.5rem;bottom:15.7rem;display:flex;flex-direction:column;justify-content:space-between;}
 .school_banner .container-fluid{max-width:var(--mw2545);padding-inline:10rem;}
