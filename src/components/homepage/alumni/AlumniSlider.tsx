@@ -46,9 +46,9 @@ export default function AlumniSlider({ alumniData, prevRef, nextRef }: AlumniSli
     return (
         <div
             className="alumni_slider_section"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="600"
+            // data-aos="fade-up"
+            // data-aos-duration="1000"
+            // data-aos-delay="600"
         >
             <Swiper
                 modules={[Navigation, Autoplay]}
