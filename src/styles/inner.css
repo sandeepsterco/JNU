@@ -3096,3 +3096,17 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 
 
 /* language facility css ends here */
+
+
+/* Socss  Page Facilities Css Start */
+.socss_faci_ovr { padding-block: 12rem 16.4rem; }
+.socss_faci_ovr .jnu_title_header { margin-bottom: 10rem; }
+.socss_labtitle { padding-block: 3.2rem 0; }
+.socss_lab_facigrid { grid-template-columns: repeat(3, 1fr); align-items: start; gap: 5.4rem 2.7rem; display: grid; }
+.socss_labtitle h5 { font-weight: var(--fw-300); color: var(--color-23); padding-inline: 10rem; text-align: center; line-height: 1.7; }
+.socss_libr_faci .socss_lib_title{position: relative;}
+.socss_libr_faci .socss_lib_title::after{position: absolute;top: 0;width: 100%;height: 65rem; content:"";left: 0;background-color: var(--color-white);
+z-index: -1;}
+.socss_lib_title .jnu_title_header{padding-block: 8rem 5rem;}
+
+/* Socss  Page Facilities Css End */
