@@ -205,7 +205,7 @@ function TestimonialCard({ item, params }: { item: TestimonialDataInterface; par
     return (
       
             <div className="success_speak_bx">
-                {item.description && <p>{item.description}</p>}
+                {item.description && <div className="testimonial_para"><p className="" dangerouslySetInnerHTML={{__html:item.description}} /></div>}
                 <div className="success_speak_bx_flex">
                     {item.image && (
                         <span>
