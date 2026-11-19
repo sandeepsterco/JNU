@@ -57,9 +57,11 @@ export default function AOSProvider({ children }: { children: React.ReactNode })
     const container = document.querySelector(".main-container");
     if (!container) return;
 
+    let active = true;
+    const refreshAfterLayoutChange = () => scheduleDebouncedRefreshAOS();
     const observer = new MutationObserver((mutations) => {
       if (mutationAddsAosNodes(mutations)) {
-        scheduleDebouncedRefreshAOS();
+        refreshAfterLayoutChange();
       }
     });
 
@@ -67,10 +69,24 @@ export default function AOSProvider({ children }: { children: React.ReactNode })
       childList: true,
       subtree: true,
       attributes: true,
-      attributeFilter: ["data-aos", "data-aos-delay", "class"],
+      attributeFilter: ["data-aos", "data-aos-delay"],
     });
 
-    return () => observer.disconnect();
+    const resizeObserver = new ResizeObserver(refreshAfterLayoutChange);
+    resizeObserver.observe(container);
+    container.addEventListener("load", refreshAfterLayoutChange, true);
+    window.addEventListener("resize", refreshAfterLayoutChange);
+    document.fonts.ready.then(() => {
+      if (active) refreshAfterLayoutChange();
+    });
+
+    return () => {
+      active = false;
+      observer.disconnect();
+      resizeObserver.disconnect();
+      container.removeEventListener("load", refreshAfterLayoutChange, true);
+      window.removeEventListener("resize", refreshAfterLayoutChange);
+    };
   }, [pathname]);
 
   return children;
