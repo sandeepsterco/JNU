@@ -81,9 +81,9 @@ export default function HeaderScroll({
     
             // school_header should only be present on school & department pages, and only at the top
             if (isSchoolPage || isDepartmentPage || hasSchoolHeaderClass) {
-                header.classList.toggle('school_header', scrollTop <= 0)
+                // header.classList.toggle('school_header')
             } else {
-                header.classList.remove('school_header')
+                // header.classList.remove('school_header')
             }
 
             lastScrollTop.current = scrollTop

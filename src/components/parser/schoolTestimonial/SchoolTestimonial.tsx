@@ -9,6 +9,8 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import Image from "next/image";
+import Link from "next/link";
+import { BASE_URL } from "@/config/config";
 
 export interface TestimonialDataInterface {
     name: string;
@@ -34,8 +36,9 @@ interface PageDataInterface {
     };
 }
 
-export default function SchoolTestimonial({
+export default async function SchoolTestimonial({
     data,
+    params
 }: {
     params?: string;
     data: PageDataInterface;
@@ -132,7 +135,7 @@ export default function SchoolTestimonial({
                         >
                             {active.items.map((item) => (
                                 <SwiperSlide key={item.slug}>
-                                    <TestimonialCard item={item} />
+                                    <TestimonialCard item={item} params={params} />
                                 </SwiperSlide>
                             ))}
                         </Swiper>
@@ -143,7 +146,7 @@ export default function SchoolTestimonial({
     );
 }
 
-function TestimonialCard({ item }: { item: TestimonialDataInterface }) {
+function TestimonialCard({ item, params }: { item: TestimonialDataInterface; params?:string; }) {
     // video_url (YouTube/Vimeo/etc.) takes priority; otherwise use the uploaded file
     const videoSrc = item.video_url || item.video || "";
     const hasVideo = Boolean(videoSrc);
@@ -191,28 +194,31 @@ function TestimonialCard({ item }: { item: TestimonialDataInterface }) {
     }
 
     return (
-        <div className="success_speak_bx">
-            {item.description && <p>{item.description}</p>}
-            <div className="success_speak_bx_flex">
-                {item.image && (
-                    <span>
-                        <Image
-                            src={item.image}
-                            alt={item.name}
-                            className="img-fluid"
-                            loading="lazy"
-                            width={41}
-                            height={41}
-                        />
-                    </span>
-                )}
-                <figcaption>
-                    <h5>{item.name}</h5>
-                    <h6>{item.course}</h6>
-                    <p>{item.year}</p>
-                </figcaption>
+      
+            <div className="success_speak_bx">
+                {item.description && <p>{item.description}</p>}
+                <div className="success_speak_bx_flex">
+                    {item.image && (
+                        <span>
+                            <Image
+                                src={item.image}
+                                alt={item.name}
+                                className="img-fluid"
+                                loading="lazy"
+                                width={41}
+                                height={41}
+                            />
+                        </span>
+                    )}
+                    <figcaption>
+                        <h5>{item.name}</h5>
+                        <h6>{item.course}</h6>
+                        <p>{item.year}</p>
+                    </figcaption>
+                      <Link href={`${BASE_URL}school/${params || ''}/testimonials/${item.slug}`} className="overlap_btn"></Link>
+                </div>
+                {/* <a href="#" className="overlap_btn" aria-label={item.name} /> */}
             </div>
-            {/* <a href="#" className="overlap_btn" aria-label={item.name} /> */}
-        </div>
+        
     );
 }
