@@ -506,17 +506,121 @@
 .global_outreach { padding-block: 4rem 8rem; }
 .global_outreach .global_reasearch{padding-block: 5rem 0;}
 }
+
+
+.education_facility_section{ position: relative;}
+
+.education_facility_section::before {
+    content: "";
+    position: absolute;
+    top: -32rem;
+    right: 0;
+    width: 100%;
+    height: 60rem;
+    background-color: var(--color-cf);
+}
+
+.education_facility_section::after {
+    content: "";
+    position: absolute;
+    top:-32rem;
+    right: 0;
+    width: 100%;
+    height: 60rem;
+    background: url("/images/back_pattern.svg");
+    background-position: right 0 center;
+    background-repeat: repeat;
+    background-size: contain;
+    opacity: 0.15;
+    pointer-events: none;
+}
+
 .education_facility_section{ padding-bottom: 8rem;}
-.education_facility_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 2.5rem;}
+.education_facility_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 2.5rem; position: relative; z-index: 2;}
 .educ_grid_bx{ padding-inline: 10rem;display: flex; flex-direction: column; justify-content: center;}
 .educ_grid_bx p{max-width: 38.8rem; font:var(--font-16); }
 .educ_grid_bx_2{ padding-inline: 10rem; display: flex; flex-direction: column; justify-content: center; position: relative;}
 .educ_grid_bx_2 p{max-width: 40rem; font:var(--font-16); }
 .educ_grid_bx_2:after { content: ""; background: linear-gradient(to right, var(--color-f9) 0%, var(--color-f9) 70%, var(--color-cf) 70%, var(--color-cf) 100%); width: 100%; max-width: 24rem; height: .2rem; margin: auto; position: absolute; bottom: 0; left: 10rem; }
-
+.scs_sch_about figure{ position: relative; z-index: 2;}
 
 @media (max-width:1536px){
     .educ_grid_bx{ padding-inline: 2rem;}
     .educ_grid_bx_2{ padding-inline: 2rem;}
     .educ_grid_bx_2:after{ left: 2rem;}
+    .education_facility_section:before{height: 25rem; top: -14rem;}
+    .education_facility_section::after{height: 25rem; top: -14rem;}
+}
+
+.solbs_about_ovr_img{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; align-items: center;}
+.solbs_about_cnt{ padding-inline: 12.5rem 17.5rem;}
+.solbs_about_cnt h5{ font-weight: 300; line-height: 1.5; margin-bottom: 2.8rem;}
+.solbs_about_cnt p{ font: var(--font-16);}
+.solbs_heightlight_section{ padding-top: 12rem;}
+.solbs_hghtlght__grid{ padding-top:2rem;}
+.solbs_hghtlght__grid ul { grid-template-columns: repeat(3, 1fr); gap: 2.4rem; padding: 0; display: grid;}
+.solbs_hghtlght__grid ul > li { background: var(--color-white); font: var(--font-16); text-align: center; padding-block: 7.5rem; padding-inline: 6.8rem; font-weight: 300; line-height: 1.6; list-style: none; position: relative; }
+.solbs_hghtlght__grid ul > li:before { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 40%, var(--color-cf) 40%, var(--color-cf) 100%); width: 11.5rem; max-width: 11.5rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0; left: 0; right: 0; }
+.sbm_mission p{ font: var(--font-21); font-weight: 300; line-height: 1.6;}
+.school-school-of-life-basic-sciences-about-solbs .scss_vis_mis .sbm_misgrid .sbm_vision{ display: flex; flex-direction: column; align-items: center; padding-inline:11.3rem 7rem; padding-block:10rem;}
+.school-school-of-life-basic-sciences-about-solbs .sbm_misgrid{ align-items: center;}
+
+.school-school-of-life-basic-sciences-about-solbs .health_btom_grid { z-index: 9; grid-template-columns: 60.2rem auto; gap: 15rem; padding-right:3rem; }
+.school-school-of-life-basic-sciences-about-solbs .health_btom_grid figure { margin-left: -4rem; }
+.school-school-of-life-basic-sciences-about-solbs .health_btom_grid figure:before{ display: none;}
+.health_btom_content .sch_dir_msg_author h4{ margin-bottom: 0;}
+.school-school-of-life-basic-sciences-about-solbs .health_btom_content blockquote{padding-right: 4rem;}
+.school-school-of-life-basic-sciences-about-solbs .health_btom_msg{ padding-bottom: 24.2rem;}
+.school-school-of-life-basic-sciences-about-solbs .health_btom_msg:after { bottom: 31.2rem; height: auto; }
+
+.achie_grid_bx ul{ display: grid; grid-template-columns: repeat(3, 1fr); gap:2.5rem; padding: 0;}
+.achie_grid_bx ul li{ display: flex; gap: 2.7rem; background: var(--color-white); padding: 5.8rem 4rem; align-items: center;}
+
+
+.school-school-of-life-basic-sciences-about-solbs .scss_vis_mis { border-top: 0px solid #cecece; margin-block: 0rem 8rem; padding-top: 9rem; }
+.school-school-of-life-basic-sciences-about-solbs .sbm_misgrid{ margin-top: 0;}
+.achie_grid_bx ul li:first-child figure{ min-width: 12.2rem;}
+.achie_grid_bx ul li:nth-child(2) figure{ min-width: 9.6rem;}
+.achie_grid_bx ul li::nth-child(3) figure{ min-width: 19.7rem;}
+.achie_grid_bx ul li p{ font: var(--font-16); font-weight: 300;}
+.achie_grid_bx ul li:nth-child(2) p{ padding-right: 5rem;}
+.achie_grid_bx ul + p{ font: var(--font-16); text-align: center; font-weight: 300; padding-top: 5.6rem; max-width: 106.3rem; margin: 0 auto;}
+.ache_logo_grid ul{ display: flex; gap: 6.1rem; padding-block: 3rem; border-bottom: 1px solid #cecece;}
+.achie_img_grid ul{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; padding: 0;}
+.achie_img_grid ul li{ border-left: 4px solid var(--color-f2); padding-left: 3.6rem; font: var(--font-16); font-weight:300;}
+.achie_img_grid{ padding-block: 8rem;}
+.achie_img_grid ul li:first-child{ padding-right: 13rem;}
+.achie_img_grid_sct { grid-template-columns: repeat(2, 1fr); gap: 2rem; padding: 0; display: grid; align-items: center; }
+.achie_img_grid_sct figure{ max-width: 60rem;}
+.achie_img_grid_sct p{font: var(--font-16); font-weight:300;}
+.ach_cnt{ max-width: 87%;}
+.school-school-of-life-basic-sciences-about-solbs .sbmtp_sec.scss_achimvnt{ padding-block: 16rem 8rem;}
+
+@media (max-width:1536px){
+    .solbs_about_cnt { padding-inline: 4rem 3rem; }
+    .solbs_hghtlght__grid ul > li{padding-block: 3.5rem; padding-inline: 2.8rem;}
+    .school-school-of-life-basic-sciences-about-solbs .scss_vis_mis .sbm_misgrid .sbm_vision{ padding: 3rem;}
+    .school-school-of-life-basic-sciences-about-solbs .sbm_misgrid .sbm_vision blockquote{ line-height: 1.7;}
+    .scss_vis_mis .sbm_misgrid .sbm_mission { padding: 3rem 5rem 0 5rem; }
+    
+    .school-school-of-life-basic-sciences-about-solbs .scss_vis_mis .sbm_misgrid .sbm_mission { padding: 0 0 0 3rem; }
+    .school-school-of-life-basic-sciences-about-solbse .sbm_misgrid .sbm_vision{padding: 0 4rem 0 4rem;}
+    .school-school-of-life-basic-sciences-about-solbs .scss_vis_mis{ margin-top: 0rem;}
+    .school-school-of-life-basic-sciences-about-solbs .health_btom_grid { z-index: 9; grid-template-columns: 36rem auto; gap: 5rem; padding-right: 0; }
+    .school-school-of-life-basic-sciences-about-solbs .health_btom_content blockquote { padding-right: 0; }
+    .school-school-of-life-basic-sciences-about-solbs .health_btom_msg { padding-bottom: 8rem; }
+    .school-school-of-life-basic-sciences-about-solbs .sbmtp_sec.scss_achimvnt { padding-block: 10rem 8rem; }
+    .scss_achimvnt.sbmtp_sec .jnu_title_header { margin-bottom: 3.6rem; }
+    .achie_grid_bx ul li{gap: 1.5rem; padding: 1.8rem 1rem;}
+    .achie_grid_bx ul li:first-child figure { min-width: 7.2rem; }
+    .achie_grid_bx ul li:nth-child(2) figure { min-width: 5.5rem; }
+    .ache_logo_grid ul{ gap:2rem;}
+    .achie_img_grid ul li:first-child { padding-right: 1rem; }
+    .achie_img_grid ul li{ padding-left: 2rem;}
+    .ach_cnt { max-width: 100%; }
+    .achie_img_grid_sct figure { max-width: 95%; }
+
+
+
+
 }
