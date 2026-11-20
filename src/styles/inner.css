@@ -3268,3 +3268,35 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .spo_facgridrow .spofac_phcont p { font: var(--font-16); font-weight: var(--fw-300); }
 
 /* SOPS Facilities Page CSS End */
+.digital_grid,.digital_grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;align-items:center;}
+.digital_cont h4,.digital_grid2 h4{font:var(--font-21);color:var(--color-cf);margin-bottom:2.4rem;font-weight:500;}
+.digital_cont p,.digital_grid2 p{font:var(--font-16);color:var(--color-00);font-weight:300;}
+.digital_cont{margin-left:13rem;margin-right:2rem;}
+.digital2_cont{margin-right:18rem;}
+.digital_grid{margin-bottom:2rem;}
+.radio_sec > img{z-index:-1;background-color:#cf1e62;position:absolute;top:0;left:0;right:0;}
+.radio_sec{position:relative;}
+.radio_sec{padding-top:12.1rem;text-align:center;}
+.radio_ttl{max-width:83%;margin:0 auto 7.3rem;}
+.radio_ttl h4{font:var(--font-21);color:var(--color-white);margin-bottom:2.4rem;font-weight:500;}
+.radio_ttl p{font:var(--font-16);color:var(--color-white);font-weight:300;}
+.digital_sec{padding-block:0 17.3rem;}
+.radio_post_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;margin-top:2.5rem;}
+.radio_post_list figure{position:relative;}
+.radio_post_list figure figcaption{position:absolute;left:0;right:0;bottom:0;}
+.radio_post_list figure figcaption h4{font:var(--font-21);color:var(--color-cf);margin-bottom:5rem;font-weight:500;}
+.radio_post_list{background-color:var(--color-white);}
+.radio_conts{padding-block:4rem 4rem;padding-inline:13rem;text-align:center;}
+.radio_conts p{font:var(--font-16);color:var(--color-00);font-weight:300;}
+.technical_grid{grid-template-columns:850fr 600fr;align-items:center;display:grid;gap:2.5rem;}
+.technical_conts h4{font:var(--font-21);color:var(--color-cf);margin-bottom:2.4rem;font-weight:500;}
+.technical_conts p{font:var(--font-16);color:var(--color-00);font-weight:300;}
+.technical_sec{padding-block:15rem 12rem;}
+.technical_grid:not(:nth-child(2n+2)) .technical_conts{margin-left:10rem;margin-right:6rem;}
+.technical_grid:nth-child(2n) .technical_conts{margin-left:12.5rem;margin-right:16rem;}
+.technical_ttlss{text-align:center;max-width:88%;margin:14rem auto 0;}
+.technical_ttlss h4{font:var(--font-21);color:var(--color-cf);margin-bottom:2.4rem;font-weight:500;}
+.technical_ttlss p{font:var(--font-16);color:var(--color-00);font-weight:300;}
+.smms_facility .health_cont1{border:none;padding-bottom:12rem;}
+.smms_facility .health_cont{margin:0 6rem 8rem;}
+.smms_facility .health_cont1 P{max-width:97%;}

@@ -596,6 +596,17 @@
 .ach_cnt{ max-width: 87%;}
 .school-school-of-life-basic-sciences-about-solbs .sbmtp_sec.scss_achimvnt{ padding-block: 16rem 8rem;}
 
+
+.school-school-of-media-studies-about-soms .health_btom_grid { z-index: 9; grid-template-columns: 60.2rem auto; gap: 15rem; padding-right:3rem; }
+.school-school-of-media-studies-about-soms .health_btom_grid figure { margin-left: -4rem; }
+.school-school-of-media-studies-about-soms .health_btom_grid figure:before{ display: none;}
+.health_btom_content .sch_dir_msg_author h4{ margin-bottom: 0;}
+.school-school-of-media-studies-about-soms .health_btom_content blockquote{padding-right: 4rem;}
+.school-school-of-media-studies-about-soms .health_btom_msg{ padding-bottom: 24.2rem;}
+.school-school-of-media-studies-about-soms .health_btom_msg:after { bottom: 31.2rem; height: auto; }
+
+
+
 @media (max-width:1536px){
     .solbs_about_cnt { padding-inline: 4rem 3rem; }
     .solbs_hghtlght__grid ul > li{padding-block: 3.5rem; padding-inline: 2.8rem;}
