@@ -2627,6 +2627,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .sch_dir_msg_content p { font: var(--font-16); font-weight: 300; }
 .sch_dir_msg_author { padding-top: 3.2rem; }
 .sch_dir_msg_author h4 { margin-bottom: 2.4rem; font: var(--font-24); }
+.sch_dir_msg_author.socss_mgs_author h4{margin-bottom: 0;}
 .sch_dir_msg_author .designation { font: var(--font-18); font-weight: 300; }
 .sch_dir_msg_content .load_more_btn { padding-top:0; display: inline-block; }
 .sch_dir_msg_content .load_more_btn.is-expanded { margin-top: 3rem; }
@@ -3068,6 +3069,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .scss_achimvnt .sbmtp_grid>.sbmtp_item { padding-inline: 4.3rem; }
 .scss_achimvnt.sbmtp_sec .jnu_title_header { margin-bottom: 5.6rem; }
 .scss_achimvnt .sbmtp_grid > .sbmtp_item > h5 { line-height: 1.3; }
+.scss_achimvnt.sbmtp_sec .jnu_title_header p{padding-inline: 2rem;}
 .scss_vis_mis { margin-block: 8rem; padding-top: 10rem; border-top: 1px solid #cecece; }
 .scss_vis_mis .sbm_misgrid .sbm_vision { padding: 3.6rem 7rem 9.6rem 11.3rem; }
 .scss_vis_mis .sbm_misgrid .sbm_mission { padding: 3.6rem 5rem 0rem 12.5rem; }
@@ -3218,3 +3220,51 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 
 
 /* media school css ends here */
+/* SOPS About Page CSS start */
+.sops_aboutmain { padding-block: 12rem; }
+.sops_aboutmain .jnu_title_header { margin-bottom: 7.5rem; }
+.sops_aboutmain .jnu_title_header blockquote { padding-inline: 5rem; }
+.sops_aboutmain .sops_aboutbtmtext { margin-top: 7rem; text-align: center; }
+.sops_aboutmain .sops_aboutbtmtext p { font: var(--font-16); font-weight: var(--fw-300); }
+.sops_highli_main { padding-bottom: 12.4rem; }
+.sops_highli_main  .jnu_title_header .font21 { margin-bottom: 5rem; }
+.sops_highgrid ul { grid-template-columns: repeat(3, 1fr); gap: 2.4rem; margin: 0; padding: 0; display: grid; }
+.sops_highgrid ul li { background: var(--color-white); font: var(--font-16); text-align: center; padding: 3.9rem 6.9rem; font-weight: 300; line-height: 1.68; list-style: none; position: relative; min-height: 18.5rem; }
+.sops_highgrid ul li:before { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 40%, var(--color-cf) 40%, var(--color-cf) 100%); width: 30%; max-width: 30%; height: 2px; margin: 0 auto; position: absolute; bottom: 0; left: 0; right: 0; }
+.sops_vimi_about { padding-bottom: 6rem; }
+.sops_vimi_about .sbm_misgrid { margin-top: 0; margin-right: 10rem; grid-template-columns: 52.75% auto; }
+.sops_vimi_about .custom_lists > li { font: var(--font-16); font-weight: var(--fw-300); }
+.sops_vimi_about .sbm_misgrid .sbm_vision { padding: 6.6rem 8.7rem 8.7rem 10rem; }
+.sops_vimi_about .sbm_misgrid .sbm_mission { padding: 6.6rem 0.5rem 10.8rem 10.1rem; }
+.sops_vimi_about .sbm_misgrid .sbm_vision blockquote { line-height: 1.6875; }
+.sops_achivmnt_sec{padding-block: 14rem 12rem;}
+.sops_achivmnt_sec .jnu_title_header .font21{margin-bottom: 4rem;}
+.sops_achivmnt_sec .spos_achiven_grid{display: grid;grid-template-columns: repeat(2, 1fr);gap: 2.7rem;}
+.sops_achivmnt_sec .spos_achivenbx{background-color: var(--color-white);padding: 6.6rem 10.1rem 9.5rem 12.5rem;position: relative;}
+.spos_achivenbx h5{font: var(--font-21);font-weight: var(--fw-300);margin-bottom: 5.4rem;}
+.spos_achivenbx ul li{font: var(--font-16);font-weight: var(--fw-300);}
+.spos_achivenbx ul li ol{margin-top: 1.6rem;}
+.spos_achivenbx ul li ol {list-style: circle;}
+.sops_achivmnt_sec .spos_achivenbx:before { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 40%, var(--color-cf) 40%, var(--color-cf) 100%); width: 30%; max-width: 30%; height: 2px; margin-inline:20% auto; position: absolute; bottom: 0; left: 0; right: 0; }
+.sops_gridsec { z-index: 9; grid-template-columns: 65rem  auto; gap: 15rem; display: grid; position: relative;    align-items: center; }
+.sops_gridsec .sops_btom_content figure { width: 4.5rem; height: 3.6rem; }
+.sops_gridsec .sops_btom_content blockquote { padding-block: 3.2rem ; font: var(--font-24); color: var(--color-black); font-weight: 300; line-height: 1.5; }
+.sops_gridsec .sops_btom_content p { font: var(--font-16); font-weight: 300; }
+.sops_gridsec .sops_btom_content  .sch_dir_msg_author { padding-top: 4.8rem; }
+.sops_gridsec   .sch_dir_msg_author p , .sops_gridsec .sch_dir_msg_author h4{ margin-bottom: 0; }
+/* SOPS About Page CSS End */
+
+
+/* SOPS Facilities Page CSS End */
+.sops_faclimain { padding-block: 12rem 0; }
+.sops_faclimain .jnu_title_header { margin-bottom: 7.5rem; padding-inline: 5rem; }
+.spos_facili_btm { text-align: center; padding-top: 7rem; }
+.spos_facili_btm p { font: var(--font-16); font-weight: var(--fw-300); }
+.sops_facili_btmsec { padding-bottom: 12rem; }
+.sops_facili_btmsec .reach_grid { margin-bottom: 15rem; }
+.sposfacil_pharmgrid .spo_facgridrow { display: grid; grid-template-columns: 59% auto; align-items: center; gap: 2.4rem; }
+.sposfacil_pharmgrid .spo_facgridrow .spofac_phcont { max-width: 56.3rem; padding-left: 10rem; }
+.spo_facgridrow .spofac_phcont h4 { color: var(--color-cf); margin-bottom: 2.4rem; font-weight: 500; }
+.spo_facgridrow .spofac_phcont p { font: var(--font-16); font-weight: var(--fw-300); }
+
+/* SOPS Facilities Page CSS End */
