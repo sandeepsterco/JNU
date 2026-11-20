@@ -39,7 +39,10 @@ export default function ProgramMainData({
 
       <div className="program_listing_grid">
         <div className="progrem_left">
-          <ProgramsLeftFilter isDataLoading={isDataLoading} />
+          <ProgramsLeftFilter
+            isDataLoading={isDataLoading}
+            hideSchoolFilter={currentSlug === "school"}
+          />
         </div>
 
         <ProgramsListing
