@@ -126,7 +126,8 @@
   font-weight: 300;
   line-height: 1.5;
   -webkit-line-clamp: 9;
-  max-height: 32rem;
+  max-height: 31rem;
+  overflow: hidden;
 }
 
 .school_testimonial_quote_card .school_testimonial_message p{
