@@ -162,6 +162,7 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 5;
     overflow: hidden;
+    max-height: 18rem;
 }
 
 .testimonial_para p {
