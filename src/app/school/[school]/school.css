@@ -153,6 +153,7 @@
 }
 .success_speak .tab_content{ padding-top: 8rem;}
 
+.success_speak_bx p{font:var(--font-21);color:var(--color-black);font-weight:300;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden;}
 
 /* .success_speak_bx p,
 .success_speak_bx p p{font:var(--font-21);color:var(--color-black);font-weight:300;line-height:1.5;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:5;overflow:hidden;} */
