@@ -1,6 +1,8 @@
 "use client";
 
+import { BASE_URL } from "@/config/config";
 import Image from "next/image";
+import Link from "next/link";
 import { useRef, useState } from "react";
 
 interface SchoolAlumniVideoProps {
@@ -11,6 +13,7 @@ interface SchoolAlumniVideoProps {
   logo: string;
   video: string;
   designation?:string;
+  slug:string;
 }
 
 export default function SchoolAlumniVideo({
@@ -20,7 +23,8 @@ export default function SchoolAlumniVideo({
   thumbnail,
   logo,
   video: videoUrl,
-  designation
+  designation,
+  slug
 }: SchoolAlumniVideoProps) {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [hasStarted, setHasStarted] = useState(false);
@@ -103,7 +107,11 @@ export default function SchoolAlumniVideo({
               <p className="mb-0" dangerouslySetInnerHTML={{__html:designation}} />
           )}
         </div>
+        {slug && (
+          <Link className="overlap_btn" href={`${BASE_URL}alumni/${slug}`}></Link>
+        )}
       </div>
+      
     </div>
   );
 }

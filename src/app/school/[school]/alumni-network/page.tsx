@@ -12,6 +12,8 @@ import "../school.css";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import SchoolAlumniVideo from "@/components/parser/schoolAlumni/SchoolAlumniVideo";
+import { BASE_URL } from "@/config/config";
+import Link from "next/link";
 
 interface IAlumni{
     name:string;
@@ -73,6 +75,7 @@ export default async function SchoolAlumniPage({
                             logo={alumniItem.logo}
                             video={alumniItem.video.trim()}
                             designation={alumniItem.designation}
+                            slug={alumniItem.slug}
                           />
                         ) : (
                         <div key={alumniItem.slug} className="alumni_slider_bx">
@@ -126,6 +129,9 @@ export default async function SchoolAlumniPage({
                                 )}
                                 
                             </div>
+                            {alumniItem?.slug && (
+                                <Link className="overlap_btn" href={`${BASE_URL}alumni/${alumniItem.slug}`}></Link>
+                            )}
                         </div>
                         )
                     ))}
