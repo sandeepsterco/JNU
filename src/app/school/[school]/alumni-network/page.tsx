@@ -130,7 +130,10 @@ export default async function SchoolAlumniPage({
                                 
                             </div>
                             {alumniItem?.slug && (
-                                <Link className="overlap_btn" href={`${BASE_URL}alumni/${alumniItem.slug}`}></Link>
+                                <Link
+                                  className="overlap_btn"
+                                  href={`${BASE_URL}alumni/${alumniItem.slug}?school=${encodeURIComponent(school)}`}
+                                ></Link>
                             )}
                         </div>
                         )

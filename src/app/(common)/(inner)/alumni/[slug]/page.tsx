@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import apiFetch from "@/lib/api";
+import SchoolHeader from "@/components/header/SchoolHeader";
 import '@/app/(common)/(inner)/leadership-management/[slug]/leadership.css'
 
 interface IAlumni {
@@ -17,10 +18,12 @@ interface IAlumni {
 
 export default async function SchoolTestimonialDetailPage({
   params,
+  searchParams,
 }: {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<{ school?: string }>;
 }) {
-  const { slug } = await params;
+  const [{ slug }, { school }] = await Promise.all([params, searchParams]);
   const { data, error } = await apiFetch(
     `alumni/${slug}`,
   );
@@ -37,6 +40,7 @@ export default async function SchoolTestimonialDetailPage({
 
   return (
     <>
+      {school && <SchoolHeader parentSlug="school" slug={school} customClass="school_inner_header school_header" />}
       <section className="testimonials_detail_section">
         <div className="container-fluid">
           <div className="testimonials_path">
