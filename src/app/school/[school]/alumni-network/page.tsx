@@ -120,12 +120,12 @@ export default async function SchoolAlumniPage({
                                     <h5 dangerouslySetInnerHTML={{__html:alumniItem.name}} />
                                 )}
 
-                                {alumniItem?.designation && (
-                                    <p className="mb-0" dangerouslySetInnerHTML={{__html:alumniItem.designation}} />
+                                {alumniItem?.course && (
+                                    <p className="mb-0" >{alumniItem.course}<span>{alumniItem.batch}</span></p>
                                 )}
 
-                                {alumniItem?.batch && (
-                                    <p>Batch <span>{alumniItem.batch}</span></p>
+                                {!alumniItem?.course && alumniItem?.designation && (
+                                    <p className="mb-0" >{alumniItem.designation}<span>{alumniItem.batch}</span></p>
                                 )}
                                 
                             </div>

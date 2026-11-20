@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import apiFetch from "@/lib/api";
 import SchoolHeader from "@/components/header/SchoolHeader";
 import '@/app/(common)/(inner)/leadership-management/[slug]/leadership.css'
+import BackBtn from "@/components/common/BackBtn";
 
 interface IAlumni {
   name: string;
@@ -41,10 +42,11 @@ export default async function SchoolTestimonialDetailPage({
   return (
     <>
       {school && <SchoolHeader parentSlug="school" slug={school} customClass="school_inner_header school_header" />}
-      <section className="testimonials_detail_section">
+      <section className="testimonials_detail_section alumni_detail">
         <div className="container-fluid">
           <div className="testimonials_path">
             <div className="container">
+
               <div className="testimonials_main">
                 <div className="testimonials_image_sec">
                   <figure>
@@ -79,8 +81,14 @@ export default async function SchoolTestimonialDetailPage({
                   <div className="bottom_line"></div>
                 </div>
               </div>
+
+
             </div>
           </div>
+        </div>
+
+        <div className="container-fluid">
+          <BackBtn className="back_btn" />
         </div>
       </section>
 
