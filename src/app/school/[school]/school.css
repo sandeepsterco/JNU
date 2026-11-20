@@ -634,7 +634,18 @@
     .ach_cnt { max-width: 100%; }
     .achie_img_grid_sct figure { max-width: 95%; }
 
+}
 
+.smart_class_grid{ display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2.5rem;}
+.smart_class_right{ padding-inline: 12.5rem 18.3rem;}
+.smart_class_right h5{color: var(--color-cf); margin-bottom: 2.4rem;}
+.smart_class_right p{ font: var(--font-16); font-weight: 300;}
+.smart_class_right blockquote{ font: var(--font-42); color: var(--color-cf); border-top: 1px solid #c4c4c4; padding-top:4rem; margin-top: 4rem; font-weight: 300;}
+.scns_facilities_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; padding-block: 2.5rem 7.7rem;}
 
+.basic_scns_facilities{ padding-block: 7rem 0; position: relative;}
+.basic_scns_facilities:before { content: ""; z-index: -1; background-image: url(/images/back_pattern.svg); background-repeat: repeat; background-size: contain; width: 100%; height: 100%; position: absolute; top: 0; bottom: 0; left: 0; right:0; }
 
+@media (max-width:1536px){
+    .smart_class_right { padding-inline: 5rem 3rem; }
 }
