@@ -111,14 +111,7 @@
     .alumni_cnt p{font:var(--fw-300) 1.4rem / 1.5 var(--stack);}
 }
 
-
-
 /* school Alumni Grid */
-.alumni_mainsec{
-    padding-block: 12rem;
-}
-.alumni_mainsec .alumni_img{    height: 40rem;
-    overflow: hidden;}
-    .alumni_mainsec .alumni_logo img {
-    max-height: 8rem;
-}
+.alumni_mainsec { padding-block: 12rem; }
+.alumni_mainsec .alumni_img { height: 40rem; overflow: hidden; }
+.alumni_mainsec .alumni_logo img { max-height: 8rem; max-width: 10rem; }
