@@ -102,6 +102,12 @@
 .program_section_bx#overview .custm_bullets li    {font: var(--font-16);margin-bottom: 0;}
 
 
+
+.programs-bachelor-of-arts .prgm_overview_bx li:nth-child(3) h3 sup {   
+    top: -1rem;
+}
+
+
 @media(max-width:1536px){
     .program_section{padding-block:6.7rem;}
     .program_section .container{max-width: min(934px, 68.3748vw);}
