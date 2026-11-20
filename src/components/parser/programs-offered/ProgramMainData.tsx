@@ -34,7 +34,10 @@ export default function ProgramMainData({
   return (
     <>
       <div className="prg_search">
-        <ProgramSearch isDataLoading={isDataLoading} />
+        <ProgramSearch
+          key={search ?? ""}
+          isDataLoading={isDataLoading}
+        />
       </div>
 
       <div className="program_listing_grid">
