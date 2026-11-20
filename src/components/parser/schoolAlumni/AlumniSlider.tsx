@@ -6,10 +6,13 @@ import "@/components/homepage/alumni/alumni.css";
 
 interface PlacementSliderPropsInterface {
   data: AlumniDataInterface[];
+  schoolSlug?: string;
 }
 
-export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
+export default function AlumniSlider({ data, schoolSlug }: PlacementSliderPropsInterface) {
   const hasMultiple = data.length > 3;
+  const alumniDetailHref = (slug?: string) =>
+    `${BASE_URL}alumni/${slug}${schoolSlug ? `?school=${encodeURIComponent(schoolSlug)}` : ""}`;
 
   return (
 
@@ -78,10 +81,10 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                           
                         </div>
 
-                        {/* <Link
-                          href={`${BASE_URL}alumni/${item.slug}`}
+                        <Link
+                          href={alumniDetailHref(item.slug)}
                           className="overlap_btn"
-                        /> */}
+                        />
                       </>
                     ) : (
                       <div className="alumni_img">
@@ -125,6 +128,10 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                             {item.course} <span>{item.batch}</span>
                           </p>
                         </div>
+                        <Link
+                          href={alumniDetailHref(item.slug)}
+                          className="overlap_btn"
+                        />
                       </div>
                     )}
                   </div>
