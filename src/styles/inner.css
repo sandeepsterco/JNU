@@ -2856,7 +2856,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .caree_path .jnu_title_header .font21{text-align: left;}
 .caree_path .jnu_title_header p{font: var(--font-21);font-weight: 300;line-height: 1.4;text-align: left;margin-bottom: 4rem;line-height: 1.5;}
 .caree_path .inno_incubx h4{margin-bottom: 3rem;}
-.caree_path .inno_incubx{background: var(--color-white);padding: 6rem;}
+.caree_path .inno_incubx{background: var(--color-white);padding: 6rem;position: relative;}
+.sobm_car_path  .caree_path .inno_incubx{height: 100%;}
 .caree_path .gridbox_three{gap: 2rem;row-gap: 0;}
 .caree_path .gridbox_three  li{margin-top: 0;}
 .abut_committe_rgt h2{font: var(--font-24);color: var(--color-black);margin-bottom: 4rem;}
@@ -3064,16 +3065,16 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .scs_sch_about .scss_abt_grid_two { grid-template-columns: auto 44.35%; display: grid; align-items: center; margin-bottom: 1.8rem; gap: 2.5rem; }
 .scs_sch_about .scss_abt_grid_two .scss_abt_lftcon { max-width: 45.7rem; margin-right: 14rem; margin-left: auto; }
 .scs_sch_about .scss_abt_grid_two .scss_abt_lftcon p { font: var(--font-16); font-weight: var(--fw-300); }
+.scss_achimvnt .sbmtp_grid>.sbmtp_item { padding-inline: 4.3rem; }
+.scss_achimvnt.sbmtp_sec .jnu_title_header { margin-bottom: 5.6rem; }
+.scss_achimvnt .sbmtp_grid > .sbmtp_item > h5 { line-height: 1.3; }
+.scss_vis_mis { margin-block: 8rem; padding-top: 10rem; border-top: 1px solid #cecece; }
+.scss_vis_mis .sbm_misgrid .sbm_vision { padding: 3.6rem 7rem 9.6rem 11.3rem; }
+.scss_vis_mis .sbm_misgrid .sbm_mission { padding: 3.6rem 5rem 0rem 12.5rem; }
+.scss_vis_mis .custom_lists li { font: var(--font-16); font-weight: var(--fw-300); }
+.scss_vis_mis .custom_lists { max-width: 41.7rem; }
+.sbmtp_sec.scss_achimvnt { padding-block:12rem 13.1rem; }
 
-
-.scss_vis_mis{margin-block: 8rem;padding-top: 10rem;    border-top: 1px solid #cecece;}
-.scss_vis_mis .sbm_misgrid .sbm_vision{ padding: 3.6rem 7rem 9.6rem 11.3rem;}
-.scss_vis_mis .sbm_misgrid .sbm_mission {    padding: 3.6rem 5rem 0rem 12.5rem;}
-.scss_vis_mis .custom_lists li{font: var(--font-16);font-weight: var(--fw-300);}
-.scss_vis_mis .custom_lists{max-width: 41.7rem;}
-.sbmtp_sec.scss_achimvnt {
-    padding-block:12rem 13.1rem;
-}
 /* SCSS About page css start*/
 /* language about us css starts here */
 
