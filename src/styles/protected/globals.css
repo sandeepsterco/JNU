@@ -611,3 +611,7 @@ filter:none;
 .happening_grid_3 { padding-top: 3rem; }
 .happening_section + .jnu_social_wall { padding-top: 10rem; }
 }
+
+.mb-0{
+  margin-bottom: 0!important;
+}
