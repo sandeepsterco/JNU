@@ -50,13 +50,13 @@ export default async function SchoolAlumniPage({
     )}
 
 
-      {combineHTML && (
+      {/* {combineHTML && (
         <ReactParserDynamic
           html={combineHTML}
           data={data}
           searchParams={resolvedSearchParams}
         />
-      )}
+      )} */}
     </>
   );
 }
