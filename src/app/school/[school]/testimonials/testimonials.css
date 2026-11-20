@@ -120,12 +120,17 @@
 }
 
 .school_testimonial_quote_card .school_testimonial_message {
-  margin-bottom: 2rem;
-  color: var(--color-black);
-  font: var(--font-21);
-  font-weight: 300;
-  line-height: 1.5;
-  -webkit-line-clamp: 9;
+    color: var(--color-black);
+    font: var(--font-21);
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    font-weight: 300;
+    line-height: 1.5;
+    display: -webkit-box;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
 }
 
 .school_testimonial_quote_card .success_speak_bx_flex {
