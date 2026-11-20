@@ -125,6 +125,13 @@
   font: var(--font-21);
   font-weight: 300;
   line-height: 1.5;
+  -webkit-line-clamp: 9;
+  max-height: 31rem;
+  overflow: hidden;
+}
+
+.school_testimonial_quote_card .school_testimonial_message p{
+  -webkit-line-clamp: 9;
 }
 
 .school_testimonial_quote_card .success_speak_bx_flex {

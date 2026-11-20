@@ -16,7 +16,10 @@ export default function HeaderScroll({
     const lastScrollTop = useRef(0)
     const pathname = usePathname()
     const searchParams = useSearchParams()
-    const isSchoolFacultyDetail = !customClass && Boolean(searchParams.get('school'))
+    const isSchoolScopedDetail =
+        !customClass &&
+        (pathname.startsWith('/faculty/') || pathname.startsWith('/alumni/')) &&
+        Boolean(searchParams.get('school'))
 
     const isHomePage = pathname === '/'
     const isProgramPage = pathname.includes('program')
@@ -94,7 +97,7 @@ export default function HeaderScroll({
         return () => window.removeEventListener('scroll', onScroll)
     }, [pathname, isSchoolPage, isDepartmentPage, hasSchoolHeaderClass])
 
-    if (isSchoolFacultyDetail) return null
+    if (isSchoolScopedDetail) return null
 
     return (
         <header ref={headerRef} className={baseClass}>

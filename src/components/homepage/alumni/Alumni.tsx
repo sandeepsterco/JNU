@@ -5,6 +5,7 @@ import { useRef } from "react";
 import './alumni.css'
 
 interface AlumniInterface{
+  slug:string;
   thumbnail:string;
   logo:string;
   video?:string;
@@ -19,60 +20,11 @@ interface AlumniPropsInterface{
     title:string;
     subtitle:string;
     alumnigroup:AlumniInterface[];
-  }
+  };
+  modular:AlumniInterface[]
 }
 
-const alumniData = [
-    {
-      type: "quote",
-      image: "/images/placeholders/alumni-placeholder-2.webp",
-      logo: "/images/homepage/alumni/deloitte-logo.webp",
-      quote:
-        "My journey at JNU shaped both my professional path and personal growth",
-      name: "Priyanshi Bhadoria",
-      program: "B.Tech CSE",
-      batch: "Batch 2025",
-    },
-    {
-      type: "video",
-      video: "/videos/lab2.mp4",
-      poster: "/images/placeholders/alumni-placeholder.webp",
-      logo: "/images/homepage/alumni/alumni-bosch.webp",
-      name: "Amit Kumar",
-      program: "B.Tech CSE",
-      batch: "Batch 2025",
-    },
-    {
-      type: "quote",
-      image: "/images/placeholders/alumni-placeholder-2.webp",
-      logo: "/images/homepage/alumni/alumni-maersk.webp",
-      quote:
-        "The vibrant learning culture at JNU prepared me for every challenge ahead",
-      name: "Shreya Shree",
-      program: "B.Tech CSE",
-      batch: "Batch 2025",
-    },
-    {
-      type: "video",
-      video: "/videos/lab2.mp4",
-      poster: "/images/placeholders/alumni-placeholder.webp",
-      logo: "/images/homepage/alumni/alumni-amazon.webp",
-      name: "Priyanshi Bhadoria",
-      program: "B.Tech CSE",
-      batch: "Batch 2025",
-    },{
-        type: "quote",
-        image: "/images/placeholders/alumni-placeholder-2.webp",
-        logo: "/images/homepage/alumni/alumni-maersk.webp",
-        quote:
-          "The vibrant learning culture at JNU prepared me for every challenge ahead",
-        name: "Shreya Shree",
-        program: "B.Tech CSE",
-        batch: "Batch 2025",
-      },
-  ];
-
-export default function HomeAlumni({data}:AlumniPropsInterface) {
+export default function HomeAlumni({data, modular}:AlumniPropsInterface) {
     const prevRef = useRef<HTMLDivElement>(null);
      const nextRef = useRef<HTMLDivElement>(null);
 
@@ -109,10 +61,10 @@ export default function HomeAlumni({data}:AlumniPropsInterface) {
           </div>
         </div>
 
-        {data.alumnigroup && data.alumnigroup.length > 0 && (
+        {modular && modular.length > 0 && (
           <div className="full-width">
             <div className="max-content-lg pe-lg-0 me-lg-0">
-              <AlumniSlider alumniData={data.alumnigroup} prevRef={prevRef} nextRef={nextRef} />
+              <AlumniSlider alumniData={modular} prevRef={prevRef} nextRef={nextRef} />
             </div>
           </div>
         )}
