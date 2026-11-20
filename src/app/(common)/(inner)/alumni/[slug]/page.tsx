@@ -61,9 +61,19 @@ export default async function SchoolTestimonialDetailPage({
                 <div className="testimonials_content_sec">
                   <p className="content_16_26" dangerouslySetInnerHTML={{__html:alumniData.message || ''}} />
                   <div className="author_details">
-                    <h4>{alumniData.name}</h4>
-                    <p className="designation mb-0">{alumniData.designation}</p>
-                    <p className="designation">Batch: {alumniData.batch}</p>
+                    <h4 dangerouslySetInnerHTML={{__html:alumniData.name}} />
+
+                    {alumniData?.course && (
+                      <p className="course mb-0" dangerouslySetInnerHTML={{__html:alumniData.course}} />
+                    )}
+
+                    {!alumniData?.course && alumniData?.designation && (
+                      <p className="designation mb-0" dangerouslySetInnerHTML={{__html:alumniData.designation}} />
+                    )}
+
+                    {alumniData?.batch && (
+                      <p className="designation" dangerouslySetInnerHTML={{__html:alumniData.batch}} />
+                    )}
                   </div>
 
                   <div className="bottom_line"></div>
