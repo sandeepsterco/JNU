@@ -6,6 +6,7 @@ import "./header.css";
 import HeaderScroll from "./HeaderScroll";
 import HeaderNav from "./HeaderNav";
 import type { HamburgerMenuItem } from "./Header";
+import SchoolFilter from "../parser/schoolFilter/SchoolFilter";
 
 export interface ChildItemInterface {
   title: string;
@@ -113,7 +114,12 @@ export default async function SchoolHeader({parentSlug, slug, customClass}:Schoo
       <div className="container-fluid">
         <div className="school_header_logo">
           <HeaderLogo />
-          {/* <h1>testing</h1> */}
+          <div className="school_filter_wrap">
+            {/* <div className="school_filter">
+              <p>School</p>
+              <SchoolFilter />
+            </div> */}
+          </div>
         </div>
 
         
