@@ -933,5 +933,10 @@
     .health_btom_grid { z-index: 9; grid-template-columns: 32rem auto; gap: 6rem; padding-right: 0; display: grid; position: relative; }
     .health_btom_content { margin: 0; padding-bottom: 5rem; }
     .health_btom_content blockquote{ margin-bottom: 2rem;}
-
 }
+
+.sohmct_grid { grid-template-columns: repeat(2, 1fr); gap: 0 2.5rem; display: grid; padding-top: 13.3rem; }
+.sohmct_caption { flex-direction: column; justify-content: center; align-items: start; padding-inline: 12.5rem 22rem; display: flex; }
+.sohmct_caption p{ text-align: left; max-width: 100%;}
+.sohmct_caption h5{ margin-bottom: 2rem; color: var(--color-cf);}
+.school-school-of-hotel-management-catering-technology-facilities .agr_fac_overview .sohmct_grid figure { margin-bottom: 0rem; }
