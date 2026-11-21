@@ -23,7 +23,7 @@
 .school_banner_tx h1 span{font-weight:200; display: block;}
 .school_slider_logo{display:flex;gap:3rem;align-items:center;padding-block:2rem 5rem;}
 .school_slider_logo figure{max-width:6.6rem;}
-.school_slider_logo p{font:var(--font-10);color:var(--color-white);font-weight:300;max-width:31rem;padding-block:1rem;border-left:1px solid #ccc;padding-left:3rem; line-height: 2;}
+.school_slider_logo p{font:var(--font-14);color:var(--color-white);font-weight:300;max-width:31rem;padding-block:1rem;border-left:1px solid #ccc;padding-left:3rem;}
 
 @media(max-width:1536px){
     .school_banner .container-fluid{padding-inline:4.5rem;}

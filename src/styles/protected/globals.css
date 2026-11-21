@@ -515,12 +515,8 @@ ul.social_media_link li a:hover { transform: rotate(360deg); }
     content: "";
     position: absolute;
     inset: 0;
-    background: transparent linear-gradient(
-        180deg,
-        #00000000 0%,
-        #000000 100%
-    );
-    opacity: 0.66;
+      background: linear-gradient(#000000 0%, #000 100%);
+    opacity: 0.4;
     pointer-events: none;
 }
 
