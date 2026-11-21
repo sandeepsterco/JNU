@@ -126,13 +126,13 @@ export default function SchoolAlumniGrid({
                     {alumniItem.course && (
                       <p className="mb-0">
                         {alumniItem.course}
-                        <span>{alumniItem.batch}</span>
+                        <span>Batch {alumniItem.batch}</span>
                       </p>
                     )}
                     {!alumniItem.course && alumniItem.designation && (
                       <p className="mb-0">
                         {alumniItem.designation}
-                        <span>{alumniItem.batch}</span>
+                        <span>Batch {alumniItem.batch}</span>
                       </p>
                     )}
                   </div>

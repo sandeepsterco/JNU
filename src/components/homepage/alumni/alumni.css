@@ -11,7 +11,7 @@
 .alumni_header_right .alumni-prev>svg, .alumni_header_right .alumni-next>svg{display: none;}
 .alumni_slider_bx .alumni_logo{max-width:15.2rem;position:absolute;top:3.5rem;left:5.6rem;}
 .alumni_slider_bx .alumni_logo img{max-height:13rem;}
-.alumni_bx_bottom{padding:4rem 6.5rem 9rem;}
+.alumni_bx_bottom{padding:4rem 6.5rem 7.4rem;}
 .alumni_slider_bx{position:relative;height:100%;}
 .alumni_slider_section .swiper-slide{height:auto;}
 .qoute_icon{max-width:6rem;margin-block:-7.6rem 3rem;display:block;position:relative;z-index:9;}
