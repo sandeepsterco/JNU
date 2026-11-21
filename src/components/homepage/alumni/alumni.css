@@ -2,6 +2,7 @@
 .alumni_slider_section{padding-top:6rem;padding-left:1.5rem;}
 .alumni_header{display:flex;justify-content:space-between;align-items:center;}
 .alumni_header_right{display:flex;position:relative;gap:1rem;}
+.alumni_header .head_title blockquote{    margin-block: 3.7rem 2rem;}
 .alumni_header_right .alumni-prev,.alumni_header_right .alumni-next{position:relative;width:3rem;border:1px solid var(--color-cf);height:3rem;text-align:center;margin-top:0;left:0;right:0;}
 .alumni_header_right .alumni-prev::after,.alumni_header_right .alumni-next::after{font-size:1.2rem;color:var(--color-cf);}
 .alumni_header_right .alumni-prev:hover,.alumni_header_right .alumni-next:hover{background-color:var(--color-cf);}
