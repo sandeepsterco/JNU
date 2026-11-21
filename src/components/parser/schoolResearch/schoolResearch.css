@@ -1,4 +1,5 @@
 .research_grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.3rem;margin-top:8rem;}
+.research_Bx{position: relative;}
 .research_Bx figcaption{padding-inline:2rem 0;}
 .research_Bx figcaption h4{font:var(--font-18);color:var(--color-black);font-weight:300;margin-block:2rem 1rem;}
 .research_Bx figcaption p{font:var(--font-14);color:var(--color-black);max-width:69%;}
