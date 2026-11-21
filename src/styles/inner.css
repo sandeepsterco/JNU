@@ -498,6 +498,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .innovation_incubation .academic_foundation .academic_foundation_right blockquote{grid-template-columns: 32% 48%;font-weight: normal;gap: 1.7rem;}
 .acd_audi_slider .slide_content{max-width: 31.9rem;left:2.2rem;bottom: 1.7rem;}
 .acd_audi_slider .slide_content p{font-weight: var(--fw-300);}
+
+
  }
 
 
@@ -825,7 +827,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .ssr_pdf_item figure { margin: 0; flex: 0 0 auto; }
 .ssr_pdf_item figure img { width: 2.5rem; }
 .placement_header { display:grid; justify-content:space-between; grid-template-columns:39% auto; }
-.placement_header_right { display:grid; align-items:center; grid-template-columns:auto 3rem; justify-content:space-between; gap:4rem; padding-top:5rem; }
+.placement_header_right { display:grid; align-items:center; justify-content:space-between; gap:4rem; padding-top:5rem; }
 .placement_header_right p { font-weight:200; line-height:1.7; }
 .placement_header_right a { width:3rem; height:3rem; border:1px solid var(--color-cf); text-align:center; display:block; padding:0.7rem 1rem; }
 .placement_header_right a:hover { background-color:var(--color-cf); }
@@ -879,6 +881,11 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .gridbox_two { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem; align-items: start; }
 .gridbox_three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; align-items: start; }
 .gridbox_four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4rem; align-items: start; }
+
+@media(max-width:1536px){
+    .gridbox_two{gap:2rem;}
+}
+
 /* GS23092026 */
 /* Online Resources Page CSS Start */
 .online_resource { padding-block: 12rem; }
@@ -2602,7 +2609,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .sch_vis_misgrid .sch_mission { padding: 6rem 12.5rem 0.8rem 10rem; }
 .sch_vis_misgrid h5 { margin-bottom: 5rem; color: var(--color-cf); font-weight: 500; }
 .sch_vis_misgrid .sch_vision h5 { color: var(--color-white); }
-.sch_vis_misgrid .sch_vision h6 { font: var(--font-21); color: var(--color-white); font-weight: 300; line-height: 3.6rem; }
+.sch_vis_misgrid .sch_vision h6 { font: var(--font-21); color: var(--color-white); font-weight: 300; line-height: 1.8; }
 .sch_vis_misgrid .sch_mission ul li { font: var(--font-16); font-weight: var(--fw-300); margin-bottom:2.5rem; }
 .sch_vis_misgrid .sch_mission ul li:before{ background-color: var(--color-f2); width: 0.7rem; height: 0.7rem;}
 .sch_dir_msg { padding-block: 12rem 15rem; position: relative; padding-inline: 13.5rem; }
@@ -2625,6 +2632,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .sch_dir_msg_content p { font: var(--font-16); font-weight: 300; }
 .sch_dir_msg_author { padding-top: 3.2rem; }
 .sch_dir_msg_author h4 { margin-bottom: 2.4rem; font: var(--font-24); }
+.sch_dir_msg_author.socss_mgs_author h4{margin-bottom: 0;}
 .sch_dir_msg_author .designation { font: var(--font-18); font-weight: 300; }
 .sch_dir_msg_content .load_more_btn { padding-top:0; display: inline-block; }
 .sch_dir_msg_content .load_more_btn.is-expanded { margin-top: 3rem; }
@@ -2660,7 +2668,31 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .sch_vimission { padding-block:2.5rem 0; }
 .sch_vis_misgrid .sch_vision h6{ max-width: 46.7rem;}
 
+@media (max-width:1536px){
+    .sch_about_overview { padding-block: 8rem 0; }
+    .sch_about_ovr_img{ padding-top: 0;}
+    .sch_vis_misgrid .sch_vision { background-color: var(--color-cf); padding: 6rem 4rem 0.9rem 4.5rem; }
+    .sch_vis_misgrid .sch_mission { padding: 1rem 3rem; }
+    .sch_vis_misgrid .sch_vision:before{ width: 10rem;}
+    .sch_value_grid{padding-inline: 2.5rem;}
+    .sch_value_grid .sch_value { padding: 3rem; }
+    .sch_value_grid .sch_value:after{ right: 8rem;}
+    .sch_ab_highlight { padding-block: 9rem 0; }
+    .sch_high_grid ul > li{padding-block: 5.5rem; padding-inline: 2.8rem;}
+    .sch_dir_msg { padding-block: 6rem 10rem; padding-inline: 3.5rem; position: relative; }
+    .sch_ab_highlight .sch_high_grid { padding-bottom: 9rem; }
+    .sch_dir_msg_grid { z-index: 9; grid-template-columns: 36rem auto; align-items: center; gap: 5rem; padding-right: 0; display: grid; position: relative; }
+    .sch_direct_msg:after{ max-width: 40rem;}
+    .sch_direct_msg{padding-top: 7.5rem;}
+    .sch_dir_msg_grid figure:before{width: 7.4rem; height: 5.6rem;}
+    .sch_dir_msg_author { padding-top: 2rem; }
+    .inno_incu_grid_bx_left { padding-right: 3rem;}
+    .inno_incu_grid_bx_right{padding-inline: 6rem 2rem;}
 
+
+
+
+}
 
 .career_pathmain { padding-block: 12rem 12rem; background-color: var(--color-38); }
 .career_path_swimain .career_path_col { background: var(--color-white); font: var(--font-16); padding: 4rem 5.4rem; position: relative; min-height: 64.1rem; }
@@ -2740,6 +2772,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .patent_publi_main .patent_table_sec .jnu_title_header blockquote{margin-bottom: 3rem;}
 .patent_publi_main .patent_table_sec:not(:last-child) { padding-bottom: 7rem; }
 .nirf_overview {padding-top: 12rem;}
+
 .career_pathwaymain {padding-block: 12rem;}
 .career_pathwaymain .jnu_title_header{margin-bottom: 4.5rem;}
 .career_path_grid .inno_incubx{text-align: left;}
@@ -2749,6 +2782,13 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .career_path_grid .inno_incubx.incol_join .custm_bullets{display: grid;grid-template-columns: repeat(2, 1fr);gap: 0 3rem ;}
 .career_path_grid .inno_incubx.incol_join .custm_bullets li{margin-top: 0;}
 .career_path_grid.inno_incu_grid .inno_incubx h4{min-height: auto;}
+
+@media(max-width:1536px){
+    .career_pathwaymain{padding-block:6rem;}
+    .career_pathwaymain .container{max-width:min(934px,68.3748vw);}
+    .career_pathwaymain .jnu_title_header{margin-bottom:2.5rem;}
+}
+
 /* Scholarships & Financial Aid  End*/
 
 
@@ -2772,29 +2812,25 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .goveringbody_main .fundacc_inner{padding: 0 3.8rem 5rem 6.8rem;}
 
 
-.about_awards { padding-block: 12rem; }
-.award_gridbx { grid-template-columns: 49.3% auto; align-items: center; gap: 15rem; display: grid;}
-.hn_pro_info{margin-bottom: 4rem;}
- .hn_pro_info h5 { font: var(--font-24); margin-bottom: .2rem; }
- .hn_pro_info blockquote { font: var(--font-18); font-weight: 300; }
-.award_gridbx .ab_awa_des p { font-weight: var(--fw-300); }
-.about_awards_four .award_gridbx{grid-template-columns:  auto 49.3%;
-    align-items: center;
-    gap: 15rem;
-    display: grid;}
-.ab_awardbx .ab_award_list  .custm_bullets{display: grid;grid-template-columns: repeat(2, 1fr);gap: 0 4rem;}
-.ab_awardbx .ab_award_list  .custm_bullets li{margin-top: 0;}
-.about_awards_two { padding-block: 12rem; background-color: var(--color-white); }
-.hn_pro_change_bx { grid-template-columns: 39.3% auto; gap: 9rem; display: grid; position: relative; align-items: start; }
-.hn_pro_change_bx .custm_bullets > li:first-child { margin-top: 0; }
-.hn_pro_chaimg figure { margin-bottom: 3.5rem; }
-.hn_pro_chaimg { margin-bottom: 3rem; position: sticky; top: 5rem; align-items: start; }
-.ab_award_four .ab_hn_pro_chaimg figure { margin-bottom: 3.5rem; }
-.about_awards_three{padding-block: 12rem;}
-.about_awards_four{background-color: var(--color-23);padding-block: 12rem;}
-.about_awards_one .award_gridbx{margin-bottom: 5rem;}
-.about_awards_four .hn_pro_info h5,.about_awards_four .hn_pro_info blockquote ,.about_awards_four .custm_bullets > li{color: var(--color-white);}
-
+.about_awards{padding-block:12rem;}
+.award_gridbx{grid-template-columns:49.3% auto;align-items:center;gap:15rem;display:grid;}
+.hn_pro_info{margin-bottom:4rem;}
+.hn_pro_info h5{font:var(--font-24);margin-bottom:.2rem;}
+.hn_pro_info blockquote{font:var(--font-18);font-weight:300;}
+.award_gridbx .ab_awa_des p{font-weight:var(--fw-300);}
+.about_awards_four .award_gridbx{grid-template-columns:auto 49.3%;align-items:center;gap:15rem;display:grid;}
+.ab_awardbx .ab_award_list .custm_bullets{display:grid;grid-template-columns:repeat(2,1fr);gap:0 4rem;}
+.ab_awardbx .ab_award_list .custm_bullets li{margin-top:0;}
+.about_awards_two{padding-block:12rem;background-color:var(--color-white);}
+.hn_pro_change_bx{grid-template-columns:39.3% auto;gap:9rem;display:grid;position:relative;align-items:start;}
+.hn_pro_change_bx .custm_bullets > li:first-child{margin-top:0;}
+.hn_pro_chaimg figure{margin-bottom:3.5rem;}
+.hn_pro_chaimg{margin-bottom:3rem;position:sticky;top:5rem;align-items:start;}
+.ab_award_four .ab_hn_pro_chaimg figure{margin-bottom:3.5rem;}
+.about_awards_three{padding-block:12rem;}
+.about_awards_four{background-color:var(--color-23);padding-block:12rem;}
+.about_awards_one .award_gridbx{margin-bottom:5rem;}
+.about_awards_four .hn_pro_info h5,.about_awards_four .hn_pro_info blockquote,.about_awards_four .custm_bullets > li{color:var(--color-white);}
 
 
 /* book campus visit css starts here */
@@ -2830,7 +2866,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .caree_path .jnu_title_header .font21{text-align: left;}
 .caree_path .jnu_title_header p{font: var(--font-21);font-weight: 300;line-height: 1.4;text-align: left;margin-bottom: 4rem;line-height: 1.5;}
 .caree_path .inno_incubx h4{margin-bottom: 3rem;}
-.caree_path .inno_incubx{background: var(--color-white);padding: 6rem;}
+.caree_path .inno_incubx{background: var(--color-white);padding: 6rem;position: relative;}
+.sobm_car_path  .caree_path .inno_incubx{height: 100%;}
 .caree_path .gridbox_three{gap: 2rem;row-gap: 0;}
 .caree_path .gridbox_three  li{margin-top: 0;}
 .abut_committe_rgt h2{font: var(--font-24);color: var(--color-black);margin-bottom: 4rem;}
@@ -2841,26 +2878,36 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .tab_contbx .abu_commitbbx p>strong{font-weight: 500;font: var(--font-18);}
 .tab_contbx .custm_bullets.grid_2 {display: grid;grid-template-columns: repeat(2,1fr);gap: 0;margin-block: 3rem;}
 .tab_contbx .custm_bullets.grid_2>li{margin-block: 0 2.5rem;}
-/* book campus visit css ends here */
-.abu_committ_mainsec.hero_bg_pattern .jnu_title_header{display: none;}
-.testimo_sec {padding-bottom: 8rem;}
-.testimo_bottom>h3{margin-bottom: 3.2rem;font: var(--font-42);letter-spacing: -1.26px;font-weight: 300;text-transform: capitalize;}
-.testimo_bottom>ul{display: grid;grid-template-columns: repeat(2,1fr);margin-block: 4rem 0;}
 
-.testimo_bottom>.custm_bullets > li{gap: 0;margin-top: 0;}
-.abu_committ_mainsec.hero_bg_pattern .jnu_title_header { display: none; }
-.testimo_sec { padding-bottom: 8rem; }
-.testimo_bottom>h3 { margin-bottom: 3.2rem; font: var(--font-42); letter-spacing: -1.26px; font-weight: 300; text-transform: capitalize; }
-.testimo_bottom>ul { display: grid; grid-template-columns: repeat(2,1fr); margin-block: 4rem 0; }
-.testimo_bottom>.custm_bullets > li { gap: 0; margin-top: 0; }
-.transport_grid { grid-template-columns:44rem auto; gap:21rem; display:grid; width:83.1%; margin:auto; }
-.public_transport h3 { color:var(--color-cf); margin-bottom:3rem; font-weight:500; }
-.public_transport p { font:var(--font-18); font-family:var(--stack); color:var(--color-black); margin-top:2rem; font-weight:200; line-height:1.7; }
-.transport_sec { padding-block:0 12rem; }
-.public_transport hr { border-bottom: 1px solid #c6c6c6; display: block; margin: 4rem 0; }
-.explore_btn_grp { height: auto; overflow: hidden; line-height: 3; margin-top: 3rem; }
-.public_transport > a { font: var(--font-24); line-height: 1.6; display: flex; align-items: center; gap: 0 1.5rem; margin-top: 2rem; }
-.public_transport > a img { max-width: 3rem; }
+@media(max-width:1536px){
+    .caree_path .jnu_title_header p{margin-bottom: 2rem;}
+    .caree_path .inno_incubx h4{margin-bottom:1.5rem;}
+    .caree_path .inno_incubx{padding:3rem;}
+    .caree_path .inno_incubx ul:has(+*){margin-bottom: 2rem;}
+    .caree_path .inno_incubx p:last-of-type:has( + *){margin-bottom: 2rem;}
+}
+
+
+/* book campus visit css ends here */
+.abu_committ_mainsec.hero_bg_pattern .jnu_title_header{display:none;}
+.testimo_sec{padding-bottom:8rem;}
+.testimo_bottom>h3{margin-bottom:3.2rem;font:var(--font-42);letter-spacing:-1.26px;font-weight:300;text-transform:capitalize;}
+.testimo_bottom>ul{display:grid;grid-template-columns:repeat(2,1fr);margin-block:4rem 0;}
+.testimo_bottom>.custm_bullets > li{gap:0;margin-top:0;}
+.abu_committ_mainsec.hero_bg_pattern .jnu_title_header{display:none;}
+.testimo_sec{padding-bottom:8rem;}
+.testimo_bottom>h3{margin-bottom:3.2rem;font:var(--font-42);letter-spacing:-1.26px;font-weight:300;text-transform:capitalize;}
+.testimo_bottom>ul{display:grid;grid-template-columns:repeat(2,1fr);margin-block:4rem 0;}
+.testimo_bottom>.custm_bullets > li{gap:0;margin-top:0;}
+.transport_grid{grid-template-columns:44rem auto;gap:21rem;display:grid;width:83.1%;margin:auto;}
+.public_transport h3{color:var(--color-cf);margin-bottom:3rem;font-weight:500;}
+.public_transport p{font:var(--font-18);font-family:var(--stack);color:var(--color-black);margin-top:2rem;font-weight:200;line-height:1.7;}
+.transport_sec{padding-block:0 12rem;}
+.public_transport hr{border-bottom:1px solid #c6c6c6;display:block;margin:4rem 0;}
+.explore_btn_grp{height:auto;overflow:hidden;line-height:3;margin-top:3rem;}
+.public_transport > a{font:var(--font-24);line-height:1.6;display:flex;align-items:center;gap:0 1.5rem;margin-top:2rem;}
+.public_transport > a img{max-width:3rem;}
+
 
 /* book campus visit css ends here */
 
@@ -3024,3 +3071,271 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .details_data h4{margin-top:5rem;margin-bottom:2rem;}
 
 /* allied health science facility page css ends here */
+
+
+
+
+/* SCSS About page css start*/
+.scs_sch_about { padding-block: 12rem 0rem; }
+.scs_sch_about .jnu_title_header { padding-bottom: 8rem; }
+.scs_sch_about .scss_abt_grid { grid-template-columns: 53.85% auto; display: grid; align-items: center; margin-bottom: 1.8rem; gap: 2.5rem; }
+.scss_abt_grid .scss_abt_rgt {max-width: 62.5rem; padding-left: 12.5rem;}
+.scss_abt_grid .scss_abt_rgt .font24 { font-weight: var(--fw-300); line-height: 1.5; margin-bottom: 2.8rem; padding-right: 2.1rem; }
+.scss_abt_grid .scss_abt_rgt p { font: var(--font-16); font-weight: var(--fw-300); padding-right: 3rem; }
+.scs_sch_about .scss_abt_grid_two { grid-template-columns: auto 44.35%; display: grid; align-items: center; margin-bottom: 1.8rem; gap: 2.5rem; }
+.scs_sch_about .scss_abt_grid_two .scss_abt_lftcon { max-width: 45.7rem; margin-right: 14rem; margin-left: auto; }
+.scs_sch_about .scss_abt_grid_two .scss_abt_lftcon p { font: var(--font-16); font-weight: var(--fw-300); }
+.scss_achimvnt .sbmtp_grid>.sbmtp_item { padding-inline: 4.3rem; }
+.scss_achimvnt.sbmtp_sec .jnu_title_header { margin-bottom: 5.6rem; }
+.scss_achimvnt .sbmtp_grid > .sbmtp_item > h5 { line-height: 1.3; }
+.scss_achimvnt.sbmtp_sec .jnu_title_header p{padding-inline: 2rem;}
+.scss_vis_mis { margin-block: 8rem; padding-top: 10rem; border-top: 1px solid #cecece; }
+.scss_vis_mis .sbm_misgrid .sbm_vision { padding: 3.6rem 7rem 9.6rem 11.3rem; }
+.scss_vis_mis .sbm_misgrid .sbm_mission { padding: 3.6rem 5rem 0rem 12.5rem; }
+.scss_vis_mis .custom_lists li { font: var(--font-16); font-weight: var(--fw-300); }
+.scss_vis_mis .custom_lists { max-width: 41.7rem; }
+.sbmtp_sec.scss_achimvnt { padding-block:12rem 13.1rem; }
+
+/* SCSS About page css start*/
+/* language about us css starts here */
+
+.sll_grid{grid-template-columns:85rem auto;align-items:center;gap:2.5rem;display:grid;margin-bottom:1.8rem;}
+.sll_content{padding-inline:12.5rem 26rem;}
+.sll_content p{font:var(--font-16);font-weight:300;}
+.sll_content h4{font:var(--font-24);color:var(--color-black);font-weight:300;margin-bottom:2.8rem;}
+.sll2_grid{grid-template-columns:auto 60rem;align-items:center;gap:2.5rem;display:grid;}
+.sll2_content{padding-inline:0 14.3rem;}
+.sll2_content p{font:var(--font-16);font-weight:300;}
+.about_slls{padding-block:12rem 12rem;}
+.about_slls .health_cont{margin:0 5rem 8rem;}
+.slls_sec2{padding-block:12rem 15rem;position:relative;}
+.slls_sec2 .slls_overlay2{position:absolute;top:0;left:0;right:0;bottom:0;width:100%;height:auto;z-index:1;background-color:#CF1E62;overflow:hidden;}
+.slls_sec2 figure{position:relative;z-index:2;}
+.slls_content{text-align:center;margin-bottom:9.3rem;position:relative;z-index:2;}
+.slls_content p{color:var(--color-white);font:var(--font-21);font-weight:300;line-height:1.6;}
+.slls_imggrid{grid-template-columns:60rem auto;align-items:center;gap:12.5rem;display:grid;margin-top:2.5rem;}
+.slls_imgcont p{font:var(--font-16);font-weight:300;}
+
+/* language about us css ends here */
+
+/* language facility css starts here */
+
+.facility_slls{padding-block:12rem 12rem;}
+.facility_slls_cont{margin-bottom:8.6rem;text-align:center;}
+.facility_slls_cont blockquote{font:var(--font-21);color:var(--color-23);margin-bottom:0;font-weight:300;line-height:1.6;}
+.facility2_content{margin-top:8.7rem;text-align:center;}
+.facility2_content p{font:var(--font-16);color:var(--color-00);max-width:90%;margin:0 auto;font-weight:300;line-height:1.6;}
+.facility_slls3_grid{grid-template-columns:auto 85rem;gap:2.5rem;display:grid;margin-bottom:4rem;}
+.facility_slls3_pera p{font:var(--font-16);color:var(--color-00);font-weight:300;line-height:1.6;margin-bottom:2rem;}
+.facility_slls3_pera{margin-right:12.5rem;margin-top:3.6rem;}
+.facility_slls4_grid{grid-template-columns:85rem auto;gap:2.5rem;display:grid;}
+.facility_slls3{position:relative;overflow:hidden;padding-bottom:15rem;}
+.facility_slls3 .slls_overlay2{position:absolute;left:0;right:0;bottom:0;background-color:#cf1e62;z-index:-1;height: 68rem;}
+.facility_slls4_cont p{font:var(--font-16);color:var(--color-white);margin:0 10rem 0 13rem;padding-block:10rem 8rem;padding-inline:0;font-weight:300;line-height:1.6;border-bottom:1px solid #F9CE2E;}
+.facility_slls4_cont{display:flex;flex-direction:column;height:100%;}
+.facility_slls4_grid > figure img,.facility_slls3_grid > figure img{object-fit:cover;}
+.facility_slls4_grid > figure,.facility_slls4_grid > figure img,.facility_slls3_grid > figure,.facility_slls3_grid > figure img{height:100%;}
+.facility_slls4{padding-block:12rem 15rem;}
+.facility_slls55_cont p{font:var(--font-16);color:var(--color-00);margin-bottom:2rem;font-weight:300;line-height:1.6;}
+.facility_slls5_grid{grid-template-columns:auto 72.5rem;gap:2.5rem;display:grid;align-items:center;}
+.facility_slls55_cont blockquote{font:var(--font-21);color:var(--color-23);margin-bottom:4rem;font-weight:300;line-height:1.6;}
+.facility_slls55_cont p{font:var(--font-16);color:var(--color-00);margin-bottom:2rem;font-weight:300;line-height:1.6;}
+.facility_slls55_cont{margin-right:19rem;}
+
+
+/* language facility css ends here */
+
+
+/* Socss  Page Facilities Css Start */
+.socss_faci_ovr { padding-block: 12rem 16.4rem; }
+.socss_faci_ovr .jnu_title_header { margin-bottom: 10rem; }
+.socss_labtitle { padding-block: 3.2rem 0; }
+.socss_lab_facigrid { grid-template-columns: repeat(3, 1fr); align-items: start; gap: 5.4rem 2.7rem; display: grid; }
+.socss_labtitle h5 { font-weight: var(--fw-300); color: var(--color-23); padding-inline: 10rem; text-align: center; line-height: 1.7; }
+.socss_libr_faci .socss_lib_title { position: relative; }
+.socss_libr_faci .socss_lib_title::after { position: absolute; top: 0; width: 100%; height: 65rem; content:""; left: 0; background-color: var(--color-white); z-index: -1; }
+.socss_lib_title .jnu_title_header { padding-block: 8rem 5rem; }
+.socss_lib_title .jnu_title_header blockquote { font: var(--font-24); font-weight: var(--fw-300); line-height: 1.5; }
+.socss_sub_elab { padding-block: 4.6rem 4.2rem; text-align: center; }
+.socss_sub_elab p { font: var(--font-16); font-weight: var(--fw-300); }
+.elibrary_logo { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.socss_library_facili  .elibrary_logo figure { width: 100%; height: 12.3rem; margin: 0; display: flex; align-items: center; justify-content: center; }
+.socss_library_facili  .elibrary_logo figure img { width: auto; height: auto; max-width: 100%; max-height: 12.3rem; object-fit: contain; display: block; }
+.socss_pds_wrap { padding-top: 10rem; margin-block: 8rem; border-top: 1px solid #cecece; }
+.socss_pds_row { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15rem; }
+.socss_pds-left { position: relative; }
+.socss_pds-left::after { content: ''; right: -4.5rem; top: 0; position: absolute; background-color:  #cecece; width: 0.1rem; height: 13.4rem; }
+.socss_pds_row .font21 { margin-bottom: 2.5rem; color: var(--color-cf); font-weight: var(--fw-medium); }
+.socss_pds_row p { font: var(--font-16); font-weight: var(--fw-300); }
+.pds_content { display: grid; gap: 2.1rem; grid-template-columns: 8rem auto; align-items: center; }
+.pds_content .pds_logo { max-width: 7.9rem; }
+.socss_insutry_tie { position: relative; }
+.socss_insutry_tie::before { content: ""; z-index: -1; background-image: url(/images/soil-vector.svg); background-repeat: no-repeat; background-size: cover; background-color: var(--color-cf); width: 100%; height: 45.1rem; position: absolute; top: 3.5rem; bottom: 0; left: 0; }
+.socss_indus_bx { background-color: var(--color-white); padding-block: 5.6rem 7.2rem; margin-bottom: 14.2rem; }
+.socss_indus_bx  .jnu_title_header { padding-bottom: 4.2rem; }
+.socss_indus_bx  .jnu_title_header  blockquote { font: var(--font-16); font-weight: var(--fw-300); }
+.socss_indus_logo { text-align: center; }
+.socss_indus_logo figure { max-height: 7.4rem; width: 100%; }
+.socss_indus_logo figure { height: 100%; width: 100%; margin-bottom: 0.62rem; }
+.socss_indus_logo p { font: var(--font-14); font-weight: var(--fw-300); }
+
+/* Socss  Page Facilities Css End */
+
+
+@media (max-width:1536px){
+    .scs_sch_about { padding-block: 8rem 0; }
+    .scs_sch_about .jnu_title_header { padding-bottom: 4rem; }
+    .health_btom { padding-block: 6rem 10rem; padding-inline: 3.5rem; position: relative; }
+    .health_btom_msg:after{ max-width:45rem;}
+    .health_btom_msg{ padding-top: 6rem;}
+    .sbmtp_sec.scss_achimvnt { padding-block: 8rem 6rem; }
+    
+
+}
+
+
+/* media school css starts here */
+
+.sms_content p{font:var(--font-16);color:var(--color-black);font-weight:300;}
+.sms_content{display:flex;align-items:center;justify-content:center;flex-direction:column;margin:0 17rem 0 12.5rem;position:relative;}
+.sms_content:after{content:"";z-index:9;background:linear-gradient(to right,var(--color-fa) 0%,var(--color-fa) 80%,var(--color-cf) 20%,var(--color-cf) 100%);width:46%;max-width:46%;height:2px;margin:0 auto;position:absolute;bottom:0;left:0;right:auto;}
+.health_list ul li span{display:block;font:var(--font-21);margin-bottom:2.7rem;font-weight:300;line-height:1.3;}
+.story_ttl h4{color:var(--color-cf);text-align:center;margin-bottom:5rem;font-weight:500;}
+.story_ttl p{font:var(--font-21);color:var(--color-23);margin-bottom:0;font-weight:300;line-height:1.6;text-align:center;}
+.story_ttl{margin-bottom:5rem;}
+.story_grid{display:grid;grid-template-columns:repeat(3,1fr);}
+.story_list:not(:last-child){padding-right:10rem;}
+.story_ttl h4{color:var(--color-cf);text-align:center;margin-bottom:5rem;font-weight:500;}
+.story_ttl p{font:var(--font-21);color:var(--color-23);margin-bottom:0;font-weight:300;line-height:1.6;text-align:center;}
+.story_ttl{margin-bottom:5rem;}
+.story_grid{display:grid;grid-template-columns:repeat(3,1fr);}
+.story_list:not(:last-child){padding-right:10rem;}
+.story_list figure{max-width:4.58rem;margin-bottom:1.6rem;}
+.story_list h4{font:var(--font-21);color:var(--color-23);font-weight:500;margin-bottom:1.6rem;}
+.story_list p{font:var(--font-16);color:var(--color-23);font-weight:300;}
+.story_list:not(:last-child){padding-right:10rem;border-right:1px solid #C5C5C5;}
+.story_list:not(:first-child){padding-left:10rem;}
+.story_grid{grid-template-columns:363fr 482fr 303fr;display:grid;}
+.story_sec .container{padding-block:10rem 10rem;border-top:1px solid #c5c5c5;border-bottom:1px solid #c5c5c5;}
+.adv_grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;}
+.adv_list{background:var(--color-white);font:var(--font-16);padding-block:6.5rem 5.5rem;padding-inline:5.5rem;font-weight:300;line-height:1.6;list-style:none;position:relative;}
+.adv_list h4{font:var(--font-20);color:var(--color-23);font-weight:300;margin-bottom:2.4rem;}
+.adv_list p{font:var(--font-16);color:var(--color-black);font-weight:300;}
+.adv_list ul{margin:0;padding:0;margin-top:3.8rem;}
+.adv_list ul li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;padding-left:2.4rem;list-style:none;position:relative;color:var(--color-black);}
+.adv_list ul li:after{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}
+.adv_sec{padding-block:10rem 15rem;}
+.sms_about{padding-block:12rem 8rem;}
+.sms_about .health_cont{margin:0 11rem 8rem;}
+.sms_about .health_img{margin-bottom:0;}
+.smss_hight .health_list ul li:before{background:linear-gradient(to right,var(--color-cf) 0%,var(--color-cf) 40%,var(--color-cf) 40%,var(--color-cf) 100%);width:17%;max-width:17%;}
+.story_sec{padding-block:10rem 0;}
+.smss_vision .vision_grid{grid-template-columns:725fr 583fr;display:grid;align-items:center;gap:15rem;}
+.smss_vision .vision_grid .vision_mission{padding:0;}
+.smss_vision .vision_grid .vision_list{padding:11.3rem 13.5rem 21rem;}
+.smss_vision .vision_grid .vision_list p{font:var(--font-21);color:var(--color-white);font-weight:300;line-height:1.7;}
+.smss_vision .vision_grid .vision_mission ul li{font:var(--font-21);font-weight:var(--fw-300);color:var(--color-23);line-height:1.6;}
+
+
+
+/* media school css ends here */
+/* SOPS About Page CSS start */
+.sops_aboutmain { padding-block: 12rem; }
+.sops_aboutmain .jnu_title_header { margin-bottom: 7.5rem; }
+.sops_aboutmain .jnu_title_header blockquote { padding-inline: 5rem; }
+.sops_aboutmain .sops_aboutbtmtext { margin-top: 7rem; text-align: center; }
+.sops_aboutmain .sops_aboutbtmtext p { font: var(--font-16); font-weight: var(--fw-300); }
+.sops_highli_main { padding-bottom: 12.4rem; }
+.sops_highli_main  .jnu_title_header .font21 { margin-bottom: 5rem; }
+.sops_highgrid ul { grid-template-columns: repeat(3, 1fr); gap: 2.4rem; margin: 0; padding: 0; display: grid; }
+.sops_highgrid ul li { background: var(--color-white); font: var(--font-16); text-align: center; padding: 3.9rem 6.9rem; font-weight: 300; line-height: 1.68; list-style: none; position: relative; min-height: 18.5rem; }
+.sops_highgrid ul li:before { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 40%, var(--color-cf) 40%, var(--color-cf) 100%); width: 30%; max-width: 30%; height: 2px; margin: 0 auto; position: absolute; bottom: 0; left: 0; right: 0; }
+.sops_vimi_about { padding-bottom: 6rem; }
+.sops_vimi_about .sbm_misgrid { margin-top: 0; margin-right: 10rem; grid-template-columns: 52.75% auto; }
+.sops_vimi_about .custom_lists > li { font: var(--font-16); font-weight: var(--fw-300); }
+.sops_vimi_about .sbm_misgrid .sbm_vision { padding: 6.6rem 8.7rem 8.7rem 10rem; }
+.sops_vimi_about .sbm_misgrid .sbm_mission { padding: 6.6rem 0.5rem 10.8rem 10.1rem; }
+.sops_vimi_about .sbm_misgrid .sbm_vision blockquote { line-height: 1.6875; }
+.sops_achivmnt_sec{padding-block: 14rem 12rem;}
+.sops_achivmnt_sec .jnu_title_header .font21{margin-bottom: 4rem;}
+.sops_achivmnt_sec .spos_achiven_grid{display: grid;grid-template-columns: repeat(2, 1fr);gap: 2.7rem;}
+.sops_achivmnt_sec .spos_achivenbx{background-color: var(--color-white);padding: 6.6rem 10.1rem 9.5rem 12.5rem;position: relative;}
+.spos_achivenbx h5{font: var(--font-21);font-weight: var(--fw-300);margin-bottom: 5.4rem;}
+.spos_achivenbx ul li{font: var(--font-16);font-weight: var(--fw-300);}
+.spos_achivenbx ul li ol{margin-top: 1.6rem;}
+.spos_achivenbx ul li ol {list-style: circle;}
+.sops_achivmnt_sec .spos_achivenbx:before { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 40%, var(--color-cf) 40%, var(--color-cf) 100%); width: 30%; max-width: 30%; height: 2px; margin-inline:20% auto; position: absolute; bottom: 0; left: 0; right: 0; }
+.sops_gridsec { z-index: 9; grid-template-columns: 65rem  auto; gap: 15rem; display: grid; position: relative;    align-items: center; }
+.sops_gridsec .sops_btom_content figure { width: 4.5rem; height: 3.6rem; }
+.sops_gridsec .sops_btom_content blockquote { padding-block: 3.2rem ; font: var(--font-24); color: var(--color-black); font-weight: 300; line-height: 1.5; }
+.sops_gridsec .sops_btom_content p { font: var(--font-16); font-weight: 300; }
+.sops_gridsec .sops_btom_content  .sch_dir_msg_author { padding-top: 4.8rem; }
+.sops_gridsec   .sch_dir_msg_author p , .sops_gridsec .sch_dir_msg_author h4{ margin-bottom: 0; }
+/* SOPS About Page CSS End */
+
+
+/* SOPS Facilities Page CSS End */
+.sops_faclimain { padding-block: 12rem 0; }
+.sops_faclimain .jnu_title_header { margin-bottom: 7.5rem; padding-inline: 5rem; }
+.spos_facili_btm { text-align: center; padding-top: 7rem; }
+.spos_facili_btm p { font: var(--font-16); font-weight: var(--fw-300); }
+.sops_facili_btmsec { padding-bottom: 12rem; }
+.sops_facili_btmsec .reach_grid { margin-bottom: 15rem; }
+.sposfacil_pharmgrid .spo_facgridrow { display: grid; grid-template-columns: 59% auto; align-items: center; gap: 2.4rem; }
+.sposfacil_pharmgrid .spo_facgridrow .spofac_phcont { max-width: 56.3rem; padding-left: 10rem; }
+.spo_facgridrow .spofac_phcont h4 { color: var(--color-cf); margin-bottom: 2.4rem; font-weight: 500; }
+.spo_facgridrow .spofac_phcont p { font: var(--font-16); font-weight: var(--fw-300); }
+
+/* SOPS Facilities Page CSS End */
+.digital_grid,.digital_grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;align-items:center;}
+.digital_cont h4,.digital_grid2 h4{font:var(--font-21);color:var(--color-cf);margin-bottom:2.4rem;font-weight:500;}
+.digital_cont p,.digital_grid2 p{font:var(--font-16);color:var(--color-00);font-weight:300;}
+.digital_cont{margin-left:13rem;margin-right:2rem;}
+.digital2_cont{margin-right:18rem;}
+.digital_grid{margin-bottom:2rem;}
+.radio_sec > img{z-index:-1;background-color:#cf1e62;position:absolute;top:0;left:0;right:0;}
+.radio_sec{position:relative;}
+.radio_sec{padding-top:12.1rem;text-align:center;}
+.radio_ttl{max-width:83%;margin:0 auto 7.3rem;}
+.radio_ttl h4{font:var(--font-21);color:var(--color-white);margin-bottom:2.4rem;font-weight:500;}
+.radio_ttl p{font:var(--font-16);color:var(--color-white);font-weight:300;}
+.digital_sec{padding-block:0 17.3rem;}
+.radio_post_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;margin-top:2.5rem;}
+.radio_post_list figure{position:relative;}
+.radio_post_list figure figcaption{position:absolute;left:0;right:0;bottom:0;}
+.radio_post_list figure figcaption h4{font:var(--font-21);color:var(--color-cf);margin-bottom:5rem;font-weight:500;}
+.radio_post_list{background-color:var(--color-white);}
+.radio_conts{padding-block:4rem 4rem;padding-inline:13rem;text-align:center;}
+.radio_conts p{font:var(--font-16);color:var(--color-00);font-weight:300;}
+.technical_grid{grid-template-columns:850fr 600fr;align-items:center;display:grid;gap:2.5rem;}
+.technical_conts h4{font:var(--font-21);color:var(--color-cf);margin-bottom:2.4rem;font-weight:500;}
+.technical_conts p{font:var(--font-16);color:var(--color-00);font-weight:300;}
+.technical_sec{padding-block:15rem 12rem;}
+.technical_grid:not(:nth-child(2n+2)) .technical_conts{margin-left:10rem;margin-right:6rem;}
+.technical_grid:nth-child(2n) .technical_conts{margin-left:12.5rem;margin-right:16rem;}
+.technical_ttlss{text-align:center;max-width:88%;margin:14rem auto 0;}
+.technical_ttlss h4{font:var(--font-21);color:var(--color-cf);margin-bottom:2.4rem;font-weight:500;}
+.technical_ttlss p{font:var(--font-16);color:var(--color-00);font-weight:300;}
+.smms_facility .health_cont1{border:none;padding-bottom:12rem;}
+.smms_facility .health_cont{margin:0 6rem 8rem;}
+.smms_facility .health_cont1 P{max-width:97%;}
+
+
+.alumni_detail .even_back{margin-top:10rem;}
+
+
+
+/* About Seedling School of Nursing Page CSS Start */
+.sosn_aboutsec { padding-block: 17.1rem 0; }
+.sosn_aboutsec .jnu_title_header { margin-bottom: 12rem; padding-inline: 2rem; }
+.sosn_aboutimggrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+.sosn_vismis .sbm_misgrid .sbm_vision { padding: 5.9rem 16rem 15.1rem 12.5rem; max-height: 45.8rem; }
+.sosn_vismis .sbm_misgrid .sbm_mission { padding: 5.9rem 0 0 10.2rem; max-width: 64.4rem; }
+.sosn_vismis .sbm_misgrid .sbm_mission li { font: var(--font-16); font-weight: var(--fw-300);margin-bottom: 3rem; }
+.sosn_vismis .sbm_misgrid .sbm_vision:before { content: ""; z-index: 0; opacity: .4; background-image: url(/images/sson_vis_mis_pattern.webp); background-repeat: no-repeat; background-size: cover; width: 22.5rem; height: 100%; position: absolute; top: 0; bottom: 0; right: 0; }
+.sson_hightmain.health_hight{padding-block: 0 8rem;}
+.sson_hightmain.health_hight .health_list{margin-top: 9rem ;padding-top: 12rem;    border-top: 1px solid #cecece;}
+.sson_hightmain .health_list h4{margin-bottom: 2.4rem;}
+.sson_hightmain  .health_list ul li{padding: 7.5rem 4.8rem;}
+.sson_achiment_grid{display: grid;grid-template-columns: 35.3rem auto;gap: 1.9rem;}
+/* About Seedling School of Nursing Page CSS End */

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="path1773" d="M0-682.665H48v48H0Z" transform="translate(0 682.665)" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="g1767" transform="translate(0 682.665)">
+    <g id="g1769" transform="translate(0 -682.665)">
+      <g id="g1771" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <g id="g1777" transform="translate(1.406 31.917)">
+          <path id="path1779" d="M-12.469-181.59h0a3.22,3.22,0,0,1,0-4.553l8.237-8.237a3.22,3.22,0,0,1,4.553,0h0a3.22,3.22,0,0,1,0,4.553l-8.237,8.237A3.22,3.22,0,0,1-12.469-181.59Z" transform="translate(13.412 195.324)" fill="none" stroke="#cf1e62" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="g1781" transform="translate(15.14 27.672)">
+          <path id="path1783" d="M0-68.6l5.189-5.188" transform="translate(0 73.792)" fill="none" stroke="#cf1e62" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="g1785" transform="translate(15.822 1.406)">
+          <path id="path1787" d="M-347.284-347.284a15.386,15.386,0,0,0,0-21.759,15.386,15.386,0,0,0-21.759,0,15.386,15.386,0,0,0,0,21.759A15.386,15.386,0,0,0-347.284-347.284Z" transform="translate(373.55 373.55)" fill="none" stroke="#cf1e62" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="g1789" transform="translate(24.083 18.292)">
+          <path id="path1791" d="M0-59.506v-4.5" transform="translate(0 64.007)" fill="none" stroke="#cf1e62" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="g1793" transform="translate(28.77 13.604)">
+          <path id="path1795" d="M0-121.485v-9.188" transform="translate(0 130.673)" fill="none" stroke="#cf1e62" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="g1797" transform="translate(33.458 15.479)">
+          <path id="path1799" d="M0-96.693v-7.313" transform="translate(0 104.006)" fill="none" stroke="#cf1e62" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+        <g id="g1801" transform="translate(38.145 10.792)">
+          <path id="path1803" d="M0-158.672v-12" transform="translate(0 170.673)" fill="none" stroke="#cf1e62" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

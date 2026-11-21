@@ -22,6 +22,9 @@ import { InitCommonAccordion } from "@/lib/cms/initCommonAccordion";
 import { CustomTabs1 } from "@/lib/cms/initCustomTabs1";
 import { InitAuditoriumSwiper } from "@/lib/cms/initAuditoriumSwiper";
 import { initPlacementsOverviewSlider } from "@/lib/cms/initPlacementsOverview";
+import { initSOCSSLibraryFacilitiesSwiper } from "@/lib/cms/initSOCSSLibraryFacilitiesSwiper";
+import { initSOCSSIndustryTieSwiper } from "@/lib/cms/initSOCSSIndustryTieSwiper";
+import { InitSchoolBannerSwiper } from "@/lib/cms/initSchoolBannerSwiper";
 
 function waitForLayout() {
   return new Promise<void>((resolve) => {
@@ -78,6 +81,15 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
 
       if (root.querySelector(".auditoriumSwiper:not([data-swiper-init])")) {
         const cleanup = await InitAuditoriumSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
+
+      if (root.querySelector(".school_swiper:not([data-swiper-init])")) {
+        const cleanup = await InitSchoolBannerSwiper(root);
         if (cancelled) {
           cleanup();
           return;
@@ -158,7 +170,25 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
         cleanupFns.push(cleanup);
       }
 
-      if (root.querySelector(".alumni_swiper:not([data-swiper-init])")) {
+      if (root.querySelector(".socss_library_facili:not([data-swiper-init])")) {
+        const cleanup = await initSOCSSLibraryFacilitiesSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
+
+       if (root.querySelector(".socss_industry_tie:not([data-swiper-init])")) {
+        const cleanup = await initSOCSSIndustryTieSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
+
+       if (root.querySelector(".alumni_swiper:not([data-swiper-init])")) {
         const cleanup = await InitAlumniSwiper(root);
         if (cancelled) {
           cleanup();

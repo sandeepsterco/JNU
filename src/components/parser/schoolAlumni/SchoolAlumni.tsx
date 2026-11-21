@@ -11,6 +11,7 @@ export interface AlumniDataInterface {
     logo: string;
     video?: string | null;
     slug?: string;
+    designation?:string;
 }
 
 interface PageDataInterface {
@@ -24,6 +25,7 @@ interface PageDataInterface {
 export default async function SchoolAlumni() {
     const parentSlug = await getSlug(0);
     const slug = await getSlug();
+    const schoolSlug = parentSlug === "school" ? await getSlug(1) : undefined;
 
     const { data, error } = await apiFetch(`${parentSlug}/${slug}`);
 
@@ -36,7 +38,7 @@ export default async function SchoolAlumni() {
     return (
 
 
-        <AlumniSlider data={pageData} />
+        <AlumniSlider data={pageData} schoolSlug={schoolSlug} />
 
     )
 }

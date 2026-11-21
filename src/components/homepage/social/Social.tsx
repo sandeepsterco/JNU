@@ -27,7 +27,7 @@ export default async function HomeSocial({data, modular}:SocialPropsInterface) {
             <div className="container">
                 {data?.title && (
                     <div className="head_title">
-                        <blockquote data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" dangerouslySetInnerHTML={{__html:data.title}} />
+                        <blockquote dangerouslySetInnerHTML={{__html:data.title}} />
                     </div>
                 )}
                 

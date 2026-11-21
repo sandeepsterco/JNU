@@ -89,7 +89,7 @@
 .prgm_overview_bx li figure:nth-child(2){max-width:8.6rem;margin:1rem auto;}
 .prgm_overview_bx li:nth-child(3) h3{margin:1.5rem auto;}
 .prgm_overview_bx li h4{font-weight:300;}
-.prgm_overview_bx li:nth-child(3) h3 sup{font:var(--font-21);font-weight:700;top:-3rem;}
+.prgm_overview_bx li:nth-child(3) h3 sup{font:var(--font-21);font-weight:700;top:-1.1rem;}
 .elgibility_grid{display:grid;grid-template-columns:55% auto;border:1px solid rgba(35,31,32,0.1);padding:2.6rem 4.2rem 3rem;align-items:flex-end;gap:13rem;}
 .elgibility_grid .eligibility_left h3{font:var(--font-21);font-weight:500;color:var(--color-cf);margin-bottom:0.7rem;}
 .elgibility_grid .eligibility_left h5{font:var(--font-40);font-weight:500;color:var(--color-cf);letter-spacing:-0.4px;margin-bottom:0;}
@@ -100,6 +100,12 @@
 .bba_sectble tbody > tr > td:nth-child(n+3){padding-inline:3.5rem;}
 .program_section_bx#overview .custm_bullets{display: grid;grid-template-columns: repeat(2, 1fr );gap: 0 3.5rem;}
 .program_section_bx#overview .custm_bullets li    {font: var(--font-16);margin-bottom: 0;}
+
+
+
+.programs-bachelor-of-arts .prgm_overview_bx li:nth-child(3) h3 sup {   
+    top: -1rem;
+}
 
 
 @media(max-width:1536px){

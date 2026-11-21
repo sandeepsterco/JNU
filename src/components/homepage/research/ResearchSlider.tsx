@@ -82,7 +82,7 @@ export default function ResearchSlider({data}:ResearchSliderInterface) {
                                 </div>
                             )}
                             
-                            <Link href={`${BASE_URL}research/${item.slug}`} className="overlap_btn"></Link>
+                            {/* <Link href={`${BASE_URL}research/${item.slug}`} className="overlap_btn"></Link> */}
                         </div>
                     </SwiperSlide>
                 ))}

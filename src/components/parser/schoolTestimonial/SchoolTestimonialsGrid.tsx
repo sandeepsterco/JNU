@@ -37,6 +37,8 @@ export default function SchoolTestimonialsGrid({
       grouped.set(type, items);
     });
 
+    const preferredTypeOrder = ["students", "parents", "alumni"];
+
     return Array.from(grouped, ([type, items]) => ({
       type,
       items: items.sort(
@@ -44,7 +46,13 @@ export default function SchoolTestimonialsGrid({
           (a.display_order ?? Number.MAX_SAFE_INTEGER) -
           (b.display_order ?? Number.MAX_SAFE_INTEGER),
       ),
-    }));
+    })).sort((a, b) => {
+      const aOrder = preferredTypeOrder.indexOf(a.type.trim().toLowerCase());
+      const bOrder = preferredTypeOrder.indexOf(b.type.trim().toLowerCase());
+
+      return (aOrder === -1 ? preferredTypeOrder.length : aOrder) -
+        (bOrder === -1 ? preferredTypeOrder.length : bOrder);
+    });
   }, [testimonials]);
 
   const [activeTab, setActiveTab] = useState(0);
@@ -104,21 +112,23 @@ export default function SchoolTestimonialsGrid({
                   testimonial={testimonial}
                   category={activeGroup.type}
                   imageLoading={index === 0 ? "eager" : "lazy"}
+                  schoolSlug={schoolSlug}
                 />
               ) : (
                 <QuoteTestimonialCard
                   testimonial={testimonial}
                   category={activeGroup.type}
+                  schoolSlug={schoolSlug}
                 />
               )}
-              <div className="school_testimonial_detail_link">
+              {/* <div className="school_testimonial_detail_link">
                 <Link
                   href={`/school/${encodeURIComponent(schoolSlug)}/testimonials/${encodeURIComponent(testimonial.slug)}`}
                   aria-label={`Read ${testimonial.name}'s testimonial`}
                 >
                   Read story <span aria-hidden="true">→</span>
                 </Link>
-              </div>
+              </div> */}
             </article>
           ))}
         </div>
@@ -131,10 +141,12 @@ function VideoTestimonialCard({
   testimonial,
   category,
   imageLoading,
+  schoolSlug
 }: {
   testimonial: SchoolTestimonial;
   category: string;
   imageLoading: "eager" | "lazy";
+  schoolSlug:string;
 }) {
   const videoSrc = testimonial.video_url || testimonial.video || "";
   const isUploadedFile =
@@ -185,6 +197,7 @@ function VideoTestimonialCard({
           )}
         </figcaption>
       </div>
+      
     </div>
   );
 }
@@ -192,20 +205,22 @@ function VideoTestimonialCard({
 function QuoteTestimonialCard({
   testimonial,
   category,
+  schoolSlug
 }: {
   testimonial: SchoolTestimonial;
   category: string;
+  schoolSlug:string;
 }) {
   return (
     <div className="success_speak_bx school_testimonial_quote_card">
       {testimonial.description && (
-        <p className="school_testimonial_message">{testimonial.description}</p>
+        <div className="school_testimonial_message testimonial_para" dangerouslySetInnerHTML={{__html:testimonial.description}} />
       )}
       <div className="success_speak_bx_flex">
-        {testimonial.profile_image && (
+        {testimonial.image && (
           <span>
             <Image
-              src={testimonial.profile_image}
+              src={testimonial.image}
               alt={testimonial.name}
               className="img-fluid"
               loading="lazy"
@@ -223,6 +238,7 @@ function QuoteTestimonialCard({
           )}
         </figcaption>
       </div>
+      <Link className="overlap_btn" href={`/school/${encodeURIComponent(schoolSlug)}/testimonials/${encodeURIComponent(testimonial.slug)}`}></Link>
     </div>
   );
 }

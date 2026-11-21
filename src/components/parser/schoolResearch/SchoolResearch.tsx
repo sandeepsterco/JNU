@@ -7,6 +7,7 @@ export interface ResearchDataInterface {
     name:string;
     image:string;
     short_description:string;
+    slug:string;
 }
 
 interface PageDataInterface {
@@ -44,6 +45,7 @@ export default async function SchoolResearch() {
                             <p>{item.short_description}</p>
                         )}
                     </figcaption>
+                    <a href={item?.slug} className="overlap_btn"></a>
                 </div>
             ))}
             

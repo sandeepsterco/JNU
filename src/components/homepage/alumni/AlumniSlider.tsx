@@ -1,5 +1,7 @@
 "use client"
 
+import { BASE_URL } from "@/config/config";
+import Link from "next/link";
 import { RefObject, useRef, useState } from "react";
 import { Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -12,6 +14,8 @@ interface alumniTypes {
     name: string;
     batch: string;
     course: string;
+    slug:string;
+    designation?:string;
 }
 
 interface AlumniSliderProps {
@@ -46,9 +50,9 @@ export default function AlumniSlider({ alumniData, prevRef, nextRef }: AlumniSli
     return (
         <div
             className="alumni_slider_section"
-            data-aos="fade-up"
-            data-aos-duration="1000"
-            data-aos-delay="600"
+            // data-aos="fade-up"
+            // data-aos-duration="1000"
+            // data-aos-delay="600"
         >
             <Swiper
                 modules={[Navigation, Autoplay]}
@@ -118,16 +122,28 @@ export default function AlumniSlider({ alumniData, prevRef, nextRef }: AlumniSli
                                             />
                                         </figure>
 
-                                        <h4>{item.message}</h4>
+                                        {item?.message && (
+                                            <h4 dangerouslySetInnerHTML={{__html:item.message}} />
+                                        )}
 
-                                        <h5>{item.name}</h5>
+                                        {item?.name && (
+                                            <h5 dangerouslySetInnerHTML={{__html:item.name}} />
+                                        )}
 
-                                        <p>
-                                            {item.course} <span>{item.batch}</span>
-                                        </p>
+                                        {item?.course && (
+                                            <p className="mb-0" >{item.course}<span>{item.batch}</span></p>
+                                        )}
+
+                                        {!item?.course && item?.designation && (
+                                            <p className="mb-0" >{item.designation}<span>{item.batch}</span></p>
+                                        )}
+                                        {/* {item?.batch && (
+                                            <p dangerouslySetInnerHTML={{__html:item.batch}} />
+                                        )} */}
+                                        
                                     </div>
 
-                                    {/* <a href="#" className="overlap_btn" /> */}
+                                    <Link href={`${BASE_URL}alumni/${item.slug}`} className="overlap_btn" />
                                 </>
                             ) : (
                                 <div className="alumni_img">
@@ -168,12 +184,19 @@ export default function AlumniSlider({ alumniData, prevRef, nextRef }: AlumniSli
                                     </figure>
 
                                     <div className="alumni_cnt">
-                                        <h5>{item.name}</h5>
+                                        {item?.name && (
+                                            <h5 dangerouslySetInnerHTML={{__html:item.name}} />
+                                        )}
 
-                                        <p>
-                                            {item.course} <span>{item.batch}</span>
-                                        </p>
+                                        {item?.course && (
+                                            <p className="mb-0" >{item.course}<span>{item.batch}</span></p>
+                                        )}
+
+                                        {!item?.course && item?.designation && (
+                                            <p className="mb-0" >{item.designation}<span>{item.batch}</span></p>
+                                        )}
                                     </div>
+                                    <Link href={`${BASE_URL}alumni/${item.slug}`} className="overlap_btn" />
                                 </div>
                             )}
                         </div>

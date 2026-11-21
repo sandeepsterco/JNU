@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 
-export default function BackBtn(){
+export default function BackBtn({className}:{className?:string}){
     const router = useRouter();
 
     return(

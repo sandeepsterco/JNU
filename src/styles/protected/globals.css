@@ -515,12 +515,8 @@ ul.social_media_link li a:hover { transform: rotate(360deg); }
     content: "";
     position: absolute;
     inset: 0;
-    background: transparent linear-gradient(
-        180deg,
-        #00000000 0%,
-        #000000 100%
-    );
-    opacity: 0.66;
+      background: linear-gradient(#000000 0%, #000 100%);
+    opacity: 0.4;
     pointer-events: none;
 }
 
@@ -606,3 +602,12 @@ filter:none;
 }
 .happening_header.school_home>h5{text-align: center;margin: 0 auto;}
 
+@media (max-width:1536px){
+.happ_card { min-height: 26rem; }
+.happening_grid_3 { padding-top: 3rem; }
+.happening_section + .jnu_social_wall { padding-top: 10rem; }
+}
+
+.mb-0{
+  margin-bottom: 0!important;
+}
