@@ -115,10 +115,10 @@ export default async function SchoolHeader({parentSlug, slug, customClass}:Schoo
         <div className="school_header_logo">
           <HeaderLogo />
           <div className="school_filter_wrap">
-            {/* <div className="school_filter">
+            <div className="school_filter">
               <p>School</p>
-              <SchoolFilter />
-            </div> */}
+              <SchoolFilter currentSlug={slug} />
+            </div>
           </div>
         </div>
 
