@@ -12,9 +12,13 @@ interface PageDataInterface {
     data: DataInterface[]
 }
 
-export default async function SchoolFilter() {
+interface SchoolFilterProps {
+    currentSlug?: string;
+}
+
+export default async function SchoolFilter({ currentSlug: selectedSlug }: SchoolFilterProps) {
     const parentSlug = await getSlug(0);
-    const currentSlug = await getSlug();
+    const currentSlug = selectedSlug ?? await getSlug();
 
     const { data, error } = await apiFetch(parentSlug.includes('school') ? `schools` : '');
 
