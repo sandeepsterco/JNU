@@ -1,4 +1,4 @@
-.main_header{position:fixed;top:0;left:0;width:100%;z-index:1090;padding-block:3.7rem 3rem;transition:all 0.5s ease;-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-ms-transition:all 0.5s ease;-o-transition:all 0.5s ease;background-color:var(--color-f5);}
+.main_header{position:fixed;top:0;left:0;width:100%;z-index:1090;padding-block:3.7rem 3.7rem;transition:all 0.5s ease;-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;-ms-transition:all 0.5s ease;-o-transition:all 0.5s ease;background-color:var(--color-f5);}
 /* School Home Page CSS Start */
 .main_header .logo_white{display: none;}
 .main_header.school_home_header .site_nav > li > a { color: var(--color-white); }
@@ -30,7 +30,7 @@
 .main_header>.container-fluid{max-width:var(--mw2545);display:flex;align-items:center;justify-content:space-between;padding-inline:10rem;}
 .site_navbar{display:block;max-width:57.2rem;display:grid;grid-template-columns:55% auto;gap:3rem;align-items:center;}
 .site_navbar img.main_logo:nth-child(2){border:1px solid rgba(207,30,98,0.3);padding:0.8rem 1rem;}
-.site_navbar{display:block;max-width:57.2rem;display:grid;grid-template-columns:55% auto;gap:3rem;align-items:center;z-index: 9;}
+.site_navbar{display:block;max-width:57.2rem;display:grid;grid-template-columns:55% auto;gap:3rem;align-items:center;z-index: 9; position: relative;}
 .site_navbar img:last-child{border:1px solid rgba(207,30,98,0.3);padding:0.8rem 1rem;}
 .site_nav{display:flex;gap:7rem;margin-left:auto;padding:0;}
 .site_nav li{list-style:none;}
@@ -57,7 +57,7 @@
 .site_dropdown:nth-last-child(2)>.site_dropdown_menu>.site_subdropdown>.site_subdropdown_menu{left:auto;right:30rem;}
 .site_dropdown_menu li a:hover{background-color:var(--color-06);}
 body:has(.side_hamburger.is-open) .site_nav{transform:translateY(var(--hamb-width));-webkit-transform:translateY(var(--hamb-width));-moz-transform:translateY(var(--hamb-width));-ms-transform:translateY(var(--hamb-width));-o-transform:translateY(var(--hamb-width));}
-.school_header{background-color:transparent;padding-block:3.7rem 0;}
+.school_header{background-color:transparent;padding-block:3.7rem 3.7rem;}
 /* .school_header::after{background:transparent linear-gradient(0deg,#00000000 0%,#000000 100%) 0% 0% no-repeat padding-box;opacity:0.32;position:absolute;left:0;right:0;top:0;height:14.4rem;content:"";z-index:-1;} */
 .school_inner_header.school_header::after{display:none;}
 .inner_header1::after{background:transparent linear-gradient(0deg,#00000000 0%,#000000 100%) 0% 0% no-repeat padding-box;opacity:0.32;position:absolute;left:0;right:0;top:0;height:14rem;content:"";z-index:-1;}

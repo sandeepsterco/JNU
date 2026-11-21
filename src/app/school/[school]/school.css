@@ -18,12 +18,80 @@
 .sch_dropdown .dropdown li a{font:var(--font-18);font-weight:400;color:var(--color-black);letter-spacing:0.04rem;display:block;line-height:2.4rem;}
 .sch_dropdown .dropdown li a:hover{color:var(--color-cf);}
 .school_filter{max-width:43.2rem;}
-.school_banner_tx{max-width:80rem;padding-inline:5rem 0;position:relative;z-index:9;min-height: 25rem;}
+.school_banner_tx{max-width:80rem;padding-inline:5rem 0;position:relative;z-index:9;min-height: 25rem; margin-top: auto;}
 .school_banner_tx h1{font:var(--font-72);color:var(--color-white);letter-spacing:-2.16px;font-weight:600;line-height:1;}
 .school_banner_tx h1 span{font-weight:200; display: block;}
 .school_slider_logo{display:flex;gap:3rem;align-items:center;padding-block:2rem 5rem;}
 .school_slider_logo figure{max-width:6.6rem;}
-.school_slider_logo p{font:var(--font-10);color:var(--color-white);font-weight:300;max-width:31rem;padding-block:1rem;border-left:1px solid #ccc;padding-left:3rem; line-height: 2;}
+.school_slider_logo p{font:var(--font-14);color:var(--color-white);font-weight:300;max-width:31rem;padding-block:1rem;border-left:1px solid #ccc;padding-left:3rem;}
+.school_banner .school_swiper .swiper-slide:before{content:"";z-index:0;opacity:.69;background:linear-gradient(to right,#000 0%,#0000 100%) no-repeat;width:142.6rem;position:absolute;top:0;bottom:0;left:0;}
+
+.school_swiper .school_pagination {
+  position: absolute;
+  bottom: 10rem;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+.school_swiper .school_pagination .swiper-pagination-bullet {
+  width: 24px;
+  height: 24px;
+  margin: 0 !important;
+  background: transparent;
+  opacity: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.school_pagination .bullet-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #fff;
+  opacity: 0.6;
+}
+.school_pagination .bullet-content {
+  display: none;
+  position: absolute;
+  inset: 0;
+  align-items: center;
+  justify-content: center;
+}
+.school_pagination .swiper-pagination-bullet-active .bullet-dot { display: none; }
+.school_pagination .swiper-pagination-bullet-active .bullet-content { display: flex; }
+
+.school_pagination .bullet-num {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  font-size: 11px;
+  line-height: 1;
+}
+.school_pagination .progress-ring {
+  position: absolute;
+  inset: 0;
+  transform: rotate(-90deg);
+}
+.school_pagination .progress-ring circle {
+  fill: none;
+  stroke-width: 2;
+}
+.school_pagination .progressbg { stroke: rgba(255, 255, 255, 0.3); }
+.school_pagination .progress {
+  stroke: #fff;
+  stroke-dasharray: 69.12;   /* 2π × 11 */
+  stroke-dashoffset: 69.12;
+}
+
+@keyframes schoolProgressAnim {
+  from { stroke-dashoffset: 69.12; }
+  to   { stroke-dashoffset: 0; }
+}
 
 @media(max-width:1536px){
     .school_banner .container-fluid{padding-inline:4.5rem;}
@@ -43,7 +111,7 @@
 .school_title{text-align:center;}
 .school_title .font18{color:var(--color-06);margin-bottom:1.5rem;}
 .school_title .font42{color:var(--color-cf);line-height:1.3;}
-.school_title blockquote{color:var(--color-black);font-size:var(--font-18);font-weight:200;padding-block:3rem;padding-inline:2rem;margin-bottom:0;}
+.school_title blockquote{color:var(--color-black);font-size:var(--font-18);font-weight:200;padding-block:3.2rem;padding-inline:2rem;margin-bottom:0;}
 
 @media(max-width:1536px){
     .school_title .font18{margin-bottom: 1rem;}
@@ -52,10 +120,10 @@
 
 
 .about_soet{ padding-block: 10rem 0rem;}
-.soet_listing{ display: grid; grid-template-columns: repeat(3, 31.4rem); justify-content: space-between; list-style: none; padding: 0; row-gap: 5.4rem; margin-top: 6rem; }
+.soet_listing{ display: grid; grid-template-columns: repeat(3, 31.4rem); justify-content: space-between; list-style: none; padding: 0; row-gap: 5rem; margin-top: 3.2rem; }
 .soet_listing li a{ font: var(--font-18); color: var(--color-cf); padding-left: 2rem; border-left: 0.4rem solid var(--color-f9); display: flex;}
 .soet_listing li a:hover{ color: var(--color-cf); cursor: auto;}
-.soet_link_list{ display: flex; margin-top: 8.3rem; padding: 0 0 2rem; align-items: center; position: relative;justify-content: space-between;}
+.soet_link_list{ display: flex; margin-top: 8.1rem; padding: 0 0 2rem; align-items: center; position: relative;justify-content: space-between;}
 .soet_link{ display: flex; justify-content: space-between; list-style: none; gap: 11.3rem; padding: 0;}
 .soet_link li a{ font: var(--font-18); font-weight: 300; position: relative;}
 .soet_link li a:hover{ color: var(--color-cf);}
@@ -303,11 +371,19 @@
 .sbmabt_sec .head_title>blockquote{margin-bottom: 1.2rem;}
 .sbmabt_sec .head_title>h5{font:var(--font-24);font-weight:300;color:var(--color-black);margin-bottom:6rem;}
 .sbmabt_sec .head_title>p{font:var(--font-21);font-weight:300;line-height: 1.7; color:var(--color-black);}
-
 .sbmabt_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;}
 .sbmabt_grid>figure:nth-child(3){max-width:60rem;margin-left:auto;}
 .sbmabt_caption{padding-top:3.9rem;padding-inline:5.7rem 12.5rem;}
 .sbmabt_caption>p{font:var(--font-16);font-weight: 300; color:var(--color-black);}
+
+@media(max-width:1536px){
+    .sbmabt_sec{padding-block:8rem 7rem;}
+    .sbmabt_sec .head_title{margin-bottom:4.4rem;padding-inline:0;}
+    .sbmabt_sec .head_title > h5{margin-bottom:3rem;}
+    .sbmabt_grid{gap:1.5rem;}
+    .sbmabt_caption{padding-top:0;padding-inline:1.7rem 0;}
+}
+
 
 /* SBM Heighligh Aria */
 .sbmabt_heighlight{padding-bottom:4.3rem;}
@@ -316,6 +392,12 @@
 .sbmabt_high_grid ul{grid-template-columns:repeat(4,1fr);gap:2.5rem;padding:0;display:grid;grid-auto-rows:1fr;}
 .sbmabt_high_grid ul>li{background:var(--color-white);font:var(--font-16);padding:5.4rem 1.8rem 6.9rem;font-weight:300;line-height:1.6;list-style:none;text-align:center;position:relative;}
 .sbmabt_high_grid ul>li::before{content:"";background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
+
+@media(max-width:1536px){
+    .sbmabt_heighlight .jnu_title_header{padding-block:5rem 3rem;}
+    .sbmabt_high_grid ul{grid-template-columns: repeat(3, 1fr);gap:1.5rem;}
+    .sbmabt_high_grid ul > li { padding: 3.4rem 1rem 1.9rem;}
+}
 
 /* SBM Mission Vision Aria */
 .sbm_misgrid{grid-template-columns:repeat(2,1fr);gap:2.5rem;display:grid;margin-top:2.9rem;}
@@ -328,6 +410,12 @@
 .sbm_misgrid .sbm_mission blockquote{font:var(--font-21);color:var(--color-black);font-weight:300;line-height:1.7;}
 .sbmabt_figure{margin-top: 8rem;}
 
+@media(max-width:1536px){
+    .sbm_misgrid{gap:1.5rem;}
+    .sbm_misgrid .sbm_vision{padding:3.4rem 4.2rem 3.4rem 2.3rem;}
+    .sbm_misgrid .sbm_mission{padding:2.4rem 5rem 3.4rem 3.5rem;}
+    .sbmabt_figure{margin-top:5rem;}
+}
 
 .sbmhead_sec{padding-bottom: 0;}
 
@@ -340,6 +428,13 @@
 .sbmachive_caption>ul>li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:2.5rem;padding-left:2.4rem;list-style:none;position:relative;}
 .sbmachive_caption>ul>li::before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}
 
+@media(max-width:1536px){
+    .sbmachive_sec{padding-block:1.5rem 6rem;}
+    .sbmachive_caption{padding:2.3rem 3.6rem 2.3rem 3.9rem;}
+    .sbmachive_caption > h5{margin-bottom:3rem;}
+    .sbmachive_caption > ul > li{padding-left: 2rem;}
+    .sbmachive_caption > ul > li:before{width:.6rem;height:.6rem;top:.6rem;}
+}
 
 /* SBM Teaching Pedagogies */
 .sbmtp_sec{padding-block:5rem 8rem;}
@@ -352,6 +447,13 @@
 .sbmtp_grid>.sbmtp_item>h5{font:var(--font-21);font-weight:300;color:var(--color-23);margin-bottom:1.6rem;}
 .sbmtp_grid>.sbmtp_item>p{font:var(--font-16);font-weight:300;}
 
+@media(max-width:1536px){
+    .sbmtp_sec{padding-block:3rem 5rem;}
+    .sbmtp_sec .jnu_title_header p{margin-top:1.4rem;padding-inline:0;}
+    .sbmtp_sec .jnu_title_header{margin-bottom:3rem;}
+    .sbmtp_grid{grid-template-columns:repeat(3,1fr);gap:1.5rem;padding-inline:0;}
+    .sbmtp_grid > .sbmtp_item{padding:3.5rem 1.6rem 3.9rem;}
+}
 
 /* SBM Specializations */
 .sbmsplz_sec{position: relative; padding-block:8.2rem 13.6rem;z-index: 1;}
@@ -366,7 +468,14 @@
 .sbmsplz_grid>.sbmsplz_item>ul>li{font:var(--font-16);font-weight:var(--fw-300);margin-bottom:0.5rem;padding-left:2.4rem;list-style:none;position:relative;}
 .sbmsplz_grid>.sbmsplz_item>ul>li::before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:.9rem;left:0;}
 
-
+@media(max-width:1536px){
+    .sbmsplz_sec{padding-block:5.2rem 8.6rem;}
+    .sbmsplz_sec .jnu_title_header{margin-bottom:3rem;}
+    .sbmsplz_grid{gap:1.5rem;padding-inline:0;}
+    .sbmsplz_grid > .sbmsplz_item{padding:2.7rem 2.1rem;}
+    .sbmsplz_grid > .sbmsplz_item > ul > li:before{width:.6rem;height:.6rem;top:.5rem;}
+    .sbmsplz_grid > .sbmsplz_item > ul > li{padding-left:1.4rem;}
+}
 
 
 /* SBM Research Facility Aria */
@@ -377,10 +486,19 @@
 .sbmrch_caption:nth-child(odd){padding-inline:12.6rem 26.3rem;}
 .sbmrch_caption>blockquote{font:var(--font-24);font-weight:300;color:var(--color-black);line-height:1.5;margin-bottom:2.4rem;}
 .sbmrch_caption>p{font:var(--font-16);font-weight:300;}
-
 .sbmrchwrap_caption{text-align:center;margin-block:12rem 5.6rem;padding-top:10rem; padding-inline:1rem;border-top:1px solid rgb(206,206,206);}
 .sbmrchwrap_caption>h5{font:var(--font-21);line-height:1.7;font-weight:300;margin-bottom:3.2rem;}
 .sbmrchwrap_caption>p{font:var(--font-16);font-weight:300;}
+
+@media(max-width:1536px){
+    .sbmrch_sec{padding-block:7rem 6rem;}
+    .sbmrch_caption{padding-inline:2.5rem 0;}
+    .sbmrch_caption:nth-child(odd){padding-inline:0 2.3rem;}
+    .sbmrchwrap_caption{padding-top:6rem;margin-block:6rem 2.6rem;padding-inline:0;}
+    .sbmrchwrap_caption > h5{margin-bottom:2.2rem;}
+}
+
+
 
 .sbmsrch_heighlight{position:relative;padding-bottom:10rem;z-index:1;}
 .sbmsrch_heighlight::after{content:"";z-index:-1;background:url(/images/sbmsplz-bg.svg) #CF1E62;background-size:cover;background-repeat:no-repeat;background-position:center;width:100%;height:100%;max-height:52rem;position:absolute;bottom:0;left:0;}
@@ -392,7 +510,13 @@
 .sbmsrch_hrighgrid .load_more_btn a span{border:1px solid var(--color-white);}
 .sbmsrch_hrighgrid .load_more_btn a span>img{filter:brightness(0) invert(1);}
 
-
+@media(max-width:1536px){
+    .sbmsrch_heighlight{padding-bottom:6rem;}
+    .sbmsrch_heighlight:after{max-height:35rem;}
+    .sbmsrch_hrighgrid > ul > li{padding:3.4rem 2.6rem;}
+    .sbmsrch_hrighgrid > ul{gap:1.9rem 1.5rem;padding-inline:0;}
+    .sbmsrch_hrighgrid .load_more_btn{padding-top:3.6rem;}
+}
 
 /* SOFD School About Start */
 
@@ -551,6 +675,88 @@
     .sofdtut_sec .head_title{margin-bottom:2.2rem;}
     .sofdtut_sec .head_title>h5{margin-bottom:1.4rem;}
     .sofdtut_sec .head_title > p {padding-inline: 0;}
+}
+
+
+
+.solabt_sec{position:relative;padding-block:12rem 8rem;}
+.solabt_sec:before{content:"";z-index:-1;background-image:url(/images/back_pattern.svg);background-repeat:repeat;background-size:contain;width:100%;height:46rem;position:absolute;top:0;bottom:0;left:0;}
+.solabt_sec .head_title{text-align:center;margin-bottom:7.5rem;}
+.solabt_sec .head_title>blockquote{margin-bottom:1.6rem;}
+.solabt_sec .head_title>p{font:var(--font-21);font-weight:300;line-height:1.7;color:var(--color-black);}
+.solabt_grid{grid-template-columns:850fr 600fr;gap:0 15rem;display:grid;max-width:calc(100% - 12.5rem);margin-top:10rem;}
+.solabt_right>p{font:var(--font-16);font-weight:300;line-height:1.6;padding-right:2rem;}
+.solabt_right>p:not(:last-of-type){margin-bottom:1.5rem;}
+.solabt_right>figure{margin-top:5.8rem;}
+
+@media(max-width:1536px){
+    .solabt_sec{padding-block:7rem 5rem;}
+    .solabt_sec:before{height:23rem;}
+    .solabt_sec .head_title{margin-bottom:3.5rem;}
+    .solabt_sec .head_title > blockquote{margin-bottom:1rem;}
+    .solabt_grid{max-width:100%;margin-top:6rem;gap:0 5rem;}
+    .solabt_right > p{padding-right:0;}
+    .solabt_right > figure{margin-top:3.5rem;}
+}
+
+
+
+.solabt_heighlight{position:relative;padding-bottom:10rem;z-index:1;}
+.solabt_heighlight .jnu_title_header .font21{margin-bottom:5rem;}
+.solahigh_grid>ul{grid-template-columns:repeat(3,1fr);gap: 2.4rem;padding:0;display:grid;grid-auto-rows:1fr;}
+.solahigh_grid>ul>li{font:var(--font-16);font-weight:300;color:var(--color-black);background:var(--color-white);text-align:center;padding:4.6rem 6.2rem;position:relative;}
+.solahigh_grid>ul>li::before{content:"";background:linear-gradient(to left,var(--color-cf) 0%,var(--color-cf) 60%,var(--color-fa) 60%,var(--color-fa) 100%);width:100%;max-width:10rem;height:2px;margin:0 auto;position:absolute;bottom:0rem;left:0;right:0rem;}
+.solahigh_grid .load_more_btn{padding-top:4.7rem;}
+
+@media(max-width:1536px){
+    .solabt_heighlight{padding-bottom: 7rem;}
+    .solabt_heighlight .jnu_title_header .font21{margin-bottom:3rem;}
+    .solahigh_grid > ul{gap:2.9rem 1.5rem;padding-inline:0;gap: 1.4rem;}
+    .solahigh_grid > ul > li{padding:2.6rem 2.2rem;}
+    .solahigh_grid .load_more_btn{padding-top:2.7rem;}
+}
+
+
+.sol_misgrid{grid-template-columns:repeat(2,1fr);gap:2.5rem;display:grid;margin-top:8.2rem;}
+.sol_misgrid .sol_vision{position:relative;background-color:var(--color-cf);padding:9.6rem 11.3rem 9.4rem;z-index: 1;}
+.sol_misgrid .sol_vision::before{content:"";z-index:-1;opacity:.4;background-image:url(/images/vision-texture.svg);background-repeat:no-repeat;background-position:center;background-size:cover;width:100%;height:100%;position:absolute;top:0;bottom:0;right:0;}
+.sol_misgrid h5{margin-bottom:4rem;color:var(--color-cf);font-weight:500;}
+.sol_misgrid .sol_vision h5{color:var(--color-white);}
+.sol_misgrid .sol_vision ul{padding:0;margin:0;}
+.sol_misgrid .sol_vision ul li{font:var(--font-21);color:var(--color-white);font-weight:var(--fw-300);line-height: 1.7; margin-bottom:1.5rem;padding-left:3.4rem;position:relative;}
+.sol_misgrid .sol_vision ul li:before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:1.1rem;left:0;}
+
+.sol_misgrid .sol_mission{padding: 8rem 5.5rem 5.4rem 12.5rem;}
+.sol_misgrid .sol_mission h5{margin-bottom: 3rem;}
+.sol_misgrid .sol_mission p{font:var(--font-16);color:var(--color-black);font-weight:300;line-height:1.7;}
+.sol_misgrid .sol_mission ul{padding:0;margin:0; margin-top: 4rem;}
+.sol_misgrid .sol_mission ul li{font:var(--font-16);font-weight:var(--fw-300);line-height:1.6;margin-bottom:1.5rem;padding-left:2.4rem;position:relative;}
+.sol_misgrid .sol_mission ul li:before{content:"";background-color:var(--color-f9);border-radius:50%;width:.8rem;height:.8rem;position:absolute;top:1rem;left:0;}
+
+@media(max-width:1536px){
+    .sol_misgrid{gap:1.5rem;margin-top:5rem;}
+    .sol_misgrid h5{margin-bottom:3rem;}
+    .sol_misgrid .sol_vision{padding:4.6rem 3.3rem 3.4rem;}
+    .sol_misgrid .sol_vision ul li{margin-bottom:1rem;padding-left:1.4rem;}
+    .sol_misgrid .sol_vision ul li:before{width:0.5rem;height:0.5rem;top:0.6rem;}
+    .sol_misgrid .sol_mission{padding:2.6rem 0 0 3rem;}
+    .sol_misgrid .sol_mission ul{margin-top:2rem;}
+    .sol_misgrid .sol_mission ul li{margin-bottom:1rem;padding-left:1.4rem;}
+    .sol_misgrid .sol_mission ul li:before{width:0.5rem;height:0.5rem;top:0.6rem;}
+}
+
+.sol_achivmentsec{padding-bottom:13rem;}
+.sol_achivmentsec .about_faqmain{padding-bottom:0;}
+.sol_achivmentsec .fundacc_heading h5{padding-left: 2.5rem;}
+.sol_achivmentsec .fundacc_heading h5::before{left:0;color: var(--color-cf);}
+.sol_achivmentsec .about_faqmain .fundacc_item.fundacc_active{background-color:rgb(0 0 0 / 2%);border-radius:0.8rem;}
+.sol_achivmentsec .fundacc_inner .custom_lists > li::before{width: 0.6rem; height: 0.6rem;}
+.sol_achivmentsec .fundacc_inner .custom_lists > li>.custom_lists > li::before{background-color: var(--color-cf);}
+
+
+@media(max-width:1536px){
+    .sol_achivmentsec{padding-bottom:8rem;}
+    .sol_achivmentsec .fundacc_inner{padding:0 2.8rem 2rem 5.4rem;}
 }
 
 
@@ -802,7 +1008,7 @@
 .smart_class_right h5{color: var(--color-cf); margin-bottom: 2.4rem;}
 .smart_class_right p{ font: var(--font-16); font-weight: 300;}
 .smart_class_right blockquote{ font: var(--font-42); color: var(--color-cf); border-top: 1px solid #c4c4c4; padding-top:4rem; margin-top: 4rem; font-weight: 300;}
-.scns_facilities_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; padding-block: 2.5rem 7.7rem;}
+.scns_facilities_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; padding-block: 2.5rem 7.7rem; padding-inline: 5rem;}
 
 .basic_scns_facilities{ padding-block: 7rem 0; position: relative;}
 .basic_scns_facilities:before { content: ""; z-index: -1; background-image: url(/images/back_pattern.svg); background-repeat: repeat; background-size: contain; width: 100%; height: 100%; position: absolute; top: 0; bottom: 0; left: 0; right:0; }
@@ -810,3 +1016,65 @@
 @media (max-width:1536px){
     .smart_class_right { padding-inline: 5rem 3rem; }
 }
+
+.schl_faclity_lab{ padding-block: 0 15rem;}
+.facility_laboratories{ padding-block: 9.9rem 14rem; position: relative; background-color: var(--color-white); grid-template-columns: 37.3rem auto; gap: 12.6rem;}
+.facility_laboratories .abut_committe_lft { background-color: var(--color-cf); padding: 6rem 6.8rem 9.3rem; position: relative; z-index: 2;}
+.facility_laboratories .abut_committe_lft *{ color: var(--color-white);}
+.facility_laboratories .abut_committe_lft ul{ margin-top: 6rem;}
+.facility_laboratories .abut_committe_lft::after{content: ""; background: url(/images/school_dean_path.svg) right 0 center no-repeat; background-repeat: no-repeat; background-size: cover; position: absolute; top: 0; left: 0; bottom:0; right: 0; z-index: -1; opacity: 0.3; height: 100%;
+    width: 100%;}
+
+.facility_laboratories .abut_committe_lft .home_tabs li:after{ background-color: var(--color-f9); opacity: 1;}
+.facility_laboratories .abut_committe_lft .home_tabs li.home_active{ color: var(--color-white); font-weight: 500;}
+.facility_laboratories .abut_committe_lft .home_tabs li{ font-weight: 300; color: rgba(255, 255, 255, 0.8); padding-block: 0.2rem;}
+.facility_laboratories .abu_commitbbx h5{ color: var(--color-cf); margin-bottom: 2rem; font-weight: 500;}
+.facility_laboratories .abu_commitbbx p{ padding-right: 15rem;}
+.facility_laboratories .abu_commitbbx figure{ margin-bottom: 2.4rem;}
+.labs_schl_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;}
+.facility_laboratories::before{ width: 12.5rem; left: -12.5rem; background-color: var(--color-white); top: 0; bottom: 0; content: ""; position: absolute;}
+.facility_laboratories::after{ width: 12.5rem; right: -12.5rem; background-color: var(--color-white); top: 0; bottom: 0; content: ""; position: absolute;}
+
+@media (max-width:1536px){
+    .facility_laboratories{ gap: 7rem; padding-block:8rem 8rem;}
+    .facility_laboratories{ grid-template-columns: 30rem auto;}
+    .facility_laboratories .abut_committe_lft ul { margin-top: 3rem; }
+    .facility_laboratories .abut_committe_lft{  padding: 4rem 4rem 5rem;}
+    .facility_laboratories .abu_commitbbx p { padding-right: 0; }
+    .schl_faclity_lab { padding-block: 0 10rem; }
+}
+.school-about-sohmct .sasabt_sec{ padding-block: 12rem 10rem;}
+.school-about-sohmct .sasabt_caption{ padding-inline: 0;}
+.school-about-sohmct .sas_misgrid .sas_mission { padding: 6rem 2rem .8rem 12.7rem; }
+.school-about-sohmct .sas_misgrid .sas_mission ul li{margin-bottom: 1.5rem;}
+.school-about-sohmct .sas_misgrid .sas_vision blockquote{line-height: 1.6;}
+.school-about-sohmct .sas_misgrid .sas_vision { display: flex; flex-direction: column; justify-content: center; padding: 0rem 10rem; }
+
+
+.sohmct_high_grid ul { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; padding: 0; display: grid; margin-bottom: 5rem; padding-top: 2rem;}
+.sohmct_high_grid ul>li { background: var(--color-white); font: var(--font-21); padding: 4.4rem 4.6rem 0rem; font-weight: 300; line-height: 1.6; list-style: none; text-align: center; position: relative; min-height: 21.9rem; }
+.sohmct_high_grid ul>li::before{ content: ""; z-index: 9; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 60%, var(--color-fa) 60%, var(--color-fa) 100%); width: 100%; max-width: 10rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0rem; left: 0; right: 0rem;}
+
+.health_btom_conbx > img { max-width: 4.4rem; margin-bottom: 3.2rem; }
+.school-about-sohmct .health_btom_grid figure:before{ display: none;}
+.school-about-sohmct .sas_misgrid .sas_vision:before { content: ""; z-index: 0; opacity: .4; background-image: url(/images/vision-texture.svg); background-repeat: no-repeat; background-size: cover; width: 100%; height: 100%; position: absolute; top: 0; bottom: 0; right: 0; }
+
+
+@media (max-width:1536px){
+    .school-about-sohmct .sasabt_sec { padding-block: 9rem 10rem; }
+    .sasabt_sec .jnu_title_header { margin-bottom: 4.4rem;}
+    .sasabt_caption{margin-top: 5rem;}
+    .school-about-sohmct .sas_misgrid .sas_vision{ padding-inline: 4rem;}
+    .school-about-sohmct .sas_misgrid .sas_mission { padding: 0rem 0rem 0rem 3rem; }
+    .sas_misgrid h5{margin-bottom: 3rem;}
+    .sohmct_high_grid ul > li{padding: 2.4rem 2.6rem 0; min-height: 16rem;}
+    .health_btom_grid { z-index: 9; grid-template-columns: 32rem auto; gap: 6rem; padding-right: 0; display: grid; position: relative; }
+    .health_btom_content { margin: 0; padding-bottom: 5rem; }
+    .health_btom_content blockquote{ margin-bottom: 2rem;}
+}
+
+.sohmct_grid { grid-template-columns: repeat(2, 1fr); gap: 0 2.5rem; display: grid; padding-top: 13.3rem; }
+.sohmct_caption { flex-direction: column; justify-content: center; align-items: start; padding-inline: 12.5rem 22rem; display: flex; }
+.sohmct_caption p{ text-align: left; max-width: 100%;}
+.sohmct_caption h5{ margin-bottom: 2rem; color: var(--color-cf);}
+.school-school-of-hotel-management-catering-technology-facilities .agr_fac_overview .sohmct_grid figure { margin-bottom: 0rem; }

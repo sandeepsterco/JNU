@@ -99,13 +99,16 @@ export default function SchoolAlumniVideo({
         )}
 
         <div className="alumni_cnt">
-          <h5>{name}</h5>
-          <p className="mb-0">
-            Batch <span>{batch}</span>
-          </p>
-          {designation && (
-              <p className="mb-0" dangerouslySetInnerHTML={{__html:designation}} />
-          )}
+          {name && (
+                                    <h5 dangerouslySetInnerHTML={{__html:name}} />
+                                )}
+          {course && (
+            <p className="mb-0" >{course}<span>{batch}</span></p>
+        )}
+
+        {!course && designation && (
+            <p className="mb-0" >{designation}<span>{batch}</span></p>
+        )}
         </div>
         {slug && (
           <Link className="overlap_btn" href={`${BASE_URL}alumni/${slug}`}></Link>

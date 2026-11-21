@@ -827,7 +827,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .ssr_pdf_item figure { margin: 0; flex: 0 0 auto; }
 .ssr_pdf_item figure img { width: 2.5rem; }
 .placement_header { display:grid; justify-content:space-between; grid-template-columns:39% auto; }
-.placement_header_right { display:grid; align-items:center; grid-template-columns:auto 3rem; justify-content:space-between; gap:4rem; padding-top:5rem; }
+.placement_header_right { display:grid; align-items:center; justify-content:space-between; gap:4rem; padding-top:5rem; }
 .placement_header_right p { font-weight:200; line-height:1.7; }
 .placement_header_right a { width:3rem; height:3rem; border:1px solid var(--color-cf); text-align:center; display:block; padding:0.7rem 1rem; }
 .placement_header_right a:hover { background-color:var(--color-cf); }
@@ -881,6 +881,11 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .gridbox_two { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4rem; align-items: start; }
 .gridbox_three { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; align-items: start; }
 .gridbox_four { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4rem; align-items: start; }
+
+@media(max-width:1536px){
+    .gridbox_two{gap:2rem;}
+}
+
 /* GS23092026 */
 /* Online Resources Page CSS Start */
 .online_resource { padding-block: 12rem; }
@@ -2767,6 +2772,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .patent_publi_main .patent_table_sec .jnu_title_header blockquote{margin-bottom: 3rem;}
 .patent_publi_main .patent_table_sec:not(:last-child) { padding-bottom: 7rem; }
 .nirf_overview {padding-top: 12rem;}
+
 .career_pathwaymain {padding-block: 12rem;}
 .career_pathwaymain .jnu_title_header{margin-bottom: 4.5rem;}
 .career_path_grid .inno_incubx{text-align: left;}
@@ -2776,6 +2782,13 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .career_path_grid .inno_incubx.incol_join .custm_bullets{display: grid;grid-template-columns: repeat(2, 1fr);gap: 0 3rem ;}
 .career_path_grid .inno_incubx.incol_join .custm_bullets li{margin-top: 0;}
 .career_path_grid.inno_incu_grid .inno_incubx h4{min-height: auto;}
+
+@media(max-width:1536px){
+    .career_pathwaymain{padding-block:6rem;}
+    .career_pathwaymain .container{max-width:min(934px,68.3748vw);}
+    .career_pathwaymain .jnu_title_header{margin-bottom:2.5rem;}
+}
+
 /* Scholarships & Financial Aid  End*/
 
 
@@ -2799,29 +2812,25 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .goveringbody_main .fundacc_inner{padding: 0 3.8rem 5rem 6.8rem;}
 
 
-.about_awards { padding-block: 12rem; }
-.award_gridbx { grid-template-columns: 49.3% auto; align-items: center; gap: 15rem; display: grid;}
-.hn_pro_info{margin-bottom: 4rem;}
- .hn_pro_info h5 { font: var(--font-24); margin-bottom: .2rem; }
- .hn_pro_info blockquote { font: var(--font-18); font-weight: 300; }
-.award_gridbx .ab_awa_des p { font-weight: var(--fw-300); }
-.about_awards_four .award_gridbx{grid-template-columns:  auto 49.3%;
-    align-items: center;
-    gap: 15rem;
-    display: grid;}
-.ab_awardbx .ab_award_list  .custm_bullets{display: grid;grid-template-columns: repeat(2, 1fr);gap: 0 4rem;}
-.ab_awardbx .ab_award_list  .custm_bullets li{margin-top: 0;}
-.about_awards_two { padding-block: 12rem; background-color: var(--color-white); }
-.hn_pro_change_bx { grid-template-columns: 39.3% auto; gap: 9rem; display: grid; position: relative; align-items: start; }
-.hn_pro_change_bx .custm_bullets > li:first-child { margin-top: 0; }
-.hn_pro_chaimg figure { margin-bottom: 3.5rem; }
-.hn_pro_chaimg { margin-bottom: 3rem; position: sticky; top: 5rem; align-items: start; }
-.ab_award_four .ab_hn_pro_chaimg figure { margin-bottom: 3.5rem; }
-.about_awards_three{padding-block: 12rem;}
-.about_awards_four{background-color: var(--color-23);padding-block: 12rem;}
-.about_awards_one .award_gridbx{margin-bottom: 5rem;}
-.about_awards_four .hn_pro_info h5,.about_awards_four .hn_pro_info blockquote ,.about_awards_four .custm_bullets > li{color: var(--color-white);}
-
+.about_awards{padding-block:12rem;}
+.award_gridbx{grid-template-columns:49.3% auto;align-items:center;gap:15rem;display:grid;}
+.hn_pro_info{margin-bottom:4rem;}
+.hn_pro_info h5{font:var(--font-24);margin-bottom:.2rem;}
+.hn_pro_info blockquote{font:var(--font-18);font-weight:300;}
+.award_gridbx .ab_awa_des p{font-weight:var(--fw-300);}
+.about_awards_four .award_gridbx{grid-template-columns:auto 49.3%;align-items:center;gap:15rem;display:grid;}
+.ab_awardbx .ab_award_list .custm_bullets{display:grid;grid-template-columns:repeat(2,1fr);gap:0 4rem;}
+.ab_awardbx .ab_award_list .custm_bullets li{margin-top:0;}
+.about_awards_two{padding-block:12rem;background-color:var(--color-white);}
+.hn_pro_change_bx{grid-template-columns:39.3% auto;gap:9rem;display:grid;position:relative;align-items:start;}
+.hn_pro_change_bx .custm_bullets > li:first-child{margin-top:0;}
+.hn_pro_chaimg figure{margin-bottom:3.5rem;}
+.hn_pro_chaimg{margin-bottom:3rem;position:sticky;top:5rem;align-items:start;}
+.ab_award_four .ab_hn_pro_chaimg figure{margin-bottom:3.5rem;}
+.about_awards_three{padding-block:12rem;}
+.about_awards_four{background-color:var(--color-23);padding-block:12rem;}
+.about_awards_one .award_gridbx{margin-bottom:5rem;}
+.about_awards_four .hn_pro_info h5,.about_awards_four .hn_pro_info blockquote,.about_awards_four .custm_bullets > li{color:var(--color-white);}
 
 
 /* book campus visit css starts here */
@@ -2869,26 +2878,36 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .tab_contbx .abu_commitbbx p>strong{font-weight: 500;font: var(--font-18);}
 .tab_contbx .custm_bullets.grid_2 {display: grid;grid-template-columns: repeat(2,1fr);gap: 0;margin-block: 3rem;}
 .tab_contbx .custm_bullets.grid_2>li{margin-block: 0 2.5rem;}
-/* book campus visit css ends here */
-.abu_committ_mainsec.hero_bg_pattern .jnu_title_header{display: none;}
-.testimo_sec {padding-bottom: 8rem;}
-.testimo_bottom>h3{margin-bottom: 3.2rem;font: var(--font-42);letter-spacing: -1.26px;font-weight: 300;text-transform: capitalize;}
-.testimo_bottom>ul{display: grid;grid-template-columns: repeat(2,1fr);margin-block: 4rem 0;}
 
-.testimo_bottom>.custm_bullets > li{gap: 0;margin-top: 0;}
-.abu_committ_mainsec.hero_bg_pattern .jnu_title_header { display: none; }
-.testimo_sec { padding-bottom: 8rem; }
-.testimo_bottom>h3 { margin-bottom: 3.2rem; font: var(--font-42); letter-spacing: -1.26px; font-weight: 300; text-transform: capitalize; }
-.testimo_bottom>ul { display: grid; grid-template-columns: repeat(2,1fr); margin-block: 4rem 0; }
-.testimo_bottom>.custm_bullets > li { gap: 0; margin-top: 0; }
-.transport_grid { grid-template-columns:44rem auto; gap:21rem; display:grid; width:83.1%; margin:auto; }
-.public_transport h3 { color:var(--color-cf); margin-bottom:3rem; font-weight:500; }
-.public_transport p { font:var(--font-18); font-family:var(--stack); color:var(--color-black); margin-top:2rem; font-weight:200; line-height:1.7; }
-.transport_sec { padding-block:0 12rem; }
-.public_transport hr { border-bottom: 1px solid #c6c6c6; display: block; margin: 4rem 0; }
-.explore_btn_grp { height: auto; overflow: hidden; line-height: 3; margin-top: 3rem; }
-.public_transport > a { font: var(--font-24); line-height: 1.6; display: flex; align-items: center; gap: 0 1.5rem; margin-top: 2rem; }
-.public_transport > a img { max-width: 3rem; }
+@media(max-width:1536px){
+    .caree_path .jnu_title_header p{margin-bottom: 2rem;}
+    .caree_path .inno_incubx h4{margin-bottom:1.5rem;}
+    .caree_path .inno_incubx{padding:3rem;}
+    .caree_path .inno_incubx ul:has(+*){margin-bottom: 2rem;}
+    .caree_path .inno_incubx p:last-of-type:has( + *){margin-bottom: 2rem;}
+}
+
+
+/* book campus visit css ends here */
+.abu_committ_mainsec.hero_bg_pattern .jnu_title_header{display:none;}
+.testimo_sec{padding-bottom:8rem;}
+.testimo_bottom>h3{margin-bottom:3.2rem;font:var(--font-42);letter-spacing:-1.26px;font-weight:300;text-transform:capitalize;}
+.testimo_bottom>ul{display:grid;grid-template-columns:repeat(2,1fr);margin-block:4rem 0;}
+.testimo_bottom>.custm_bullets > li{gap:0;margin-top:0;}
+.abu_committ_mainsec.hero_bg_pattern .jnu_title_header{display:none;}
+.testimo_sec{padding-bottom:8rem;}
+.testimo_bottom>h3{margin-bottom:3.2rem;font:var(--font-42);letter-spacing:-1.26px;font-weight:300;text-transform:capitalize;}
+.testimo_bottom>ul{display:grid;grid-template-columns:repeat(2,1fr);margin-block:4rem 0;}
+.testimo_bottom>.custm_bullets > li{gap:0;margin-top:0;}
+.transport_grid{grid-template-columns:44rem auto;gap:21rem;display:grid;width:83.1%;margin:auto;}
+.public_transport h3{color:var(--color-cf);margin-bottom:3rem;font-weight:500;}
+.public_transport p{font:var(--font-18);font-family:var(--stack);color:var(--color-black);margin-top:2rem;font-weight:200;line-height:1.7;}
+.transport_sec{padding-block:0 12rem;}
+.public_transport hr{border-bottom:1px solid #c6c6c6;display:block;margin:4rem 0;}
+.explore_btn_grp{height:auto;overflow:hidden;line-height:3;margin-top:3rem;}
+.public_transport > a{font:var(--font-24);line-height:1.6;display:flex;align-items:center;gap:0 1.5rem;margin-top:2rem;}
+.public_transport > a img{max-width:3rem;}
+
 
 /* book campus visit css ends here */
 
@@ -3300,3 +3319,23 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .smms_facility .health_cont1{border:none;padding-bottom:12rem;}
 .smms_facility .health_cont{margin:0 6rem 8rem;}
 .smms_facility .health_cont1 P{max-width:97%;}
+
+
+.alumni_detail .even_back{margin-top:10rem;}
+
+
+
+/* About Seedling School of Nursing Page CSS Start */
+.sosn_aboutsec { padding-block: 17.1rem 0; }
+.sosn_aboutsec .jnu_title_header { margin-bottom: 12rem; padding-inline: 2rem; }
+.sosn_aboutimggrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+.sosn_vismis .sbm_misgrid .sbm_vision { padding: 5.9rem 16rem 15.1rem 12.5rem; max-height: 45.8rem; }
+.sosn_vismis .sbm_misgrid .sbm_mission { padding: 5.9rem 0 0 10.2rem; max-width: 64.4rem; }
+.sosn_vismis .sbm_misgrid .sbm_mission li { font: var(--font-16); font-weight: var(--fw-300);margin-bottom: 3rem; }
+.sosn_vismis .sbm_misgrid .sbm_vision:before { content: ""; z-index: 0; opacity: .4; background-image: url(/images/sson_vis_mis_pattern.webp); background-repeat: no-repeat; background-size: cover; width: 22.5rem; height: 100%; position: absolute; top: 0; bottom: 0; right: 0; }
+.sson_hightmain.health_hight{padding-block: 0 8rem;}
+.sson_hightmain.health_hight .health_list{margin-top: 9rem ;padding-top: 12rem;    border-top: 1px solid #cecece;}
+.sson_hightmain .health_list h4{margin-bottom: 2.4rem;}
+.sson_hightmain  .health_list ul li{padding: 7.5rem 4.8rem;}
+.sson_achiment_grid{display: grid;grid-template-columns: 35.3rem auto;gap: 1.9rem;}
+/* About Seedling School of Nursing Page CSS End */

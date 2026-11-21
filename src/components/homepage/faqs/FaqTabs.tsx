@@ -4,14 +4,14 @@ import type { ModularFAQInterface } from "./FAQs";
 
 interface FaqTabsInterface {
   modular: ModularFAQInterface[];
-  
 }
 
 const PRIORITY_TYPES = ["General", "Admissions", "Examinations", "Hostel"];
 
 const priorityIndex = (type: string) =>
-  PRIORITY_TYPES.findIndex((p) => p.toLowerCase() === type.trim().toLowerCase());
-
+  PRIORITY_TYPES.findIndex(
+    (p) => p.toLowerCase() === type.trim().toLowerCase(),
+  );
 
 function Accordion({ faqs }: { faqs: ModularFAQInterface[] }) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
@@ -20,30 +20,26 @@ function Accordion({ faqs }: { faqs: ModularFAQInterface[] }) {
     setActiveIndex((prev) => (prev === index ? null : index));
   };
 
-    return (
-        <div className="accordion">
-            {faqs.map((faq, index) => {
-                const isActive = activeIndex === index
-                return (
-                    <div
-                        key={faq.slug}
-                        className={`tab${isActive ? ' active' : ''}`}
-                       
-                    >
-                        <div className="tab-heading" onClick={() => handleClick(index)}>
-                            <h5>{faq.question}</h5>
-                        </div>
-                        <div
-                            className="tab-content"
-                            style={{ height: isActive ? 'auto' : 0, overflow: 'hidden' }}
-                        >
-                            <p dangerouslySetInnerHTML={{__html:faq.answer}} />
-                        </div>
-                    </div>
-                )
-            })}
-        </div>
-    )
+  return (
+    <div className="accordion">
+      {faqs.map((faq, index) => {
+        const isActive = activeIndex === index;
+        return (
+          <div key={faq.slug} className={`tab${isActive ? " active" : ""}`}>
+            <div className="tab-heading" onClick={() => handleClick(index)}>
+              <h5>{faq.question}</h5>
+            </div>
+            <div
+              className="tab-content"
+              style={{ height: isActive ? "auto" : 0, overflow: "hidden" }}
+            >
+              <p dangerouslySetInnerHTML={{ __html: faq.answer }} />
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 export default function FaqTabs({ modular }: FaqTabsInterface) {
@@ -56,47 +52,44 @@ export default function FaqTabs({ modular }: FaqTabsInterface) {
     {},
   );
 
-    // Object.keys keeps first-seen order, so the stable sort below leaves
-    // non-priority types in API order after the priority ones.
-    const tabLabels = Object.keys(groupedTabs).sort((a, b) => {
-      const ai = priorityIndex(a);
-      const bi = priorityIndex(b);
+  // Object.keys keeps first-seen order, so the stable sort below leaves
+  // non-priority types in API order after the priority ones.
+  const tabLabels = Object.keys(groupedTabs).sort((a, b) => {
+    const ai = priorityIndex(a);
+    const bi = priorityIndex(b);
 
-      if (ai !== -1 && bi !== -1) return ai - bi; // both priority -> fixed order
-      if (ai !== -1) return -1;                   // only a is priority -> a first
-      if (bi !== -1) return 1;                    // only b is priority -> b first
-      return 0;                                   // neither -> keep API order
-    });
-
+    if (ai !== -1 && bi !== -1) return ai - bi; // both priority -> fixed order
+    if (ai !== -1) return -1; // only a is priority -> a first
+    if (bi !== -1) return 1; // only b is priority -> b first
+    return 0; // neither -> keep API order
+  });
 
   const [activeTab, setActiveTab] = useState<string>(tabLabels[0] ?? "");
 
   return (
     <>
-      <div className="faq_tab">
-        <ul
-          className="tabs"
-        >
-          {tabLabels.map((label, i) => (
-            <li
-              key={label}
-              className={[
-                activeTab === label ? "active" : "",
-                i === tabLabels.length - 1 ? "tab_last" : "",
-              ]
-                .filter(Boolean)
-                .join(" ")}
-              onClick={() => setActiveTab(label)}
-            >
-              {label}
-            </li>
-          ))}
-        </ul>
-      </div>
+      {tabLabels?.length > 1 && (
+        <div className="faq_tab">
+          <ul className="tabs">
+            {tabLabels.map((label, i) => (
+              <li
+                key={label}
+                className={[
+                  activeTab === label ? "active" : "",
+                  i === tabLabels.length - 1 ? "tab_last" : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                onClick={() => setActiveTab(label)}
+              >
+                {label}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
 
-      <div
-        className="faq_question"
-      >
+      <div className={`faq_question ${tabLabels?.length === 1 ? 'no_tab' : ''}`}>
         {tabLabels.map((label) => {
           const isActive = activeTab === label;
           return (

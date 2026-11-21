@@ -2,6 +2,7 @@
 .alumni_slider_section{padding-top:6rem;padding-left:1.5rem;}
 .alumni_header{display:flex;justify-content:space-between;align-items:center;}
 .alumni_header_right{display:flex;position:relative;gap:1rem;}
+.alumni_header .head_title blockquote{    margin-block: 3.7rem 2rem;}
 .alumni_header_right .alumni-prev,.alumni_header_right .alumni-next{position:relative;width:3rem;border:1px solid var(--color-cf);height:3rem;text-align:center;margin-top:0;left:0;right:0;}
 .alumni_header_right .alumni-prev::after,.alumni_header_right .alumni-next::after{font-size:1.2rem;color:var(--color-cf);}
 .alumni_header_right .alumni-prev:hover,.alumni_header_right .alumni-next:hover{background-color:var(--color-cf);}
@@ -10,7 +11,7 @@
 .alumni_header_right .alumni-prev>svg, .alumni_header_right .alumni-next>svg{display: none;}
 .alumni_slider_bx .alumni_logo{max-width:15.2rem;position:absolute;top:3.5rem;left:5.6rem;}
 .alumni_slider_bx .alumni_logo img{max-height:13rem;}
-.alumni_bx_bottom{padding:4rem 6.5rem 9rem;}
+.alumni_bx_bottom{padding:4rem 6.5rem 7.4rem;}
 .alumni_slider_bx{position:relative;height:100%;}
 .alumni_slider_section .swiper-slide{height:auto;}
 .qoute_icon{max-width:6rem;margin-block:-7.6rem 3rem;display:block;position:relative;z-index:9;}
@@ -62,6 +63,10 @@
 .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);cursor:pointer;z-index:2;}
 .alumni_msg_desc{display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;min-height:5.5rem;}
 
+.alumni_network_tabs{display:flex;justify-content:center;gap:1.5rem;margin-bottom:4rem;border-bottom:1px solid #dfdfdf;}
+.alumni_network_tabs button{padding:1.2rem 1rem 2rem;border:0;border-bottom:0.3rem solid transparent;background:transparent;color:#9e9e9e;cursor:pointer;font:var(--font-18);font-weight:600;letter-spacing:2.7px;text-transform:uppercase;}
+.alumni_network_tabs button:hover,.alumni_network_tabs button.active{border-bottom-color:var(--color-f2);color:var(--color-cf);}
+.alumni_network_empty{grid-column:1 / -1;text-align:center;}
 
 
 
