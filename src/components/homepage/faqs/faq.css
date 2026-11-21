@@ -1,5 +1,6 @@
 .faq_section{background-color:var(--color-38);padding-block:10rem 14rem;}
 .faq_section h4{font-weight:300;color:var(--color-white);letter-spacing:-1.26px;}
+.faq_section .no_tab{margin-top:5rem;}
 .faq_tab ul{display:flex;list-style-type:none;gap:5.4rem;padding:0;margin-block:5rem;}
 .faq_tab ul li{font:var(--font-21);font-weight:500;color:var(--color-white);cursor:pointer;position:relative;}
 .faq_tab ul li.active{color:var(--color-fa);}

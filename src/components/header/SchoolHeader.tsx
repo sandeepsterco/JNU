@@ -111,8 +111,12 @@ export default async function SchoolHeader({parentSlug, slug, customClass}:Schoo
   return (
     <HeaderScroll customClass={customClass}>
       <div className="container-fluid">
-        <HeaderLogo />
+        <div className="school_header_logo">
+          <HeaderLogo />
+          {/* <h1>testing</h1> */}
+        </div>
 
+        
         <HeaderNav
           parentSlug={parentSlug}
           headerData={headerData}
