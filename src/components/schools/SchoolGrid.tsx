@@ -14,6 +14,17 @@ interface SchoolGridProps {
   items: SchoolItem[];
 }
 
+const ALLOWED_URLS=[
+  'school-of-engineering-technology',
+  'school-of-allied-health-sciences',
+  'school-of-computer-system-sciences',
+  'school-of-agricultural-science',
+  'school-of-life-basic-sciences',
+  'school-of-language-literature-society',
+  'school-of-business-management',
+  'school-of-education'
+];
+
 export default function SchoolGrid({
   items,
 }: SchoolGridProps) {

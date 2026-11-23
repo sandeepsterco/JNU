@@ -24,6 +24,7 @@ import { InitAuditoriumSwiper } from "@/lib/cms/initAuditoriumSwiper";
 import { initPlacementsOverviewSlider } from "@/lib/cms/initPlacementsOverview";
 import { initSOCSSLibraryFacilitiesSwiper } from "@/lib/cms/initSOCSSLibraryFacilitiesSwiper";
 import { initSOCSSIndustryTieSwiper } from "@/lib/cms/initSOCSSIndustryTieSwiper";
+import { InitSchoolBannerSwiper } from "@/lib/cms/initSchoolBannerSwiper";
 
 function waitForLayout() {
   return new Promise<void>((resolve) => {
@@ -80,6 +81,15 @@ export default function CmsEnhancer({ containerId }: { containerId: string }) {
 
       if (root.querySelector(".auditoriumSwiper:not([data-swiper-init])")) {
         const cleanup = await InitAuditoriumSwiper(root);
+        if (cancelled) {
+          cleanup();
+          return;
+        }
+        cleanupFns.push(cleanup);
+      }
+
+      if (root.querySelector(".school_swiper:not([data-swiper-init])")) {
+        const cleanup = await InitSchoolBannerSwiper(root);
         if (cancelled) {
           cleanup();
           return;
