@@ -4,6 +4,7 @@ import FeaturedNews from '@/components/news/FeaturedNews';
 import NewsList from './NewsList';
 import "@/app/(common)/(inner)/(happenings)/happenings.css";
 import { BASE_URL } from '@/config/config';
+import { hasNextPage, type PaginationMetadata } from '@/lib/pagination';
 
 interface DataInterface {
     name: string;
@@ -29,8 +30,7 @@ interface FeaturedNewsInterface {
 interface NewsResponseInterface {
     newsAndEvents: {
         data: DataInterface[];
-        next_page_url: string | null;
-    };
+    } & PaginationMetadata;
     featuredNewsAndEvents: FeaturedNewsInterface[]
 }
 
@@ -103,7 +103,7 @@ export default async function NewsEventsPage({ params, searchParams }: PageProps
                         slug={`${BASE_URL}news-events`}
                         filters={{ school: String(schoolId), department, date }}
                         schoolSlug={school}
-                        hasMoreInitially={Boolean(newsAndEvents?.next_page_url)}
+                        hasMoreInitially={hasNextPage(newsAndEvents)}
                     />
                 )}
             </div>
