@@ -6,15 +6,18 @@ import "@/components/homepage/alumni/alumni.css";
 
 interface PlacementSliderPropsInterface {
   data: AlumniDataInterface[];
+  schoolSlug?: string;
 }
 
-export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
+export default function AlumniSlider({ data, schoolSlug }: PlacementSliderPropsInterface) {
   const hasMultiple = data.length > 3;
+  const alumniDetailHref = (slug?: string) =>
+    `${BASE_URL}alumni/${slug}${schoolSlug ? `?school=${encodeURIComponent(schoolSlug)}` : ""}`;
 
   return (
 
       <div className="max-content-lg pe-lg-0 me-lg-0">
-        <div className="alumni_slider_section" data-aos="fade-up">
+        <div className="alumni_slider_section">
           {/* Vanilla Swiper container — hydrated by InitAlumniSwiper via CmsEnhancer */}
           <div
             className="swiper alumni_swiper"
@@ -62,17 +65,22 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
 
                           <h4 className="alumni_msg_desc">{item.message}</h4>
 
-                          <h5>{item.name}</h5>
+                          <h5 dangerouslySetInnerHTML={{__html:item.name}} />
 
-                          <p>
-                            {item.course} <span>{item.batch}</span>
-                          </p>
+                          {item?.course && (
+                              <p className="mb-0" >{item.course}<span>{item.batch}</span></p>
+                          )}
+
+                          {!item?.course && item?.designation && (
+                              <p className="mb-0" >{item.designation}<span>{item.batch}</span></p>
+                          )}
+
                         </div>
 
-                        {/* <Link
-                          href={`${BASE_URL}alumni/${item.slug}`}
+                        <Link
+                          href={alumniDetailHref(item.slug)}
                           className="overlap_btn"
-                        /> */}
+                        />
                       </>
                     ) : (
                       <div className="alumni_img">
@@ -111,11 +119,19 @@ export default function AlumniSlider({ data }: PlacementSliderPropsInterface) {
                         )}
 
                         <div className="alumni_cnt">
-                          <h5>{item.name}</h5>
-                          <p>
-                            {item.course} <span>{item.batch}</span>
-                          </p>
+                          <h5 dangerouslySetInnerHTML={{__html:item.name}} />
+                            {item?.course && (
+                              <p className="mb-0" >{item.course}<span>{item.batch}</span></p>
+                          )}
+
+                          {!item?.course && item?.designation && (
+                              <p className="mb-0" >{item.designation}<span>{item.batch}</span></p>
+                          )}
                         </div>
+                        <Link
+                          href={alumniDetailHref(item.slug)}
+                          className="overlap_btn"
+                        />
                       </div>
                     )}
                   </div>

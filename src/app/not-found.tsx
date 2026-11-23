@@ -13,7 +13,7 @@ export default function NotFound() {
 
           <p>
             The page you are looking for not available!
-          </p>
+          </p> 
 
           <div className="not_found_btn_wrap">
             <Link href="/" className="go_back__btn">

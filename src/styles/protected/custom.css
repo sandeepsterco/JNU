@@ -19,7 +19,7 @@
 .text-end{text-align:right;}
 .text-start{text-align:start;}
 .justify-content-end{justify-content:flex-end;}
-
+.ml-auto{ margin-left: auto;}
 
 @media (min-width: 768px) {
     .d-md-none{display:none !important;}

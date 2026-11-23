@@ -2,6 +2,7 @@
 .alumni_slider_section{padding-top:6rem;padding-left:1.5rem;}
 .alumni_header{display:flex;justify-content:space-between;align-items:center;}
 .alumni_header_right{display:flex;position:relative;gap:1rem;}
+.alumni_header .head_title blockquote{    margin-block: 3.7rem 2rem;}
 .alumni_header_right .alumni-prev,.alumni_header_right .alumni-next{position:relative;width:3rem;border:1px solid var(--color-cf);height:3rem;text-align:center;margin-top:0;left:0;right:0;}
 .alumni_header_right .alumni-prev::after,.alumni_header_right .alumni-next::after{font-size:1.2rem;color:var(--color-cf);}
 .alumni_header_right .alumni-prev:hover,.alumni_header_right .alumni-next:hover{background-color:var(--color-cf);}
@@ -10,7 +11,7 @@
 .alumni_header_right .alumni-prev>svg, .alumni_header_right .alumni-next>svg{display: none;}
 .alumni_slider_bx .alumni_logo{max-width:15.2rem;position:absolute;top:3.5rem;left:5.6rem;}
 .alumni_slider_bx .alumni_logo img{max-height:13rem;}
-.alumni_bx_bottom{padding:4rem 6.5rem 9rem;}
+.alumni_bx_bottom{padding:4rem 6.5rem 7.4rem;}
 .alumni_slider_bx{position:relative;height:100%;}
 .alumni_slider_section .swiper-slide{height:auto;}
 .qoute_icon{max-width:6rem;margin-block:-7.6rem 3rem;display:block;position:relative;z-index:9;}
@@ -21,7 +22,7 @@
 .alumni_bx_bottom p span{border-left:1px solid #CFCFCF;padding-left:1rem;margin-left:1rem;}
 .alumni_bx_bottom p span:empty{display:none;}
 .alumni_video{max-height:68rem;width:100%;object-fit:cover;}
-
+.alumni_mainsec  .alumni_bx_bottom p span{padding-top:1rem;display: block;border: none;padding-left: 0;margin-left: 0;}
 /* .alumni_img img{max-height:68rem;}*/
 .alumni_slider_section .alumni_img .alumni_video + .alumni_poster {
     max-height:67.5rem;object-fit:cover;object-position:top;height:100%;
@@ -47,7 +48,7 @@
 /* .alumni_slider_section .swiper-slide:has(.alumni_video) .alumni_img img{max-height:65rem;} */
 .alumni_slider_section .swiper-slide:has(.alumni_video) .alumni_poster img{width:100%;max-height:63.5rem;max-height:63.5rem;object-fit:cover;object-position:top;}
 .alumni_slider_section .swiper-slide:has(.alumni_video) .alumni_video{width:100%;max-height:67.5rem;object-fit:cover;object-position:center;}
-.alumni_slider_bx .play-pause-btn{width:7rem;height:7rem;background-color:rgba(255,255,255,0.3);border-radius:7rem;position:absolute;top:2.8rem;right:2.8rem;color:var(--color-white);font:var(--font-24);}
+.alumni_slider_bx .play-pause-btn{width:7rem;height:7rem;background-color:rgba(255,255,255,0.3);border-radius:7rem;position:absolute;top:2.8rem;right:2.8rem;color:var(--color-white);font:var(--font-24);z-index:10;}
 
 
 .alumni_cnt{position:absolute;bottom:4.7rem;left:3.2rem;z-index:2;}
@@ -62,28 +63,34 @@
 .play-btn{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);cursor:pointer;z-index:2;}
 .alumni_msg_desc{display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical;overflow:hidden;text-overflow:ellipsis;min-height:5.5rem;}
 
+.alumni_network_tabs{display:flex;justify-content:center;gap:1.5rem;margin-bottom:4rem;border-bottom:1px solid #dfdfdf;}
+.alumni_network_tabs button{padding:1.2rem 1rem 2rem;border:0;border-bottom:0.3rem solid transparent;background:transparent;color:#9e9e9e;cursor:pointer;font:var(--font-18);font-weight:600;letter-spacing:2.7px;text-transform:uppercase;}
+.alumni_network_tabs button:hover,.alumni_network_tabs button.active{border-bottom-color:var(--color-f2);color:var(--color-cf);}
+.alumni_network_empty{grid-column:1 / -1;text-align:center;}
 
 
 
 
 
 @media(max-width:1536px){
+    
     .our_alumni_section{padding-block: 10rem 12.1rem;}
     .our_alumni_section .container{max-width:min(934px,68.3748169vw);}
     .alumni_header_right .alumni-prev, .alumni_header_right .alumni-next{top:1.5rem;width: 1.6rem; height: 1.6rem;padding: 0;display: inline-flex; justify-content: center;}
     .alumni_header_right .alumni-prev>img, .alumni_header_right .alumni-next>img{width: 0.5rem; }
     .alumni_slider_section{padding-top:3.1rem;}
-    .alumni_slider_bx .alumni_logo img{max-height:6.4rem;}
+    .alumni_slider_bx .alumni_logo img{max-height:3.4rem;} 
     .alumni_slider_bx .alumni_logo{top:1.5rem;left:2.5rem;}
     .qoute_icon{max-width:3.2rem;margin-block:-5rem 1rem;}
     .alumni_bx_bottom{padding: 3.2rem 3.3rem 2rem;}
     .alumni_bx_bottom h4:empty{display: none;}
     .alumni_bx_bottom p span{margin-left:0.5rem;padding-left:0.5rem;}
-    .alumni_bx_bottom p { padding-top: 2rem;}
+    .alumni_bx_bottom p { padding-top: 1rem;}
     .alumni_header_right{gap:0.4rem;}
     .alumni_slider_bx .play-pause-btn{font:var(--font-21);width:3.7rem;height:3.7rem;top:0.8rem;right:1.4rem;}
     .alumni_cnt{padding:2.2rem 1.7rem;bottom:0;left:0;}
     .alumni_slider_bx:before{max-width:13.2rem;height:2px;background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 3.5rem, var(--color-06) 3.5rem, var(--color-06) 100%);}
+
 }
 
 
@@ -109,14 +116,7 @@
     .alumni_cnt p{font:var(--fw-300) 1.4rem / 1.5 var(--stack);}
 }
 
-
-
 /* school Alumni Grid */
-.alumni_mainsec{
-    padding-block: 12rem;
-}
-.alumni_mainsec .alumni_img{    height: 40rem;
-    overflow: hidden;}
-    .alumni_mainsec .alumni_logo img {
-    max-height: 8rem;
-}
+.alumni_mainsec { padding-block: 12rem; }
+.alumni_mainsec .alumni_img { height: 40rem; overflow: hidden; }
+.alumni_mainsec .alumni_logo img { max-height: 8rem; max-width: 10rem; }

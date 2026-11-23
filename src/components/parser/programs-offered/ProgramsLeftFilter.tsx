@@ -95,7 +95,13 @@ const durationListData = [
   { id: 4, name: "4 Years", slug: "4-years" },
 ];
 
-export default function ProgramsLeftFilter({isDataLoading}:{isDataLoading:(val:boolean)=>void}) {
+export default function ProgramsLeftFilter({
+  isDataLoading,
+  hideSchoolFilter = false,
+}: {
+  isDataLoading: (val: boolean) => void;
+  hideSchoolFilter?: boolean;
+}) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -150,8 +156,12 @@ export default function ProgramsLeftFilter({isDataLoading}:{isDataLoading:(val:b
       { title: "Program Type", key: "degree", options: programTypeOptions },
     ];
 
-    return dynamicAccordionData.filter((item) => item.options.length > 0);
-  }, [data]);
+    return dynamicAccordionData.filter(
+      (item) =>
+        item.options.length > 0 &&
+        !(hideSchoolFilter && item.key === "school"),
+    );
+  }, [data, hideSchoolFilter]);
 
   const [selected, setSelected] = useState(() => {
     const initial: any = {};
@@ -190,9 +200,16 @@ export default function ProgramsLeftFilter({isDataLoading}:{isDataLoading:(val:b
   };
 
   const resetFilters = () => {
-    setSelected({});
+    const school = hideSchoolFilter ? searchParams.get("school") : null;
+    const nextSelected = school
+      ? { school: school.split(",").filter(Boolean) }
+      : {};
+    setSelected(nextSelected);
     startTransition(() => {
-      router.push(pathname);
+      const params = new URLSearchParams();
+      if (school) params.set("school", school);
+      const query = params.toString();
+      router.push(query ? `${pathname}?${query}` : pathname);
     });
   };
 

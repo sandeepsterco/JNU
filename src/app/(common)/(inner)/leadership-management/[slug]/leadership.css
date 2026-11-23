@@ -27,7 +27,8 @@
 .bottom_detail_grid { display: grid; grid-template-columns: 50.04% auto; gap: 13.7rem; } 
 .bottom_detail { padding-block: 11.9rem 9rem; } .bottom_detail_left { padding-top: 1rem; } 
 .bottom_detail_left p{font: var(--font-16);font-weight: 300;} 
-.content_16_26 { font: var(--font-16); font-weight: 300; line-height: 2.6rem; } 
+.content_16_26,
+.content_16_26 p { font: var(--font-16); font-weight: 300; line-height: 2.6rem; } 
 .bottom_detail_grid .conclude { margin-top: 3rem; font-weight: bold; } 
 .bottom_detail_grid .video_part figure { position: relative; }
 .bottom_detail_grid .video_part figure img{z-index: 9;position: relative;}
@@ -67,7 +68,8 @@
 
 @media (max-width:1536px){
   .testimonials_main{ gap: 8rem;}
-  .testimonials_content_sec .content_16_26{ line-height: 1.6;}
+  .testimonials_content_sec .content_16_26,
+  .testimonials_content_sec .content_16_26 p{ line-height: 1.6;}
   .testimonials_content_sec .author_details{ padding-block: 3rem;}
   .school_testimonial_quote_card{padding: 3rem 2.4rem 2.8rem 2rem; margin-bottom: 0;}
   .school_testimonial_quote_card .success_speak_bx_flex{ margin-top: 0;}
