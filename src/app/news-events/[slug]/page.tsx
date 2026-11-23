@@ -1,7 +1,6 @@
 import ReactParserDynamic from "@/components/common/reactParser/ReactParserDynamic";
 import apiFetch from "@/lib/api";
 import { notFound } from "next/navigation";
-import SchoolHeader from "@/components/header/SchoolHeader";
 import BackBtn from "@/components/common/BackBtn";
 
 interface SearchParams {
@@ -27,17 +26,9 @@ export default async function FacultyDetail({
   const cmsData = data?.newsAndEvent?.cms ?? [];
 
   const combinedHTML = Object.values(cmsData).join("") || "";
-  const schoolSlug = resolvedSearchParams.school;
 
   return (
     <>
-      {schoolSlug && (
-        <SchoolHeader
-          parentSlug="school"
-          slug={schoolSlug}
-          customClass="school_header school_inner_header"
-        />
-      )}
       <ReactParserDynamic
         html={combinedHTML}
         searchParams={resolvedSearchParams}
