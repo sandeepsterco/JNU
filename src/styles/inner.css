@@ -546,7 +546,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
     line-height: 2.4rem;
     display: block;
 }
-.sch_dropdown>.dropdown_toggle { position: relative; min-width: 28.3rem; cursor: pointer; font: var(--font-21); font-weight: 700; border: 0; padding-right: 2.8rem; background-color: transparent; text-align: left; color: var(--color-white); }
+.sch_dropdown>.dropdown_toggle { position: relative; min-width: 28.3rem; cursor: pointer; font: var(--font-21); font-weight: 500; border: 0; padding-right: 2.8rem; background-color: transparent; text-align: left; color: var(--color-white); }
 .sch_dropdown>.dropdown_toggle::after { content: ""; position: absolute; top: 50%; right: 0; width: 1.5rem; height: 1.5rem; background: url(/images/nav-arrow-down.svg) no-repeat; background-position: right 0 center; background-size: 1.3rem; transform: translateY(-50%) rotate(0); -webkit-transform: translateY(-50%) rotate(0); -moz-transform: translateY(-50%) rotate(0); -ms-transform: translateY(-50%) rotate(0); -o-transform: translateY(-50%) rotate(0); transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; -o-transition: all 0.5s ease; filter: brightness(0) invert(1); }
 .sch_dropdown>.dropdown_toggle.show::after { transform: translateY(-50%) rotate(180deg); -webkit-transform: translateY(-50%) rotate(180deg); -moz-transform: translateY(-50%) rotate(180deg); -ms-transform: translateY(-50%) rotate(180deg); -o-transform: translateY(-50%) rotate(180deg); }
 .sch_dropdown>ul { position: absolute; display: none; margin: 0; right: 0; top: 100%; width: 108%; background-color: var(--color-white); padding: 2rem 2rem; box-shadow: 0px 5px 8px rgb(0 0 0 / 8%); }
