@@ -7,6 +7,7 @@ import NewsFilter from "./NewsFilter";
 import InnerHead from "@/components/header/InnerHead/InnerHead";
 import { notFound } from "next/navigation";
 import Header from "@/components/header/Header";
+import { hasNextPage, type PaginationMetadata } from "@/lib/pagination";
 
 interface DataInterface {
   name: string;
@@ -32,8 +33,7 @@ interface FeaturedNewsInterface {
 interface NewsResponseInterface {
   newsAndEvents: {
     data: DataInterface[];
-    next_page_url: string | null;
-  };
+  } & PaginationMetadata;
   featuredNewsAndEvents: FeaturedNewsInterface[];
 }
 
@@ -111,7 +111,7 @@ export default async function NewsEventsPage({ searchParams }: PageProps) {
               initialData={newsAndEvents?.data ?? []}
               slug={slug}
               filters={{ school, department, date }}
-              hasMoreInitially={Boolean(newsAndEvents?.next_page_url)}
+              hasMoreInitially={hasNextPage(newsAndEvents)}
             />
           )}
         </HappeningsWrapper>
