@@ -81,6 +81,8 @@ export default async function NewsEventsPage({ params, searchParams }: PageProps
     const newsAndEvents = (data as NewsResponseInterface)?.newsAndEvents;
     const featuredNews = (data as NewsResponseInterface)?.featuredNewsAndEvents ?? [];
 
+    console.log('newsAndEvents',newsAndEvents);
+
     return (
         <div className="gallery_sec leadership_detail_section">
             <div className="container">

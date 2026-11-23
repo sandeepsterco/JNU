@@ -83,7 +83,7 @@
 }
 .school_pagination .progressbg { stroke: rgba(255, 255, 255, 0.3); }
 .school_pagination .progress {
-  stroke: #fff;
+  stroke: var(--color-f9);
   stroke-dasharray: 69.12;   /* 2π × 11 */
   stroke-dashoffset: 69.12;
 }
