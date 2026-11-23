@@ -18,9 +18,10 @@ interface SchoolFilterProps {
 
 export default async function SchoolFilter({ currentSlug: selectedSlug }: SchoolFilterProps) {
     const parentSlug = await getSlug(0);
-    const currentSlug = selectedSlug ?? await getSlug();
+    const fallbackSlug = parentSlug === "school" ? await getSlug(1) : await getSlug();
+    const currentSlug = selectedSlug ?? fallbackSlug;
 
-    const { data, error } = await apiFetch(parentSlug.includes('school') ? `schools` : '');
+    const { data, error } = await apiFetch(`schools`);
 
     if (error || !data.status) throw new Error(`Failed to fetch School`)
 
