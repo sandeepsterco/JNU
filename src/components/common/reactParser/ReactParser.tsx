@@ -196,7 +196,7 @@ export default function ReactParser({ html, searchParams, data, params }: Conten
                 if (domNode.attribs.id === "school_social_links") return <SocialIconsGrid  />;
                 if (domNode.attribs.id === "school_social_grids") return <SocialGrids  />;
                 if (domNode.attribs.id === "school_faq_tabs") return <SchoolFaqTabs  />;
-                if (domNode.attribs.id === "school_dropdown") return <SchoolFilter  />;
+                if (domNode.attribs.id === "school_dropdown") return <SchoolFilter currentSlug={searchParams?.school} />;
                 if (domNode.attribs.id === "school_departments") return <SchoolDepartments  />;
                 if (domNode.attribs.id === "department_programs_offered") return <DepartmentProgramsOffered  />;
                 if (domNode.attribs.id === "department_faculties") return <DepartmentFaculty  />;

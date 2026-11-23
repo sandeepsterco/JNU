@@ -508,9 +508,44 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .school_banner_content { position: absolute; top: 14rem; bottom: 10rem; display: flex; flex-direction: column; justify-content: space-between; z-index: 9999; }
 .school_banner .container-fluid { max-width: var(--mw2545); padding-inline: 10rem; }
 .school_filter { display: flex; align-items: center; gap: 2rem; }
+.school_filter { max-width: 43.2rem; }
 .school_filter p { font: var(--font-18); font-weight: 200; color: var(--color-white); border-right: 1px solid var(--color-white); padding-right: 2rem; margin-right:0rem; }
 .school_pagination { display: flex; position: absolute; bottom: 0; }
 .sch_dropdown { position: relative; flex-shrink: 0; z-index: 10; padding-block:1.5rem; }
+.sch_dropdown > .dropdown {
+    background-color: var(--color-white);
+    width: 108%;
+    max-height: 0;
+    margin: 0;
+    transition: max-height .8s;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    overflow: auto;
+    box-shadow: 0 5px 8px #00000014;
+}
+.sch_dropdown .dropdown.show {
+    max-height: 55rem;
+}
+.sch_dropdown .dropdown ul {
+    padding: 2rem;
+}
+.sch_dropdown .dropdown li {
+    list-style: none;
+}
+.sch_dropdown .dropdown li:not(:last-child) {
+    border-bottom: .1rem solid #1e50961a;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+.sch_dropdown .dropdown li a {
+    font: var(--font-18);
+    color: var(--color-black);
+    letter-spacing: .04rem;
+    font-weight: 400;
+    line-height: 2.4rem;
+    display: block;
+}
 .sch_dropdown>.dropdown_toggle { position: relative; min-width: 28.3rem; cursor: pointer; font: var(--font-21); font-weight: 700; border: 0; padding-right: 2.8rem; background-color: transparent; text-align: left; color: var(--color-white); }
 .sch_dropdown>.dropdown_toggle::after { content: ""; position: absolute; top: 50%; right: 0; width: 1.5rem; height: 1.5rem; background: url(/images/nav-arrow-down.svg) no-repeat; background-position: right 0 center; background-size: 1.3rem; transform: translateY(-50%) rotate(0); -webkit-transform: translateY(-50%) rotate(0); -moz-transform: translateY(-50%) rotate(0); -ms-transform: translateY(-50%) rotate(0); -o-transform: translateY(-50%) rotate(0); transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; -o-transition: all 0.5s ease; filter: brightness(0) invert(1); }
 .sch_dropdown>.dropdown_toggle.show::after { transform: translateY(-50%) rotate(180deg); -webkit-transform: translateY(-50%) rotate(180deg); -moz-transform: translateY(-50%) rotate(180deg); -ms-transform: translateY(-50%) rotate(180deg); -o-transform: translateY(-50%) rotate(180deg); }
@@ -519,7 +554,6 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .sch_dropdown>ul>li:not(:last-child) { padding-bottom: 1rem; margin-bottom: 1rem; border-bottom: 0.1rem solid rgb(30 80 150 / 10%); }
 .sch_dropdown>ul>li>a { font: var(--font-18); font-weight: 400; font-family: var(--font-stem); color: var(--color-black); letter-spacing: 0.04rem; }
 .sch_dropdown>ul>li>a:hover { color: var(--color-cf); }
-.school_filter { max-width: 43.2rem; }
 .school_banner_tx { max-width: 55rem; padding-inline: 5rem 0; }
 .school_banner_tx h1 { font: var(--font-72); color: var(--color-white); letter-spacing: -2.16px; font-weight: 600; line-height: 1; }
 .school_banner_tx h1 span { font-weight: 200; }
