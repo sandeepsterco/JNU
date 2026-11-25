@@ -142,6 +142,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .faculty_section{padding-block:11rem;width:100%;position:relative;}
 .faculty_section::before{background-image:url(/images/back_pattern.svg);background-size:contain;position:absolute;top:0;left:0;bottom:0;background-repeat:repeat;content:"";height:41.8rem;width:100%;content:"";z-index:-1;}
 .faculty_filter{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem; padding-bottom: 5.6rem;}
+.school-news-events .faculty_filter{grid-template-columns: repeat(2, 1fr);}
 .faculty_filter .custom_select{position:relative;}
 .faculty_filter .custom_select::after{content:"";position:absolute;right:2rem;top:50%;width:0.8rem;height:0.8rem;border-right:1px solid #333;border-bottom:1px solid #333;transform:translateY(-70%) rotate(45deg);pointer-events:none;}
 .faculty_filter input{width:100%;height:4.7rem;border:1px solid #CF1E6266;font:var(--font-14);font-weight:300;padding-inline:3rem;}
@@ -546,7 +547,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
     line-height: 2.4rem;
     display: block;
 }
-.sch_dropdown>.dropdown_toggle { position: relative; min-width: 28.3rem; cursor: pointer; font: var(--font-21); font-weight: 700; border: 0; padding-right: 2.8rem; background-color: transparent; text-align: left; color: var(--color-white); }
+.sch_dropdown>.dropdown_toggle { position: relative; min-width: 28.3rem; cursor: pointer; font: var(--font-21); font-weight: 500; border: 0; padding-right: 2.8rem; background-color: transparent; text-align: left; color: var(--color-white); }
 .sch_dropdown>.dropdown_toggle::after { content: ""; position: absolute; top: 50%; right: 0; width: 1.5rem; height: 1.5rem; background: url(/images/nav-arrow-down.svg) no-repeat; background-position: right 0 center; background-size: 1.3rem; transform: translateY(-50%) rotate(0); -webkit-transform: translateY(-50%) rotate(0); -moz-transform: translateY(-50%) rotate(0); -ms-transform: translateY(-50%) rotate(0); -o-transform: translateY(-50%) rotate(0); transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; -o-transition: all 0.5s ease; filter: brightness(0) invert(1); }
 .sch_dropdown>.dropdown_toggle.show::after { transform: translateY(-50%) rotate(180deg); -webkit-transform: translateY(-50%) rotate(180deg); -moz-transform: translateY(-50%) rotate(180deg); -ms-transform: translateY(-50%) rotate(180deg); -o-transform: translateY(-50%) rotate(180deg); }
 .sch_dropdown>ul { position: absolute; display: none; margin: 0; right: 0; top: 100%; width: 108%; background-color: var(--color-white); padding: 2rem 2rem; box-shadow: 0px 5px 8px rgb(0 0 0 / 8%); }

@@ -1,6 +1,7 @@
 "use server"
 
 import apiFetch from "@/lib/api"
+import { hasNextPage } from "@/lib/pagination"
 
 interface LoadMoreParams {
     page: number
@@ -26,7 +27,7 @@ export async function loadMoreNews({page, school, department, date}:LoadMorePara
 
     return{
         data:newsAndEvents?.data ?? [],
-        hasMore:Boolean(newsAndEvents?.next_page_url),
+        hasMore:hasNextPage(newsAndEvents),
         currentPage: newsAndEvents?.current_page ?? page,
     }
 } 

@@ -1,7 +1,7 @@
 import apiFetch from "@/lib/api";
 import { getSlug } from "@/lib/getSlug";
 import NotFound from "@/app/not-found";
-import NewsFilter from "./news-events/NewsFilter";
+import NewsFilter from "../../../news-events/NewsFilter";
 import HappeningsWrapper from "./HappeningsWrapper";
 import './happenings.css'
 
