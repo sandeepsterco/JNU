@@ -118,7 +118,9 @@
     .school_title blockquote{padding-block:1.5rem;padding-inline:0;}
 }
 
-
+@media(max-width:1366px){
+.school_slider_logo p{ max-width: 29rem;}
+}
 .about_soet{ padding-block: 10rem 0rem;}
 .soet_listing{ display: grid; grid-template-columns: repeat(3, 31.4rem); justify-content: space-between; list-style: none; padding: 0; row-gap: 5rem; margin-top: 3.2rem; }
 .soet_listing li a{ font: var(--font-18); color: var(--color-cf); padding-left: 2rem; border-left: 0.4rem solid var(--color-f9); display: flex;}
