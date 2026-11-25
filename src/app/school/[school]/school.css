@@ -1133,3 +1133,41 @@
 .sohmct_caption p{ text-align: left; max-width: 100%;}
 .sohmct_caption h5{ margin-bottom: 2rem; color: var(--color-cf);}
 .school-school-of-hotel-management-catering-technology-facilities .agr_fac_overview .sohmct_grid figure { margin-bottom: 0rem; }
+
+
+.school-school-of-hotel-management-catering-technology-facilities .hero_bg_pattern:before { content: ""; z-index: -1; background-image: url(/images/facilities-vector.svg); background-repeat: repeat; background-size: contain; width: 100%; height:83rem; position: absolute; top: 0; bottom: 0; left: 0; }
+.schl_facility_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 2.5rem;}
+.schol_facility_section{ padding-bottom: 10.7rem; position: relative;}
+.schol_facility_section::after{ content: ""; z-index: -1; background-image: url(/images/facilities-vector.svg); background-repeat: repeat; background-size: contain; width: 100%; height:100%; position: absolute; top: 12rem; bottom: 0; left: 0; opacity: 0.15;}
+.schol_facility_section::before{ background-color: var(--color-cf); top: 12rem; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-index: -1;}
+.schl_fclty_bx h5{ margin-block: 7.3rem 2.4rem; font-weight: 500;}
+.schl_fclty_bx p{ font: var(--font-16); max-width: 56.7rem; font-weight: 300;}
+.schl_facility_grid .schl_fclty_bx:last-child h5{ padding-left: 6rem;}
+.schl_facility_grid .schl_fclty_bx:last-child p{ padding-left: 6rem; max-width: 62.7rem;}
+.schl_facility_grid .schl_fclty_bx *{ color: var(--color-white);}
+
+.facility_restaurant{ padding-block: 12rem 15rem;}
+.facility_restaurant_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem;}
+.facility_restaurant_bx{ padding-inline: 12.5rem; display: flex; flex-direction: column; justify-content: space-between;}
+.facility_restaurant_bx h5{ color: var(--color-cf); margin-bottom: 2.4rem;}
+.facility_restaurant_bx p{ font: var(--font-16); max-width: 55.1rem; font-weight: 300;}
+
+@media (max-width:1536px){
+    .sohmct_caption{ padding-inline: 4.2rem 3rem;}
+    .school-school-of-hotel-management-catering-technology-facilities .hero_bg_pattern:before{ height: 45rem;}
+    .sohmct_grid{ padding-top: 8rem;}
+    .schl_fclty_bx h5 { margin-block: 3rem 1.5rem; }
+    .schol_facility_section:before{ top: 8rem;}
+    .schol_facility_section::after{ top: 8rem;}
+    .schol_facility_section{ padding-bottom: 8rem;}
+    .facility_restaurant { padding-block: 7rem 8rem;}
+    .facility_restaurant_bx{padding-inline: 4.2rem 3rem;}
+    .facility_restaurant_bx p{ max-width: 100%;}
+    .facility_restaurant_bx h5{ margin-bottom: 1.5rem;}
+    .facility_restaurant_bx{ gap: 3rem;}
+    .facility_restaurant_grid img{ height: 100%; object-fit: cover;}
+    .schl_facility_grid .schl_fclty_bx:last-child p{ padding-left: 3rem; max-width: 100%;}
+    .schl_facility_grid .schl_fclty_bx:last-child h5{ padding-left: 3rem;}
+
+}
+
