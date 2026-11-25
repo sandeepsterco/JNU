@@ -210,7 +210,7 @@ h1,h2,h3,h4,h5,h6{margin-top:0;margin-bottom:0;}
 h2{font:var(--font-42);color: var(--color-black);}
 h3{font:var(--font-30);color: var(--color-black);}
 h4{font:var(--font-24);color: var(--color-black);}
-h5{font:var(--font-21);color: var(--color-black);}
+h5{font:var(--font-21);color: var(--color-black); font-weight: var(--fw-medium);}
 h6{font:var(--font-18);color: var(--color-black);}
 blockquote{margin:0;}
 

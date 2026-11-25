@@ -57,6 +57,10 @@
     .alumni_msg_desc{ min-height: 6.5rem;}
 }
 
+@media(max-width:1200px){
+    .alumni_slider_section .swiper-slide .alumni_img img { max-height: 25rem; }
+}
+
 @media(max-width:991px){
     .placement_section{padding-block:8rem 0;}
     .placement_wrapper{padding-block:5.5rem 0;}
