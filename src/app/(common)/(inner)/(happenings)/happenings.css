@@ -34,7 +34,7 @@
 .news-next { border-radius: 0.4rem; opacity: 1; }
 .news_listing { padding-top: 0.8rem; }
 .news_listing .gallery_overlay { min-width: 40.5rem; max-width: 41.1rem; }
-.news_listing span { background: none; border: none; margin-bottom: 1.5rem; }
+.news_listing span { background: none; border: none; margin-bottom: 1.5rem; padding-left: 0;}
 .overlay_shadow_none::after { background: none; }
 .extra_heading_box::after { opacity: 0.13; }
 .top_header { position: absolute; left: 3.4rem; top: 5.3rem; bottom: 0; }
@@ -42,6 +42,7 @@
 .top_header span { font-weight: 600; font: var(--font-22); letter-spacing: -0.046rem; color: var(--color-23); padding-top: 1.4rem; }
 .extra_heading_box h4 { color: var(--color-black); }
 .extra_heading_box span { color: var(--color-black); }
+
 /* News Event Ends */
 /* news Event Detail start */
 .news_event_detail_sec { position: relative; padding-block: 9rem 11rem; }

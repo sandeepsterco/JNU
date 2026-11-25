@@ -142,6 +142,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .faculty_section{padding-block:11rem;width:100%;position:relative;}
 .faculty_section::before{background-image:url(/images/back_pattern.svg);background-size:contain;position:absolute;top:0;left:0;bottom:0;background-repeat:repeat;content:"";height:41.8rem;width:100%;content:"";z-index:-1;}
 .faculty_filter{display:grid;grid-template-columns:repeat(3,1fr);gap:2.6rem; padding-bottom: 5.6rem;}
+.school-news-events .faculty_filter{grid-template-columns: repeat(2, 1fr);}
 .faculty_filter .custom_select{position:relative;}
 .faculty_filter .custom_select::after{content:"";position:absolute;right:2rem;top:50%;width:0.8rem;height:0.8rem;border-right:1px solid #333;border-bottom:1px solid #333;transform:translateY(-70%) rotate(45deg);pointer-events:none;}
 .faculty_filter input{width:100%;height:4.7rem;border:1px solid #CF1E6266;font:var(--font-14);font-weight:300;padding-inline:3rem;}
@@ -511,7 +512,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .school_filter { max-width: 43.2rem; }
 .school_filter p { font: var(--font-18); font-weight: 200; color: var(--color-white); border-right: 1px solid var(--color-white); padding-right: 2rem; margin-right:0rem; }
 .school_pagination { display: flex; position: absolute; bottom: 0; }
-.sch_dropdown { position: relative; flex-shrink: 0; z-index: 10; padding-block:1.5rem; }
+.sch_dropdown { position: relative; flex-shrink: 0; z-index: 10; padding-block:0; }
 .sch_dropdown > .dropdown {
     background-color: var(--color-white);
     width: 108%;
@@ -546,7 +547,7 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
     line-height: 2.4rem;
     display: block;
 }
-.sch_dropdown>.dropdown_toggle { position: relative; min-width: 28.3rem; cursor: pointer; font: var(--font-21); font-weight: 700; border: 0; padding-right: 2.8rem; background-color: transparent; text-align: left; color: var(--color-white); }
+.sch_dropdown>.dropdown_toggle { position: relative; min-width: 28.3rem; cursor: pointer; font: var(--font-21); font-weight: 500; border: 0; padding-right: 2.8rem; background-color: transparent; text-align: left; color: var(--color-white); }
 .sch_dropdown>.dropdown_toggle::after { content: ""; position: absolute; top: 50%; right: 0; width: 1.5rem; height: 1.5rem; background: url(/images/nav-arrow-down.svg) no-repeat; background-position: right 0 center; background-size: 1.3rem; transform: translateY(-50%) rotate(0); -webkit-transform: translateY(-50%) rotate(0); -moz-transform: translateY(-50%) rotate(0); -ms-transform: translateY(-50%) rotate(0); -o-transform: translateY(-50%) rotate(0); transition: all 0.5s ease; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; -o-transition: all 0.5s ease; filter: brightness(0) invert(1); }
 .sch_dropdown>.dropdown_toggle.show::after { transform: translateY(-50%) rotate(180deg); -webkit-transform: translateY(-50%) rotate(180deg); -moz-transform: translateY(-50%) rotate(180deg); -ms-transform: translateY(-50%) rotate(180deg); -o-transform: translateY(-50%) rotate(180deg); }
 .sch_dropdown>ul { position: absolute; display: none; margin: 0; right: 0; top: 100%; width: 108%; background-color: var(--color-white); padding: 2rem 2rem; box-shadow: 0px 5px 8px rgb(0 0 0 / 8%); }
@@ -820,7 +821,9 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .iqac_about_wrapper h6 { color: var(--color-23); font-weight: 300; }
 .iqac_about_wrapper p { font-weight: 300; }
 .iqac_about_wrapper .font24 { color: var(--color-cf); margin-bottom: 3rem; }
-
+.table-responsive{width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;}
 @media (max-width:1536px){
    .iqac_about_wrapper { padding-block: 6.5rem; }
    .iqac_top_space { margin-top: 4rem; }
@@ -3315,9 +3318,13 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 .spos_facili_btm p { font: var(--font-16); font-weight: var(--fw-300); }
 .sops_facili_btmsec { padding-bottom: 12rem; }
 .sops_facili_btmsec .reach_grid { margin-bottom: 15rem; }
-.sposfacil_pharmgrid .spo_facgridrow { display: grid; grid-template-columns: 59% auto; align-items: center; gap: 2.4rem; }
-.sposfacil_pharmgrid .spo_facgridrow .spofac_phcont { max-width: 56.3rem; padding-left: 10rem; }
-.spo_facgridrow .spofac_phcont h4 { color: var(--color-cf); margin-bottom: 2.4rem; font-weight: 500; }
+.sposfacil_pharmgrid .spo_facgridrow { display: grid; grid-template-columns: 57.64% auto; align-items: center; gap: 2.4rem; }
+.sposfacil_pharmgrid .spo_facgridrow .spofac_phcont { max-width: 57.5rem; padding-left: 10rem; }
+.sposfacil_pharmgrid .spo_facgridrow.pre_clinic_lab .spofac_phcont{    max-width: 85rem;
+    padding-inline: 12.5rem 16.8rem;
+    padding-inline-start: 12.5rem;
+    padding-inline-end: 16.8rem;}
+.spo_facgridrow .spofac_phcont h4 {font: var(--font-21); color: var(--color-cf); margin-bottom: 2.4rem; font-weight: 500; }
 .spo_facgridrow .spofac_phcont p { font: var(--font-16); font-weight: var(--fw-300); }
 
 /* SOPS Facilities Page CSS End */
@@ -3360,16 +3367,45 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 
 
 /* About Seedling School of Nursing Page CSS Start */
-.sosn_aboutsec { padding-block: 17.1rem 0; }
-.sosn_aboutsec .jnu_title_header { margin-bottom: 12rem; padding-inline: 2rem; }
-.sosn_aboutimggrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
-.sosn_vismis .sbm_misgrid .sbm_vision { padding: 5.9rem 16rem 15.1rem 12.5rem; max-height: 45.8rem; }
-.sosn_vismis .sbm_misgrid .sbm_mission { padding: 5.9rem 0 0 10.2rem; max-width: 64.4rem; }
-.sosn_vismis .sbm_misgrid .sbm_mission li { font: var(--font-16); font-weight: var(--fw-300);margin-bottom: 3rem; }
-.sosn_vismis .sbm_misgrid .sbm_vision:before { content: ""; z-index: 0; opacity: .4; background-image: url(/images/sson_vis_mis_pattern.webp); background-repeat: no-repeat; background-size: cover; width: 22.5rem; height: 100%; position: absolute; top: 0; bottom: 0; right: 0; }
-.sson_hightmain.health_hight{padding-block: 0 8rem;}
-.sson_hightmain.health_hight .health_list{margin-top: 9rem ;padding-top: 12rem;    border-top: 1px solid #cecece;}
-.sson_hightmain .health_list h4{margin-bottom: 2.4rem;}
-.sson_hightmain  .health_list ul li{padding: 7.5rem 4.8rem;}
-.sson_achiment_grid{display: grid;grid-template-columns: 35.3rem auto;gap: 1.9rem;}
+.sson_aboutsec { padding-block: 17.1rem 0; }
+.sson_aboutsec .jnu_title_header { margin-bottom: 12rem; padding-inline: 2rem; }
+.sson_aboutsec  .jnu_title_header p{font: var(--font-16);font-weight: var(--fw-300);}
+.sson_aboutimggrid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; }
+.sson_vismis .sbm_misgrid .sbm_vision { padding: 5.9rem 16rem 15.1rem 12.5rem; max-height: 45.8rem; }
+.sson_vismis .sbm_misgrid .sbm_mission { padding: 5.9rem 0 0 10.2rem; max-width: 64.4rem; }
+.sson_vismis .sbm_misgrid .sbm_mission li { font: var(--font-16); font-weight: var(--fw-300); margin-bottom: 3rem; }
+.sson_vismis .sbm_misgrid .sbm_vision:before { content: ""; z-index: 0; opacity: .4; background-image: url(/images/sson_vis_mis_pattern.webp); background-repeat: no-repeat; background-size: cover; width: 22.5rem; height: 100%; position: absolute; top: 0; bottom: 0; right: 0; }
+.sson_hightmain.health_hight { padding-block: 0 8rem; }
+.sson_hightmain.health_hight .health_list { margin-top: 9rem ; padding-top: 12rem; border-top: 1px solid #cecece; }
+.sson_hightmain .health_list h4 { margin-bottom: 2.4rem; }
+.sson_hightmain  .health_list ul li { padding: 7.5rem 4.8rem; }
+.sson_achiment_grid { display: grid; grid-template-columns: 35.3rem auto; gap: 1.9rem; }
+.sson_achiment_grid .sson_achi_img { display: grid; grid-template-columns:19.7rem 30rem 30rem; gap: 4rem; align-items: end; }
+.sson_achiment { padding-block: 12rem; }
+.sson_achiment .jnu_title_header .font21 { margin-bottom: 7rem; }
+.sson_achiment_grid .sson_achibx { background-color: var(--color-white); padding: 8rem 7.1rem 3.8rem 7.1rem; text-align: center; position: relative; }
+.sson_achibx >figure { padding-inline: 0.7rem; }
+.sson_achiment_grid .sson_achiinfo { margin-top: 4rem; }
+.sson_achiment_grid .sson_achiinfo h5 { color: var(--color-cf); margin-bottom: 2rem; font-weight: 500; }
+.sson_achiment_grid .sson_achiinfo p { font: var(--font-16); font-weight: var(--fw-300); }
+.sson_achiment_grid .sson_achibx.sson_achitwo { padding: 8rem 12.5rem 4.8rem 10.2rem; }
+.sson_achibx::before { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 40%, var(--color-cf) 40%, var(--color-cf) 100%); width: 30%; max-width: 30%; height: 2px; margin: 0 auto; position: absolute; bottom: 0; left: 0; right: 0; }
+.sbmhead_sec.hero_bg_pattern:before{    height: 82rem;}
+.sson_facili_ovr {padding-block: 12rem 11.5rem;}
+.sson_facili_ovr .jnu_title_header{margin-bottom: 10rem;}
+.sson_facili_ovr .jnu_title_header blockquote{padding-inline: 5rem;}
+.sson_fac_ovbtm{padding-block: 6.7rem 0;}
+.sson_fac_ovbtm p { font: var(--font-16); font-weight: var(--fw-300); max-width: 89rem; margin-inline: auto; text-align: center; }
+.sson_matchil_lab { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.4rem; margin-top: 5.7rem; }
+.sson_matchil_item .sson_matchil_caption { padding-top: 3rem; }
+.sson_matchil_item h6 { color: var(--color-cf); margin-bottom: 4.3rem; font: var(--font-21); font-weight: var(--fw-500); }
+.sson_comm_lab { padding-bottom: 11.5rem; }
+.sson_matchil_item p { font: var(--font-16); font-weight: var(--fw-300); }
+.sson_comm_lbgrid { display: grid; grid-template-columns:auto 57.65%; gap: 9.4rem; align-items: center; position: sticky; top: 10rem; background-color: var(--color-f5); }
+.sson_comm_cont h5 { color: var(--color-cf); margin-bottom:3.2rem; font: var(--font-21); font-weight: var(--fw-500); }
+.sson_comm_cont p { font: var(--font-16); font-weight: var(--fw-300); }
+.sson_facil_library .jnu_title_header { padding-bottom: 7rem; }
+.sson_facil_library .jnu_title_header blockquote { color:var(--color-white);  }
+
+
 /* About Seedling School of Nursing Page CSS End */

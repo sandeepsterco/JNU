@@ -83,7 +83,7 @@
 }
 .school_pagination .progressbg { stroke: rgba(255, 255, 255, 0.3); }
 .school_pagination .progress {
-  stroke: #fff;
+  stroke: var(--color-f9);
   stroke-dasharray: 69.12;   /* 2π × 11 */
   stroke-dashoffset: 69.12;
 }
@@ -760,6 +760,61 @@
 }
 
 
+/* SOl Facility Aria Start */
+
+.solfacil_sec{position:relative;padding-block:12rem 13.8rem;}
+.solfacil_sec:before{content:"";z-index:-1;background-image:url(/images/back_pattern.svg);background-repeat:repeat;background-size:contain;width:100%;height:100%;max-height:55.9rem;position:absolute;top:0;bottom:0;left:0;}
+.solfacil_sec .head_title{text-align:center;margin-bottom:11.3rem;padding-inline:2rem;}
+.solfacil_sec .head_title>h5{font-weight:300;color: var(--color-black); margin-bottom:2.4rem;}
+.solfacil_sec .head_title>p{font:var(--font-16);font-weight:300;line-height:1.6;color:var(--color-black);}
+.solfacil_grid{display:grid;grid-template-columns:850fr 600fr;gap:15rem;max-width:calc(100% - 12rem);}
+.solfacil_caption h5{color:var(--color-cf);font-weight:500;margin-bottom:2.4rem;}
+.solfacil_caption p{font:var(--font-16);font-weight:300;padding-right:12.6rem;}
+.solfacil_caption figure{margin-top: 9.5rem;}
+.mootcour_wrapper{margin-top:13.9rem;}
+.mootcour_wrapper .head_title{text-align:center;margin-bottom:6.4rem;padding-inline:12.5rem;}
+.mootcour_wrapper .head_title>h5{color: var(--color-cf);font-weight: 500; margin-bottom:2.4rem;}
+.mootcour_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;}
+
+@media(max-width:1536px){
+    .solfacil_sec{padding-block:6rem 7.8rem;}
+    .solfacil_sec .head_title{margin-bottom:6.3rem;padding-inline:0;}
+    .solfacil_sec .head_title > h5{margin-bottom:1.4rem;}
+    .solfacil_grid{gap:5rem;max-width:100%;}
+    .solfacil_caption p{padding-right:0;}
+    .solfacil_caption figure{margin-top:1.5rem;}
+    .solfacil_caption h5{margin-bottom:1.4rem;}
+    .mootcour_wrapper{margin-top:7.9rem;}
+    .mootcour_wrapper .head_title{margin-bottom:3.4rem;padding-inline:0;}
+    .mootcour_wrapper .head_title > h5{margin-bottom:1.4rem;}
+    .mootcour_grid{gap:1.5rem;}
+}
+
+
+.solrch_sec{padding-block:12.1rem 15rem;position:relative;}
+.solrch_sec:before{content:"";z-index:-1;background:#cf1e62 url(/images/fashillu-texture.svg) 0 0 / contain;width:100%;height:100%;max-height:70rem;position:absolute;top:0;bottom:0;left:0;}
+.solrch_sec .head_title{text-align:center;margin-bottom:7.3rem;}
+.solrch_sec .head_title > h5{color:var(--color-white);margin-bottom:2.4rem;font-weight:500;}
+.solrch_sec .head_title > p{font:var(--font-16);color:var(--color-white);padding-inline:5rem;font-weight:300;line-height:1.7;}
+.solrch_grid{margin-top:12rem;display:grid;grid-template-columns:850fr 600fr;gap:0 2.5rem;}
+.solrch_caption{flex-direction:column;justify-content:center;align-items:start;display:flex;padding-inline:10rem 2.5rem;}
+.solrch_caption:nth-child(odd){padding-inline:0 22.5rem;}
+.solrch_caption > h5{color:var(--color-cf);margin-bottom:2.4rem;font-weight:500;}
+.solrch_caption > p{font:var(--font-16);font-weight:300;}
+
+
+@media(max-width:1536px){
+    .solrch_sec{padding-block:6.1rem 8rem;}
+    .solrch_sec:before{max-height:42rem;}
+    .solrch_sec .head_title > h5{margin-bottom:1.4rem;}
+    .solrch_sec .head_title > p{padding-inline:0;}
+    .solrch_sec .head_title{margin-bottom:4.3rem;}
+    .solrch_grid{gap:0 1.5rem;margin-top:6rem;}
+    .solrch_caption{padding-inline:1.5rem 0;}
+    .solrch_caption:nth-child(odd){padding-inline:0 3.5rem;}
+    .solrch_caption > h5{margin-bottom:1.4rem;}
+}
+
 .agr_sch_facilities { padding-block: 12rem 7.5rem;}
 .agr_sch_facilities .jnu_title_header{ padding-inline: 15rem;}
 .agr_fac_overview{ text-align: center;}
@@ -1078,3 +1133,60 @@
 .sohmct_caption p{ text-align: left; max-width: 100%;}
 .sohmct_caption h5{ margin-bottom: 2rem; color: var(--color-cf);}
 .school-school-of-hotel-management-catering-technology-facilities .agr_fac_overview .sohmct_grid figure { margin-bottom: 0rem; }
+
+
+.school-school-of-hotel-management-catering-technology-facilities .hero_bg_pattern:before { content: ""; z-index: -1; background-image: url(/images/facilities-vector.svg); background-repeat: repeat; background-size: contain; width: 100%; height:83rem; position: absolute; top: 0; bottom: 0; left: 0; }
+.schl_facility_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; margin-top: 2.5rem;}
+.schol_facility_section{ padding-bottom: 10.7rem; position: relative;}
+.schol_facility_section::after{ content: ""; z-index: -1; background-image: url(/images/facilities-vector.svg); background-repeat: repeat; background-size: contain; width: 100%; height:100%; position: absolute; top: 12rem; bottom: 0; left: 0; opacity: 0.15;}
+.schol_facility_section::before{ background-color: var(--color-cf); top: 12rem; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-index: -1;}
+.schl_fclty_bx h5{ margin-block: 7.3rem 2.4rem; font-weight: 500;}
+.schl_fclty_bx p{ font: var(--font-16); max-width: 56.7rem; font-weight: 300;}
+.schl_facility_grid .schl_fclty_bx:last-child h5{ padding-left: 6rem;}
+.schl_facility_grid .schl_fclty_bx:last-child p{ padding-left: 6rem; max-width: 62.7rem;}
+.schl_facility_grid .schl_fclty_bx *{ color: var(--color-white);}
+
+.facility_restaurant{ padding-block: 12rem 15rem;}
+.facility_restaurant_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem;}
+.facility_restaurant_bx{ padding-inline: 12.5rem; display: flex; flex-direction: column; justify-content: space-between;}
+.facility_restaurant_bx h5{ color: var(--color-cf); margin-bottom: 2.4rem;}
+.facility_restaurant_bx p{ font: var(--font-16); max-width: 55.1rem; font-weight: 300;}
+
+@media (max-width:1536px){
+    .sohmct_caption{ padding-inline: 4.2rem 3rem;}
+    .school-school-of-hotel-management-catering-technology-facilities .hero_bg_pattern:before{ height: 45rem;}
+    .sohmct_grid{ padding-top: 8rem;}
+    .schl_fclty_bx h5 { margin-block: 3rem 1.5rem; }
+    .schol_facility_section:before{ top: 8rem;}
+    .schol_facility_section::after{ top: 8rem;}
+    .schol_facility_section{ padding-bottom: 8rem;}
+    .facility_restaurant { padding-block: 7rem 8rem;}
+    .facility_restaurant_bx{padding-inline: 4.2rem 3rem;}
+    .facility_restaurant_bx p{ max-width: 100%;}
+    .facility_restaurant_bx h5{ margin-bottom: 1.5rem;}
+    .facility_restaurant_bx{ gap: 3rem;}
+    .facility_restaurant_grid img{ height: 100%; object-fit: cover;}
+    .schl_facility_grid .schl_fclty_bx:last-child p{ padding-left: 3rem; max-width: 100%;}
+    .schl_facility_grid .schl_fclty_bx:last-child h5{ padding-left: 3rem;}
+    .head_title p br{ display: none;}
+}
+
+.imsrc_grid{ display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2.5rem;}
+.imsrc_right{ padding-inline: 12.5rem 21.9rem;}
+.imsrc_right h4{ margin-bottom: 2.4rem; font-weight: 300; line-height: 1.6;}
+.imsrc_right p{ font: var(--font-16); font-weight: 300;}
+.imsrc_right blockquote{ font: var(--font-42); color: var(--color-cf); border-top: 1px solid #c4c4c4; padding-top:4rem; margin-top: 4rem; font-weight: 300;}
+.imsrc_facilities_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; padding-block: 2.5rem 7.7rem;}
+.imsrc_facilities_img{ padding-bottom: 12rem;}
+.imsrc_facilities{ padding-block:12rem 0; position: relative;}
+.imsrc_facilities:before { content: ""; z-index: -1; background-image: url(/images/back_pattern.svg); background-repeat: repeat; background-size: cover; width: 100%; height: 60%; position: absolute; top: 0; bottom: 0; left: 0; right:0; }
+
+.imsrc_fct_grid{ display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 5rem;}
+.imcrc_cnt{ max-width: 47.5rem;}
+.imsrc_facilities_img p{ font: var(--font-16);}
+.imsrc_fct_grid ul{ display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 10rem; row-gap: 5.6rem; padding: 0;}
+.imsrc_fct_grid ul h3{ font: var(--font-56); color: var(--color-cf); margin-bottom: 2rem;}
+
+.imsrc_fct_grid ul li{ position: relative; padding-bottom: 4.3rem;}
+.imsrc_fct_grid ul li:before { content: ""; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 80%, var(--color-cf) 80%, var(--color-cf) 100%); width: 100%; height: 2px; position: absolute; bottom: 0; left: 0; }
+.imsrc_fct_grid ul li sup{ font: var(--font-36); top: -2.5rem;}

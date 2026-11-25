@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function FooterData({headerRes, quickLinksData, infoData}:{headerRes:any, quickLinksData:any, infoData:any}){
     return(
-        <footer data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <footer>
             <div className="container">
                 <div className="footer_grid">
                     <div className="footer_left">
