@@ -1168,6 +1168,25 @@
     .facility_restaurant_grid img{ height: 100%; object-fit: cover;}
     .schl_facility_grid .schl_fclty_bx:last-child p{ padding-left: 3rem; max-width: 100%;}
     .schl_facility_grid .schl_fclty_bx:last-child h5{ padding-left: 3rem;}
-
+    .head_title p br{ display: none;}
 }
 
+.imsrc_grid{ display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2.5rem;}
+.imsrc_right{ padding-inline: 12.5rem 21.9rem;}
+.imsrc_right h4{ margin-bottom: 2.4rem; font-weight: 300; line-height: 1.6;}
+.imsrc_right p{ font: var(--font-16); font-weight: 300;}
+.imsrc_right blockquote{ font: var(--font-42); color: var(--color-cf); border-top: 1px solid #c4c4c4; padding-top:4rem; margin-top: 4rem; font-weight: 300;}
+.imsrc_facilities_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; padding-block: 2.5rem 7.7rem;}
+.imsrc_facilities_img{ padding-bottom: 12rem;}
+.imsrc_facilities{ padding-block:12rem 0; position: relative;}
+.imsrc_facilities:before { content: ""; z-index: -1; background-image: url(/images/back_pattern.svg); background-repeat: repeat; background-size: cover; width: 100%; height: 60%; position: absolute; top: 0; bottom: 0; left: 0; right:0; }
+
+.imsrc_fct_grid{ display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 5rem;}
+.imcrc_cnt{ max-width: 47.5rem;}
+.imsrc_facilities_img p{ font: var(--font-16);}
+.imsrc_fct_grid ul{ display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 10rem; row-gap: 5.6rem; padding: 0;}
+.imsrc_fct_grid ul h3{ font: var(--font-56); color: var(--color-cf); margin-bottom: 2rem;}
+
+.imsrc_fct_grid ul li{ position: relative; padding-bottom: 4.3rem;}
+.imsrc_fct_grid ul li:before { content: ""; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 80%, var(--color-cf) 80%, var(--color-cf) 100%); width: 100%; height: 2px; position: absolute; bottom: 0; left: 0; }
+.imsrc_fct_grid ul li sup{ font: var(--font-36); top: -2.5rem;}
