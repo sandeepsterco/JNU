@@ -134,7 +134,7 @@ body:has(.side_hamburger.is-open) .site_nav{transform:translateY(var(--hamb-widt
 
 
 @media(max-width:1536px) {
-    .main_header{padding: 0;padding-top: 1rem;}
+    .main_header{padding: 0;padding-top: 2rem;}
     .main_header:before{background:linear-gradient(to right,var(--color-fa) 0%,var(--color-fa) 37%,var(--color-06) 26.4%,var(--color-06) 100%);height:3px;}
     .main_header > .container-fluid{padding-inline:4.5rem;}
     .site_navbar{grid-template-columns:184fr 121fr;gap:1.6rem;max-width:32.1rem;}
