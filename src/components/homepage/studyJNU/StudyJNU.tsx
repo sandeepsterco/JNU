@@ -80,6 +80,7 @@ export default function StudyJNU({data, modular}:ProgramPropsInterface) {
                     
                 </div>
 
+<div className="container-lg">
                 <div className="studyat_bottom" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div className="studyat_left">
                         {data?.description && (
@@ -116,6 +117,7 @@ export default function StudyJNU({data, modular}:ProgramPropsInterface) {
                             <Link className="apply_now" href={APPLY_NOW ?? '/apply-now'} target='_blank'>Apply Now</Link>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </section>
