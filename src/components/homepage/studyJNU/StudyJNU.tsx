@@ -3,6 +3,7 @@ import { APPLY_NOW, BASE_URL } from '@/config/config';
 import Search from './Search';
 import { Suspense } from 'react';
 import './studyjnu.css'
+import Image from 'next/image';
 
 interface ModularProgramInterface{
     name:string;
@@ -41,17 +42,31 @@ export default function StudyJNU({data, modular}:ProgramPropsInterface) {
                     <Search />
 
                     {modular && modular?.length > 0 && (
-                        <div className="container">
+                        <div className="container-lg">
                             <div className="prgrms_grid" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                 {modular.map((item, idx)=>(
                                     <div key={idx} className="prgrms_Bx">
-                                        {item?.name && (
-                                            <h4 className="font24">{item.name}</h4>
+                                        {item?.image && (
+                                            <figure>
+                                                <Image
+                                                    src={item.image}
+                                                    width={1067}
+                                                    height={1220}
+                                                    loading='lazy'
+                                                    alt={item.name}
+                                                />
+                                            </figure>
                                         )}
-                                        {item?.description && (
+                                        <div className='program_title'>
+                                            {item?.name && (
+                                                <h4 className="font24">{item.name}</h4>
+                                            )}
+                                            <span className='icon'><img src="/images/icons/nav-arrow-next.svg" className="img-fluid" alt="arrow" /></span>
+                                        </div>
+                                        {/* {item?.description && (
                                             <p>{item.description}</p>
-                                        )}
-                                        <span><img src="/images/icons/nav-arrow-next.svg" className="img-fluid" alt="arrow" /></span>
+                                        )} */}
+                                        
                                         {item?.id && (
                                             <Link href={`${BASE_URL}programs?degree=${item.id}`} className="overlap_btn"></Link>
                                         )}
@@ -65,6 +80,7 @@ export default function StudyJNU({data, modular}:ProgramPropsInterface) {
                     
                 </div>
 
+<div className="container-lg">
                 <div className="studyat_bottom" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                     <div className="studyat_left">
                         {data?.description && (
@@ -101,6 +117,7 @@ export default function StudyJNU({data, modular}:ProgramPropsInterface) {
                             <Link className="apply_now" href={APPLY_NOW ?? '/apply-now'} target='_blank'>Apply Now</Link>
                         </div>
                     </div>
+                </div>
                 </div>
             </div>
         </section>
