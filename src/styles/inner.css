@@ -3076,6 +3076,8 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 
 /* allied health science about us page css ends here */
 
+
+
 /* allied health science facility page css starts here */
 
 .faci_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7rem 2.7rem;}
@@ -3109,7 +3111,17 @@ video{display:block;width:100%;height:100%;object-fit:cover;}
 
 /* allied health science facility page css ends here */
 
+@media (max-width:1536px){
+    .health_about { padding-block: 6rem 0; }
+    .health_cont { margin: 0 0rem 4rem; }
+    .health_img{ margin-bottom: 3rem;}
+    .health_cont1{ padding-bottom: 4rem;}
+    .health_facility{ margin-top: 8rem; padding-block: 0 3rem;}
+    .fac_reach_cont { margin-right: 3rem; }
+    .fac_reach_para:not(:last-child) { margin-bottom: 2.5rem; padding-bottom: 2.5rem; }
+    .fac_reach_para h4{ margin-bottom: 1rem;}
 
+}
 
 
 /* SCSS About page css start*/

@@ -158,6 +158,17 @@ body:has(.side_hamburger.is-open) .site_nav{transform:translateY(var(--hamb-widt
     .school_header .hambur_btmsec:before{height:.3rem;}
     .school-page main { padding-top: 9.7rem; }
 }
+
+@media (max-width:1366px){
+    .site_navbar{max-width: 29rem;}
+    .sch_dropdown>.dropdown_toggle{ font: var(--font-18); min-width: 26.3rem;}
+    .site_nav>li>a{ font: var(--font-21);}
+    .site_nav { gap: 2.5rem; }
+    .nav_right button{padding-inline: 1.5rem;}
+
+}
+
+
 @media(max-width:991px) {
     .main_header{background-color: transparent;}
     .main_header > .container-fluid{padding-inline: 3.2rem;}

@@ -118,14 +118,16 @@
     .school_title blockquote{padding-block:1.5rem;padding-inline:0;}
 }
 
-
+@media(max-width:1366px){
+.school_slider_logo p{ max-width: 29rem;}
+}
 .about_soet{ padding-block: 10rem 0rem;}
 .soet_listing{ display: grid; grid-template-columns: repeat(3, 31.4rem); justify-content: space-between; list-style: none; padding: 0; row-gap: 5rem; margin-top: 3.2rem; }
 .soet_listing li a{ font: var(--font-18); color: var(--color-cf); padding-left: 2rem; border-left: 0.4rem solid var(--color-f9); display: flex;}
 .soet_listing li a:hover{ color: var(--color-cf); cursor: auto;}
 .soet_link_list{ display: flex; margin-top: 8.1rem; padding: 0 0 2rem; align-items: center; position: relative;justify-content: space-between;}
 .soet_link{ display: flex; justify-content: space-between; list-style: none; gap: 11.3rem; padding: 0;}
-.soet_link li a{ font: var(--font-18); font-weight: 300; position: relative;}
+.soet_link li a{ font: var(--font-18); font-weight: var(--fw-300); position: relative;}
 .soet_link li a:hover{ color: var(--color-cf);}
 .soet_link li a::before { content: ''; position: absolute; top: 0.6rem; right: -2.5rem; width: 1.2rem; height: 1rem; background: url(/images/icons/nav-arrow-next.svg) no-repeat center center; background-size: contain; pointer-events: none; }
 .soet_link li a::after{ background-color: var(--color-d5); content: ''; position: absolute; top:0rem; bottom: 0; right: -7.5rem; width:0.1rem;}
@@ -149,8 +151,8 @@
 
 .school_studyjnu_section{ padding-top: 15rem;}
 .school_studyat_jnu{ background-color: var(--color-white); padding-block: 8.5rem;}
-.our_department_list{ display: grid; grid-template-columns:36rem 36rem 36rem 25rem; padding: 0; list-style: none; row-gap: 4.5rem; padding-block: 7.6rem 0; column-gap: 5.6rem;}
-.our_department_list li{ font: var(--font-24); font-weight: 300; border-right: 1px solid rgba(112, 112, 112, 0.25); display: block; padding-bottom: 1.5rem; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding-right: 2rem;}
+.our_department_list{ display: grid; grid-template-columns:36rem 36rem 36rem 32rem; padding: 0; list-style: none; row-gap: 4.5rem; padding-block: 7.6rem 0; column-gap: 5.6rem;}
+.our_department_list li{ font: var(--font-24); font-weight: var(--fw-300); border-right: 1px solid rgba(112, 112, 112, 0.25); display: block; padding-bottom: 1.5rem; position: relative; display: flex; flex-direction: column; justify-content: space-between; padding-right: 2rem;}
 .our_department_list li:nth-child(4n+4){ border:none;}
 .our_department_list li:hover{ color: var(--color-cf);}
 .our_department_list li span{ display: block; margin-bottom: 1.5rem;}
@@ -187,6 +189,7 @@
     .download_brochure img{max-width:1rem;}
     .school_studyat_right ul li a{padding-inline:0.8rem;gap:0.8rem;}
     .school_studyat_right ul li img{max-width:100%;height:1rem;}
+    .our_department_list li{padding-right: 3rem;}
 }
 
 
@@ -239,7 +242,7 @@
 /* .testimonial_para p {
     font: var(--font-21);
     color: var(--color-black);
-    font-weight: 300;
+    font-weight: var(--fw-300);
     line-height: 1.5;
 } */
 .success_speak_bx span img{border-radius:100%;width:5.4rem;height:5.4rem;min-width: 5.4rem; object-fit:cover;object-position:top center;background-color: #f4eee2}
@@ -282,7 +285,7 @@
 .school_facity_dep_cnt h5{ color: var(--color-cf); margin-bottom: 4rem; padding-right: 10rem;}
 .school_facity_dep_cnt  p{ font: var(--font-16);}
 .facility_des{ padding-block: 12rem; text-align: center;}
-.facility_des blockquote{ font: var(--font-21); font-weight: 300; max-width: 122.5rem; margin: 0 auto; line-height: 1.5;}
+.facility_des blockquote{ font: var(--font-21); font-weight: var(--fw-300); max-width: 122.5rem; margin: 0 auto; line-height: 1.5;}
 .facility_des_grid{ padding-top: 5rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.6rem; row-gap: 6rem;}
 .facility_des_bx figure{ margin-bottom: 2.5rem;}
 .facility_des_bx p{ font: var(--font-16); padding-inline: 2rem;}
@@ -356,7 +359,7 @@
 .sasabt_heighlight .jnu_title_header{padding-block: 10rem 5rem;border-top: 1px solid #CECECE;}
 .sasabt_heighlight .jnu_title_header .font21{margin-bottom: 0;}
 .sasabt_high_grid ul { grid-template-columns: repeat(4, 1fr); gap: 2.5rem; padding: 0; display: grid; }
-.sasabt_high_grid ul>li { background: var(--color-white); font: var(--font-16); padding: 5.4rem 1.8rem 6.9rem; font-weight: 300; line-height: 1.6; list-style: none; text-align: center; position: relative; }
+.sasabt_high_grid ul>li { background: var(--color-white); font: var(--font-16); padding: 5.4rem 1.8rem 6.9rem; font-weight: var(--fw-300); line-height: 1.6; list-style: none; text-align: center; position: relative; }
 .sasabt_high_grid ul>li::before{ content: ""; z-index: 9; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 60%, var(--color-fa) 60%, var(--color-fa) 100%); width: 100%; max-width: 10rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0rem; left: 0; right: 0rem;}
 
 
@@ -374,7 +377,7 @@
 .sbmabt_grid{display:grid;grid-template-columns:repeat(2,1fr);gap:2.5rem;}
 .sbmabt_grid>figure:nth-child(3){max-width:60rem;margin-left:auto;}
 .sbmabt_caption{padding-top:3.9rem;padding-inline:5.7rem 12.5rem;}
-.sbmabt_caption>p{font:var(--font-16);font-weight: 300; color:var(--color-black);}
+.sbmabt_caption>p{font:var(--font-16);font-weight: var(--fw-300); color:var(--color-black);}
 
 @media(max-width:1536px){
     .sbmabt_sec{padding-block:8rem 7rem;}
@@ -823,36 +826,36 @@
 .agr_fac_advanced{ padding-block: 12rem 8rem;}
 .advanced_grid{ display: grid; grid-template-columns: repeat(2, 1fr); align-items: flex-end;}
 .advanced_right{ padding-left: 15rem; max-width: 75rem;}
-.advanced_right p{ font: var(--font-16); font-weight: 300; max-width: 50rem;}
+.advanced_right p{ font: var(--font-16); font-weight: var(--fw-300); max-width: 50rem;}
 
 .advanced_right h5 { color: var(--color-cf); margin-bottom:2.4rem; font-weight: 500; }
 .advanced_right figure{ margin-top: 7.7rem;}
 .school_facity_grid figure{ max-width: 60rem;}
 .school_facity_grid_sc{display: grid; grid-template-columns: 61rem 85rem; gap: 15rem; align-items: center; padding-left: 11rem;}
 .school_facity_grid_sc h5 { color: var(--color-cf); margin-bottom:2.4rem; font-weight: 500; }
-.school_facity_grid_sc p{ font: var(--font-16); font-weight: 300; max-width: 45rem;}
+.school_facity_grid_sc p{ font: var(--font-16); font-weight: var(--fw-300); max-width: 45rem;}
 .school_facity_farms{ padding-bottom: 12rem;}
 
 .school-school-of-engineering-technology-facilities .school_facity_grid figure { max-width: 100%; }
 .school_facity_grid_sc2{display: grid; grid-template-columns: 60rem 85rem; gap: 2.5rem; align-items: center; padding-left: 11rem;}
 .school_facity_grid_sc2 h5 { color: var(--color-cf); margin-bottom:2.4rem; font-weight: 500; }
-.school_facity_grid_sc2 p{ font: var(--font-16); font-weight: 300; max-width: 50rem;}
+.school_facity_grid_sc2 p{ font: var(--font-16); font-weight: var(--fw-300); max-width: 50rem;}
 .soil_section{ position: relative; padding-top: 11.2rem;}
 .soil_section:before { content: ""; z-index: -1; background-image: url(/images/soil-vector.svg); background-repeat: no-repeat; background-size: cover; width: 100%; height: 75rem; position: absolute; top: 0; bottom: 0; left: 0;  background-color: var(--color-cf);}
 .soil_section .soil_header{ text-align: center;}
 .soil_section .soil_header *{ color: var(--color-white);}
 .soil_section .soil_header h5{ font-weight: 500;}
-.soil_section .soil_header blockquote{ padding-top: 3rem; font-weight: 300; max-width: 149.5rem; margin: 0 auto 5rem; line-height: 1.5;}
+.soil_section .soil_header blockquote{ padding-top: 3rem; font-weight: var(--fw-300); max-width: 149.5rem; margin: 0 auto 5rem; line-height: 1.5;}
 .soil_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.4rem; margin-top: 4rem;}
 .soil_grid h5 { color: var(--color-cf); margin-block:3rem 2.4rem; font-weight: 500; }
-.soil_grid p{ font: var(--font-16); font-weight: 300; padding-right: 14rem;}
+.soil_grid p{ font: var(--font-16); font-weight: var(--fw-300); padding-right: 14rem;}
 
 .soil_data_scetion{ padding-block: 16.7rem 15rem;}
 .soil_data_scetion .soil_data_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; align-items: center;}
 .soil_data_grid_right{ padding-inline: 15rem 14rem;}
 
 .soil_data_grid_right h5 { color: var(--color-cf); margin-block:3rem 2.4rem; font-weight: 500; }
-.soil_data_grid_right p{ font: var(--font-16); font-weight: 300;}
+.soil_data_grid_right p{ font: var(--font-16); font-weight: var(--fw-300);}
 
 @media (max-width:1536px){
 .agr_sch_facilities .jnu_title_header { padding-inline: 0; }
@@ -881,7 +884,7 @@
 }
 .soe_education_grid{ margin-top: 7rem;}
 .soe_education_grid ul{ display: grid; grid-template-columns: repeat(3, 1fr); gap:2.4rem; padding: 0;}
-.soe_education_grid ul li{background-color: var(--color-white); font: var(--font-16); padding: 6.8rem 5.7rem; text-align: center; font-weight: 300; min-height: 31rem; position: relative;}
+.soe_education_grid ul li{background-color: var(--color-white); font: var(--font-16); padding: 6.8rem 5.7rem; text-align: center; font-weight: var(--fw-300); min-height: 31rem; position: relative;}
 .soe_education_grid ul li:before { content: ""; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 30%, var(--color-fa) 30%, var(--color-fa) 100%); width: 100%; max-width: 24rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0; left: 0; right: 0;}
 .school-school-of-education-about-soe .scss_vis_mis{ border-top: 0; padding-top: 0; margin-top: 13rem;}
 .school-school-of-education-about-soe  .sbm_misgrid .sbm_vision { display: flex; flex-direction: column; justify-content: center; padding: 0 7rem 0 11.3rem;}
@@ -899,23 +902,23 @@
 
 .sbmtp_list > .sbmtp_item { background: var(--color-white); padding: 6.5rem 12.5rem 0rem; position: relative; min-height: 31.7rem; }
 .sbmtp_list > .sbmtp_item > h5 { font: var(--font-16); color: var(--color-23); margin-bottom: 3.1rem; font-weight: 500; }
-.sbmtp_list > .sbmtp_item > p { font: var(--font-16); font-weight: 300; }
+.sbmtp_list > .sbmtp_item > p { font: var(--font-16); font-weight: var(--fw-300); }
 .sbmtp_list > .sbmtp_item:before { content: ""; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 30%, var(--color-fa) 30%, var(--color-fa) 100%); width: 100%; max-width: 24rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0; left:10rem;}
 .global_outreach{ padding-block: 4rem 12rem;}
 .global_outreach .title_header{ text-align: center; max-width: 116.5rem; margin: 0 auto; padding-bottom: 5.6rem;}
 
-.global_outreach .title_header > h5 { font: var(--font-21); color: var(--color-23); margin-bottom: 3.1rem; font-weight: 300; }
-.global_outreach .title_header > p { font: var(--font-16); font-weight: 300; color: var(--color-black);}
+.global_outreach .title_header > h5 { font: var(--font-21); color: var(--color-23); margin-bottom: 3.1rem; font-weight: var(--fw-300); }
+.global_outreach .title_header > p { font: var(--font-16); font-weight: var(--fw-300); color: var(--color-black);}
 .global_outreach_grid{ margin-top:12rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 17.5rem; padding-bottom: 5.8rem; border-bottom: 1px solid #CECECE; position: relative;}
 .global_outreach_grid::after { content: ""; position: absolute; width: 1px; height: 100%; background: #cecece; left: 50%; top: 0; }
 
 
-.global_outreach_grid p{font: var(--font-16); font-weight: 300; margin-bottom: 2rem;}
-.global_outreach_grid h5 { font: var(--font-21); color: var(--color-23); margin-bottom: 2.4rem; font-weight: 300; }
+.global_outreach_grid p{font: var(--font-16); font-weight: var(--fw-300); margin-bottom: 2rem;}
+.global_outreach_grid h5 { font: var(--font-21); color: var(--color-23); margin-bottom: 2.4rem; font-weight: var(--fw-300); }
 
 .global_outreach .global_reasearch{ text-align: center; max-width: 112.4rem; margin: 0 auto; padding-block:8rem 0rem;}
-.global_outreach .global_reasearch > h5 { font: var(--font-21); color: var(--color-23); margin-bottom: 3.1rem; font-weight: 300; }
-.global_outreach .global_reasearch > p { font: var(--font-16); font-weight: 300; color: var(--color-black);}
+.global_outreach .global_reasearch > h5 { font: var(--font-21); color: var(--color-23); margin-bottom: 3.1rem; font-weight: var(--fw-300); }
+.global_outreach .global_reasearch > p { font: var(--font-16); font-weight: var(--fw-300); color: var(--color-black);}
 
 @media (max-width:1536px){
 .soe_education_grid ul li{min-height: 24rem; padding: 3rem 2rem;}
@@ -979,14 +982,14 @@
 
 .solbs_about_ovr_img{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; align-items: center;}
 .solbs_about_cnt{ padding-inline: 12.5rem 17.5rem;}
-.solbs_about_cnt h5{ font-weight: 300; line-height: 1.5; margin-bottom: 2.8rem;}
+.solbs_about_cnt h5{ font-weight: var(--fw-300); line-height: 1.5; margin-bottom: 2.8rem;}
 .solbs_about_cnt p{ font: var(--font-16);}
 .solbs_heightlight_section{ padding-top: 12rem;}
 .solbs_hghtlght__grid{ padding-top:2rem;}
 .solbs_hghtlght__grid ul { grid-template-columns: repeat(3, 1fr); gap: 2.4rem; padding: 0; display: grid;}
-.solbs_hghtlght__grid ul > li { background: var(--color-white); font: var(--font-16); text-align: center; padding-block: 7.5rem; padding-inline: 6.8rem; font-weight: 300; line-height: 1.6; list-style: none; position: relative; }
+.solbs_hghtlght__grid ul > li { background: var(--color-white); font: var(--font-16); text-align: center; padding-block: 7.5rem; padding-inline: 6.8rem; font-weight: var(--fw-300); line-height: 1.6; list-style: none; position: relative; }
 .solbs_hghtlght__grid ul > li:before { content: ""; z-index: 9; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 40%, var(--color-cf) 40%, var(--color-cf) 100%); width: 11.5rem; max-width: 11.5rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0; left: 0; right: 0; }
-.sbm_mission p{ font: var(--font-21); font-weight: 300; line-height: 1.6;}
+.sbm_mission p{ font: var(--font-21); font-weight: var(--fw-300); line-height: 1.6;}
 .school-school-of-life-basic-sciences-about-solbs .scss_vis_mis .sbm_misgrid .sbm_vision{ display: flex; flex-direction: column; align-items: center; padding-inline:11.3rem 7rem; padding-block:10rem;}
 .school-school-of-life-basic-sciences-about-solbs .sbm_misgrid{ align-items: center;}
 
@@ -1007,9 +1010,9 @@
 .achie_grid_bx ul li:first-child figure{ min-width: 12.2rem;}
 .achie_grid_bx ul li:nth-child(2) figure{ min-width: 9.6rem;}
 .achie_grid_bx ul li::nth-child(3) figure{ min-width: 19.7rem;}
-.achie_grid_bx ul li p{ font: var(--font-16); font-weight: 300;}
+.achie_grid_bx ul li p{ font: var(--font-16); font-weight: var(--fw-300);}
 .achie_grid_bx ul li:nth-child(2) p{ padding-right: 5rem;}
-.achie_grid_bx ul + p{ font: var(--font-16); text-align: center; font-weight: 300; padding-top: 5.6rem; max-width: 106.3rem; margin: 0 auto;}
+.achie_grid_bx ul + p{ font: var(--font-16); text-align: center; font-weight: var(--fw-300); padding-top: 5.6rem; max-width: 106.3rem; margin: 0 auto;}
 .ache_logo_grid ul{ display: flex; gap: 6.1rem; padding-block: 3rem; border-bottom: 1px solid #cecece;}
 .achie_img_grid ul{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; padding: 0;}
 .achie_img_grid ul li{ border-left: 4px solid var(--color-f2); padding-left: 3.6rem; font: var(--font-16); font-weight:300;}
@@ -1061,8 +1064,8 @@
 .smart_class_grid{ display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2.5rem;}
 .smart_class_right{ padding-inline: 12.5rem 18.3rem;}
 .smart_class_right h5{color: var(--color-cf); margin-bottom: 2.4rem;}
-.smart_class_right p{ font: var(--font-16); font-weight: 300;}
-.smart_class_right blockquote{ font: var(--font-42); color: var(--color-cf); border-top: 1px solid #c4c4c4; padding-top:4rem; margin-top: 4rem; font-weight: 300;}
+.smart_class_right p{ font: var(--font-16); font-weight: var(--fw-300);}
+.smart_class_right blockquote{ font: var(--font-42); color: var(--color-cf); border-top: 1px solid #c4c4c4; padding-top:4rem; margin-top: 4rem; font-weight: var(--fw-300);}
 .scns_facilities_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; padding-block: 2.5rem 7.7rem; padding-inline: 5rem;}
 
 .basic_scns_facilities{ padding-block: 7rem 0; position: relative;}
@@ -1082,7 +1085,7 @@
 
 .facility_laboratories .abut_committe_lft .home_tabs li:after{ background-color: var(--color-f9); opacity: 1;}
 .facility_laboratories .abut_committe_lft .home_tabs li.home_active{ color: var(--color-white); font-weight: 500;}
-.facility_laboratories .abut_committe_lft .home_tabs li{ font-weight: 300; color: rgba(255, 255, 255, 0.8); padding-block: 0.2rem;}
+.facility_laboratories .abut_committe_lft .home_tabs li{ font-weight: var(--fw-300); color: rgba(255, 255, 255, 0.8); padding-block: 0.2rem;}
 .facility_laboratories .abu_commitbbx h5{ color: var(--color-cf); margin-bottom: 2rem; font-weight: 500;}
 .facility_laboratories .abu_commitbbx p{ padding-right: 15rem;}
 .facility_laboratories .abu_commitbbx figure{ margin-bottom: 2.4rem;}
@@ -1107,7 +1110,7 @@
 
 
 .sohmct_high_grid ul { grid-template-columns: repeat(3, 1fr); gap: 2.5rem; padding: 0; display: grid; margin-bottom: 5rem; padding-top: 2rem;}
-.sohmct_high_grid ul>li { background: var(--color-white); font: var(--font-21); padding: 4.4rem 4.6rem 0rem; font-weight: 300; line-height: 1.6; list-style: none; text-align: center; position: relative; min-height: 21.9rem; }
+.sohmct_high_grid ul>li { background: var(--color-white); font: var(--font-21); padding: 4.4rem 4.6rem 0rem; font-weight: var(--fw-300); line-height: 1.6; list-style: none; text-align: center; position: relative; min-height: 21.9rem; }
 .sohmct_high_grid ul>li::before{ content: ""; z-index: 9; background: linear-gradient(to left, var(--color-cf) 0%, var(--color-cf) 60%, var(--color-fa) 60%, var(--color-fa) 100%); width: 100%; max-width: 10rem; height: 2px; margin: 0 auto; position: absolute; bottom: 0rem; left: 0; right: 0rem;}
 
 .health_btom_conbx > img { max-width: 4.4rem; margin-bottom: 3.2rem; }
@@ -1141,7 +1144,7 @@
 .schol_facility_section::after{ content: ""; z-index: -1; background-image: url(/images/facilities-vector.svg); background-repeat: repeat; background-size: contain; width: 100%; height:100%; position: absolute; top: 12rem; bottom: 0; left: 0; opacity: 0.15;}
 .schol_facility_section::before{ background-color: var(--color-cf); top: 12rem; position: absolute; bottom: 0; left: 0; right: 0; content: ""; z-index: -1;}
 .schl_fclty_bx h5{ margin-block: 7.3rem 2.4rem; font-weight: 500;}
-.schl_fclty_bx p{ font: var(--font-16); max-width: 56.7rem; font-weight: 300;}
+.schl_fclty_bx p{ font: var(--font-16); max-width: 56.7rem; font-weight: var(--fw-300);}
 .schl_facility_grid .schl_fclty_bx:last-child h5{ padding-left: 6rem;}
 .schl_facility_grid .schl_fclty_bx:last-child p{ padding-left: 6rem; max-width: 62.7rem;}
 .schl_facility_grid .schl_fclty_bx *{ color: var(--color-white);}
@@ -1150,7 +1153,7 @@
 .facility_restaurant_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem;}
 .facility_restaurant_bx{ padding-inline: 12.5rem; display: flex; flex-direction: column; justify-content: space-between;}
 .facility_restaurant_bx h5{ color: var(--color-cf); margin-bottom: 2.4rem;}
-.facility_restaurant_bx p{ font: var(--font-16); max-width: 55.1rem; font-weight: 300;}
+.facility_restaurant_bx p{ font: var(--font-16); max-width: 55.1rem; font-weight: var(--fw-300);}
 
 @media (max-width:1536px){
     .sohmct_caption{ padding-inline: 4.2rem 3rem;}
@@ -1173,9 +1176,9 @@
 
 .imsrc_grid{ display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 2.5rem;}
 .imsrc_right{ padding-inline: 12.5rem 21.9rem;}
-.imsrc_right h4{ margin-bottom: 2.4rem; font-weight: 300; line-height: 1.6;}
-.imsrc_right p{ font: var(--font-16); font-weight: 300;}
-.imsrc_right blockquote{ font: var(--font-42); color: var(--color-cf); border-top: 1px solid #c4c4c4; padding-top:4rem; margin-top: 4rem; font-weight: 300;}
+.imsrc_right h4{ margin-bottom: 2.4rem; font-weight: var(--fw-300); line-height: 1.6;}
+.imsrc_right p{ font: var(--font-16); font-weight: var(--fw-300);}
+.imsrc_right blockquote{ font: var(--font-42); color: var(--color-cf); border-top: 1px solid #c4c4c4; padding-top:4rem; margin-top: 4rem; font-weight: var(--fw-300);}
 .imsrc_facilities_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; padding-block: 2.5rem 7.7rem;}
 .imsrc_facilities_img{ padding-bottom: 12rem;}
 .imsrc_facilities{ padding-block:12rem 0; position: relative;}
@@ -1183,10 +1186,118 @@
 
 .imsrc_fct_grid{ display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 5rem;}
 .imcrc_cnt{ max-width: 47.5rem;}
-.imsrc_facilities_img p{ font: var(--font-16);}
+.imsrc_facilities_img p{ font: var(--font-16); font-weight: var(--fw-300);}
 .imsrc_fct_grid ul{ display: grid; grid-template-columns: repeat(2, 1fr); column-gap: 10rem; row-gap: 5.6rem; padding: 0;}
 .imsrc_fct_grid ul h3{ font: var(--font-56); color: var(--color-cf); margin-bottom: 2rem;}
 
 .imsrc_fct_grid ul li{ position: relative; padding-bottom: 4.3rem;}
 .imsrc_fct_grid ul li:before { content: ""; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 80%, var(--color-cf) 80%, var(--color-cf) 100%); width: 100%; height: 2px; position: absolute; bottom: 0; left: 0; }
 .imsrc_fct_grid ul li sup{ font: var(--font-36); top: -2.5rem;}
+
+@media (max-width:1536px){
+    .imsrc_facilities { padding-block: 8rem 0; }
+    .imsrc_right { padding-inline:3rem 0rem; }
+    .imsrc_facilities_grid{ padding-bottom: 3rem; }
+    .imsrc_fct_grid{ gap:3rem;}
+    .imsrc_fct_grid ul{gap: 4rem 3rem;}
+    .imsrc_fct_grid ul li { padding-bottom: 1rem; }
+    .imsrc_fct_grid ul li sup { font: var(--font-30); top: -1.5rem; }
+    .imsrc_facilities_img { padding-bottom: 8rem; }
+    .imsrc_fct_grid ul h3{ margin-bottom: 1.5rem;}
+}
+
+.school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid{ align-items: flex-start; margin-top: 12rem; }
+.school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid .sch_vision h6{ max-width: 100%;}
+.school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid .sch_vision { background-color: var(--color-cf); padding: 6rem 11.2rem 14.7rem 12.5rem; }
+.school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid .sch_mission { padding: 6rem 4rem .8rem 7rem; }
+.school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid .sch_mission p{ font: var(--font-16); margin-bottom: 2rem; font-weight: var(--fw-300);}
+.school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid h5 { margin-bottom:3.4rem; }
+.school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid ul{ padding-top: 2rem; padding-left: 3rem;}
+.school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid .sch_mission ul li:before{ background-color: var(--color-f9); left: -3rem;}
+
+.national_recognition{ padding-block: 12rem;}
+.national_recognition_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem; align-items: center;}
+.national_recognition_bx{ background-color: var(--color-white); padding: 12.5rem 12.5rem 12.5rem 10rem;  position: relative;}
+.national_recognition_bx::after{content: ""; background: linear-gradient(to right, var(--color-fa) 0%, var(--color-fa) 80%, var(--color-cf) 80%, var(--color-cf) 100%); width: 25rem; height: 2px; position: absolute; bottom: 0; left: 10rem;}
+
+.national_recognition_bx h5{ color: var(--color-cf); margin-bottom: 2.6rem;}
+.national_recognition_grid p{ font: var(--font-16); font-weight: var(--fw-300);}
+.national_recognition .national_recognition_grid:first-child{ margin-bottom: 6.6rem;}
+.national_recognition_grid h5{ color: var(--color-cf); margin-bottom: 2.6rem;}
+.expansion_bx{ max-width:56rem; padding-left: 10rem;}
+.expansion_bx ul{ margin-bottom: 3rem;}
+.expansion_bx li{font: var(--font-16); font-weight: var(--fw-300);}
+
+
+@media (max-width:1536px){    
+    .school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid{ margin-top: 5rem;}
+    .school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid .sch_vision{padding: 6rem 5rem 4rem 5rem;}
+    .school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid .sch_mission { padding: 0 0 0 3rem; }
+    .school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid h5 { margin-bottom: 2rem; }
+    .school-institute-for-medical-sciences-and-research-centre-about-imsrc .sch_vis_misgrid ul{padding-top: 0;}
+    .national_recognition { padding-block: 8rem; }
+    .national_recognition_bx{padding:5rem; height: 100%;}
+    .national_recognition_grid h5{ margin-bottom: 1.5rem;}
+    .national_recognition_bx:after{ width: 15rem; left:5rem;}
+    .expansion_bx { max-width: 100%; padding-left: 5rem; }
+    .expansion_bx ul { margin-bottom: 2rem; }
+}
+
+
+.imsrc_campus_life{ position: relative; padding-block: 10.5rem 15rem;}
+.imsrc_campus_life::before { content: ""; position: absolute; top:0rem; right: 0; width: 100%; height: 75rem; background-color: var(--color-cf);}
+.imsrc_campus_life::after { content: ""; position: absolute; top:0rem; right: 0; width: 100%; height: 75rem; background: url("/images/back_pattern.svg"); background-position: right 0 center; background-repeat: repeat; background-size: contain; opacity: 0.15; pointer-events: none; }
+.imsrc_campus_life .container, .imsrc_campus_life .container-lg{ position: relative; z-index: 2;}
+.imsrc_campus_life .imsrc_campus_header{ text-align: center; padding-bottom: 9.1rem; padding-inline: 4rem;}
+.imsrc_campus_life .imsrc_campus_header h5{ margin-bottom: 2.6rem;}
+.imsrc_campus_life .imsrc_campus_header *{ color: var(--color-white);}
+.imsrc_campus_life .imsrc_campus_header p{ font: var(--font-16); font-weight: var(--fw-300);}
+
+.imsrc_campus_life_grid{ display: grid; grid-template-columns: repeat(2, 1fr); gap: 2.5rem;}
+.looking_ahead_grid{ display: grid; grid-template-columns: repeat(2, 1fr); margin-top: 4.2rem; align-items: center;}
+.looking_ahead_grid_bx{ padding-left: 13.7rem; max-width:60rem;}
+.looking_ahead_grid_bx h5{ color: var(--color-cf); margin-bottom: 2.6rem;}
+.looking_ahead_grid_bx p{ font: var(--font-16); font-weight: var(--fw-300);}
+
+
+
+
+.health_cont1 h5{ line-height: 1.7; font-weight: var(--fw-300);}
+.school-institute-for-medical-sciences-and-research-centre-facilities .health_cont1{ border-bottom: 0;}
+.school-institute-for-medical-sciences-and-research-centre-facilities .health_about .container-lg + .container .row{ border-bottom: 1px solid #cecece; margin: 0;}
+.school-institute-for-medical-sciences-and-research-centre-facilities .faci_grid figcaption p{ padding-right: 7rem;}
+.school-institute-for-medical-sciences-and-research-centre-facilities .fac_reach_cont2 { padding: 5rem 0rem 0 10rem; }
+.school-institute-for-medical-sciences-and-research-centre-facilities .reach_grid{ align-items: center; margin-bottom: 0rem;}
+.school-institute-for-medical-sciences-and-research-centre-facilities .fac_reach{ padding-bottom: 10rem;}
+.integrated_section{ padding-bottom: 12rem;}
+.integrated_research{ text-align: center;padding: 5rem; position: relative;}
+.integrated_research ul{ display: grid; grid-template-columns: repeat(7, 1fr); gap: 10rem; margin-top: 3rem; padding: 0;}
+.integrated_research ul li figure{ max-width: 6.3rem; margin: 0 auto; }
+.integrated_research ul li{position: relative;}
+.integrated_research ul li::after{ background-image: url(/images/next-arrow.svg); content: ""; width: 2.9rem; height: 1.1rem; position: absolute; top: 3rem; right: -4.5rem; background-size: contain;}
+.integrated_research ul li:last-child:after{ display: none;}
+.integrated_research:before { content: ""; z-index: -1; background-image: url(/images/integrated-vector.svg); background-color: var(--color-white); background-repeat: repeat; background-size: contain; width: 100%; height: 100%; position: absolute; top: 0; bottom: 0; left: 0; }
+.integrated_research h6{ font-weight: var(--fw-medium);}
+.integrated_research p{ font: var(--font-16); margin-top: 2rem; font-weight: var(--fw-300);}
+
+.integrated_commitment{ padding-top: 12rem; text-align: center;}
+.integrated_commitment h6{ margin-bottom: 2rem; font-weight: var(--fw-medium);}
+.integrated_commitment blockquote{ font: var(--font-21); font-weight: var(--fw-300); line-height: 1.7;}
+
+
+@media (max-width:1536px){
+    .imsrc_campus_life { padding-block: 7rem 10rem; }
+    .imsrc_campus_life .imsrc_campus_header{ padding-inline: 0; padding-bottom: 4rem;}
+    .imsrc_campus_life::after{height: 45rem;}
+    .imsrc_campus_life:before{height: 45rem;}
+    .looking_ahead_grid_bx { max-width: 100%; padding-left: 8rem; }
+    .school-institute-for-medical-sciences-and-research-centre-facilities .fac_reach_cont2 { padding: 5rem 0 0 3rem; } 
+    .school-institute-for-medical-sciences-and-research-centre-facilities .fac_reach { padding-bottom: 6rem; }
+    .integrated_research ul{ gap: 0; justify-content: space-between;}
+    .integrated_research ul li{padding-inline: 1rem;}
+    .integrated_research ul li figure { max-width: 5.3rem;}
+    .integrated_research ul li:after{ right: -1rem;}
+    .integrated_commitment{ padding-top: 6rem;}
+    .integrated_section { padding-bottom: 6rem; } 
+    .integrated_research { padding: 4rem 3rem; }
+}
