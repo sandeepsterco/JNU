@@ -69,6 +69,7 @@
 .program_nav a.active{color:var(--color-cf);}
 .program_section_bx{scroll-margin-top:12rem;margin-bottom:8rem;}
 .program_section_bx .Hide{display:none;}
+.teach_podo_btmdesc p{padding-block: 3rem;font: var(--font-16);font-weight: var(--fw-300);}
 #po>p,#pso>p,#peo>p{margin-top:4rem;font:var(--font-16);color:var(--color-black);margin-bottom:4rem;font-weight:300;}
 .program_nav{position:relative;padding-left:3.5rem;}
 .program_nav::before{content:"";position:absolute;left:1rem;top:0;bottom:0;width:2px;background:#f3b4c9;}

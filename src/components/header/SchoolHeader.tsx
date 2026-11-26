@@ -92,14 +92,14 @@ export default async function SchoolHeader({parentSlug, slug, customClass}:Schoo
   );
   const headerData = admissionMenu
     ? [
-        {
-          title: "Home",
-          slug: `${slug}`,
-          overwrite_url: "",
-          target_blank: "",
-          display_order: 0,
-          children:[]
-        },
+        // {
+        //   title: "Home",
+        //   slug: `${slug}`,
+        //   overwrite_url: "",
+        //   target_blank: "",
+        //   display_order: 0,
+        //   children:[]
+        // },
         ...schoolHeaderData.filter(
           (item) => !item.slug?.toLowerCase().includes("admission")
         ),
