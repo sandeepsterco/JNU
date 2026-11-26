@@ -42,7 +42,7 @@ export default function StudyJNU({data, modular}:ProgramPropsInterface) {
                     <Search />
 
                     {modular && modular?.length > 0 && (
-                        <div className="container">
+                        <div className="container-lg">
                             <div className="prgrms_grid" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
                                 {modular.map((item, idx)=>(
                                     <div key={idx} className="prgrms_Bx">
