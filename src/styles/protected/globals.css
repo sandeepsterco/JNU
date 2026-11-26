@@ -65,8 +65,8 @@
   --font-10: var(--fw-normal) 1rem/1.4 var(--stack);
   --font-9: var(--fw-normal) 0.9rem/1.3 var(--stack);
   --letter-spacing-11: -1.11rem;
-  --header-height:16.5rem;
-  --school-header-height:16.5rem;
+  --header-height:14.7rem;
+  --school-header-height:15.6rem;
   --hamb-width:45rem;
   --mw2545:2545px;
   --mx1975: min( 1975px, calc(100% - ((100% - min(1975px, 77.603143vw)) / 2)) );
