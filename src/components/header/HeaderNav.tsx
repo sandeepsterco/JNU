@@ -51,98 +51,103 @@ export default function HeaderNav({
   return (
     <>
       <div className="header_right">
-        <div className="header_right_top">
+        {parentSlug!='school' && (
+          <div className="header_right_top">
           <ul>
             <li>
-              <a href="#">NCTE Mandatory Disclosure</a>
+              <a href="/mandatory-disclosures">NCTE Mandatory Disclosure</a>
             </li>
             <li>
-              <a href="#">Public Self Disclosure</a>
+              <a href="/disclosure">Public Self Disclosure</a>
             </li>
             <li>
-              <a href="#">Information Under Clause B.1.11</a>
+              <a href="/information-under-clause">
+                Information Under Clause B.1.11
+              </a>
             </li>
           </ul>
         </div>
-       <div className="right_header_btm">
-         <ul className="site_nav">
-          {headerData.map((item, idx) => {
-            const href = getHref(item);
+        )}
+        
+        <div className="right_header_btm">
+          <ul className="site_nav">
+            {headerData.map((item, idx) => {
+              const href = getHref(item);
 
-            const isActive =
-              !item.overwrite_url &&
-              (pathname === href ||
-                pathname === `${BASE_URL}${item.slug}` ||
-                pathname === `/${item.slug}`);
+              const isActive =
+                !item.overwrite_url &&
+                (pathname === href ||
+                  pathname === `${BASE_URL}${item.slug}` ||
+                  pathname === `/${item.slug}`);
 
-            const hasChildren = !!item.children && item.children.length > 0;
+              const hasChildren = !!item.children && item.children.length > 0;
 
-            const isAdmission = isAdmissionItem(item);
-            const isOpen = openSlug === item.slug;
-            const isProgram = isProgramItem(item);
+              const isAdmission = isAdmissionItem(item);
+              const isOpen = openSlug === item.slug;
+              const isProgram = isProgramItem(item);
 
-            return (
-              <li
-                key={item.slug || idx}
-                className={[
-                  isAdmission
-                    ? "admission_dropdown"
-                    : hasChildren
-                      ? "site_dropdown"
-                      : "",
-                  isActive ? "nav_current" : "",
-                  isOpen ? "active" : "",
-                ]
-                  .filter(Boolean)
-                  .join(" ")}
-                onMouseEnter={() => {
-                  if (isAdmission || hasChildren) {
-                    setOpenSlug(item.slug);
-                  }
-                }}
-                onMouseLeave={() => {
-                  if (isAdmission || hasChildren) {
-                    setOpenSlug(null);
-                  }
-                }}
-              >
-                <Link
-                  href={`${isProgram ? href + `?school=${schoolId}` : isAdmission ? `${BASE_URL}${item.overwrite_url || item.slug}` : href}`}
-                  target={getTarget(item)}
-                  rel={getRel(item)}
+              return (
+                <li
+                  key={item.slug || idx}
+                  className={[
+                    isAdmission
+                      ? "admission_dropdown"
+                      : hasChildren
+                        ? "site_dropdown"
+                        : "",
+                    isActive ? "nav_current" : "",
+                    isOpen ? "active" : "",
+                  ]
+                    .filter(Boolean)
+                    .join(" ")}
+                  onMouseEnter={() => {
+                    if (isAdmission || hasChildren) {
+                      setOpenSlug(item.slug);
+                    }
+                  }}
+                  onMouseLeave={() => {
+                    if (isAdmission || hasChildren) {
+                      setOpenSlug(null);
+                    }
+                  }}
                 >
-                  {item.title}
-                </Link>
+                  <Link
+                    href={`${isProgram ? href + `?school=${schoolId}` : isAdmission ? `${BASE_URL}${item.overwrite_url || item.slug}` : href}`}
+                    target={getTarget(item)}
+                    rel={getRel(item)}
+                  >
+                    {item.title}
+                  </Link>
 
-                {isAdmission ? (
-                  <AdmissionDropdown childrens={item.children} />
-                ) : hasChildren ? (
-                  <ul className="site_dropdown_menu">
-                    {item.children!.map((innerItem, innerIdx) => {
-                      const childHref = innerItem.overwrite_url
-                        ? innerItem.overwrite_url
-                        : `${BASE_URL}${innerItem.slug}`;
+                  {isAdmission ? (
+                    <AdmissionDropdown childrens={item.children} />
+                  ) : hasChildren ? (
+                    <ul className="site_dropdown_menu">
+                      {item.children!.map((innerItem, innerIdx) => {
+                        const childHref = innerItem.overwrite_url
+                          ? innerItem.overwrite_url
+                          : `${BASE_URL}${innerItem.slug}`;
 
-                      return (
-                        <li key={innerItem.slug || innerIdx}>
-                          <Link
-                            href={childHref}
-                            target={getTarget(innerItem)}
-                            rel={getRel(innerItem)}
-                          >
-                            {innerItem.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                ) : null}
-              </li>
-            );
-          })}
-        </ul>
-        <Hamburger data={sidebarData} parentSlug={parentSlug} />
-       </div>
+                        return (
+                          <li key={innerItem.slug || innerIdx}>
+                            <Link
+                              href={childHref}
+                              target={getTarget(innerItem)}
+                              rel={getRel(innerItem)}
+                            >
+                              {innerItem.title}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  ) : null}
+                </li>
+              );
+            })}
+          </ul>
+          <Hamburger data={sidebarData} parentSlug={parentSlug} />
+        </div>
       </div>
     </>
   );
