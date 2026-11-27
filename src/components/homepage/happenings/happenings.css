@@ -105,7 +105,7 @@
 }
 
 @media(max-width:991px) {
-    .happening_section{padding-block:7.8rem 10rem;padding-inline:3.2rem;}
+    .happening_section{padding-block:7.8rem 10rem;padding-inline:0rem;}
     .happening_grid{grid-template-columns:repeat(1,1fr);}
 }
 

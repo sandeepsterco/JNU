@@ -37,6 +37,7 @@
     .research_slider_section{padding-top:4.8rem;}
     .research_slider_bx p{margin-inline:3.2rem;padding-block:2.6rem;}
     .research_slider_bx:before{left:3.2rem;}
+    .research_section .container{max-width:min(100%);}
 }
 
 @media(max-width:767px){

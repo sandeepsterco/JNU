@@ -39,8 +39,12 @@
 }
 
 @media(max-width:991px) {
-    .faq_section{padding-block:7rem 10rem;}
+    .faq_section{padding-block:10rem;}
     .faq_tab ul{margin-block:3rem;}
+    .faq_section .col-lg-10 {
+        width:100%;
+    }
+
 }
 @media(max-width:767px) {
     .faq_section{padding-block:4rem 3rem;}
