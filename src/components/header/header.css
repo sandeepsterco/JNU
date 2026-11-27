@@ -42,6 +42,11 @@
 .right_header_btm { display: flex; align-items: center; }
 
 
+@media (max-width:991px){
+    .header_right_top{ display: none;}
+}
+
+
 .main_header.sticky{background-color:var(--color-white);padding-block:2rem;z-index:9999;}
 .main_header>.container-fluid{max-width:var(--mw2545);display:flex;align-items:center;justify-content:space-between;padding-inline:10rem;z-index: 9;position: relative;}
 .site_navbar{display:block;max-width:57.2rem;display:grid;grid-template-columns:55% auto;gap:3rem;align-items:center;}
@@ -151,7 +156,7 @@ body:has(.side_hamburger.is-open) .site_nav{transform:translateY(var(--hamb-widt
     .site_nav .site_dropdown > a{font:var(--fw-300) 1.4rem/1.5 var(--stack)}
     .site_nav .site_dropdown > a:after{width:1rem;height:0.5rem;top:1.5rem;}
     .nav_right button{height:auto;padding-inline:2rem;}
-    .nav_right button img{max-width:1.4rem;}
+    .nav_right button img{max-width:2.4rem;}
     .nav_right button:after{background-color:rgb(110 110 110 / 58%);height:100%;top:0;}
     .site_dropdown_menu{width:22rem;}
     .site_nav > li > ul > li > a{padding:0.8rem 1.2rem;}
@@ -183,17 +188,21 @@ body:has(.side_hamburger.is-open) .site_nav{transform:translateY(var(--hamb-widt
     .main_header > .container-fluid{padding-inline: 3.2rem;}
     .site_navbar{grid-template-columns:100%;max-width:32.1rem;width:100%;}
     .site_navbar img:nth-child(2){display: none;}
+    .site_navbar img:nth-child(3){display: block!important;}
     .site_nav{display:none;}
     .site_navbar{margin:0;}
     .search_btn, .phone_icon{display: none;}
     .hamburger_menu, .hamburger_menu.is-open{display: none;}
     .nav_right button img{filter:brightness(0) invert(1);}
+    .header_fix{ background-color: var(--color-06); padding-block: 1.5rem;}
 }
 @media(max-width:767px) {
     .main_header:before{display:none;}
     .main_header > .container-fluid{padding-inline:1.6rem;}
     .site_navbar{max-width:23.1rem;}
     .nav_right button{min-width:2.4rem;height:2.4rem;padding-inline:0rem;}
+    .site_navbar { max-width: 32rem; }
+    .site_navbar img:last-child{ border:0; padding: 0;}
 }
 
 

@@ -1,24 +1,29 @@
+
 import AOS from "aos";
 
 export const AOS_OPTIONS = {
   duration: 1000,
   once: true,
   easing: "ease-out-back",
-  disable: "mobile",
-  offset:0,
+  disable: () => window.innerWidth <= 991,
+  offset: 0,
 } as const;
 
 let initialized = false;
-let debounceTimer: any| null = null;
+let debounceTimer: ReturnType<typeof setTimeout> | null = null;
 
 function revealInViewportElements() {
-  const offset = AOS_OPTIONS?.offset;
+  // Don't manually trigger animations on mobile/tablet
+  if (window.innerWidth <= 991) return;
+
+  const offset = AOS_OPTIONS.offset;
   const viewHeight = window.innerHeight;
 
   document
     .querySelectorAll<HTMLElement>("[data-aos].aos-init:not(.aos-animate)")
     .forEach((el) => {
       const { top, bottom } = el.getBoundingClientRect();
+
       if (top < viewHeight - offset && bottom > 0) {
         el.classList.add("aos-animate");
       }
@@ -27,11 +32,11 @@ function revealInViewportElements() {
 
 export function initAOS() {
   if (initialized || typeof window === "undefined") return;
+
   AOS.init(AOS_OPTIONS);
   initialized = true;
 }
 
-/** Re-scan DOM and animate any [data-aos] elements already in the viewport. */
 export function refreshAOS() {
   if (typeof window === "undefined") return;
 
@@ -45,6 +50,7 @@ export function refreshAOS() {
 
 export function scheduleDebouncedRefreshAOS(debounceMs = 80) {
   if (debounceTimer) window.clearTimeout(debounceTimer);
+
   debounceTimer = window.setTimeout(() => {
     debounceTimer = null;
     refreshAOS();
@@ -53,7 +59,12 @@ export function scheduleDebouncedRefreshAOS(debounceMs = 80) {
 
 export function scheduleRefreshAOSSequence() {
   refreshAOS();
+
   const delays = [150, 400, 800, 1500];
-  const timers = delays.map((delay) => window.setTimeout(refreshAOS, delay));
+
+  const timers = delays.map((delay) =>
+    window.setTimeout(refreshAOS, delay)
+  );
+
   return () => timers.forEach((id) => window.clearTimeout(id));
 }

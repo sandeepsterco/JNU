@@ -93,7 +93,13 @@
 
 }
 
-
+@media(max-width:991px){
+    .alumni_slider_section{ padding-left: 0;}
+    .our_alumni_section .container { max-width: min(100%); }
+    .alumni_header .head_title blockquote { margin-block: 1rem 0rem; }
+    .our_alumni_section { padding-block: 10rem; }
+    .alumni_bx_bottom{ padding:3.3rem 2rem 2rem;}
+}
 
 @media(max-width:767px){
     .our_alumni_section{position:relative;padding-block:4rem 4.2rem;}

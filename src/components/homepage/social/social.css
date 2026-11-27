@@ -24,8 +24,9 @@ ul.social_media_link li a:hover{transform:rotate(360deg);}
 
 }
 @media(max-width:991px) {
-    .jnu_social_wall{padding-block:8rem;}
+    .jnu_social_wall{padding-block:10rem;}
     .social_wall_grid{margin-top:5rem;}
+    .jnu_social_wall .container { max-width: min(100%); }
 }
 
 @media(max-width:767px) {
