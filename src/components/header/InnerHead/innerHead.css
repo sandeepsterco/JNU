@@ -11,3 +11,8 @@
     .inner_nav{grid-template-columns:repeat(4,1fr);gap:1.2rem 3.7rem;margin-top:2.7rem;}
     .inner_nav li a.active:before {top: 1rem;}
 }
+@media(max-width:991px){
+    .inner_head{
+        display: none;
+    }
+}

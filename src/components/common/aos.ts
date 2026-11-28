@@ -10,7 +10,7 @@ export const AOS_OPTIONS = {
 } as const;
 
 let initialized = false;
-let debounceTimer: ReturnType<typeof setTimeout> | null = null;
+let debounceTimer: number | null = null;
 
 function revealInViewportElements() {
   // Don't manually trigger animations on mobile/tablet
