@@ -33,3 +33,13 @@
     .faculty_cnt:after{height:.2rem;}
     .faculty_filter .custom_select:after{width:.6rem;height:.6rem;right:1rem;}
 }
+
+@media(max-width:767px){
+    .faculty_section{padding-block:3rem 5rem;}
+    .faculty_filter{ padding-bottom: 1rem;grid-template-columns: repeat(2, 1fr);}
+    .faculty_grid{grid-template-columns: repeat(2, 1fr);}
+}
+
+@media(max-width:414px){
+    .faculty_grid{grid-template-columns: repeat(1, 1fr);}
+}

@@ -188,13 +188,13 @@ body:has(.side_hamburger.is-open) .site_nav{transform:translateY(var(--hamb-widt
     .main_header > .container-fluid{padding-inline: 3.2rem;}
     .site_navbar{grid-template-columns:100%;max-width:32.1rem;width:100%;}
     .site_navbar img:nth-child(2){display: none;}
-    .site_navbar img:nth-child(3){display: block!important;}
+    .home_header .site_navbar img:nth-child(3){display: block!important;}
     .site_nav{display:none;}
     .site_navbar{margin:0;}
     .search_btn, .phone_icon{display: none;}
     .hamburger_menu, .hamburger_menu.is-open{display: none;}
     .nav_right button img{filter:brightness(0) invert(1);}
-    .header_fix{ background-color: var(--color-06); padding-block: 1.5rem;}
+    .home_header.header_fix{ background-color: var(--color-06); padding-block: 1.5rem;}
 }
 @media(max-width:767px) {
     .main_header:before{display:none;}

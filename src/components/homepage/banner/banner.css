@@ -80,7 +80,7 @@
 
 
 @media(max-width:991px){
-    main{padding-top:0;}
+    .home main{padding-top:0;}
     .hero_swiper .slider_inner{grid-template-columns:100%;}
     .hero_swiper .slider_inner picture{aspect-ratio:767/550;}
     .hero_swiper .slider_inner picture>*{height:100%;object-fit:cover;}
@@ -94,8 +94,8 @@
     .emp_by{text-align:left;color:var(--color-white);padding-left:1.2rem;padding-block:0.5rem;border-left:.1rem solid rgb(255 255 255 / 43%);}
     .emp_by span{color: var(--color-white);}
     .explore_btn{ color: var(--color-white);}
-    .site_navbar img.main_logo:nth-child(1){ display: none;}
-    .site_navbar img.main_logo:nth-child(3){ display: block!important;}
+    .home_header .site_navbar img.main_logo:nth-child(1){ display: none;}
+    .home_header .site_navbar img.main_logo:nth-child(3){ display: block!important;}
 }
 
 
