@@ -76,6 +76,7 @@
  .bottom_detail_grid { grid-template-columns: 1fr;gap: 2.7rem; }
  .last_heading h3{margin: 0;}
  .leadership_detail_section > .container-fluid{padding-inline: 1.5rem;}
+ .welcome_text h1{font: var(--font-30);}
  }
 
 

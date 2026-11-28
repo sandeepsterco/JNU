@@ -687,7 +687,7 @@
 .solabt_sec .head_title{text-align:center;margin-bottom:7.5rem;}
 .solabt_sec .head_title>blockquote{margin-bottom:1.6rem;}
 .solabt_sec .head_title>p{font:var(--font-21);font-weight:300;line-height:1.7;color:var(--color-black);}
-.solabt_grid{grid-template-columns:850fr 600fr;gap:0 15rem;display:grid;max-width:calc(100% - 12.5rem);margin-top:10rem;}
+.solabt_grid{grid-template-columns:850fr 600fr;gap:0 15rem;display:grid;max-width:calc(100% - 12.5rem);margin-top:10rem;align-items: end;}
 .solabt_right>p{font:var(--font-16);font-weight:300;line-height:1.6;padding-right:2rem;}
 .solabt_right>p:not(:last-of-type){margin-bottom:1.5rem;}
 .solabt_right>figure{margin-top:5.8rem;}
