@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Collaborations from './Collaborations'
+import WhyChooseSlider from './WhyChooseSlider';
 import './whyChoose.css'
 import Link from 'next/link';
 import { APPLY_NOW } from '@/config/config';
@@ -49,33 +50,21 @@ export default function WhyChoose({data, collaboration}:WhyChooseUsInterface) {
                 </div>
                 <div className="col-lg-10 mx-auto">
                     <div className="why_jnu">
-                        {data?.lists && data?.lists.length > 0 && (
-                            <ul>
-                                {data.lists.map((item, idx)=>(
-                                    <li key={idx} data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                                        {item?.heading && (
-                                            <h4>{item.heading}</h4>
-                                        )}
-                                        {item?.subheading && (
-                                            <p>{item.subheading}</p>
-                                        )}
-                                    </li>
-                                ))}
-                                
-                            </ul>
-                        )}  
+                        {data?.lists && data.lists.length > 0 && (
+                            <WhyChooseSlider lists={data.lists} />
+                        )}
 
                         {data.view_more && (
-                            <Link href={data.view_more} className="load_more" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="800">Load More 
-                                <figure><img src="/images/icons/nav-arrow-down.svg" className="img-fluid" alt="arrow" /></figure>
+                            <Link href={data.view_more} className="load_more">
+                                Load More
+                                <figure>
+                                    <img src="/images/icons/nav-arrow-down.svg" alt="arrow" />
+                                </figure>
                             </Link>
                         )}
-                        
-                        
                     </div>
                 </div>
             </div>
-
 
             <div className="why_background">
                 <picture>
@@ -95,10 +84,10 @@ export default function WhyChoose({data, collaboration}:WhyChooseUsInterface) {
                             <div className="why_btn">
                                 {data?.virtualtoururl && (
                                     <Link href={data.virtualtoururl} className="virtual_tour" target='_blank'>
-                                        <figure><img src="/images/icons/360-degrees.svg" className="img-fluid" alt="360"  /></figure> Virtual Tour
+                                        <figure><img src="/images/icons/360-degrees.svg" className="img-fluid" alt="360" /></figure> Virtual Tour
                                     </Link>
                                 )}
-                                
+
                                 <Link href={APPLY_NOW ?? '/apply-now'} className="apply_now" target='_blank'>Apply Now</Link>
                             </div>
                         </div>
@@ -109,7 +98,6 @@ export default function WhyChoose({data, collaboration}:WhyChooseUsInterface) {
             {collaboration?.images && collaboration?.images?.length > 0 && (
                 <Collaborations data={collaboration} />
             )}
-
         </section>
     )
 }

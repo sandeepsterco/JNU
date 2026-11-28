@@ -108,7 +108,7 @@
     .slider_title .banner_btn>.explore_btn{font:var(--fw-normal) 1.2rem / 1.66 var(--stack);border-color:var(--color-white);color:var(--color-white);padding:.6rem 3rem;}
     .slider_title .banner_btn>.apply_now{font:var(--fw-normal) 1.2rem / 1.66 var(--stack);padding:.6rem 3rem;}
     .hero_swiper > .hero_pagination{display: none;}
-    .slider_title h4{ font: var(--font-30); line-height: 1.3; padding-bottom: 2rem;}
+    .slider_title h4{ font: var(--font-30); line-height: 1.3; padding-bottom: 2rem; font-weight: 700;}
     .slider_title h4 br{ display: none;}
-    .slider_title blockquote{ font: var(--font-30);}
+    .slider_title blockquote{ font: var(--font-30); font-weight: 400;}
 }

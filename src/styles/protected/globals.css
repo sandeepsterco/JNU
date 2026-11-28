@@ -179,6 +179,7 @@ main{padding-top:var(--header-height);}
   .container-lg{padding-inline:1.6rem;}
   .container{padding-inline:1.6rem;}
   .max-container{padding-inline:1.6rem;}
+  .container-fluid{padding-inline:1.6rem;}
 }
 
 

@@ -206,6 +206,10 @@ body:has(.side_hamburger.is-open) .site_nav{transform:translateY(var(--hamb-widt
 }
 
 
+@media(max-width:414px) {
+    .site_navbar { max-width: 28rem; }
+
+}
 
 
 /* 

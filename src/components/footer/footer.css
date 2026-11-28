@@ -43,11 +43,10 @@ footer{padding-block:5.5rem 0;background-color:var(--color-white);}
     .footer_right{border-left:0;border-top:1px solid rgb(112 112 112 / 30%);padding:4rem 0 4rem 0;}
     .footer_bottom{padding-block:3.5rem 3.6rem;}
     footer>.container{max-width:min(100%); padding-inline:3rem;}
-
-
 }
+
 @media(max-width:767px){
-    footer{padding-block:5.5rem 8rem;}
+    footer{padding-block:5.5rem 5rem;}
     .footer_left .footer_link{text-align:center;grid-template-columns:repeat(1,1fr);gap:1rem;}
     .footer_left .quick_link{gap:2rem;margin-block:3.5rem;}
     .footer_left .quick_link ul{text-align:center;grid-template-columns:repeat(1,1fr);}

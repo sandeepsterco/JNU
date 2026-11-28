@@ -46,7 +46,7 @@
     .research_slider_section{padding-top:3.4rem;}
 	.experience_header .head_title {padding-bottom: 4.2rem;}
 	.experience_header .head_title:before{height: 2px;}
-    .experience_header .head_title a{display:inline-flex;justify-content:center;width:1.6rem;height:1.6rem;padding:0;}
+    .experience_header .head_title a{display:inline-flex;justify-content:center;width:2.4rem;height:2.4rem;padding:0;}
     .experience_header .head_title a>img{width:0.5rem;}
 	.experience_header .head_title p{margin-block:1.2rem;font-weight:300;line-height:1.3;}
 	.experience_header_right ul{gap:5rem;margin-left:10rem;margin-right:0;}
@@ -102,7 +102,7 @@
 	.video_content ul{display: none;}
 	.video_section:after{display: none;}
 	.video_content{width:100%;top:auto;bottom:0;left:0;padding:4.5rem 1.8rem 3rem;background:linear-gradient(to top,rgb(0 0 0 / 79%),#0000);}
-	.video_content h3{font:var(--fw-300) 1.4rem / 1.5 var(--stack);margin-bottom:0;max-width:15rem;}
+	.video_content h3{font:var(--fw-300) 1.4rem / 1.5 var(--stack);margin-bottom:1rem;max-width:15rem;}
 	.video_content p{display: none;}
 	.video_section video{aspect-ratio:375 / 304;}
 	.video_image{aspect-ratio:375 / 304;}

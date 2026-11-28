@@ -102,9 +102,9 @@
 }
 
 @media(max-width:767px){
-    .our_alumni_section{position:relative;padding-block:4rem 4.2rem;}
+    .our_alumni_section{position:relative;padding-block:4rem 9rem;}
     .alumni_header{flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-inline:3rem;}
-    .alumni_header_right{display:none;}
+    .alumni_header_right { display: flex; position: absolute; bottom:6rem; }
     .alumni_slider_section{padding-top:3.7rem;padding-left:0;}
     .alumni_img>img{aspect-ratio:343 / 220;max-height:100%;object-fit:cover;object-position:top center;}
     .alumni_slider_bx:before{display:none;}
@@ -120,9 +120,16 @@
     .alumni_cnt{bottom:2.7rem;left:2.2rem;}
     .alumni_cnt h5{font:var(--fw-normal) 1.8rem / 1.25 var(--stack);}
     .alumni_cnt p{font:var(--fw-300) 1.4rem / 1.5 var(--stack);}
+    .alumni_header_right .alumni-prev, .alumni_header_right .alumni-next{ width: 3rem; height: 3rem; }
+    .alumni_header_right .alumni-prev > img, .alumni_header_right .alumni-next > img { width: 0.6rem; }
+
 }
 
 /* school Alumni Grid */
 .alumni_mainsec { padding-block: 12rem; }
 .alumni_mainsec .alumni_img { height: 40rem; overflow: hidden; }
 .alumni_mainsec .alumni_logo img { max-height: 8rem; max-width: 10rem; }
+
+@media(max-width:767px){
+    .alumni_header_right { display: flex; position: absolute; bottom: 5rem; }
+}

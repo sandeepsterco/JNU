@@ -12,7 +12,6 @@ export async function InitResearchSwiper(root: HTMLElement): Promise<() => void>
   await Promise.all([import("swiper/css"), import("swiper/css/pagination")]);
 
   const instances: Swiper[] = [];
-
   sliders.forEach((slider) => {
     if (slider.dataset.swiperInit) return;
     slider.dataset.swiperInit = "true";
